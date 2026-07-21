@@ -15,8 +15,20 @@
   const loadMore = $('[data-live-more]');
   const clear = $('[data-live-clear]');
   const navGroups = document.querySelector('[data-live-nav-groups]');
+  const liveNav = document.querySelector('[data-live-nav]');
   let products = [];
   let visible = 24;
+
+  document.addEventListener('click', event => {
+    if (liveNav?.open && !liveNav.contains(event.target)) liveNav.removeAttribute('open');
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && liveNav?.open) {
+      liveNav.removeAttribute('open');
+      liveNav.querySelector('summary')?.focus();
+    }
+  });
+  document.querySelectorAll('.site-nav > a').forEach(link => link.addEventListener('click', () => liveNav?.removeAttribute('open')));
 
   const money = value => value == null ? 'Price on enquiry' : new Intl.NumberFormat('en-PK', { style:'currency', currency:'PKR', maximumFractionDigits:0 }).format(value).replace('PKR', 'Rs.');
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
