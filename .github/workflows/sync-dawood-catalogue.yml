@@ -1,0 +1,51 @@
+name: Synchronize Dawood Designers catalogue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/sync-dawood-catalogue.yml"
+      - "scripts/sync-dawood.mjs"
+      - "scripts/install-dawood-integration.mjs"
+      - "dawood-catalogue.css"
+      - "dawood-catalogue.js"
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dawood-catalogue-sync
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build approved catalogue data
+        run: |
+          node scripts/install-dawood-integration.mjs
+          node scripts/sync-dawood.mjs
+
+      - name: Publish catalogue update
+        run: |
+          if git diff --quiet -- index.html catalogue/; then
+            echo "Catalogue is already current."
+            exit 0
+          fi
+          git config user.name "Al Huma Catalogue Sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html catalogue/
+          git commit -m "Update synchronized catalogue"
+          git push
