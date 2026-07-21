@@ -34,13 +34,16 @@ jobs:
           node-version: "20"
 
       - name: Build approved catalogue data
+        id: catalogue
+        continue-on-error: true
         run: |
           node scripts/install-dawood-integration.mjs
           node scripts/sync-dawood.mjs
 
       - name: Publish catalogue update
+        if: always()
         run: |
-          if git diff --quiet -- index.html catalogue/; then
+          if git diff --quiet -- index.html catalogue/ 2>/dev/null; then
             echo "Catalogue is already current."
             exit 0
           fi
@@ -49,3 +52,9 @@ jobs:
           git add index.html catalogue/
           git commit -m "Update synchronized catalogue"
           git push
+
+      - name: Report synchronization failure
+        if: steps.catalogue.outcome == 'failure'
+        run: |
+          cat catalogue/sync-status.json
+          exit 1
