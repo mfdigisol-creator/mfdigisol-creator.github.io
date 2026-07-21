@@ -489,7 +489,7 @@ footer > small { grid-column: 1 / -1; padding-top: 1.5rem; color: rgba(243,238,2
 
       
 
-            <section class="live-catalogue section-pad" id="live-catalogue" aria-labelledby="live-catalogue-title" data-live-catalogue hidden>
+                  <section class="live-catalogue section-pad" id="live-catalogue" aria-labelledby="live-catalogue-title" data-live-catalogue hidden>
         <div class="live-catalogue-head reveal">
           <div><p class="eyebrow"><span></span> Synchronized catalogue</p><h2 id="live-catalogue-title">Latest<br /><em>designs.</em></h2></div>
           <div class="live-catalogue-summary"><p>Explore current unstitched formal and luxury collections. Catalogue information is refreshed approximately every 12 hours.</p><div class="live-sync-meta"><span data-live-sync-time>Preparing catalogue</span><span>Official WhatsApp ordering</span></div></div>
@@ -696,22 +696,8 @@ nav.addEventListener('click', (event) => {
   if (event.target.closest('a') || (event.target.closest('button') && !event.target.closest('[data-collection-toggle]'))) {
     menuToggle.setAttribute('aria-expanded', 'false');
     nav.classList.remove('open');
-    collectionMenu.classList.remove('open');
-    collectionToggle.setAttribute('aria-expanded', 'false');
-  }
-});
-
-collectionToggle.addEventListener('click', (event) => {
-  event.stopPropagation();
-  const open = collectionToggle.getAttribute('aria-expanded') === 'true';
-  collectionToggle.setAttribute('aria-expanded', String(!open));
-  collectionMenu.classList.toggle('open', !open);
-});
-
-document.addEventListener('click', (event) => {
-  if (!collectionMenu.contains(event.target)) {
-    collectionMenu.classList.remove('open');
-    collectionToggle.setAttribute('aria-expanded', 'false');
+    collectionMenu?.classList.remove('open');
+    collectionToggle?.setAttribute('aria-expanded', 'false');
   }
 });
 
@@ -724,180 +710,6 @@ const openBooking = (collection) => {
 
 document.querySelectorAll('[data-open-booking]').forEach(button => button.addEventListener('click', () => openBooking()));
 document.querySelectorAll('[data-collection]').forEach(card => card.addEventListener('click', () => openBooking(card.dataset.collection)));
-const collectionRail = document.querySelector('[data-collection-rail]');
-const scrollCollectionRail = (direction) => collectionRail.scrollBy({ left: direction * Math.min(collectionRail.clientWidth * .82, 920), behavior: 'smooth' });
-document.querySelector('[data-rail-prev]').addEventListener('click', () => scrollCollectionRail(-1));
-document.querySelector('[data-rail-next]').addEventListener('click', () => scrollCollectionRail(1));
-document.querySelectorAll('[data-whatsapp]').forEach(link => {
-  const message = `Hello Al Huma Collection, I would like to ask about ${link.dataset.product} (${link.dataset.code}). Please share the price and ordering details.`;
-  link.href = `https://wa.me/923216115731?text=${encodeURIComponent(message)}`;
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-});
-
-const productDialog = document.querySelector('[data-product-dialog]');
-const galleryMain = productDialog.querySelector('[data-gallery-main]');
-const galleryName = productDialog.querySelector('[data-gallery-name]');
-const galleryCode = productDialog.querySelector('[data-gallery-code]');
-const galleryCollection = productDialog.querySelector('[data-gallery-collection]');
-const galleryWhatsApp = productDialog.querySelector('[data-gallery-whatsapp]');
-const galleryShare = productDialog.querySelector('[data-gallery-share]');
-const galleryThumbs = [...productDialog.querySelectorAll('[data-gallery-thumb]')];
-let galleryImages = [];
-let activeProduct = null;
-const productIndex = new Map();
-const recentSection = document.querySelector('[data-recent-section]');
-const recentRail = document.querySelector('[data-recent-rail]');
-const recentStorageKey = 'al-huma-recent-products';
-
-const getRecentProducts = () => {
-  try { return JSON.parse(localStorage.getItem(recentStorageKey) || '[]'); } catch (error) { return []; }
-};
-
-const renderRecentProducts = () => {
-  const products = getRecentProducts().map(id => productIndex.get(id)).filter(Boolean);
-  recentRail.replaceChildren();
-  products.forEach(product => {
-    const link = document.createElement('a');
-    link.className = 'recent-card';
-    link.href = `#${product.id}`;
-    const image = document.createElement('img');
-    image.src = product.primary;
-    image.alt = product.name;
-    image.loading = 'lazy';
-    const copy = document.createElement('div');
-    const collection = document.createElement('small');
-    collection.textContent = product.collection;
-    const name = document.createElement('strong');
-    name.textContent = product.name.split('—').pop().trim();
-    const code = document.createElement('span');
-    code.textContent = `${product.code} · View product`;
-    copy.append(collection, name, code);
-    link.append(image, copy);
-    link.addEventListener('click', () => {
-      catalogueSearch.value = '';
-      catalogueCollection.value = 'all';
-      filterCatalogue();
-    });
-    recentRail.append(link);
-  });
-  recentSection.hidden = products.length === 0;
-};
-
-const recordProductView = product => {
-  const recent = [product.id, ...getRecentProducts().filter(id => id !== product.id)].slice(0, 6);
-  try { localStorage.setItem(recentStorageKey, JSON.stringify(recent)); } catch (error) { /* Browsing history remains optional. */ }
-  renderRecentProducts();
-};
-
-const selectGalleryImage = (index) => {
-  galleryMain.src = galleryImages[index];
-  galleryThumbs.forEach((thumb, thumbIndex) => {
-    thumb.hidden = thumbIndex >= galleryImages.length;
-    thumb.classList.toggle('active', thumbIndex === index);
-  });
-};
-
-const shareProduct = async product => {
-  const url = `${window.location.origin}${window.location.pathname}#${product.id}`;
-  const text = `${product.name} (${product.code}) — available at Al Huma Collection.`;
-  if (navigator.share) {
-    try { await navigator.share({ title: product.name, text, url }); } catch (error) { /* Customer closed the share sheet. */ }
-  } else {
-    window.open(`https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`, '_blank', 'noopener,noreferrer');
-  }
-};
-
-document.querySelectorAll('.product-card').forEach(card => {
-  const enquiry = card.querySelector('[data-whatsapp]');
-  const collection = card.querySelector('.product-copy > p').textContent;
-  const name = enquiry.dataset.product;
-  const code = enquiry.dataset.code;
-  card.id = `product-${code.toLowerCase()}`;
-  card.dataset.search = `${name} ${code}`.toLowerCase();
-  card.dataset.productCollection = collection;
-  const primary = card.querySelector('.product-image img').src;
-  const detail = window.__AL_HUMA_DETAILS__?.[code] || null;
-  const product = { id: card.id, name, code, collection, primary, detail, whatsapp: enquiry.href };
-  productIndex.set(product.id, product);
-  const galleryButton = document.createElement('button');
-  galleryButton.type = 'button';
-  galleryButton.className = 'gallery-open';
-  galleryButton.textContent = 'Quick view';
-  galleryButton.setAttribute('aria-label', `View ${name} full screen`);
-  card.querySelector('.product-image').append(galleryButton);
-  galleryButton.addEventListener('click', () => {
-    recordProductView(product);
-    activeProduct = product;
-    galleryImages = detail ? [primary, detail] : [primary];
-    galleryName.textContent = card.querySelector('h3').textContent;
-    galleryCode.textContent = code;
-    galleryCollection.textContent = collection;
-    galleryWhatsApp.href = enquiry.href;
-    galleryThumbs[0].querySelector('img').src = primary;
-    if (detail) galleryThumbs[1].querySelector('img').src = detail;
-    galleryMain.alt = name;
-    selectGalleryImage(0);
-    productDialog.showModal();
-  });
-  const shareButton = document.createElement('button');
-  shareButton.type = 'button';
-  shareButton.className = 'share-product';
-  shareButton.textContent = 'Share product ↗';
-  shareButton.addEventListener('click', () => shareProduct(product));
-  card.querySelector('.product-copy').append(shareButton);
-});
-renderRecentProducts();
-document.querySelector('[data-clear-recent]').addEventListener('click', () => {
-  try { localStorage.removeItem(recentStorageKey); } catch (error) { /* No stored history to clear. */ }
-  renderRecentProducts();
-});
-
-galleryThumbs.forEach(thumb => thumb.addEventListener('click', () => selectGalleryImage(Number(thumb.dataset.galleryThumb))));
-galleryShare.addEventListener('click', () => activeProduct && shareProduct(activeProduct));
-productDialog.querySelector('[data-close-product]').addEventListener('click', () => productDialog.close());
-productDialog.addEventListener('click', (event) => {
-  const box = productDialog.getBoundingClientRect();
-  if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) productDialog.close();
-});
-
-const catalogueSearch = document.querySelector('[data-catalogue-search]');
-const catalogueCollection = document.querySelector('[data-catalogue-collection]');
-const catalogueStock = document.querySelector('[data-catalogue-stock]');
-const catalogueResults = document.querySelector('[data-catalogue-results]');
-const catalogueEmpty = document.querySelector('[data-catalogue-empty]');
-const productCards = [...document.querySelectorAll('.product-card')];
-const collectionGroups = [...document.querySelectorAll('.catalogue .collection-label')].map(label => ({ label, grid: label.nextElementSibling }));
-
-const filterCatalogue = () => {
-  const query = catalogueSearch.value.trim().toLowerCase();
-  const selectedCollection = catalogueCollection.value;
-  let visibleCount = 0;
-  productCards.forEach(card => {
-    const matchesSearch = !query || card.dataset.search.includes(query);
-    const matchesCollection = selectedCollection === 'all' || card.dataset.productCollection === selectedCollection;
-    const visible = matchesSearch && matchesCollection;
-    card.hidden = !visible;
-    if (visible) visibleCount += 1;
-  });
-  collectionGroups.forEach(({ label, grid }) => {
-    const hasVisibleProducts = [...grid.querySelectorAll('.product-card')].some(card => !card.hidden);
-    label.hidden = !hasVisibleProducts;
-    grid.hidden = !hasVisibleProducts;
-  });
-  catalogueResults.textContent = visibleCount === 98 ? 'Showing all 98 products' : `Showing ${visibleCount} of 98 products`;
-  catalogueEmpty.hidden = visibleCount !== 0;
-};
-
-[catalogueSearch, catalogueCollection, catalogueStock].forEach(control => control.addEventListener('input', filterCatalogue));
-document.querySelector('[data-clear-filters]').addEventListener('click', () => {
-  catalogueSearch.value = '';
-  catalogueCollection.value = 'all';
-  catalogueStock.value = 'in-stock';
-  filterCatalogue();
-  catalogueSearch.focus();
-});
-
 const chatLauncher = document.querySelector('[data-chat-launcher]');
 const chatPanel = document.querySelector('[data-chat-panel]');
 const chatClose = document.querySelector('[data-chat-close]');
