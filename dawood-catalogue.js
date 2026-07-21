@@ -142,6 +142,13 @@
   function populateNavigation() {
     const brands = [...new Set(products.map(product => product.brand).filter(Boolean))].sort();
     controls.brand.innerHTML = '<option value="all">All collections</option>' + brands.map(brand => `<option value="${escapeHtml(brand)}">${escapeHtml(brand)}</option>`).join('');
+    const enquirySelect = document.querySelector('[data-live-enquiry-collection]');
+    if (enquirySelect) {
+      enquirySelect.innerHTML = '<option value="Help me choose">Help me choose</option>' + ['Formal','Luxury'].map(group => {
+        const list = [...new Set(products.filter(product => product.category === group).map(product => product.brand).filter(Boolean))].sort();
+        return `<optgroup label="${group} collections">${list.map(brand => `<option value="${escapeHtml(brand)}">${escapeHtml(brand)}</option>`).join('')}</optgroup>`;
+      }).join('');
+    }
     if (!navGroups) return;
     navGroups.innerHTML = ['Formal','Luxury'].map(group => {
       const list = [...new Set(products.filter(product => product.category === group).map(product => product.brand))].sort();
@@ -160,6 +167,7 @@
       syncTime.textContent = stale ? 'Update delayed — confirm availability on WhatsApp' : `Updated ${date.toLocaleString('en-PK', { dateStyle:'medium', timeStyle:'short', timeZone:'Asia/Karachi' })}`;
       syncTime.classList.toggle('stale',stale);
       populateNavigation(); section.hidden=false; render();
+      window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:{ products:products.map(product => ({ code:product.code, name:product.name, brand:product.brand, available:product.available, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) })) } }));
       const requested = new URLSearchParams(location.search).get('product'); if(requested) setTimeout(() => openProduct(requested,false),100);
       track('catalogue_loaded',{ product_count:products.length, available_count:data.counts?.available, enquiry_price_count:data.counts?.priceOnEnquiry });
     })

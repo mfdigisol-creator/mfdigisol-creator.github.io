@@ -95,6 +95,13 @@ if (!html.includes('data-live-nav')) {
 
 if (!html.includes('id="how-to-order"')) insertBefore('      <section class="faq-section', ordering, 'FAQ section');
 
+const enquirySelectStart = html.indexOf('<label>Collection<select name="collection"');
+const enquirySelectEnd = html.indexOf('</select></label>', enquirySelectStart);
+if (enquirySelectStart >= 0 && enquirySelectEnd > enquirySelectStart) {
+  const replacement = '<label>Preferred collection<select name="collection" data-live-enquiry-collection><option value="Help me choose">Help me choose</option></select><small class="field-help">Choose a current brand, or let our team guide you.</small></label>';
+  html = `${html.slice(0, enquirySelectStart)}${replacement}${html.slice(enquirySelectEnd + '</select></label>'.length)}`;
+}
+
 html = html.replace('href="#featured">Catalogue</a>', 'href="#live-catalogue">New arrivals</a>');
 html = html.replace('href="#featured">Explore featured collections</a>', 'href="#live-catalogue">Explore latest designs</a>');
 html = html.replace('href="#catalogue">Catalogue</a>', 'href="#live-catalogue">Catalogue</a>');
@@ -124,6 +131,29 @@ const oldDropdownJsEnd = html.indexOf('const openBooking = (collection) => {', o
 if (oldDropdownJsStart >= 0 && oldDropdownJsEnd > oldDropdownJsStart) {
   html = `${html.slice(0, oldDropdownJsStart)}${html.slice(oldDropdownJsEnd)}`;
 }
+
+const oldAssistantCatalogueStart = html.indexOf("const catalogueEntries = [...document.querySelectorAll('[data-whatsapp]')]");
+const oldAssistantCatalogueEnd = html.indexOf('const includesAny = (question, terms)', oldAssistantCatalogueStart);
+if (oldAssistantCatalogueStart >= 0 && oldAssistantCatalogueEnd > oldAssistantCatalogueStart) {
+  const synchronizedAssistantData = `let catalogueEntries = [];
+let collectionAnswers = [];
+window.addEventListener('alhuma:catalogue-ready', event => {
+  const liveProducts = event.detail?.products || [];
+  catalogueEntries = liveProducts.map(item => ({ code:item.code, product:item.name, search:normalizeQuestion(\`${'${item.code} ${item.name}'}\`), href:item.whatsapp, available:item.available, priceLabel:item.priceLabel }));
+  collectionAnswers = [...new Set(liveProducts.map(item => item.brand).filter(Boolean))].map(name => ({ terms:[normalizeQuestion(name)], name, href:'#live-catalogue' }));
+});
+`;
+  html = `${html.slice(0, oldAssistantCatalogueStart)}${synchronizedAssistantData}${html.slice(oldAssistantCatalogueEnd)}`;
+}
+html = html.replace(
+  "addChatMessage(`${product.product} (${product.code}) is shown as In stock. Our showroom team can confirm the latest availability and price on WhatsApp.`, 'assistant', [",
+  "addChatMessage(`${product.product} (${product.code}) is ${product.available ? 'available to order' : 'currently unavailable'}. ${product.priceLabel}`, 'assistant', ["
+);
+html = html.replace("{ label: 'Browse products', href: '#catalogue' }", "{ label: 'Browse products', href: '#live-catalogue' }");
+html = html.replace('All products currently displayed are marked In stock. Please ask our WhatsApp team to confirm before ordering.', 'Availability is synchronized approximately every 12 hours. Products marked “Available to order” still require final confirmation from our WhatsApp team.');
+html = html.replace('Our showroom catalogue has 9 featured collections and 98 products. Select a collection to see its designs.', 'Browse our synchronized Formal and Luxury collections, updated approximately every 12 hours. Use the catalogue filters to choose a brand or style.');
+html = html.replace("{ label: 'View catalogue', href: '#catalogue' }", "{ label: 'View catalogue', href: '#live-catalogue' }");
+html = html.replace('Ask our showroom team for pricing and ordering details.', 'Ask our team for pricing and ordering details.');
 
 html = html.replace('<title>Al Huma Collection — Quietly Iconic</title>', '<title>Al Huma Collection | Unstitched Formal & Luxury Suits in Sialkot</title>');
 html = html.replace('content="Al Huma Collection — refined Pakistani womenswear, shaped by timeless silhouettes and expressive detail."', 'content="Shop unstitched formal and luxury ladies suits from Al Huma Collection in Model Town, Sialkot. Browse current designs, prices and availability, then order on official WhatsApp."');
