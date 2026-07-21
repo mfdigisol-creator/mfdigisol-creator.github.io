@@ -81,6 +81,7 @@
 .live-product-name { display:block; margin:0; min-height:3em; font-size:1rem; line-height:1.45; font-weight:500; }
 .live-view { color:#d0c5b4; font-size:.64rem; letter-spacing:.08em; text-transform:uppercase; }
 .live-product > .live-enquire { display:block; margin:0 1.05rem 1.05rem; padding:.75rem 0 .35rem; color:#e2bd73; }
+.live-add-cart { width:calc(100% - 2.1rem); margin:.2rem 1.05rem .25rem; padding:.75rem; border:1px solid #b68b42; background:#cda65a; color:#100f0d; font-size:.67rem; letter-spacing:.11em; text-transform:uppercase; cursor:pointer; }
 .live-price strong { line-height:1.2; }
 
 /* Product quick view */

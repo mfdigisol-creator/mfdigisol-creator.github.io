@@ -76,7 +76,9 @@ function removeSection(id) {
 }
 
 if (!html.includes('href="dawood-catalogue.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-catalogue.css" />\n  ', 'document head');
+if (!html.includes('href="dawood-commerce.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-commerce.css" />\n  ', 'document head');
 if (!html.includes('src="dawood-catalogue.js"')) insertBefore('</body>', '    <script src="dawood-catalogue.js" defer></script>\n  ', 'document body');
+if (!html.includes('src="dawood-commerce.js"')) insertBefore('</body>', '    <script src="dawood-commerce.js" defer></script>\n  ', 'document body');
 if (!html.includes('src="analytics.js"')) insertBefore('</body>', '    <script src="analytics.js" defer></script>\n  ', 'document body');
 
 if (!replaceSection('live-catalogue', catalogueSection)) {

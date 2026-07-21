@@ -83,6 +83,7 @@
         <span class="live-product-media"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}" loading="lazy" referrerpolicy="no-referrer" /><span class="live-product-badge${product.available ? '' : ' sold'}">${product.available ? 'Available to order' : 'Currently unavailable'}</span></span>
         <span class="live-product-copy"><span class="live-product-brand">${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</span><strong class="live-product-name">${escapeHtml(product.name)}</strong><span class="live-product-row"><span class="live-price">${priceLabel}</span><span class="live-view">View details ↗</span></span></span>
       </button>
+      ${product.available ? `<button class="live-add-cart" type="button" data-add-cart="${escapeHtml(product.code)}">Add to cart</button>` : ''}
       <a class="live-enquire" href="${whatsapp(product, product.price == null)}" target="_blank" rel="noopener noreferrer" data-order-product="${escapeHtml(product.code)}">${product.price == null ? 'Enquire for price' : 'Order on WhatsApp'} ↗</a>
     </article>`;
   }
@@ -115,7 +116,7 @@
     const priceCopy = product.price == null ? '<strong>Price on enquiry</strong><small>Our automated system could not classify this design with sufficient confidence, so no estimated price is shown.</small>' : `<strong>${money(product.price)}</strong><small>Al Huma Collection retail price</small>`;
     dialog.querySelector('[data-live-dialog-content]').innerHTML = `<div class="live-dialog-layout">
       <div class="live-dialog-gallery"><div class="live-dialog-stage"><img src="${escapeHtml(images[0])}" alt="${escapeHtml(product.name)}" data-dialog-main /></div><div class="live-dialog-thumbs">${images.map((image,index) => `<button type="button" data-dialog-image="${escapeHtml(image)}" class="${index === 0 ? 'active' : ''}"><img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)} view ${index+1}" loading="lazy" /></button>`).join('')}</div></div>
-      <div class="live-dialog-copy"><p class="eyebrow dark"><span></span>${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</p><h2>${escapeHtml(product.name)}</h2><dl><div><dt>Product code</dt><dd>${escapeHtml(product.code)}</dd></div><div><dt>Style</dt><dd>${product.pricingClass === 'embroidered' ? 'Embroidered' : product.pricingClass === 'non-embroidered' ? 'Printed / non-embroidered' : 'Classification pending'}</dd></div><div><dt>Suit type</dt><dd>${escapeHtml(product.pieceType)}</dd></div><div><dt>Availability</dt><dd>${product.available ? 'Available to order — confirmation required' : 'Currently unavailable'}</dd></div></dl><div class="live-dialog-price">${priceCopy}</div><div class="live-dialog-actions"><a class="button button-dark" href="${whatsapp(product, product.price == null)}" target="_blank" rel="noopener noreferrer" data-dialog-order>${product.price == null ? 'Enquire for price' : 'Order on WhatsApp'}</a><button class="button button-outline-dark" type="button" data-dialog-share>Share product</button></div><p class="live-dialog-note">Availability is synchronized from our approved supplier source approximately every 12 hours. Please confirm with our team before payment.</p></div>
+      <div class="live-dialog-copy"><p class="eyebrow dark"><span></span>${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</p><h2>${escapeHtml(product.name)}</h2><dl><div><dt>Product code</dt><dd>${escapeHtml(product.code)}</dd></div><div><dt>Style</dt><dd>${product.pricingClass === 'embroidered' ? 'Embroidered' : product.pricingClass === 'non-embroidered' ? 'Printed / non-embroidered' : 'Classification pending'}</dd></div><div><dt>Suit type</dt><dd>${escapeHtml(product.pieceType)}</dd></div><div><dt>Availability</dt><dd>${product.available ? 'Available to order — confirmation required' : 'Currently unavailable'}</dd></div></dl><div class="live-dialog-price">${priceCopy}</div><div class="live-dialog-actions">${product.available ? `<button class="button button-dark" type="button" data-dialog-cart="${escapeHtml(product.code)}">Add to cart</button>` : ''}<a class="button button-outline-dark" href="${whatsapp(product, product.price == null)}" target="_blank" rel="noopener noreferrer" data-dialog-order>${product.price == null ? 'Enquire for price' : 'Order on WhatsApp'}</a><button class="button button-outline-dark" type="button" data-dialog-share>Share product</button></div><p class="live-dialog-note">Availability is synchronized from our approved supplier source approximately every 12 hours. Please confirm with our team before payment.</p></div>
     </div>`;
     dialog.querySelectorAll('[data-dialog-image]').forEach(button => button.addEventListener('click', () => {
       dialog.querySelector('[data-dialog-main]').src = button.dataset.dialogImage;
@@ -127,6 +128,7 @@
       track('share_product',{ product_code:product.code });
     });
     dialog.querySelector('[data-dialog-order]').addEventListener('click', () => track('whatsapp_order',{ product_code:product.code, price_status:product.pricingStatus }));
+    dialog.querySelector('[data-dialog-cart]')?.addEventListener('click', () => window.dispatchEvent(new CustomEvent('alhuma:add-to-cart',{detail:{product}})));
     if (updateUrl) history.replaceState(null,'',productUrl(product));
     dialog.showModal();
     track('view_product',{ product_code:product.code, brand:product.brand });
@@ -148,6 +150,7 @@
     const open = event.target.closest('[data-open-product]'); if (open) openProduct(open.dataset.openProduct);
     const order = event.target.closest('[data-order-product]'); if (order) track('whatsapp_order',{ product_code:order.dataset.orderProduct });
     const reset = event.target.closest('[data-reset-filter]'); if (reset) { controls[reset.dataset.resetFilter].value = 'all'; visible=24; render(); }
+    const add = event.target.closest('[data-add-cart]'); if (add) { const product=products.find(item=>item.code===add.dataset.addCart); if(product) window.dispatchEvent(new CustomEvent('alhuma:add-to-cart',{detail:{product}})); }
   });
   Object.values(controls).forEach(control => control.addEventListener('input', () => { visible=24; render(); track('filter_catalogue',{ filter:control.dataset.liveSearch !== undefined ? 'search' : control.previousElementSibling?.textContent, value:control.value }); }));
   clear.addEventListener('click', () => { Object.entries(controls).forEach(([key,control]) => control.value = key === 'availability' ? 'available' : key === 'sort' ? 'newest' : 'all'); controls.search.value=''; visible=24; render(); });
