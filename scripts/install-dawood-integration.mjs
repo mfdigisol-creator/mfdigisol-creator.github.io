@@ -194,6 +194,114 @@ html = html.replace('Our showroom catalogue has 9 featured collections and 98 pr
 html = html.replace("{ label: 'View catalogue', href: '#catalogue' }", "{ label: 'View catalogue', href: '#live-catalogue' }");
 html = html.replace('Ask our showroom team for pricing and ordering details.', 'Ask our team for pricing and ordering details.');
 
+const assistantStart = html.indexOf('let catalogueEntries = [];');
+const assistantEnd = html.indexOf('const setChatOpen = open => {', assistantStart);
+if (assistantStart >= 0 && assistantEnd > assistantStart) {
+  const enhancedAssistant = `let catalogueEntries = [];
+let catalogueProducts = [];
+let collectionAnswers = [];
+let catalogueUpdatedAt = null;
+const chatMoney = value => 'Rs. ' + Number(value).toLocaleString('en-PK');
+const productRange = list => {
+  const prices = list.filter(item => item.available && Number.isFinite(item.price)).map(item => item.price);
+  return prices.length ? { min:Math.min(...prices), max:Math.max(...prices), count:prices.length } : null;
+};
+const rangeText = range => range ? \`\${chatMoney(range.min)} to \${chatMoney(range.max)}\` : 'price on enquiry';
+window.addEventListener('alhuma:catalogue-ready', event => {
+  catalogueProducts = event.detail?.products || [];
+  catalogueUpdatedAt = event.detail?.synchronizedAt || null;
+  catalogueEntries = catalogueProducts.map(item => ({ ...item, product:item.name, search:normalizeQuestion(\`\${item.code} \${item.name}\`), href:item.whatsapp }));
+  collectionAnswers = [...new Set(catalogueProducts.map(item => item.brand).filter(Boolean))].map(name => ({ terms:[normalizeQuestion(name)], name, products:catalogueProducts.filter(item => item.brand === name), href:'#live-catalogue' }));
+});
+const includesAny = (question, terms) => terms.some(term => question.includes(term));
+const assistantActions = [{ label:'Browse catalogue', href:'#live-catalogue' }, { label:'Ask our team', href:generalWhatsApp, external:true }];
+
+const answerChatQuestion = rawQuestion => {
+  const question = normalizeQuestion(rawQuestion);
+  const product = catalogueEntries.find(item => {
+    const code = normalizeQuestion(item.code), name = normalizeQuestion(item.product);
+    return question.includes(code) || (name.length > 7 && question.includes(name));
+  });
+  if (product) {
+    addChatMessage(\`\${product.product} (\${product.code}) is \${product.available ? 'available to order' : 'currently unavailable'}. \${product.priceLabel} It is a \${product.pieceType || 'suit'} from \${product.brand}.\`, 'assistant', [{ label:'Ask about this product', href:product.href, external:true }]);
+    return;
+  }
+
+  const collection = collectionAnswers.find(item => item.terms.some(term => question.includes(term)));
+  const asksPrice = includesAny(question, ['price','prices','cost','range','rate','how much','cheapest','expensive','budget','under','below','upto','up to']);
+  if (collection) {
+    const available = collection.products.filter(item => item.available), range = productRange(collection.products);
+    addChatMessage(asksPrice ? \`\${collection.name} currently has \${available.length} available design\${available.length === 1 ? '' : 's'}. Displayed prices range from \${rangeText(range)}; products that cannot be classified confidently remain “Price on enquiry.”\` : \`\${collection.name} currently has \${available.length} design\${available.length === 1 ? '' : 's'} available to order. Use the Collection filter to view them; final availability is confirmed by our team.\`, 'assistant', assistantActions);
+    return;
+  }
+
+  const cleanNumber = rawQuestion.replace(/,/g,'');
+  const amountMatch = cleanNumber.match(/(?:rs\\.?|pkr|rupees?)?\\s*(\\d{3,6})/i);
+  const amount = amountMatch ? Number(amountMatch[1]) : null;
+  if (amount && includesAny(question,['under','below','upto','up to','budget','within','less than'])) {
+    const matches = catalogueProducts.filter(item => item.available && Number.isFinite(item.price) && item.price <= amount).sort((a,b) => b.price-a.price);
+    const examples = matches.slice(0,3).map(item => \`\${item.name} (\${item.code}) — \${chatMoney(item.price)}\`).join('; ');
+    addChatMessage(matches.length ? \`I found \${matches.length} currently available design\${matches.length === 1 ? '' : 's'} priced up to \${chatMoney(amount)}. Examples: \${examples}. Use the price filters for the full selection.\` : \`I could not find a currently available design with a displayed price up to \${chatMoney(amount)}. Some designs are marked “Price on enquiry,” so our team may still help.\`, 'assistant', assistantActions);
+    return;
+  }
+
+  if (asksPrice) {
+    const all = productRange(catalogueProducts), formal = productRange(catalogueProducts.filter(item => item.category === 'Formal')), luxury = productRange(catalogueProducts.filter(item => item.category === 'Luxury'));
+    const known = catalogueProducts.filter(item => item.available && Number.isFinite(item.price));
+    if (includesAny(question,['cheapest','lowest','minimum']) && known.length) {
+      const item = [...known].sort((a,b)=>a.price-b.price)[0];
+      addChatMessage(\`The lowest currently displayed price is \${chatMoney(item.price)} for \${item.name} (\${item.code}). Availability still requires confirmation.\`, 'assistant', [{label:'Ask about this product',href:item.whatsapp,external:true}]); return;
+    }
+    if (includesAny(question,['expensive','highest','maximum']) && known.length) {
+      const item = [...known].sort((a,b)=>b.price-a.price)[0];
+      addChatMessage(\`The highest currently displayed price is \${chatMoney(item.price)} for \${item.name} (\${item.code}). Availability still requires confirmation.\`, 'assistant', [{label:'Ask about this product',href:item.whatsapp,external:true}]); return;
+    }
+    addChatMessage(\`For currently available products with displayed prices, the overall range is \${rangeText(all)}. Formal designs range from \${rangeText(formal)}, while Luxury designs range from \${rangeText(luxury)}. Some products remain “Price on enquiry” when classification is uncertain.\`, 'assistant', assistantActions);
+  } else if (includesAny(question,['embroidered','embroidery','printed','non embroidered'])) {
+    const embroidered = question.includes('embroider'), type = embroidered ? 'embroidered' : 'non-embroidered', list = catalogueProducts.filter(item => item.pricingClass === type), range=productRange(list);
+    addChatMessage(\`There are \${list.filter(item=>item.available).length} currently available \${embroidered ? 'embroidered' : 'printed / non-embroidered'} designs. Displayed prices range from \${rangeText(range)}.\`, 'assistant', assistantActions);
+  } else if (includesAny(question,['formal','luxury'])) {
+    const category = question.includes('luxury') ? 'Luxury' : 'Formal', list=catalogueProducts.filter(item=>item.category===category), range=productRange(list);
+    addChatMessage(\`Our synchronized \${category} catalogue currently shows \${list.filter(item=>item.available).length} available designs, with displayed prices from \${rangeText(range)}.\`, 'assistant', assistantActions);
+  } else if (includesAny(question,['how many','product count','number of products','total products'])) {
+    addChatMessage(\`The synchronized catalogue currently contains \${catalogueProducts.length} products, including \${catalogueProducts.filter(item=>item.available).length} marked available to order.\`, 'assistant', assistantActions);
+  } else if (includesAny(question,['delivery','shipping','courier','tcs','leopards','how long','tat'])) {
+    addChatMessage('Delivery is normally through TCS or Leopards Courier. Charges are Rs. 300 within Sialkot and Rs. 600 outside Sialkot for parcels up to 1 kg. Charges may increase with weight or volume. Estimated delivery TAT is up to 7 days after confirmation and may vary due to unforeseen circumstances.', 'assistant', [{label:'Delivery policies',href:'policies.html'}]);
+  } else if (includesAny(question,['cancel','cancellation'])) {
+    addChatMessage('To cancel before the confirmation call, WhatsApp our official number with your order details.', 'assistant', [{label:'Request cancellation',href:'https://wa.me/923216115731?text=Hello%20Al%20Huma%20Collection%2C%20I%20would%20like%20to%20cancel%20my%20order%20before%20the%20confirmation%20call.%20My%20order%20details%20are%3A%20',external:true}]);
+  } else if (includesAny(question,['payment','cod','cash on delivery','pay'])) {
+    addChatMessage('We currently offer Cash on Delivery within Pakistan. No online card payment is required. Our team calls to confirm availability and final charges before dispatch.', 'assistant', [{label:'How to order',href:'#how-to-order'}]);
+  } else if (includesAny(question,['cart','basket','saved product'])) {
+    addChatMessage('Use “Add to cart” on any available product. Your cart is saved in this browser until you remove the item or successfully place the order.', 'assistant', [{label:'Browse products',href:'#live-catalogue'}]);
+  } else if (includesAny(question,['review','rating','feedback'])) {
+    addChatMessage('You can submit a genuine 1–5 star review in our Customer Voices section. Reviews are sent privately for moderation and published only after approval.', 'assistant', [{label:'Leave a review',href:'#reviews'}]);
+  } else if (includesAny(question,['return','exchange','refund'])) {
+    addChatMessage('Exchange or return eligibility depends on product condition and the order circumstances. Please inspect the parcel promptly and contact our team with the product code and photographs before returning anything.', 'assistant', [{label:'Read policies',href:'policies.html'},{label:'Contact our team',href:generalWhatsApp,external:true}]);
+  } else if (includesAny(question,['order','buy','purchase','book','checkout'])) {
+    addChatMessage('Choose an available product, select “Add to cart,” review quantities, and complete the Pakistan COD checkout. Our team will then call to confirm availability, final charges and dispatch.', 'assistant', [{label:'Browse products',href:'#live-catalogue'},{label:'How to order',href:'#how-to-order'}]);
+  } else if (includesAny(question,['available','availability','stock'])) {
+    addChatMessage(\`Availability is synchronized approximately every 12 hours. \${catalogueProducts.filter(item=>item.available).length} products are currently marked available to order, but our team provides final confirmation before dispatch.\`, 'assistant', assistantActions);
+  } else if (includesAny(question,['collection','catalog','catalogue','design','product','brand'])) {
+    addChatMessage(\`Browse \${collectionAnswers.length} synchronized brand collections across Formal and Luxury categories. You can filter by collection, style, pieces, price and availability.\`, 'assistant', [{label:'View collections',href:'#live-catalogue'}]);
+  } else if (includesAny(question,['location','address','map','shop','visit'])) {
+    addChatMessage('Visit Al Huma Collection at 87 Peer, Muradia Rd, Model Town, Sialkot, Pakistan.', 'assistant', [{label:'View contact & map',href:'#contact'}]);
+  } else if (includesAny(question,['email','contact','phone','whatsapp','number','facebook','instagram'])) {
+    addChatMessage('Contact us on WhatsApp at +92 321 6115731 or email alhumacollection@gmail.com. You can also reach Al Huma on Facebook and @alhuma.collection on Instagram.', 'assistant', [{label:'Open WhatsApp',href:generalWhatsApp,external:true},{label:'Contact details',href:'#contact'}]);
+  } else if (includesAny(question,['hello','hi','salam','assalam'])) {
+    addChatMessage('Welcome to Al Huma Collection. I can calculate current price ranges, find designs within a budget, check product codes and availability, and explain COD ordering, delivery or cancellation.');
+  } else {
+    addChatMessage('Thank you for your question. I can help with price ranges, budgets, product codes, collections, availability, COD orders, delivery, cancellation, reviews and our location. For anything more specific, our team will be delighted to assist on official WhatsApp.', 'assistant', [{label:'Contact on WhatsApp',href:generalWhatsApp,external:true}]);
+  }
+};
+`;
+  html = `${html.slice(0, assistantStart)}${enhancedAssistant}${html.slice(assistantEnd)}`;
+}
+if (!html.includes('data-chat-question="What are the current price ranges?"')) {
+  html = html.replace('<div class="chat-quick" data-chat-quick>', '<div class="chat-quick" data-chat-quick>\n        <button type="button" data-chat-question="What are the current price ranges?">Price ranges</button>');
+}
+html = html.replace('Welcome to Al Huma Collection. Ask me about our collections, a product code, availability, ordering or the showroom location.', 'Welcome to Al Huma Collection. I can calculate live catalogue price ranges, find products within your budget, check availability, and explain COD ordering, delivery or cancellation.');
+html = html.replace('Guided assistance · For anything else, our team is on WhatsApp.', 'Catalogue-aware guidance · For personal assistance, our team is on WhatsApp.');
+
 html = html.replace('<title>Al Huma Collection — Quietly Iconic</title>', '<title>Al Huma Collection | Unstitched Formal & Luxury Suits in Sialkot</title>');
 html = html.replace('content="Al Huma Collection — refined Pakistani womenswear, shaped by timeless silhouettes and expressive detail."', 'content="Shop unstitched formal and luxury ladies suits from Al Huma Collection in Model Town, Sialkot. Browse current designs, prices and availability, then order on official WhatsApp."');
 
