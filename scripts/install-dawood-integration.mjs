@@ -49,6 +49,21 @@ const ordering = `      <section class="order-steps section-pad" id="how-to-orde
 
 `;
 
+const reviews = `      <section class="customer-reviews section-pad" id="reviews" aria-labelledby="reviews-title">
+        <div class="reviews-heading reveal"><p class="eyebrow dark"><span></span> Customer voices</p><h2 id="reviews-title">Shared with<br /><em>confidence.</em></h2><p>Only customer reviews approved by Al Huma Collection are published. Submit your genuine experience for moderation.</p></div>
+        <div class="trust-grid" aria-label="Why shop with Al Huma Collection"><article><b>01</b><strong>Cash on Delivery</strong><span>Order within Pakistan and pay when your parcel arrives.</span></article><article><b>02</b><strong>Personal confirmation</strong><span>Our team confirms availability and final charges before dispatch.</span></article><article><b>03</b><strong>Official support</strong><span>Order assistance through our verified WhatsApp number.</span></article></div>
+        <div class="approved-reviews" data-approved-reviews><p>Loading approved reviews…</p></div>
+        <form class="review-form reveal" action="https://formsubmit.co/alhumacollection@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New customer review — approval required"><input type="hidden" name="_captcha" value="true"><input type="hidden" name="_next" value="https://alhumacollection.com/review-thanks.html">
+          <div class="review-form-head"><div><span>Share your experience</span><h3>Leave a review</h3></div><p>Your review is sent privately to our team and appears publicly only after moderation.</p></div>
+          <fieldset><legend>Rating</legend><div class="rating-input"><input id="rate5" type="radio" name="Rating" value="5 stars" required><label for="rate5" title="5 stars">★</label><input id="rate4" type="radio" name="Rating" value="4 stars"><label for="rate4" title="4 stars">★</label><input id="rate3" type="radio" name="Rating" value="3 stars"><label for="rate3" title="3 stars">★</label><input id="rate2" type="radio" name="Rating" value="2 stars"><label for="rate2" title="2 stars">★</label><input id="rate1" type="radio" name="Rating" value="1 star"><label for="rate1" title="1 star">★</label></div></fieldset>
+          <label>Display name<input name="Display name" required maxlength="60" placeholder="Your first name or preferred public name"></label><label>City (optional)<input name="City" maxlength="60" placeholder="e.g. Sialkot"></label><label>Order ID (optional)<input name="Order ID" maxlength="30" placeholder="e.g. AH-12345678"></label><label class="review-wide">Your review<textarea name="Review" required minlength="20" maxlength="700" rows="5" placeholder="Tell us about the product, ordering experience or service you received."></textarea></label>
+          <label class="review-consent review-wide"><span><input type="checkbox" name="Publication consent" value="Approved" required> This is my genuine experience, and I allow Al Huma Collection to publish my display name, city, rating and review after moderation.</span></label><button class="button button-dark review-wide" type="submit">Submit review for approval</button>
+        </form>
+      </section>
+
+`;
+
 function insertBefore(needle, content, description) {
   if (!html.includes(needle)) throw new Error(`Could not locate ${description}; refusing to alter index.html.`);
   html = html.replace(needle, `${content}${needle}`);
@@ -78,13 +93,16 @@ function removeSection(id) {
 if (!html.includes('href="dawood-catalogue.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-catalogue.css" />\n  ', 'document head');
 if (!html.includes('href="dawood-commerce.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-commerce.css" />\n  ', 'document head');
 if (!html.includes('href="header-cart.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="header-cart.css" />\n  ', 'document head');
+if (!html.includes('href="reviews.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="reviews.css" />\n  ', 'document head');
 if (!html.includes('src="dawood-catalogue.js"')) insertBefore('</body>', '    <script src="dawood-catalogue.js" defer></script>\n  ', 'document body');
 if (!html.includes('src="dawood-commerce.js"')) insertBefore('</body>', '    <script src="dawood-commerce.js" defer></script>\n  ', 'document body');
+if (!html.includes('src="reviews.js"')) insertBefore('</body>', '    <script src="reviews.js" defer></script>\n  ', 'document body');
 if (!html.includes('src="analytics.js"')) insertBefore('</body>', '    <script src="analytics.js" defer></script>\n  ', 'document body');
 
 if (!replaceSection('live-catalogue', catalogueSection)) {
   insertBefore('      <section class="catalogue section-pad" id="catalogue"', catalogueSection, 'existing catalogue section');
 }
+if (!replaceSection('reviews', reviews)) insertBefore('      <section class="collections section-pad" id="visit">', reviews, 'visit section');
 
 // The PDF catalogue is retained in repository history, but removed from the delivered page.
 removeSection('featured');
