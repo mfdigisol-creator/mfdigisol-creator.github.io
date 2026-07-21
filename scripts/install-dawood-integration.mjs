@@ -44,5 +44,22 @@ if (!html.includes('src="dawood-catalogue.js"')) {
 }
 
 html = html.replace('href="#featured">Catalogue</a>', 'href="#live-catalogue">Catalogue</a>');
+html = html.replace('href="#featured">Explore featured collections</a>', 'href="#live-catalogue">Explore latest designs</a>');
+html = html.replace('href="#catalogue">Catalogue</a>', 'href="#live-catalogue">Catalogue</a>');
+
+html = html.replace('<div class="nav-dropdown" data-collection-menu>', '<div class="nav-dropdown pdf-catalogue-archive" data-collection-menu>');
+html = html.replace('<section class="featured-collections section-pad" id="featured"', '<section class="featured-collections section-pad pdf-catalogue-archive" id="featured"');
+html = html.replace('<section class="catalogue section-pad" id="catalogue"', '<section class="catalogue section-pad pdf-catalogue-archive" id="catalogue"');
+html = html.replace('<section class="recently-viewed section-pad"', '<section class="recently-viewed section-pad pdf-catalogue-archive"');
+
+html = html.replace(
+  '<details><summary>Why are prices not displayed?<span>+</span></summary><p>Prices are shared through a personal WhatsApp consultation so our team can provide the latest information for your selected design.</p></details>',
+  '<details><summary>Are the displayed prices current?<span>+</span></summary><p>Yes. Our displayed retail prices are refreshed with the synchronized catalogue approximately every 12 hours. Please contact our team on WhatsApp to confirm availability before ordering.</p></details>'
+);
+html = html.replace(
+  "addChatMessage('Prices are shared privately. Please send the product name or code to our official WhatsApp team for the current price.', 'assistant', [",
+  "addChatMessage('Current retail prices are displayed with each synchronized product. Please contact our official WhatsApp team with the product code to confirm availability and place your order.', 'assistant', ["
+);
+html = html.replace("{ label: 'Ask for price', href: generalWhatsApp, external: true }", "{ label: 'Order on WhatsApp', href: generalWhatsApp, external: true }");
 await fs.writeFile(file, html);
 console.log('Dawood catalogue integration is installed in index.html.');
