@@ -4,10 +4,14 @@ import path from 'node:path';
 const SOURCE = 'https://dawooddesigners.com';
 const OUTPUT = path.resolve('catalogue/dawood-products.json');
 const STATUS_OUTPUT = path.resolve('catalogue/sync-status.json');
+const PRODUCT_SITEMAP_OUTPUT = path.resolve('catalogue/products-sitemap.xml');
 const FORMAL_HEADING = 'UNSTITCHED FORMAL BRANDS';
 const LUXURY_HEADING = 'UNSTITCHED LUXURY BRANDS';
 const NEXT_HEADING = 'READY TO WEAR BRANDS';
 const EMBROIDERY_PATTERN = /\bemb(?:\.|roidery|roidered)?\b|chikan|chicken|schiffli|shiffli|laser[ -]?cut|cutwork|boring|patch|appliqu[eé]|sequence|sequins?/i;
+const NON_EMBROIDERY_PATTERN = /\bdigital(?:ly)?\s+print|\bprinted\b|\bprint\b|\bplain\b|\bsolid\b|\bblock\s*print|\bwash\s*&?\s*wear\b/i;
+const PIECE_PATTERN = /\b([123])\s*(?:pc|pcs|piece)\b/i;
+const MAX_SOURCE_PRICE_CHANGE = 0.5;
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -80,8 +84,14 @@ const safeImage = image => image?.src ? image.src.replace(/^\/\//, 'https://') :
 function normalizeProduct({ product, collection }) {
   const imageById = new Map((product.images || []).map(image => [image.id, safeImage(image)]));
   const searchText = [product.title, product.body_html, product.product_type, ...(product.tags || [])].join(' ');
-  const embroidered = EMBROIDERY_PATTERN.test(cleanText(searchText));
-  const markup = embroidered ? 2500 : 1000;
+  const normalizedSearchText = cleanText(searchText);
+  const pricingClass = EMBROIDERY_PATTERN.test(normalizedSearchText)
+    ? 'embroidered'
+    : NON_EMBROIDERY_PATTERN.test(normalizedSearchText) ? 'non-embroidered' : 'unknown';
+  const embroidered = pricingClass === 'embroidered' ? true : pricingClass === 'non-embroidered' ? false : null;
+  const markup = pricingClass === 'embroidered' ? 2500 : pricingClass === 'non-embroidered' ? 1000 : null;
+  const pieceMatch = normalizedSearchText.match(PIECE_PATTERN);
+  const pieceType = pieceMatch ? `${pieceMatch[1]} Piece` : 'Unspecified';
   const variants = product.variants?.length ? product.variants : [{ id: product.id, title: 'Default Title', price: '0', available: false }];
 
   return variants.map((variant, index) => {
@@ -104,7 +114,11 @@ function normalizeProduct({ product, collection }) {
       embroidered,
       sourcePrice,
       markup,
-      price: sourcePrice + markup,
+      price: markup === null ? null : sourcePrice + markup,
+      pricingClass,
+      pricingStatus: markup === null ? 'enquire' : 'calculated',
+      pricingReason: markup === null ? 'classification-uncertain' : null,
+      pieceType,
       currency: 'PKR',
       available: Boolean(variant.available),
       image,
@@ -132,8 +146,16 @@ async function main() {
     const existing = deduplicated.get(item.id);
     if (!existing || (item.category === 'Luxury' && existing.category !== 'Luxury')) deduplicated.set(item.id, item);
   }
+  const previous = await fs.readFile(OUTPUT, 'utf8').then(JSON.parse).catch(() => ({ products: [] }));
+  const previousPrices = new Map((previous.products || []).map(item => [item.code, Number(item.sourcePrice)]));
   const products = [...deduplicated.values()]
     .filter(item => item.image && item.sourcePrice > 0)
+    .map(item => {
+      const oldPrice = previousPrices.get(item.code);
+      const changedTooFar = oldPrice > 0 && Math.abs(item.sourcePrice - oldPrice) / oldPrice > MAX_SOURCE_PRICE_CHANGE;
+      if (!changedTooFar) return item;
+      return { ...item, price: null, markup: null, pricingStatus: 'enquire', pricingReason: 'source-price-change-review' };
+    })
     .sort((a, b) => Number(b.available) - Number(a.available) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
 
   if (products.length < 20) throw new Error(`Only ${products.length} products were produced; refusing an incomplete update.`);
@@ -148,7 +170,8 @@ async function main() {
       products: products.length,
       available: products.filter(item => item.available).length,
       formal: products.filter(item => item.category === 'Formal').length,
-      luxury: products.filter(item => item.category === 'Luxury').length
+      luxury: products.filter(item => item.category === 'Luxury').length,
+      priceOnEnquiry: products.filter(item => item.price === null).length
     },
     products
   };
@@ -156,6 +179,8 @@ async function main() {
   await fs.mkdir(path.dirname(OUTPUT), { recursive: true });
   await fs.writeFile(OUTPUT, `${JSON.stringify(catalogue, null, 2)}\n`);
   await fs.writeFile(STATUS_OUTPUT, `${JSON.stringify({ ok: true, startedAt, completedAt: catalogue.synchronizedAt, ...catalogue.counts }, null, 2)}\n`);
+  const productUrls = products.map(item => `  <url><loc>https://alhumacollection.com/?product=${encodeURIComponent(item.code).replace(/&/g, '&amp;')}</loc><lastmod>${catalogue.synchronizedAt.slice(0,10)}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>`).join('\n');
+  await fs.writeFile(PRODUCT_SITEMAP_OUTPUT, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${productUrls}\n</urlset>\n`);
   console.log(`Synchronized ${products.length} products from ${collections.length} approved catalogue collections.`);
 }
 

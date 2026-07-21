@@ -3,25 +3,44 @@ import fs from 'node:fs/promises';
 const file = 'index.html';
 let html = await fs.readFile(file, 'utf8');
 
-const section = `      <section class="live-catalogue section-pad" id="live-catalogue" aria-labelledby="live-catalogue-title" data-live-catalogue hidden>
+const catalogueSection = `      <section class="live-catalogue section-pad" id="live-catalogue" aria-labelledby="live-catalogue-title" data-live-catalogue hidden>
         <div class="live-catalogue-head reveal">
-          <div>
-            <p class="eyebrow"><span></span> Synchronized catalogue</p>
-            <h2 id="live-catalogue-title">Latest<br /><em>designs.</em></h2>
-          </div>
-          <div class="live-catalogue-summary">
-            <p>Explore the latest unstitched formal and luxury collections. Prices shown are Al Huma Collection retail prices, and availability is refreshed approximately every 12 hours.</p>
-            <div class="live-sync-meta"><span data-live-sync-time>Preparing catalogue</span><span>WhatsApp ordering</span></div>
-          </div>
+          <div><p class="eyebrow"><span></span> Synchronized catalogue</p><h2 id="live-catalogue-title">Latest<br /><em>designs.</em></h2></div>
+          <div class="live-catalogue-summary"><p>Explore current unstitched formal and luxury collections. Catalogue information is refreshed approximately every 12 hours.</p><div class="live-sync-meta"><span data-live-sync-time>Preparing catalogue</span><span>Official WhatsApp ordering</span></div></div>
         </div>
         <div class="live-tools" aria-label="Search and filter synchronized catalogue">
-          <label><span>Search designs</span><input type="search" placeholder="Product, brand or code" autocomplete="off" data-live-search /></label>
+          <label class="live-search"><span>Search designs</span><input type="search" placeholder="Product, brand or code" autocomplete="off" data-live-search /></label>
           <label><span>Category</span><select data-live-category><option value="all">All categories</option><option value="Formal">Formal</option><option value="Luxury">Luxury</option></select></label>
-          <label><span>Availability</span><select data-live-availability><option value="available">Available now</option><option value="all">Show all</option><option value="unavailable">Currently unavailable</option></select></label>
+          <label><span>Collection</span><select data-live-brand><option value="all">All collections</option></select></label>
+          <label><span>Style</span><select data-live-style><option value="all">All styles</option><option value="embroidered">Embroidered</option><option value="non-embroidered">Printed / non-embroidered</option><option value="unknown">Price on enquiry</option></select></label>
+          <label><span>Pieces</span><select data-live-pieces><option value="all">All suit types</option><option value="2 Piece">2 Piece</option><option value="3 Piece">3 Piece</option></select></label>
+          <label><span>Price</span><select data-live-price><option value="all">All prices</option><option value="0-3999">Under Rs. 4,000</option><option value="4000-5999">Rs. 4,000–5,999</option><option value="6000-7999">Rs. 6,000–7,999</option><option value="8000-999999">Rs. 8,000+</option><option value="enquire">Price on enquiry</option></select></label>
+          <label><span>Availability</span><select data-live-availability><option value="available">Available to order</option><option value="all">Show all</option><option value="unavailable">Currently unavailable</option></select></label>
+          <label><span>Sort</span><select data-live-sort><option value="newest">Newest first</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A–Z</option></select></label>
         </div>
-        <p class="live-results" data-live-results>Loading latest designs…</p>
+        <div class="live-filter-summary"><p class="live-results" data-live-results>Loading latest designs…</p><div class="live-chips" data-live-chips></div><button type="button" data-live-clear>Clear all</button></div>
         <div class="live-product-grid" data-live-grid></div>
         <button class="button button-gold live-load-more" type="button" data-live-more hidden>View more designs</button>
+      </section>
+
+`;
+
+const nav = `        <details class="live-nav-dropdown" data-live-nav>
+          <summary>Collections <span aria-hidden="true">⌄</span></summary>
+          <div class="live-nav-menu"><a class="live-nav-all" href="#live-catalogue">View all collections</a><div class="live-nav-groups" data-live-nav-groups><span>Loading collections…</span></div></div>
+        </details>
+        <a href="#live-catalogue">New arrivals</a>
+        <a href="#how-to-order">How to order</a>
+`;
+
+const ordering = `      <section class="order-steps section-pad" id="how-to-order" aria-labelledby="order-title">
+        <div class="order-heading reveal"><p class="eyebrow dark"><span></span> Personal service</p><h2 id="order-title">How to<br /><em>order.</em></h2><p>From catalogue to confirmation in three simple steps.</p></div>
+        <div class="order-grid reveal">
+          <article><span>01</span><h3>Choose a design</h3><p>Browse the latest collection and open your preferred suit to review its images, code, price and availability.</p></article>
+          <article><span>02</span><h3>Message our team</h3><p>Use the product’s WhatsApp button. Its name and code will be included automatically in your message.</p></article>
+          <article><span>03</span><h3>Confirm your order</h3><p>Our team will confirm availability, payment and delivery information before your order is finalized.</p></article>
+        </div>
+        <p class="order-note">Catalogue availability is synchronized from our approved supplier source. Please obtain final confirmation from our team before payment.</p>
       </section>
 
 `;
@@ -31,35 +50,80 @@ function insertBefore(needle, content, description) {
   html = html.replace(needle, `${content}${needle}`);
 }
 
-if (!html.includes('href="dawood-catalogue.css"')) {
-  insertBefore('</head>', '    <link rel="stylesheet" href="dawood-catalogue.css" />\n  ', 'document head');
+function sectionBounds(id) {
+  const marker = `id="${id}"`;
+  const markerIndex = html.indexOf(marker);
+  if (markerIndex < 0) return null;
+  const start = html.lastIndexOf('<section', markerIndex);
+  const end = html.indexOf('</section>', markerIndex);
+  return start >= 0 && end >= 0 ? [start, end + '</section>'.length] : null;
 }
 
-if (!html.includes('id="live-catalogue"')) {
-  insertBefore('      <section class="catalogue section-pad" id="catalogue"', section, 'existing catalogue section');
+function replaceSection(id, content) {
+  const bounds = sectionBounds(id);
+  if (!bounds) return false;
+  html = `${html.slice(0, bounds[0])}${content.trimEnd()}${html.slice(bounds[1])}`;
+  return true;
 }
 
-if (!html.includes('src="dawood-catalogue.js"')) {
-  insertBefore('</body>', '    <script src="dawood-catalogue.js" defer></script>\n  ', 'document body');
+function removeSection(id) {
+  const bounds = sectionBounds(id);
+  if (bounds) html = `${html.slice(0, bounds[0])}${html.slice(bounds[1])}`;
 }
 
-html = html.replace('href="#featured">Catalogue</a>', 'href="#live-catalogue">Catalogue</a>');
+if (!html.includes('href="dawood-catalogue.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-catalogue.css" />\n  ', 'document head');
+if (!html.includes('src="dawood-catalogue.js"')) insertBefore('</body>', '    <script src="dawood-catalogue.js" defer></script>\n  ', 'document body');
+if (!html.includes('src="analytics.js"')) insertBefore('</body>', '    <script src="analytics.js" defer></script>\n  ', 'document body');
+
+if (!replaceSection('live-catalogue', catalogueSection)) {
+  insertBefore('      <section class="catalogue section-pad" id="catalogue"', catalogueSection, 'existing catalogue section');
+}
+
+// The PDF catalogue is retained in repository history, but removed from the delivered page.
+removeSection('featured');
+removeSection('catalogue');
+removeSection('recently-viewed');
+
+if (!html.includes('data-live-nav')) {
+  const dropdownStart = Math.max(html.indexOf('<div class="nav-dropdown" data-collection-menu>'), html.indexOf('<div class="nav-dropdown pdf-catalogue-archive" data-collection-menu>'));
+  const catalogueLink = html.indexOf('<a href="#live-catalogue">Catalogue</a>', dropdownStart);
+  if (dropdownStart >= 0 && catalogueLink >= 0) {
+    const linkEnd = catalogueLink + '<a href="#live-catalogue">Catalogue</a>'.length;
+    html = `${html.slice(0, dropdownStart)}${nav}${html.slice(linkEnd)}`;
+  } else insertBefore('        <a href="#contact">Contact</a>', nav, 'contact navigation link');
+}
+
+if (!html.includes('id="how-to-order"')) insertBefore('      <section class="faq-section', ordering, 'FAQ section');
+
+html = html.replace('href="#featured">Catalogue</a>', 'href="#live-catalogue">New arrivals</a>');
 html = html.replace('href="#featured">Explore featured collections</a>', 'href="#live-catalogue">Explore latest designs</a>');
 html = html.replace('href="#catalogue">Catalogue</a>', 'href="#live-catalogue">Catalogue</a>');
-
-html = html.replace('<div class="nav-dropdown" data-collection-menu>', '<div class="nav-dropdown pdf-catalogue-archive" data-collection-menu>');
-html = html.replace('<section class="featured-collections section-pad" id="featured"', '<section class="featured-collections section-pad pdf-catalogue-archive" id="featured"');
-html = html.replace('<section class="catalogue section-pad" id="catalogue"', '<section class="catalogue section-pad pdf-catalogue-archive" id="catalogue"');
-html = html.replace('<section class="recently-viewed section-pad"', '<section class="recently-viewed section-pad pdf-catalogue-archive"');
+html = html.replace('© 2026 Al Huma Collection. Concept landing page.', '© 2026 Al Huma Collection. All rights reserved.');
+html = html.replace('<a href="#story">Story</a><a href="#live-catalogue">Catalogue</a><a href="#contact">Contact</a>', '<a href="#story">Story</a><a href="#live-catalogue">Catalogue</a><a href="#how-to-order">How to order</a><a href="policies.html">Policies</a><a href="#contact">Contact</a>');
 
 html = html.replace(
   '<details><summary>Why are prices not displayed?<span>+</span></summary><p>Prices are shared through a personal WhatsApp consultation so our team can provide the latest information for your selected design.</p></details>',
-  '<details><summary>Are the displayed prices current?<span>+</span></summary><p>Yes. Our displayed retail prices are refreshed with the synchronized catalogue approximately every 12 hours. Please contact our team on WhatsApp to confirm availability before ordering.</p></details>'
+  '<details><summary>Are the displayed prices current?<span>+</span></summary><p>Calculated retail prices are refreshed with the synchronized catalogue approximately every 12 hours. Where a product cannot be classified confidently, its price is withheld and our team will assist on WhatsApp.</p></details>'
 );
+html = html.replace('Products displayed on the website are marked in stock. Please contact our team on WhatsApp at +92 321 6115731 for final confirmation before ordering.', 'Availability is synchronized approximately every 12 hours and means available to order from our approved supplier source. Please contact our team on WhatsApp at +92 321 6115731 for final confirmation.');
 html = html.replace(
   "addChatMessage('Prices are shared privately. Please send the product name or code to our official WhatsApp team for the current price.', 'assistant', [",
-  "addChatMessage('Current retail prices are displayed with each synchronized product. Please contact our official WhatsApp team with the product code to confirm availability and place your order.', 'assistant', ["
+  "addChatMessage('Calculated retail prices are displayed with confidently classified products. If a price is marked for enquiry, our official WhatsApp team will assist using the product code.', 'assistant', ["
 );
-html = html.replace("{ label: 'Ask for price', href: generalWhatsApp, external: true }", "{ label: 'Order on WhatsApp', href: generalWhatsApp, external: true }");
+html = html.replace("{ label: 'Ask for price', href: generalWhatsApp, external: true }", "{ label: 'Enquire on WhatsApp', href: generalWhatsApp, external: true }");
+
+html = html.replace('<title>Al Huma Collection — Quietly Iconic</title>', '<title>Al Huma Collection | Unstitched Formal & Luxury Suits in Sialkot</title>');
+html = html.replace('content="Al Huma Collection — refined Pakistani womenswear, shaped by timeless silhouettes and expressive detail."', 'content="Shop unstitched formal and luxury ladies suits from Al Huma Collection in Model Town, Sialkot. Browse current designs, prices and availability, then order on official WhatsApp."');
+
+if (!html.includes('rel="canonical"')) insertBefore('</head>', `    <link rel="canonical" href="https://alhumacollection.com/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Al Huma Collection | Formal & Luxury Unstitched Suits" />
+    <meta property="og:description" content="Browse synchronized formal and luxury ladies suit collections with current prices and WhatsApp ordering." />
+    <meta property="og:url" content="https://alhumacollection.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Al Huma Collection","url":"https://alhumacollection.com/","email":"alhumacollection@gmail.com","telephone":"+923216115731","address":{"@type":"PostalAddress","streetAddress":"87 Peer, Muradia Rd, Model Town","addressLocality":"Sialkot","addressCountry":"PK"},"priceRange":"PKR"}</script>
+  `, 'document head');
+
 await fs.writeFile(file, html);
-console.log('Dawood catalogue integration is installed in index.html.');
+console.log(`Dawood catalogue integration installed; index.html is ${Buffer.byteLength(html).toLocaleString()} bytes.`);
