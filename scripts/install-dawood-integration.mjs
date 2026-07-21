@@ -227,6 +227,26 @@ const answerChatQuestion = rawQuestion => {
     return;
   }
 
+  if (includesAny(question,['fabric quality','fabric','cloth quality','material quality','kapra','kapray','quality kaisi','quality of suit'])) {
+    addChatMessage('Fabric and finishing vary by brand, collection and design, so we prefer product-specific guidance instead of making one general quality claim. Al Huma Collection curates established Pakistani unstitched collections and clearly identifies the brand, product code, suit type and embroidery classification where available. Before confirmation, our team can help you review the listed fabric details, components, design images and intended use so you can choose with confidence. Photography and screens can affect colour appearance, and final product details should always be confirmed using the product code.', 'assistant', [{label:'Browse product details',href:'#live-catalogue'},{label:'Ask about a fabric',href:generalWhatsApp,external:true}]);
+    return;
+  }
+
+  if (includesAny(question,['why al huma','why should i buy','why buy from','why choose','al huma se kyun','ap se kyun','direct from brand','brand directly','brand website','official website','instead of brand'])) {
+    addChatMessage('Buying directly from a single brand can be suitable when you already know exactly what you want. Al Huma Collection is valuable when you prefer to compare multiple Formal and Luxury brands in one curated catalogue, receive personal help with product codes and availability, use Cash on Delivery within Pakistan, and speak with a local Sialkot team before dispatch. Our catalogue information is synchronized from an approved supplier source, displayed prices are transparent where classification is confident, and uncertain prices are never guessed. We do not claim every design is cheaper than every brand; our value is choice, convenience, personal confirmation and accessible after-order support.', 'assistant', [{label:'Explore our collections',href:'#live-catalogue'},{label:'Speak with our team',href:generalWhatsApp,external:true}]);
+    return;
+  }
+
+  if (includesAny(question,['compare','comparison','versus',' vs ','marketplace','market place','other shop','other website','daraz','competitor','different brand','better than','cheaper than'])) {
+    addChatMessage('We respect other brands, shops and marketplaces, and recommend a like-for-like comparison using the exact product code, brand, collection, number of pieces, embroidery or print classification, listed fabric details, availability, delivery charges and customer support. Al Huma Collection’s difference is a curated multi-brand selection, synchronized catalogue information, clear product codes, personal confirmation, Pakistan-wide COD, and direct support through our official WhatsApp and Sialkot location. We avoid claiming that every product is automatically better or cheaper; we help you compare accurately and choose the design and service that best suit your needs.', 'assistant', [{label:'Compare current designs',href:'#live-catalogue'},{label:'Ask our team',href:generalWhatsApp,external:true}]);
+    return;
+  }
+
+  if (includesAny(question,['trust','genuine','original','authentic','reliable','safe to order','fraud','scam'])) {
+    addChatMessage('Al Huma Collection supports confident ordering through identifiable product codes, synchronized supplier catalogue information, visible pricing where classification is reliable, Cash on Delivery, and a confirmation call before dispatch. You can contact us through our official WhatsApp, email, social profiles or visit our Model Town, Sialkot location. Product availability and final charges are confirmed before the order is finalized.', 'assistant', [{label:'Our contact details',href:'#contact'},{label:'Read customer policies',href:'policies.html'}]);
+    return;
+  }
+
   const collection = collectionAnswers.find(item => item.terms.some(term => question.includes(term)));
   const asksPrice = includesAny(question, ['price','prices','cost','range','rate','how much','cheapest','expensive','budget','under','below','upto','up to']);
   if (collection) {
@@ -299,7 +319,11 @@ const answerChatQuestion = rawQuestion => {
 if (!html.includes('data-chat-question="What are the current price ranges?"')) {
   html = html.replace('<div class="chat-quick" data-chat-quick>', '<div class="chat-quick" data-chat-quick>\n        <button type="button" data-chat-question="What are the current price ranges?">Price ranges</button>');
 }
+if (!html.includes('data-chat-question="Why should I buy from Al Huma Collection?"')) {
+  html = html.replace('<div class="chat-quick" data-chat-quick>', '<div class="chat-quick" data-chat-quick>\n        <button type="button" data-chat-question="Why should I buy from Al Huma Collection?">Why Al Huma?</button>');
+}
 html = html.replace('Welcome to Al Huma Collection. Ask me about our collections, a product code, availability, ordering or the showroom location.', 'Welcome to Al Huma Collection. I can calculate live catalogue price ranges, find products within your budget, check availability, and explain COD ordering, delivery or cancellation.');
+html = html.replace('Welcome to Al Huma Collection. I can calculate live catalogue price ranges, find products within your budget, check availability, and explain COD ordering, delivery or cancellation.', 'Welcome to Al Huma Collection. I can calculate live price ranges, find products within your budget, discuss fabric guidance, compare shopping options, and explain COD ordering, delivery or cancellation.');
 html = html.replace('Guided assistance · For anything else, our team is on WhatsApp.', 'Catalogue-aware guidance · For personal assistance, our team is on WhatsApp.');
 
 html = html.replace('<title>Al Huma Collection — Quietly Iconic</title>', '<title>Al Huma Collection | Unstitched Formal & Luxury Suits in Sialkot</title>');
