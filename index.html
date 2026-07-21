@@ -411,6 +411,7 @@ footer > small { grid-column: 1 / -1; padding-top: 1.5rem; color: rgba(243,238,2
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Al Huma Collection","url":"https://alhumacollection.com/","email":"alhumacollection@gmail.com","telephone":"+923216115731","address":{"@type":"PostalAddress","streetAddress":"87 Peer, Muradia Rd, Model Town","addressLocality":"Sialkot","addressCountry":"PK"},"priceRange":"PKR"}</script>
       <link rel="stylesheet" href="dawood-commerce.css" />
       <link rel="stylesheet" href="header-cart.css" />
+      <link rel="stylesheet" href="reviews.css" />
   </head>
   <body>
     <div class="site-loader" aria-hidden="true" data-site-loader><div><span>AH</span><p>Al Huma <small>Collection</small></p><i></i></div></div>
@@ -491,7 +492,7 @@ footer > small { grid-column: 1 / -1; padding-top: 1.5rem; color: rgba(243,238,2
 
       
 
-                                                            <section class="live-catalogue section-pad" id="live-catalogue" aria-labelledby="live-catalogue-title" data-live-catalogue hidden>
+                                                                  <section class="live-catalogue section-pad" id="live-catalogue" aria-labelledby="live-catalogue-title" data-live-catalogue hidden>
         <div class="live-catalogue-head reveal">
           <div><p class="eyebrow"><span></span> Synchronized catalogue</p><h2 id="live-catalogue-title">Latest<br /><em>designs.</em></h2></div>
           <div class="live-catalogue-summary"><p>Explore current unstitched formal and luxury collections. Catalogue information is refreshed approximately every 12 hours.</p><div class="live-sync-meta"><span data-live-sync-time>Preparing catalogue</span><span>Official WhatsApp ordering</span></div></div>
@@ -545,6 +546,19 @@ footer > small { grid-column: 1 / -1; padding-top: 1.5rem; color: rgba(243,238,2
           <details><summary>Where is Al Huma Collection located?<span>+</span></summary><p>Visit us at 87 Peer, Muradia Rd, Model Town, Sialkot, Pakistan. Directions are available in the contact section below.</p></details>
           <details><summary>Can I ask about delivery or payment options?<span>+</span></summary><p>Yes. Our team will be delighted to provide the appropriate delivery and payment information on official WhatsApp.</p></details>
         </div>
+      </section>
+
+      <section class="customer-reviews section-pad" id="reviews" aria-labelledby="reviews-title">
+        <div class="reviews-heading reveal"><p class="eyebrow dark"><span></span> Customer voices</p><h2 id="reviews-title">Shared with<br /><em>confidence.</em></h2><p>Only customer reviews approved by Al Huma Collection are published. Submit your genuine experience for moderation.</p></div>
+        <div class="trust-grid" aria-label="Why shop with Al Huma Collection"><article><b>01</b><strong>Cash on Delivery</strong><span>Order within Pakistan and pay when your parcel arrives.</span></article><article><b>02</b><strong>Personal confirmation</strong><span>Our team confirms availability and final charges before dispatch.</span></article><article><b>03</b><strong>Official support</strong><span>Order assistance through our verified WhatsApp number.</span></article></div>
+        <div class="approved-reviews" data-approved-reviews><p>Loading approved reviews…</p></div>
+        <form class="review-form reveal" action="https://formsubmit.co/alhumacollection@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New customer review — approval required"><input type="hidden" name="_captcha" value="true"><input type="hidden" name="_next" value="https://alhumacollection.com/review-thanks.html">
+          <div class="review-form-head"><div><span>Share your experience</span><h3>Leave a review</h3></div><p>Your review is sent privately to our team and appears publicly only after moderation.</p></div>
+          <fieldset><legend>Rating</legend><div class="rating-input"><input id="rate5" type="radio" name="Rating" value="5 stars" required><label for="rate5" title="5 stars">★</label><input id="rate4" type="radio" name="Rating" value="4 stars"><label for="rate4" title="4 stars">★</label><input id="rate3" type="radio" name="Rating" value="3 stars"><label for="rate3" title="3 stars">★</label><input id="rate2" type="radio" name="Rating" value="2 stars"><label for="rate2" title="2 stars">★</label><input id="rate1" type="radio" name="Rating" value="1 star"><label for="rate1" title="1 star">★</label></div></fieldset>
+          <label>Display name<input name="Display name" required maxlength="60" placeholder="Your first name or preferred public name"></label><label>City (optional)<input name="City" maxlength="60" placeholder="e.g. Sialkot"></label><label>Order ID (optional)<input name="Order ID" maxlength="30" placeholder="e.g. AH-12345678"></label><label class="review-wide">Your review<textarea name="Review" required minlength="20" maxlength="700" rows="5" placeholder="Tell us about the product, ordering experience or service you received."></textarea></label>
+          <label class="review-consent review-wide"><span><input type="checkbox" name="Publication consent" value="Approved" required> This is my genuine experience, and I allow Al Huma Collection to publish my display name, city, rating and review after moderation.</span></label><button class="button button-dark review-wide" type="submit">Submit review for approval</button>
+        </form>
       </section>
 
       <section class="collections section-pad" id="visit">
@@ -891,5 +905,6 @@ document.querySelectorAll('.reveal').forEach(node => observer.observe(node));
       <script src="dawood-catalogue.js" defer></script>
       <script src="analytics.js" defer></script>
       <script src="dawood-commerce.js" defer></script>
+      <script src="reviews.js" defer></script>
   </body>
 </html>
