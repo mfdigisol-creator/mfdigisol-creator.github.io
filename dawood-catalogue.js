@@ -128,7 +128,10 @@
       track('share_product',{ product_code:product.code });
     });
     dialog.querySelector('[data-dialog-order]').addEventListener('click', () => track('whatsapp_order',{ product_code:product.code, price_status:product.pricingStatus }));
-    dialog.querySelector('[data-dialog-cart]')?.addEventListener('click', () => window.dispatchEvent(new CustomEvent('alhuma:add-to-cart',{detail:{product}})));
+    dialog.querySelector('[data-dialog-cart]')?.addEventListener('click', () => {
+      dialog.close();
+      window.dispatchEvent(new CustomEvent('alhuma:add-to-cart',{detail:{product}}));
+    });
     if (updateUrl) history.replaceState(null,'',productUrl(product));
     dialog.showModal();
     track('view_product',{ product_code:product.code, brand:product.brand });
