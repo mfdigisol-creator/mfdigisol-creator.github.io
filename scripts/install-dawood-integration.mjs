@@ -112,6 +112,19 @@ html = html.replace(
 );
 html = html.replace("{ label: 'Ask for price', href: generalWhatsApp, external: true }", "{ label: 'Enquire on WhatsApp', href: generalWhatsApp, external: true }");
 
+// Remove obsolete PDF-catalogue behaviour and safely detach its former menu.
+const oldCatalogueJsStart = html.indexOf("const collectionRail = document.querySelector('[data-collection-rail]');");
+const oldCatalogueJsEnd = html.indexOf("const chatLauncher = document.querySelector('[data-chat-launcher]');", oldCatalogueJsStart);
+if (oldCatalogueJsStart >= 0 && oldCatalogueJsEnd > oldCatalogueJsStart) {
+  html = `${html.slice(0, oldCatalogueJsStart)}${html.slice(oldCatalogueJsEnd)}`;
+}
+html = html.replace("    collectionMenu.classList.remove('open');\n    collectionToggle.setAttribute('aria-expanded', 'false');", "    collectionMenu?.classList.remove('open');\n    collectionToggle?.setAttribute('aria-expanded', 'false');");
+const oldDropdownJsStart = html.indexOf("collectionToggle.addEventListener('click', (event) => {");
+const oldDropdownJsEnd = html.indexOf('const openBooking = (collection) => {', oldDropdownJsStart);
+if (oldDropdownJsStart >= 0 && oldDropdownJsEnd > oldDropdownJsStart) {
+  html = `${html.slice(0, oldDropdownJsStart)}${html.slice(oldDropdownJsEnd)}`;
+}
+
 html = html.replace('<title>Al Huma Collection — Quietly Iconic</title>', '<title>Al Huma Collection | Unstitched Formal & Luxury Suits in Sialkot</title>');
 html = html.replace('content="Al Huma Collection — refined Pakistani womenswear, shaped by timeless silhouettes and expressive detail."', 'content="Shop unstitched formal and luxury ladies suits from Al Huma Collection in Model Town, Sialkot. Browse current designs, prices and availability, then order on official WhatsApp."');
 
