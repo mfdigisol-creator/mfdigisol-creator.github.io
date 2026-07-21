@@ -8,6 +8,10 @@ const catalogueSection = `      <section class="live-catalogue section-pad" id="
           <div><p class="eyebrow"><span></span> Synchronized catalogue</p><h2 id="live-catalogue-title">Latest<br /><em>designs.</em></h2></div>
           <div class="live-catalogue-summary"><p>Explore current unstitched formal and luxury collections. Catalogue information is refreshed approximately every 12 hours.</p><div class="live-sync-meta"><span data-live-sync-time>Preparing catalogue</span><span>Official WhatsApp ordering</span></div></div>
         </div>
+        <div class="live-collection-showcase reveal" data-live-collection-showcase aria-label="Browse collections">
+          <div class="live-collection-showcase-head"><div><span>Curated for you</span><h3>Shop by collection</h3></div><div class="live-collection-arrows"><button type="button" data-collection-prev aria-label="Previous collections">←</button><button type="button" data-collection-next aria-label="Next collections">→</button></div></div>
+          <div class="live-collection-slider" data-live-collection-slider tabindex="0"><p>Loading collections…</p></div>
+        </div>
         <div class="live-tools" aria-label="Search and filter synchronized catalogue">
           <label class="live-search"><span>Search designs</span><input type="search" placeholder="Product, brand or code" autocomplete="off" data-live-search /></label>
           <label><span>Category</span><select data-live-category><option value="all">All categories</option><option value="Formal">Formal</option><option value="Luxury">Luxury</option></select></label>

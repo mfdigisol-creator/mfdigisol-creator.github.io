@@ -16,6 +16,8 @@
   const clear = $('[data-live-clear]');
   const navGroups = document.querySelector('[data-live-nav-groups]');
   const liveNav = document.querySelector('[data-live-nav]');
+  const collectionShowcase = $('[data-live-collection-showcase]');
+  const collectionSlider = $('[data-live-collection-slider]');
   let products = [];
   let visible = 24;
 
@@ -169,6 +171,34 @@
     navGroups.addEventListener('click', event => { const link=event.target.closest('[data-nav-brand]'); if(!link)return; controls.brand.value=link.dataset.navBrand; visible=24; render(); document.querySelector('[data-live-nav]')?.removeAttribute('open'); });
   }
 
+  function populateCollectionSlider() {
+    if (!collectionSlider) return;
+    const collections = [...new Set(products.map(product => product.brand).filter(Boolean))].map(brand => {
+      const items = products.filter(product => product.brand === brand);
+      const available = items.filter(product => product.available);
+      const cover = (available[0] || items[0])?.image;
+      const category = items.find(product => product.category)?.category || 'Collection';
+      return { brand, items, available, cover, category };
+    }).filter(collection => collection.cover).sort((a,b) => b.available.length - a.available.length || a.brand.localeCompare(b.brand));
+    collectionSlider.innerHTML = collections.map(collection => `<button type="button" class="live-collection-slide" data-slide-brand="${escapeHtml(collection.brand)}" aria-label="Open ${escapeHtml(collection.brand)} collection">
+      <span class="live-collection-image"><img src="${escapeHtml(collection.cover)}" alt="${escapeHtml(collection.brand)} collection" loading="lazy" referrerpolicy="no-referrer" /><i>${escapeHtml(collection.category)}</i></span>
+      <span class="live-collection-copy"><strong>${escapeHtml(collection.brand)}</strong><small>${collection.available.length} design${collection.available.length === 1 ? '' : 's'} available</small><b>Explore collection →</b></span>
+    </button>`).join('');
+    collectionSlider.addEventListener('click', event => {
+      const slide = event.target.closest('[data-slide-brand]');
+      if (!slide) return;
+      controls.brand.value = slide.dataset.slideBrand;
+      controls.availability.value = 'available';
+      visible = 24;
+      render();
+      document.querySelector('.live-tools')?.scrollIntoView({ behavior:'smooth', block:'start' });
+      track('collection_slider_open',{ brand:slide.dataset.slideBrand });
+    });
+    const scroll = direction => collectionSlider.scrollBy({ left:direction * Math.max(280, collectionSlider.clientWidth * .78), behavior:'smooth' });
+    collectionShowcase?.querySelector('[data-collection-prev]')?.addEventListener('click', () => scroll(-1));
+    collectionShowcase?.querySelector('[data-collection-next]')?.addEventListener('click', () => scroll(1));
+  }
+
   fetch(`catalogue/dawood-products.json?v=${Date.now()}`, { cache:'no-store' })
     .then(response => { if (!response.ok) throw new Error('Catalogue is not ready'); return response.json(); })
     .then(data => {
@@ -178,7 +208,7 @@
       const stale = Date.now() - date.getTime() > 36 * 60 * 60 * 1000;
       syncTime.textContent = stale ? 'Update delayed — confirm availability on WhatsApp' : `Updated ${date.toLocaleString('en-PK', { dateStyle:'medium', timeStyle:'short', timeZone:'Asia/Karachi' })}`;
       syncTime.classList.toggle('stale',stale);
-      populateNavigation(); section.hidden=false; render();
+      populateNavigation(); populateCollectionSlider(); section.hidden=false; render();
       window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:{ products:products.map(product => ({ code:product.code, name:product.name, brand:product.brand, available:product.available, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) })) } }));
       const requested = new URLSearchParams(location.search).get('product'); if(requested) setTimeout(() => openProduct(requested,false),100);
       track('catalogue_loaded',{ product_count:products.length, available_count:data.counts?.available, enquiry_price_count:data.counts?.priceOnEnquiry });
