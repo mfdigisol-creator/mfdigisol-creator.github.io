@@ -95,6 +95,17 @@ if (!html.includes('data-live-nav')) {
 
 if (!html.includes('id="how-to-order"')) insertBefore('      <section class="faq-section', ordering, 'FAQ section');
 
+if (!html.includes('class="social-contact"')) {
+  insertBefore('          <div class="contact-map">', `          <div class="social-contact" aria-label="Al Huma Collection social media">
+            <p><span>Follow &amp; message us</span>Connect with Al Huma Collection on your preferred social platform.</p>
+            <div>
+              <a href="https://www.facebook.com/Alhuma.Collection" target="_blank" rel="noopener noreferrer" aria-label="Contact Al Huma Collection on Facebook"><b aria-hidden="true">f</b><span>Facebook<small>Al Huma</small></span><i>Visit page ↗</i></a>
+              <a href="https://www.instagram.com/alhuma.collection/" target="_blank" rel="noopener noreferrer" aria-label="Contact Al Huma Collection on Instagram"><b aria-hidden="true">◎</b><span>Instagram<small>@alhuma.collection</small></span><i>Visit profile ↗</i></a>
+            </div>
+          </div>
+`, 'contact map');
+}
+
 const enquirySelectStart = html.indexOf('<label>Collection<select name="collection"');
 const enquirySelectEnd = html.indexOf('</select></label>', enquirySelectStart);
 if (enquirySelectStart >= 0 && enquirySelectEnd > enquirySelectStart) {
@@ -107,6 +118,9 @@ html = html.replace('href="#featured">Explore featured collections</a>', 'href="
 html = html.replace('href="#catalogue">Catalogue</a>', 'href="#live-catalogue">Catalogue</a>');
 html = html.replace('© 2026 Al Huma Collection. Concept landing page.', '© 2026 Al Huma Collection. All rights reserved.');
 html = html.replace('<a href="#story">Story</a><a href="#live-catalogue">Catalogue</a><a href="#contact">Contact</a>', '<a href="#story">Story</a><a href="#live-catalogue">Catalogue</a><a href="#how-to-order">How to order</a><a href="policies.html">Policies</a><a href="#contact">Contact</a>');
+if (!html.includes('href="https://www.facebook.com/Alhuma.Collection" target="_blank" rel="noopener noreferrer">Facebook</a>')) {
+  html = html.replace('<a href="policies.html">Policies</a><a href="#contact">Contact</a>', '<a href="policies.html">Policies</a><a href="#contact">Contact</a><a href="https://www.facebook.com/Alhuma.Collection" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/alhuma.collection/" target="_blank" rel="noopener noreferrer">Instagram</a>');
+}
 
 html = html.replace(
   '<details><summary>Why are prices not displayed?<span>+</span></summary><p>Prices are shared through a personal WhatsApp consultation so our team can provide the latest information for your selected design.</p></details>',
