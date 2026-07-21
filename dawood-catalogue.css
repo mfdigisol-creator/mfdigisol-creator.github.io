@@ -29,5 +29,6 @@
 .live-empty { grid-column:1/-1; padding:3rem; border:1px solid #3a352e; color:#c6bdae; text-align:center; }
 .live-load-more { display:block; margin:2rem auto 0; }
 .live-catalogue[hidden] { display:none; }
+.pdf-catalogue-archive { display:none !important; }
 @media (max-width:1000px) { .live-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.live-catalogue-head{gap:2rem}.live-tools{grid-template-columns:1fr 1fr}.live-tools label:first-child{grid-column:1/-1} }
 @media (max-width:700px) { .live-catalogue-head{grid-template-columns:1fr}.live-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}.live-tools{grid-template-columns:1fr}.live-tools label:first-child{grid-column:auto}.live-product-copy{padding:.8rem}.live-product h3{font-size:.88rem}.live-product-row{display:grid}.live-enquire{justify-self:start}.live-sync-meta{gap:.5rem} }
