@@ -489,7 +489,7 @@ footer > small { grid-column: 1 / -1; padding-top: 1.5rem; color: rgba(243,238,2
 
       
 
-                  <section class="live-catalogue section-pad" id="live-catalogue" aria-labelledby="live-catalogue-title" data-live-catalogue hidden>
+                        <section class="live-catalogue section-pad" id="live-catalogue" aria-labelledby="live-catalogue-title" data-live-catalogue hidden>
         <div class="live-catalogue-head reveal">
           <div><p class="eyebrow"><span></span> Synchronized catalogue</p><h2 id="live-catalogue-title">Latest<br /><em>designs.</em></h2></div>
           <div class="live-catalogue-summary"><p>Explore current unstitched formal and luxury collections. Catalogue information is refreshed approximately every 12 hours.</p><div class="live-sync-meta"><span data-live-sync-time>Preparing catalogue</span><span>Official WhatsApp ordering</span></div></div>
@@ -624,7 +624,7 @@ footer > small { grid-column: 1 / -1; padding-top: 1.5rem; color: rgba(243,238,2
         <label class="spam-trap" aria-hidden="true">Leave this field empty<input name="website" tabindex="-1" autocomplete="off" /></label>
         <label>Name<input name="name" autocomplete="name" required placeholder="Your name" /></label>
         <label>Email or mobile number<input name="contact" type="text" autocomplete="off" required placeholder="Email address or mobile number" aria-describedby="contact-choice-help" /><small id="contact-choice-help" class="field-help">Enter whichever contact method you prefer.</small></label>
-        <label>Collection<select name="collection"><option>Jahan-e-Rung Vol. 14</option><option>Riwayat Vol. 195</option><option>Gul Ahmed 3Pc 2026 Vol. 1</option><option>Gulzeb Vol. 175</option><option>Khaas Vol. 186</option><option>Elahèh by M-Basic</option><option>Maahru by Anaya Noor</option><option>Arzoo by Noor Jahan</option><option>Karwaan Vol. 13</option><option>The Ivory Edit</option><option>Noir Festive</option><option>Jasmine Formals</option><option>Not sure yet</option></select></label>
+        <label>Preferred collection<select name="collection" data-live-enquiry-collection><option value="Help me choose">Help me choose</option></select><small class="field-help">Choose a current brand, or let our team guide you.</small></label>
         <div class="captcha-field">
           <label for="captcha-answer">Human verification</label>
           <div><span data-captcha-question>What is 4 + 3?</span><input id="captcha-answer" name="captcha" type="number" inputmode="numeric" required autocomplete="off" aria-describedby="captcha-help" /></div>
@@ -648,7 +648,7 @@ footer > small { grid-column: 1 / -1; padding-top: 1.5rem; color: rgba(243,238,2
         <p class="eyebrow dark"><span></span> <b data-gallery-collection>Collection</b></p>
         <h2 data-gallery-name></h2>
         <div class="gallery-status"><span data-gallery-code></span><strong>In stock</strong></div>
-        <p>Printed three-piece unstitched lawn ensemble. Ask our showroom team for pricing and ordering details.</p>
+        <p>Printed three-piece unstitched lawn ensemble. Ask our team for pricing and ordering details.</p>
         <div class="gallery-actions"><a class="button button-dark" data-gallery-whatsapp href="#" target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a><button class="button button-outline-dark" type="button" data-gallery-share>Share product</button></div>
       </div>
     </dialog>
@@ -743,23 +743,13 @@ const addChatMessage = (text, role = 'assistant', actions = []) => {
 };
 
 const normalizeQuestion = value => value.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-const catalogueEntries = [...document.querySelectorAll('[data-whatsapp]')].map(link => ({
-  code: link.dataset.code,
-  product: link.dataset.product,
-  search: normalizeQuestion(`${link.dataset.code} ${link.dataset.product}`),
-  href: link.href
-}));
-const collectionAnswers = [
-  { terms: ['jahan e rung', 'jahan rung', 'vol 14'], name: 'Jahan-e-Rung Vol. 14', href: '#jahan-e-rung' },
-  { terms: ['riwayat', 'vol 195'], name: 'Riwayat Vol. 195', href: '#riwayat' },
-  { terms: ['gul ahmed'], name: 'Gul Ahmed 3Pc 2026 Vol. 1', href: '#gul-ahmed' },
-  { terms: ['gulzeb', 'vol 175'], name: 'Gulzeb Vol. 175', href: '#gulzeb' },
-  { terms: ['khaas', 'vol 186'], name: 'Khaas Vol. 186', href: '#khaas' },
-  { terms: ['elaheh', 'm basic'], name: 'Elahèh by M-Basic', href: '#elaheh' },
-  { terms: ['maahru', 'anaya noor'], name: 'Maahru by Anaya Noor', href: '#maahru' },
-  { terms: ['arzoo', 'noor jahan'], name: 'Arzoo by Noor Jahan', href: '#arzoo' },
-  { terms: ['karwaan', 'vol 13'], name: 'Karwaan Vol. 13', href: '#karwaan' }
-];
+let catalogueEntries = [];
+let collectionAnswers = [];
+window.addEventListener('alhuma:catalogue-ready', event => {
+  const liveProducts = event.detail?.products || [];
+  catalogueEntries = liveProducts.map(item => ({ code:item.code, product:item.name, search:normalizeQuestion(`${item.code} ${item.name}`), href:item.whatsapp, available:item.available, priceLabel:item.priceLabel }));
+  collectionAnswers = [...new Set(liveProducts.map(item => item.brand).filter(Boolean))].map(name => ({ terms:[normalizeQuestion(name)], name, href:'#live-catalogue' }));
+});
 const includesAny = (question, terms) => terms.some(term => question.includes(term));
 
 const answerChatQuestion = rawQuestion => {
@@ -770,7 +760,7 @@ const answerChatQuestion = rawQuestion => {
     return question.includes(code) || (name.length > 5 && question.includes(name));
   });
   if (product) {
-    addChatMessage(`${product.product} (${product.code}) is shown as In stock. Our showroom team can confirm the latest availability and price on WhatsApp.`, 'assistant', [
+    addChatMessage(`${product.product} (${product.code}) is ${product.available ? 'available to order' : 'currently unavailable'}. ${product.priceLabel}`, 'assistant', [
       { label: 'Ask on WhatsApp', href: product.href, external: true }
     ]);
     return;
@@ -790,14 +780,14 @@ const answerChatQuestion = rawQuestion => {
     ]);
   } else if (includesAny(question, ['order', 'buy', 'purchase', 'book'])) {
     addChatMessage('Choose a product, then select “Enquire on WhatsApp.” Our team will confirm the price, availability and ordering details.', 'assistant', [
-      { label: 'Browse products', href: '#catalogue' }, { label: 'Order on WhatsApp', href: generalWhatsApp, external: true }
+      { label: 'Browse products', href: '#live-catalogue' }, { label: 'Order on WhatsApp', href: generalWhatsApp, external: true }
     ]);
   } else if (includesAny(question, ['available', 'availability', 'stock'])) {
-    addChatMessage('All products currently displayed are marked In stock. Please ask our WhatsApp team to confirm before ordering.', 'assistant', [
+    addChatMessage('Availability is synchronized approximately every 12 hours. Products marked “Available to order” still require final confirmation from our WhatsApp team.', 'assistant', [
       { label: 'Confirm availability', href: generalWhatsApp, external: true }
     ]);
   } else if (includesAny(question, ['collection', 'catalog', 'catalogue', 'design', 'product'])) {
-    addChatMessage('Our showroom catalogue has 9 featured collections and 98 products. Select a collection to see its designs.', 'assistant', [
+    addChatMessage('Browse our synchronized Formal and Luxury collections, updated approximately every 12 hours. Use the catalogue filters to choose a brand or style.', 'assistant', [
       { label: 'View collections', href: '#featured' }
     ]);
   } else if (includesAny(question, ['location', 'address', 'map', 'shop', 'visit'])) {
