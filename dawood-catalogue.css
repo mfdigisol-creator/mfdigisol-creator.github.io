@@ -163,3 +163,53 @@
   .social-contact { grid-template-columns:1fr; }
   .social-contact > div { grid-template-columns:1fr; }
 }
+
+/* Deterministic phone layout. Keep this in the catalogue bundle as well as the
+   final responsive bundle so a stale auxiliary stylesheet cannot restore the
+   desktop horizontal rail on mobile browsers. */
+@media (max-width:760px) {
+  .live-collection-showcase {
+    min-width:0;
+    overflow:visible;
+  }
+  .live-collection-arrows {
+    display:none;
+  }
+  .live-collection-slider {
+    display:grid;
+    grid-auto-flow:row;
+    grid-template-columns:minmax(0,1fr);
+    grid-auto-columns:auto;
+    gap:.85rem;
+    width:100%;
+    max-width:100%;
+    padding:0;
+    overflow:visible;
+    scroll-snap-type:none;
+  }
+  .live-collection-slide {
+    display:grid;
+    grid-template-columns:minmax(112px,34%) minmax(0,1fr);
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    min-height:150px;
+    scroll-snap-align:none;
+  }
+  .live-collection-image {
+    width:100%;
+    height:100%;
+    aspect-ratio:4/5;
+  }
+  .live-collection-copy {
+    min-width:0;
+    align-content:center;
+  }
+}
+
+@media (max-width:390px) {
+  .live-collection-slide {
+    grid-template-columns:104px minmax(0,1fr);
+    min-height:138px;
+  }
+}
