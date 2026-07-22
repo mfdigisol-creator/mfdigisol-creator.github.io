@@ -4,6 +4,9 @@ img, svg, video, iframe { max-width: 100%; }
 input, select, textarea, button { max-width: 100%; }
 
 @media (max-width: 760px) {
+  /* Catalogue content is populated after load; never leave it transparent if
+     an Android browser misses the reveal observer transition. */
+  .live-catalogue .reveal { opacity: 1; transform: none; }
   .section-pad { width: 100%; min-width: 0; padding-left: 1rem; padding-right: 1rem; }
   .site-header { left: 0; right: 0; width: 100%; max-width: 100%; min-width: 0; }
   .site-header > * { min-width: 0; }
