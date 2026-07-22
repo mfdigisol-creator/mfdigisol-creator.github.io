@@ -132,8 +132,8 @@ if (!html.includes('href="dawood-commerce.css"')) insertBefore('</head>', '    <
 if (!html.includes('href="header-cart.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="header-cart.css" />\n  ', 'document head');
 if (!html.includes('href="reviews.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="reviews.css" />\n  ', 'document head');
 if (!html.includes('href="mobile-responsive.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="mobile-responsive.css" />\n  ', 'document head');
-if (!html.includes('src="dawood-catalogue.js')) insertBefore('</body>', '    <script src="dawood-catalogue.js?v=20260722-auto-clear-filters" defer></script>\n  ', 'document body');
-html = html.replace(/src="dawood-catalogue\.js(?:\?[^\"]*)?"/g, 'src="dawood-catalogue.js?v=20260722-auto-clear-filters"');
+if (!html.includes('src="dawood-catalogue.js')) insertBefore('</body>', '    <script src="dawood-catalogue.js?v=20260722-sync-time" defer></script>\n  ', 'document body');
+html = html.replace(/src="dawood-catalogue\.js(?:\?[^\"]*)?"/g, 'src="dawood-catalogue.js?v=20260722-sync-time"');
 if (!html.includes('src="dawood-commerce.js"')) insertBefore('</body>', '    <script src="dawood-commerce.js" defer></script>\n  ', 'document body');
 if (!html.includes('src="reviews.js"')) insertBefore('</body>', '    <script src="reviews.js" defer></script>\n  ', 'document body');
 if (!html.includes('src="analytics.js"')) insertBefore('</body>', '    <script src="analytics.js" defer></script>\n  ', 'document body');

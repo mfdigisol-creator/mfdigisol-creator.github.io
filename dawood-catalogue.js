@@ -240,7 +240,9 @@
       if (!products.length) throw new Error('Catalogue is empty');
       const date = new Date(data.synchronizedAt);
       const stale = Date.now() - date.getTime() > 36 * 60 * 60 * 1000;
-      syncTime.textContent = stale ? 'Update delayed — confirm availability on WhatsApp' : `Updated ${date.toLocaleString('en-PK', { dateStyle:'medium', timeStyle:'short', timeZone:'Asia/Karachi' })}`;
+      const updatedLabel = date.toLocaleString('en-PK', { dateStyle:'medium', timeStyle:'short', timeZone:'Asia/Karachi' });
+      syncTime.textContent = `Catalogue last updated: ${updatedLabel} PKT${stale ? ' — next update delayed; please confirm availability' : ''}`;
+      syncTime.title = `Last successful synchronization: ${date.toISOString()}`;
       syncTime.classList.toggle('stale',stale);
       populateNavigation(); populateCollectionSlider(); section.hidden=false; revealCatalogue(); render();
       window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:{ synchronizedAt:data.synchronizedAt, products:products.map(product => ({ code:product.code, name:product.name, brand:product.brand, category:product.category, available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) })) } }));

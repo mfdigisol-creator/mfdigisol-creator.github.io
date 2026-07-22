@@ -16,18 +16,27 @@ const MAX_SOURCE_PRICE_CHANGE = 0.5;
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function fetchText(url, attempt = 1) {
-  const response = await fetch(url, {
-    headers: {
-      accept: 'text/html,application/json',
-      'user-agent': 'AlHumaCollectionCatalogueSync/1.0 (+https://alhumacollection.com)'
+  try {
+    const response = await fetch(url, {
+      headers: {
+        accept: 'text/html,application/json',
+        'user-agent': 'AlHumaCollectionCatalogueSync/1.0 (+https://alhumacollection.com)'
+      },
+      signal: AbortSignal.timeout(30_000)
+    });
+    if ((response.status === 429 || response.status >= 500) && attempt < 6) {
+      await sleep(Math.min(30_000, 1500 * 2 ** attempt));
+      return fetchText(url, attempt + 1);
     }
-  });
-  if ((response.status === 429 || response.status >= 500) && attempt < 4) {
-    await sleep(1000 * 2 ** attempt);
-    return fetchText(url, attempt + 1);
+    if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`);
+    return response.text();
+  } catch (error) {
+    if (attempt < 6 && (error.name === 'AbortError' || error.name === 'TimeoutError' || error instanceof TypeError)) {
+      await sleep(Math.min(30_000, 1500 * 2 ** attempt));
+      return fetchText(url, attempt + 1);
+    }
+    throw error;
   }
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`);
-  return response.text();
 }
 
 const decodeEntities = value => value
