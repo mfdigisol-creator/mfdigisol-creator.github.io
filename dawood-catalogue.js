@@ -19,6 +19,9 @@
   const collectionShowcase = $('[data-live-collection-showcase]');
   const collectionSlider = $('[data-live-collection-slider]');
   let products = [];
+  const visibleByCollection = new Map();
+  const initialCollectionLimit = () => matchMedia('(max-width: 700px)').matches ? 4 : 8;
+  const collectionBatchSize = () => matchMedia('(max-width: 700px)').matches ? 6 : 8;
 
   // This section starts hidden while catalogue data loads. Some Android
   // browsers do not re-trigger observers registered against its hidden
@@ -41,6 +44,20 @@
   const money = value => value == null ? 'Price on enquiry' : new Intl.NumberFormat('en-PK', { style:'currency', currency:'PKR', maximumFractionDigits:0 }).format(value).replace('PKR', 'Rs.');
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
   const collectionId = name => `collection-${String(name || 'other-designs').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9_-]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase()}`;
+  const thumbnailUrl = (url, width = 600) => {
+    try {
+      const image = new URL(url, location.href);
+      if (image.hostname === 'cdn.shopify.com') image.searchParams.set('width', String(width));
+      return image.href;
+    } catch { return url; }
+  };
+  const responsiveImage = (url, alt, { eager = false, width = 600 } = {}) => {
+    const source = escapeHtml(url);
+    const small = escapeHtml(thumbnailUrl(url, 360));
+    const medium = escapeHtml(thumbnailUrl(url, width));
+    const large = escapeHtml(thumbnailUrl(url, 900));
+    return `<img src="${medium}" srcset="${small} 360w, ${medium} ${width}w, ${large} 900w" sizes="(max-width:700px) 50vw, (max-width:1000px) 33vw, 25vw" alt="${escapeHtml(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''} referrerpolicy="no-referrer" data-original-src="${source}" />`;
+  };
   const productUrl = product => `${location.origin}${location.pathname}?product=${encodeURIComponent(product.code)}#live-catalogue`;
   const track = (event, detail = {}) => {
     window.dataLayer = window.dataLayer || [];
@@ -92,11 +109,11 @@
     chips.innerHTML = Object.entries(controls).filter(([key,control]) => key !== 'search' && control.value !== 'all' && !(key === 'availability' && control.value === 'available') && !(key === 'sort' && control.value === 'newest')).map(([key,control]) => `<button type="button" data-reset-filter="${key}">${escapeHtml(labels[key])}: ${escapeHtml(control.options[control.selectedIndex].text)} ×</button>`).join('');
   }
 
-  function card(product) {
+  function card(product, eager = false) {
     const priceLabel = product.price == null ? '<small>Pricing</small><strong>Price on enquiry</strong>' : `<small>${escapeHtml(product.code)}</small><strong>${money(product.price)}</strong>`;
     return `<article class="live-product" data-product-code="${escapeHtml(product.code)}">
       <button class="live-product-open" type="button" data-open-product="${escapeHtml(product.code)}" aria-label="View ${escapeHtml(product.name)} details">
-        <span class="live-product-media"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}" loading="lazy" referrerpolicy="no-referrer" /><span class="live-product-badge${product.available ? '' : ' sold'}">${product.available ? 'Available to order' : 'Currently unavailable'}</span></span>
+        <span class="live-product-media">${responsiveImage(product.image, product.name, { eager })}<span class="live-product-badge${product.available ? '' : ' sold'}">${product.available ? 'Available to order' : 'Currently unavailable'}</span></span>
         <span class="live-product-copy"><span class="live-product-brand">${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</span><strong class="live-product-name">${escapeHtml(product.name)}</strong><span class="live-product-row"><span class="live-price">${priceLabel}</span><span class="live-view">View details ↗</span></span></span>
       </button>
       ${product.available ? `<button class="live-add-cart" type="button" data-add-cart="${escapeHtml(product.code)}">Add to cart</button>` : ''}
@@ -104,8 +121,9 @@
     </article>`;
   }
 
-  function render() {
+  function render({ preserveLimits = false } = {}) {
     const matches = filterProducts();
+    if (!preserveLimits) visibleByCollection.clear();
     results.textContent = `${matches.length} design${matches.length === 1 ? '' : 's'} found`;
     const collections = matches.reduce((groups, product) => {
       const name = product.brand || product.sourceCollection || 'Other designs';
@@ -113,13 +131,18 @@
       groups.get(name).push(product);
       return groups;
     }, new Map());
-    grid.innerHTML = matches.length ? [...collections].map(([name, items]) => `<section class="live-product-collection" id="${collectionId(name)}" aria-labelledby="${collectionId(name)}-title">
+    grid.innerHTML = matches.length ? [...collections].map(([name, items], collectionIndex) => {
+      const visibleCount = Math.min(items.length, visibleByCollection.get(name) || initialCollectionLimit());
+      const remaining = items.length - visibleCount;
+      return `<section class="live-product-collection" id="${collectionId(name)}" aria-labelledby="${collectionId(name)}-title">
       <div class="live-product-collection-head">
         <div><span>Collection</span><h3 id="${collectionId(name)}-title">${escapeHtml(name)}</h3></div>
-        <p>${items.length} design${items.length === 1 ? '' : 's'}</p>
+        <p>Showing ${visibleCount} of ${items.length} design${items.length === 1 ? '' : 's'}</p>
       </div>
-      <div class="live-collection-products">${items.map(card).join('')}</div>
-    </section>`).join('') : '<p class="live-empty">No designs match these filters. Try a different search or contact our team on WhatsApp.</p>';
+      <div class="live-collection-products">${items.slice(0, visibleCount).map((product, productIndex) => card(product, collectionIndex === 0 && productIndex < 2)).join('')}</div>
+      ${remaining > 0 ? `<button class="button button-gold live-collection-more" type="button" data-load-collection="${escapeHtml(name)}">Load more designs <small>${remaining} remaining</small></button>` : ''}
+    </section>`;
+    }).join('') : '<p class="live-empty">No designs match these filters. Try a different search or contact our team on WhatsApp.</p>';
     loadMore.hidden = true;
     renderChips();
   }
@@ -181,6 +204,14 @@
     const order = event.target.closest('[data-order-product]'); if (order) track('whatsapp_order',{ product_code:order.dataset.orderProduct });
     const reset = event.target.closest('[data-reset-filter]'); if (reset) { controls[reset.dataset.resetFilter].value = 'all'; render(); }
     const add = event.target.closest('[data-add-cart]'); if (add) { const product=products.find(item=>item.code===add.dataset.addCart); if(product) window.dispatchEvent(new CustomEvent('alhuma:add-to-cart',{detail:{product}})); }
+    const more = event.target.closest('[data-load-collection]');
+    if (more) {
+      const name = more.dataset.loadCollection;
+      visibleByCollection.set(name, (visibleByCollection.get(name) || initialCollectionLimit()) + collectionBatchSize());
+      render({ preserveLimits:true });
+      document.getElementById(collectionId(name))?.scrollIntoView({ block:'nearest' });
+      track('load_more_collection', { brand:name });
+    }
   });
   Object.values(controls).forEach(control => control.addEventListener('input', () => { render(); track('filter_catalogue',{ filter:control.dataset.liveSearch !== undefined ? 'search' : control.previousElementSibling?.textContent, value:control.value }); }));
   clear.addEventListener('click', () => resetCatalogue());
@@ -227,8 +258,8 @@
       const category = items.find(product => product.category)?.category || 'Collection';
       return { brand, items, available, cover, category };
     }).filter(collection => collection.cover).sort((a,b) => b.available.length - a.available.length || a.brand.localeCompare(b.brand));
-    collectionSlider.innerHTML = collections.map(collection => `<button type="button" class="live-collection-slide" data-slide-brand="${escapeHtml(collection.brand)}" aria-label="Open ${escapeHtml(collection.brand)} collection">
-      <span class="live-collection-image"><img src="${escapeHtml(collection.cover)}" alt="${escapeHtml(collection.brand)} collection" loading="lazy" referrerpolicy="no-referrer" /><i>${escapeHtml(collection.category)}</i></span>
+    collectionSlider.innerHTML = collections.map((collection, index) => `<button type="button" class="live-collection-slide" data-slide-brand="${escapeHtml(collection.brand)}" aria-label="Open ${escapeHtml(collection.brand)} collection">
+      <span class="live-collection-image">${responsiveImage(collection.cover, `${collection.brand} collection`, { width:600, eager:index < 2 })}<i>${escapeHtml(collection.category)}</i></span>
       <span class="live-collection-copy"><strong>${escapeHtml(collection.brand)}</strong><small>${collection.available.length} design${collection.available.length === 1 ? '' : 's'} available</small><b>Explore collection →</b></span>
     </button>`).join('');
     collectionSlider.addEventListener('click', event => {
