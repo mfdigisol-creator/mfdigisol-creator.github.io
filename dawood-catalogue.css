@@ -85,7 +85,7 @@
 .live-price strong { line-height:1.2; }
 
 /* Product quick view */
-.live-product-dialog { width:min(1120px,calc(100vw - 2rem)); max-height:calc(100vh - 2rem); padding:0; border:1px solid #aa8a50; background:#f6f1e8; color:#17130f; }
+.live-product-dialog { width:calc(100% - 2rem); max-width:1120px; max-height:calc(100dvh - 2rem); margin:auto; padding:0; border:1px solid #aa8a50; background:#f6f1e8; color:#17130f; overflow-x:hidden; overflow-y:auto; }
 .live-product-dialog::backdrop { background:rgba(8,7,6,.78); backdrop-filter:blur(5px); }
 .live-dialog-close { position:absolute; z-index:4; top:.75rem; right:.85rem; width:42px; height:42px; border:1px solid #a68d66; background:#f6f1e8; color:#17130f; font-size:1.7rem; cursor:pointer; }
 .live-dialog-layout { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr); min-height:640px; }
@@ -141,6 +141,8 @@
   .live-dialog-gallery { min-height:55vh; }
 }
 @media (max-width:760px) {
+  .live-product-dialog { position:fixed; inset:.5rem; width:auto; max-width:none; max-height:none; margin:0; }
+  .live-dialog-layout { width:100%; min-width:0; min-height:0; }
   .live-collection-slider { grid-auto-columns:78%; }
   .live-collection-showcase-head { align-items:center; }
   .live-nav-dropdown { width:100%; }
@@ -151,7 +153,10 @@
   .live-search { grid-column:auto; }
   .live-product-name { font-size:.86rem; }
   .live-product > .live-enquire { margin:.1rem .8rem .8rem; font-size:.62rem; }
-  .live-dialog-gallery { grid-template-columns:62px 1fr; min-height:48vh; }
+  .live-dialog-gallery { width:100%; grid-template-columns:56px minmax(0,1fr); min-height:48vh; }
+  .live-dialog-stage,.live-dialog-copy,.live-dialog-copy dl,.live-dialog-copy dl div { min-width:0; }
+  .live-dialog-copy h2,.live-dialog-copy dd,.live-dialog-note { overflow-wrap:anywhere; word-break:normal; }
+  .live-dialog-copy dl div { align-items:flex-start; }
   .live-dialog-copy { padding:1.5rem; }
   .live-dialog-actions { display:grid; }
   .order-grid { grid-template-columns:1fr; }
