@@ -21,13 +21,6 @@
   let products = [];
   let visible = 24;
 
-  // This section starts hidden while catalogue data loads. Some Android
-  // browsers do not re-trigger observers registered against its hidden
-  // descendants, leaving the populated gallery transparent.
-  function revealCatalogue() {
-    section.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
-  }
-
   document.addEventListener('click', event => {
     if (liveNav?.open && !liveNav.contains(event.target)) liveNav.removeAttribute('open');
   });
@@ -51,6 +44,16 @@
     const priceText = product.price == null || priceQuestion ? 'Please share its current price and' : `It is shown at ${money(product.price)}. Please confirm`;
     return `https://wa.me/923216115731?text=${encodeURIComponent(`Hello Al Huma Collection, I am interested in ${product.name} (${product.code}). ${priceText} availability and ordering details. ${productUrl(product)}`)}`;
   };
+
+  function resetCatalogue({ brand = 'all', renderNow = true } = {}) {
+    Object.entries(controls).forEach(([key, control]) => {
+      control.value = key === 'availability' ? 'available' : key === 'sort' ? 'newest' : 'all';
+    });
+    controls.search.value = '';
+    controls.brand.value = brand;
+    visible = 24;
+    if (renderNow) render();
+  }
 
   function filterProducts() {
     const query = controls.search.value.trim().toLowerCase();
@@ -163,7 +166,7 @@
     const add = event.target.closest('[data-add-cart]'); if (add) { const product=products.find(item=>item.code===add.dataset.addCart); if(product) window.dispatchEvent(new CustomEvent('alhuma:add-to-cart',{detail:{product}})); }
   });
   Object.values(controls).forEach(control => control.addEventListener('input', () => { visible=24; render(); track('filter_catalogue',{ filter:control.dataset.liveSearch !== undefined ? 'search' : control.previousElementSibling?.textContent, value:control.value }); }));
-  clear.addEventListener('click', () => { Object.entries(controls).forEach(([key,control]) => control.value = key === 'availability' ? 'available' : key === 'sort' ? 'newest' : 'all'); controls.search.value=''; visible=24; render(); });
+  clear.addEventListener('click', () => resetCatalogue());
   loadMore.addEventListener('click', () => { visible += 24; render(); track('load_more_products'); });
 
   function populateNavigation() {
@@ -181,7 +184,13 @@
       const list = [...new Set(products.filter(product => product.category === group).map(product => product.brand))].sort();
       return `<div><strong>${group}</strong>${list.map(brand => `<a href="#live-catalogue" data-nav-brand="${escapeHtml(brand)}">${escapeHtml(brand)}</a>`).join('')}</div>`;
     }).join('');
-    navGroups.addEventListener('click', event => { const link=event.target.closest('[data-nav-brand]'); if(!link)return; controls.brand.value=link.dataset.navBrand; visible=24; render(); document.querySelector('[data-live-nav]')?.removeAttribute('open'); });
+    navGroups.addEventListener('click', event => {
+      const link = event.target.closest('[data-nav-brand]');
+      if (!link) return;
+      resetCatalogue({ brand:link.dataset.navBrand });
+      document.querySelector('[data-live-nav]')?.removeAttribute('open');
+      track('collection_navigation_open', { brand:link.dataset.navBrand });
+    });
   }
 
   function populateCollectionSlider() {
@@ -200,10 +209,7 @@
     collectionSlider.addEventListener('click', event => {
       const slide = event.target.closest('[data-slide-brand]');
       if (!slide) return;
-      controls.brand.value = slide.dataset.slideBrand;
-      controls.availability.value = 'available';
-      visible = 24;
-      render();
+      resetCatalogue({ brand:slide.dataset.slideBrand });
       document.querySelector('.live-tools')?.scrollIntoView({ behavior:'smooth', block:'start' });
       track('collection_slider_open',{ brand:slide.dataset.slideBrand });
     });
@@ -211,6 +217,14 @@
     collectionShowcase?.querySelector('[data-collection-prev]')?.addEventListener('click', () => scroll(-1));
     collectionShowcase?.querySelector('[data-collection-next]')?.addEventListener('click', () => scroll(1));
   }
+
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href="#live-catalogue"]');
+    if (!link || link.hasAttribute('data-nav-brand')) return;
+    resetCatalogue();
+    liveNav?.removeAttribute('open');
+    track('catalogue_navigation_open', { source:(link.textContent || 'catalogue link').trim() });
+  });
 
   fetch(`catalogue/dawood-products.json?v=${Date.now()}`, { cache:'no-store' })
     .then(response => { if (!response.ok) throw new Error('Catalogue is not ready'); return response.json(); })
@@ -221,7 +235,7 @@
       const stale = Date.now() - date.getTime() > 36 * 60 * 60 * 1000;
       syncTime.textContent = stale ? 'Update delayed — confirm availability on WhatsApp' : `Updated ${date.toLocaleString('en-PK', { dateStyle:'medium', timeStyle:'short', timeZone:'Asia/Karachi' })}`;
       syncTime.classList.toggle('stale',stale);
-      populateNavigation(); populateCollectionSlider(); section.hidden=false; revealCatalogue(); render();
+      populateNavigation(); populateCollectionSlider(); section.hidden=false; render();
       window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:{ synchronizedAt:data.synchronizedAt, products:products.map(product => ({ code:product.code, name:product.name, brand:product.brand, category:product.category, available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) })) } }));
       const requested = new URLSearchParams(location.search).get('product'); if(requested) setTimeout(() => openProduct(requested,false),100);
       track('catalogue_loaded',{ product_count:products.length, available_count:data.counts?.available, enquiry_price_count:data.counts?.priceOnEnquiry });
