@@ -1,0 +1,103 @@
+/* Final mobile layout guardrails. Loaded after feature styles. */
+html, body { max-width: 100%; overflow-x: clip; }
+img, svg, video, iframe { max-width: 100%; }
+input, select, textarea, button { max-width: 100%; }
+
+@media (max-width: 760px) {
+  .section-pad { width: 100%; min-width: 0; padding-left: 1rem; padding-right: 1rem; }
+  .site-header { left: 0; right: 0; width: 100%; max-width: 100%; min-width: 0; }
+  .site-header > * { min-width: 0; }
+  .site-header .brand { overflow: hidden; }
+  .site-header .wordmark { overflow: hidden; text-overflow: ellipsis; }
+  .site-nav { left: 0; right: 0; width: 100%; max-width: 100%; max-height: calc(100dvh - 74px); overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; }
+  .site-nav a, .site-nav button, .live-nav-menu, .live-nav-groups, .live-nav-groups > div { min-width: 0; max-width: 100%; }
+  .live-nav-menu { max-height: calc(100dvh - 180px); overflow-y: auto; }
+
+  .hero-content, .story-copy, .live-catalogue-head, .live-tools, .live-filter-summary,
+  .order-heading, .order-grid, .faq-list, .reviews-heading, .trust-grid,
+  .approved-reviews, .review-form, .collection-cta, .contact-intro,
+  .contact-details, .contact-map, footer { min-width: 0; max-width: 100%; }
+
+  .live-catalogue h2, .order-heading h2, .reviews-heading h2,
+  .contact-intro h2, .faq-heading h2 { overflow-wrap: anywhere; }
+  .live-collection-showcase { min-width: 0; overflow: hidden; }
+  .live-collection-slider { width: 100%; max-width: 100%; grid-auto-columns: minmax(0, 82%); }
+  .live-collection-slide, .live-product, .live-product-open,
+  .live-product-copy, .live-product-row { min-width: 0; max-width: 100%; }
+  .live-product-name, .live-product-brand, .live-price, .live-sync-meta,
+  .live-results, .order-note, .review-card, .review-consent,
+  .contact-details strong { overflow-wrap: anywhere; }
+
+  .booking-dialog, .live-product-dialog, .checkout-dialog {
+    position: fixed;
+    inset: max(.5rem, env(safe-area-inset-top)) max(.5rem, env(safe-area-inset-right)) max(.5rem, env(safe-area-inset-bottom)) max(.5rem, env(safe-area-inset-left));
+    width: auto;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .booking-dialog > *, .checkout-dialog > *, .live-product-dialog > * { min-width: 0; max-width: 100%; }
+  .booking-dialog form, .booking-dialog label, .captcha-field,
+  .checkout-wrap, .checkout-form, .checkout-form label, .checkout-total,
+  .live-dialog-layout, .live-dialog-gallery, .live-dialog-stage,
+  .live-dialog-copy, .live-dialog-copy dl, .live-dialog-copy dl div { min-width: 0; max-width: 100%; }
+  .booking-dialog input, .booking-dialog select,
+  .checkout-form input, .checkout-form select, .checkout-form textarea,
+  .review-form input, .review-form textarea { width: 100%; min-width: 0; max-width: 100%; }
+  .captcha-field > div { grid-template-columns: minmax(0, 1fr) minmax(64px, 76px); }
+  .live-dialog-gallery { min-height: 0; height: auto; }
+  .live-dialog-stage { min-height: 44vh; }
+  .live-dialog-stage img { width: 100%; height: auto; max-height: 56vh; }
+  .live-dialog-copy dl div { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
+  .live-dialog-copy dd { overflow-wrap: anywhere; }
+  .live-dialog-actions > * { width: 100%; text-align: center; }
+
+  .cart-drawer { left: 0; right: 0; width: 100%; max-width: 100%; min-width: 0; padding-left: 1rem; padding-right: 1rem; }
+  .cart-drawer *, .cart-item, .cart-item > div, .cart-summary { min-width: 0; max-width: 100%; }
+  .cart-item { grid-template-columns: 58px minmax(0, 1fr); }
+  .cart-item img { width: 58px; }
+  .cart-qty { grid-column: 2; flex-wrap: wrap; }
+
+  .chat-panel { left: max(.5rem, env(safe-area-inset-left)); right: max(.5rem, env(safe-area-inset-right)); width: auto; max-width: none; min-width: 0; height: calc(100dvh - 5.8rem); max-height: 620px; }
+  .chat-panel > *, .chat-panel > header > div, .chat-messages,
+  .chat-message, .chat-actions, .chat-form { min-width: 0; max-width: 100%; }
+  .chat-message, .chat-actions a { overflow-wrap: anywhere; }
+  .chat-form { grid-template-columns: minmax(0, 1fr) 42px; }
+
+  .review-form { padding: 1.1rem; }
+  .review-form-head { min-width: 0; gap: .75rem; }
+  .rating-input { flex-wrap: wrap; }
+  .contact-section { width: 100%; min-width: 0; max-width: 100%; margin-left: 0; margin-right: 0; }
+  .contact-details a, .social-contact a { min-width: 0; max-width: 100%; }
+  .social-contact a { grid-template-columns: 42px minmax(0, 1fr); }
+  .social-contact i { grid-column: 2; }
+  .contact-map { grid-template-columns: minmax(0, 1fr); }
+  .footer-links { max-width: 100%; flex-wrap: wrap; row-gap: .75rem; }
+
+  .button, .cart-checkout, .checkout-submit, .review-form button,
+  .live-add-cart, .live-enquire, .dialog-close, .live-dialog-close,
+  .cart-close, .checkout-close, .menu-toggle { min-height: 44px; }
+}
+
+@media (max-width: 390px) {
+  .site-header { padding-left: .55rem; padding-right: .55rem; }
+  .site-header .wordmark { font-size: .82rem; }
+  .site-header .wordmark small { letter-spacing: .22em; }
+  .site-header .cart-launcher { padding: .42rem .46rem; }
+  .site-header .menu-toggle { flex-basis: 38px; width: 38px; }
+  .hero-content, .section-pad { padding-left: .85rem; padding-right: .85rem; }
+  .live-product-grid { grid-template-columns: minmax(0, 1fr); }
+  .live-collection-slider { grid-auto-columns: minmax(0, 88%); }
+  .live-dialog-gallery { grid-template-columns: 48px minmax(0, 1fr); }
+  .live-dialog-copy { padding: 1.1rem; }
+  .live-dialog-copy dl div { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
+  .live-dialog-copy dd { text-align: left; }
+  .checkout-wrap, .booking-dialog { padding-left: .9rem; padding-right: .9rem; }
+  .review-form { padding: .9rem; }
+  .contact-section { padding-left: .9rem; padding-right: .9rem; }
+  .contact-details a { grid-template-columns: minmax(0, 1fr); }
+  .contact-details i, .contact-details strong { grid-column: 1; grid-row: auto; }
+}
