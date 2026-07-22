@@ -23,7 +23,19 @@
 .site-header .cart-launcher:hover { background: #d1aa60; color: #15120e; }
 .site-header .cart-launcher:hover::before { color: #15120e; }
 @media (max-width: 700px) {
-  .site-header .cart-launcher { margin-left: auto; margin-right: .25rem; padding: .55rem .62rem; font-size: 0; }
+  .site-header { width: 100%; max-width: 100vw; padding-inline: .85rem; gap: .35rem; overflow: visible; }
+  .site-header .brand { min-width: 0; flex: 0 1 auto; }
+  .site-header .wordmark { white-space: nowrap; }
+  .site-header .cart-launcher { position: static; flex: 0 0 auto; margin-left: auto; margin-right: 0; padding: .55rem .62rem; font-size: 0; }
   .site-header .cart-launcher::before { font-size: 1.05rem; }
   .site-header .cart-launcher b { font-size: .7rem; }
+  .site-header .menu-toggle { flex: 0 0 42px; color: #f5ead6; }
+}
+@media (max-width: 390px) {
+  .site-header { padding-inline: .65rem; }
+  .site-header .monogram { width: 38px; height: 38px; }
+  .site-header .brand { gap: .55rem; }
+  .site-header .wordmark { font-size: .9rem; }
+  .site-header .wordmark small { font-size: .42rem; letter-spacing: .3em; }
+  .site-header .cart-launcher { padding: .48rem .52rem; }
 }
