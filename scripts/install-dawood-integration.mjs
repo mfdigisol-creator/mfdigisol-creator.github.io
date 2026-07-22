@@ -107,6 +107,16 @@ function removeSection(id) {
   if (bounds) html = `${html.slice(0, bounds[0])}${html.slice(bounds[1])}`;
 }
 
+// Keep the enquiry dialog inside narrow mobile viewports, including older Android browsers.
+html = html.replace(
+  /\.booking-dialog \{ width: (?:min\(580px, calc\(100vw - 2rem\)\)|calc\(100% - 2rem\));[^}]*\}/,
+  '.booking-dialog { width: calc(100% - 2rem); max-width: 580px; max-height: calc(100dvh - 1rem); margin: auto; padding: clamp(2rem, 5vw, 4rem); border: 1px solid #d6c8ad; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px rgba(0,0,0,.5); overflow-x: hidden; overflow-y: auto; }'
+);
+html = html.replace(
+  /\.booking-dialog input, \.booking-dialog select \{ (?:display: block; )?width: 100%;[^}]*\}/,
+  '.booking-dialog input, .booking-dialog select { display: block; width: 100%; max-width: 100%; min-width: 0; margin-top: .45rem; padding: .85rem 0; border: 0; border-bottom: 1px solid #bbae98; border-radius: 0; outline: 0; background: transparent; color: var(--ink); font-size: .9rem; text-transform: none; letter-spacing: 0; }'
+);
+
 if (!html.includes('href="dawood-catalogue.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-catalogue.css" />\n  ', 'document head');
 if (!html.includes('href="dawood-commerce.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-commerce.css" />\n  ', 'document head');
 if (!html.includes('href="header-cart.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="header-cart.css" />\n  ', 'document head');
