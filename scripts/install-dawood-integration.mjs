@@ -118,6 +118,16 @@ html = html.replace(
 );
 
 if (!html.includes('href="dawood-catalogue.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-catalogue.css" />\n  ', 'document head');
+
+const mobileDialogFix = `
+  .booking-dialog { position: fixed; inset: .5rem; width: auto; max-width: none; max-height: none; margin: 0; padding: 1.35rem 1.1rem; }
+  .booking-dialog h2 { margin-right: 2.5rem; font-size: clamp(2rem, 12vw, 3rem); overflow-wrap: anywhere; }
+  .booking-dialog form, .booking-dialog label, .booking-dialog .captcha-field { min-width: 0; }
+  .captcha-field > div { grid-template-columns: minmax(0, 1fr) 72px; gap: .65rem; }
+`;
+if (!html.includes('position: fixed; inset: .5rem; width: auto; max-width: none; max-height: none')) {
+  html = html.replace('@media (max-width: 620px) {', `@media (max-width: 620px) {\n${mobileDialogFix}`);
+}
 if (!html.includes('href="dawood-commerce.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="dawood-commerce.css" />\n  ', 'document head');
 if (!html.includes('href="header-cart.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="header-cart.css" />\n  ', 'document head');
 if (!html.includes('href="reviews.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="reviews.css" />\n  ', 'document head');
