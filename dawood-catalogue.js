@@ -21,6 +21,13 @@
   let products = [];
   let visible = 24;
 
+  // This section starts hidden while catalogue data loads. Some Android
+  // browsers do not re-trigger observers registered against its hidden
+  // descendants, leaving the populated gallery transparent.
+  function revealCatalogue() {
+    section.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
+  }
+
   document.addEventListener('click', event => {
     if (liveNav?.open && !liveNav.contains(event.target)) liveNav.removeAttribute('open');
   });
@@ -214,7 +221,7 @@
       const stale = Date.now() - date.getTime() > 36 * 60 * 60 * 1000;
       syncTime.textContent = stale ? 'Update delayed — confirm availability on WhatsApp' : `Updated ${date.toLocaleString('en-PK', { dateStyle:'medium', timeStyle:'short', timeZone:'Asia/Karachi' })}`;
       syncTime.classList.toggle('stale',stale);
-      populateNavigation(); populateCollectionSlider(); section.hidden=false; render();
+      populateNavigation(); populateCollectionSlider(); section.hidden=false; revealCatalogue(); render();
       window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:{ synchronizedAt:data.synchronizedAt, products:products.map(product => ({ code:product.code, name:product.name, brand:product.brand, category:product.category, available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) })) } }));
       const requested = new URLSearchParams(location.search).get('product'); if(requested) setTimeout(() => openProduct(requested,false),100);
       track('catalogue_loaded',{ product_count:products.length, available_count:data.counts?.available, enquiry_price_count:data.counts?.priceOnEnquiry });
