@@ -20,8 +20,33 @@ input, select, textarea, button { max-width: 100%; }
 
   .live-catalogue h2, .order-heading h2, .reviews-heading h2,
   .contact-intro h2, .faq-heading h2 { overflow-wrap: anywhere; }
-  .live-collection-showcase { min-width: 0; overflow: hidden; }
-  .live-collection-slider { width: 100%; max-width: 100%; grid-auto-columns: minmax(0, 82%); }
+  .live-collection-showcase { min-width: 0; overflow: visible; }
+  /* A vertical list is deliberately used on phones. It avoids Android WebView
+     grid/scroll-snap sizing bugs and lets every collection remain readable. */
+  .live-collection-showcase-head { align-items: flex-end; }
+  .live-collection-controls { display: none; }
+  .live-collection-slider {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-columns: auto;
+    gap: .85rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  .live-collection-slide {
+    display: grid;
+    grid-template-columns: minmax(112px, 34%) minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    scroll-snap-align: none;
+  }
+  .live-collection-image { aspect-ratio: 4 / 5; height: 100%; }
+  .live-collection-copy { align-content: center; }
   .live-collection-slide, .live-product, .live-product-open,
   .live-product-copy, .live-product-row { min-width: 0; max-width: 100%; }
   .live-product-name, .live-product-brand, .live-price, .live-sync-meta,
@@ -30,15 +55,46 @@ input, select, textarea, button { max-width: 100%; }
 
   .booking-dialog, .live-product-dialog, .checkout-dialog {
     position: fixed;
-    inset: max(.5rem, env(safe-area-inset-top)) max(.5rem, env(safe-area-inset-right)) max(.5rem, env(safe-area-inset-bottom)) max(.5rem, env(safe-area-inset-left));
-    width: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     max-width: none;
     max-height: none;
+    min-height: 0;
     margin: 0;
+    border-width: 0;
+    border-radius: 0;
+    box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
   }
+  .booking-dialog[open], .live-product-dialog[open], .checkout-dialog[open] { display: block; }
+  .checkout-dialog { overflow: hidden; }
+  .checkout-wrap {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    padding-top: max(1.2rem, env(safe-area-inset-top));
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  }
+  .live-product-dialog { overflow: hidden; }
+  .live-product-dialog > [data-live-dialog-content] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  .booking-dialog { padding-top: max(1.35rem, env(safe-area-inset-top)); padding-bottom: max(2rem, env(safe-area-inset-bottom)); }
   .booking-dialog > *, .checkout-dialog > *, .live-product-dialog > * { min-width: 0; max-width: 100%; }
   .booking-dialog form, .booking-dialog label, .captcha-field,
   .checkout-wrap, .checkout-form, .checkout-form label, .checkout-total,
@@ -90,7 +146,7 @@ input, select, textarea, button { max-width: 100%; }
   .site-header .menu-toggle { flex-basis: 38px; width: 38px; }
   .hero-content, .section-pad { padding-left: .85rem; padding-right: .85rem; }
   .live-product-grid { grid-template-columns: minmax(0, 1fr); }
-  .live-collection-slider { grid-auto-columns: minmax(0, 88%); }
+  .live-collection-slide { grid-template-columns: 104px minmax(0, 1fr); min-height: 138px; }
   .live-dialog-gallery { grid-template-columns: 48px minmax(0, 1fr); }
   .live-dialog-copy { padding: 1.1rem; }
   .live-dialog-copy dl div { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
