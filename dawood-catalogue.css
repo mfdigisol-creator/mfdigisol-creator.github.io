@@ -36,6 +36,7 @@
 .live-product-collection-head span { color:#cda65a; font-size:.63rem; letter-spacing:.15em; text-transform:uppercase; }
 .live-product-collection-head h3 { margin:.35rem 0 0; font:400 clamp(2rem,4vw,3.6rem) Georgia,serif; line-height:1; overflow-wrap:anywhere; }
 .live-product-collection-head p { flex:0 0 auto; margin:0 0 .2rem; color:#bdb4a7; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; }
+.live-product-collection-head a { display:inline-block; margin-top:.45rem; color:#cda65a; font-size:.72rem; letter-spacing:.06em; text-decoration-thickness:1px; text-underline-offset:.25em; }
 .live-collection-products { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.25rem; }
 .live-product { border:1px solid #343029; background:#171512; min-width:0; transition:transform .25s ease,border-color .25s ease; }
 .live-product:hover { transform:translateY(-4px); border-color:#9d7a3d; }

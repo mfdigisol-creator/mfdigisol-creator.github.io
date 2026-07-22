@@ -43,6 +43,7 @@
 
   const money = value => value == null ? 'Price on enquiry' : new Intl.NumberFormat('en-PK', { style:'currency', currency:'PKR', maximumFractionDigits:0 }).format(value).replace('PKR', 'Rs.');
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+  const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
   const collectionId = name => `collection-${String(name || 'other-designs').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9_-]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase()}`;
   const thumbnailUrl = (url, width = 600) => {
     try {
@@ -58,7 +59,13 @@
     const large = escapeHtml(thumbnailUrl(url, 900));
     return `<img src="${medium}" srcset="${small} 360w, ${medium} ${width}w, ${large} 900w" sizes="(max-width:700px) 50vw, (max-width:1000px) 33vw, 25vw" alt="${escapeHtml(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''} referrerpolicy="no-referrer" data-original-src="${source}" />`;
   };
-  const productUrl = product => `${location.origin}${location.pathname}?product=${encodeURIComponent(product.code)}#live-catalogue`;
+  const collectionPageUrl = name => {
+    const base = slugify(name);
+    const collisions = [...new Set(products.map(product => product.brand).filter(Boolean))].sort().filter(brand => slugify(brand) === base);
+    const suffix = collisions.indexOf(name);
+    return `${location.origin}/collections/${base}${suffix > 0 ? `-${suffix + 1}` : ''}/`;
+  };
+  const productUrl = product => `${location.origin}/products/${slugify(product.code)}-${slugify(product.productName || product.name)}/`;
   const track = (event, detail = {}) => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event, ...detail });
@@ -136,7 +143,7 @@
       const remaining = items.length - visibleCount;
       return `<section class="live-product-collection" id="${collectionId(name)}" aria-labelledby="${collectionId(name)}-title">
       <div class="live-product-collection-head">
-        <div><span>Collection</span><h3 id="${collectionId(name)}-title">${escapeHtml(name)}</h3></div>
+        <div><span>Collection</span><h3 id="${collectionId(name)}-title">${escapeHtml(name)}</h3><a href="${escapeHtml(collectionPageUrl(name))}">Open ${escapeHtml(name)} collection page</a></div>
         <p>Showing ${visibleCount} of ${items.length} design${items.length === 1 ? '' : 's'}</p>
       </div>
       <div class="live-collection-products">${items.slice(0, visibleCount).map((product, productIndex) => card(product, collectionIndex === 0 && productIndex < 2)).join('')}</div>
@@ -194,9 +201,6 @@
     script.type = 'application/ld+json'; script.dataset.productSchema = '';
     script.textContent = JSON.stringify({ '@context':'https://schema.org','@type':'Product',name:product.name,sku:product.code,image:product.images?.length ? product.images : [product.image],brand:{'@type':'Brand',name:product.brand},offers:product.price == null ? undefined : {'@type':'Offer',priceCurrency:'PKR',price:product.price,availability:product.available ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',url:productUrl(product)} });
     document.head.append(script);
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) canonical.href = productUrl(product);
-    document.title = `${product.name} | Al Huma Collection`;
   }
 
   section.addEventListener('click', event => {

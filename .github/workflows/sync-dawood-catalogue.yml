@@ -7,6 +7,8 @@ on:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
       - "scripts/install-dawood-integration.mjs"
+      - "scripts/generate-seo-pages.mjs"
+      - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
   schedule:
@@ -39,17 +41,18 @@ jobs:
         run: |
           node scripts/install-dawood-integration.mjs
           node scripts/sync-dawood.mjs
+          node scripts/generate-seo-pages.mjs
 
       - name: Publish catalogue update
         if: always()
         run: |
-          if git diff --quiet -- index.html catalogue/ 2>/dev/null; then
+          if git diff --quiet -- index.html catalogue/ products/ collections/ shop/ 2>/dev/null; then
             echo "Catalogue is already current."
             exit 0
           fi
           git config user.name "Al Huma Catalogue Sync"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html catalogue/
+          git add index.html catalogue/ products/ collections/ shop/
           git commit -m "Update synchronized catalogue"
           git push
 
