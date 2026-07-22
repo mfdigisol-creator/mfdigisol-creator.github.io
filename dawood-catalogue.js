@@ -40,6 +40,7 @@
 
   const money = value => value == null ? 'Price on enquiry' : new Intl.NumberFormat('en-PK', { style:'currency', currency:'PKR', maximumFractionDigits:0 }).format(value).replace('PKR', 'Rs.');
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+  const collectionId = name => `collection-${String(name || 'other-designs').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9_-]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase()}`;
   const productUrl = product => `${location.origin}${location.pathname}?product=${encodeURIComponent(product.code)}#live-catalogue`;
   const track = (event, detail = {}) => {
     window.dataLayer = window.dataLayer || [];
@@ -112,9 +113,9 @@
       groups.get(name).push(product);
       return groups;
     }, new Map());
-    grid.innerHTML = matches.length ? [...collections].map(([name, items]) => `<section class="live-product-collection" aria-labelledby="collection-${escapeHtml(name).replace(/[^a-zA-Z0-9_-]+/g, '-').toLowerCase()}">
+    grid.innerHTML = matches.length ? [...collections].map(([name, items]) => `<section class="live-product-collection" id="${collectionId(name)}" aria-labelledby="${collectionId(name)}-title">
       <div class="live-product-collection-head">
-        <div><span>Collection</span><h3 id="collection-${escapeHtml(name).replace(/[^a-zA-Z0-9_-]+/g, '-').toLowerCase()}">${escapeHtml(name)}</h3></div>
+        <div><span>Collection</span><h3 id="${collectionId(name)}-title">${escapeHtml(name)}</h3></div>
         <p>${items.length} design${items.length === 1 ? '' : 's'}</p>
       </div>
       <div class="live-collection-products">${items.map(card).join('')}</div>
@@ -184,6 +185,15 @@
   Object.values(controls).forEach(control => control.addEventListener('input', () => { render(); track('filter_catalogue',{ filter:control.dataset.liveSearch !== undefined ? 'search' : control.previousElementSibling?.textContent, value:control.value }); }));
   clear.addEventListener('click', () => resetCatalogue());
 
+  function openCollection(brand, behavior = 'smooth') {
+    resetCatalogue({ brand });
+    liveNav?.removeAttribute('open');
+    requestAnimationFrame(() => {
+      const target = document.getElementById(collectionId(brand));
+      if (target) target.scrollIntoView({ behavior, block:'start' });
+    });
+  }
+
   function populateNavigation() {
     const brands = [...new Set(products.map(product => product.brand).filter(Boolean))].sort();
     controls.brand.innerHTML = '<option value="all">All collections</option>' + brands.map(brand => `<option value="${escapeHtml(brand)}">${escapeHtml(brand)}</option>`).join('');
@@ -197,13 +207,13 @@
     if (!navGroups) return;
     navGroups.innerHTML = ['Formal','Luxury'].map(group => {
       const list = [...new Set(products.filter(product => product.category === group).map(product => product.brand))].sort();
-      return `<div><strong>${group}</strong>${list.map(brand => `<a href="#live-catalogue" data-nav-brand="${escapeHtml(brand)}">${escapeHtml(brand)}</a>`).join('')}</div>`;
+      return `<div><strong>${group}</strong>${list.map(brand => `<a href="#${collectionId(brand)}" data-nav-brand="${escapeHtml(brand)}">${escapeHtml(brand)}</a>`).join('')}</div>`;
     }).join('');
     navGroups.addEventListener('click', event => {
       const link = event.target.closest('[data-nav-brand]');
       if (!link) return;
-      resetCatalogue({ brand:link.dataset.navBrand });
-      document.querySelector('[data-live-nav]')?.removeAttribute('open');
+      event.preventDefault();
+      openCollection(link.dataset.navBrand);
       track('collection_navigation_open', { brand:link.dataset.navBrand });
     });
   }
@@ -224,8 +234,7 @@
     collectionSlider.addEventListener('click', event => {
       const slide = event.target.closest('[data-slide-brand]');
       if (!slide) return;
-      resetCatalogue({ brand:slide.dataset.slideBrand });
-      document.querySelector('.live-tools')?.scrollIntoView({ behavior:'smooth', block:'start' });
+      openCollection(slide.dataset.slideBrand);
       track('collection_slider_open',{ brand:slide.dataset.slideBrand });
     });
     const scroll = direction => collectionSlider.scrollBy({ left:direction * Math.max(280, collectionSlider.clientWidth * .78), behavior:'smooth' });
@@ -234,7 +243,7 @@
   }
 
   document.addEventListener('click', event => {
-    const link = event.target.closest('a[href="#live-catalogue"]');
+    const link = event.target.closest('a[href="#live-catalogue"], a[href="#new-arrivals"]');
     if (!link || link.hasAttribute('data-nav-brand')) return;
     resetCatalogue();
     liveNav?.removeAttribute('open');
