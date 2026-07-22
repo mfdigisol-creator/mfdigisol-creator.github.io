@@ -19,7 +19,6 @@
   const collectionShowcase = $('[data-live-collection-showcase]');
   const collectionSlider = $('[data-live-collection-slider]');
   let products = [];
-  let visible = 24;
 
   // This section starts hidden while catalogue data loads. Some Android
   // browsers do not re-trigger observers registered against its hidden
@@ -58,7 +57,6 @@
     });
     controls.search.value = '';
     controls.brand.value = brand;
-    visible = 24;
     if (renderNow) render();
   }
 
@@ -107,10 +105,21 @@
 
   function render() {
     const matches = filterProducts();
-    const shown = matches.slice(0, visible);
     results.textContent = `${matches.length} design${matches.length === 1 ? '' : 's'} found`;
-    grid.innerHTML = shown.length ? shown.map(card).join('') : '<p class="live-empty">No designs match these filters. Try a different search or contact our team on WhatsApp.</p>';
-    loadMore.hidden = shown.length >= matches.length;
+    const collections = matches.reduce((groups, product) => {
+      const name = product.brand || product.sourceCollection || 'Other designs';
+      if (!groups.has(name)) groups.set(name, []);
+      groups.get(name).push(product);
+      return groups;
+    }, new Map());
+    grid.innerHTML = matches.length ? [...collections].map(([name, items]) => `<section class="live-product-collection" aria-labelledby="collection-${escapeHtml(name).replace(/[^a-zA-Z0-9_-]+/g, '-').toLowerCase()}">
+      <div class="live-product-collection-head">
+        <div><span>Collection</span><h3 id="collection-${escapeHtml(name).replace(/[^a-zA-Z0-9_-]+/g, '-').toLowerCase()}">${escapeHtml(name)}</h3></div>
+        <p>${items.length} design${items.length === 1 ? '' : 's'}</p>
+      </div>
+      <div class="live-collection-products">${items.map(card).join('')}</div>
+    </section>`).join('') : '<p class="live-empty">No designs match these filters. Try a different search or contact our team on WhatsApp.</p>';
+    loadMore.hidden = true;
     renderChips();
   }
 
@@ -169,12 +178,11 @@
   section.addEventListener('click', event => {
     const open = event.target.closest('[data-open-product]'); if (open) openProduct(open.dataset.openProduct);
     const order = event.target.closest('[data-order-product]'); if (order) track('whatsapp_order',{ product_code:order.dataset.orderProduct });
-    const reset = event.target.closest('[data-reset-filter]'); if (reset) { controls[reset.dataset.resetFilter].value = 'all'; visible=24; render(); }
+    const reset = event.target.closest('[data-reset-filter]'); if (reset) { controls[reset.dataset.resetFilter].value = 'all'; render(); }
     const add = event.target.closest('[data-add-cart]'); if (add) { const product=products.find(item=>item.code===add.dataset.addCart); if(product) window.dispatchEvent(new CustomEvent('alhuma:add-to-cart',{detail:{product}})); }
   });
-  Object.values(controls).forEach(control => control.addEventListener('input', () => { visible=24; render(); track('filter_catalogue',{ filter:control.dataset.liveSearch !== undefined ? 'search' : control.previousElementSibling?.textContent, value:control.value }); }));
+  Object.values(controls).forEach(control => control.addEventListener('input', () => { render(); track('filter_catalogue',{ filter:control.dataset.liveSearch !== undefined ? 'search' : control.previousElementSibling?.textContent, value:control.value }); }));
   clear.addEventListener('click', () => resetCatalogue());
-  loadMore.addEventListener('click', () => { visible += 24; render(); track('load_more_products'); });
 
   function populateNavigation() {
     const brands = [...new Set(products.map(product => product.brand).filter(Boolean))].sort();
