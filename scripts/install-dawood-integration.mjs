@@ -8,7 +8,7 @@ const catalogueSection = `      <section class="live-catalogue section-pad" id="
           <div><p class="eyebrow"><span></span> Synchronized catalogue</p><h2 id="live-catalogue-title">Latest<br /><em>designs.</em></h2></div>
           <div class="live-catalogue-summary"><p>Explore current unstitched formal and luxury collections. Catalogue information is refreshed approximately every 12 hours.</p><div class="live-sync-meta"><span data-live-sync-time>Preparing catalogue</span><span>Official WhatsApp ordering</span></div></div>
         </div>
-        <div class="live-collection-showcase reveal" data-live-collection-showcase aria-label="Browse collections">
+        <div class="live-collection-showcase reveal" id="new-arrivals" data-live-collection-showcase aria-label="Browse collections">
           <div class="live-collection-showcase-head"><div><span>Curated for you</span><h3>Shop by collection</h3></div><div class="live-collection-arrows"><button type="button" data-collection-prev aria-label="Previous collections">←</button><button type="button" data-collection-next aria-label="Next collections">→</button></div></div>
           <div class="live-collection-slider" data-live-collection-slider tabindex="0"><p>Loading collections…</p></div>
         </div>
@@ -33,7 +33,7 @@ const nav = `        <details class="live-nav-dropdown" data-live-nav>
           <summary>Collections <span aria-hidden="true">⌄</span></summary>
           <div class="live-nav-menu"><a class="live-nav-all" href="#live-catalogue">View all collections</a><div class="live-nav-groups" data-live-nav-groups><span>Loading collections…</span></div></div>
         </details>
-        <a href="#live-catalogue">New arrivals</a>
+        <a href="#new-arrivals">New arrivals</a>
         <a href="#how-to-order">How to order</a>
 `;
 
@@ -132,9 +132,9 @@ if (!html.includes('href="dawood-commerce.css"')) insertBefore('</head>', '    <
 if (!html.includes('href="header-cart.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="header-cart.css" />\n  ', 'document head');
 if (!html.includes('href="reviews.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="reviews.css" />\n  ', 'document head');
 if (!html.includes('href="mobile-responsive.css"')) insertBefore('</head>', '    <link rel="stylesheet" href="mobile-responsive.css" />\n  ', 'document head');
-if (!html.includes('src="dawood-catalogue.js')) insertBefore('</body>', '    <script src="dawood-catalogue.js?v=20260722-grouped-products" defer></script>\n  ', 'document body');
-html = html.replace(/src="dawood-catalogue\.js(?:\?[^\"]*)?"/g, 'src="dawood-catalogue.js?v=20260722-grouped-products"');
-html = html.replace(/href="dawood-catalogue\.css(?:\?[^\"]*)?"/g, 'href="dawood-catalogue.css?v=20260722-grouped-products"');
+if (!html.includes('src="dawood-catalogue.js')) insertBefore('</body>', '    <script src="dawood-catalogue.js?v=20260722-collection-navigation" defer></script>\n  ', 'document body');
+html = html.replace(/src="dawood-catalogue\.js(?:\?[^\"]*)?"/g, 'src="dawood-catalogue.js?v=20260722-collection-navigation"');
+html = html.replace(/href="dawood-catalogue\.css(?:\?[^\"]*)?"/g, 'href="dawood-catalogue.css?v=20260722-collection-navigation"');
 if (!html.includes('src="dawood-commerce.js"')) insertBefore('</body>', '    <script src="dawood-commerce.js" defer></script>\n  ', 'document body');
 if (!html.includes('src="reviews.js"')) insertBefore('</body>', '    <script src="reviews.js" defer></script>\n  ', 'document body');
 if (!html.includes('src="analytics.js"')) insertBefore('</body>', '    <script src="analytics.js" defer></script>\n  ', 'document body');
