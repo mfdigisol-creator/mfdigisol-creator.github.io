@@ -54,6 +54,8 @@
 .live-enquire { color:#f6f0e5; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none; border-bottom:1px solid #8b6a31; padding-bottom:.15rem; }
 .live-empty { grid-column:1/-1; padding:3rem; border:1px solid #3a352e; color:#c6bdae; text-align:center; }
 .live-load-more { display:block; margin:2rem auto 0; }
+.live-collection-more { display:flex; align-items:center; justify-content:center; gap:.7rem; margin:1.5rem auto 0; }
+.live-collection-more small { font:inherit; opacity:.72; }
 .live-catalogue[hidden] { display:none; }
 .pdf-catalogue-archive { display:none !important; }
 @media (max-width:1000px) { .live-collection-products{grid-template-columns:repeat(3,minmax(0,1fr))}.live-catalogue-head{gap:2rem}.live-tools{grid-template-columns:1fr 1fr}.live-tools label:first-child{grid-column:1/-1} }
