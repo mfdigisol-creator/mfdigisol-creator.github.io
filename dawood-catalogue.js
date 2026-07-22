@@ -67,9 +67,9 @@
   };
   const productUrl = product => `${location.origin}/products/${slugify(product.code)}-${slugify(product.productName || product.name)}/`;
   const track = (event, detail = {}) => {
+    if (window.AlHumaAnalytics) return window.AlHumaAnalytics.track(event, detail);
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event, ...detail });
-    window.dispatchEvent(new CustomEvent('alhuma:analytics', { detail:{ event, ...detail } }));
   };
   const whatsapp = (product, priceQuestion = false) => {
     const priceText = product.price == null || priceQuestion ? 'Please share its current price and' : `It is shown at ${money(product.price)}. Please confirm`;
@@ -191,7 +191,7 @@
     });
     if (updateUrl) history.replaceState(null,'',productUrl(product));
     dialog.showModal();
-    track('view_product',{ product_code:product.code, brand:product.brand });
+    track('view_item',{ currency:'PKR', value:product.price, items:[product], meta_event:'ViewContent', content_ids:[product.code], availability:product.available });
     addProductSchema(product);
   }
 
@@ -217,7 +217,11 @@
       track('load_more_collection', { brand:name });
     }
   });
-  Object.values(controls).forEach(control => control.addEventListener('input', () => { render(); track('filter_catalogue',{ filter:control.dataset.liveSearch !== undefined ? 'search' : control.previousElementSibling?.textContent, value:control.value }); }));
+  Object.values(controls).forEach(control => control.addEventListener('input', () => {
+    render();
+    const isSearch = control.dataset.liveSearch !== undefined;
+    track(isSearch && control.value.trim() ? 'search' : 'filter_catalogue', isSearch ? { search_term:control.value.trim(), result_count:filterProducts().length, meta_event:'Search' } : { filter:control.previousElementSibling?.textContent, value:control.value });
+  }));
   clear.addEventListener('click', () => resetCatalogue());
 
   function openCollection(brand, behavior = 'smooth') {

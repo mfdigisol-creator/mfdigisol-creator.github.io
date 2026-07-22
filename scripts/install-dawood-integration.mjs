@@ -133,12 +133,16 @@ if (!hasStylesheet('dawood-commerce.css')) insertBefore('</head>', '    <link re
 if (!hasStylesheet('header-cart.css')) insertBefore('</head>', '    <link rel="stylesheet" href="header-cart.css" />\n  ', 'document head');
 if (!hasStylesheet('reviews.css')) insertBefore('</head>', '    <link rel="stylesheet" href="reviews.css" />\n  ', 'document head');
 if (!hasStylesheet('mobile-responsive.css')) insertBefore('</head>', '    <link rel="stylesheet" href="mobile-responsive.css" />\n  ', 'document head');
-if (!html.includes('src="dawood-catalogue.js')) insertBefore('</body>', '    <script src="dawood-catalogue.js?v=20260722-image-performance" defer></script>\n  ', 'document body');
-html = html.replace(/src="dawood-catalogue\.js(?:\?[^\"]*)?"/g, 'src="dawood-catalogue.js?v=20260722-image-performance"');
+if (!html.includes('src="dawood-catalogue.js')) insertBefore('</body>', '    <script src="dawood-catalogue.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
+html = html.replace(/src="dawood-catalogue\.js(?:\?[^\"]*)?"/g, 'src="dawood-catalogue.js?v=20260722-measurement-foundation"');
 html = html.replace(/href="dawood-catalogue\.css(?:\?[^\"]*)?"/g, 'href="dawood-catalogue.css?v=20260722-image-performance"');
-if (!html.includes('src="dawood-commerce.js"')) insertBefore('</body>', '    <script src="dawood-commerce.js" defer></script>\n  ', 'document body');
+if (!html.includes('src="dawood-commerce.js')) insertBefore('</body>', '    <script src="dawood-commerce.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
+html = html.replace(/src="dawood-commerce\.js(?:\?[^\"]*)?"/g, 'src="dawood-commerce.js?v=20260722-measurement-foundation"');
 if (!html.includes('src="reviews.js"')) insertBefore('</body>', '    <script src="reviews.js" defer></script>\n  ', 'document body');
-if (!html.includes('src="analytics.js"')) insertBefore('</body>', '    <script src="analytics.js" defer></script>\n  ', 'document body');
+if (!html.includes('src="analytics-config.js')) insertBefore('</body>', '    <script src="analytics-config.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
+if (!html.includes('src="analytics.js')) insertBefore('</body>', '    <script src="analytics.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
+html = html.replace(/<script src="analytics-config\.js[^\"]*" defer><\/script>/g, '<script src="analytics-config.js?v=20260722-measurement-foundation" defer></script>');
+html = html.replace(/<script src="analytics\.js[^\"]*" defer><\/script>/g, '<script src="analytics.js?v=20260722-measurement-foundation" defer></script>');
 
 if (!replaceSection('live-catalogue', catalogueSection)) {
   insertBefore('      <section class="catalogue section-pad" id="catalogue"', catalogueSection, 'existing catalogue section');
