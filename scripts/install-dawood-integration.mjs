@@ -38,13 +38,30 @@ const nav = `        <details class="live-nav-dropdown" data-live-nav>
 `;
 
 const ordering = `      <section class="order-steps section-pad" id="how-to-order" aria-labelledby="order-title">
-        <div class="order-heading reveal"><p class="eyebrow dark"><span></span> Personal service</p><h2 id="order-title">How to<br /><em>order.</em></h2><p>From catalogue to confirmation in three simple steps.</p></div>
+        <div class="order-heading reveal"><p class="eyebrow dark"><span></span> Two easy ways to order</p><h2 id="order-title">How to<br /><em>order.</em></h2><p>Order through our website checkout or speak with us directly on WhatsApp.</p></div>
         <div class="order-grid reveal">
-          <article><span>01</span><h3>Choose a design</h3><p>Browse the latest collection and open your preferred suit to review its images, code, price and availability.</p></article>
-          <article><span>02</span><h3>Message our team</h3><p>Use the product’s WhatsApp button. Its name and code will be included automatically in your message.</p></article>
-          <article><span>03</span><h3>Confirm your order</h3><p>Our team will confirm availability, payment and delivery information before your order is finalized.</p></article>
+          <article><span>01</span><h3>Choose a design</h3><p>Browse the latest collection and open your preferred suit to review its images, product code, displayed price and availability.</p></article>
+          <article><span>02</span><h3>Select your ordering method</h3><p><strong>Website:</strong> choose “Add to cart,” review your items and complete the COD checkout. <strong>WhatsApp:</strong> choose the WhatsApp button to send the product name and code directly to our team.</p></article>
+          <article><span>03</span><h3>Confirm and receive</h3><p>Our team will call to confirm availability, final charges and delivery details before dispatch through TCS or Leopards Courier. Payment is Cash on Delivery.</p></article>
         </div>
-        <p class="order-note">Catalogue availability is synchronized from our approved supplier source. Please obtain final confirmation from our team before payment.</p>
+        <p class="order-note">Standard delivery for parcels up to 1 kg is Rs. 300 within Sialkot and Rs. 600 outside Sialkot. Charges may increase for heavier or larger parcels and will be confirmed by our team. Estimated delivery is up to 7 days after confirmation and may vary due to unforeseen circumstances. To cancel before the confirmation call, WhatsApp your order details to +92 321 6115731.</p>
+      </section>
+
+`;
+
+const faqSection = `      <section class="faq-section section-pad" id="faq" aria-labelledby="faq-title">
+        <div class="faq-intro reveal"><p class="eyebrow dark"><span></span> Helpful information</p><h2 id="faq-title">Frequently<br /><em>asked.</em></h2><p>Everything you need before choosing and ordering your next Al Huma design.</p></div>
+        <div class="faq-list reveal">
+          <details><summary>How can I place an order?<span>+</span></summary><p>You can order in either of two ways. For website checkout, select “Add to cart,” review your cart and complete the Pakistan COD order form. For personal assistance, select the product’s WhatsApp button; its name and product code will be prepared automatically for you to send to our team.</p></details>
+          <details><summary>Will products remain in my cart if I leave the website?<span>+</span></summary><p>Yes. Your cart is saved in the browser on that device and will be restored when you return. Products remain until you remove them yourself or successfully place the order.</p></details>
+          <details><summary>Which payment method is available?<span>+</span></summary><p>We currently offer Cash on Delivery within Pakistan. No online card payment or advance payment gateway is required. Our team will call before dispatch to confirm availability and final charges.</p></details>
+          <details><summary>What are the delivery charges and delivery time?<span>+</span></summary><p>For parcels up to 1 kg, standard delivery is Rs. 300 within Sialkot and Rs. 600 outside Sialkot. Charges may increase depending on weight or volume and will be communicated during the confirmation call. Orders are normally delivered within 7 days after confirmation through TCS or Leopards Courier, although unforeseen circumstances may cause delays.</p></details>
+          <details><summary>Can I cancel my order?<span>+</span></summary><p>You may request cancellation before our confirmation call. WhatsApp your order number and order details to our official number, +92 321 6115731. Once the order has been confirmed or dispatched, the applicable customer policies will apply.</p></details>
+          <details><summary>Are the displayed prices current?<span>+</span></summary><p>Displayed retail prices are refreshed with the synchronized catalogue approximately every 12 hours. Products whose classification cannot be confirmed show “Price on enquiry” instead of a guessed price. Availability and final charges are confirmed by our team before dispatch.</p></details>
+          <details><summary>Are these suits stitched or unstitched?<span>+</span></summary><p>The products presented in the current catalogue are unstitched suit designs. Please review each product’s listed details and images for its pieces and design information.</p></details>
+          <details><summary>How can I confirm availability?<span>+</span></summary><p>Availability is synchronized approximately every 12 hours and means available to order from our approved supplier source. Our team confirms final availability after receiving your website or WhatsApp order.</p></details>
+          <details><summary>Where is Al Huma Collection located?<span>+</span></summary><p>Visit us at 87 Peer, Muradia Rd, Model Town, Sialkot, Pakistan. Directions and our official contact channels are available in the contact section below.</p></details>
+        </div>
       </section>
 
 `;
@@ -118,7 +135,8 @@ if (!html.includes('data-live-nav')) {
   } else insertBefore('        <a href="#contact">Contact</a>', nav, 'contact navigation link');
 }
 
-if (!html.includes('id="how-to-order"')) insertBefore('      <section class="faq-section', ordering, 'FAQ section');
+if (!replaceSection('how-to-order', ordering)) insertBefore('      <section class="faq-section', ordering, 'FAQ section');
+replaceSection('faq', faqSection);
 
 if (!html.includes('class="social-contact"')) {
   insertBefore('          <div class="contact-map">', `          <div class="social-contact" aria-label="Al Huma Collection social media">
