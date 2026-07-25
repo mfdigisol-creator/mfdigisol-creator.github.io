@@ -18,9 +18,15 @@ if (/track\(['"]purchase['"]/.test([analytics,catalogue,commerce].join('\n'))) t
 for (const id of ['GTM-NP995MF2','G-VP0WEM8CNC','1738280330535371']) {
   if (!config.includes(id)) throw new Error(`Missing public analytics identifier: ${id}`);
 }
+if (!config.includes('https://meta-capi.alhumacollection.workers.dev/events')) throw new Error('Missing Meta CAPI endpoint');
+if (!analytics.includes("sendMetaEvent(params.meta_event,id,params)")) throw new Error('Browser/server event bridge is missing');
+if (!analytics.includes("sendMetaEvent('PageView',eventId('PageView'))")) throw new Error('Deduplicated Meta PageView is missing');
+if (!analytics.includes("credentials:'omit'")) throw new Error('CAPI request must not send website credentials');
+if (analytics.includes('META_ACCESS_TOKEN') || config.includes('META_ACCESS_TOKEN')) throw new Error('Meta access token must never be present in website code');
 if (!analytics.includes('Accept all optional')) throw new Error('Consent acceptance label must accurately cover analytics and advertising');
 for (const asset of ['analytics-config.js','analytics.js','dawood-catalogue.js','dawood-commerce.js']) {
-  if (!index.includes(`${asset}?v=20260722-measurement-foundation`)) throw new Error(`Homepage cache version missing: ${asset}`);
-  if (!installer.includes(`${asset}?v=20260722-measurement-foundation`)) throw new Error(`Installer persistence missing: ${asset}`);
+  const version = ['analytics-config.js','analytics.js'].includes(asset) ? '20260726-meta-capi-v1' : '20260722-measurement-foundation';
+  if (!index.includes(`${asset}?v=${version}`)) throw new Error(`Homepage cache version missing: ${asset}`);
+  if (!installer.includes(`${asset}?v=${version}`)) throw new Error(`Installer persistence missing: ${asset}`);
 }
 console.log('Measurement foundation checks passed.');

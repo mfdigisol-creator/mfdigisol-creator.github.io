@@ -139,10 +139,10 @@ html = html.replace(/href="dawood-catalogue\.css(?:\?[^\"]*)?"/g, 'href="dawood-
 if (!html.includes('src="dawood-commerce.js')) insertBefore('</body>', '    <script src="dawood-commerce.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
 html = html.replace(/src="dawood-commerce\.js(?:\?[^\"]*)?"/g, 'src="dawood-commerce.js?v=20260722-measurement-foundation"');
 if (!html.includes('src="reviews.js"')) insertBefore('</body>', '    <script src="reviews.js" defer></script>\n  ', 'document body');
-if (!html.includes('src="analytics-config.js')) insertBefore('</body>', '    <script src="analytics-config.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
-if (!html.includes('src="analytics.js')) insertBefore('</body>', '    <script src="analytics.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
-html = html.replace(/<script src="analytics-config\.js[^\"]*" defer><\/script>/g, '<script src="analytics-config.js?v=20260722-measurement-foundation" defer></script>');
-html = html.replace(/<script src="analytics\.js[^\"]*" defer><\/script>/g, '<script src="analytics.js?v=20260722-measurement-foundation" defer></script>');
+if (!html.includes('src="analytics-config.js')) insertBefore('</body>', '    <script src="analytics-config.js?v=20260726-meta-capi-v1" defer></script>\n  ', 'document body');
+if (!html.includes('src="analytics.js')) insertBefore('</body>', '    <script src="analytics.js?v=20260726-meta-capi-v1" defer></script>\n  ', 'document body');
+html = html.replace(/<script src="analytics-config\.js[^\"]*" defer><\/script>/g, '<script src="analytics-config.js?v=20260726-meta-capi-v1" defer></script>');
+html = html.replace(/<script src="analytics\.js[^\"]*" defer><\/script>/g, '<script src="analytics.js?v=20260726-meta-capi-v1" defer></script>');
 
 if (!replaceSection('live-catalogue', catalogueSection)) {
   insertBefore('      <section class="catalogue section-pad" id="catalogue"', catalogueSection, 'existing catalogue section');

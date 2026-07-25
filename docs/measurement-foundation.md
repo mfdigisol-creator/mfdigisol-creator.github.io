@@ -1,14 +1,15 @@
 # Measurement foundation
 
-The storefront emits standardized events through `window.AlHumaAnalytics`. Platform scripts remain disabled until consent is recorded and valid public IDs are added to `analytics-config.js`.
+The storefront emits standardized events through `window.AlHumaAnalytics`. Platform scripts remain disabled until consent is recorded. GTM handles Google Analytics, while Meta Pixel and the Cloudflare Conversions API bridge are controlled directly by the website so both Meta channels receive the same `event_id`.
 
 ## Public configuration
 
-- `gtmId`: preferred integration path. Configure GA4 and Meta tags inside this GTM container.
+- `gtmId`: Google Analytics integration path.
 - `ga4MeasurementId`: optional direct GA4 fallback when GTM is blank.
-- `metaPixelId`: optional direct Meta Pixel fallback when GTM is blank.
+- `metaPixelId`: direct browser Meta Pixel identifier.
+- `metaCapiEndpoint`: public Cloudflare Worker `/events` endpoint.
 
-Never store a Meta CAPI token or any other secret in this repository. CAPI belongs in the future server-side milestone.
+Never store a Meta CAPI token or any other secret in this repository. The access token remains only in the Cloudflare Worker secret `META_ACCESS_TOKEN`.
 
 ## Event contract
 
@@ -30,9 +31,7 @@ Every event receives an `event_id`. Commerce events include PKR currency, value 
 
 1. Add a GA4 configuration tag that respects Analytics Storage consent.
 2. Trigger GA4 event tags from the website event names above and pass the `ecommerce` object.
-3. Add Meta Pixel PageView and event tags that respect Advertising Storage consent.
-4. Map the `meta_event` field to the corresponding Meta event name.
-5. Pass `event_id` for future browser/server deduplication.
-6. Validate in GTM Preview, GA4 DebugView and Meta Test Events before publishing the container.
+3. Do not duplicate Meta tags in GTM; the website directly controls Meta Pixel after marketing consent.
+4. Validate GA4 in GTM Preview/DebugView and Meta browser/server events in Meta Test Events.
 
 The consent banner defaults analytics and advertising storage to denied. Essential cart storage remains available independently.

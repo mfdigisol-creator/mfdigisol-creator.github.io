@@ -31,7 +31,7 @@ function imageUrl(url, width = 720) {
   } catch { return url; }
 }
 
-function pageShell({ title, description, canonical, body, schema = [], robots = 'index,follow,max-image-preview:large' }) {
+function pageShell({ title, description, canonical, body, schema = [], pageEvent = null, robots = 'index,follow,max-image-preview:large' }) {
   return `<!doctype html>
 <html lang="en-PK">
 <head>
@@ -56,6 +56,9 @@ function pageShell({ title, description, canonical, body, schema = [], robots = 
   <header class="site-header"><a class="brand" href="/" aria-label="Al Huma Collection home"><b>AH</b><span>AL HUMA COLLECTION</span></a><nav aria-label="Primary"><a href="/shop/unstitched-suits-pakistan/">Unstitched Suits</a><a href="/shop/formal-unstitched-suits/">Formal</a><a href="/shop/luxury-lawn-suits/">Luxury Lawn</a><a href="/#new-arrivals">New Arrivals</a></nav></header>
   <main id="main">${body}</main>
   <footer><p><strong>Al Huma Collection</strong><br>87 Peer, Muradia Rd, Model Town, Sialkot, Pakistan</p><p><a href="https://wa.me/923216115731">WhatsApp ${PHONE}</a> · <a href="/policies.html">Customer policies</a> · <a href="/">Main catalogue</a></p></footer>
+${pageEvent ? `  <script>window.AL_HUMA_PAGE_EVENT=${JSON.stringify(pageEvent).replace(/</g, '\\u003c')}</script>\n` : ''}
+  <script src="/analytics-config.js?v=20260726-meta-capi-v1" defer></script>
+  <script src="/analytics.js?v=20260726-meta-capi-v1" defer></script>
 </body>
 </html>\n`;
 }
@@ -150,7 +153,9 @@ async function main() {
     const offer = product.price == null ? undefined : { '@type': 'Offer', url: canonical, priceCurrency: 'PKR', price: product.price, availability: product.available ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock', itemCondition: 'https://schema.org/NewCondition', seller: { '@type': 'Organization', name: SITE_NAME } };
     const productSchema = { '@context': 'https://schema.org', '@type': 'Product', name: product.name, sku: product.code, image: images, description, category: `Women's Clothing > Unstitched Suits > ${product.category}`, brand: { '@type': 'Brand', name: product.brand }, ...(offer ? { offers: offer } : {}) };
     const body = `${breadcrumbs(crumbs)}<article class="product-detail"><div class="product-images">${images.slice(0, 4).map((image, index) => `<img src="${escapeHtml(imageUrl(image, index ? 800 : 1100))}" alt="${escapeHtml(`${product.name} ${index ? `detail ${index + 1}` : 'unstitched suit'}`)}" width="800" height="1000" ${index ? 'loading="lazy"' : 'fetchpriority="high"'}>`).join('')}</div><div class="product-copy"><p>${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</p><h1>${escapeHtml(product.name)}</h1><dl><div><dt>Product code</dt><dd>${escapeHtml(product.code)}</dd></div><div><dt>Suit type</dt><dd>${escapeHtml(product.pieceType)}</dd></div><div><dt>Style</dt><dd>${product.pricingClass === 'embroidered' ? 'Embroidered' : product.pricingClass === 'non-embroidered' ? 'Printed / non-embroidered' : 'Details on enquiry'}</dd></div><div><dt>Availability</dt><dd>${product.available ? 'Available to order — confirmation required' : 'Currently unavailable'}</dd></div></dl><p class="price">${escapeHtml(money(product.price))}</p><a class="button" href="https://wa.me/923216115731?text=${encodeURIComponent(`Hello Al Huma Collection, I am interested in ${product.name} (${product.code}). ${canonical}`)}">Order or enquire on WhatsApp</a><p class="note">Catalogue status is refreshed approximately every 12 hours. Final availability, price and delivery charges are confirmed before dispatch.</p><p><a href="/${collectionPath(product.brand)}">See all ${escapeHtml(product.brand)} designs</a> · <a href="/#live-catalogue">Open main catalogue</a></p></div></article>`;
-    await write(`${productPath(product)}index.html`, pageShell({ title: `${product.name} | ${product.brand} Pakistan`, description, canonical, body, schema: [breadcrumbSchema(crumbs), productSchema] }));
+    const pageItem = { code:product.code, name:product.name, brand:product.brand, category:product.category, price:product.price, quantity:1 };
+    const pageEvent = { event:'view_item', params:{ currency:'PKR', value:product.price, items:[pageItem], meta_event:'ViewContent', content_ids:[product.code], availability:product.available } };
+    await write(`${productPath(product)}index.html`, pageShell({ title: `${product.name} | ${product.brand} Pakistan`, description, canonical, body, schema: [breadcrumbSchema(crumbs), productSchema], pageEvent }));
   }
 
   const lastmod = String(catalogue.synchronizedAt || new Date().toISOString()).slice(0, 10);
