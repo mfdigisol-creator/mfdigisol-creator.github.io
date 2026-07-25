@@ -1,10 +1,5 @@
 {
-  "ok": true,
-  "startedAt": "2026-07-24T17:58:57.497Z",
-  "completedAt": "2026-07-24T17:59:51.604Z",
-  "products": 1228,
-  "available": 635,
-  "formal": 846,
-  "luxury": 382,
-  "priceOnEnquiry": 20
+  "ok": false,
+  "failedAt": "2026-07-25T07:37:45.487Z",
+  "error": "500 Internal Server Error: https://dawooddesigners.com/collections"
 }
