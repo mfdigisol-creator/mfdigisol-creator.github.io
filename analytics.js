@@ -8,6 +8,16 @@
 
   function readConsent(){ try { return JSON.parse(localStorage.getItem(CONSENT_KEY)) || null; } catch { return null; } }
   function eventId(prefix='evt'){ return `${prefix}-${globalThis.crypto?.randomUUID ? globalThis.crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2,10)}`}`; }
+  function metaTestEventCode(){
+    const key='alhuma-meta-test-event-code';
+    const param=new URLSearchParams(location.search).get('test_event_code');
+    try {
+      if(param) sessionStorage.setItem(key,param);
+      return param || sessionStorage.getItem(key) || '';
+    } catch {
+      return param || '';
+    }
+  }
   function cleanItem(item={}){ const price=Number(item.price); return { item_id:String(item.item_id || item.code || ''), item_name:String(item.item_name || item.name || ''), item_brand:String(item.item_brand || item.brand || ''), item_category:String(item.item_category || item.category || ''), price:Number.isFinite(price) ? price : undefined, quantity:Math.max(1, Number(item.quantity || item.qty || 1)) }; }
   function cookie(name){ return document.cookie.split(';').map(value=>value.trim()).find(value=>value.startsWith(`${name}=`))?.slice(name.length+1) || ''; }
   function metaCustomData(params={}){
@@ -32,6 +42,7 @@
       event_time:Math.floor(Date.now()/1000),
       event_source_url:location.href,
       action_source:'website',
+      ...(metaTestEventCode() ? {test_event_code:metaTestEventCode()} : {}),
       user_data:{
         client_user_agent:navigator.userAgent,
         fbp:cookie('_fbp') || undefined,
@@ -76,6 +87,7 @@
       window.fbq=window.fbq || function(){(window.fbq.callMethod?window.fbq.callMethod:window.fbq.queue.push).apply(window.fbq,arguments)};
       window.fbq.queue=window.fbq.queue || []; window.fbq.loaded=true; window.fbq.version='2.0';
       loadScript('https://connect.facebook.net/en_US/fbevents.js','alhuma-meta-pixel');
+      window.fbq('set','autoConfig',false,config.metaPixelId);
       window.fbq('init',config.metaPixelId);
       sendMetaEvent('PageView',eventId('PageView'));
       trackConfiguredPageEvent();
