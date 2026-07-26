@@ -92,6 +92,32 @@ const money = value => Number.parseFloat(String(value || '0').replace(/,/g, ''))
 const safeImage = image => image?.src ? image.src.replace(/^\/\//, 'https://') : '';
 const csvCell = value => `"${String(value ?? '').replace(/\r?\n/g, ' ').replace(/"/g, '""')}"`;
 
+async function writeMetaProductFeed(products) {
+  const metaFeedHeaders = ['id', 'title', 'description', 'availability', 'condition', 'price', 'link', 'image_link', 'brand', 'product_type'];
+  const metaFeedRows = products
+    .filter(item => Number.isFinite(item.price) && item.price > 0)
+    .map(item => {
+      const description = `${item.name}. ${item.pieceType} unstitched suit by ${item.brand}. Cash on Delivery in Pakistan. Availability is confirmed before dispatch.`;
+      return [
+        item.code,
+        item.name,
+        description,
+        item.available ? 'in stock' : 'out of stock',
+        'new',
+        `${item.price.toFixed(2)} PKR`,
+        `https://alhumacollection.com/?product=${encodeURIComponent(item.code)}`,
+        item.image,
+        item.brand,
+        `Women > Unstitched Suits > ${item.category}`
+      ].map(csvCell).join(',');
+    });
+  if (metaFeedRows.length < 20) {
+    throw new Error(`Only ${metaFeedRows.length} products qualified for the Meta feed; refusing an incomplete feed.`);
+  }
+  await fs.writeFile(META_PRODUCT_FEED_OUTPUT, `${metaFeedHeaders.map(csvCell).join(',')}\n${metaFeedRows.join('\n')}\n`);
+  return metaFeedRows.length;
+}
+
 function normalizeProduct({ product, collection }) {
   const imageById = new Map((product.images || []).map(image => [image.id, safeImage(image)]));
   const searchText = [product.title, product.body_html, product.product_type, ...(product.tags || [])].join(' ');
@@ -193,31 +219,27 @@ async function main() {
   await fs.writeFile(STATUS_OUTPUT, `${JSON.stringify({ ok: true, startedAt, completedAt: catalogue.synchronizedAt, ...catalogue.counts }, null, 2)}\n`);
   const productUrls = products.map(item => `  <url><loc>https://alhumacollection.com/?product=${encodeURIComponent(item.code).replace(/&/g, '&amp;')}</loc><lastmod>${catalogue.synchronizedAt.slice(0,10)}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>`).join('\n');
   await fs.writeFile(PRODUCT_SITEMAP_OUTPUT, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${productUrls}\n</urlset>\n`);
-  const metaFeedHeaders = ['id', 'title', 'description', 'availability', 'condition', 'price', 'link', 'image_link', 'brand', 'product_type'];
-  const metaFeedRows = products
-    .filter(item => Number.isFinite(item.price) && item.price > 0)
-    .map(item => {
-      const description = `${item.name}. ${item.pieceType} unstitched suit by ${item.brand}. Cash on Delivery in Pakistan. Availability is confirmed before dispatch.`;
-      return [
-        item.code,
-        item.name,
-        description,
-        item.available ? 'in stock' : 'out of stock',
-        'new',
-        `${item.price.toFixed(2)} PKR`,
-        `https://alhumacollection.com/?product=${encodeURIComponent(item.code)}`,
-        item.image,
-        item.brand,
-        `Women > Unstitched Suits > ${item.category}`
-      ].map(csvCell).join(',');
-    });
-  await fs.writeFile(META_PRODUCT_FEED_OUTPUT, `${metaFeedHeaders.map(csvCell).join(',')}\n${metaFeedRows.join('\n')}\n`);
+  await writeMetaProductFeed(products);
   console.log(`Synchronized ${products.length} products from ${collections.length} approved catalogue collections.`);
 }
 
 main().catch(async error => {
   await fs.mkdir(path.dirname(STATUS_OUTPUT), { recursive: true });
-  await fs.writeFile(STATUS_OUTPUT, `${JSON.stringify({ ok: false, failedAt: new Date().toISOString(), error: error.message }, null, 2)}\n`);
+  let cachedMetaFeedProducts = 0;
+  try {
+    const cachedCatalogue = JSON.parse(await fs.readFile(OUTPUT, 'utf8'));
+    cachedMetaFeedProducts = await writeMetaProductFeed(cachedCatalogue.products || []);
+    console.warn(`Upstream sync failed; preserved the last valid catalogue and generated a ${cachedMetaFeedProducts}-item Meta feed from it.`);
+  } catch (fallbackError) {
+    console.error('Unable to generate Meta feed from the cached catalogue:', fallbackError);
+  }
+  await fs.writeFile(STATUS_OUTPUT, `${JSON.stringify({
+    ok: false,
+    failedAt: new Date().toISOString(),
+    error: error.message,
+    cataloguePreserved: cachedMetaFeedProducts > 0,
+    cachedMetaFeedProducts
+  }, null, 2)}\n`);
   console.error(error);
   process.exitCode = 1;
 });
