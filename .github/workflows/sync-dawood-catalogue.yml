@@ -2,15 +2,26 @@ name: Synchronize Dawood Designers catalogue
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
       - "scripts/install-dawood-integration.mjs"
-      - "scripts/generate-seo-pages.mjs"
+      - "scripts/seo-batch1-postprocess.mjs"
+      - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/validate-catalogue.mjs"
       - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/sync-dawood-catalogue.yml"
+      - "scripts/seo-batch1-postprocess.mjs"
+      - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/validate-catalogue.mjs"
   schedule:
     - cron: "17 */12 * * *"
   workflow_dispatch:
@@ -19,13 +30,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: dawood-catalogue-sync
+  group: dawood-catalogue-sync-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   synchronize:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Check out website
         uses: actions/checkout@v4
@@ -33,18 +44,26 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Build approved catalogue data
         id: catalogue
+        if: github.event_name != 'pull_request'
         continue-on-error: true
         run: |
           node scripts/install-dawood-integration.mjs
           node scripts/sync-dawood.mjs
-          node scripts/generate-seo-pages.mjs
 
-      - name: Publish catalogue update
+      - name: Normalize and generate crawlable catalogue
+        id: generate
         if: always()
+        run: |
+          node scripts/seo-batch1-postprocess.mjs
+          node scripts/generate-seo-pages-v2.mjs
+          node scripts/validate-catalogue.mjs
+
+      - name: Publish validated catalogue update
+        if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
         run: |
           if git diff --quiet -- index.html catalogue/ products/ collections/ shop/ 2>/dev/null; then
             echo "Catalogue is already current."
@@ -57,7 +76,8 @@ jobs:
           git push
 
       - name: Report synchronization failure
-        if: steps.catalogue.outcome == 'failure'
+        if: github.event_name != 'pull_request' && steps.catalogue.outcome == 'failure'
         run: |
           cat catalogue/sync-status.json
+          echo "The cached catalogue was preserved and validated, but the supplier refresh failed."
           exit 1
