@@ -9,7 +9,8 @@ on:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
       - "scripts/install-dawood-integration.mjs"
-      - "scripts/generate-seo-pages.mjs"
+      - "scripts/seo-batch1-postprocess.mjs"
+      - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/validate-catalogue.mjs"
       - "seo-pages.css"
       - "dawood-catalogue.css"
@@ -45,11 +46,12 @@ jobs:
           node scripts/install-dawood-integration.mjs
           node scripts/sync-dawood.mjs
 
-      - name: Generate crawlable catalogue pages and canonical feeds
+      - name: Normalize and generate crawlable catalogue
         id: generate
         if: always()
         run: |
-          node scripts/generate-seo-pages.mjs
+          node scripts/seo-batch1-postprocess.mjs
+          node scripts/generate-seo-pages-v2.mjs
           node scripts/validate-catalogue.mjs
 
       - name: Publish validated catalogue update
