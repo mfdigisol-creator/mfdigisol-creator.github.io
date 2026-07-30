@@ -15,6 +15,14 @@ on:
       - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/sync-dawood-catalogue.yml"
+      - "scripts/seo-batch1-postprocess.mjs"
+      - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/validate-catalogue.mjs"
   schedule:
     - cron: "17 */12 * * *"
   workflow_dispatch:
@@ -41,6 +49,7 @@ jobs:
 
       - name: Build approved catalogue data
         id: catalogue
+        if: github.event_name != 'pull_request'
         continue-on-error: true
         run: |
           node scripts/install-dawood-integration.mjs
@@ -55,7 +64,7 @@ jobs:
           node scripts/validate-catalogue.mjs
 
       - name: Publish validated catalogue update
-        if: always() && steps.generate.outcome == 'success'
+        if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
         run: |
           if git diff --quiet -- index.html catalogue/ products/ collections/ shop/ 2>/dev/null; then
             echo "Catalogue is already current."
@@ -68,7 +77,7 @@ jobs:
           git push
 
       - name: Report synchronization failure
-        if: steps.catalogue.outcome == 'failure'
+        if: github.event_name != 'pull_request' && steps.catalogue.outcome == 'failure'
         run: |
           cat catalogue/sync-status.json
           echo "The cached catalogue was preserved and validated, but the supplier refresh failed."
