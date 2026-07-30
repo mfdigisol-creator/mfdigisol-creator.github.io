@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - agent/seo-batch1-staging
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
