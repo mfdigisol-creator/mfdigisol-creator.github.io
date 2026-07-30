@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-30T22:21:19.539Z",
+  "generatedAt": "2026-07-30T22:53:35.409Z",
   "summary": {
     "products": 1230,
     "available": 624,
@@ -9,64 +9,13 @@
     "priceOnEnquiry": 19,
     "metaFeedProducts": 1211,
     "canonicalBrands": 38,
-    "aliasCorrections": 10,
+    "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "classificationConflicts": 16,
     "unspecifiedPieces": 62
   },
-  "aliasCorrections": [
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-01",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-02",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-03",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-04",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-05",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "LIMELIGHT-EMB-2PC-MGRN-DD-01",
-      "sourceBrand": "Lime light",
-      "canonicalBrand": "Limelight"
-    },
-    {
-      "code": "LIMELIGHT-EMB-2PC-PECH-DD-01",
-      "sourceBrand": "Lime light",
-      "canonicalBrand": "Limelight"
-    },
-    {
-      "code": "LIMELIGHT-EMB-2PC-LAVN-DD-01",
-      "sourceBrand": "Lime light",
-      "canonicalBrand": "Limelight"
-    },
-    {
-      "code": "LIMELIGHT-EMB-2PC-LSKY-DD-01",
-      "sourceBrand": "Lime light",
-      "canonicalBrand": "Limelight"
-    },
-    {
-      "code": "LIMELIGHT-EMB-2PC-PISTA-DD-01",
-      "sourceBrand": "Lime light",
-      "canonicalBrand": "Limelight"
-    }
-  ],
+  "aliasCorrections": [],
   "duplicateCodes": [],
   "duplicatePaths": [],
   "classificationConflicts": [
