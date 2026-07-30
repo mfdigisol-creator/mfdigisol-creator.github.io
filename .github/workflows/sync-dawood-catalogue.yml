@@ -2,12 +2,15 @@ name: Synchronize Dawood Designers catalogue
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - agent/seo-batch1-staging
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
       - "scripts/install-dawood-integration.mjs"
       - "scripts/generate-seo-pages.mjs"
+      - "scripts/validate-catalogue.mjs"
       - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
@@ -19,13 +22,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: dawood-catalogue-sync
+  group: dawood-catalogue-sync-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   synchronize:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Check out website
         uses: actions/checkout@v4
@@ -41,10 +44,16 @@ jobs:
         run: |
           node scripts/install-dawood-integration.mjs
           node scripts/sync-dawood.mjs
-          node scripts/generate-seo-pages.mjs
 
-      - name: Publish catalogue update
+      - name: Generate crawlable catalogue pages and canonical feeds
+        id: generate
         if: always()
+        run: |
+          node scripts/generate-seo-pages.mjs
+          node scripts/validate-catalogue.mjs
+
+      - name: Publish validated catalogue update
+        if: always() && steps.generate.outcome == 'success'
         run: |
           if git diff --quiet -- index.html catalogue/ products/ collections/ shop/ 2>/dev/null; then
             echo "Catalogue is already current."
@@ -60,4 +69,5 @@ jobs:
         if: steps.catalogue.outcome == 'failure'
         run: |
           cat catalogue/sync-status.json
+          echo "The cached catalogue was preserved and validated, but the supplier refresh failed."
           exit 1
