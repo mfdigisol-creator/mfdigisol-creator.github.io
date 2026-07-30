@@ -1,0 +1,154 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-30T22:21:19.539Z",
+  "summary": {
+    "products": 1230,
+    "available": 624,
+    "formal": 852,
+    "luxury": 378,
+    "priceOnEnquiry": 19,
+    "metaFeedProducts": 1211,
+    "canonicalBrands": 38,
+    "aliasCorrections": 10,
+    "duplicateCodes": 0,
+    "duplicatePaths": 0,
+    "classificationConflicts": 16,
+    "unspecifiedPieces": 62
+  },
+  "aliasCorrections": [
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-01",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-02",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-03",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-04",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-05",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "LIMELIGHT-EMB-2PC-MGRN-DD-01",
+      "sourceBrand": "Lime light",
+      "canonicalBrand": "Limelight"
+    },
+    {
+      "code": "LIMELIGHT-EMB-2PC-PECH-DD-01",
+      "sourceBrand": "Lime light",
+      "canonicalBrand": "Limelight"
+    },
+    {
+      "code": "LIMELIGHT-EMB-2PC-LAVN-DD-01",
+      "sourceBrand": "Lime light",
+      "canonicalBrand": "Limelight"
+    },
+    {
+      "code": "LIMELIGHT-EMB-2PC-LSKY-DD-01",
+      "sourceBrand": "Lime light",
+      "canonicalBrand": "Limelight"
+    },
+    {
+      "code": "LIMELIGHT-EMB-2PC-PISTA-DD-01",
+      "sourceBrand": "Lime light",
+      "canonicalBrand": "Limelight"
+    }
+  ],
+  "duplicateCodes": [],
+  "duplicatePaths": [],
+  "classificationConflicts": [
+    {
+      "code": "EID-AIFA-LKLWN-3P-AE-1102",
+      "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1102",
+      "category": "Formal"
+    },
+    {
+      "code": "MONALIZA-ANAYANOOR-S26-01",
+      "name": "Monaliza By Anaya Noor Luxury Embroidered Lawn 3PC — 1",
+      "category": "Formal"
+    },
+    {
+      "code": "MONALIZA-ANAYANOOR-S26-02",
+      "name": "Monaliza By Anaya Noor Luxury Embroidered Lawn 3PC — 2",
+      "category": "Formal"
+    },
+    {
+      "code": "MONALIZA-ANAYANOOR-S26-03",
+      "name": "Monaliza By Anaya Noor Luxury Embroidered Lawn 3PC — 3",
+      "category": "Formal"
+    },
+    {
+      "code": "MONALIZA-ANAYANOOR-S26-04",
+      "name": "Monaliza By Anaya Noor Luxury Embroidered Lawn 3PC — 4",
+      "category": "Formal"
+    },
+    {
+      "code": "MONALIZA-ANAYANOOR-S26-05",
+      "name": "Monaliza By Anaya Noor Luxury Embroidered Lawn 3PC — 5",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-RED-3PC-01",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 1",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-ZINC-3PC-10",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 10",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-BLUE-3PC-02",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 2",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-D-GREEN-3PC-03",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 3",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-BLACK-3PC-04",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 4",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-PEACH-3PC-05",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 5",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-PURPLE-3PC-06",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 6",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-PINK-3PC-07",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 7",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-MEHNDI-3PC-08",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 8",
+      "category": "Formal"
+    },
+    {
+      "code": "MARIAB-DHN-MAROON-3PC-09",
+      "name": "Maria B Luxury Embroidered Dhanak 3PC — 9",
+      "category": "Formal"
+    }
+  ]
+}
