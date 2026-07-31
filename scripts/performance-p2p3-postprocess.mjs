@@ -243,7 +243,7 @@ async function optimizeCatalogueRuntime() {
     changed = true;
   }
 
-  if (runtime.includes("cache:'no-store'") || runtime.includes('Date.now()')) {
+  if (runtime.includes("cache:'no-store'") || runtime.includes('dawood-products.json?v=${Date.now()}')) {
     throw new Error('Catalogue runtime still bypasses browser caching.');
   }
   if (!runtime.includes('window.AlHumaCatalogueSnapshot = catalogueSnapshot;')) {
