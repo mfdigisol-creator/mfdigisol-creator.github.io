@@ -1,0 +1,135 @@
+name: Correct Phase 4A production analytics audit
+
+on:
+  push:
+    branches:
+      - agent/phase4a-production-audit-20260801
+    paths:
+      - ".github/workflows/production-analytics-correction.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out isolated audit branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install browser audit dependency
+        run: npm install --no-save --no-package-lock puppeteer-core@24.16.0
+
+      - name: Run corrected analytics dry-run
+        run: |
+          set -euo pipefail
+          mkdir -p .audit-tmp performance/production-audit
+          cat > .audit-tmp/analytics-dry-run.mjs <<'NODE'
+          import fs from 'node:fs/promises';
+          import puppeteer from 'puppeteer-core';
+
+          const browser = await puppeteer.launch({
+            executablePath: '/usr/bin/google-chrome',
+            headless: true,
+            args: ['--no-sandbox', '--disable-dev-shm-usage']
+          });
+          const page = await browser.newPage();
+          const attempts = [];
+          const scriptResponses = [];
+
+          await page.setRequestInterception(true);
+          page.on('request', request => {
+            const url = request.url();
+            const method = request.method();
+            const kind =
+              url.includes('googletagmanager.com/gtm.js') ? 'gtm-script' :
+              url.includes('connect.facebook.net/en_US/fbevents.js') ? 'meta-script' :
+              /google-analytics\.com\/g\/collect|analytics\.google\.com\/g\/collect/.test(url) ? 'ga4-event' :
+              /facebook\.com\/tr(?:\?|$)/.test(url) ? 'meta-pixel-event' :
+              url === 'https://meta-capi.alhumacollection.workers.dev/events' && method === 'POST' ? 'meta-capi-event' : null;
+            if (kind) attempts.push({ kind, method, url });
+            if (kind === 'ga4-event' || kind === 'meta-pixel-event' || kind === 'meta-capi-event') request.abort('blockedbyclient');
+            else request.continue();
+          });
+          page.on('response', response => {
+            const url = response.url();
+            if (url.includes('googletagmanager.com/gtm.js')) scriptResponses.push({ kind:'gtm-script', status:response.status(), url });
+            if (url.includes('connect.facebook.net/en_US/fbevents.js')) scriptResponses.push({ kind:'meta-script', status:response.status(), url });
+          });
+
+          await page.goto('https://alhumacollection.com/', { waitUntil:'domcontentloaded', timeout:45000 });
+          await page.waitForSelector('[data-consent-accept]', { timeout:10000 });
+          await page.click('[data-consent-accept]');
+          await new Promise(resolve => setTimeout(resolve, 12000));
+
+          const state = await page.evaluate(() => ({
+            config: window.AlHumaAnalytics?.config || null,
+            consent: window.AlHumaAnalytics?.getConsent?.() || null,
+            dataLayerEvents: (window.dataLayer || []).map(entry => Array.isArray(entry) ? entry[0] : entry?.event).filter(Boolean)
+          }));
+
+          const required = ['gtm-script','meta-script','ga4-event','meta-pixel-event','meta-capi-event'];
+          const found = Object.fromEntries(required.map(kind => [kind, attempts.some(item => item.kind === kind)]));
+          const failures = required.filter(kind => !found[kind]);
+          if (state.config?.gtmId !== 'GTM-NP995MF2') failures.push('gtm-id');
+          if (state.config?.ga4MeasurementId !== 'G-VP0WEM8CNC') failures.push('ga4-id');
+          if (state.config?.metaPixelId !== '1738280330535371') failures.push('meta-pixel-id');
+          if (state.config?.metaCapiEndpoint !== 'https://meta-capi.alhumacollection.workers.dev/events') failures.push('meta-capi-endpoint');
+          if (!state.consent?.analytics || !state.consent?.marketing) failures.push('consent-state');
+
+          const summary = {
+            schemaVersion: 2,
+            generatedAt: new Date().toISOString(),
+            mode: 'dry-run: analytics event endpoints were intercepted and aborted before transmission',
+            passed: failures.length === 0,
+            failures,
+            found,
+            attempts,
+            scriptResponses,
+            state
+          };
+          await fs.writeFile('performance/production-audit/analytics-dry-run-summary.json', `${JSON.stringify(summary, null, 2)}\n`);
+          await browser.close();
+          if (failures.length) throw new Error(`Analytics dry-run failures: ${failures.join(', ')}`);
+          console.log(JSON.stringify(summary, null, 2));
+          NODE
+          node .audit-tmp/analytics-dry-run.mjs 2>&1 | tee performance/production-audit/analytics-dry-run-log.txt
+          rm -rf .audit-tmp
+
+      - name: Update consolidated audit status
+        run: |
+          node - <<'NODE'
+          const fs = require('node:fs');
+          const path = 'performance/production-audit/status.json';
+          const status = JSON.parse(fs.readFileSync(path, 'utf8'));
+          status.generatedAt = new Date().toISOString();
+          status.analyticsOutcome = 'success';
+          status.analyticsVerification = 'corrected dry-run passed; event transmissions intercepted and aborted';
+          status.passed = status.originOutcome === 'success' && status.functionalOutcome === 'success' && status.analyticsOutcome === 'success' && status.lighthouseOutcome === 'success';
+          fs.writeFileSync(path, `${JSON.stringify(status, null, 2)}\n`);
+          NODE
+
+      - name: Upload corrected analytics evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4a-production-analytics-correction
+          path: |
+            performance/production-audit/analytics-dry-run-summary.json
+            performance/production-audit/analytics-dry-run-log.txt
+            performance/production-audit/status.json
+          retention-days: 14
+
+      - name: Commit corrected analytics evidence
+        run: |
+          git config user.name "Al Huma Production Audit"
+          git config user.email "actions@users.noreply.github.com"
+          git add performance/production-audit/analytics-dry-run-summary.json performance/production-audit/analytics-dry-run-log.txt performance/production-audit/status.json
+          git commit -m "Correct Phase 4A production analytics audit"
+          git push
