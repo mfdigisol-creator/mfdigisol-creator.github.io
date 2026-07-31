@@ -4,7 +4,7 @@ import { spawnSync } from 'node:child_process';
 
 const ROOT = process.cwd();
 const BASE_URL = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:4173';
-const LIGHTHOUSE_PACKAGE = process.env.LIGHTHOUSE_PACKAGE || 'lighthouse@12.8.2';
+const LIGHTHOUSE_PACKAGE = process.env.LIGHTHOUSE_PACKAGE || 'lighthouse@13.3.0';
 const REPORT_DIR = process.env.LIGHTHOUSE_REPORT_DIR || path.join(ROOT, 'performance', 'lighthouse-reports');
 const SUMMARY_DIR = process.env.LIGHTHOUSE_SUMMARY_DIR || path.join(ROOT, 'performance');
 const CHROME_PATH = process.env.CHROME_PATH || '/usr/bin/google-chrome';
