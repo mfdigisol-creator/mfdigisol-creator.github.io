@@ -11,6 +11,12 @@ on:
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/validate-catalogue.mjs"
+      - "scripts/validate-merchant-policy.mjs"
+      - "catalogue/removed-products.json"
+      - "catalogue/host-canonical-policy.json"
+      - "sitemap-pages.xml"
+      - "404.html"
+      - "policies.html"
       - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
@@ -22,6 +28,12 @@ on:
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/validate-catalogue.mjs"
+      - "scripts/validate-merchant-policy.mjs"
+      - "catalogue/removed-products.json"
+      - "catalogue/host-canonical-policy.json"
+      - "sitemap-pages.xml"
+      - "404.html"
+      - "policies.html"
   schedule:
     - cron: "17 */12 * * *"
   workflow_dispatch:
@@ -61,6 +73,7 @@ jobs:
           node scripts/seo-batch1-postprocess.mjs
           node scripts/generate-seo-pages-v2.mjs
           node scripts/validate-catalogue.mjs
+          node scripts/validate-merchant-policy.mjs
 
       - name: Publish validated catalogue update
         if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
