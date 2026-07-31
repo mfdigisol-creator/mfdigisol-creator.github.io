@@ -1,27 +1,68 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-30T22:53:35.409Z",
+  "generatedAt": "2026-07-31T10:12:37.647Z",
   "summary": {
-    "products": 1230,
-    "available": 624,
-    "formal": 852,
+    "products": 1240,
+    "available": 643,
+    "formal": 862,
     "luxury": 378,
     "priceOnEnquiry": 19,
-    "metaFeedProducts": 1211,
-    "canonicalBrands": 38,
-    "aliasCorrections": 0,
+    "metaFeedProducts": 1221,
+    "canonicalBrands": 37,
+    "aliasCorrections": 6,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "classificationConflicts": 16,
+    "classificationConflicts": 18,
     "unspecifiedPieces": 62
   },
-  "aliasCorrections": [],
+  "aliasCorrections": [
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-01",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-02",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-03",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-04",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-05",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "LIMELIGHT-EMB-2PC-LSKY-DD-01",
+      "sourceBrand": "Lime light",
+      "canonicalBrand": "Limelight"
+    }
+  ],
   "duplicateCodes": [],
   "duplicatePaths": [],
   "classificationConflicts": [
     {
+      "code": "EID-AIFA-LKLWN-3P-AE-1101",
+      "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1101",
+      "category": "Formal"
+    },
+    {
       "code": "EID-AIFA-LKLWN-3P-AE-1102",
       "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1102",
+      "category": "Formal"
+    },
+    {
+      "code": "EID-AIFA-LKLWN-3P-AE-1103",
+      "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1103",
       "category": "Formal"
     },
     {

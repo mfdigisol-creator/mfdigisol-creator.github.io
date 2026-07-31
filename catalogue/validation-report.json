@@ -1,26 +1,36 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-30T22:53:36.248Z",
+  "generatedAt": "2026-07-31T10:12:38.544Z",
   "summary": {
-    "products": 1230,
-    "brands": 38,
-    "collectionPages": 54,
-    "sitemapUrls": 1287,
-    "metaFeedRows": 1211,
+    "products": 1240,
+    "brands": 37,
+    "collectionPages": 53,
+    "sitemapUrls": 1296,
+    "metaFeedRows": 1221,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
-    "16 products contain “Luxury” but inherit the Formal supplier section.",
-    "1230 products currently lack retained supplier description text."
+    "18 products contain “Luxury” but inherit the Formal supplier section.",
+    "1240 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [
       {
+        "code": "EID-AIFA-LKLWN-3P-AE-1101",
+        "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1101",
+        "category": "Formal"
+      },
+      {
         "code": "EID-AIFA-LKLWN-3P-AE-1102",
         "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1102",
+        "category": "Formal"
+      },
+      {
+        "code": "EID-AIFA-LKLWN-3P-AE-1103",
+        "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1103",
         "category": "Formal"
       },
       {
@@ -101,7 +111,9 @@
     ],
     "missingDescriptions": [
       "AIFA-LWN-3P-AIIS-26301",
+      "EID-AIFA-LKLWN-3P-AE-1101",
       "EID-AIFA-LKLWN-3P-AE-1102",
+      "EID-AIFA-LKLWN-3P-AE-1103",
       "AIFA-PARROT-LWNEMB-902",
       "AIFA-BLACK-LWNEMB-904",
       "AIFA-CYAN-LWNEMB-905",
@@ -122,9 +134,7 @@
       "ALKARAM-LWN-V1-3P-LDS-09",
       "ALKARAM-LWN-BEIGE-3P-01",
       "SEHER-EMB-LWN-3P-01",
-      "SEHER-EMB-LWN-3P-05",
-      "SEHER-EMB-LWN-3P-06",
-      "SEHER-EMB-LWN-3P-08"
+      "SEHER-EMB-LWN-3P-05"
     ]
   }
 }
