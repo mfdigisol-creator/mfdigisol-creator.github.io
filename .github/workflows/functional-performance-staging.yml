@@ -1,4 +1,4 @@
-name: Validate Phase 4A staging interactions
+name: Verify production analytics dry-run
 
 on:
   push:
@@ -6,25 +6,17 @@ on:
       - agent/performance-p1-staging
     paths:
       - ".github/workflows/functional-performance-staging.yml"
-      - "scripts/run-functional-smoke.mjs"
-      - "scripts/static-audit-server.mjs"
-      - "index.html"
-      - "assistant-runtime.js"
-      - "dawood-catalogue.js"
-      - "dawood-commerce.js"
-      - "analytics.js"
-      - "analytics-config.js"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: phase4a-functional-${{ github.ref }}
+  group: production-analytics-dry-run-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  smoke:
+  analytics:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -36,121 +28,90 @@ jobs:
         with:
           node-version: "24"
 
-      - name: Start local static server
+      - name: Install browser audit dependency
+        run: npm install --no-save --no-package-lock puppeteer-core@24.16.0
+
+      - name: Run analytics dry-run without transmitting events
         run: |
-          node scripts/static-audit-server.mjs > /tmp/alhuma-functional-server.log 2>&1 &
-          echo $! > /tmp/alhuma-functional-server.pid
-          for attempt in {1..30}; do
-            if curl --silent --fail http://127.0.0.1:4173/ >/dev/null; then
-              exit 0
-            fi
-            sleep 1
-          done
-          cat /tmp/alhuma-functional-server.log
-          exit 1
+          set -euo pipefail
+          mkdir -p .audit-tmp performance/production-audit
+          cat > .audit-tmp/analytics-dry-run.mjs <<'NODE'
+          import fs from 'node:fs/promises';
+          import puppeteer from 'puppeteer-core';
 
-      - name: Run mobile and desktop browser smoke tests
-        id: functional
-        continue-on-error: true
-        env:
-          SMOKE_BASE_URL: http://127.0.0.1:4173
-          CHROME_PATH: /usr/bin/google-chrome
-          SMOKE_OUTPUT_DIR: /tmp/alhuma-functional-smoke
-          SMOKE_SUMMARY_FILE: performance/functional-smoke-summary.json
+          const browser = await puppeteer.launch({
+            executablePath: '/usr/bin/google-chrome',
+            headless: true,
+            args: ['--no-sandbox', '--disable-dev-shm-usage']
+          });
+          const page = await browser.newPage();
+          const attempts = [];
+          const scriptResponses = [];
+
+          await page.setRequestInterception(true);
+          page.on('request', request => {
+            const url = request.url();
+            const method = request.method();
+            const kind =
+              url.includes('googletagmanager.com/gtm.js') ? 'gtm-script' :
+              url.includes('connect.facebook.net/en_US/fbevents.js') ? 'meta-script' :
+              /google-analytics\.com\/g\/collect|analytics\.google\.com\/g\/collect/.test(url) ? 'ga4-event' :
+              /facebook\.com\/tr(?:\?|$)/.test(url) ? 'meta-pixel-event' :
+              url === 'https://meta-capi.alhumacollection.workers.dev/events' && method === 'POST' ? 'meta-capi-event' : null;
+            if (kind) attempts.push({ kind, method, url });
+            if (kind === 'ga4-event' || kind === 'meta-pixel-event' || kind === 'meta-capi-event') request.abort('blockedbyclient');
+            else request.continue();
+          });
+          page.on('response', response => {
+            const url = response.url();
+            if (url.includes('googletagmanager.com/gtm.js')) scriptResponses.push({ kind:'gtm-script', status:response.status(), url });
+            if (url.includes('connect.facebook.net/en_US/fbevents.js')) scriptResponses.push({ kind:'meta-script', status:response.status(), url });
+          });
+
+          await page.goto('https://alhumacollection.com/', { waitUntil:'domcontentloaded', timeout:45000 });
+          await page.waitForSelector('[data-consent-accept]', { timeout:10000 });
+          await page.click('[data-consent-accept]');
+          await new Promise(resolve => setTimeout(resolve, 12000));
+
+          const state = await page.evaluate(() => ({
+            config: window.AlHumaAnalytics?.config || null,
+            consent: window.AlHumaAnalytics?.getConsent?.() || null,
+            dataLayerEvents: (window.dataLayer || []).map(entry => Array.isArray(entry) ? entry[0] : entry?.event).filter(Boolean)
+          }));
+
+          const required = ['gtm-script','meta-script','ga4-event','meta-pixel-event','meta-capi-event'];
+          const found = Object.fromEntries(required.map(kind => [kind, attempts.some(item => item.kind === kind)]));
+          const failures = required.filter(kind => !found[kind]);
+          if (state.config?.gtmId !== 'GTM-NP995MF2') failures.push('gtm-id');
+          if (state.config?.ga4MeasurementId !== 'G-VP0WEM8CNC') failures.push('ga4-id');
+          if (state.config?.metaPixelId !== '1738280330535371') failures.push('meta-pixel-id');
+          if (state.config?.metaCapiEndpoint !== 'https://meta-capi.alhumacollection.workers.dev/events') failures.push('meta-capi-endpoint');
+          if (!state.consent?.analytics || !state.consent?.marketing) failures.push('consent-state');
+
+          const summary = {
+            schemaVersion: 1,
+            generatedAt: new Date().toISOString(),
+            baseUrl: 'https://alhumacollection.com/',
+            mode: 'dry-run: event endpoints intercepted and aborted before transmission',
+            passed: failures.length === 0,
+            failures,
+            found,
+            attempts,
+            scriptResponses,
+            state
+          };
+          await fs.writeFile('performance/production-audit/analytics-dry-run-summary.json', `${JSON.stringify(summary, null, 2)}\n`);
+          await browser.close();
+          if (failures.length) throw new Error(`Analytics dry-run failures: ${failures.join(', ')}`);
+          console.log(JSON.stringify(summary, null, 2));
+          NODE
+          node .audit-tmp/analytics-dry-run.mjs 2>&1 | tee performance/production-audit/analytics-dry-run-log.txt
+          rm -rf .audit-tmp
+
+      - name: Commit analytics audit evidence
         run: |
-          set -o pipefail
-          node scripts/run-functional-smoke.mjs 2>&1 | tee /tmp/alhuma-functional-smoke.log
-
-      - name: Build visual-review contact sheets
-        if: always()
-        run: |
-          python3 -m pip install --disable-pip-version-check --quiet pillow
-          python3 - <<'PY'
-          from pathlib import Path
-          from PIL import Image, ImageDraw, ImageFont
-
-          source = Path('/tmp/alhuma-functional-smoke')
-          output = Path('performance/visual-review')
-          output.mkdir(parents=True, exist_ok=True)
-          states = [
-              ('hero', 'Homepage hero'),
-              ('catalogue', 'Catalogue'),
-              ('product-dialog', 'Product dialog'),
-              ('checkout', 'Checkout'),
-              ('assistant', 'Assistant'),
-          ]
-          font = ImageFont.load_default()
-
-          def build(profile, target_width, quality):
-              cards = []
-              for key, label in states:
-                  file = source / f'{profile}-{key}.png'
-                  if not file.exists():
-                      raise SystemExit(f'Missing screenshot: {file}')
-                  image = Image.open(file).convert('RGB')
-                  height = round(image.height * target_width / image.width)
-                  image = image.resize((target_width, height), Image.Resampling.LANCZOS)
-                  card = Image.new('RGB', (target_width + 20, height + 46), '#f4f0e8')
-                  card.paste(image, (10, 36))
-                  ImageDraw.Draw(card).text((12, 12), label, fill='#17130f', font=font)
-                  cards.append(card)
-
-              columns = 2
-              gap = 18
-              rows = (len(cards) + columns - 1) // columns
-              row_heights = []
-              for row in range(rows):
-                  row_cards = cards[row * columns:(row + 1) * columns]
-                  row_heights.append(max(card.height for card in row_cards))
-              canvas_width = columns * cards[0].width + gap * (columns + 1)
-              canvas_height = sum(row_heights) + gap * (rows + 1)
-              canvas = Image.new('RGB', (canvas_width, canvas_height), '#1a1713')
-              y = gap
-              for row, row_height in enumerate(row_heights):
-                  for column in range(columns):
-                      index = row * columns + column
-                      if index >= len(cards):
-                          break
-                      x = gap + column * (cards[0].width + gap)
-                      canvas.paste(cards[index], (x, y))
-                  y += row_height + gap
-              destination = output / f'{profile}-contact-sheet.jpg'
-              canvas.save(destination, 'JPEG', quality=quality, optimize=True, progressive=True)
-              print(f'{destination}: {destination.stat().st_size} bytes')
-
-          build('mobile', 300, 82)
-          build('desktop', 560, 82)
-          PY
-
-      - name: Upload functional screenshots and log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: phase4a-functional-smoke
-          path: |
-            /tmp/alhuma-functional-smoke
-            /tmp/alhuma-functional-smoke.log
-            /tmp/alhuma-functional-server.log
-            performance/visual-review
-          if-no-files-found: warn
-          retention-days: 14
-
-      - name: Commit functional summary and review sheets
-        if: always()
-        run: |
-          if test -f /tmp/alhuma-functional-smoke.log; then
-            tail -n 200 /tmp/alhuma-functional-smoke.log > performance/functional-smoke-log.txt
-          fi
-          if test -z "$(git status --porcelain -- performance/functional-smoke-summary.json performance/functional-smoke-log.txt performance/visual-review/)"; then
-            echo "Functional summary and visual-review sheets are already current."
-            exit 0
-          fi
-          git config user.name "Al Huma Performance Staging"
+          git config user.name "Al Huma Production Audit"
           git config user.email "actions@users.noreply.github.com"
-          git add performance/functional-smoke-summary.json performance/functional-smoke-log.txt performance/visual-review/
-          git commit -m "Add Phase 4A visual review sheets"
+          git add performance/production-audit/analytics-dry-run-summary.json performance/production-audit/analytics-dry-run-log.txt
+          git commit -m "Record production analytics dry-run audit"
           git push
-
-      - name: Fail on functional regression
-        if: steps.functional.outcome == 'failure'
-        run: exit 1
