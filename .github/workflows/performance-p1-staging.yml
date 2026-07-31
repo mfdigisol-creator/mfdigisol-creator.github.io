@@ -1,0 +1,59 @@
+name: Materialize Phase 4A performance staging
+
+on:
+  push:
+    branches:
+      - agent/performance-p1-staging
+    paths:
+      - ".github/workflows/performance-p1-staging.yml"
+      - ".github/workflows/sync-dawood-catalogue.yml"
+      - "scripts/performance-p1-postprocess.mjs"
+      - "scripts/performance-p2p3-postprocess.mjs"
+      - "scripts/version-performance-assets.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase4a-performance-staging-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out staging branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Apply Phase 4A performance changes
+        run: |
+          node scripts/performance-p1-postprocess.mjs
+          node scripts/performance-p2p3-postprocess.mjs
+          node scripts/version-performance-assets.mjs
+          node --check assistant-runtime.js
+          node --check dawood-catalogue.js
+
+      - name: Validate catalogue and merchant policy
+        run: |
+          node scripts/validate-catalogue.mjs
+          node scripts/validate-merchant-policy.mjs
+
+      - name: Commit materialized staging output
+        run: |
+          if test -z "$(git status --porcelain -- index.html assistant-runtime.js dawood-catalogue.js assets/ products/ collections/)"; then
+            echo "Performance staging output is already materialized."
+            exit 0
+          fi
+          git config user.name "Al Huma Performance Staging"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html assistant-runtime.js dawood-catalogue.js assets/ products/ collections/
+          git commit -m "Materialize Phase 4A performance P2 and P3 changes"
+          git push

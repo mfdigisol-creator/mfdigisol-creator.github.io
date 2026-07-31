@@ -1,0 +1,156 @@
+name: Validate Phase 4A staging interactions
+
+on:
+  push:
+    branches:
+      - agent/performance-p1-staging
+    paths:
+      - ".github/workflows/functional-performance-staging.yml"
+      - "scripts/run-functional-smoke.mjs"
+      - "scripts/static-audit-server.mjs"
+      - "index.html"
+      - "assistant-runtime.js"
+      - "dawood-catalogue.js"
+      - "dawood-commerce.js"
+      - "analytics.js"
+      - "analytics-config.js"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase4a-functional-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out staging branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Start local static server
+        run: |
+          node scripts/static-audit-server.mjs > /tmp/alhuma-functional-server.log 2>&1 &
+          echo $! > /tmp/alhuma-functional-server.pid
+          for attempt in {1..30}; do
+            if curl --silent --fail http://127.0.0.1:4173/ >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/alhuma-functional-server.log
+          exit 1
+
+      - name: Run mobile and desktop browser smoke tests
+        id: functional
+        continue-on-error: true
+        env:
+          SMOKE_BASE_URL: http://127.0.0.1:4173
+          CHROME_PATH: /usr/bin/google-chrome
+          SMOKE_OUTPUT_DIR: /tmp/alhuma-functional-smoke
+          SMOKE_SUMMARY_FILE: performance/functional-smoke-summary.json
+        run: |
+          set -o pipefail
+          node scripts/run-functional-smoke.mjs 2>&1 | tee /tmp/alhuma-functional-smoke.log
+
+      - name: Build visual-review contact sheets
+        if: always()
+        run: |
+          python3 -m pip install --disable-pip-version-check --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFont
+
+          source = Path('/tmp/alhuma-functional-smoke')
+          output = Path('performance/visual-review')
+          output.mkdir(parents=True, exist_ok=True)
+          states = [
+              ('hero', 'Homepage hero'),
+              ('catalogue', 'Catalogue'),
+              ('product-dialog', 'Product dialog'),
+              ('checkout', 'Checkout'),
+              ('assistant', 'Assistant'),
+          ]
+          font = ImageFont.load_default()
+
+          def build(profile, target_width, quality):
+              cards = []
+              for key, label in states:
+                  file = source / f'{profile}-{key}.png'
+                  if not file.exists():
+                      raise SystemExit(f'Missing screenshot: {file}')
+                  image = Image.open(file).convert('RGB')
+                  height = round(image.height * target_width / image.width)
+                  image = image.resize((target_width, height), Image.Resampling.LANCZOS)
+                  card = Image.new('RGB', (target_width + 20, height + 46), '#f4f0e8')
+                  card.paste(image, (10, 36))
+                  ImageDraw.Draw(card).text((12, 12), label, fill='#17130f', font=font)
+                  cards.append(card)
+
+              columns = 2
+              gap = 18
+              rows = (len(cards) + columns - 1) // columns
+              row_heights = []
+              for row in range(rows):
+                  row_cards = cards[row * columns:(row + 1) * columns]
+                  row_heights.append(max(card.height for card in row_cards))
+              canvas_width = columns * cards[0].width + gap * (columns + 1)
+              canvas_height = sum(row_heights) + gap * (rows + 1)
+              canvas = Image.new('RGB', (canvas_width, canvas_height), '#1a1713')
+              y = gap
+              for row, row_height in enumerate(row_heights):
+                  for column in range(columns):
+                      index = row * columns + column
+                      if index >= len(cards):
+                          break
+                      x = gap + column * (cards[0].width + gap)
+                      canvas.paste(cards[index], (x, y))
+                  y += row_height + gap
+              destination = output / f'{profile}-contact-sheet.jpg'
+              canvas.save(destination, 'JPEG', quality=quality, optimize=True, progressive=True)
+              print(f'{destination}: {destination.stat().st_size} bytes')
+
+          build('mobile', 300, 82)
+          build('desktop', 560, 82)
+          PY
+
+      - name: Upload functional screenshots and log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4a-functional-smoke
+          path: |
+            /tmp/alhuma-functional-smoke
+            /tmp/alhuma-functional-smoke.log
+            /tmp/alhuma-functional-server.log
+            performance/visual-review
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Commit functional summary and review sheets
+        if: always()
+        run: |
+          if test -f /tmp/alhuma-functional-smoke.log; then
+            tail -n 200 /tmp/alhuma-functional-smoke.log > performance/functional-smoke-log.txt
+          fi
+          if test -z "$(git status --porcelain -- performance/functional-smoke-summary.json performance/functional-smoke-log.txt performance/visual-review/)"; then
+            echo "Functional summary and visual-review sheets are already current."
+            exit 0
+          fi
+          git config user.name "Al Huma Performance Staging"
+          git config user.email "actions@users.noreply.github.com"
+          git add performance/functional-smoke-summary.json performance/functional-smoke-log.txt performance/visual-review/
+          git commit -m "Add Phase 4A visual review sheets"
+          git push
+
+      - name: Fail on functional regression
+        if: steps.functional.outcome == 'failure'
+        run: exit 1
