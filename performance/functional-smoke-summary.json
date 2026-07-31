@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-31T20:53:22.337Z",
+  "generatedAt": "2026-07-31T21:10:04.511Z",
   "baseUrl": "http://127.0.0.1:4173",
   "chromePath": "/usr/bin/google-chrome",
   "profiles": [
@@ -25,11 +25,11 @@
         "no-console-errors"
       ],
       "screenshots": {
-        "hero": 694877,
-        "catalogue": 696069,
-        "productDialog": 296941,
+        "hero": 673027,
+        "catalogue": 696260,
+        "productDialog": 70239,
         "checkout": 76376,
-        "assistant": 322889
+        "assistant": 417205
       },
       "exceptions": [],
       "consoleErrors": []
@@ -55,11 +55,11 @@
         "no-console-errors"
       ],
       "screenshots": {
-        "hero": 314211,
-        "catalogue": 1063446,
+        "hero": 319531,
+        "catalogue": 1059699,
         "productDialog": 680983,
-        "checkout": 204545,
-        "assistant": 758082
+        "checkout": 206075,
+        "assistant": 743992
       },
       "exceptions": [],
       "consoleErrors": []
