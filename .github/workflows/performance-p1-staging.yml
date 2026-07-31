@@ -9,6 +9,7 @@ on:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
+      - "scripts/version-performance-assets.mjs"
   workflow_dispatch:
 
 permissions:
@@ -36,6 +37,7 @@ jobs:
         run: |
           node scripts/performance-p1-postprocess.mjs
           node scripts/performance-p2p3-postprocess.mjs
+          node scripts/version-performance-assets.mjs
           node --check assistant-runtime.js
           node --check dawood-catalogue.js
 
