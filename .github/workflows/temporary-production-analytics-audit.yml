@@ -1,3 +1,4 @@
+# Second-push trigger after workflow registration on main.
 name: Temporary production analytics dry-run audit
 
 on:
@@ -37,11 +38,7 @@ jobs:
           import fs from 'node:fs/promises';
           import puppeteer from 'puppeteer-core';
 
-          const browser = await puppeteer.launch({
-            executablePath: '/usr/bin/google-chrome',
-            headless: true,
-            args: ['--no-sandbox', '--disable-dev-shm-usage']
-          });
+          const browser = await puppeteer.launch({ executablePath:'/usr/bin/google-chrome', headless:true, args:['--no-sandbox','--disable-dev-shm-usage'] });
           const page = await browser.newPage();
           const attempts = [];
           const scriptResponses = [];
@@ -59,7 +56,7 @@ jobs:
                 /facebook\.com\/tr(?:\?|$)/.test(url) ? 'meta-pixel-event' :
                 url === 'https://meta-capi.alhumacollection.workers.dev/events' && method === 'POST' ? 'meta-capi-event' : null;
               if (kind) attempts.push({ kind, method, url });
-              if (kind === 'ga4-event' || kind === 'meta-pixel-event' || kind === 'meta-capi-event') request.abort('blockedbyclient');
+              if (['ga4-event','meta-pixel-event','meta-capi-event'].includes(kind)) request.abort('blockedbyclient');
               else request.continue();
             });
             page.on('response', response => {
@@ -78,7 +75,6 @@ jobs:
               consent: window.AlHumaAnalytics?.getConsent?.() || null,
               dataLayerEvents: (window.dataLayer || []).map(entry => Array.isArray(entry) ? entry[0] : entry?.event).filter(Boolean)
             }));
-
             const required = ['gtm-script','meta-script','ga4-event','meta-pixel-event','meta-capi-event'];
             const found = Object.fromEntries(required.map(kind => [kind, attempts.some(item => item.kind === kind)]));
             const failures = required.filter(kind => !found[kind]);
@@ -88,18 +84,7 @@ jobs:
             if (state.config?.metaCapiEndpoint !== 'https://meta-capi.alhumacollection.workers.dev/events') failures.push('meta-capi-endpoint');
             if (!state.consent?.analytics || !state.consent?.marketing) failures.push('consent-state');
 
-            const summary = {
-              schemaVersion: 1,
-              generatedAt: new Date().toISOString(),
-              baseUrl: 'https://alhumacollection.com/',
-              mode: 'dry-run: event endpoints intercepted and aborted before transmission',
-              passed: failures.length === 0,
-              failures,
-              found,
-              attempts,
-              scriptResponses,
-              state
-            };
+            const summary = { schemaVersion:1, generatedAt:new Date().toISOString(), baseUrl:'https://alhumacollection.com/', mode:'dry-run: event endpoints intercepted and aborted before transmission', passed:failures.length===0, failures, found, attempts, scriptResponses, state };
             await fs.writeFile('/tmp/alhuma-analytics-summary.json', `${JSON.stringify(summary, null, 2)}\n`);
             if (failures.length) failureMessage = `Analytics dry-run failures: ${failures.join(', ')}`;
           } catch (error) {
@@ -123,26 +108,17 @@ jobs:
           const summary = fs.existsSync('/tmp/alhuma-analytics-summary.json') ? JSON.parse(fs.readFileSync('/tmp/alhuma-analytics-summary.json','utf8')) : {passed:false,error:'Summary file missing'};
           const found = summary.found || {};
           const body = [
-            '## Corrected production analytics dry-run',
-            '',
+            '## Corrected production analytics dry-run', '',
             `Workflow step outcome: **${process.env.AUDIT_OUTCOME}**`,
-            `Audit passed: **${summary.passed === true}**`,
-            '',
-            'No production analytics event was transmitted; GA4, Meta Pixel and CAPI event requests were intercepted and aborted after verifying that the live website attempted them.',
-            '',
+            `Audit passed: **${summary.passed === true}**`, '',
+            'No production analytics event was transmitted; GA4, Meta Pixel and CAPI event requests were intercepted and aborted after verifying that the live website attempted them.', '',
             `- GTM script attempted: ${found['gtm-script'] === true}`,
             `- GA4 event attempted: ${found['ga4-event'] === true}`,
             `- Meta Pixel script attempted: ${found['meta-script'] === true}`,
             `- Meta Pixel event attempted: ${found['meta-pixel-event'] === true}`,
             `- Meta CAPI event attempted: ${found['meta-capi-event'] === true}`,
-            `- Failures: ${(summary.failures || []).join(', ') || 'none'}`,
-            '',
-            '<details><summary>Machine-readable evidence</summary>',
-            '',
-            '```json',
-            JSON.stringify(summary, null, 2).slice(0, 50000),
-            '```',
-            '</details>'
+            `- Failures: ${(summary.failures || []).join(', ') || summary.error || 'none'}`, '',
+            '<details><summary>Machine-readable evidence</summary>', '', '```json', JSON.stringify(summary, null, 2).slice(0, 50000), '```', '</details>'
           ].join('\n');
           fs.writeFileSync('/tmp/alhuma-analytics-comment.md', body);
           NODE
