@@ -1,12 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-31T17:18:38.888Z",
+  "generatedAt": "2026-07-31T17:27:40.075Z",
   "summary": {
     "products": 1220,
+    "removedProducts": 1,
     "brands": 37,
     "collectionPages": 52,
     "sitemapUrls": 1275,
     "metaFeedRows": 1201,
+    "metadataPages": 1220,
+    "internalHtmlFiles": 1279,
     "errors": 0,
     "warnings": 2
   },
@@ -130,6 +133,34 @@
       "SEHER-EMB-LWN-3P-01",
       "SEHER-EMB-LWN-3P-05",
       "SEHER-EMB-LWN-3P-06"
+    ],
+    "duplicateTitles": [],
+    "duplicateDescriptions": [],
+    "duplicateH1s": [],
+    "duplicateSchemaNames": [],
+    "brokenInternalLinks": [],
+    "removedProducts": [
+      {
+        "code": "BAREZE-EMBLWN-V2-3P-RE-13",
+        "name": "Bareeze Plain Emb Lawn With Chiffone Dupatta 3PC — 13",
+        "path": "products/bareze-emblwn-v2-3p-re-13-bareeze-plain-emb-lawn-with-chiffone-dupatta-3pc/"
+      }
     ]
+  },
+  "hostPolicy": {
+    "schemaVersion": 1,
+    "preferredOrigin": "https://alhumacollection.com",
+    "alternateOrigins": [
+      "http://alhumacollection.com",
+      "https://www.alhumacollection.com",
+      "http://www.alhumacollection.com"
+    ],
+    "requiredRedirectStatus": [
+      301,
+      308
+    ],
+    "canonicalRequirement": "All indexable pages must use the apex HTTPS origin in canonical and Open Graph URLs.",
+    "edgeVerification": "pending-external-http-check",
+    "hostingConstraint": "Do not change DNS or hosting during the current SEO workstream. Replace static meta-refresh legacy redirects with edge-level permanent redirects during the approved Cloudflare Pages migration."
   }
 }

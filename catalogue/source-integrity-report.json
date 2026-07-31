@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-31T17:18:38.404Z",
+  "generatedAt": "2026-07-31T17:27:38.390Z",
   "summary": {
     "products": 1220,
     "available": 613,
@@ -12,8 +12,12 @@
     "aliasCorrections": 6,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
+    "duplicateNames": 51,
     "classificationConflicts": 17,
-    "unspecifiedPieces": 62
+    "unspecifiedPieces": 62,
+    "removedProducts": 1,
+    "newlyRemovedProducts": 0,
+    "supplierRefreshUsed": true
   },
   "aliasCorrections": [
     {
@@ -49,6 +53,212 @@
   ],
   "duplicateCodes": [],
   "duplicatePaths": [],
+  "duplicateNames": [
+    {
+      "value": "alkaram spring summer digital printed lawn 3pc — 6",
+      "count": 2
+    },
+    {
+      "value": "rise by anaya noor heavy plain emb lawn 3pc — 1",
+      "count": 2
+    },
+    {
+      "value": "bareeze fully emb rice karandi lawn 2pc — 10",
+      "count": 5
+    },
+    {
+      "value": "bareeze fully emb rice karandi lawn 2pc — 7",
+      "count": 2
+    },
+    {
+      "value": "eva | dressline | organza — 1494",
+      "count": 3
+    },
+    {
+      "value": "eva by dressline | semi-stitched | organza — 1494",
+      "count": 4
+    },
+    {
+      "value": "fatima bano | tehzeeb | lava silk — fb-273",
+      "count": 2
+    },
+    {
+      "value": "fatima bano by aroob | dressline | lava silk — fb-314",
+      "count": 2
+    },
+    {
+      "value": "fatima bano by aroob | dressline | lava silk — fb-316",
+      "count": 2
+    },
+    {
+      "value": "haleema | fatime bano | organza — 163",
+      "count": 2
+    },
+    {
+      "value": "haleema | fatime bano | organza — 164",
+      "count": 2
+    },
+    {
+      "value": "jahan ara by dressline | sheesha silk — 1891",
+      "count": 4
+    },
+    {
+      "value": "misha by dressline | organza volume — 1546",
+      "count": 4
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-10",
+      "count": 5
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-12",
+      "count": 4
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-3",
+      "count": 5
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-5",
+      "count": 5
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-8",
+      "count": 5
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 12",
+      "count": 2
+    },
+    {
+      "value": "moco by anaya noor emb & digital printed lawn 3pc — 1",
+      "count": 4
+    },
+    {
+      "value": "moco by anaya noor emb & digital printed lawn 3pc — 2",
+      "count": 4
+    },
+    {
+      "value": "moco by anaya noor emb & digital printed lawn 3pc — 3",
+      "count": 4
+    },
+    {
+      "value": "moco by anaya noor emb & digital printed lawn 3pc — 4",
+      "count": 3
+    },
+    {
+      "value": "moco by anaya noor emb & digital printed lawn 3pc — 5",
+      "count": 3
+    },
+    {
+      "value": "riwaaz by anaya noor printed and emb lawn 3pc — 1",
+      "count": 2
+    },
+    {
+      "value": "riwaaz by anaya noor printed and emb lawn 3pc — 2",
+      "count": 2
+    },
+    {
+      "value": "riwaaz by anaya noor printed and emb lawn 3pc — 3",
+      "count": 2
+    },
+    {
+      "value": "riwaaz by anaya noor printed and emb lawn 3pc — 4",
+      "count": 2
+    },
+    {
+      "value": "riwaaz by anaya noor printed and emb lawn 3pc — 5",
+      "count": 2
+    },
+    {
+      "value": "riwaaz by anaya noor printed and emb lawn 3pc — 6",
+      "count": 2
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-1",
+      "count": 5
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-11",
+      "count": 5
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-2",
+      "count": 4
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-4",
+      "count": 5
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-6",
+      "count": 5
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-7",
+      "count": 5
+    },
+    {
+      "value": "fabiha by feroza digital printed lawn 3pc — d-9",
+      "count": 4
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 1",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 10",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 11",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 13",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 14",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 15",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 2",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 3",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 4",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 5",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 6",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 7",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 8",
+      "count": 2
+    },
+    {
+      "value": "parizad by paltar premium printed lawn 2pc — 9",
+      "count": 2
+    }
+  ],
   "classificationConflicts": [
     {
       "code": "EID-AIFA-LKLWN-3P-AE-1101",
@@ -135,5 +345,6 @@
       "name": "Maria B Luxury Embroidered Dhanak 3PC — 9",
       "category": "Formal"
     }
-  ]
+  ],
+  "newlyRemovedProducts": []
 }
