@@ -15,6 +15,7 @@ on:
       - "catalogue/host-canonical-policy.json"
       - "sitemap-pages.xml"
       - "404.html"
+      - "policies.html"
       - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
@@ -30,6 +31,7 @@ on:
       - "catalogue/host-canonical-policy.json"
       - "sitemap-pages.xml"
       - "404.html"
+      - "policies.html"
   schedule:
     - cron: "17 */12 * * *"
   workflow_dispatch:
