@@ -77,7 +77,7 @@ jobs:
 
       - name: Commit Lighthouse summary
         run: |
-          if git diff --quiet -- performance/lighthouse-summary.json performance/lighthouse-summary.md; then
+          if test -z "$(git status --porcelain -- performance/lighthouse-summary.json performance/lighthouse-summary.md)"; then
             echo "Lighthouse summary is already current."
             exit 0
           fi
