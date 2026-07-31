@@ -11,6 +11,10 @@ on:
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/validate-catalogue.mjs"
+      - "catalogue/removed-products.json"
+      - "catalogue/host-canonical-policy.json"
+      - "sitemap-pages.xml"
+      - "404.html"
       - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
@@ -22,6 +26,10 @@ on:
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/validate-catalogue.mjs"
+      - "catalogue/removed-products.json"
+      - "catalogue/host-canonical-policy.json"
+      - "sitemap-pages.xml"
+      - "404.html"
   schedule:
     - cron: "17 */12 * * *"
   workflow_dispatch:
