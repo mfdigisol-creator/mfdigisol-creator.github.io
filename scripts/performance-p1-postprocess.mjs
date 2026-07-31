@@ -81,7 +81,7 @@ async function optimizeHomepage() {
     throw new Error('Homepage hero is neither embedded twice nor available as the expected external asset.');
   }
 
-  const fontImport = document.match(/@import\s+url\((['"]?)(https:\/\/fonts\.googleapis\.com\/css2\?[^)'";]+)\1\);?/i);
+  const fontImport = document.match(/@import\s+url\((['"]?)(https:\/\/fonts\.googleapis\.com\/css2\?[^)'"]+)\1\);?/i);
   if (fontImport) {
     const fontUrl = fontImport[2].replace(/&amp;/g, '&');
     document = document.replace(fontImport[0], '');
@@ -96,6 +96,9 @@ async function optimizeHomepage() {
 
   if (document.includes('data:image/webp;base64,') && duplicatedHero && document.includes(duplicatedHero)) {
     throw new Error('Homepage hero data URI replacement was incomplete.');
+  }
+  if (/@import\s+url\([^)]*fonts\.googleapis\.com/i.test(document)) {
+    throw new Error('Google Fonts @import conversion was incomplete.');
   }
 
   if (changed) await fs.writeFile(INDEX_FILE, document);
