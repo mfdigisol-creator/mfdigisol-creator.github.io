@@ -1,18 +1,18 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-31T10:12:37.647Z",
+  "generatedAt": "2026-07-31T17:18:38.404Z",
   "summary": {
-    "products": 1240,
-    "available": 643,
-    "formal": 862,
-    "luxury": 378,
+    "products": 1220,
+    "available": 613,
+    "formal": 845,
+    "luxury": 375,
     "priceOnEnquiry": 19,
-    "metaFeedProducts": 1221,
+    "metaFeedProducts": 1201,
     "canonicalBrands": 37,
     "aliasCorrections": 6,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "classificationConflicts": 18,
+    "classificationConflicts": 17,
     "unspecifiedPieces": 62
   },
   "aliasCorrections": [
@@ -53,11 +53,6 @@
     {
       "code": "EID-AIFA-LKLWN-3P-AE-1101",
       "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1101",
-      "category": "Formal"
-    },
-    {
-      "code": "EID-AIFA-LKLWN-3P-AE-1102",
-      "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1102",
       "category": "Formal"
     },
     {
