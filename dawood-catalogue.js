@@ -284,12 +284,22 @@
   document.addEventListener('click', event => {
     const link = event.target.closest('a[href="#live-catalogue"], a[href="#new-arrivals"]');
     if (!link || link.hasAttribute('data-nav-brand')) return;
-    resetCatalogue();
+    event.preventDefault();
     liveNav?.removeAttribute('open');
     track('catalogue_navigation_open', { source:(link.textContent || 'catalogue link').trim() });
+    loadCatalogue().then(() => {
+      if (!products.length) return;
+      resetCatalogue();
+      section.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
   });
 
-  fetch(`catalogue/dawood-products.json?v=${Date.now()}`, { cache:'no-store' })
+  const catalogueVersion = document.documentElement.dataset.catalogueVersion || 'current';
+  let cataloguePromise = null;
+  function loadCatalogue() {
+    if (cataloguePromise) return cataloguePromise;
+    cataloguePromise = (() => {
+    return fetch(`catalogue/dawood-products.json?v=${encodeURIComponent(catalogueVersion)}`, { cache:'default' })
     .then(response => { if (!response.ok) throw new Error('Catalogue is not ready'); return response.json(); })
     .then(data => {
       products = Array.isArray(data.products) ? data.products : [];
@@ -301,9 +311,31 @@
       syncTime.title = `Last successful synchronization: ${date.toISOString()}`;
       syncTime.classList.toggle('stale',stale);
       populateNavigation(); populateCollectionSlider(); section.hidden=false; revealCatalogue(); render();
-      window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:{ synchronizedAt:data.synchronizedAt, products:products.map(product => ({ code:product.code, name:product.name, brand:product.brand, category:product.category, available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) })) } }));
+      const catalogueSnapshot = { synchronizedAt:data.synchronizedAt, products:products.map(product => ({ code:product.code, name:product.name, brand:product.brand, category:product.category, available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) })) };
+      window.AlHumaCatalogueSnapshot = catalogueSnapshot;
+      window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:catalogueSnapshot }));
       const requested = new URLSearchParams(location.search).get('product'); if(requested) setTimeout(() => openProduct(requested,false),100);
       track('catalogue_loaded',{ product_count:products.length, available_count:data.counts?.available, enquiry_price_count:data.counts?.priceOnEnquiry });
     })
-    .catch(() => { section.hidden=true; if(navGroups) navGroups.innerHTML='<a href="https://wa.me/923216115731">Catalogue temporarily unavailable — contact our team</a>'; });
+        .catch(() => { cataloguePromise=null; section.hidden=true; if(navGroups) navGroups.innerHTML='<a href="https://wa.me/923216115731">Catalogue temporarily unavailable — contact our team</a>'; return null; });
+    })();
+    return cataloguePromise;
+  }
+
+  window.AlHumaCatalogue = { load:loadCatalogue };
+  const catalogueSentinel = document.createElement('span');
+  catalogueSentinel.setAttribute('aria-hidden', 'true');
+  catalogueSentinel.style.cssText = 'display:block;width:1px;height:1px;';
+  section.before(catalogueSentinel);
+  const catalogueObserver = new IntersectionObserver(entries => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+    catalogueObserver.disconnect();
+    loadCatalogue();
+  }, { rootMargin:'320px 0px' });
+  catalogueObserver.observe(catalogueSentinel);
+  document.querySelector('[data-live-nav] summary')?.addEventListener('pointerenter', loadCatalogue, { once:true });
+  document.querySelector('[data-live-nav] summary')?.addEventListener('focus', loadCatalogue, { once:true });
+  document.querySelector('[data-live-nav] summary')?.addEventListener('click', loadCatalogue, { once:true });
+  const initialCatalogueTarget = location.hash === '#live-catalogue' || location.hash === '#new-arrivals' || new URLSearchParams(location.search).has('product');
+  if (initialCatalogueTarget) loadCatalogue().then(() => section.scrollIntoView({ block:'start' }));
 })();
