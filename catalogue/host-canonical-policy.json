@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "preferredOrigin": "https://alhumacollection.com",
+  "alternateOrigins": [
+    "http://alhumacollection.com",
+    "https://www.alhumacollection.com",
+    "http://www.alhumacollection.com"
+  ],
+  "requiredRedirectStatus": [301, 308],
+  "canonicalRequirement": "All indexable pages must use the apex HTTPS origin in canonical and Open Graph URLs.",
+  "edgeVerification": "pending-external-http-check",
+  "hostingConstraint": "Do not change DNS or hosting during the current SEO workstream. Replace static meta-refresh legacy redirects with edge-level permanent redirects during the approved Cloudflare Pages migration."
+}
