@@ -39,6 +39,27 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Verify P2 and P3 materialization
+        run: |
+          node --check assistant-runtime.js
+          node --check dawood-catalogue.js
+          grep --quiet 'data-catalogue-version=' index.html
+          grep --quiet 'loadAssistantRuntime' index.html
+          grep --quiet 'window.AlHumaCatalogueSnapshot = catalogueSnapshot' dawood-catalogue.js
+          grep --quiet "cache:'default'" dawood-catalogue.js
+          if grep --quiet "cache:'no-store'" dawood-catalogue.js; then
+            echo "Legacy no-store catalogue fetch remains."
+            exit 1
+          fi
+          if grep --quiet 'dawood-products.json?v=${Date.now()}' dawood-catalogue.js; then
+            echo "Legacy timestamp cache-busting remains."
+            exit 1
+          fi
+          if grep --quiet 'const answerChatQuestion =' index.html; then
+            echo "Assistant rule engine remains inline."
+            exit 1
+          fi
+
       - name: Preserve Stage P1 single-pass baseline
         run: |
           mkdir -p performance
