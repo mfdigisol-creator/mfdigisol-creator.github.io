@@ -11,6 +11,7 @@ on:
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/performance-p1-postprocess.mjs"
+      - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -21,6 +22,7 @@ on:
       - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
+      - "assistant-runtime.js"
   pull_request:
     branches:
       - main
@@ -29,6 +31,7 @@ on:
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/performance-p1-postprocess.mjs"
+      - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -36,6 +39,8 @@ on:
       - "sitemap-pages.xml"
       - "404.html"
       - "policies.html"
+      - "dawood-catalogue.js"
+      - "assistant-runtime.js"
   schedule:
     - cron: "17 */12 * * *"
   workflow_dispatch:
@@ -75,19 +80,22 @@ jobs:
           node scripts/seo-batch1-postprocess.mjs
           node scripts/generate-seo-pages-v2.mjs
           node scripts/performance-p1-postprocess.mjs
+          node scripts/performance-p2p3-postprocess.mjs
+          node --check assistant-runtime.js
+          node --check dawood-catalogue.js
           node scripts/validate-catalogue.mjs
           node scripts/validate-merchant-policy.mjs
 
       - name: Publish validated catalogue update
         if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- index.html assets/ catalogue/ products/ collections/ shop/ 2>/dev/null; then
+          if test -z "$(git status --porcelain -- index.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/)"; then
             echo "Catalogue is already current."
             exit 0
           fi
           git config user.name "Al Huma Catalogue Sync"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html assets/ catalogue/ products/ collections/ shop/
+          git add index.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/
           git commit -m "Update synchronized catalogue"
           git push
 
