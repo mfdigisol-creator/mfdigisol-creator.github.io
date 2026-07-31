@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-31T21:37:45.983Z",
+  "baseUrl": "https://alhumacollection.com/",
+  "aggregation": "median",
+  "results": [
+    {
+      "profile": "mobile",
+      "repetitions": 3,
+      "scores": {
+        "performance": 91,
+        "accessibility": 91,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 2760,
+        "lcpMs": 2760,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 2760,
+        "serverResponseMs": 6
+      },
+      "runs": [
+        {
+          "run": 1,
+          "fetchTime": "2026-07-31T21:36:36.593Z",
+          "lighthouseVersion": "13.3.0",
+          "scores": {
+            "performance": 91,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 2754,
+            "lcpMs": 2754,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 2754,
+            "serverResponseMs": 6
+          }
+        },
+        {
+          "run": 2,
+          "fetchTime": "2026-07-31T21:36:49.030Z",
+          "lighthouseVersion": "13.3.0",
+          "scores": {
+            "performance": 91,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 2789,
+            "lcpMs": 2789,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 2789,
+            "serverResponseMs": 37
+          }
+        },
+        {
+          "run": 3,
+          "fetchTime": "2026-07-31T21:37:01.065Z",
+          "lighthouseVersion": "13.3.0",
+          "scores": {
+            "performance": 91,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 2760,
+            "lcpMs": 2760,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 2760,
+            "serverResponseMs": 3
+          }
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "repetitions": 3,
+      "scores": {
+        "performance": 99,
+        "accessibility": 93,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 729,
+        "lcpMs": 729,
+        "tbtMs": 0,
+        "cls": 0.0002943851861004488,
+        "speedIndexMs": 729,
+        "serverResponseMs": 2
+      },
+      "runs": [
+        {
+          "run": 1,
+          "fetchTime": "2026-07-31T21:37:13.022Z",
+          "lighthouseVersion": "13.3.0",
+          "scores": {
+            "performance": 99,
+            "accessibility": 93,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 768,
+            "lcpMs": 768,
+            "tbtMs": 0,
+            "cls": 0.0002943851861004488,
+            "speedIndexMs": 768,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "fetchTime": "2026-07-31T21:37:24.981Z",
+          "lighthouseVersion": "13.3.0",
+          "scores": {
+            "performance": 99,
+            "accessibility": 93,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 727,
+            "lcpMs": 727,
+            "tbtMs": 0,
+            "cls": 0.0002943851861004488,
+            "speedIndexMs": 727,
+            "serverResponseMs": 2
+          }
+        },
+        {
+          "run": 3,
+          "fetchTime": "2026-07-31T21:37:36.990Z",
+          "lighthouseVersion": "13.3.0",
+          "scores": {
+            "performance": 99,
+            "accessibility": 93,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 729,
+            "lcpMs": 729,
+            "tbtMs": 0,
+            "cls": 0.0002943851861004488,
+            "speedIndexMs": 729,
+            "serverResponseMs": 4
+          }
+        }
+      ]
+    }
+  ]
+}
