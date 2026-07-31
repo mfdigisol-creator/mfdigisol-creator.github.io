@@ -61,7 +61,7 @@ jobs:
         env:
           AUDIT_BASE_URL: http://127.0.0.1:4173
           CHROME_PATH: /usr/bin/google-chrome
-          LIGHTHOUSE_PACKAGE: lighthouse@12.8.2
+          LIGHTHOUSE_PACKAGE: lighthouse@13.3.0
           LIGHTHOUSE_REPORT_DIR: /tmp/alhuma-lighthouse-reports
           LIGHTHOUSE_SUMMARY_DIR: performance
         run: node scripts/run-lighthouse-audit.mjs
