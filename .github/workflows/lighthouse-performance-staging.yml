@@ -9,6 +9,8 @@ on:
       - "scripts/static-audit-server.mjs"
       - "scripts/run-lighthouse-audit.mjs"
       - "index.html"
+      - "assistant-runtime.js"
+      - "dawood-catalogue.js"
       - "assets/**"
       - "collections/**"
       - "products/**"
@@ -26,7 +28,6 @@ concurrency:
 
 jobs:
   lighthouse:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -37,6 +38,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "24"
+
+      - name: Preserve Stage P1 single-pass baseline
+        run: |
+          mkdir -p performance
+          if test -f performance/lighthouse-summary.json && ! test -f performance/lighthouse-baseline-p1.json; then
+            cp performance/lighthouse-summary.json performance/lighthouse-baseline-p1.json
+          fi
+          if test -f performance/lighthouse-summary.md && ! test -f performance/lighthouse-baseline-p1.md; then
+            cp performance/lighthouse-summary.md performance/lighthouse-baseline-p1.md
+          fi
 
       - name: Start local static audit server
         id: server
@@ -59,12 +70,13 @@ jobs:
           test "$status" = "404"
           grep --quiet "Page not found" /tmp/alhuma-404.html
 
-      - name: Run mobile and desktop Lighthouse audits
+      - name: Run median mobile and desktop Lighthouse audits
         id: audit
         env:
           AUDIT_BASE_URL: http://127.0.0.1:4173
           CHROME_PATH: /usr/bin/google-chrome
           LIGHTHOUSE_PACKAGE: lighthouse@13.3.0
+          LIGHTHOUSE_RUNS: 3
           LIGHTHOUSE_REPORT_DIR: /tmp/alhuma-lighthouse-reports
           LIGHTHOUSE_SUMMARY_DIR: performance
         run: |
@@ -91,19 +103,21 @@ jobs:
           node - <<'NODE'
           const fs = require('node:fs');
           const status = {
-            schemaVersion: 1,
+            schemaVersion: 2,
             generatedAt: new Date().toISOString(),
             branch: process.env.GITHUB_REF_NAME,
             commit: process.env.GITHUB_SHA,
             serverOutcome: process.env.SERVER_OUTCOME || 'unknown',
             custom404Outcome: process.env.CUSTOM_404_OUTCOME || 'unknown',
             auditOutcome: process.env.AUDIT_OUTCOME || 'unknown',
+            repetitionsPerPageProfile: 3,
+            aggregation: 'median',
             summaryCreated: fs.existsSync('performance/lighthouse-summary.json')
           };
           fs.writeFileSync('performance/lighthouse-run-status.json', `${JSON.stringify(status, null, 2)}\n`);
           NODE
           if test -f /tmp/alhuma-lighthouse-run.log; then
-            tail -n 200 /tmp/alhuma-lighthouse-run.log > performance/lighthouse-run-log.txt
+            tail -n 250 /tmp/alhuma-lighthouse-run.log > performance/lighthouse-run-log.txt
           fi
           if test -z "$(git status --porcelain -- performance/)"; then
             echo "Lighthouse status and summary are already current."
@@ -112,5 +126,5 @@ jobs:
           git config user.name "Al Huma Performance Staging"
           git config user.email "actions@users.noreply.github.com"
           git add performance/
-          git commit -m "Record Phase 4A Lighthouse staging status"
+          git commit -m "Record Phase 4A P2 and P3 Lighthouse medians"
           git push
