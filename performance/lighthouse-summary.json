@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-07-31T20:03:36.564Z",
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-31T20:44:29.460Z",
   "baseUrl": "http://127.0.0.1:4173",
   "lighthousePackage": "lighthouse@13.3.0",
   "representativePages": 10,
@@ -8,146 +8,193 @@
     "mobile",
     "desktop"
   ],
+  "repetitionsPerPageProfile": 3,
+  "aggregation": "median",
   "results": [
     {
       "page": "homepage",
       "label": "Homepage",
       "pathname": "/",
       "profile": "mobile",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T19:59:35.589Z",
+      "fetchTimes": [
+        "2026-07-31T20:33:12.802Z",
+        "2026-07-31T20:33:25.321Z",
+        "2026-07-31T20:33:37.297Z"
+      ],
       "scores": {
-        "performance": 42,
-        "accessibility": 92,
+        "performance": 89,
+        "accessibility": 91,
         "bestPractices": 100,
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 2918,
-        "lcpMs": 14900,
-        "tbtMs": 1211,
+        "fcpMs": 2929,
+        "lcpMs": 3079,
+        "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 5197,
-        "serverResponseMs": 1
-      }
+        "speedIndexMs": 2929,
+        "serverResponseMs": 2
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:33:12.802Z",
+          "scores": {
+            "performance": 89,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 2929,
+            "lcpMs": 3079,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 2929,
+            "serverResponseMs": 2
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:33:25.321Z",
+          "scores": {
+            "performance": 89,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 2929,
+            "lcpMs": 3079,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 2929,
+            "serverResponseMs": 2
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:33:37.297Z",
+          "scores": {
+            "performance": 89,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 2925,
+            "lcpMs": 3075,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 2925,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "homepage",
       "label": "Homepage",
       "pathname": "/",
       "profile": "desktop",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T19:59:54.514Z",
+      "fetchTimes": [
+        "2026-07-31T20:33:49.200Z",
+        "2026-07-31T20:34:01.150Z",
+        "2026-07-31T20:34:13.239Z"
+      ],
       "scores": {
-        "performance": 88,
+        "performance": 99,
         "accessibility": 93,
         "bestPractices": 100,
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 746,
-        "lcpMs": 2260,
+        "fcpMs": 763,
+        "lcpMs": 763,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 778,
+        "speedIndexMs": 763,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:33:49.200Z",
+          "scores": {
+            "performance": 99,
+            "accessibility": 93,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 756,
+            "lcpMs": 756,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 756,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:34:01.150Z",
+          "scores": {
+            "performance": 99,
+            "accessibility": 93,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 763,
+            "lcpMs": 763,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 763,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:34:13.239Z",
+          "scores": {
+            "performance": 99,
+            "accessibility": 93,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 768,
+            "lcpMs": 768,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 768,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "commercial-landing",
       "label": "Commercial landing",
       "pathname": "/shop/unstitched-suits-pakistan/",
       "profile": "mobile",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:00:11.368Z",
-      "scores": {
-        "performance": 100,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
-      "metrics": {
-        "fcpMs": 756,
-        "lcpMs": 1056,
-        "tbtMs": 0,
-        "cls": 0,
-        "speedIndexMs": 756,
-        "serverResponseMs": 1
-      }
-    },
-    {
-      "page": "commercial-landing",
-      "label": "Commercial landing",
-      "pathname": "/shop/unstitched-suits-pakistan/",
-      "profile": "desktop",
-      "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:00:22.795Z",
-      "scores": {
-        "performance": 100,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
-      "metrics": {
-        "fcpMs": 204,
-        "lcpMs": 242,
-        "tbtMs": 0,
-        "cls": 0,
-        "speedIndexMs": 204,
-        "serverResponseMs": 1
-      }
-    },
-    {
-      "page": "formal-landing",
-      "label": "Formal landing",
-      "pathname": "/shop/formal-unstitched-suits/",
-      "profile": "mobile",
-      "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:00:34.212Z",
-      "scores": {
-        "performance": 100,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
-      "metrics": {
-        "fcpMs": 754,
-        "lcpMs": 1054,
-        "tbtMs": 0,
-        "cls": 0,
-        "speedIndexMs": 754,
-        "serverResponseMs": 2
-      }
-    },
-    {
-      "page": "formal-landing",
-      "label": "Formal landing",
-      "pathname": "/shop/formal-unstitched-suits/",
-      "profile": "desktop",
-      "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:00:45.663Z",
-      "scores": {
-        "performance": 100,
-        "accessibility": 100,
-        "bestPractices": 100,
-        "seo": 100
-      },
-      "metrics": {
-        "fcpMs": 205,
-        "lcpMs": 243,
-        "tbtMs": 0,
-        "cls": 0,
-        "speedIndexMs": 205,
-        "serverResponseMs": 1
-      }
-    },
-    {
-      "page": "luxury-landing",
-      "label": "Luxury landing",
-      "pathname": "/shop/luxury-lawn-suits/",
-      "profile": "mobile",
-      "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:00:57.066Z",
+      "fetchTimes": [
+        "2026-07-31T20:34:25.142Z",
+        "2026-07-31T20:34:36.219Z",
+        "2026-07-31T20:34:47.279Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -161,15 +208,251 @@
         "cls": 0,
         "speedIndexMs": 755,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:34:25.142Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 752,
+            "lcpMs": 1052,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 752,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:34:36.219Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 756,
+            "lcpMs": 1056,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 756,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:34:47.279Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 755,
+            "lcpMs": 1055,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 755,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
-      "page": "luxury-landing",
-      "label": "Luxury landing",
-      "pathname": "/shop/luxury-lawn-suits/",
+      "page": "commercial-landing",
+      "label": "Commercial landing",
+      "pathname": "/shop/unstitched-suits-pakistan/",
       "profile": "desktop",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:01:08.475Z",
+      "fetchTimes": [
+        "2026-07-31T20:34:58.342Z",
+        "2026-07-31T20:35:09.336Z",
+        "2026-07-31T20:35:20.412Z"
+      ],
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 204,
+        "lcpMs": 243,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 204,
+        "serverResponseMs": 1
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:34:58.342Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 203,
+            "lcpMs": 243,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 203,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:35:09.336Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 204,
+            "lcpMs": 243,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 204,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:35:20.412Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 205,
+            "lcpMs": 243,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 205,
+            "serverResponseMs": 1
+          }
+        }
+      ]
+    },
+    {
+      "page": "formal-landing",
+      "label": "Formal landing",
+      "pathname": "/shop/formal-unstitched-suits/",
+      "profile": "mobile",
+      "repetitions": 3,
+      "lighthouseVersion": "13.3.0",
+      "fetchTimes": [
+        "2026-07-31T20:35:31.459Z",
+        "2026-07-31T20:35:42.483Z",
+        "2026-07-31T20:35:53.533Z"
+      ],
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 753,
+        "lcpMs": 1053,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 753,
+        "serverResponseMs": 1
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:35:31.459Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 758,
+            "lcpMs": 1058,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 758,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:35:42.483Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 753,
+            "lcpMs": 1053,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 753,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:35:53.533Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 751,
+            "lcpMs": 1051,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 751,
+            "serverResponseMs": 1
+          }
+        }
+      ]
+    },
+    {
+      "page": "formal-landing",
+      "label": "Formal landing",
+      "pathname": "/shop/formal-unstitched-suits/",
+      "profile": "desktop",
+      "repetitions": 3,
+      "lighthouseVersion": "13.3.0",
+      "fetchTimes": [
+        "2026-07-31T20:36:04.545Z",
+        "2026-07-31T20:36:15.558Z",
+        "2026-07-31T20:36:26.568Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -183,15 +466,251 @@
         "cls": 0,
         "speedIndexMs": 202,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:36:04.545Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 202,
+            "lcpMs": 242,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 202,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:36:15.558Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 202,
+            "lcpMs": 242,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 202,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:36:26.568Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 206,
+            "lcpMs": 246,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 206,
+            "serverResponseMs": 1
+          }
+        }
+      ]
+    },
+    {
+      "page": "luxury-landing",
+      "label": "Luxury landing",
+      "pathname": "/shop/luxury-lawn-suits/",
+      "profile": "mobile",
+      "repetitions": 3,
+      "lighthouseVersion": "13.3.0",
+      "fetchTimes": [
+        "2026-07-31T20:36:37.622Z",
+        "2026-07-31T20:36:48.724Z",
+        "2026-07-31T20:36:59.744Z"
+      ],
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 753,
+        "lcpMs": 1053,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 753,
+        "serverResponseMs": 1
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:36:37.622Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 752,
+            "lcpMs": 1052,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 752,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:36:48.724Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 754,
+            "lcpMs": 1054,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 754,
+            "serverResponseMs": 2
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:36:59.744Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 753,
+            "lcpMs": 1053,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 753,
+            "serverResponseMs": 1
+          }
+        }
+      ]
+    },
+    {
+      "page": "luxury-landing",
+      "label": "Luxury landing",
+      "pathname": "/shop/luxury-lawn-suits/",
+      "profile": "desktop",
+      "repetitions": 3,
+      "lighthouseVersion": "13.3.0",
+      "fetchTimes": [
+        "2026-07-31T20:37:10.727Z",
+        "2026-07-31T20:37:21.726Z",
+        "2026-07-31T20:37:32.713Z"
+      ],
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 202,
+        "lcpMs": 242,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 202,
+        "serverResponseMs": 1
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:37:10.727Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 202,
+            "lcpMs": 242,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 202,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:37:21.726Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 202,
+            "lcpMs": 242,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 202,
+            "serverResponseMs": 0
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:37:32.713Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 203,
+            "lcpMs": 243,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 203,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "collection",
       "label": "Collection",
       "pathname": "/collections/aifa/",
       "profile": "mobile",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:01:19.872Z",
+      "fetchTimes": [
+        "2026-07-31T20:37:43.768Z",
+        "2026-07-31T20:37:55.459Z",
+        "2026-07-31T20:38:07.023Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -199,21 +718,85 @@
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 905,
-        "lcpMs": 1205,
+        "fcpMs": 904,
+        "lcpMs": 1204,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 905,
-        "serverResponseMs": 2
-      }
+        "speedIndexMs": 904,
+        "serverResponseMs": 1
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:37:43.768Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 904,
+            "lcpMs": 1204,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 904,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:37:55.459Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 906,
+            "lcpMs": 1206,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 906,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:38:07.023Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 902,
+            "lcpMs": 1202,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 902,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "collection",
       "label": "Collection",
       "pathname": "/collections/aifa/",
       "profile": "desktop",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:01:31.549Z",
+      "fetchTimes": [
+        "2026-07-31T20:38:18.642Z",
+        "2026-07-31T20:38:30.228Z",
+        "2026-07-31T20:38:41.807Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -221,21 +804,85 @@
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 245,
-        "lcpMs": 638,
+        "fcpMs": 244,
+        "lcpMs": 282,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 245,
+        "speedIndexMs": 244,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:38:18.642Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 245,
+            "lcpMs": 283,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 245,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:38:30.228Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 244,
+            "lcpMs": 282,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 244,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:38:41.807Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 244,
+            "lcpMs": 282,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 244,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "collection-page-2",
       "label": "Paginated collection",
       "pathname": "/collections/anaya-noor/page/2/",
       "profile": "mobile",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:01:43.205Z",
+      "fetchTimes": [
+        "2026-07-31T20:38:53.407Z",
+        "2026-07-31T20:39:05.401Z",
+        "2026-07-31T20:39:17.311Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -243,21 +890,85 @@
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 907,
-        "lcpMs": 1207,
+        "fcpMs": 902,
+        "lcpMs": 1202,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 907,
+        "speedIndexMs": 902,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:38:53.407Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 902,
+            "lcpMs": 1202,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 902,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:39:05.401Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 905,
+            "lcpMs": 1205,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 905,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:39:17.311Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 901,
+            "lcpMs": 1201,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 901,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "collection-page-2",
       "label": "Paginated collection",
       "pathname": "/collections/anaya-noor/page/2/",
       "profile": "desktop",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:01:55.257Z",
+      "fetchTimes": [
+        "2026-07-31T20:39:29.238Z",
+        "2026-07-31T20:39:41.247Z",
+        "2026-07-31T20:39:53.256Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -265,43 +976,171 @@
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 246,
-        "lcpMs": 676,
+        "fcpMs": 243,
+        "lcpMs": 283,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 246,
+        "speedIndexMs": 243,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:39:29.238Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 244,
+            "lcpMs": 281,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 244,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:39:41.247Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 243,
+            "lcpMs": 283,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 243,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:39:53.256Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 243,
+            "lcpMs": 283,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 243,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "active-product",
       "label": "Active product",
       "pathname": "/products/aifa-lwn-3p-aiis-26301-aifa-digital-printed-and-embroidered-lawn-3pc/",
       "profile": "mobile",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:02:07.306Z",
+      "fetchTimes": [
+        "2026-07-31T20:40:05.303Z",
+        "2026-07-31T20:40:16.677Z",
+        "2026-07-31T20:40:28.089Z"
+      ],
       "scores": {
-        "performance": 91,
+        "performance": 96,
         "accessibility": 100,
         "bestPractices": 100,
         "seo": 100
       },
       "metrics": {
         "fcpMs": 754,
-        "lcpMs": 3574,
+        "lcpMs": 2731,
         "tbtMs": 0,
         "cls": 0.017,
-        "speedIndexMs": 1098,
-        "serverResponseMs": 2
-      }
+        "speedIndexMs": 754,
+        "serverResponseMs": 1
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:40:05.303Z",
+          "scores": {
+            "performance": 96,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 754,
+            "lcpMs": 2731,
+            "tbtMs": 0,
+            "cls": 0.017,
+            "speedIndexMs": 754,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:40:16.677Z",
+          "scores": {
+            "performance": 96,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 753,
+            "lcpMs": 2726,
+            "tbtMs": 0,
+            "cls": 0.017,
+            "speedIndexMs": 753,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:40:28.089Z",
+          "scores": {
+            "performance": 96,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 755,
+            "lcpMs": 2732,
+            "tbtMs": 0,
+            "cls": 0.017,
+            "speedIndexMs": 755,
+            "serverResponseMs": 0
+          }
+        }
+      ]
     },
     {
       "page": "active-product",
       "label": "Active product",
       "pathname": "/products/aifa-lwn-3p-aiis-26301-aifa-digital-printed-and-embroidered-lawn-3pc/",
       "profile": "desktop",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:02:19.763Z",
+      "fetchTimes": [
+        "2026-07-31T20:40:39.376Z",
+        "2026-07-31T20:40:50.649Z",
+        "2026-07-31T20:41:01.922Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -309,21 +1148,85 @@
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 204,
-        "lcpMs": 587,
+        "fcpMs": 203,
+        "lcpMs": 812,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 204,
-        "serverResponseMs": 2
-      }
+        "speedIndexMs": 203,
+        "serverResponseMs": 1
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:40:39.376Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 203,
+            "lcpMs": 813,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 203,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:40:50.649Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 203,
+            "lcpMs": 802,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 203,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:41:01.922Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 203,
+            "lcpMs": 812,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 203,
+            "serverResponseMs": 0
+          }
+        }
+      ]
     },
     {
       "page": "discontinued-product",
       "label": "Discontinued product",
       "pathname": "/products/bareze-emblwn-v2-3p-re-13-bareeze-plain-emb-lawn-with-chiffone-dupatta-3pc/",
       "profile": "mobile",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:02:31.160Z",
+      "fetchTimes": [
+        "2026-07-31T20:41:13.353Z",
+        "2026-07-31T20:41:24.756Z",
+        "2026-07-31T20:41:36.073Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -335,17 +1238,81 @@
         "lcpMs": 1053,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 884,
+        "speedIndexMs": 753,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:41:13.353Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 92,
+            "seo": 69
+          },
+          "metrics": {
+            "fcpMs": 752,
+            "lcpMs": 1052,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 752,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:41:24.756Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 92,
+            "seo": 69
+          },
+          "metrics": {
+            "fcpMs": 757,
+            "lcpMs": 1057,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 757,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:41:36.073Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 92,
+            "seo": 69
+          },
+          "metrics": {
+            "fcpMs": 753,
+            "lcpMs": 1053,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 753,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "discontinued-product",
       "label": "Discontinued product",
       "pathname": "/products/bareze-emblwn-v2-3p-re-13-bareeze-plain-emb-lawn-with-chiffone-dupatta-3pc/",
       "profile": "desktop",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:02:43.323Z",
+      "fetchTimes": [
+        "2026-07-31T20:41:47.526Z",
+        "2026-07-31T20:41:58.770Z",
+        "2026-07-31T20:42:09.991Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -353,21 +1320,85 @@
         "seo": 69
       },
       "metrics": {
-        "fcpMs": 203,
-        "lcpMs": 548,
+        "fcpMs": 202,
+        "lcpMs": 803,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 203,
-        "serverResponseMs": 1
-      }
+        "speedIndexMs": 202,
+        "serverResponseMs": 0
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:41:47.526Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 96,
+            "seo": 69
+          },
+          "metrics": {
+            "fcpMs": 202,
+            "lcpMs": 800,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 202,
+            "serverResponseMs": 0
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:41:58.770Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 96,
+            "seo": 69
+          },
+          "metrics": {
+            "fcpMs": 203,
+            "lcpMs": 813,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 203,
+            "serverResponseMs": 0
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:42:09.991Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 96,
+            "seo": 69
+          },
+          "metrics": {
+            "fcpMs": 202,
+            "lcpMs": 803,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 202,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "custom-404",
       "label": "Custom 404 document",
       "pathname": "/404.html",
       "profile": "mobile",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:02:54.735Z",
+      "fetchTimes": [
+        "2026-07-31T20:42:21.221Z",
+        "2026-07-31T20:42:32.089Z",
+        "2026-07-31T20:42:43.001Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -375,21 +1406,85 @@
         "seo": 63
       },
       "metrics": {
-        "fcpMs": 618,
-        "lcpMs": 753,
+        "fcpMs": 619,
+        "lcpMs": 751,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 618,
+        "speedIndexMs": 619,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:42:21.221Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 63
+          },
+          "metrics": {
+            "fcpMs": 615,
+            "lcpMs": 752,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 615,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:42:32.089Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 63
+          },
+          "metrics": {
+            "fcpMs": 619,
+            "lcpMs": 751,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 619,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:42:43.001Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 63
+          },
+          "metrics": {
+            "fcpMs": 620,
+            "lcpMs": 751,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 620,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "custom-404",
       "label": "Custom 404 document",
       "pathname": "/404.html",
       "profile": "desktop",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:03:06.028Z",
+      "fetchTimes": [
+        "2026-07-31T20:42:53.925Z",
+        "2026-07-31T20:43:04.830Z",
+        "2026-07-31T20:43:15.737Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -398,20 +1493,84 @@
       },
       "metrics": {
         "fcpMs": 166,
-        "lcpMs": 202,
+        "lcpMs": 201,
         "tbtMs": 0,
         "cls": 0,
         "speedIndexMs": 166,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:42:53.925Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 63
+          },
+          "metrics": {
+            "fcpMs": 165,
+            "lcpMs": 202,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 165,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:43:04.830Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 63
+          },
+          "metrics": {
+            "fcpMs": 166,
+            "lcpMs": 201,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 166,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:43:15.737Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "bestPractices": 100,
+            "seo": 63
+          },
+          "metrics": {
+            "fcpMs": 166,
+            "lcpMs": 201,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 166,
+            "serverResponseMs": 0
+          }
+        }
+      ]
     },
     {
       "page": "policies",
       "label": "Policies",
       "pathname": "/policies.html",
       "profile": "mobile",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:03:17.255Z",
+      "fetchTimes": [
+        "2026-07-31T20:43:26.615Z",
+        "2026-07-31T20:43:37.574Z",
+        "2026-07-31T20:43:48.550Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 91,
@@ -419,21 +1578,85 @@
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 633,
+        "fcpMs": 628,
         "lcpMs": 752,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 633,
+        "speedIndexMs": 628,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:43:26.615Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 628,
+            "lcpMs": 752,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 628,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:43:37.574Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 627,
+            "lcpMs": 752,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 627,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:43:48.550Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 630,
+            "lcpMs": 751,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 630,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     },
     {
       "page": "policies",
       "label": "Policies",
       "pathname": "/policies.html",
       "profile": "desktop",
+      "repetitions": 3,
       "lighthouseVersion": "13.3.0",
-      "fetchTime": "2026-07-31T20:03:28.616Z",
+      "fetchTimes": [
+        "2026-07-31T20:43:59.515Z",
+        "2026-07-31T20:44:10.673Z",
+        "2026-07-31T20:44:21.602Z"
+      ],
       "scores": {
         "performance": 100,
         "accessibility": 91,
@@ -441,13 +1664,72 @@
         "seo": 100
       },
       "metrics": {
-        "fcpMs": 170,
+        "fcpMs": 169,
         "lcpMs": 202,
         "tbtMs": 0,
         "cls": 0,
-        "speedIndexMs": 170,
+        "speedIndexMs": 169,
         "serverResponseMs": 1
-      }
+      },
+      "runs": [
+        {
+          "run": 1,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:43:59.515Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 169,
+            "lcpMs": 201,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 169,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 2,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:44:10.673Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 169,
+            "lcpMs": 202,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 169,
+            "serverResponseMs": 1
+          }
+        },
+        {
+          "run": 3,
+          "lighthouseVersion": "13.3.0",
+          "fetchTime": "2026-07-31T20:44:21.602Z",
+          "scores": {
+            "performance": 100,
+            "accessibility": 91,
+            "bestPractices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 169,
+            "lcpMs": 203,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 169,
+            "serverResponseMs": 1
+          }
+        }
+      ]
     }
   ]
 }

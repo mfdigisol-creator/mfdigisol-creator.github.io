@@ -1,10 +1,12 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-07-31T20:03:38.519Z",
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-31T20:44:31.649Z",
   "branch": "agent/performance-p1-staging",
-  "commit": "3d29d6c4c18c82af665e2aeecaaa5507be4bfcc2",
+  "commit": "a97850a87c1827097c2efa0b84c1270f08189a5e",
   "serverOutcome": "success",
   "custom404Outcome": "success",
   "auditOutcome": "success",
+  "repetitionsPerPageProfile": 3,
+  "aggregation": "median",
   "summaryCreated": true
 }
