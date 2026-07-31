@@ -10,6 +10,7 @@ on:
       - "scripts/install-dawood-integration.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/performance-p1-postprocess.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -27,6 +28,7 @@ on:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/performance-p1-postprocess.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -66,25 +68,26 @@ jobs:
           node scripts/install-dawood-integration.mjs
           node scripts/sync-dawood.mjs
 
-      - name: Normalize and generate crawlable catalogue
+      - name: Normalize, optimize and generate crawlable catalogue
         id: generate
         if: always()
         run: |
           node scripts/seo-batch1-postprocess.mjs
           node scripts/generate-seo-pages-v2.mjs
+          node scripts/performance-p1-postprocess.mjs
           node scripts/validate-catalogue.mjs
           node scripts/validate-merchant-policy.mjs
 
       - name: Publish validated catalogue update
         if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- index.html catalogue/ products/ collections/ shop/ 2>/dev/null; then
+          if git diff --quiet -- index.html assets/ catalogue/ products/ collections/ shop/ 2>/dev/null; then
             echo "Catalogue is already current."
             exit 0
           fi
           git config user.name "Al Huma Catalogue Sync"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html catalogue/ products/ collections/ shop/
+          git add index.html assets/ catalogue/ products/ collections/ shop/
           git commit -m "Update synchronized catalogue"
           git push
 
