@@ -12,6 +12,7 @@ on:
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
+      - "scripts/version-performance-assets.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -32,6 +33,7 @@ on:
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
+      - "scripts/version-performance-assets.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -81,6 +83,7 @@ jobs:
           node scripts/generate-seo-pages-v2.mjs
           node scripts/performance-p1-postprocess.mjs
           node scripts/performance-p2p3-postprocess.mjs
+          node scripts/version-performance-assets.mjs
           node --check assistant-runtime.js
           node --check dawood-catalogue.js
           node scripts/validate-catalogue.mjs
