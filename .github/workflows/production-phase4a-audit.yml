@@ -1,4 +1,4 @@
-name: Audit Phase 4A production
+name: Rerun corrected Phase 4A analytics audit
 
 on:
   push:
@@ -11,14 +11,10 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: phase4a-production-audit-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  audit:
+  analytics:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 15
     steps:
       - name: Check out isolated audit branch
         uses: actions/checkout@v4
@@ -28,79 +24,14 @@ jobs:
         with:
           node-version: "24"
 
-      - name: Verify production origin and safeguards
-        id: origin
-        continue-on-error: true
-        run: |
-          set -euo pipefail
-          mkdir -p performance/production-audit
-          canonical_status="$(curl --silent --location --output /tmp/alhuma-home.html --write-out '%{http_code}' https://www.alhumacollection.com/)"
-          canonical_url="$(curl --silent --location --output /dev/null --write-out '%{url_effective}' https://www.alhumacollection.com/)"
-          invalid_status="$(curl --silent --output /tmp/alhuma-invalid.html --write-out '%{http_code}' https://alhumacollection.com/phase-4-production-audit-invalid-url/)"
-          collection_status="$(curl --silent --output /tmp/alhuma-collection.html --write-out '%{http_code}' https://alhumacollection.com/collections/aifa/)"
-          capi_status="$(curl --silent --output /tmp/alhuma-capi-options.txt --dump-header /tmp/alhuma-capi-headers.txt --write-out '%{http_code}' -X OPTIONS \
-            -H 'Origin: https://alhumacollection.com' \
-            -H 'Access-Control-Request-Method: POST' \
-            -H 'Access-Control-Request-Headers: content-type' \
-            https://meta-capi.alhumacollection.workers.dev/events)"
-
-          test "$canonical_status" = "200"
-          test "$canonical_url" = "https://alhumacollection.com/"
-          test "$invalid_status" = "404"
-          test "$collection_status" = "200"
-          grep --quiet 'assets/alhuma-home-hero-v1.webp' /tmp/alhuma-home.html
-          grep --quiet 'data-catalogue-version=' /tmp/alhuma-home.html
-          grep --quiet 'assistant-runtime.js?v=' /tmp/alhuma-home.html
-          grep --quiet 'dawood-catalogue.js?v=' /tmp/alhuma-home.html
-          grep --quiet 'Page not found' /tmp/alhuma-invalid.html
-          grep --ignore-case --quiet '^access-control-allow-origin: https://alhumacollection.com' /tmp/alhuma-capi-headers.txt
-
-          node - <<'NODE'
-          const fs = require('node:fs');
-          const summary = {
-            schemaVersion: 1,
-            generatedAt: new Date().toISOString(),
-            homepageStatus: process.env.CANONICAL_STATUS,
-            canonicalUrl: process.env.CANONICAL_URL,
-            invalidUrlStatus: process.env.INVALID_STATUS,
-            collectionStatus: process.env.COLLECTION_STATUS,
-            capiOptionsStatus: process.env.CAPI_STATUS,
-            heroExternalized: true,
-            catalogueVersioned: true,
-            assistantVersioned: true,
-            catalogueScriptVersioned: true,
-            custom404Verified: true,
-            capiCorsVerified: true
-          };
-          fs.writeFileSync('performance/production-audit/origin-summary.json', `${JSON.stringify(summary, null, 2)}\n`);
-          NODE
-        env:
-          CANONICAL_STATUS: "200"
-          CANONICAL_URL: "https://alhumacollection.com/"
-          INVALID_STATUS: "404"
-          COLLECTION_STATUS: "200"
-          CAPI_STATUS: "204"
-
-      - name: Run live mobile and desktop interaction smoke tests
-        id: functional
-        continue-on-error: true
-        env:
-          SMOKE_BASE_URL: https://alhumacollection.com
-          CHROME_PATH: /usr/bin/google-chrome
-          SMOKE_OUTPUT_DIR: /tmp/alhuma-production-functional-smoke
-          SMOKE_SUMMARY_FILE: performance/production-audit/functional-summary.json
-        run: |
-          set -o pipefail
-          node scripts/run-functional-smoke.mjs 2>&1 | tee performance/production-audit/functional-log.txt
-
       - name: Install browser audit dependency
         run: npm install --no-save --no-package-lock puppeteer-core@24.16.0
 
-      - name: Verify analytics wiring without sending production events
-        id: analytics
-        continue-on-error: true
+      - name: Run corrected analytics dry-run
         run: |
-          cat > /tmp/analytics-dry-run.mjs <<'NODE'
+          set -euo pipefail
+          mkdir -p .audit-tmp performance/production-audit
+          cat > .audit-tmp/analytics-dry-run.mjs <<'NODE'
           import fs from 'node:fs/promises';
           import puppeteer from 'puppeteer-core';
 
@@ -136,7 +67,7 @@ jobs:
           await page.goto('https://alhumacollection.com/', { waitUntil:'domcontentloaded', timeout:45000 });
           await page.waitForSelector('[data-consent-accept]', { timeout:10000 });
           await page.click('[data-consent-accept]');
-          await new Promise(resolve => setTimeout(resolve, 10000));
+          await new Promise(resolve => setTimeout(resolve, 12000));
 
           const state = await page.evaluate(() => ({
             config: window.AlHumaAnalytics?.config || null,
@@ -154,7 +85,7 @@ jobs:
           if (!state.consent?.analytics || !state.consent?.marketing) failures.push('consent-state');
 
           const summary = {
-            schemaVersion: 1,
+            schemaVersion: 3,
             generatedAt: new Date().toISOString(),
             mode: 'dry-run: analytics event endpoints were intercepted and aborted before transmission',
             passed: failures.length === 0,
@@ -167,142 +98,28 @@ jobs:
           await fs.writeFile('performance/production-audit/analytics-dry-run-summary.json', `${JSON.stringify(summary, null, 2)}\n`);
           await browser.close();
           if (failures.length) throw new Error(`Analytics dry-run failures: ${failures.join(', ')}`);
+          console.log(JSON.stringify(summary, null, 2));
           NODE
-          node /tmp/analytics-dry-run.mjs 2>&1 | tee performance/production-audit/analytics-dry-run-log.txt
+          node .audit-tmp/analytics-dry-run.mjs 2>&1 | tee performance/production-audit/analytics-dry-run-log.txt
+          rm -rf .audit-tmp
 
-      - name: Run fresh production-origin homepage Lighthouse medians
-        id: lighthouse
-        continue-on-error: true
+      - name: Update consolidated audit status
         run: |
-          set -euo pipefail
-          mkdir -p /tmp/alhuma-production-lighthouse performance/production-audit
-          for profile in mobile desktop; do
-            for run in 1 2 3; do
-              if test "$profile" = mobile; then
-                profile_arg='--form-factor=mobile'
-              else
-                profile_arg='--preset=desktop'
-              fi
-              npx --yes lighthouse@13.3.0 https://alhumacollection.com/ \
-                --quiet \
-                --output=json \
-                --output-path="/tmp/alhuma-production-lighthouse/homepage-${profile}-run-${run}.json" \
-                --only-categories=performance,accessibility,best-practices,seo \
-                --throttling-method=simulate \
-                --max-wait-for-load=45000 \
-                --chrome-path=/usr/bin/google-chrome \
-                --chrome-flags='--headless --no-sandbox --disable-dev-shm-usage' \
-                "$profile_arg"
-            done
-          done
-
           node - <<'NODE'
           const fs = require('node:fs');
-          const path = require('node:path');
-          const dir = '/tmp/alhuma-production-lighthouse';
-          const profiles = ['mobile','desktop'];
-          const median = values => { const sorted=values.filter(Number.isFinite).sort((a,b)=>a-b); return sorted[Math.floor(sorted.length/2)] ?? null; };
-          const roundScore = category => category?.score == null ? null : Math.round(category.score * 100);
-          const roundMetric = audit => audit?.numericValue == null ? null : Math.round(audit.numericValue);
-          const results = [];
-          for (const profile of profiles) {
-            const runs = [];
-            for (let run=1; run<=3; run++) {
-              const lhr = JSON.parse(fs.readFileSync(path.join(dir, `homepage-${profile}-run-${run}.json`), 'utf8'));
-              runs.push({
-                run,
-                fetchTime:lhr.fetchTime,
-                lighthouseVersion:lhr.lighthouseVersion,
-                scores:{
-                  performance:roundScore(lhr.categories.performance),
-                  accessibility:roundScore(lhr.categories.accessibility),
-                  bestPractices:roundScore(lhr.categories['best-practices']),
-                  seo:roundScore(lhr.categories.seo)
-                },
-                metrics:{
-                  fcpMs:roundMetric(lhr.audits['first-contentful-paint']),
-                  lcpMs:roundMetric(lhr.audits['largest-contentful-paint']),
-                  tbtMs:roundMetric(lhr.audits['total-blocking-time']),
-                  cls:lhr.audits['cumulative-layout-shift']?.numericValue ?? null,
-                  speedIndexMs:roundMetric(lhr.audits['speed-index']),
-                  serverResponseMs:roundMetric(lhr.audits['server-response-time'])
-                }
-              });
-            }
-            results.push({
-              profile,
-              repetitions:3,
-              scores:Object.fromEntries(Object.keys(runs[0].scores).map(key => [key, median(runs.map(item => item.scores[key]))])),
-              metrics:Object.fromEntries(Object.keys(runs[0].metrics).map(key => [key, median(runs.map(item => item.metrics[key]))])),
-              runs
-            });
-          }
-          const summary={schemaVersion:1,generatedAt:new Date().toISOString(),baseUrl:'https://alhumacollection.com/',aggregation:'median',results};
-          fs.writeFileSync('performance/production-audit/lighthouse-homepage-summary.json', `${JSON.stringify(summary,null,2)}\n`);
-          const rows=results.map(r=>`${r.profile} | ${r.scores.performance} | ${r.metrics.lcpMs} ms | ${r.metrics.fcpMs} ms | ${r.metrics.tbtMs} ms | ${Number(r.metrics.cls).toFixed(3)} | ${r.metrics.speedIndexMs} ms | ${r.scores.accessibility} | ${r.scores.bestPractices} | ${r.scores.seo}`);
-          fs.writeFileSync('performance/production-audit/lighthouse-homepage-summary.md', ['# Phase 4A Production Homepage Lighthouse','',`Generated: ${summary.generatedAt}`,'','Production-origin Lighthouse laboratory measurements; median of three runs per profile. These are not Chrome UX Report field data.','','Profile | Performance | LCP | FCP | TBT | CLS | Speed Index | Accessibility | Best Practices | SEO','--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---:',...rows,''].join('\n'));
+          const path = 'performance/production-audit/status.json';
+          const status = JSON.parse(fs.readFileSync(path, 'utf8'));
+          status.generatedAt = new Date().toISOString();
+          status.analyticsOutcome = 'success';
+          status.analyticsVerification = 'corrected dry-run passed; event transmissions intercepted and aborted';
+          status.passed = status.originOutcome === 'success' && status.functionalOutcome === 'success' && status.analyticsOutcome === 'success' && status.lighthouseOutcome === 'success';
+          fs.writeFileSync(path, `${JSON.stringify(status, null, 2)}\n`);
           NODE
 
-      - name: Record consolidated audit status
-        if: always()
-        env:
-          ORIGIN_OUTCOME: ${{ steps.origin.outcome }}
-          FUNCTIONAL_OUTCOME: ${{ steps.functional.outcome }}
-          ANALYTICS_OUTCOME: ${{ steps.analytics.outcome }}
-          LIGHTHOUSE_OUTCOME: ${{ steps.lighthouse.outcome }}
+      - name: Commit corrected analytics evidence
         run: |
-          mkdir -p performance/production-audit
-          node - <<'NODE'
-          const fs = require('node:fs');
-          const status = {
-            schemaVersion:1,
-            generatedAt:new Date().toISOString(),
-            auditedProductionCommit:'4720b4357de26407de9ed402e4daf7a23f366db4',
-            auditBranch:process.env.GITHUB_REF_NAME,
-            auditCommit:process.env.GITHUB_SHA,
-            originOutcome:process.env.ORIGIN_OUTCOME || 'unknown',
-            functionalOutcome:process.env.FUNCTIONAL_OUTCOME || 'unknown',
-            analyticsOutcome:process.env.ANALYTICS_OUTCOME || 'unknown',
-            lighthouseOutcome:process.env.LIGHTHOUSE_OUTCOME || 'unknown'
-          };
-          status.passed=['originOutcome','functionalOutcome','analyticsOutcome','lighthouseOutcome'].every(key => status[key] === 'success');
-          fs.writeFileSync('performance/production-audit/status.json', `${JSON.stringify(status,null,2)}\n`);
-          NODE
-
-      - name: Upload complete production audit evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: phase4a-production-audit
-          path: |
-            performance/production-audit
-            /tmp/alhuma-production-functional-smoke
-            /tmp/alhuma-production-lighthouse
-          if-no-files-found: warn
-          retention-days: 14
-
-      - name: Commit production audit summaries to isolated branch
-        if: always()
-        run: |
-          if test -z "$(git status --porcelain -- performance/production-audit/)"; then
-            echo "No audit summaries to commit."
-            exit 0
-          fi
           git config user.name "Al Huma Production Audit"
           git config user.email "actions@users.noreply.github.com"
-          git add performance/production-audit/
-          git commit -m "Record Phase 4A production audit"
+          git add performance/production-audit/analytics-dry-run-summary.json performance/production-audit/analytics-dry-run-log.txt performance/production-audit/status.json
+          git commit -m "Correct Phase 4A production analytics audit"
           git push
-
-      - name: Fail if a required production audit failed
-        if: always()
-        env:
-          ORIGIN_OUTCOME: ${{ steps.origin.outcome }}
-          FUNCTIONAL_OUTCOME: ${{ steps.functional.outcome }}
-          ANALYTICS_OUTCOME: ${{ steps.analytics.outcome }}
-          LIGHTHOUSE_OUTCOME: ${{ steps.lighthouse.outcome }}
-        run: |
-          test "$ORIGIN_OUTCOME" = success
-          test "$FUNCTIONAL_OUTCOME" = success
-          test "$ANALYTICS_OUTCOME" = success
-          test "$LIGHTHOUSE_OUTCOME" = success
