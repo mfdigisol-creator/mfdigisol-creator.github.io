@@ -1,25 +1,56 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-01T08:43:54.760Z",
+  "generatedAt": "2026-08-01T15:45:38.416Z",
   "summary": {
-    "products": 1220,
-    "available": 613,
-    "formal": 845,
-    "luxury": 375,
+    "products": 1216,
+    "available": 603,
+    "formal": 843,
+    "luxury": 373,
     "priceOnEnquiry": 19,
-    "metaFeedProducts": 1201,
+    "metaFeedProducts": 1197,
     "canonicalBrands": 37,
-    "aliasCorrections": 0,
+    "aliasCorrections": 6,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 51,
-    "classificationConflicts": 17,
+    "classificationConflicts": 16,
     "unspecifiedPieces": 62,
-    "removedProducts": 1,
-    "newlyRemovedProducts": 0,
-    "supplierRefreshUsed": false
+    "removedProducts": 16,
+    "newlyRemovedProducts": 15,
+    "supplierRefreshUsed": true
   },
-  "aliasCorrections": [],
+  "aliasCorrections": [
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-01",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-02",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-03",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-04",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-05",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
+    {
+      "code": "LIMELIGHT-EMB-2PC-MGRN-DD-01",
+      "sourceBrand": "Lime light",
+      "canonicalBrand": "Limelight"
+    }
+  ],
   "duplicateCodes": [],
   "duplicatePaths": [],
   "duplicateNames": [
@@ -230,11 +261,6 @@
   ],
   "classificationConflicts": [
     {
-      "code": "EID-AIFA-LKLWN-3P-AE-1101",
-      "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1101",
-      "category": "Formal"
-    },
-    {
       "code": "EID-AIFA-LKLWN-3P-AE-1103",
       "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1103",
       "category": "Formal"
@@ -315,5 +341,81 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": []
+  "newlyRemovedProducts": [
+    {
+      "code": "AIFA-LWN-3P-AIIS-26301",
+      "name": "Aifa Digital Printed & Embroidered Lawn 3PC — AIIS-26301",
+      "path": "products/aifa-lwn-3p-aiis-26301-aifa-digital-printed-and-embroidered-lawn-3pc/"
+    },
+    {
+      "code": "EID-AIFA-LKLWN-3P-AE-1101",
+      "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1101",
+      "path": "products/eid-aifa-lklwn-3p-ae-1101-aifa-luxury-emb-laserkari-dyed-lawn-3pc/"
+    },
+    {
+      "code": "RISE-EMB-JETBLK-3P-AN-03",
+      "name": "Rise By Anaya Noor Heavy Plain Emb Lawn 3PC — 3",
+      "path": "products/rise-emb-jetblk-3p-an-03-rise-by-anaya-noor-heavy-plain-emb-lawn-3pc/"
+    },
+    {
+      "code": "MISAAL-DL-LWN-3P-FB-385-A",
+      "name": "Fatima Bano By Misaal Luxury Emb & Printed Lawn 3PC — FB-385-A",
+      "path": "products/misaal-dl-lwn-3p-fb-385-a-fatima-bano-by-misaal-luxury-emb-and-printed-lawn-3pc/"
+    },
+    {
+      "code": "MISAAL-DL-LWN-3P-FB-386-B",
+      "name": "Fatima Bano By Misaal Luxury Emb & Printed Lawn 3PC — FB-386-B",
+      "path": "products/misaal-dl-lwn-3p-fb-386-b-fatima-bano-by-misaal-luxury-emb-and-printed-lawn-3pc/"
+    },
+    {
+      "code": "PANACHE-DL-ORG-14290-A",
+      "name": "Zaib-o-Zeenat By Panache | Organza — 14290-A",
+      "path": "products/panache-dl-org-14290-a-zaib-o-zeenat-by-panache-organza/"
+    },
+    {
+      "code": "LIMELIGHT-EMB-2PC-LSKY-DD-01",
+      "name": "Limelight Plain Emb Shirt & Trouser Lawn 2PC — 1",
+      "path": "products/limelight-emb-2pc-lsky-dd-01-limelight-plain-emb-shirt-and-trouser-lawn-2pc/"
+    },
+    {
+      "code": "RIJJA-PRN-LWN-V16-3P-05",
+      "name": "Rijja By Murashe Premium Printed Lawn 3PC — 5",
+      "path": "products/rijja-prn-lwn-v16-3p-05-rijja-by-murashe-premium-printed-lawn-3pc/"
+    },
+    {
+      "code": "NISHAT-LWN-3P-LDS-42302175",
+      "name": "Nishat Digital Printed Lawn 3PC — 42302175",
+      "path": "products/nishat-lwn-3p-lds-42302175-nishat-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "DILBURO-PLTR-V10-LWN-09",
+      "name": "Dill Buro By Paltar Premium Printed Lawn-3PC — 9",
+      "path": "products/dilburo-pltr-v10-lwn-09-dill-buro-by-paltar-premium-printed-lawn-3pc/"
+    },
+    {
+      "code": "RAIHA-LWN-V7-3P-HOB-170",
+      "name": "Raiha Premium Printed Lawn 3PC — 170",
+      "path": "products/raiha-lwn-v7-3p-hob-170-raiha-premium-printed-lawn-3pc/"
+    },
+    {
+      "code": "RANG-O-NOOR-SHAJARNOOR-S26-07",
+      "name": "Rang o Noor By Shajar Noor Digital Printed Lawn 3PC — 7",
+      "path": "products/rang-o-noor-shajarnoor-s26-07-rang-o-noor-by-shajar-noor-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "KHAAS-SHN-V186-3P-10",
+      "name": "Khaas By Shanaya Digital Printed Lawn 3PC — 10",
+      "path": "products/khaas-shn-v186-3p-10-khaas-by-shanaya-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "KHAAS-SHN-V186-3P-04",
+      "name": "Khaas By Shanaya Digital Printed Lawn 3PC — 4",
+      "path": "products/khaas-shn-v186-3p-04-khaas-by-shanaya-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "NURA-SHN-EMB-V199-3P-03",
+      "name": "Nura By Shanaya Digital & Emb Lawn Collection 3PC — 3",
+      "path": "products/nura-shn-emb-v199-3p-03-nura-by-shanaya-digital-and-emb-lawn-collection-3pc/"
+    }
+  ]
 }
