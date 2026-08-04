@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T12:44:11.288Z",
+  "generatedAt": "2026-08-04T10:20:36.869Z",
   "summary": {
-    "products": 1241,
-    "available": 620,
-    "formal": 870,
-    "luxury": 371,
-    "priceOnEnquiry": 19,
-    "metaFeedProducts": 1222,
-    "canonicalBrands": 37,
+    "products": 1139,
+    "available": 481,
+    "formal": 865,
+    "luxury": 274,
+    "priceOnEnquiry": 14,
+    "metaFeedProducts": 1125,
+    "canonicalBrands": 36,
     "aliasCorrections": 5,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 51,
+    "duplicateNames": 48,
     "classificationConflicts": 16,
-    "unspecifiedPieces": 62,
-    "removedProducts": 41,
-    "newlyRemovedProducts": 4,
+    "unspecifiedPieces": 49,
+    "removedProducts": 169,
+    "newlyRemovedProducts": 133,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -66,16 +66,8 @@
       "count": 4
     },
     {
-      "value": "eva | dressline | organza — 1494",
-      "count": 3
-    },
-    {
       "value": "eva by dressline | semi-stitched | organza — 1494",
       "count": 4
-    },
-    {
-      "value": "fatima bano | tehzeeb | lava silk — fb-273",
-      "count": 2
     },
     {
       "value": "fatima bano by aroob | dressline | lava silk — fb-314",
@@ -95,10 +87,6 @@
     },
     {
       "value": "jahan ara by dressline | sheesha silk — 1891",
-      "count": 4
-    },
-    {
-      "value": "misha by dressline | organza volume — 1546",
       "count": 4
     },
     {
@@ -338,24 +326,504 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "ANGAN-ANAYANOOR-AN-09",
-      "name": "Angan By Anaya Noor Emb & Printed Lawn 3PC — 9",
-      "path": "products/angan-anayanoor-an-09-angan-by-anaya-noor-emb-and-printed-lawn-3pc/"
+      "code": "900000009",
+      "name": "The Summer Garden | Parishay Luxury Lawn | 3 PC — 1",
+      "path": "products/900000009-the-summer-garden-parishay-luxury-lawn-3-pc/"
     },
     {
-      "code": "MISAAL-DL-LWN-3P-FB-383-A",
-      "name": "Fatima Bano By Misaal Luxury Emb & Printed Lawn 3PC — FB-383-A",
-      "path": "products/misaal-dl-lwn-3p-fb-383-a-fatima-bano-by-misaal-luxury-emb-and-printed-lawn-3pc/"
+      "code": "900000270",
+      "name": "Sirene | Mahnur Luxury Lawn | 3-PC — D3A / Red",
+      "path": "products/900000270-sirene-mahnur-luxury-lawn-3-pc/"
     },
     {
-      "code": "SAHIL-LAWN-3P-FB-286",
-      "name": "Sahil | Dressline | Fatima Bano — FB-286",
-      "path": "products/sahil-lawn-3p-fb-286-sahil-dressline-fatima-bano/"
+      "code": "900000407",
+      "name": "Dil-e-Raqsam | Parishay Luxury Lawn | 3PC — Dr-04 / Brown",
+      "path": "products/900000407-dil-e-raqsam-parishay-luxury-lawn-3pc/"
     },
     {
-      "code": "MASHAIM-LWN-V8-3P-HM-D-09",
-      "name": "Mashaim Digital Printed Lawn 3PC — D-09",
-      "path": "products/mashaim-lwn-v8-3p-hm-d-09-mashaim-digital-printed-lawn-3pc/"
+      "code": "900000414",
+      "name": "Dil-e-Raqsam | Parishay Luxury Lawn | 3PC — Dr-11 / Pista",
+      "path": "products/900000414-dil-e-raqsam-parishay-luxury-lawn-3pc/"
+    },
+    {
+      "code": "900000416",
+      "name": "Dil-e-Raqsam | Parishay Luxury Lawn | 3PC — Dr-13 / Green",
+      "path": "products/900000416-dil-e-raqsam-parishay-luxury-lawn-3pc/"
+    },
+    {
+      "code": "900000417",
+      "name": "Dil-e-Raqsam | Parishay Luxury Lawn | 3PC — Dr-14 / Black",
+      "path": "products/900000417-dil-e-raqsam-parishay-luxury-lawn-3pc/"
+    },
+    {
+      "code": "ALKARAM-LWN-BEIGE-3P-01",
+      "name": "Fall By Alkaram Digital Printed Lawn 3PC — 1",
+      "path": "products/alkaram-lwn-beige-3p-01-fall-by-alkaram-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "AAINA-DL-LWN-3P-FB-290",
+      "name": "Aaina By Dressline | Fatima Bano — FB-290",
+      "path": "products/aaina-dl-lwn-3p-fb-290-aaina-by-dressline-fatima-bano/"
+    },
+    {
+      "code": "BISMIL-LWN-DL-14399-B",
+      "name": "Bismil | Dressline | Zaib-o-Zeenat — 14399-B",
+      "path": "products/bismil-lwn-dl-14399-b-bismil-dressline-zaib-o-zeenat/"
+    },
+    {
+      "code": "BISMIL-LWN-DL-14400-C",
+      "name": "Bismil | Dressline | Zaib-o-Zeenat — 14400-C",
+      "path": "products/bismil-lwn-dl-14400-c-bismil-dressline-zaib-o-zeenat/"
+    },
+    {
+      "code": "CRIMSON-DL-LWN-14403-C",
+      "name": "Crimson By Dressline | Zaib-o-Zeenat — 14403-C",
+      "path": "products/crimson-dl-lwn-14403-c-crimson-by-dressline-zaib-o-zeenat/"
+    },
+    {
+      "code": "ELNAAZ-ORG-FEROZ-FB-260",
+      "name": "Elnaaz | Dressline | Organza — FB-260",
+      "path": "products/elnaaz-org-feroz-fb-260-elnaaz-dressline-organza/"
+    },
+    {
+      "code": "EVA-DL-ORG-PURP-1494",
+      "name": "EVA | Dressline | Organza — 1494",
+      "path": "products/eva-dl-org-purp-1494-eva-dressline-organza/"
+    },
+    {
+      "code": "EVA-DL-ORG-SILVER-1494",
+      "name": "EVA | Dressline | Organza — 1494",
+      "path": "products/eva-dl-org-silver-1494-eva-dressline-organza/"
+    },
+    {
+      "code": "EVA-DL-ORG-PISTA-1494",
+      "name": "EVA | Dressline | Organza — 1494",
+      "path": "products/eva-dl-org-pista-1494-eva-dressline-organza/"
+    },
+    {
+      "code": "HIBA-DL-LWN-3P-FB-274",
+      "name": "Fatima Bano | Dressline | HIba — FB-274",
+      "path": "products/hiba-dl-lwn-3p-fb-274-fatima-bano-dressline-hiba/"
+    },
+    {
+      "code": "HIBA-DL-LWN-3P-FB-275",
+      "name": "Fatima Bano | Dressline | HIba — FB-275",
+      "path": "products/hiba-dl-lwn-3p-fb-275-fatima-bano-dressline-hiba/"
+    },
+    {
+      "code": "HIBA-DL-LWN-3P-FB-277",
+      "name": "Fatima Bano | Dressline | Hiba — FB-277",
+      "path": "products/hiba-dl-lwn-3p-fb-277-fatima-bano-dressline-hiba/"
+    },
+    {
+      "code": "HIBA-DL-LWN-3P-FB-310",
+      "name": "Fatima Bano | Dressline | HIba — FB-310",
+      "path": "products/hiba-dl-lwn-3p-fb-310-fatima-bano-dressline-hiba/"
+    },
+    {
+      "code": "TEHZEEB-DL-PURP-FB-272",
+      "name": "Fatima Bano | Tehzeeb | Lava Silk — FB-272",
+      "path": "products/tehzeeb-dl-purp-fb-272-fatima-bano-tehzeeb-lava-silk/"
+    },
+    {
+      "code": "TEHZEEB-DL-BPINK-FB-273",
+      "name": "Fatima Bano | Tehzeeb | Lava Silk — FB-273",
+      "path": "products/tehzeeb-dl-bpink-fb-273-fatima-bano-tehzeeb-lava-silk/"
+    },
+    {
+      "code": "TEHZEEB-DL-SILVER-FB-273",
+      "name": "Fatima Bano | Tehzeeb | Lava Silk — FB-273",
+      "path": "products/tehzeeb-dl-silver-fb-273-fatima-bano-tehzeeb-lava-silk/"
+    },
+    {
+      "code": "HALEEMA-FB-164-R-BLUE",
+      "name": "Haleema | Fatima Bano | Organza — R BLUE",
+      "path": "products/haleema-fb-164-r-blue-haleema-fatima-bano-organza/"
+    },
+    {
+      "code": "HAYAT-DL-CHF-3P-FB-221",
+      "name": "Hayat By Dressline | Fatima Bano — FB-221",
+      "path": "products/hayat-dl-chf-3p-fb-221-hayat-by-dressline-fatima-bano/"
+    },
+    {
+      "code": "HAYAT-DL-CHF-3P-FB-222",
+      "name": "Hayat By Dressline | Fatima Bano — FB-222",
+      "path": "products/hayat-dl-chf-3p-fb-222-hayat-by-dressline-fatima-bano/"
+    },
+    {
+      "code": "HAYAT-DL-CHF-3P-FB-223",
+      "name": "Hayat By Dressline | Fatima Bano — FB-223",
+      "path": "products/hayat-dl-chf-3p-fb-223-hayat-by-dressline-fatima-bano/"
+    },
+    {
+      "code": "ILAN-FB-204",
+      "name": "Ilan | Organza | Dressline — BLACK",
+      "path": "products/ilan-fb-204-ilan-organza-dressline/"
+    },
+    {
+      "code": "KOMAL-DL-1218",
+      "name": "Komal | Dressline | Chiffone — 1218",
+      "path": "products/komal-dl-1218-komal-dressline-chiffone/"
+    },
+    {
+      "code": "MISHA-DL-ORG-PECH-1546",
+      "name": "Misha By Dressline | Organza Volume — 1546",
+      "path": "products/misha-dl-org-pech-1546-misha-by-dressline-organza-volume/"
+    },
+    {
+      "code": "MISHA-DL-ORG-PISTA-1546",
+      "name": "Misha By Dressline | Organza Volume — 1546",
+      "path": "products/misha-dl-org-pista-1546-misha-by-dressline-organza-volume/"
+    },
+    {
+      "code": "MISHA-DL-ORG-PINK-1546",
+      "name": "Misha By Dressline | Organza Volume — 1546",
+      "path": "products/misha-dl-org-pink-1546-misha-by-dressline-organza-volume/"
+    },
+    {
+      "code": "MISHA-DL-ORG-PURP-1546",
+      "name": "Misha By Dressline | Organza Volume — 1546",
+      "path": "products/misha-dl-org-purp-1546-misha-by-dressline-organza-volume/"
+    },
+    {
+      "code": "MOONLIGHT-DL-ORG-1564",
+      "name": "Moonlight By Dressline | Organza — 1564",
+      "path": "products/moonlight-dl-org-1564-moonlight-by-dressline-organza/"
+    },
+    {
+      "code": "MOONLIGHT-DL-ORG-1565",
+      "name": "Moonlight By Dressline | Organza — 1565",
+      "path": "products/moonlight-dl-org-1565-moonlight-by-dressline-organza/"
+    },
+    {
+      "code": "MOONLIGHT-DL-ORG-1567",
+      "name": "Moonlight By Dressline | Organza — 1567",
+      "path": "products/moonlight-dl-org-1567-moonlight-by-dressline-organza/"
+    },
+    {
+      "code": "MUSKAN-DL-01",
+      "name": "Muskan | Dressline | Luxury — 1",
+      "path": "products/muskan-dl-01-muskan-dressline-luxury/"
+    },
+    {
+      "code": "NAINA-1038",
+      "name": "Naina | Chiffon | Dressline — BEIGE",
+      "path": "products/naina-1038-naina-chiffon-dressline/"
+    },
+    {
+      "code": "POSHAK-SILK-GREEN-3P-1600",
+      "name": "Poshak | Dressline | Emb Silk -3PC — 1600",
+      "path": "products/poshak-silk-green-3p-1600-poshak-dressline-emb-silk-3pc/"
+    },
+    {
+      "code": "REET-DL-LWN-3P-1782",
+      "name": "Reet By Dressline | Semi-Stitched | — 1782",
+      "path": "products/reet-dl-lwn-3p-1782-reet-by-dressline-semi-stitched/"
+    },
+    {
+      "code": "REET-DL-LWN-3P-1783",
+      "name": "Reet By Dressline | Semi-Stitched | — 1783",
+      "path": "products/reet-dl-lwn-3p-1783-reet-by-dressline-semi-stitched/"
+    },
+    {
+      "code": "SAHIL-LAWN-3P-FB-282",
+      "name": "Sahil | Dressline | Fatima Bano — FB-282",
+      "path": "products/sahil-lawn-3p-fb-282-sahil-dressline-fatima-bano/"
+    },
+    {
+      "code": "SAHIL-LAWN-3P-FB-283",
+      "name": "Sahil | Dressline | Fatima Bano — FB-283",
+      "path": "products/sahil-lawn-3p-fb-283-sahil-dressline-fatima-bano/"
+    },
+    {
+      "code": "SAHIL-LAWN-3P-FB-284",
+      "name": "Sahil | Dressline | Fatima Bano — FB-284",
+      "path": "products/sahil-lawn-3p-fb-284-sahil-dressline-fatima-bano/"
+    },
+    {
+      "code": "SAIRAAB-DL-966",
+      "name": "Sairaab | Dressline | Khaddar — 966",
+      "path": "products/sairaab-dl-966-sairaab-dressline-khaddar/"
+    },
+    {
+      "code": "SAIRAAB-DL-967",
+      "name": "Sairaab | Dressline | Khaddar — 967",
+      "path": "products/sairaab-dl-967-sairaab-dressline-khaddar/"
+    },
+    {
+      "code": "NOOR-ORG-PINK-ZS-0040",
+      "name": "Sania | Dressline | Noor Jahan | Organza-3PC — ZS-0040",
+      "path": "products/noor-org-pink-zs-0040-sania-dressline-noor-jahan-organza-3pc/"
+    },
+    {
+      "code": "SHARJEEN-ORG-DC-11861-B",
+      "name": "Sharjeena | Dressline | Semi-Stitched -Organza — 11861-B",
+      "path": "products/sharjeen-org-dc-11861-b-sharjeena-dressline-semi-stitched-organza/"
+    },
+    {
+      "code": "ZARYAAB-DL-779",
+      "name": "Zaryaab | Dressline | Khaddar — 779",
+      "path": "products/zaryaab-dl-779-zaryaab-dressline-khaddar/"
+    },
+    {
+      "code": "SUNF-ZA-SILVER-3PC-01",
+      "name": "Zoha | DressLine | Sunflower | Aiyudiya-3PC — 1",
+      "path": "products/sunf-za-silver-3pc-01-zoha-dressline-sunflower-aiyudiya-3pc/"
+    },
+    {
+      "code": "SUNF-ZA-L-PURPLE-3PC-02",
+      "name": "Zoha | DressLine | Sunflower | Aiyudiya-3PC — 2",
+      "path": "products/sunf-za-l-purple-3pc-02-zoha-dressline-sunflower-aiyudiya-3pc/"
+    },
+    {
+      "code": "SUNF-ZA-L-GREEN-3PC-03",
+      "name": "Zoha | DressLine | Sunflower | Aiyudiya-3PC — 3",
+      "path": "products/sunf-za-l-green-3pc-03-zoha-dressline-sunflower-aiyudiya-3pc/"
+    },
+    {
+      "code": "ORCHID-DL-ORG-BLCK-01",
+      "name": "Zoha By Orchid | Dressline — 1",
+      "path": "products/orchid-dl-org-blck-01-zoha-by-orchid-dressline/"
+    },
+    {
+      "code": "ORCHID-DL-ORG-MERN-02",
+      "name": "Zoha By Orchid | Dressline — 2",
+      "path": "products/orchid-dl-org-mern-02-zoha-by-orchid-dressline/"
+    },
+    {
+      "code": "ORCHID-DL-ORG-FEROZ-04",
+      "name": "Zoha By Orchid | Dressline — 4",
+      "path": "products/orchid-dl-org-feroz-04-zoha-by-orchid-dressline/"
+    },
+    {
+      "code": "AFSANA-MHN-LWN-AL-06",
+      "name": "Afsana By Mahnur | Luxury Lawn'26 — AL-06",
+      "path": "products/afsana-mhn-lwn-al-06-afsana-by-mahnur-luxury-lawn-26/"
+    },
+    {
+      "code": "AFSANA-MHN-LWN-AL-09",
+      "name": "Afsana By Mahnur | Luxury Lawn'26 — AL-09",
+      "path": "products/afsana-mhn-lwn-al-09-afsana-by-mahnur-luxury-lawn-26/"
+    },
+    {
+      "code": "BROADWAY-LWN-BW-004",
+      "name": "Broadway By Mahnur | Lawn'26 — BW-004",
+      "path": "products/broadway-lwn-bw-004-broadway-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "BROADWAY-LWN-BW-007",
+      "name": "Broadway By Mahnur | Lawn'26 — BW-007",
+      "path": "products/broadway-lwn-bw-007-broadway-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "BROADWAY-LWN-BW-010",
+      "name": "Broadway By Mahnur | Lawn'26 — BW-010",
+      "path": "products/broadway-lwn-bw-010-broadway-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "BROADWAY-LWN-BW-014",
+      "name": "Broadway By Mahnur | Lawn'26 — BW-014",
+      "path": "products/broadway-lwn-bw-014-broadway-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "GARDENIA-MAHNUR-GR06",
+      "name": "Gardenia | Mahnur | khaddar — 6",
+      "path": "products/gardenia-mahnur-gr06-gardenia-mahnur-khaddar/"
+    },
+    {
+      "code": "GUL-MHN-LWN-3P-G-008",
+      "name": "Gul By Mahnur | Lawn'26 — G-008",
+      "path": "products/gul-mhn-lwn-3p-g-008-gul-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "GUL-MHN-LWN-3P-G-013",
+      "name": "Gul By Mahnur | Lawn'26 — G-013",
+      "path": "products/gul-mhn-lwn-3p-g-013-gul-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "PAKEEZAH-PK-10",
+      "name": "Pakeezah | Luxury | Mahnur — CREAM",
+      "path": "products/pakeezah-pk-10-pakeezah-luxury-mahnur/"
+    },
+    {
+      "code": "PAKEEZAH-PK-04",
+      "name": "Pakeezah | Luxury | Mahnur — MEHNDI",
+      "path": "products/pakeezah-pk-04-pakeezah-luxury-mahnur/"
+    },
+    {
+      "code": "PAKEEZAH-PK-07",
+      "name": "Pakeezah | Luxury | Mahnur — SATRANGI",
+      "path": "products/pakeezah-pk-07-pakeezah-luxury-mahnur/"
+    },
+    {
+      "code": "SECRET-EMB-KRND-3PC-10",
+      "name": "Secret Garden | Mahnur | Karandi — 10",
+      "path": "products/secret-emb-krnd-3pc-10-secret-garden-mahnur-karandi/"
+    },
+    {
+      "code": "SERA-LAWN-3P-SP-04",
+      "name": "Sera By Mahnur | Lawn'26 — SP-04",
+      "path": "products/sera-lawn-3p-sp-04-sera-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "SERA-LAWN-3P-SP-05",
+      "name": "Sera By Mahnur | Lawn'26 — SP-05",
+      "path": "products/sera-lawn-3p-sp-05-sera-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "SHANAYA-MAHNUR-D10",
+      "name": "Shanaya By Mahnur | Lawn'26 — L-BLUE",
+      "path": "products/shanaya-mahnur-d10-shanaya-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "SHANAYA-MAHNUR-D11",
+      "name": "Shanaya By Mahnur | Lawn'26 — SKIN",
+      "path": "products/shanaya-mahnur-d11-shanaya-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "SOPHIE-MH-09",
+      "name": "Sophie | Mahnur | Luxury Lawn — BOTTLE GREEN",
+      "path": "products/sophie-mh-09-sophie-mahnur-luxury-lawn/"
+    },
+    {
+      "code": "SOPHIE-MH-06",
+      "name": "Sophie | Mahnur | Luxury Lawn — LAVENDER",
+      "path": "products/sophie-mh-06-sophie-mahnur-luxury-lawn/"
+    },
+    {
+      "code": "SOPHIE-MH-08",
+      "name": "Sophie | Mahnur | Luxury Lawn — R-BLUE",
+      "path": "products/sophie-mh-08-sophie-mahnur-luxury-lawn/"
+    },
+    {
+      "code": "SOPHIE-MH-07",
+      "name": "Sophie | Mahnur | Luxury Lawn — RED",
+      "path": "products/sophie-mh-07-sophie-mahnur-luxury-lawn/"
+    },
+    {
+      "code": "MARIAB-MEHNDI-3PC-AK34",
+      "name": "Maria B Luxury Embroidered Lawn 3PC — MEHNDI",
+      "path": "products/mariab-mehndi-3pc-ak34-maria-b-luxury-embroidered-lawn-3pc/"
+    },
+    {
+      "code": "MARIAB-PISTA-3PC-AK34",
+      "name": "Maria B Luxury Embroidered Lawn 3PC — PISTA",
+      "path": "products/mariab-pista-3pc-ak34-maria-b-luxury-embroidered-lawn-3pc/"
+    },
+    {
+      "code": "NISHAT-3PLWN-V3-SQB-42602364",
+      "name": "Nishat Digital Printed Lawn 3PC — 42602364",
+      "path": "products/nishat-3plwn-v3-sqb-42602364-nishat-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "NISHAT-3PLWN-V3-SQB-42602372",
+      "name": "Nishat Digital Printed Lawn 3PC — 42602372",
+      "path": "products/nishat-3plwn-v3-sqb-42602372-nishat-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "AZMIR-PRSHY-LWN-AZ-06",
+      "name": "Azmir By Parishay Luxury | Lawn'26 — AZ-06",
+      "path": "products/azmir-prshy-lwn-az-06-azmir-by-parishay-luxury-lawn-26/"
+    },
+    {
+      "code": "AZMIR-PRSHY-LWN-AZ-08",
+      "name": "Azmir By Parishay Luxury | Lawn'26 — AZ-08",
+      "path": "products/azmir-prshy-lwn-az-08-azmir-by-parishay-luxury-lawn-26/"
+    },
+    {
+      "code": "AZMIR-PRSHY-LWN-AZ-11",
+      "name": "Azmir By Parishay Luxury | Lawn'26 — AZ-11",
+      "path": "products/azmir-prshy-lwn-az-11-azmir-by-parishay-luxury-lawn-26/"
+    },
+    {
+      "code": "AZMIR-PRSHY-LWN-AZ-14",
+      "name": "Azmir By Parishay Luxury | Lawn'26 — AZ-14",
+      "path": "products/azmir-prshy-lwn-az-14-azmir-by-parishay-luxury-lawn-26/"
+    },
+    {
+      "code": "DILERAQSUM-PARSHY-DQ-08",
+      "name": "Dil-e-Raqsum By Parishay | Lawn'26 — DQ-08",
+      "path": "products/dileraqsum-parshy-dq-08-dil-e-raqsum-by-parishay-lawn-26/"
+    },
+    {
+      "code": "DILERAQSUM-PARSHY-DQ-09",
+      "name": "Dil-e-Raqsum By Parishay | Lawn'26 — DQ-09",
+      "path": "products/dileraqsum-parshy-dq-09-dil-e-raqsum-by-parishay-lawn-26/"
+    },
+    {
+      "code": "DILERAQSUM-PARSHY-DQ-12",
+      "name": "Dil-e-Raqsum By Parishay | Lawn'26 — DQ-12",
+      "path": "products/dileraqsum-parshy-dq-12-dil-e-raqsum-by-parishay-lawn-26/"
+    },
+    {
+      "code": "MARBELLA-PRSHY-LWN-MB-12",
+      "name": "Marbella By Parishay | Lawn'26 — MB-12",
+      "path": "products/marbella-prshy-lwn-mb-12-marbella-by-parishay-lawn-26/"
+    },
+    {
+      "code": "MONACO-LWN-MN-01",
+      "name": "Monaco By Parishay | Lawn'26 — MN-01",
+      "path": "products/monaco-lwn-mn-01-monaco-by-parishay-lawn-26/"
+    },
+    {
+      "code": "MONACO-LWN-MN-07",
+      "name": "Monaco By Parishay | Lawn'26 — MN-07",
+      "path": "products/monaco-lwn-mn-07-monaco-by-parishay-lawn-26/"
+    },
+    {
+      "code": "MONACO-LWN-MN-10",
+      "name": "Monaco By Parishay | Lawn'26 — MN-10",
+      "path": "products/monaco-lwn-mn-10-monaco-by-parishay-lawn-26/"
+    },
+    {
+      "code": "RANIBAGH-RG01",
+      "name": "Ranibagh | Parishay | Luxury organza — 1",
+      "path": "products/ranibagh-rg01-ranibagh-parishay-luxury-organza/"
+    },
+    {
+      "code": "RANIBAGH-RG10",
+      "name": "Ranibagh | Parishay | Luxury Organza — 10",
+      "path": "products/ranibagh-rg10-ranibagh-parishay-luxury-organza/"
+    },
+    {
+      "code": "RANIBAGH-RG02",
+      "name": "Ranibagh | Parishay | Luxury organza — 2",
+      "path": "products/ranibagh-rg02-ranibagh-parishay-luxury-organza/"
+    },
+    {
+      "code": "RANIBAGH-RG04",
+      "name": "Ranibagh | Parishay | Luxury organza — 4",
+      "path": "products/ranibagh-rg04-ranibagh-parishay-luxury-organza/"
+    },
+    {
+      "code": "RANIBAGH-RG08",
+      "name": "Ranibagh | Parishay | Luxury organza — 8",
+      "path": "products/ranibagh-rg08-ranibagh-parishay-luxury-organza/"
+    },
+    {
+      "code": "RANIBAGH-RG09",
+      "name": "Ranibagh | Parishay | Luxury organza — 9",
+      "path": "products/ranibagh-rg09-ranibagh-parishay-luxury-organza/"
+    },
+    {
+      "code": "SHANGRILA-LWN-3P-SLA-06",
+      "name": "Shangrila By Parishay | Vol-1 | Lawn'26 — SLA-06",
+      "path": "products/shangrila-lwn-3p-sla-06-shangrila-by-parishay-vol-1-lawn-26/"
+    },
+    {
+      "code": "SHANGRILA-LWN-3P-SLA-11",
+      "name": "Shangrila By Parishay | Vol-1 | Lawn'26 — SLA-11",
+      "path": "products/shangrila-lwn-3p-sla-11-shangrila-by-parishay-vol-1-lawn-26/"
+    },
+    {
+      "code": "SUMERQUEN-LWN-V2-3P-SQ-01",
+      "name": "Summer Queen By Parishay Vol-2 | Lawn'26 — SQ-01",
+      "path": "products/sumerquen-lwn-v2-3p-sq-01-summer-queen-by-parishay-vol-2-lawn-26/"
+    },
+    {
+      "code": "RAIHA-LWN-V7-3P-HOB-169",
+      "name": "Raiha Premium Printed Lawn 3PC — 169",
+      "path": "products/raiha-lwn-v7-3p-hob-169-raiha-premium-printed-lawn-3pc/"
     }
   ]
 }
