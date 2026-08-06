@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-05T18:09:27.833Z",
+  "generatedAt": "2026-08-06T10:18:40.715Z",
   "summary": {
-    "products": 1139,
-    "removedProducts": 169,
+    "products": 1136,
+    "removedProducts": 191,
     "brands": 36,
     "collectionPages": 49,
-    "sitemapUrls": 1191,
-    "metaFeedRows": 1125,
-    "metadataPages": 1139,
-    "internalHtmlFiles": 1363,
+    "sitemapUrls": 1188,
+    "metaFeedRows": 1122,
+    "metadataPages": 1136,
+    "internalHtmlFiles": 1382,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "16 products contain “Luxury” but inherit the Formal supplier section.",
-    "1139 products currently lack retained supplier description text."
+    "1136 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -156,6 +156,21 @@
         "path": "products/anayanoor-print-co-ord-3p-14-anaya-noor-co-ord-collection-digital-print-3pc/"
       },
       {
+        "code": "ANAYANOOR-PRINT-CO-ORD-3P-15",
+        "name": "Anaya Noor Co-Ord Collection Digital Print 3PC — 15",
+        "path": "products/anayanoor-print-co-ord-3p-15-anaya-noor-co-ord-collection-digital-print-3pc/"
+      },
+      {
+        "code": "ANAYANOOR-PRINT-CO-ORD-3P-17",
+        "name": "Anaya Noor Co-Ord Collection Digital Print 3PC — 17",
+        "path": "products/anayanoor-print-co-ord-3p-17-anaya-noor-co-ord-collection-digital-print-3pc/"
+      },
+      {
+        "code": "ANAYANOOR-PRINT-CO-ORD-3P-18",
+        "name": "Anaya Noor Co-Ord Collection Digital Print 3PC — 18",
+        "path": "products/anayanoor-print-co-ord-3p-18-anaya-noor-co-ord-collection-digital-print-3pc/"
+      },
+      {
         "code": "ANGAN-ANAYANOOR-AN-09",
         "name": "Angan By Anaya Noor Emb & Printed Lawn 3PC — 9",
         "path": "products/angan-anayanoor-an-09-angan-by-anaya-noor-emb-and-printed-lawn-3pc/"
@@ -169,6 +184,26 @@
         "code": "RISE-EMB-JETBLK-3P-AN-03",
         "name": "Rise By Anaya Noor Heavy Plain Emb Lawn 3PC — 3",
         "path": "products/rise-emb-jetblk-3p-an-03-rise-by-anaya-noor-heavy-plain-emb-lawn-3pc/"
+      },
+      {
+        "code": "BAREEZE-EMBLWN-2P-RE-15",
+        "name": "Bareeze Plain Emb Lawn 2PC — 15",
+        "path": "products/bareeze-emblwn-2p-re-15-bareeze-plain-emb-lawn-2pc/"
+      },
+      {
+        "code": "BAREEZE-EMBLWN-2P-RE-02",
+        "name": "Bareeze Plain Emb Lawn 2PC — 2",
+        "path": "products/bareeze-emblwn-2p-re-02-bareeze-plain-emb-lawn-2pc/"
+      },
+      {
+        "code": "BAREEZE-EMBLWN-2P-RE-03",
+        "name": "Bareeze Plain Emb Lawn 2PC — 3",
+        "path": "products/bareeze-emblwn-2p-re-03-bareeze-plain-emb-lawn-2pc/"
+      },
+      {
+        "code": "BAREEZE-EMBLWN-2P-RE-05",
+        "name": "Bareeze Plain Emb Lawn 2PC — 5",
+        "path": "products/bareeze-emblwn-2p-re-05-bareeze-plain-emb-lawn-2pc/"
       },
       {
         "code": "BAREZE-EMBLWN-V2-3P-RE-13",
@@ -224,41 +259,6 @@
         "code": "HIBA-DL-LWN-3P-FB-275",
         "name": "Fatima Bano | Dressline | HIba — FB-275",
         "path": "products/hiba-dl-lwn-3p-fb-275-fatima-bano-dressline-hiba/"
-      },
-      {
-        "code": "HIBA-DL-LWN-3P-FB-277",
-        "name": "Fatima Bano | Dressline | Hiba — FB-277",
-        "path": "products/hiba-dl-lwn-3p-fb-277-fatima-bano-dressline-hiba/"
-      },
-      {
-        "code": "HIBA-DL-LWN-3P-FB-310",
-        "name": "Fatima Bano | Dressline | HIba — FB-310",
-        "path": "products/hiba-dl-lwn-3p-fb-310-fatima-bano-dressline-hiba/"
-      },
-      {
-        "code": "TEHZEEB-DL-PURP-FB-272",
-        "name": "Fatima Bano | Tehzeeb | Lava Silk — FB-272",
-        "path": "products/tehzeeb-dl-purp-fb-272-fatima-bano-tehzeeb-lava-silk/"
-      },
-      {
-        "code": "TEHZEEB-DL-BPINK-FB-273",
-        "name": "Fatima Bano | Tehzeeb | Lava Silk — FB-273",
-        "path": "products/tehzeeb-dl-bpink-fb-273-fatima-bano-tehzeeb-lava-silk/"
-      },
-      {
-        "code": "TEHZEEB-DL-SILVER-FB-273",
-        "name": "Fatima Bano | Tehzeeb | Lava Silk — FB-273",
-        "path": "products/tehzeeb-dl-silver-fb-273-fatima-bano-tehzeeb-lava-silk/"
-      },
-      {
-        "code": "MISAAL-DL-LWN-3P-FB-383-A",
-        "name": "Fatima Bano By Misaal Luxury Emb & Printed Lawn 3PC — FB-383-A",
-        "path": "products/misaal-dl-lwn-3p-fb-383-a-fatima-bano-by-misaal-luxury-emb-and-printed-lawn-3pc/"
-      },
-      {
-        "code": "MISAAL-DL-LWN-3P-FB-385-A",
-        "name": "Fatima Bano By Misaal Luxury Emb & Printed Lawn 3PC — FB-385-A",
-        "path": "products/misaal-dl-lwn-3p-fb-385-a-fatima-bano-by-misaal-luxury-emb-and-printed-lawn-3pc/"
       }
     ]
   },
