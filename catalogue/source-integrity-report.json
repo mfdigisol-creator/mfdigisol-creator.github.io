@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-06T10:18:37.445Z",
+  "generatedAt": "2026-08-07T05:56:38.886Z",
   "summary": {
     "products": 1136,
     "available": 449,
@@ -9,43 +9,17 @@
     "priceOnEnquiry": 14,
     "metaFeedProducts": 1122,
     "canonicalBrands": 36,
-    "aliasCorrections": 5,
+    "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 48,
     "classificationConflicts": 16,
     "unspecifiedPieces": 49,
     "removedProducts": 191,
-    "newlyRemovedProducts": 29,
-    "supplierRefreshUsed": true
+    "newlyRemovedProducts": 0,
+    "supplierRefreshUsed": false
   },
-  "aliasCorrections": [
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-01",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-02",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-03",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-04",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-05",
-      "sourceBrand": "Anaya noor",
-      "canonicalBrand": "Anaya Noor"
-    }
-  ],
+  "aliasCorrections": [],
   "duplicateCodes": [],
   "duplicatePaths": [],
   "duplicateNames": [
@@ -324,151 +298,5 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": [
-    {
-      "code": "BAREEZE-EMBLWN-2P-RE-02",
-      "name": "Bareeze Plain Emb Lawn 2PC — 2",
-      "path": "products/bareeze-emblwn-2p-re-02-bareeze-plain-emb-lawn-2pc/"
-    },
-    {
-      "code": "BAREEZE-EMBLWN-2P-RE-03",
-      "name": "Bareeze Plain Emb Lawn 2PC — 3",
-      "path": "products/bareeze-emblwn-2p-re-03-bareeze-plain-emb-lawn-2pc/"
-    },
-    {
-      "code": "MASHAIM-LWN-V8-3P-HM-D-06",
-      "name": "Mashaim Digital Printed Lawn 3PC — D-06",
-      "path": "products/mashaim-lwn-v8-3p-hm-d-06-mashaim-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "RIJJA-PRN-LWN-V16-3P-05",
-      "name": "Rijja By Murashe Premium Printed Lawn 3PC — 5",
-      "path": "products/rijja-prn-lwn-v16-3p-05-rijja-by-murashe-premium-printed-lawn-3pc/"
-    },
-    {
-      "code": "NISHAT-3PLWN-V3-SQB-42601007",
-      "name": "Nishat Digital Printed Lawn 3PC — 42601007",
-      "path": "products/nishat-3plwn-v3-sqb-42601007-nishat-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "RANG-O-NOOR-SHAJARNOOR-S26-01",
-      "name": "Rang o Noor By Shajar Noor Digital Printed Lawn 3PC — 1",
-      "path": "products/rang-o-noor-shajarnoor-s26-01-rang-o-noor-by-shajar-noor-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "RANG-O-NOOR-SHAJARNOOR-S26-04",
-      "name": "Rang o Noor By Shajar Noor Digital Printed Lawn 3PC — 4",
-      "path": "products/rang-o-noor-shajarnoor-s26-04-rang-o-noor-by-shajar-noor-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "MINHA-SHN-LWN-V204-3P-02",
-      "name": "Minha By Shanaya Digital Printed Lawn 3PC — 2",
-      "path": "products/minha-shn-lwn-v204-3p-02-minha-by-shanaya-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "ZELBURY-LWN-V1-3P-LDS-03",
-      "name": "Zellbury Printed Doriya Lawn 3PC — 3",
-      "path": "products/zelbury-lwn-v1-3p-lds-03-zellbury-printed-doriya-lawn-3pc/"
-    },
-    {
-      "code": "MINHA-SHN-LWN-V204-3P-10",
-      "name": "Minha By Shanaya Digital Printed Lawn 3PC — 10",
-      "path": "products/minha-shn-lwn-v204-3p-10-minha-by-shanaya-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-PRINT-CO-ORD-3P-18",
-      "name": "Anaya Noor Co-Ord Collection Digital Print 3PC — 18",
-      "path": "products/anayanoor-print-co-ord-3p-18-anaya-noor-co-ord-collection-digital-print-3pc/"
-    },
-    {
-      "code": "SAPPHIRE-LWN-3P-DTD-401",
-      "name": "Sapphire Day to Day Digital Printed Lawn 3PC — 401",
-      "path": "products/sapphire-lwn-3p-dtd-401-sapphire-day-to-day-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "SAPPHIRE-EMB-V4-3P-FAR-14",
-      "name": "Sapphire Digital Printed & Emb Lawn 3PC — 14",
-      "path": "products/sapphire-emb-v4-3p-far-14-sapphire-digital-printed-and-emb-lawn-3pc/"
-    },
-    {
-      "code": "SAPPHIRE-EMB-V4-3P-FAR-02",
-      "name": "Sapphire Digital Printed & Emb Lawn 3PC — 2",
-      "path": "products/sapphire-emb-v4-3p-far-02-sapphire-digital-printed-and-emb-lawn-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-PRINT-CO-ORD-3P-17",
-      "name": "Anaya Noor Co-Ord Collection Digital Print 3PC — 17",
-      "path": "products/anayanoor-print-co-ord-3p-17-anaya-noor-co-ord-collection-digital-print-3pc/"
-    },
-    {
-      "code": "BAREEZE-EMBLWN-2P-RE-15",
-      "name": "Bareeze Plain Emb Lawn 2PC — 15",
-      "path": "products/bareeze-emblwn-2p-re-15-bareeze-plain-emb-lawn-2pc/"
-    },
-    {
-      "code": "BAREEZE-EMBLWN-2P-RE-05",
-      "name": "Bareeze Plain Emb Lawn 2PC — 5",
-      "path": "products/bareeze-emblwn-2p-re-05-bareeze-plain-emb-lawn-2pc/"
-    },
-    {
-      "code": "HUSN-A-14064",
-      "name": "Husna | Organza | Dressline — 14064",
-      "path": "products/husn-a-14064-husna-organza-dressline/"
-    },
-    {
-      "code": "MBASICS-LWN-3P-LALA-1106-A",
-      "name": "M/Basics By Maria B Digital Printed Lawn 3PC — 1106-A",
-      "path": "products/mbasics-lwn-3p-lala-1106-a-m-basics-by-maria-b-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "MBASICS-LWN-3P-LALA-1110-A",
-      "name": "M/Basics By Maria B Digital Printed Lawn 3PC — 1110-A",
-      "path": "products/mbasics-lwn-3p-lala-1110-a-m-basics-by-maria-b-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "RIJJA-PRN-LWN-V18-3P-02",
-      "name": "Rijja By Murashe Premium Printed Lawn 3PC — 2",
-      "path": "products/rijja-prn-lwn-v18-3p-02-rijja-by-murashe-premium-printed-lawn-3pc/"
-    },
-    {
-      "code": "RIJJA-PRN-LWN-V17-3P-03",
-      "name": "Rijja By Murashe Premium Printed Lawn 3PC — 3",
-      "path": "products/rijja-prn-lwn-v17-3p-03-rijja-by-murashe-premium-printed-lawn-3pc/"
-    },
-    {
-      "code": "RIJJA-PRN-LWN-V17-3P-08",
-      "name": "Rijja By Murashe Premium Printed Lawn 3PC — 8",
-      "path": "products/rijja-prn-lwn-v17-3p-08-rijja-by-murashe-premium-printed-lawn-3pc/"
-    },
-    {
-      "code": "KARWAN-PLTR-LWN-V13-3P-08",
-      "name": "Karwaan By Paltar Premium Printed Lawn 3PC — 8",
-      "path": "products/karwan-pltr-lwn-v13-3p-08-karwaan-by-paltar-premium-printed-lawn-3pc/"
-    },
-    {
-      "code": "KHAAS-SHN-V186-3P-08",
-      "name": "Khaas By Shanaya Digital Printed Lawn 3PC — 8",
-      "path": "products/khaas-shn-v186-3p-08-khaas-by-shanaya-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "MINHA-SHN-LWN-V204-3P-04",
-      "name": "Minha By Shanaya Digital Printed Lawn 3PC — 4",
-      "path": "products/minha-shn-lwn-v204-3p-04-minha-by-shanaya-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "MINHA-SHN-LWN-V204-3P-09",
-      "name": "Minha By Shanaya Digital Printed Lawn 3PC — 9",
-      "path": "products/minha-shn-lwn-v204-3p-09-minha-by-shanaya-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "PRSHY-SHN-LWN-V198-3P-03",
-      "name": "Parishay By Shanaya Digital Printed Lawn 3PC — 3",
-      "path": "products/prshy-shn-lwn-v198-3p-03-parishay-by-shanaya-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-PRINT-CO-ORD-3P-15",
-      "name": "Anaya Noor Co-Ord Collection Digital Print 3PC — 15",
-      "path": "products/anayanoor-print-co-ord-3p-15-anaya-noor-co-ord-collection-digital-print-3pc/"
-    }
-  ]
+  "newlyRemovedProducts": []
 }

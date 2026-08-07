@@ -1,11 +1,7 @@
 {
-  "ok": true,
-  "startedAt": "2026-08-06T10:16:58.909Z",
-  "completedAt": "2026-08-06T10:18:37.276Z",
-  "products": 1136,
-  "available": 449,
-  "formal": 862,
-  "luxury": 274,
-  "priceOnEnquiry": 14,
-  "metaFeedProducts": 1122
+  "ok": false,
+  "failedAt": "2026-08-07T05:56:38.759Z",
+  "error": "500 Internal Server Error: https://dawooddesigners.com/collections",
+  "cataloguePreserved": true,
+  "cachedMetaFeedProducts": 1122
 }
