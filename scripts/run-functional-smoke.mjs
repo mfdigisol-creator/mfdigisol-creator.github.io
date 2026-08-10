@@ -205,13 +205,14 @@ async function runProfile(profile) {
 
     await click(cdp, '[data-open-product]');
     await cdp.waitFor('document.querySelector("dialog.live-product-dialog")?.open', { timeout:5000, message:'product dialog' });
+    await cdp.waitFor('document.querySelector("[data-dialog-main]")?.complete && document.querySelector("[data-dialog-main]")?.naturalWidth > 0', { timeout:10000, message:'product dialog main image' });
     const productDescription = await cdp.evaluate(`(() => {
       const section=document.querySelector('.live-dialog-description');
       return section ? { heading:section.querySelector('strong')?.textContent?.trim() || '', text:section.querySelector('p')?.textContent?.trim() || '' } : null;
     })()`);
     assert(productDescription && /Product (description|information)/i.test(productDescription.heading), 'Product dialog description heading is missing.');
     assert(productDescription.text.length >= 40, 'Product dialog description text is missing or too short.');
-    checks.push('product-dialog', 'product-description');
+    checks.push('product-dialog', 'product-description', 'product-image-loaded');
     screenshots.productDialog = await screenshot(cdp, `${profile.key}-product-dialog`);
     await click(cdp, '.live-dialog-close');
 
