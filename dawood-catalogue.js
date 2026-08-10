@@ -75,6 +75,24 @@
     const priceText = product.price == null || priceQuestion ? 'Please share its current price and' : `It is shown at ${money(product.price)}. Please confirm`;
     return `https://wa.me/923216115731?text=${encodeURIComponent(`Hello Al Huma Collection, I am interested in ${product.name} (${product.code}). ${priceText} availability and ordering details. ${productUrl(product)}`)}`;
   };
+  const descriptionForProduct = product => {
+    const retained = String(product?.sourceDescription || '').replace(/\s+/g, ' ').trim();
+    if (retained) return { text:retained, source:'supplier', heading:'Product description' };
+    const brand = String(product?.brand || 'the Al Huma Collection catalogue').replace(/\s+/g, ' ').trim();
+    const category = String(product?.category || '').replace(/\s+/g, ' ').trim();
+    const pieceType = String(product?.pieceType || '').replace(/\s+/g, ' ').trim();
+    const code = String(product?.code || '').replace(/\s+/g, ' ').trim();
+    const style = product?.pricingClass === 'embroidered' ? 'embroidered ' : product?.pricingClass === 'non-embroidered' ? 'printed / non-embroidered ' : '';
+    const opening = pieceType && pieceType !== 'Unspecified'
+      ? `${pieceType} ${style}unstitched design from ${brand}`
+      : `${style ? `${style[0].toUpperCase()}${style.slice(1)}` : ''}unstitched design from ${brand}`;
+    const collection = category ? `, listed in the ${category} collection` : '';
+    const productCode = code ? ` Product code ${code}.` : '';
+    const availability = product?.available
+      ? ' Availability is subject to confirmation before dispatch.'
+      : ' This design is currently unavailable in the synchronized catalogue.';
+    return { text:`${opening}${collection}.${productCode}${availability}`.replace(/\s+/g, ' ').trim(), source:'catalogue', heading:'Product information' };
+  };
 
   function resetCatalogue({ brand = 'all', renderNow = true } = {}) {
     Object.entries(controls).forEach(([key, control]) => {
@@ -171,9 +189,10 @@
     if (!product) return;
     const images = [...new Set([product.image, ...(product.images || [])].filter(Boolean))];
     const priceCopy = product.price == null ? '<strong>Price on enquiry</strong><small>Our automated system could not classify this design with sufficient confidence, so no estimated price is shown.</small>' : `<strong>${money(product.price)}</strong><small>Al Huma Collection retail price</small>`;
+    const description = descriptionForProduct(product);
     dialog.querySelector('[data-live-dialog-content]').innerHTML = `<div class="live-dialog-layout">
       <div class="live-dialog-gallery"><div class="live-dialog-stage"><img src="${escapeHtml(images[0])}" alt="${escapeHtml(product.name)}" data-dialog-main /></div><div class="live-dialog-thumbs">${images.map((image,index) => `<button type="button" data-dialog-image="${escapeHtml(image)}" class="${index === 0 ? 'active' : ''}"><img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)} view ${index+1}" loading="lazy" /></button>`).join('')}</div></div>
-      <div class="live-dialog-copy"><p class="eyebrow dark"><span></span>${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</p><h2>${escapeHtml(product.name)}</h2><dl><div><dt>Product code</dt><dd>${escapeHtml(product.code)}</dd></div><div><dt>Style</dt><dd>${product.pricingClass === 'embroidered' ? 'Embroidered' : product.pricingClass === 'non-embroidered' ? 'Printed / non-embroidered' : 'Classification pending'}</dd></div><div><dt>Suit type</dt><dd>${escapeHtml(product.pieceType)}</dd></div><div><dt>Availability</dt><dd>${product.available ? 'Available to order — confirmation required' : 'Currently unavailable'}</dd></div></dl><div class="live-dialog-price">${priceCopy}</div><div class="live-dialog-actions">${product.available ? `<button class="button button-dark" type="button" data-dialog-cart="${escapeHtml(product.code)}">Add to cart</button>` : ''}<a class="button button-outline-dark" href="${whatsapp(product, product.price == null)}" target="_blank" rel="noopener noreferrer" data-dialog-order>${product.price == null ? 'Enquire for price' : 'Order on WhatsApp'}</a><button class="button button-outline-dark" type="button" data-dialog-share>Share product</button></div><p class="live-dialog-note">Availability is synchronized from our approved supplier source approximately every 12 hours. Please confirm with our team before payment.</p></div>
+      <div class="live-dialog-copy"><p class="eyebrow dark"><span></span>${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</p><h2>${escapeHtml(product.name)}</h2><dl><div><dt>Product code</dt><dd>${escapeHtml(product.code)}</dd></div><div><dt>Style</dt><dd>${product.pricingClass === 'embroidered' ? 'Embroidered' : product.pricingClass === 'non-embroidered' ? 'Printed / non-embroidered' : 'Classification pending'}</dd></div><div><dt>Suit type</dt><dd>${escapeHtml(product.pieceType)}</dd></div><div><dt>Availability</dt><dd>${product.available ? 'Available to order — confirmation required' : 'Currently unavailable'}</dd></div></dl><div class="live-dialog-note live-dialog-description"><strong>${escapeHtml(description.heading)}</strong><p>${escapeHtml(description.text)}</p></div><div class="live-dialog-price">${priceCopy}</div><div class="live-dialog-actions">${product.available ? `<button class="button button-dark" type="button" data-dialog-cart="${escapeHtml(product.code)}">Add to cart</button>` : ''}<a class="button button-outline-dark" href="${whatsapp(product, product.price == null)}" target="_blank" rel="noopener noreferrer" data-dialog-order>${product.price == null ? 'Enquire for price' : 'Order on WhatsApp'}</a><button class="button button-outline-dark" type="button" data-dialog-share>Share product</button></div><p class="live-dialog-note">Availability is synchronized from our approved supplier source approximately every 12 hours. Please confirm with our team before payment.</p></div>
     </div>`;
     dialog.querySelectorAll('[data-dialog-image]').forEach(button => button.addEventListener('click', () => {
       dialog.querySelector('[data-dialog-main]').src = button.dataset.dialogImage;
@@ -198,8 +217,9 @@
   function addProductSchema(product) {
     document.querySelector('[data-product-schema]')?.remove();
     const script = document.createElement('script');
+    const description = descriptionForProduct(product);
     script.type = 'application/ld+json'; script.dataset.productSchema = '';
-    script.textContent = JSON.stringify({ '@context':'https://schema.org','@type':'Product',name:product.name,sku:product.code,image:product.images?.length ? product.images : [product.image],brand:{'@type':'Brand',name:product.brand},offers:product.price == null ? undefined : {'@type':'Offer',priceCurrency:'PKR',price:product.price,availability:product.available ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',url:productUrl(product)} });
+    script.textContent = JSON.stringify({ '@context':'https://schema.org','@type':'Product',name:product.name,sku:product.code,image:product.images?.length ? product.images : [product.image],description:description.text,brand:{'@type':'Brand',name:product.brand},offers:product.price == null ? undefined : {'@type':'Offer',priceCurrency:'PKR',price:product.price,availability:product.available ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',url:productUrl(product)} });
     document.head.append(script);
   }
 
@@ -311,7 +331,7 @@
       syncTime.title = `Last successful synchronization: ${date.toISOString()}`;
       syncTime.classList.toggle('stale',stale);
       populateNavigation(); populateCollectionSlider(); section.hidden=false; revealCatalogue(); render();
-      const catalogueSnapshot = { synchronizedAt:data.synchronizedAt, products:products.map(product => ({ code:product.code, name:product.name, brand:product.brand, category:product.category, available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) })) };
+      const catalogueSnapshot = { synchronizedAt:data.synchronizedAt, products:products.map(product => { const description=descriptionForProduct(product); return ({ code:product.code, name:product.name, brand:product.brand, category:product.category, available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, description:description.text, descriptionSource:description.source, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) }); }) };
       window.AlHumaCatalogueSnapshot = catalogueSnapshot;
       window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:catalogueSnapshot }));
       const requested = new URLSearchParams(location.search).get('product'); if(requested) setTimeout(() => openProduct(requested,false),100);
