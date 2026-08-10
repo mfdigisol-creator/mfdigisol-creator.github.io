@@ -191,13 +191,15 @@ async function runProfile(profile) {
     checks.push('catalogue-loaded-on-intent', 'catalogue-content-versioned');
     screenshots.catalogue = await screenshot(cdp, `${profile.key}-catalogue`);
 
-    const searchResult = await cdp.evaluate(`(() => {
+    const searchProbe = await cdp.evaluate(`(() => {
+      const product=window.AlHumaCatalogueSnapshot?.products?.find(item => item?.code);
       const input=document.querySelector('[data-live-search]');
-      input.value='AIIS-26301';
+      if(!product || !input) return null;
+      input.value=product.code;
       input.dispatchEvent(new Event('input',{bubbles:true}));
-      return document.querySelector('[data-live-grid]')?.textContent || '';
+      return { code:product.code, text:document.querySelector('[data-live-grid]')?.textContent || '' };
     })()`);
-    assert(searchResult.includes('AIIS-26301'), 'Catalogue search did not return the expected product code.');
+    assert(searchProbe?.code && searchProbe.text.includes(searchProbe.code), `Catalogue search did not return the current product code: ${searchProbe?.code || 'missing probe'}.`);
     checks.push('catalogue-search');
     await click(cdp, '[data-live-clear]');
 
