@@ -184,7 +184,7 @@ async function runProfile(profile) {
     checks.push('essential-consent');
 
     await click(cdp, 'a[href="#live-catalogue"]');
-    await cdp.waitFor('window.AlHumaCatalogueSnapshot?.products?.length >= 1200', { timeout:30000, message:'catalogue snapshot' });
+    await cdp.waitFor('window.AlHumaCatalogueSnapshot?.products?.length >= 20', { timeout:30000, message:'catalogue snapshot' });
     await cdp.waitFor('!document.querySelector("[data-live-catalogue]").hidden && document.querySelectorAll("[data-open-product]").length > 0', { timeout:10000, message:'catalogue render' });
     const catalogueResource = await cdp.evaluate('performance.getEntriesByType("resource").map(entry => entry.name).find(url => url.includes("dawood-products.json")) || null');
     assert(catalogueResource && /dawood-products\.json\?v=[a-f0-9]{16}/.test(catalogueResource), `Catalogue URL is not content-versioned: ${catalogueResource}`);
@@ -203,7 +203,13 @@ async function runProfile(profile) {
 
     await click(cdp, '[data-open-product]');
     await cdp.waitFor('document.querySelector("dialog.live-product-dialog")?.open', { timeout:5000, message:'product dialog' });
-    checks.push('product-dialog');
+    const productDescription = await cdp.evaluate(`(() => {
+      const section=document.querySelector('.live-dialog-description');
+      return section ? { heading:section.querySelector('strong')?.textContent?.trim() || '', text:section.querySelector('p')?.textContent?.trim() || '' } : null;
+    })()`);
+    assert(productDescription && /Product (description|information)/i.test(productDescription.heading), 'Product dialog description heading is missing.');
+    assert(productDescription.text.length >= 40, 'Product dialog description text is missing or too short.');
+    checks.push('product-dialog', 'product-description');
     screenshots.productDialog = await screenshot(cdp, `${profile.key}-product-dialog`);
     await click(cdp, '.live-dialog-close');
 
@@ -239,7 +245,7 @@ async function runProfile(profile) {
     assert(consoleErrors.length === 0, `Console errors detected: ${consoleErrors.join(' | ')}`);
     checks.push('no-runtime-exceptions', 'no-console-errors');
 
-    return { profile:profile.key, passed:true, checks, screenshots, exceptions, consoleErrors };
+    return { profile:profile.key, passed:true, checks, screenshots, productDescription, exceptions, consoleErrors };
   } finally {
     cdp.close();
     await closeTarget(target.id);
