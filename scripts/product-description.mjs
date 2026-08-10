@@ -8,6 +8,7 @@ const BANNED_SEGMENT_PATTERNS = [
   /\b(?:price|regular\s+price|sale\s+price|discount|save\s+\d+|\d+\s*%\s*off)\b/i,
   /\b(?:rs\.?|pkr)\s*[\d,]+/i,
   /\b(?:dawood\s+designers?|shop\s+now|buy\s+now|order\s+now|hurry|limited\s+time|follow\s+us|facebook|instagram|tiktok|youtube)\b/i,
+  /\b(?:premium(?:\s+quality)?|high[- ]?quality|stunning|beautiful|gorgeous|amazing|must[- ]?have|perfect\s+for|ideal\s+for|best[- ]?selling|exclusive\s+offer)\b/i,
   /\b(?:return|exchange|refund)\s+(?:policy|available|within|period)/i
 ];
 
