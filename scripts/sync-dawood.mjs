@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { sanitizeSupplierDescription } from './product-description.mjs';
 
 const SOURCE = 'https://dawooddesigners.com';
 const OUTPUT = path.resolve('catalogue/dawood-products.json');
@@ -129,6 +130,7 @@ function normalizeProduct({ product, collection }) {
   const markup = pricingClass === 'embroidered' ? 2500 : pricingClass === 'non-embroidered' ? 1000 : null;
   const pieceMatch = normalizedSearchText.match(PIECE_PATTERN);
   const pieceType = pieceMatch ? `${pieceMatch[1]} Piece` : 'Unspecified';
+  const sourceDescription = sanitizeSupplierDescription(product.body_html, { productTitle:product.title });
   const variants = product.variants?.length ? product.variants : [{ id: product.id, title: 'Default Title', price: '0', available: false }];
 
   return variants.map((variant, index) => {
@@ -156,6 +158,7 @@ function normalizeProduct({ product, collection }) {
       pricingStatus: markup === null ? 'enquire' : 'calculated',
       pricingReason: markup === null ? 'classification-uncertain' : null,
       pieceType,
+      sourceDescription: sourceDescription || null,
       currency: 'PKR',
       available: Boolean(variant.available),
       image,
