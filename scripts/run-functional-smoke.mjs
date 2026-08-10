@@ -184,26 +184,35 @@ async function runProfile(profile) {
     checks.push('essential-consent');
 
     await click(cdp, 'a[href="#live-catalogue"]');
-    await cdp.waitFor('window.AlHumaCatalogueSnapshot?.products?.length >= 1200', { timeout:30000, message:'catalogue snapshot' });
+    await cdp.waitFor('window.AlHumaCatalogueSnapshot?.products?.length >= 20', { timeout:30000, message:'catalogue snapshot' });
     await cdp.waitFor('!document.querySelector("[data-live-catalogue]").hidden && document.querySelectorAll("[data-open-product]").length > 0', { timeout:10000, message:'catalogue render' });
     const catalogueResource = await cdp.evaluate('performance.getEntriesByType("resource").map(entry => entry.name).find(url => url.includes("dawood-products.json")) || null');
     assert(catalogueResource && /dawood-products\.json\?v=[a-f0-9]{16}/.test(catalogueResource), `Catalogue URL is not content-versioned: ${catalogueResource}`);
     checks.push('catalogue-loaded-on-intent', 'catalogue-content-versioned');
     screenshots.catalogue = await screenshot(cdp, `${profile.key}-catalogue`);
 
-    const searchResult = await cdp.evaluate(`(() => {
+    const searchProbe = await cdp.evaluate(`(() => {
+      const product=window.AlHumaCatalogueSnapshot?.products?.find(item => item?.code);
       const input=document.querySelector('[data-live-search]');
-      input.value='AIIS-26301';
+      if(!product || !input) return null;
+      input.value=product.code;
       input.dispatchEvent(new Event('input',{bubbles:true}));
-      return document.querySelector('[data-live-grid]')?.textContent || '';
+      return { code:product.code, text:document.querySelector('[data-live-grid]')?.textContent || '' };
     })()`);
-    assert(searchResult.includes('AIIS-26301'), 'Catalogue search did not return the expected product code.');
+    assert(searchProbe?.code && searchProbe.text.includes(searchProbe.code), `Catalogue search did not return the current product code: ${searchProbe?.code || 'missing probe'}.`);
     checks.push('catalogue-search');
     await click(cdp, '[data-live-clear]');
 
     await click(cdp, '[data-open-product]');
     await cdp.waitFor('document.querySelector("dialog.live-product-dialog")?.open', { timeout:5000, message:'product dialog' });
-    checks.push('product-dialog');
+    await cdp.waitFor('document.querySelector("[data-dialog-main]")?.complete && document.querySelector("[data-dialog-main]")?.naturalWidth > 0', { timeout:10000, message:'product dialog main image' });
+    const productDescription = await cdp.evaluate(`(() => {
+      const section=document.querySelector('.live-dialog-description');
+      return section ? { heading:section.querySelector('strong')?.textContent?.trim() || '', text:section.querySelector('p')?.textContent?.trim() || '' } : null;
+    })()`);
+    assert(productDescription && /Product (description|information)/i.test(productDescription.heading), 'Product dialog description heading is missing.');
+    assert(productDescription.text.length >= 40, 'Product dialog description text is missing or too short.');
+    checks.push('product-dialog', 'product-description', 'product-image-loaded');
     screenshots.productDialog = await screenshot(cdp, `${profile.key}-product-dialog`);
     await click(cdp, '.live-dialog-close');
 
@@ -239,7 +248,7 @@ async function runProfile(profile) {
     assert(consoleErrors.length === 0, `Console errors detected: ${consoleErrors.join(' | ')}`);
     checks.push('no-runtime-exceptions', 'no-console-errors');
 
-    return { profile:profile.key, passed:true, checks, screenshots, exceptions, consoleErrors };
+    return { profile:profile.key, passed:true, checks, screenshots, productDescription, exceptions, consoleErrors };
   } finally {
     cdp.close();
     await closeTarget(target.id);

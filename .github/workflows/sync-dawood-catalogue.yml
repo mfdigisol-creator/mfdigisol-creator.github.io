@@ -7,6 +7,8 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/product-description.mjs"
+      - "scripts/test-product-descriptions.mjs"
       - "scripts/install-dawood-integration.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
@@ -29,6 +31,9 @@ on:
       - main
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
+      - "scripts/sync-dawood.mjs"
+      - "scripts/product-description.mjs"
+      - "scripts/test-product-descriptions.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/performance-p1-postprocess.mjs"
@@ -86,6 +91,7 @@ jobs:
           node scripts/version-performance-assets.mjs
           node --check assistant-runtime.js
           node --check dawood-catalogue.js
+          node scripts/test-product-descriptions.mjs
           node scripts/validate-catalogue.mjs
           node scripts/validate-merchant-policy.mjs
 
