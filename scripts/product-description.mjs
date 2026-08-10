@@ -11,6 +11,8 @@ const BANNED_SEGMENT_PATTERNS = [
   /\b(?:return|exchange|refund)\s+(?:policy|available|within|period)/i
 ];
 
+const PRODUCT_DETAIL_PATTERN = /\b(?:shirt|kameez|dupatta|trouser|shalwar|pants?|fabric|front|back|sleeves?|neck(?:line)?|daman|hem|border|panel|patti|patch|motif|lawn|organza|chiffon|silk|cotton|cambric|linen|karandi|khaddar|jacquard|net|velvet|viscose|wool|embroider(?:y|ed)|printed|digital\s+print|dyed|laser[ -]?cut|sequins?|schiffli|shiffli|chikan|cutwork|appliqu[eé]|[123]\s*(?:pc|pcs|piece))\b/i;
+
 const decodeEntities = value => String(value ?? '')
   .replace(/&nbsp;|&#160;/gi, ' ')
   .replace(/&amp;/gi, '&')
@@ -71,6 +73,8 @@ export function sanitizeSupplierDescription(value, { productTitle = '' } = {}) {
   const retained = [];
   for (const segment of htmlSegments(value)) {
     if (BANNED_SEGMENT_PATTERNS.some(pattern => pattern.test(segment))) continue;
+    // Retain garment construction/material information, not generic supplier marketing prose.
+    if (!PRODUCT_DETAIL_PATTERN.test(segment)) continue;
     const key = comparable(segment);
     if (!key || seen.has(key)) continue;
     seen.add(key);
