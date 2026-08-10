@@ -14,6 +14,7 @@ const html = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&a
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
 const productPath = item => clean(item.path) || `products/${slugify(item.code)}-${slugify(item.productName || item.name)}/`;
 const unsafePattern = /<\/?[a-z][^>]*>|https?:\/\/|www\.|\b(?:whats?app|phone|mobile|contact|email|cash\s+on\s+delivery|cod|shipping|delivery|dispatch|courier|price|discount|dawood\s+designers?)\b|\b(?:rs\.?|pkr)\s*[\d,]+/i;
+const promotionalPattern = /\b(?:premium(?:\s+quality)?|high[- ]?quality|stunning|beautiful|gorgeous|amazing|must[- ]?have|perfect\s+for|ideal\s+for|best[- ]?selling|exclusive\s+offer)\b/i;
 
 function productSchema(page) {
   for (const match of page.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
@@ -45,18 +46,23 @@ async function main() {
     <p>Price: PKR 4,999</p>
     <p>Cash on Delivery available nationwide</p>
     <p>WhatsApp 0300-0000000 to order now</p>
+    <p>Beautiful design perfect for your wardrobe</p>
     <script>alert('unsafe')</script>`;
   const sanitized = sanitizeSupplierDescription(richHtml, { productTitle:'Sample Embroidered Lawn 3PC' });
   assert(sanitized.includes('Shirt: Embroidered lawn front with embroidered sleeves'), 'Meaningful shirt detail was not retained.');
   assert(sanitized.includes('Trouser: Dyed cotton trouser'), 'Meaningful trouser detail was not retained.');
   assert(sanitized.includes('Dupatta: Chiffon dupatta with embroidered border'), 'Meaningful dupatta detail was not retained.');
   assert(!unsafePattern.test(sanitized), `Unsafe or commercial supplier text survived sanitization: ${sanitized}`);
+  assert(!promotionalPattern.test(sanitized), `Promotional supplier text survived sanitization: ${sanitized}`);
 
   const weak = sanitizeSupplierDescription('<p>Sample Embroidered Lawn 3PC</p>', { productTitle:'Sample Embroidered Lawn 3PC' });
   assert(weak === '', 'Title-only supplier copy must be treated as insufficient.');
 
+  const promotional = sanitizeSupplierDescription('<p>Stunning embroidered lawn shirt perfect for Eid</p><p>Beautiful must-have design for your wardrobe</p>', { productTitle:'Another Design' });
+  assert(promotional === '', 'Generic supplier promotional prose must not be retained.');
+
   const malicious = sanitizeSupplierDescription('<p>Premium embroidered lawn shirt</p><img src=x onerror=alert(1)><p>Visit https://example.com</p>', { productTitle:'Another Design' });
-  assert(!/[<>]|https?:\/\//i.test(malicious), 'HTML, event handlers or URLs survived sanitization.');
+  assert(malicious === '', 'Promotional, HTML or URL-only supplier copy must be rejected.');
 
   const supplierProduct = {
     code:'TEST-SUPPLIER-001', name:'Sample Embroidered Lawn 3PC', productName:'Sample Embroidered Lawn 3PC', brand:'Sample Brand',
@@ -107,6 +113,7 @@ async function main() {
   const sourceDescriptions = products.filter(item => clean(item.sourceDescription));
   for (const item of sourceDescriptions) {
     assert(!unsafePattern.test(item.sourceDescription), `Unsafe retained supplier description detected for ${item.code}.`);
+    assert(!promotionalPattern.test(item.sourceDescription), `Promotional retained supplier description detected for ${item.code}.`);
   }
 
   const generated = [];
