@@ -74,7 +74,6 @@ jobs:
 
       - name: Build approved catalogue data
         id: catalogue
-        if: github.event_name != 'pull_request'
         continue-on-error: true
         run: |
           node scripts/install-dawood-integration.mjs
@@ -92,7 +91,7 @@ jobs:
           node --check assistant-runtime.js
           node --check dawood-catalogue.js
           node scripts/test-product-descriptions.mjs
-          node scripts/validate-catalogue.mjs
+          node scripts/validate-catalogue.mjs || { cat catalogue/validation-report.json; exit 1; }
           node scripts/validate-merchant-policy.mjs
 
       - name: Publish validated catalogue update
