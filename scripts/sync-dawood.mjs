@@ -7,9 +7,9 @@ const OUTPUT = path.resolve('catalogue/dawood-products.json');
 const STATUS_OUTPUT = path.resolve('catalogue/sync-status.json');
 const PRODUCT_SITEMAP_OUTPUT = path.resolve('catalogue/products-sitemap.xml');
 const META_PRODUCT_FEED_OUTPUT = path.resolve('catalogue/meta-product-feed.csv');
-const FORMAL_HEADING = 'UNSTITCHED FORMAL BRANDS';
-const LUXURY_HEADING = 'UNSTITCHED LUXURY BRANDS';
-const NEXT_HEADING = 'READY TO WEAR BRANDS';
+const FORMAL_HEADING = 'AZADI SALE';
+const LUXURY_HEADING = 'LUXURY UNSTITCH';
+const NEXT_HEADING = "MEN'S WEAR COTTON";
 const EMBROIDERY_PATTERN = /\bemb(?:\.|roidery|roidered)?\b|chikan|chicken|schiffli|shiffli|laser[ -]?cut|cutwork|boring|patch|appliqu[eé]|sequence|sequins?/i;
 const NON_EMBROIDERY_PATTERN = /\bdigital(?:ly)?\s+print|\bprinted\b|\bprint\b|\bplain\b|\bsolid\b|\bblock\s*print|\bwash\s*&?\s*wear\b/i;
 const PIECE_PATTERN = /\b([123])\s*(?:pc|pcs|piece)\b/i;
@@ -63,7 +63,10 @@ function approvedCollections(html) {
     for (const match of fragment.matchAll(anchorPattern)) {
       const handle = match[1].trim();
       const label = cleanText(match[2]);
-      if (handle && label && !['all', 'frontpage'].includes(handle)) entries.push({ handle, label, group });
+      const approvedLabel = group === 'Luxury'
+        ? /^luxury\s+unstitch$/i.test(label)
+        : /^unstitched\b/i.test(label);
+      if (handle && label && approvedLabel && !['all', 'frontpage'].includes(handle)) entries.push({ handle, label, group });
     }
     return entries;
   };
