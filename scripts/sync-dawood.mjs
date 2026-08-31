@@ -7,9 +7,14 @@ const OUTPUT = path.resolve('catalogue/dawood-products.json');
 const STATUS_OUTPUT = path.resolve('catalogue/sync-status.json');
 const PRODUCT_SITEMAP_OUTPUT = path.resolve('catalogue/products-sitemap.xml');
 const META_PRODUCT_FEED_OUTPUT = path.resolve('catalogue/meta-product-feed.csv');
-const FORMAL_HEADING = 'AZADI SALE';
-const LUXURY_HEADING = 'LUXURY UNSTITCH';
-const NEXT_HEADING = "MEN'S WEAR COTTON";
+const APPROVED_COLLECTIONS = Object.freeze([
+  { handle: 'unstitched-daily-wear-printed-2pc', label: 'Unstitched Printed 2PC', group: 'Formal' },
+  { handle: 'unstitched-daily-wear-printed-3pc', label: 'Unstitched Printed 3PC', group: 'Formal' },
+  { handle: 'unstitched-daily-wear-embroidered-2pc', label: 'Unstitched Embroidered 2PC', group: 'Formal' },
+  { handle: 'unstitched-daily-wear-embroidered-3pc', label: 'Unstitched Embroidered 3PC', group: 'Formal' },
+  { handle: 'summer-trending-plain-embroidered-hit-codes', label: 'Unstitched Hit Codes 3 PC', group: 'Formal' },
+  { handle: 'luxury-unstitch', label: 'Luxury Unstitch', group: 'Luxury' }
+]);
 const EMBROIDERY_PATTERN = /\bemb(?:\.|roidery|roidered)?\b|chikan|chicken|schiffli|shiffli|laser[ -]?cut|cutwork|boring|patch|appliqu[eé]|sequence|sequins?/i;
 const NON_EMBROIDERY_PATTERN = /\bdigital(?:ly)?\s+print|\bprinted\b|\bprint\b|\bplain\b|\bsolid\b|\bblock\s*print|\bwash\s*&?\s*wear\b/i;
 const PIECE_PATTERN = /\b([123])\s*(?:pc|pcs|piece)\b/i;
@@ -48,35 +53,11 @@ const decodeEntities = value => value
 
 const cleanText = value => decodeEntities(value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim());
 
-function approvedCollections(html) {
-  const upper = html.toUpperCase();
-  const formalStart = upper.indexOf(FORMAL_HEADING);
-  const luxuryStart = upper.indexOf(LUXURY_HEADING, formalStart + FORMAL_HEADING.length);
-  const nextStart = upper.indexOf(NEXT_HEADING, luxuryStart + LUXURY_HEADING.length);
-  if (formalStart < 0 || luxuryStart < 0 || nextStart < 0) {
-    throw new Error('Approved navigation sections could not be identified. No catalogue was changed.');
+function approvedCollections() {
+  if (APPROVED_COLLECTIONS.length < 5) {
+    throw new Error(`Only ${APPROVED_COLLECTIONS.length} approved collections were configured; refusing an incomplete update.`);
   }
-
-  const parse = (fragment, group) => {
-    const entries = [];
-    const anchorPattern = /<a\b[^>]*href=["'](?:https?:\/\/dawooddesigners\.com)?\/collections\/([^"'?/#]+)[^"']*["'][^>]*>([\s\S]*?)<\/a>/gi;
-    for (const match of fragment.matchAll(anchorPattern)) {
-      const handle = match[1].trim();
-      const label = cleanText(match[2]);
-      const approvedLabel = group === 'Luxury'
-        ? /^luxury\s+unstitch$/i.test(label)
-        : /^unstitched\b/i.test(label);
-      if (handle && label && approvedLabel && !['all', 'frontpage'].includes(handle)) entries.push({ handle, label, group });
-    }
-    return entries;
-  };
-
-  const formal = parse(html.slice(formalStart, luxuryStart), 'Formal');
-  const luxury = parse(html.slice(luxuryStart, nextStart), 'Luxury');
-  const unique = new Map();
-  for (const item of [...formal, ...luxury]) unique.set(`${item.group}:${item.handle}`, item);
-  if (unique.size < 5) throw new Error(`Only ${unique.size} approved collections were found; refusing an incomplete update.`);
-  return [...unique.values()];
+  return APPROVED_COLLECTIONS.map(item => ({ ...item }));
 }
 
 async function collectionProducts(collection) {
@@ -89,6 +70,7 @@ async function collectionProducts(collection) {
     if (batch.length < 250) break;
     await sleep(150);
   }
+  if (!products.length) throw new Error(`Approved collection ${collection.handle} returned no products; refusing an incomplete update.`);
   return products.map(product => ({ product, collection }));
 }
 
@@ -174,8 +156,7 @@ function normalizeProduct({ product, collection }) {
 
 async function main() {
   const startedAt = new Date().toISOString();
-  const homepage = await fetchText(`${SOURCE}/collections`);
-  const collections = approvedCollections(homepage);
+  const collections = approvedCollections();
   const records = [];
 
   for (const collection of collections) {
