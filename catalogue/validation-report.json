@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-31T20:34:14.637Z",
+  "generatedAt": "2026-09-01T05:14:14.874Z",
   "summary": {
-    "products": 348,
-    "removedProducts": 1153,
-    "brands": 49,
-    "collectionPages": 51,
-    "sitemapUrls": 402,
-    "metaFeedRows": 334,
-    "metadataPages": 348,
-    "internalHtmlFiles": 1557,
+    "products": 352,
+    "removedProducts": 1160,
+    "brands": 52,
+    "collectionPages": 54,
+    "sitemapUrls": 409,
+    "metaFeedRows": 338,
+    "metadataPages": 352,
+    "internalHtmlFiles": 1571,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "36 products currently lack retained supplier description text."
+    "37 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -44,8 +44,11 @@
     ],
     "missingDescriptions": [
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-14",
+      "FLOWS-ALMRH-LWN-CT-3P-15",
+      "FLOWS-ALMRH-LWN-CT-3P-18",
+      "FLOWS-ALMRH-LWN-CT-3P-21",
       "BONANZA-2PLWN-V1-ABR-06",
+      "CROSS-2PLWN-V1-ABR-28",
       "CROSS-2PLWN-V2-ABR-12",
       "CROSS-2PLWN-V2-ABR-14",
       "AIRA-ORG-PISTA-1547",
@@ -59,15 +62,12 @@
       "MUSE-SILK-3P-14371-D",
       "JAVERIA-ORG-OFWHT-3P-04",
       "ELAN-2PLWN-V1-ABR-14",
-      "BAHAREH-2PLWN-LALA-07",
-      "KHAADI-2PLWN-V1-ABR-10",
       "NISHAT-2PLWN-V2-ABR-08",
       "DASTAN-CKLWN-3P-NRJ-01",
       "DASTAN-CKLWN-3P-NRJ-02",
       "DASTAN-CKLWN-3P-NRJ-07",
       "DASTAN-CKLWN-3P-NRJ-08",
-      "LIFESTYLE-RR-DAISY-3P-BL-5",
-      "CRIMSON-BLK-3PC-AK15"
+      "LIFESTYLE-RR-DAISY-3P-BL-5"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -106,11 +106,6 @@
         "path": "products/umang-ck-lwn-3p-au-010-umang-by-aifa-printed-and-chickenkari-emb-lawn-3pc/"
       },
       {
-        "code": "ALKARAM-LWN-V1-3P-LDS-03",
-        "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 3",
-        "path": "products/alkaram-lwn-v1-3p-lds-03-alkaram-spring-summer-digital-printed-lawn-3pc/"
-      },
-      {
         "code": "ALKARAM-LWN-V2-3P-LDS-04",
         "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 4",
         "path": "products/alkaram-lwn-v2-3p-lds-04-alkaram-spring-summer-digital-printed-lawn-3pc/"
@@ -129,6 +124,11 @@
         "code": "ALKARAM-LWN-V1-3P-LDS-09",
         "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 9",
         "path": "products/alkaram-lwn-v1-3p-lds-09-alkaram-spring-summer-digital-printed-lawn-3pc/"
+      },
+      {
+        "code": "ALKARAM-3PLWN-V7-AHMD-07",
+        "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
+        "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
       },
       {
         "code": "ALKARAM-LWN-BEIGE-3P-01",
@@ -196,9 +196,9 @@
         "path": "products/flows-almrh-lwn-ct-3p-10-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
       },
       {
-        "code": "FLOWS-ALMRH-LWN-CT-3P-02",
-        "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 2",
-        "path": "products/flows-almrh-lwn-ct-3p-02-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
+        "code": "FLOWS-ALMRH-LWN-CT-3P-14",
+        "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 14",
+        "path": "products/flows-almrh-lwn-ct-3p-14-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
       }
     ]
   },

@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-31T20:34:11.644Z",
+  "generatedAt": "2026-09-01T05:14:11.799Z",
   "summary": {
-    "products": 348,
-    "available": 337,
-    "formal": 86,
+    "products": 352,
+    "available": 340,
+    "formal": 90,
     "luxury": 262,
     "priceOnEnquiry": 14,
-    "metaFeedProducts": 334,
-    "canonicalBrands": 49,
+    "metaFeedProducts": 338,
+    "canonicalBrands": 52,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 12,
     "classificationConflicts": 4,
     "unspecifiedPieces": 18,
-    "removedProducts": 1153,
-    "newlyRemovedProducts": 964,
+    "removedProducts": 1160,
+    "newlyRemovedProducts": 8,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -96,504 +96,44 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "EID-AIFA-LKLWN-3P-AE-1103",
-      "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1103",
-      "path": "products/eid-aifa-lklwn-3p-ae-1103-aifa-luxury-emb-laserkari-dyed-lawn-3pc/"
+      "code": "ALKARAM-3PLWN-V7-AHMD-07",
+      "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
+      "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
     },
     {
-      "code": "AIFA-SKIN-LWNEMB-910",
-      "name": "Aifa Printed & Embroidered Lawn 3PC — 910",
-      "path": "products/aifa-skin-lwnemb-910-aifa-printed-and-embroidered-lawn-3pc/"
+      "code": "FLOWS-ALMRH-LWN-CT-3P-14",
+      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 14",
+      "path": "products/flows-almrh-lwn-ct-3p-14-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
     },
     {
-      "code": "UMANG-CK-LWN-3P-AU-002",
-      "name": "Umang By Aifa Printed & Chickenkari Emb Lawn 3PC — AU-002",
-      "path": "products/umang-ck-lwn-3p-au-002-umang-by-aifa-printed-and-chickenkari-emb-lawn-3pc/"
+      "code": "BAHAREH-2PLWN-LALA-07",
+      "name": "Bahareh By J. Digital Printed Summer Collection Lawn 2PC — 7",
+      "path": "products/bahareh-2plwn-lala-07-bahareh-by-j-digital-printed-summer-collection-lawn-2pc/"
     },
     {
-      "code": "UMANG-CK-LWN-3P-AU-010",
-      "name": "Umang By Aifa Printed & Chickenkari Emb Lawn 3PC — AU-010",
-      "path": "products/umang-ck-lwn-3p-au-010-umang-by-aifa-printed-and-chickenkari-emb-lawn-3pc/"
+      "code": "KHAADI-2PLWN-V1-ABR-10",
+      "name": "Khaadi Digital Printed All Over Two Piece Lawn 2PC — 10",
+      "path": "products/khaadi-2plwn-v1-abr-10-khaadi-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "ALKARAM-LWN-V1-3P-LDS-03",
-      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 3",
-      "path": "products/alkaram-lwn-v1-3p-lds-03-alkaram-spring-summer-digital-printed-lawn-3pc/"
+      "code": "KHAADI-3PLWN-V12-AHMD-SS124A",
+      "name": "Khaadi Digital Printed Lawn 3PC — SS124A",
+      "path": "products/khaadi-3plwn-v12-ahmd-ss124a-khaadi-digital-printed-lawn-3pc/"
     },
     {
-      "code": "ALKARAM-LWN-V2-3P-LDS-04",
-      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 4",
-      "path": "products/alkaram-lwn-v2-3p-lds-04-alkaram-spring-summer-digital-printed-lawn-3pc/"
+      "code": "AFREEN-3PLWN-V2-HM-LS-0729",
+      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0729",
+      "path": "products/afreen-3plwn-v2-hm-ls-0729-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
     },
     {
-      "code": "ALKARAM-LWN-V2-3P-LDS-06",
-      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 6",
-      "path": "products/alkaram-lwn-v2-3p-lds-06-alkaram-spring-summer-digital-printed-lawn-3pc/"
+      "code": "AFREEN-3PLWN-V3-HM-LS-0788",
+      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0788",
+      "path": "products/afreen-3plwn-v3-hm-ls-0788-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
     },
     {
-      "code": "ALKARAM-LWN-V1-3P-LDS-06",
-      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 6",
-      "path": "products/alkaram-lwn-v1-3p-lds-06-alkaram-spring-summer-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "ALKARAM-LWN-V1-3P-LDS-09",
-      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 9",
-      "path": "products/alkaram-lwn-v1-3p-lds-09-alkaram-spring-summer-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "SEHER-EMB-LWN-3P-01",
-      "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 1",
-      "path": "products/seher-emb-lwn-3p-01-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-    },
-    {
-      "code": "SEHER-EMB-LWN-3P-05",
-      "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 5",
-      "path": "products/seher-emb-lwn-3p-05-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-    },
-    {
-      "code": "SEHER-EMB-LWN-3P-06",
-      "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 6",
-      "path": "products/seher-emb-lwn-3p-06-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-    },
-    {
-      "code": "SEHER-EMB-LWN-3P-08",
-      "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 8",
-      "path": "products/seher-emb-lwn-3p-08-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-01",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 1",
-      "path": "products/flows-almrh-lwn-ct-3p-01-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-02",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 2",
-      "path": "products/flows-almrh-lwn-ct-3p-02-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-05",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 5",
-      "path": "products/flows-almrh-lwn-ct-3p-05-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-07",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 7",
-      "path": "products/flows-almrh-lwn-ct-3p-07-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-09",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 9",
-      "path": "products/flows-almrh-lwn-ct-3p-09-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-01",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 1",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-01-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-12",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 12",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-12-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-13",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 13",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-13-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-14",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 14",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-14-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-17",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 17",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-17-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-19",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 19",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-19-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-02",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 2",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-02-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-09",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 9",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-09-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-01",
-      "name": "Aabroo By Anaya Noor Emb With Laser-Cut Lawn 3PC — 1",
-      "path": "products/aabro-anayanoor-s26-an-01-aabroo-by-anaya-noor-emb-with-laser-cut-lawn-3pc/"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-02",
-      "name": "Aabroo By Anaya Noor Emb With Laser-Cut Lawn 3PC — 2",
-      "path": "products/aabro-anayanoor-s26-an-02-aabroo-by-anaya-noor-emb-with-laser-cut-lawn-3pc/"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-03",
-      "name": "Aabroo By Anaya Noor Emb With Laser-Cut Lawn 3PC — 3",
-      "path": "products/aabro-anayanoor-s26-an-03-aabroo-by-anaya-noor-emb-with-laser-cut-lawn-3pc/"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-04",
-      "name": "Aabroo By Anaya Noor Emb With Laser-Cut Lawn 3PC — 4",
-      "path": "products/aabro-anayanoor-s26-an-04-aabroo-by-anaya-noor-emb-with-laser-cut-lawn-3pc/"
-    },
-    {
-      "code": "AABRO-ANAYANOOR-S26-AN-05",
-      "name": "Aabroo By Anaya Noor Emb With Laser-Cut Lawn 3PC — 5",
-      "path": "products/aabro-anayanoor-s26-an-05-aabroo-by-anaya-noor-emb-with-laser-cut-lawn-3pc/"
-    },
-    {
-      "code": "AKS-E-NOOR-ANAYANOOR-S26-02",
-      "name": "Aks-e-Noor By Anaya Noor Emb Laser-Cut Lawn 3PC — 2",
-      "path": "products/aks-e-noor-anayanoor-s26-02-aks-e-noor-by-anaya-noor-emb-laser-cut-lawn-3pc/"
-    },
-    {
-      "code": "ALMERAH-BORLWN-3P-AN-03",
-      "name": "Almeerah By Anaya Noor Digital and Emb Lawn Booring Daman 3PC — 3",
-      "path": "products/almerah-borlwn-3p-an-03-almeerah-by-anaya-noor-digital-and-emb-lawn-booring-daman-3pc/"
-    },
-    {
-      "code": "ALMERAH-LKLWN-3P-AN-05",
-      "name": "Almeerah By Anaya Noor Digital and Emb Lawn Laserkari Cutwork daman 3PC — 5",
-      "path": "products/almerah-lklwn-3p-an-05-almeerah-by-anaya-noor-digital-and-emb-lawn-laserkari-cutwork-daman-3pc/"
-    },
-    {
-      "code": "ALMERAH-LKLWN-3P-AN-07",
-      "name": "Almeerah By Anaya Noor Digital and Emb Lawn Laserkari Cutwork daman 3PC — 7",
-      "path": "products/almerah-lklwn-3p-an-07-almeerah-by-anaya-noor-digital-and-emb-lawn-laserkari-cutwork-daman-3pc/"
-    },
-    {
-      "code": "ALMERAH-LKLWN-3P-AN-08",
-      "name": "Almeerah By Anaya Noor Digital and Emb Lawn Laserkari Cutwork daman 3PC — 8",
-      "path": "products/almerah-lklwn-3p-an-08-almeerah-by-anaya-noor-digital-and-emb-lawn-laserkari-cutwork-daman-3pc/"
-    },
-    {
-      "code": "AAGAZ-E-SARDI-ANAYANOOR-D10",
-      "name": "Anaya – Aaghaz-e-Sardi 3PC Viscose Suit — 10",
-      "path": "products/aagaz-e-sardi-anayanoor-d10-anaya-aaghaz-e-sardi-3pc-viscose-suit/"
-    },
-    {
-      "code": "AAGAZ-E-SARDI-ANAYANOOR-D02",
-      "name": "Anaya – Aaghaz-e-Sardi 3PC Viscose Suit — 2",
-      "path": "products/aagaz-e-sardi-anayanoor-d02-anaya-aaghaz-e-sardi-3pc-viscose-suit/"
-    },
-    {
-      "code": "ANAYA-LWN-2P-DLWR-18",
-      "name": "Anaya Noor Digital Printed Lawn 2PC — 18",
-      "path": "products/anaya-lwn-2p-dlwr-18-anaya-noor-digital-printed-lawn-2pc/"
-    },
-    {
-      "code": "ANAYANOOR-PRNLWN-3P-01",
-      "name": "Anaya Noor Digital Printed Lawn With Voil Dupatta 3PC — 1",
-      "path": "products/anayanoor-prnlwn-3p-01-anaya-noor-digital-printed-lawn-with-voil-dupatta-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-PRNLWN-3P-12",
-      "name": "Anaya Noor Digital Printed Lawn With Voil Dupatta 3PC — 12",
-      "path": "products/anayanoor-prnlwn-3p-12-anaya-noor-digital-printed-lawn-with-voil-dupatta-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-PRNLWN-3P-15",
-      "name": "Anaya Noor Digital Printed Lawn With Voil Dupatta 3PC — 15",
-      "path": "products/anayanoor-prnlwn-3p-15-anaya-noor-digital-printed-lawn-with-voil-dupatta-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-PRNLWN-3P-02",
-      "name": "Anaya Noor Digital Printed Lawn With Voil Dupatta 3PC — 2",
-      "path": "products/anayanoor-prnlwn-3p-02-anaya-noor-digital-printed-lawn-with-voil-dupatta-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-BD-LWN-GREN-16",
-      "name": "Anaya Noor Emb Bana Dora Lawn With Daman Patches 3PC — 16",
-      "path": "products/anayanoor-bd-lwn-gren-16-anaya-noor-emb-bana-dora-lawn-with-daman-patches-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-BD-LWN-BLKRED-19",
-      "name": "Anaya Noor Emb Bana Dora Lawn With Daman Patches 3PC — 19",
-      "path": "products/anayanoor-bd-lwn-blkred-19-anaya-noor-emb-bana-dora-lawn-with-daman-patches-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-BD-LWN-BLUE-20",
-      "name": "Anaya Noor Emb Bana Dora Lawn With Daman Patches 3PC — 20",
-      "path": "products/anayanoor-bd-lwn-blue-20-anaya-noor-emb-bana-dora-lawn-with-daman-patches-3pc/"
-    },
-    {
-      "code": "ANAYANOOR-2PST-S26-AR-13",
-      "name": "Anaya Noor Two Piece Digital Printed Lawn 2PC — 13",
-      "path": "products/anayanoor-2pst-s26-ar-13-anaya-noor-two-piece-digital-printed-lawn-2pc/"
-    },
-    {
-      "code": "BLACK-SERIES-ANAYANOOR-S26-10",
-      "name": "Black Series By Anaya Noor Digital Printed Chamki Lawn 3PC — 10",
-      "path": "products/black-series-anayanoor-s26-10-black-series-by-anaya-noor-digital-printed-chamki-lawn-3pc/"
-    },
-    {
-      "code": "CHIKANKARI-ANAYANOOR-S26-AN-01",
-      "name": "Chikankari By Anaya Noor Exclusive Banadora Lawn 3PC — 1",
-      "path": "products/chikankari-anayanoor-s26-an-01-chikankari-by-anaya-noor-exclusive-banadora-lawn-3pc/"
-    },
-    {
-      "code": "CHIKANKARI-ANAYANOOR-S26-AN-10",
-      "name": "Chikankari By Anaya Noor Exclusive Banadora Lawn 3PC — 10",
-      "path": "products/chikankari-anayanoor-s26-an-10-chikankari-by-anaya-noor-exclusive-banadora-lawn-3pc/"
-    },
-    {
-      "code": "CHIKANKARI-ANAYANOOR-S26-AN-03",
-      "name": "Chikankari By Anaya Noor Exclusive Banadora Lawn 3PC — 3",
-      "path": "products/chikankari-anayanoor-s26-an-03-chikankari-by-anaya-noor-exclusive-banadora-lawn-3pc/"
-    },
-    {
-      "code": "CHIKANKARI-ANAYANOOR-S26-AN-06",
-      "name": "Chikankari By Anaya Noor Exclusive Banadora Lawn 3PC — 6",
-      "path": "products/chikankari-anayanoor-s26-an-06-chikankari-by-anaya-noor-exclusive-banadora-lawn-3pc/"
-    },
-    {
-      "code": "DEWANI-ANAYANOOR-S26-A02",
-      "name": "Dewani By Anaya Noor – Embroidered Lawn 3PC — 2",
-      "path": "products/dewani-anayanoor-s26-a02-dewani-by-anaya-noor-embroidered-lawn-3pc/"
-    },
-    {
-      "code": "DEWANI-ANAYANOOR-S26-A06",
-      "name": "Dewani By Anaya Noor – Embroidered Lawn 3PC — 6",
-      "path": "products/dewani-anayanoor-s26-a06-dewani-by-anaya-noor-embroidered-lawn-3pc/"
-    },
-    {
-      "code": "GULNAAR-ANAYANOOR-S26-AN-08",
-      "name": "Gulnaar By Anaya Noor Digital Printed Lawn 3PC — 8",
-      "path": "products/gulnaar-anayanoor-s26-an-08-gulnaar-by-anaya-noor-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "GULNAAR-ANAYANOOR-S26-AN-09",
-      "name": "Gulnaar By Anaya Noor Digital Printed Lawn 3PC — 9",
-      "path": "products/gulnaar-anayanoor-s26-an-09-gulnaar-by-anaya-noor-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "JASHAN-E-BAHARA-ANAYA-AN14",
-      "name": "Jashn-e-Baharan By Anaya Noor Emb & Digital Printed Lawn 3PC — 14",
-      "path": "products/jashan-e-bahara-anaya-an14-jashn-e-baharan-by-anaya-noor-emb-and-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "MAHRU-ANAYANOOR-S26-AN-10",
-      "name": "Maahru By Anaya Noor Digital Printed Lawn With Patches 3PC — 10",
-      "path": "products/mahru-anayanoor-s26-an-10-maahru-by-anaya-noor-digital-printed-lawn-with-patches-3pc/"
-    },
-    {
-      "code": "MAHRU-ANAYANOOR-S26-AN-11",
-      "name": "Maahru By Anaya Noor Digital Printed Lawn With Patches 3PC — 11",
-      "path": "products/mahru-anayanoor-s26-an-11-maahru-by-anaya-noor-digital-printed-lawn-with-patches-3pc/"
-    },
-    {
-      "code": "MAHRU-ANAYANOOR-S26-AN-02",
-      "name": "Maahru By Anaya Noor Digital Printed Lawn With Patches 3PC — 2",
-      "path": "products/mahru-anayanoor-s26-an-02-maahru-by-anaya-noor-digital-printed-lawn-with-patches-3pc/"
-    },
-    {
-      "code": "MAHRU-ANAYANOOR-S26-AN-05",
-      "name": "Maahru By Anaya Noor Digital Printed Lawn With Patches 3PC — 5",
-      "path": "products/mahru-anayanoor-s26-an-05-maahru-by-anaya-noor-digital-printed-lawn-with-patches-3pc/"
-    },
-    {
-      "code": "MAHRU-ANAYANOOR-S26-AN-07",
-      "name": "Maahru By Anaya Noor Digital Printed Lawn With Patches 3PC — 7",
-      "path": "products/mahru-anayanoor-s26-an-07-maahru-by-anaya-noor-digital-printed-lawn-with-patches-3pc/"
-    },
-    {
-      "code": "MALIHA-ANAYANOOR-S26-AN-01",
-      "name": "Maliha By Anaya Noor Emb Lawn 3PC — 1",
-      "path": "products/maliha-anayanoor-s26-an-01-maliha-by-anaya-noor-emb-lawn-3pc/"
-    },
-    {
-      "code": "MALIHA-ANAYANOOR-S26-AN-02",
-      "name": "Maliha By Anaya Noor Emb Lawn 3PC — 2",
-      "path": "products/maliha-anayanoor-s26-an-02-maliha-by-anaya-noor-emb-lawn-3pc/"
-    },
-    {
-      "code": "MALIHA-ANAYANOOR-S26-AN-04",
-      "name": "Maliha By Anaya Noor Emb Lawn 3PC — 4",
-      "path": "products/maliha-anayanoor-s26-an-04-maliha-by-anaya-noor-emb-lawn-3pc/"
-    },
-    {
-      "code": "MALIHA-ANAYANOOR-S26-AN-05",
-      "name": "Maliha By Anaya Noor Emb Lawn 3PC — 5",
-      "path": "products/maliha-anayanoor-s26-an-05-maliha-by-anaya-noor-emb-lawn-3pc/"
-    },
-    {
-      "code": "MEADOWS-ANAYANOOR-S26-03",
-      "name": "Meadows By Anaya Noor Emb Lawn With Organza Patches 3PC — 3",
-      "path": "products/meadows-anayanoor-s26-03-meadows-by-anaya-noor-emb-lawn-with-organza-patches-3pc/"
-    },
-    {
-      "code": "MEHWAR-LKLWN-3P-AN-04",
-      "name": "Mehwar By Anaya Noor Laserkari Emb & Printed Lawn 3PC — 4",
-      "path": "products/mehwar-lklwn-3p-an-04-mehwar-by-anaya-noor-laserkari-emb-and-printed-lawn-3pc/"
-    },
-    {
-      "code": "MOROCCO-ANAYANOOR-S26-01",
-      "name": "Morocco By Anaya Noor Emb Chickenkari Lawn 3PC — 1",
-      "path": "products/morocco-anayanoor-s26-01-morocco-by-anaya-noor-emb-chickenkari-lawn-3pc/"
-    },
-    {
-      "code": "NAQSH-E-JAHAN-ANAYANOOR-S26-02",
-      "name": "Naqsh-E-Jahan By Anaya Noor Fully Embroidered 3PC — 2",
-      "path": "products/naqsh-e-jahan-anayanoor-s26-02-naqsh-e-jahan-by-anaya-noor-fully-embroidered-3pc/"
-    },
-    {
-      "code": "NARM-O-NAFEES-ANAYA-A02",
-      "name": "Narm o Nafees By Anaya Noor Embroidered Viscose 3PC — 2",
-      "path": "products/narm-o-nafees-anaya-a02-narm-o-nafees-by-anaya-noor-embroidered-viscose-3pc/"
-    },
-    {
-      "code": "NARM-O-NAFEES-ANAYA-A03",
-      "name": "Narm o Nafees By Anaya Noor Embroidered Viscose 3PC — 3",
-      "path": "products/narm-o-nafees-anaya-a03-narm-o-nafees-by-anaya-noor-embroidered-viscose-3pc/"
-    },
-    {
-      "code": "NARM-O-NAFEES-ANAYA-A04",
-      "name": "Narm o Nafees By Anaya Noor Embroidered Viscose 3PC — 4",
-      "path": "products/narm-o-nafees-anaya-a04-narm-o-nafees-by-anaya-noor-embroidered-viscose-3pc/"
-    },
-    {
-      "code": "NARM-O-NAFEES-ANAYA-A05",
-      "name": "Narm o Nafees By Anaya Noor Embroidered Viscose 3PC — 5",
-      "path": "products/narm-o-nafees-anaya-a05-narm-o-nafees-by-anaya-noor-embroidered-viscose-3pc/"
-    },
-    {
-      "code": "NARM-O-NAFEES-ANAYA-A06",
-      "name": "Narm o Nafees By Anaya Noor Embroidered Viscose 3PC — 6",
-      "path": "products/narm-o-nafees-anaya-a06-narm-o-nafees-by-anaya-noor-embroidered-viscose-3pc/"
-    },
-    {
-      "code": "NARM-O-NAFEES-ANAYA-A08",
-      "name": "Narm o Nafees By Anaya Noor Embroidered Viscose 3PC — 8",
-      "path": "products/narm-o-nafees-anaya-a08-narm-o-nafees-by-anaya-noor-embroidered-viscose-3pc/"
-    },
-    {
-      "code": "NASHEMAN-ANAYA-NOOR-S26-02",
-      "name": "Nasheman By Anaya Noor Exclusive Heavy Emb Lawn 3PC — 2",
-      "path": "products/nasheman-anaya-noor-s26-02-nasheman-by-anaya-noor-exclusive-heavy-emb-lawn-3pc/"
-    },
-    {
-      "code": "NASHEMAN-ANAYA-NOOR-S26-04",
-      "name": "Nasheman By Anaya Noor Exclusive Heavy Emb Lawn 3PC — 4",
-      "path": "products/nasheman-anaya-noor-s26-04-nasheman-by-anaya-noor-exclusive-heavy-emb-lawn-3pc/"
-    },
-    {
-      "code": "PRINT-KARI-ANAYA-NOOR-S26-03",
-      "name": "Print Kari By Anaya Noor Heavy Emb Banadora Lawn 3PC — 3",
-      "path": "products/print-kari-anaya-noor-s26-03-print-kari-by-anaya-noor-heavy-emb-banadora-lawn-3pc/"
-    },
-    {
-      "code": "RAMEEN-ANAYANOOR-3PC-S26-02",
-      "name": "Rameen By Anaya Noor Printed & Laser Cutwork Emb Lawn 3PC — 2",
-      "path": "products/rameen-anayanoor-3pc-s26-02-rameen-by-anaya-noor-printed-and-laser-cutwork-emb-lawn-3pc/"
-    },
-    {
-      "code": "RAMEEN-ANAYANOOR-3PC-S26-04",
-      "name": "Rameen By Anaya Noor Printed & Laser Cutwork Emb Lawn 3PC — 4",
-      "path": "products/rameen-anayanoor-3pc-s26-04-rameen-by-anaya-noor-printed-and-laser-cutwork-emb-lawn-3pc/"
-    },
-    {
-      "code": "RANG-REZA-ANAYANOOR-AR04",
-      "name": "Rang Reza By Anaya Noor Embroidered Bana Dora 3PC — 4",
-      "path": "products/rang-reza-anayanoor-ar04-rang-reza-by-anaya-noor-embroidered-bana-dora-3pc/"
-    },
-    {
-      "code": "RANG-REZA-ANAYANOOR-AR07",
-      "name": "Rang Reza By Anaya Noor Embroidered Bana Dora 3PC — 7",
-      "path": "products/rang-reza-anayanoor-ar07-rang-reza-by-anaya-noor-embroidered-bana-dora-3pc/"
-    },
-    {
-      "code": "RAVISH-ANAYANOOR-S26-AN-10",
-      "name": "Ravish By Anaya Noor Printed & Emb Lawn 3PC — 10",
-      "path": "products/ravish-anayanoor-s26-an-10-ravish-by-anaya-noor-printed-and-emb-lawn-3pc/"
-    },
-    {
-      "code": "RAVISH-ANAYANOOR-S26-AN-12",
-      "name": "Ravish By Anaya Noor Printed & Emb Lawn 3PC — 12",
-      "path": "products/ravish-anayanoor-s26-an-12-ravish-by-anaya-noor-printed-and-emb-lawn-3pc/"
-    },
-    {
-      "code": "RAVISH-ANAYANOOR-S26-AN-04",
-      "name": "Ravish By Anaya Noor Printed & Emb Lawn 3PC — 4",
-      "path": "products/ravish-anayanoor-s26-an-04-ravish-by-anaya-noor-printed-and-emb-lawn-3pc/"
-    },
-    {
-      "code": "RAVISH-ANAYANOOR-S26-AN-05",
-      "name": "Ravish By Anaya Noor Printed & Emb Lawn 3PC — 5",
-      "path": "products/ravish-anayanoor-s26-an-05-ravish-by-anaya-noor-printed-and-emb-lawn-3pc/"
-    },
-    {
-      "code": "RAVISH-ANAYANOOR-S26-AN-06",
-      "name": "Ravish By Anaya Noor Printed & Emb Lawn 3PC — 6",
-      "path": "products/ravish-anayanoor-s26-an-06-ravish-by-anaya-noor-printed-and-emb-lawn-3pc/"
-    },
-    {
-      "code": "RAVISH-ANAYANOOR-S26-AN-07",
-      "name": "Ravish By Anaya Noor Printed & Emb Lawn 3PC — 7",
-      "path": "products/ravish-anayanoor-s26-an-07-ravish-by-anaya-noor-printed-and-emb-lawn-3pc/"
-    },
-    {
-      "code": "PANEL-LWN-MUSTARD-01",
-      "name": "Rise By Anaya Noor Heavy Plain Emb Lawn 3PC — 1",
-      "path": "products/panel-lwn-mustard-01-rise-by-anaya-noor-heavy-plain-emb-lawn-3pc/"
-    },
-    {
-      "code": "RISE-EMB-BLCK-3P-AN-04",
-      "name": "Rise By Anaya Noor Heavy Plain Emb Lawn 3PC — 4",
-      "path": "products/rise-emb-blck-3p-an-04-rise-by-anaya-noor-heavy-plain-emb-lawn-3pc/"
-    },
-    {
-      "code": "SERAYAN-ANAYANOOR-DE-02",
-      "name": "Serayan By Anaya Noor Emb Bana Dora Lawn 3PC — 2",
-      "path": "products/serayan-anayanoor-de-02-serayan-by-anaya-noor-emb-bana-dora-lawn-3pc/"
-    },
-    {
-      "code": "SERAYAN-ANAYANOOR-DE-05",
-      "name": "Serayan By Anaya Noor Emb Bana Dora Lawn 3PC — 5",
-      "path": "products/serayan-anayanoor-de-05-serayan-by-anaya-noor-emb-bana-dora-lawn-3pc/"
-    },
-    {
-      "code": "SERAYAN-ANAYANOOR-DE-08",
-      "name": "Serayan By Anaya Noor Emb Bana Dora Lawn 3PC — 8",
-      "path": "products/serayan-anayanoor-de-08-serayan-by-anaya-noor-emb-bana-dora-lawn-3pc/"
-    },
-    {
-      "code": "SHANGRILA-ANAYANOOR-AN-03",
-      "name": "Shangrila By Anaya Noor Emb Baroshia Lawn 3PC — 3",
-      "path": "products/shangrila-anayanoor-an-03-shangrila-by-anaya-noor-emb-baroshia-lawn-3pc/"
-    },
-    {
-      "code": "SCHIFFLIKARI-ANAYANOOR-S26-A03",
-      "name": "Shiffli Kari By Anaya Noor Emb Lawn 3PC — 3",
-      "path": "products/schifflikari-anayanoor-s26-a03-shiffli-kari-by-anaya-noor-emb-lawn-3pc/"
-    },
-    {
-      "code": "SCHIFFLIKARI-ANAYANOOR-S26-A06",
-      "name": "Shiffli Kari By Anaya Noor Emb Lawn 3PC — 6",
-      "path": "products/schifflikari-anayanoor-s26-a06-shiffli-kari-by-anaya-noor-emb-lawn-3pc/"
-    },
-    {
-      "code": "ZARQASH-VL27-3P-01",
-      "name": "Zarqash By Anaya Noor Heavy Emb With Neno Kara 3PC — 1",
-      "path": "products/zarqash-vl27-3p-01-zarqash-by-anaya-noor-heavy-emb-with-neno-kara-3pc/"
-    },
-    {
-      "code": "ZARQASH-VL27-3P-11",
-      "name": "Zarqash By Anaya Noor Heavy Emb With Neno Kara 3PC — 11",
-      "path": "products/zarqash-vl27-3p-11-zarqash-by-anaya-noor-heavy-emb-with-neno-kara-3pc/"
-    },
-    {
-      "code": "BAREEZE-LWN-3P-DK-15",
-      "name": "Bareeze Digital Printed Lawn 3PC — 15",
-      "path": "products/bareeze-lwn-3p-dk-15-bareeze-digital-printed-lawn-3pc/"
+      "code": "IMP-EMBCK-PINK-2P-ABR-10",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 10",
+      "path": "products/imp-embck-pink-2p-abr-10-imported-emb-chickenkari-lawn-3pc/"
     }
   ]
 }
