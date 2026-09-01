@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-01T05:14:14.874Z",
+  "generatedAt": "2026-09-01T16:42:13.732Z",
   "summary": {
-    "products": 352,
-    "removedProducts": 1160,
-    "brands": 52,
-    "collectionPages": 54,
-    "sitemapUrls": 409,
-    "metaFeedRows": 338,
-    "metadataPages": 352,
-    "internalHtmlFiles": 1571,
+    "products": 340,
+    "removedProducts": 1177,
+    "brands": 46,
+    "collectionPages": 48,
+    "sitemapUrls": 391,
+    "metaFeedRows": 326,
+    "metadataPages": 340,
+    "internalHtmlFiles": 1570,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
-    "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "37 products currently lack retained supplier description text."
+    "5 products contain “Luxury” but inherit the Formal supplier section.",
+    "34 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -37,6 +37,11 @@
         "category": "Formal"
       },
       {
+        "code": "QALAMKAR-S26-RP-12",
+        "name": "Qalamkar Luxury Embroidered Lawn 3PC — RP-12",
+        "category": "Formal"
+      },
+      {
         "code": "ZS-3P-EMB-D-1032",
         "name": "Zara Shahjahan Emb Luxury Lawn 3PC",
         "category": "Formal"
@@ -44,11 +49,9 @@
     ],
     "missingDescriptions": [
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-15",
-      "FLOWS-ALMRH-LWN-CT-3P-18",
-      "FLOWS-ALMRH-LWN-CT-3P-21",
+      "FLOWS-ALMRH-LWN-CT-3P-14",
       "BONANZA-2PLWN-V1-ABR-06",
-      "CROSS-2PLWN-V1-ABR-28",
+      "CROSS-2PLWN-V1-ABR-23",
       "CROSS-2PLWN-V2-ABR-12",
       "CROSS-2PLWN-V2-ABR-14",
       "AIRA-ORG-PISTA-1547",
@@ -61,13 +64,15 @@
       "MUSE-SILK-3P-14371-C",
       "MUSE-SILK-3P-14371-D",
       "JAVERIA-ORG-OFWHT-3P-04",
-      "ELAN-2PLWN-V1-ABR-14",
       "NISHAT-2PLWN-V2-ABR-08",
       "DASTAN-CKLWN-3P-NRJ-01",
       "DASTAN-CKLWN-3P-NRJ-02",
       "DASTAN-CKLWN-3P-NRJ-07",
       "DASTAN-CKLWN-3P-NRJ-08",
-      "LIFESTYLE-RR-DAISY-3P-BL-5"
+      "LIFESTYLE-RR-DAISY-3P-BL-5",
+      "CRIMSON-BLK-3PC-AK15",
+      "CRIMSON-BLUE-3PC-AK15",
+      "CRIMSON-MUST-3PC-AK15"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -196,9 +201,9 @@
         "path": "products/flows-almrh-lwn-ct-3p-10-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
       },
       {
-        "code": "FLOWS-ALMRH-LWN-CT-3P-14",
-        "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 14",
-        "path": "products/flows-almrh-lwn-ct-3p-14-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
+        "code": "FLOWS-ALMRH-LWN-CT-3P-15",
+        "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 15",
+        "path": "products/flows-almrh-lwn-ct-3p-15-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
       }
     ]
   },
