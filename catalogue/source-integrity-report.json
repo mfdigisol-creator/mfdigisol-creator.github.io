@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-02T04:39:00.661Z",
+  "generatedAt": "2026-09-02T16:37:06.959Z",
   "summary": {
-    "products": 333,
-    "available": 322,
-    "formal": 72,
-    "luxury": 261,
+    "products": 413,
+    "available": 402,
+    "formal": 150,
+    "luxury": 263,
     "priceOnEnquiry": 14,
-    "metaFeedProducts": 319,
-    "canonicalBrands": 46,
+    "metaFeedProducts": 399,
+    "canonicalBrands": 57,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 11,
-    "classificationConflicts": 5,
-    "unspecifiedPieces": 17,
-    "removedProducts": 1184,
-    "newlyRemovedProducts": 8,
+    "duplicateNames": 13,
+    "classificationConflicts": 4,
+    "unspecifiedPieces": 18,
+    "removedProducts": 1180,
+    "newlyRemovedProducts": 6,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -24,32 +24,32 @@
   "duplicatePaths": [],
   "duplicateNames": [
     {
-      "value": "aira by dressline semi-stitched | organza — 1547",
+      "value": "aira | organza | dressline — 1547",
       "count": 4
     },
     {
-      "value": "eva by dressline | semi-stitched | organza — 1494",
+      "value": "aroob | lava silk | dressline — fb-314",
+      "count": 2
+    },
+    {
+      "value": "aroob | lava silk | dressline — fb-316",
+      "count": 2
+    },
+    {
+      "value": "eva by | organza | dressline — 1494",
       "count": 4
     },
     {
-      "value": "fatima bano by aroob | dressline | lava silk — fb-314",
+      "value": "haleema | organza | dressline — 163",
       "count": 2
     },
     {
-      "value": "fatima bano by aroob | dressline | lava silk — fb-316",
+      "value": "haleema | organza | dressline — 164",
       "count": 2
     },
     {
-      "value": "haleema | fatime bano | organza — 163",
-      "count": 2
-    },
-    {
-      "value": "haleema | fatime bano | organza — 164",
-      "count": 2
-    },
-    {
-      "value": "jahan ara by dressline | sheesha silk — 1891",
-      "count": 4
+      "value": "jahan ara | sheesha silk | dressline — 1891",
+      "count": 3
     },
     {
       "value": "imported embroidered & digital lawn 2pc — 8",
@@ -65,6 +65,14 @@
     },
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
+      "count": 2
+    },
+    {
+      "value": "imported emb chickenkari lawn 3pc — 15",
+      "count": 2
+    },
+    {
+      "value": "imported emb chickenkari lawn 3pc — 30",
       "count": 2
     }
   ],
@@ -85,11 +93,6 @@
       "category": "Formal"
     },
     {
-      "code": "QALAMKAR-S26-RP-12",
-      "name": "Qalamkar Luxury Embroidered Lawn 3PC — RP-12",
-      "category": "Formal"
-    },
-    {
       "code": "ZS-3P-EMB-D-1032",
       "name": "Zara Shahjahan Emb Luxury Lawn 3PC",
       "category": "Formal"
@@ -97,44 +100,34 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "RAMEEN-ANAYANOOR-3PC-S26-04",
-      "name": "Rameen By Anaya Noor Printed & Laser Cutwork Emb Lawn 3PC — 4",
-      "path": "products/rameen-anayanoor-3pc-s26-04-rameen-by-anaya-noor-printed-and-laser-cutwork-emb-lawn-3pc/"
+      "code": "ALKARAM-LWN-V1-3P-LDS-03",
+      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 3",
+      "path": "products/alkaram-lwn-v1-3p-lds-03-alkaram-spring-summer-digital-printed-lawn-3pc/"
     },
     {
-      "code": "MAUSUM-3PLWN-V1-ONYX-HM-02",
-      "name": "Mausummery Digital Printed Lawn 3PC — 2",
-      "path": "products/mausum-3plwn-v1-onyx-hm-02-mausummery-digital-printed-lawn-3pc/"
+      "code": "FLOWS-ALMRH-LWN-CT-3P-14",
+      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 14",
+      "path": "products/flows-almrh-lwn-ct-3p-14-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
     },
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-10A",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-10A",
-      "path": "products/elaf-3plwn-v2-uk-epv-10a-elaf-premium-digital-printed-lawn-3pc/"
+      "code": "PAYAL-DL-LWN-3P-FB-365-B",
+      "name": "Fatima Bano By Payal Luxury Emb & Printed Lawn 3PC — FB-365-B",
+      "path": "products/payal-dl-lwn-3p-fb-365-b-fatima-bano-by-payal-luxury-emb-and-printed-lawn-3pc/"
     },
     {
-      "code": "KAYSERIA-3PLWN-V13-LALA-X7109-R",
-      "name": "Kayseria Digital Printed Lawn 3PC — X7109-R",
-      "path": "products/kayseria-3plwn-v13-lala-x7109-r-kayseria-digital-printed-lawn-3pc/"
+      "code": "ELAF-3PLWN-V2-UK-EPV-10B",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-10B",
+      "path": "products/elaf-3plwn-v2-uk-epv-10b-elaf-premium-digital-printed-lawn-3pc/"
     },
     {
-      "code": "IMP-EMBCK-PURP-2P-ABR-05",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 5",
-      "path": "products/imp-embck-purp-2p-abr-05-imported-emb-chickenkari-lawn-2pc/"
+      "code": "CROSS-2PLWN-V1-ABR-23",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 23",
+      "path": "products/cross-2plwn-v1-abr-23-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "CARNATION-LWN-LEAH-02",
-      "name": "LEAH — 2",
-      "path": "products/carnation-lwn-leah-02-leah/"
-    },
-    {
-      "code": "AFREEN-3PLWN-V2-HM-LS-0722",
-      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0722",
-      "path": "products/afreen-3plwn-v2-hm-ls-0722-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
-    },
-    {
-      "code": "ZARA-2PLWN-V1-ABR-01",
-      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 1",
-      "path": "products/zara-2plwn-v1-abr-01-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "QALAMKAR-S26-RP-12",
+      "name": "Qalamkar Luxury Embroidered Lawn 3PC — RP-12",
+      "path": "products/qalamkar-s26-rp-12-qalamkar-luxury-embroidered-lawn-3pc/"
     }
   ]
 }
