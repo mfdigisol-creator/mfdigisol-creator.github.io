@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T04:36:44.642Z",
+  "generatedAt": "2026-09-03T16:28:14.729Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V2-ABR-02",
@@ -21,6 +21,27 @@
       "firstSeenAt": "2026-09-02T21:37:03+05:00",
       "lastSeenAt": "2026-09-02T21:37:03+05:00",
       "removedAt": "2026-09-03T04:36:44.625Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ABRISH-2PLWN-V2-ABR-06",
+      "id": "15495699825011-63965549789555",
+      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 6",
+      "productName": "Abrish Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Abrish",
+      "sourceBrand": "Abrish",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/abi-06.jpg?v=1786790536",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/abi-06.jpg?v=1786790536"
+      ],
+      "path": "products/abrish-2plwn-v2-abr-06-abrish-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-02T21:37:03+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
       "reason": "supplier-removed"
     },
     {
@@ -334,27 +355,6 @@
       "firstSeenAt": "2026-07-31T22:26:19+05:00",
       "lastSeenAt": "2026-08-06T15:17:20+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "ALKARAM-3PLWN-V7-AHMD-07",
-      "id": "15524996743539-64318899224947",
-      "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
-      "productName": "Alkaram Studio Digital Printed Lawn 3PC",
-      "brand": "Alkaram",
-      "sourceBrand": "Alkaram",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_phsd5nphsd5nphsd.jpg?v=1788019120",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_phsd5nphsd5nphsd.jpg?v=1788019120"
-      ],
-      "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-01T01:34:09+05:00",
-      "lastSeenAt": "2026-09-01T01:34:09+05:00",
-      "removedAt": "2026-09-01T05:14:11.597Z",
       "reason": "supplier-removed"
     },
     {
@@ -7694,6 +7694,32 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "RANG-REZA-ANAYANOOR-AR04",
+      "id": "15265160364403-62427276509555",
+      "name": "Rang Reza By Anaya Noor Embroidered Bana Dora 3PC — 4",
+      "productName": "Rang Reza By Anaya Noor Embroidered Bana Dora 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_2_9d8ce28e-b9d7-4afa-b809-971222e79341.jpg?v=1767943698",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_2_9d8ce28e-b9d7-4afa-b809-971222e79341.jpg?v=1767943698",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_3_3bc0b335-e42b-4e08-a93e-35347dafd680.jpg?v=1767943699",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_4_bd092bed-4fbd-4814-a227-b6cc61a036f3.jpg?v=1767943699",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_5.jpg?v=1767943699",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_6.jpg?v=1767943699",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_7.jpg?v=1767943699"
+      ],
+      "path": "products/rang-reza-anayanoor-ar04-rang-reza-by-anaya-noor-embroidered-bana-dora-3pc/",
+      "firstSeenAt": "2026-07-31T22:26:06+05:00",
+      "lastSeenAt": "2026-09-03T09:36:43+05:00",
+      "removedAt": "2026-09-03T16:28:14.705Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "RANG-REZA-ANAYANOOR-AR05",
       "id": "15265160397171-62427276607859",
       "name": "Rang Reza By Anaya Noor Embroidered Bana Dora 3PC — 5",
@@ -9436,6 +9462,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ANEELAS-LWN-MERN-3P-HA-306",
+      "id": "15418813251955-63019764285811",
+      "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 306",
+      "productName": "Aneelas Embroiderd & Digital Printed Lawn 3PC",
+      "brand": "Aneelas",
+      "sourceBrand": "Aneelas",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/summer-lawn-dress-18653_15.webp?v=1782891900",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/summer-lawn-dress-18653_15.webp?v=1782891900",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4594.jpg?v=1782560801",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4595.jpg?v=1782560801"
+      ],
+      "path": "products/aneelas-lwn-mern-3p-ha-306-aneelas-embroiderd-and-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:10+05:00",
+      "lastSeenAt": "2026-09-03T09:36:43+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ANEELAS-LAWN-3P-08",
       "id": "15270851871091-62451400507763",
       "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 8",
@@ -10240,28 +10289,6 @@
       "firstSeenAt": "2026-09-01T01:34:09+05:00",
       "lastSeenAt": "2026-09-01T10:14:09+05:00",
       "removedAt": "2026-09-01T16:42:10.933Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "BAREEZE-V2LWN-RED-2P-DD-02",
-      "id": "15446007218547-63117750272371",
-      "name": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC — 2",
-      "productName": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC",
-      "brand": "Bareeze",
-      "sourceBrand": "Bareeze",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "embroidered",
-      "price": 4490,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15669_2.jpg?v=1784725650",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15669_2.jpg?v=1784725650",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15669_1.jpg?v=1784725650"
-      ],
-      "path": "products/bareeze-v2lwn-red-2p-dd-02-bareeze-plain-emb-shirt-and-trouser-lawn-2pc/",
-      "firstSeenAt": "2026-09-01T01:34:09+05:00",
-      "lastSeenAt": "2026-09-02T21:37:04+05:00",
-      "removedAt": "2026-09-03T04:36:44.625Z",
       "reason": "supplier-removed"
     },
     {
@@ -11329,6 +11356,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "CHINYERE-2PLWN-V2-ABR-02",
+      "id": "15495700021619-63965549986163",
+      "name": "Chinyere Digital Printed All Over Two Piece Lawn 2PC — 2",
+      "productName": "Chinyere Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Chinyere",
+      "sourceBrand": "Chinyere",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/chi-02.jpg?v=1786729252",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/chi-02.jpg?v=1786729252"
+      ],
+      "path": "products/chinyere-2plwn-v2-abr-02-chinyere-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-02T21:37:03+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "COCO-3PLWN-AHMD-CP-7177",
       "id": "15524512465267-64293001298291",
       "name": "Coco Prints Summer Digital Fancy Printed Lawn 3PC — CP-7177",
@@ -11370,6 +11418,29 @@
       "firstSeenAt": "2026-09-02T21:37:04+05:00",
       "lastSeenAt": "2026-09-02T21:37:04+05:00",
       "removedAt": "2026-09-03T04:36:44.625Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "COCO-3PLWN-AHMD-CP-7181",
+      "id": "15490556166515-63953769791859",
+      "name": "Coco Prints Summer Digital Fancy Printed Lawn 3PC — CP-7181",
+      "productName": "Coco Prints Summer Digital Fancy Printed Lawn 3PC",
+      "brand": "Coco",
+      "sourceBrand": "Coco",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_xa8kmyxa8kmyxa8k.jpg?v=1787928690",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_xa8kmyxa8kmyxa8k.jpg?v=1787928690",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-12at4.22.24PM_11.jpg?v=1786535631",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-12at4.22.24PM_12.jpg?v=1786535630"
+      ],
+      "path": "products/coco-3plwn-ahmd-cp-7181-coco-prints-summer-digital-fancy-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
       "reason": "supplier-removed"
     },
     {
@@ -11440,6 +11511,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "CROSS-2PLWN-V2-ABR-12",
+      "id": "15495728824691-63965607133555",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 12",
+      "productName": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Cross Stitch",
+      "sourceBrand": "Cross Stitch",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-12.jpg?v=1786730629",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-12.jpg?v=1786730629"
+      ],
+      "path": "products/cross-2plwn-v2-abr-12-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "CROSS-2PLWN-V2-ABR-14",
       "id": "15495728890227-63965607199091",
       "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 14",
@@ -11458,6 +11550,69 @@
       "firstSeenAt": "2026-09-01T01:34:09+05:00",
       "lastSeenAt": "2026-09-02T21:37:03+05:00",
       "removedAt": "2026-09-03T04:36:44.625Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "CROSS-2PLWN-V2-ABR-04",
+      "id": "15495728464243-63965606773107",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 4",
+      "productName": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Cross Stitch",
+      "sourceBrand": "Cross Stitch",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-04.jpg?v=1786731098",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-04.jpg?v=1786731098"
+      ],
+      "path": "products/cross-2plwn-v2-abr-04-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-02T21:37:03+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "CROSS-2PLWN-V2-ABR-05",
+      "id": "15495728529779-63965606838643",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 5",
+      "productName": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Cross Stitch",
+      "sourceBrand": "Cross Stitch",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-05.jpg?v=1786731303",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-05.jpg?v=1786731303"
+      ],
+      "path": "products/cross-2plwn-v2-abr-05-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-02T21:37:03+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "CROSS-2PLWN-V2-ABR-09",
+      "id": "15495728693619-63965607002483",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 9",
+      "productName": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Cross Stitch",
+      "sourceBrand": "Cross Stitch",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-09.jpg?v=1786731869",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-09.jpg?v=1786731869"
+      ],
+      "path": "products/cross-2plwn-v2-abr-09-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-02T21:37:03+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
       "reason": "supplier-removed"
     },
     {
@@ -13110,6 +13265,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ELAF-3PLWN-V2-UK-EPV-1B",
+      "id": "15524468752755-64292831035763",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-1B",
+      "productName": "Elaf Premium Digital Printed Lawn 3PC",
+      "brand": "Elaf",
+      "sourceBrand": "Elaf",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3150,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_i816aui816aui816.jpg?v=1788245849",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_i816aui816aui816.jpg?v=1788245849",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9250_170a1d2f-a1cd-482f-bb08-0dda04a4e531.jpg?v=1788180486",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9251.jpg?v=1788180486"
+      ],
+      "path": "products/elaf-3plwn-v2-uk-epv-1b-elaf-premium-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ELAF-3PLWN-V2-UK-EPV-3B",
       "id": "15524468982131-64292831265139",
       "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-3B",
@@ -13156,6 +13334,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ELAF-3PLWN-V2-UK-EPV-7B",
+      "id": "15524468916595-64292831199603",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-7B",
+      "productName": "Elaf Premium Digital Printed Lawn 3PC",
+      "brand": "Elaf",
+      "sourceBrand": "Elaf",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3150,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_7fi2lg7fi2lg7fi2.jpg?v=1788248387",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_7fi2lg7fi2lg7fi2.jpg?v=1788248387",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7B_2.jpg?v=1788180338",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7B_1.jpg?v=1788180338"
+      ],
+      "path": "products/elaf-3plwn-v2-uk-epv-7b-elaf-premium-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ELAN-2PLWN-V1-ABR-14",
       "id": "15495731216755-63965612638579",
       "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 14",
@@ -13195,6 +13396,27 @@
       "firstSeenAt": "2026-09-02T21:37:03+05:00",
       "lastSeenAt": "2026-09-02T21:37:03+05:00",
       "removedAt": "2026-09-03T04:36:44.625Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ELAN-2PLWN-V1-ABR-07",
+      "id": "15495730790771-63965612114291",
+      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 7",
+      "productName": "Elan Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Elan",
+      "sourceBrand": "Elan",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/ela-07.jpg?v=1786784582",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/ela-07.jpg?v=1786784582"
+      ],
+      "path": "products/elan-2plwn-v1-abr-07-elan-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-02T21:37:03+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
       "reason": "supplier-removed"
     },
     {
@@ -16731,27 +16953,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "AFREEN-3PLWN-V2-HM-LS-0729",
-      "id": "15523739173235-64288241746291",
-      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0729",
-      "productName": "Afreen By Lala Digital Printed Airjet Lawn 3PC",
-      "brand": "Lala",
-      "sourceBrand": "Lala",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/0729.jpg?v=1787827281",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/0729.jpg?v=1787827281"
-      ],
-      "path": "products/afreen-3plwn-v2-hm-ls-0729-afreen-by-lala-digital-printed-airjet-lawn-3pc/",
-      "firstSeenAt": "2026-09-01T01:34:09+05:00",
-      "lastSeenAt": "2026-09-02T21:37:04+05:00",
-      "removedAt": "2026-09-03T04:36:44.625Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "AFREEN-3PLWN-V3-HM-LS-0781",
       "id": "15523738452339-64288240959859",
       "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0781",
@@ -16945,6 +17146,28 @@
       "firstSeenAt": "2026-09-02T21:37:04+05:00",
       "lastSeenAt": "2026-09-02T21:37:04+05:00",
       "removedAt": "2026-09-03T04:36:44.625Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MADHAM-PRNLWN-3P-HM-07",
+      "id": "15524258120051-64292378804595",
+      "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 7",
+      "productName": "Madham By Lala Digital Airjet Printed Lawn 3PC",
+      "brand": "Lala",
+      "sourceBrand": "Lala",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/07_2_05c74a0e-3632-49b4-a4fd-d6eb8bf6fb73.jpg?v=1788349280",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/07_2_05c74a0e-3632-49b4-a4fd-d6eb8bf6fb73.jpg?v=1788349280",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/07_1_71ceda56-014b-41d5-b047-8cf29a97fc48.jpg?v=1788349279"
+      ],
+      "path": "products/madham-prnlwn-3p-hm-07-madham-by-lala-digital-airjet-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-02T21:37:04+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
       "reason": "supplier-removed"
     },
     {
@@ -17274,6 +17497,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "LIMELIGHT-2PLWN-V2-ABR-08",
+      "id": "15495727874419-63965605691763",
+      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 8",
+      "productName": "Limelight Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Limelight",
+      "sourceBrand": "Limelight",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/lime-08.jpg?v=1786791533",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/lime-08.jpg?v=1786791533"
+      ],
+      "path": "products/limelight-2plwn-v2-abr-08-limelight-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-02T21:37:03+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "LIMELIGHT-EMB-2PC-LSKY-DD-01",
       "id": "15457706377587-63579566571891",
       "name": "Limelight Plain Emb Shirt & Trouser Lawn 2PC — 1",
@@ -17412,6 +17656,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "IMP-EMBCK-LEMN-2P-ABR-15",
+      "id": "15403423727987-62932973748595",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 15",
+      "productName": "Imported Emb Chickenkari Lawn 3PC",
+      "brand": "lmported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14614_2.jpg?v=1784548888",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14614_2.jpg?v=1784548888",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14614_1.jpg?v=1784548888"
+      ],
+      "path": "products/imp-embck-lemn-2p-abr-15-imported-emb-chickenkari-lawn-3pc/",
+      "firstSeenAt": "2026-09-02T21:37:05+05:00",
+      "lastSeenAt": "2026-09-03T09:36:43+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "IMP-EMBCK-PURP-2P-ABR-15",
       "id": "15403423793523-62932973814131",
       "name": "Imported Emb Chickenkari Lawn 3PC — 15",
@@ -17431,6 +17697,28 @@
       "firstSeenAt": "2026-09-02T21:37:05+05:00",
       "lastSeenAt": "2026-09-02T21:37:05+05:00",
       "removedAt": "2026-09-03T04:36:44.625Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "IMP-EMBCK-GREN-2P-ABR-18",
+      "id": "15403424219507-62932975190387",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 18",
+      "productName": "Imported Emb Chickenkari Lawn 3PC",
+      "brand": "lmported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14625_2.jpg?v=1784548557",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14625_2.jpg?v=1784548557",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14625_1.jpg?v=1784548557"
+      ],
+      "path": "products/imp-embck-gren-2p-abr-18-imported-emb-chickenkari-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:10+05:00",
+      "lastSeenAt": "2026-09-03T09:36:43+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
       "reason": "supplier-removed"
     },
     {
@@ -21610,6 +21898,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "RIJJA-PRN-LWN-V18-3P-06",
+      "id": "15445842919795-63117405913459",
+      "name": "Rijja By Murashe Premium Printed Lawn 3PC — 6",
+      "productName": "Rijja By Murashe Premium Printed Lawn 3PC",
+      "brand": "Murashe",
+      "sourceBrand": "Murashe",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3395,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5658_2.jpg?v=1784640741",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5658_2.jpg?v=1784640741",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5658_1.jpg?v=1784640741"
+      ],
+      "path": "products/rijja-prn-lwn-v18-3p-06-rijja-by-murashe-premium-printed-lawn-3pc/",
+      "firstSeenAt": "2026-07-31T22:26:12+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "RIJJA-PRN-LWN-V17-3P-08",
       "id": "15445839675763-63117402440051",
       "name": "Rijja By Murashe Premium Printed Lawn 3PC — 8",
@@ -25616,6 +25926,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "FL-RR-FE-LWN-YASNA-3",
+      "id": "15427928686963-63054118257011",
+      "name": "Florence By Rang Rasiya | Festive Edit'26 — 3",
+      "productName": "Florence By Rang Rasiya | Festive Edit'26",
+      "brand": "Rang Rasiya",
+      "sourceBrand": "Rang Rasiya",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 9246,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/29_73a9eff3-ec0a-4145-8605-c76f6ae9e45b.jpg?v=1783157668",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/29_73a9eff3-ec0a-4145-8605-c76f6ae9e45b.jpg?v=1783157668",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/30_eafa9218-64e5-4ce6-889d-c8fc5856d984.jpg?v=1783157668",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/31_d3028b0d-cba3-459c-b51b-54e205d675df.jpg?v=1783157668",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/32_5053cd69-c7a0-410c-b9b1-e8e61598a595.jpg?v=1783157668"
+      ],
+      "path": "products/fl-rr-fe-lwn-yasna-3-florence-by-rang-rasiya-festive-edit-26/",
+      "firstSeenAt": "2026-09-02T21:37:06+05:00",
+      "lastSeenAt": "2026-09-03T09:36:44+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "CARNATION-LWN-LEAH-02",
       "id": "15427946217843-63054139294067",
       "name": "LEAH — 2",
@@ -28871,6 +29205,48 @@
       "firstSeenAt": "2026-09-01T01:34:09+05:00",
       "lastSeenAt": "2026-09-01T10:14:09+05:00",
       "removedAt": "2026-09-01T16:42:10.933Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZARA-2PLWN-V1-ABR-08",
+      "id": "15495729709427-63965611000179",
+      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 8",
+      "productName": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Zara Shahjahan",
+      "sourceBrand": "Zara Shahjahan",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/zara-08.jpg?v=1786779856",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/zara-08.jpg?v=1786779856"
+      ],
+      "path": "products/zara-2plwn-v1-abr-08-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZARA-2PLWN-V1-ABR-09",
+      "id": "15495729807731-63965611098483",
+      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 9",
+      "productName": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Zara Shahjahan",
+      "sourceBrand": "Zara Shahjahan",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/zara-09.jpg?v=1786778759",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/zara-09.jpg?v=1786778759"
+      ],
+      "path": "products/zara-2plwn-v1-abr-09-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-02T21:37:03+05:00",
+      "lastSeenAt": "2026-09-03T09:36:42+05:00",
+      "removedAt": "2026-09-03T16:28:14.706Z",
       "reason": "supplier-removed"
     },
     {
