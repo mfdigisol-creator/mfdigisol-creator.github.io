@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-03T16:28:17.915Z",
+  "generatedAt": "2026-09-04T04:38:00.394Z",
   "summary": {
-    "products": 338,
-    "removedProducts": 1266,
-    "brands": 46,
-    "collectionPages": 48,
-    "sitemapUrls": 389,
-    "metaFeedRows": 324,
-    "metadataPages": 338,
-    "internalHtmlFiles": 1658,
+    "products": 332,
+    "removedProducts": 1277,
+    "brands": 44,
+    "collectionPages": 46,
+    "sitemapUrls": 381,
+    "metaFeedRows": 318,
+    "metadataPages": 332,
+    "internalHtmlFiles": 1661,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "42 products currently lack retained supplier description text."
+    "45 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -52,6 +52,10 @@
       "AIRA-ORG-PEACH-1547",
       "AIRA-ORG-PURP-1547",
       "AIRA-ORG-SKY-1547",
+      "DASTAK-DL-LWN-3P-FB-322",
+      "DASTAK-DL-LWN-3P-FB-323",
+      "DASTAK-DL-LWN-3P-FB-324",
+      "DASTAK-DL-LWN-3P-FB-325",
       "JAVERIA-ORG-OFWHT-3P-04",
       "MUSE-SILK-3P-14371-A",
       "MUSE-SILK-3P-14371-B",
@@ -63,11 +67,7 @@
       "ELAN-2PLWN-V1-ABR-13",
       "ELAN-2PLWN-V1-ABR-15",
       "ELAN-2PLWN-V1-ABR-03",
-      "KHAADI-2PLWN-V1-ABR-07",
-      "KHAADI-2PLWN-V1-ABR-08",
-      "KHAADI-2PLWN-V1-ABR-09",
-      "LIMELIGHT-2PLWN-V2-ABR-13",
-      "LIMELIGHT-2PLWN-V2-ABR-15"
+      "KHAADI-2PLWN-V1-ABR-07"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -156,9 +156,19 @@
         "path": "products/alkaram-lwn-v1-3p-lds-09-alkaram-spring-summer-digital-printed-lawn-3pc/"
       },
       {
+        "code": "ALKARAM-3PLWN-V7-AHMD-07",
+        "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
+        "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
+      },
+      {
         "code": "ALKARAM-3PLWN-V8-AHMD-07",
         "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
         "path": "products/alkaram-3plwn-v8-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
+      },
+      {
+        "code": "ALKARAM-3PLWN-V7-AHMD-08",
+        "name": "Alkaram Studio Digital Printed Lawn 3PC — 8",
+        "path": "products/alkaram-3plwn-v7-ahmd-08-alkaram-studio-digital-printed-lawn-3pc/"
       },
       {
         "code": "ALKARAM-LWN-BEIGE-3P-01",
@@ -189,16 +199,6 @@
         "code": "SEHER-EMB-LWN-3P-04",
         "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 4",
         "path": "products/seher-emb-lwn-3p-04-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-      },
-      {
-        "code": "SEHER-EMB-LWN-3P-05",
-        "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 5",
-        "path": "products/seher-emb-lwn-3p-05-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-      },
-      {
-        "code": "SEHER-EMB-LWN-3P-06",
-        "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 6",
-        "path": "products/seher-emb-lwn-3p-06-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
       }
     ]
   },

@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-03T16:28:14.750Z",
+  "generatedAt": "2026-09-04T04:37:56.591Z",
   "summary": {
-    "products": 338,
-    "available": 327,
-    "formal": 77,
-    "luxury": 261,
+    "products": 332,
+    "available": 321,
+    "formal": 66,
+    "luxury": 266,
     "priceOnEnquiry": 14,
-    "metaFeedProducts": 324,
-    "canonicalBrands": 46,
+    "metaFeedProducts": 318,
+    "canonicalBrands": 44,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 12,
+    "duplicateNames": 11,
     "classificationConflicts": 4,
     "unspecifiedPieces": 18,
-    "removedProducts": 1266,
-    "newlyRemovedProducts": 20,
+    "removedProducts": 1277,
+    "newlyRemovedProducts": 11,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -66,10 +66,6 @@
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
       "count": 2
-    },
-    {
-      "value": "imported emb chickenkari lawn 3pc — 30",
-      "count": 2
     }
   ],
   "classificationConflicts": [
@@ -96,104 +92,59 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "RANG-REZA-ANAYANOOR-AR04",
-      "name": "Rang Reza By Anaya Noor Embroidered Bana Dora 3PC — 4",
-      "path": "products/rang-reza-anayanoor-ar04-rang-reza-by-anaya-noor-embroidered-bana-dora-3pc/"
+      "code": "ALKARAM-3PLWN-V7-AHMD-07",
+      "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
+      "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
     },
     {
-      "code": "RIJJA-PRN-LWN-V18-3P-06",
-      "name": "Rijja By Murashe Premium Printed Lawn 3PC — 6",
-      "path": "products/rijja-prn-lwn-v18-3p-06-rijja-by-murashe-premium-printed-lawn-3pc/"
+      "code": "ALKARAM-3PLWN-V7-AHMD-08",
+      "name": "Alkaram Studio Digital Printed Lawn 3PC — 8",
+      "path": "products/alkaram-3plwn-v7-ahmd-08-alkaram-studio-digital-printed-lawn-3pc/"
     },
     {
-      "code": "ANEELAS-LWN-MERN-3P-HA-306",
-      "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 306",
-      "path": "products/aneelas-lwn-mern-3p-ha-306-aneelas-embroiderd-and-digital-printed-lawn-3pc/"
+      "code": "BAREEZE-V2LWN-RED-2P-DD-02",
+      "name": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC — 2",
+      "path": "products/bareeze-v2lwn-red-2p-dd-02-bareeze-plain-emb-shirt-and-trouser-lawn-2pc/"
     },
     {
-      "code": "COCO-3PLWN-AHMD-CP-7181",
-      "name": "Coco Prints Summer Digital Fancy Printed Lawn 3PC — CP-7181",
-      "path": "products/coco-3plwn-ahmd-cp-7181-coco-prints-summer-digital-fancy-printed-lawn-3pc/"
+      "code": "ELAF-3PLWN-V2-UK-EPV-9B",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-9B",
+      "path": "products/elaf-3plwn-v2-uk-epv-9b-elaf-premium-digital-printed-lawn-3pc/"
     },
     {
-      "code": "CROSS-2PLWN-V2-ABR-12",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 12",
-      "path": "products/cross-2plwn-v2-abr-12-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "KHAADI-3PLWN-V12-AHMD-SS117A",
+      "name": "Khaadi Digital Printed Lawn 3PC — SS117A",
+      "path": "products/khaadi-3plwn-v12-ahmd-ss117a-khaadi-digital-printed-lawn-3pc/"
     },
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-1B",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-1B",
-      "path": "products/elaf-3plwn-v2-uk-epv-1b-elaf-premium-digital-printed-lawn-3pc/"
+      "code": "AFREEN-3PLWN-V2-HM-LS-0729",
+      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0729",
+      "path": "products/afreen-3plwn-v2-hm-ls-0729-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
     },
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-7B",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-7B",
-      "path": "products/elaf-3plwn-v2-uk-epv-7b-elaf-premium-digital-printed-lawn-3pc/"
+      "code": "NISHAT-2PLWN-V2-ABR-08",
+      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 8",
+      "path": "products/nishat-2plwn-v2-abr-08-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "IMP-EMBCK-GREN-2P-ABR-18",
-      "name": "Imported Emb Chickenkari Lawn 3PC — 18",
-      "path": "products/imp-embck-gren-2p-abr-18-imported-emb-chickenkari-lawn-3pc/"
+      "code": "GULAHMED-LWN-V1-3P-LDS-09",
+      "name": "Gul Ahmed Printed Doriya Lawn 3PC — 9",
+      "path": "products/gulahmed-lwn-v1-3p-lds-09-gul-ahmed-printed-doriya-lawn-3pc/"
     },
     {
-      "code": "ZARA-2PLWN-V1-ABR-08",
-      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 8",
-      "path": "products/zara-2plwn-v1-abr-08-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "IMP-EMBCK-DPISTA-2P-ABR-30",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 30",
+      "path": "products/imp-embck-dpista-2p-abr-30-imported-emb-chickenkari-lawn-3pc/"
     },
     {
-      "code": "ABRISH-2PLWN-V2-ABR-06",
-      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 6",
-      "path": "products/abrish-2plwn-v2-abr-06-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "BAREEZA-3PLWN-V560-AHMD-7242",
+      "name": "Bareeza Summer Digital Printed Lawn 3PC — 7242",
+      "path": "products/bareeza-3plwn-v560-ahmd-7242-bareeza-summer-digital-printed-lawn-3pc/"
     },
     {
-      "code": "CHINYERE-2PLWN-V2-ABR-02",
-      "name": "Chinyere Digital Printed All Over Two Piece Lawn 2PC — 2",
-      "path": "products/chinyere-2plwn-v2-abr-02-chinyere-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "CROSS-2PLWN-V2-ABR-04",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 4",
-      "path": "products/cross-2plwn-v2-abr-04-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "CROSS-2PLWN-V2-ABR-05",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 5",
-      "path": "products/cross-2plwn-v2-abr-05-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "CROSS-2PLWN-V2-ABR-09",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 9",
-      "path": "products/cross-2plwn-v2-abr-09-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "ELAN-2PLWN-V1-ABR-07",
-      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 7",
-      "path": "products/elan-2plwn-v1-abr-07-elan-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "MADHAM-PRNLWN-3P-HM-07",
-      "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 7",
-      "path": "products/madham-prnlwn-3p-hm-07-madham-by-lala-digital-airjet-printed-lawn-3pc/"
-    },
-    {
-      "code": "LIMELIGHT-2PLWN-V2-ABR-08",
-      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 8",
-      "path": "products/limelight-2plwn-v2-abr-08-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "IMP-EMBCK-LEMN-2P-ABR-15",
-      "name": "Imported Emb Chickenkari Lawn 3PC — 15",
-      "path": "products/imp-embck-lemn-2p-abr-15-imported-emb-chickenkari-lawn-3pc/"
-    },
-    {
-      "code": "FL-RR-FE-LWN-YASNA-3",
-      "name": "Florence By Rang Rasiya | Festive Edit'26 — 3",
-      "path": "products/fl-rr-fe-lwn-yasna-3-florence-by-rang-rasiya-festive-edit-26/"
-    },
-    {
-      "code": "ZARA-2PLWN-V1-ABR-09",
-      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 9",
-      "path": "products/zara-2plwn-v1-abr-09-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "KHAADI-3PLWN-V12-AHMD-BLA356",
+      "name": "Khaadi Digital Printed Lawn 3PC — BLA356",
+      "path": "products/khaadi-3plwn-v12-ahmd-bla356-khaadi-digital-printed-lawn-3pc/"
     }
   ]
 }
