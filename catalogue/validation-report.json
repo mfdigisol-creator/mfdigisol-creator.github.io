@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-04T16:24:19.852Z",
+  "generatedAt": "2026-09-05T04:34:21.748Z",
   "summary": {
-    "products": 341,
-    "removedProducts": 1273,
-    "brands": 46,
-    "collectionPages": 48,
-    "sitemapUrls": 392,
-    "metaFeedRows": 327,
-    "metadataPages": 341,
-    "internalHtmlFiles": 1668,
+    "products": 420,
+    "removedProducts": 1279,
+    "brands": 57,
+    "collectionPages": 59,
+    "sitemapUrls": 482,
+    "metaFeedRows": 406,
+    "metadataPages": 420,
+    "internalHtmlFiles": 1764,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "45 products currently lack retained supplier description text."
+    "82 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -43,31 +43,31 @@
       }
     ],
     "missingDescriptions": [
+      "ABRISH-2PLWN-V1-ABR-14",
+      "ABRISH-2PLWN-V1-ABR-22",
+      "ABRISH-2PLWN-V1-ABR-46",
+      "ABRISH-2PLWN-V1-ABR-51",
+      "ALKARAM-3PLWN-V10-BLUE-AHMD-7",
+      "ALKARAM-3PLWN-V10-WHITE-AHMD-9",
       "FLEUR-ALMRH-LWN-CT-3P-09",
+      "FLOWS-ALMRH-LWN-CT-3P-16",
+      "FLOWS-ALMRH-LWN-CT-3P-17",
+      "FLOWS-ALMRH-LWN-CT-3P-18",
+      "FLOWS-ALMRH-LWN-CT-3P-19",
       "BONANZA-2PLWN-V1-ABR-06",
+      "CHINYERE-2PLWN-V1-ABR-16",
+      "CHINYERE-2PLWN-V1-ABR-17",
+      "CHINYERE-2PLWN-V1-ABR-18",
+      "CHINYERE-2PLWN-V1-ABR-19",
+      "CHINYERE-2PLWN-V1-ABR-20",
+      "CHINYERE-2PLWN-V1-ABR-07",
+      "CROSS-2PLWN-V2-ABR-10",
       "CROSS-2PLWN-V2-ABR-11",
       "CROSS-2PLWN-V2-ABR-02",
       "CROSS-2PLWN-V2-ABR-06",
-      "CROSS-2PLWN-V2-ABR-07",
+      "CROSS-2PLWN-V2-ABR-08",
       "AIRA-ORG-PISTA-1547",
-      "AIRA-ORG-PEACH-1547",
-      "AIRA-ORG-PURP-1547",
-      "AIRA-ORG-SKY-1547",
-      "DASTAK-DL-LWN-3P-FB-322",
-      "DASTAK-DL-LWN-3P-FB-323",
-      "DASTAK-DL-LWN-3P-FB-324",
-      "DASTAK-DL-LWN-3P-FB-325",
-      "JAVERIA-ORG-OFWHT-3P-04",
-      "MUSE-SILK-3P-14371-A",
-      "MUSE-SILK-3P-14371-B",
-      "MUSE-SILK-3P-14371-C",
-      "MUSE-SILK-3P-14371-D",
-      "SINGHAR-SILK-SKIN-3P-FB258",
-      "ELAN-2PLWN-V1-ABR-01",
-      "ELAN-2PLWN-V1-ABR-10",
-      "ELAN-2PLWN-V1-ABR-13",
-      "ELAN-2PLWN-V1-ABR-15",
-      "ELAN-2PLWN-V1-ABR-03"
+      "AIRA-ORG-PEACH-1547"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -156,6 +156,11 @@
         "path": "products/alkaram-lwn-v1-3p-lds-09-alkaram-spring-summer-digital-printed-lawn-3pc/"
       },
       {
+        "code": "ALKARAM-3PLWN-V8-AHMD-06",
+        "name": "Alkaram Studio Digital Printed Lawn 3PC — 6",
+        "path": "products/alkaram-3plwn-v8-ahmd-06-alkaram-studio-digital-printed-lawn-3pc/"
+      },
+      {
         "code": "ALKARAM-3PLWN-V7-AHMD-07",
         "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
         "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
@@ -194,11 +199,6 @@
         "code": "SEHER-EMB-LWN-3P-03",
         "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 3",
         "path": "products/seher-emb-lwn-3p-03-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-      },
-      {
-        "code": "SEHER-EMB-LWN-3P-04",
-        "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 4",
-        "path": "products/seher-emb-lwn-3p-04-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
       }
     ]
   },
