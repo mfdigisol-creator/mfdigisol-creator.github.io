@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-05T04:34:21.748Z",
+  "generatedAt": "2026-09-05T15:17:01.406Z",
   "summary": {
-    "products": 420,
-    "removedProducts": 1279,
+    "products": 370,
+    "removedProducts": 1362,
     "brands": 57,
     "collectionPages": 59,
-    "sitemapUrls": 482,
-    "metaFeedRows": 406,
-    "metadataPages": 420,
-    "internalHtmlFiles": 1764,
+    "sitemapUrls": 432,
+    "metaFeedRows": 356,
+    "metadataPages": 370,
+    "internalHtmlFiles": 1797,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "82 products currently lack retained supplier description text."
+    "63 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -43,31 +43,31 @@
       }
     ],
     "missingDescriptions": [
-      "ABRISH-2PLWN-V1-ABR-14",
-      "ABRISH-2PLWN-V1-ABR-22",
-      "ABRISH-2PLWN-V1-ABR-46",
-      "ABRISH-2PLWN-V1-ABR-51",
-      "ALKARAM-3PLWN-V10-BLUE-AHMD-7",
-      "ALKARAM-3PLWN-V10-WHITE-AHMD-9",
+      "ALKARAM-3PLWN-V10-RED-AHMD-4",
       "FLEUR-ALMRH-LWN-CT-3P-09",
+      "FLOWS-ALMRH-LWN-CT-3P-12",
+      "FLOWS-ALMRH-LWN-CT-3P-13",
+      "FLOWS-ALMRH-LWN-CT-3P-14",
       "FLOWS-ALMRH-LWN-CT-3P-16",
-      "FLOWS-ALMRH-LWN-CT-3P-17",
-      "FLOWS-ALMRH-LWN-CT-3P-18",
-      "FLOWS-ALMRH-LWN-CT-3P-19",
+      "BONANZA-2PLWN-V1-ABR-04",
       "BONANZA-2PLWN-V1-ABR-06",
-      "CHINYERE-2PLWN-V1-ABR-16",
-      "CHINYERE-2PLWN-V1-ABR-17",
       "CHINYERE-2PLWN-V1-ABR-18",
-      "CHINYERE-2PLWN-V1-ABR-19",
-      "CHINYERE-2PLWN-V1-ABR-20",
-      "CHINYERE-2PLWN-V1-ABR-07",
-      "CROSS-2PLWN-V2-ABR-10",
       "CROSS-2PLWN-V2-ABR-11",
       "CROSS-2PLWN-V2-ABR-02",
+      "CROSS-2PLWN-V2-ABR-05",
       "CROSS-2PLWN-V2-ABR-06",
-      "CROSS-2PLWN-V2-ABR-08",
+      "CROSS-2PLWN-V2-ABR-09",
       "AIRA-ORG-PISTA-1547",
-      "AIRA-ORG-PEACH-1547"
+      "AIRA-ORG-PEACH-1547",
+      "AIRA-ORG-PURP-1547",
+      "AIRA-ORG-SKY-1547",
+      "DASTAK-DL-LWN-3P-FB-322",
+      "DASTAK-DL-LWN-3P-FB-323",
+      "DASTAK-DL-LWN-3P-FB-324",
+      "DASTAK-DL-LWN-3P-FB-325",
+      "JAVERIA-ORG-OFWHT-3P-04",
+      "MUSE-SILK-3P-14371-A",
+      "MUSE-SILK-3P-14371-B"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -76,9 +76,29 @@
     "brokenInternalLinks": [],
     "removedProducts": [
       {
+        "code": "ABRISH-2PLWN-V1-ABR-14",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 14",
+        "path": "products/abrish-2plwn-v1-abr-14-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
         "code": "ABRISH-2PLWN-V2-ABR-02",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 2",
         "path": "products/abrish-2plwn-v2-abr-02-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
+        "code": "ABRISH-2PLWN-V1-ABR-22",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 22",
+        "path": "products/abrish-2plwn-v1-abr-22-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
+        "code": "ABRISH-2PLWN-V1-ABR-46",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 46",
+        "path": "products/abrish-2plwn-v1-abr-46-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
+        "code": "ABRISH-2PLWN-V1-ABR-51",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 51",
+        "path": "products/abrish-2plwn-v1-abr-51-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
         "code": "ABRISH-2PLWN-V2-ABR-06",
@@ -106,6 +126,11 @@
         "path": "products/eid-aifa-lklwn-3p-ae-1103-aifa-luxury-emb-laserkari-dyed-lawn-3pc/"
       },
       {
+        "code": "AIFA-PARROT-LWNEMB-902",
+        "name": "Aifa Printed & Embroidered Lawn 3PC — 902",
+        "path": "products/aifa-parrot-lwnemb-902-aifa-printed-and-embroidered-lawn-3pc/"
+      },
+      {
         "code": "AIFA-SKIN-LWNEMB-910",
         "name": "Aifa Printed & Embroidered Lawn 3PC — 910",
         "path": "products/aifa-skin-lwnemb-910-aifa-printed-and-embroidered-lawn-3pc/"
@@ -129,6 +154,16 @@
         "code": "ALKARAM-3PLWN-V10-SKIN-AHMD-3",
         "name": "Alkaram Classic Digital Printed Lawn 3PC — 3",
         "path": "products/alkaram-3plwn-v10-skin-ahmd-3-alkaram-classic-digital-printed-lawn-3pc/"
+      },
+      {
+        "code": "ALKARAM-3PLWN-V10-BLUE-AHMD-7",
+        "name": "Alkaram Classic Digital Printed Lawn 3PC — 7",
+        "path": "products/alkaram-3plwn-v10-blue-ahmd-7-alkaram-classic-digital-printed-lawn-3pc/"
+      },
+      {
+        "code": "ALKARAM-3PLWN-V10-WHITE-AHMD-9",
+        "name": "Alkaram Classic Digital Printed Lawn 3PC — 9",
+        "path": "products/alkaram-3plwn-v10-white-ahmd-9-alkaram-classic-digital-printed-lawn-3pc/"
       },
       {
         "code": "ALKARAM-LWN-V1-3P-LDS-03",
@@ -164,41 +199,6 @@
         "code": "ALKARAM-3PLWN-V7-AHMD-07",
         "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
         "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "ALKARAM-3PLWN-V8-AHMD-07",
-        "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
-        "path": "products/alkaram-3plwn-v8-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "ALKARAM-3PLWN-V7-AHMD-08",
-        "name": "Alkaram Studio Digital Printed Lawn 3PC — 8",
-        "path": "products/alkaram-3plwn-v7-ahmd-08-alkaram-studio-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "ALKARAM-LWN-BEIGE-3P-01",
-        "name": "Fall By Alkaram Digital Printed Lawn 3PC — 1",
-        "path": "products/alkaram-lwn-beige-3p-01-fall-by-alkaram-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "SEHER-EMB-LWN-3P-01",
-        "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 1",
-        "path": "products/seher-emb-lwn-3p-01-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-      },
-      {
-        "code": "SEHER-EMB-LWN-3P-10",
-        "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 10",
-        "path": "products/seher-emb-lwn-3p-10-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-      },
-      {
-        "code": "SEHER-EMB-LWN-3P-02",
-        "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 2",
-        "path": "products/seher-emb-lwn-3p-02-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
-      },
-      {
-        "code": "SEHER-EMB-LWN-3P-03",
-        "name": "Almeerah Emb Lawn Suit with Cutwork Dupatta — 3",
-        "path": "products/seher-emb-lwn-3p-03-almeerah-emb-lawn-suit-with-cutwork-dupatta/"
       }
     ]
   },
