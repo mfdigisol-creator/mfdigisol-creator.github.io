@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-05T15:17:01.406Z",
+  "generatedAt": "2026-09-06T04:43:40.761Z",
   "summary": {
-    "products": 370,
-    "removedProducts": 1362,
-    "brands": 57,
-    "collectionPages": 59,
-    "sitemapUrls": 432,
-    "metaFeedRows": 356,
-    "metadataPages": 370,
-    "internalHtmlFiles": 1797,
+    "products": 335,
+    "removedProducts": 1406,
+    "brands": 46,
+    "collectionPages": 48,
+    "sitemapUrls": 386,
+    "metaFeedRows": 321,
+    "metadataPages": 335,
+    "internalHtmlFiles": 1795,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "63 products currently lack retained supplier description text."
+    "48 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -43,20 +43,15 @@
       }
     ],
     "missingDescriptions": [
-      "ALKARAM-3PLWN-V10-RED-AHMD-4",
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-12",
-      "FLOWS-ALMRH-LWN-CT-3P-13",
       "FLOWS-ALMRH-LWN-CT-3P-14",
       "FLOWS-ALMRH-LWN-CT-3P-16",
       "BONANZA-2PLWN-V1-ABR-04",
       "BONANZA-2PLWN-V1-ABR-06",
-      "CHINYERE-2PLWN-V1-ABR-18",
+      "CROSS-2PLWN-V2-ABR-10",
       "CROSS-2PLWN-V2-ABR-11",
       "CROSS-2PLWN-V2-ABR-02",
-      "CROSS-2PLWN-V2-ABR-05",
       "CROSS-2PLWN-V2-ABR-06",
-      "CROSS-2PLWN-V2-ABR-09",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
       "AIRA-ORG-PURP-1547",
@@ -67,7 +62,12 @@
       "DASTAK-DL-LWN-3P-FB-325",
       "JAVERIA-ORG-OFWHT-3P-04",
       "MUSE-SILK-3P-14371-A",
-      "MUSE-SILK-3P-14371-B"
+      "MUSE-SILK-3P-14371-B",
+      "MUSE-SILK-3P-14371-C",
+      "MUSE-SILK-3P-14371-D",
+      "SINGHAR-SILK-SKIN-3P-FB258",
+      "ELAN-2PLWN-V1-ABR-01",
+      "ELAN-2PLWN-V1-ABR-14"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -156,6 +156,11 @@
         "path": "products/alkaram-3plwn-v10-skin-ahmd-3-alkaram-classic-digital-printed-lawn-3pc/"
       },
       {
+        "code": "ALKARAM-3PLWN-V10-RED-AHMD-4",
+        "name": "Alkaram Classic Digital Printed Lawn 3PC — 4",
+        "path": "products/alkaram-3plwn-v10-red-ahmd-4-alkaram-classic-digital-printed-lawn-3pc/"
+      },
+      {
         "code": "ALKARAM-3PLWN-V10-BLUE-AHMD-7",
         "name": "Alkaram Classic Digital Printed Lawn 3PC — 7",
         "path": "products/alkaram-3plwn-v10-blue-ahmd-7-alkaram-classic-digital-printed-lawn-3pc/"
@@ -194,11 +199,6 @@
         "code": "ALKARAM-3PLWN-V8-AHMD-06",
         "name": "Alkaram Studio Digital Printed Lawn 3PC — 6",
         "path": "products/alkaram-3plwn-v8-ahmd-06-alkaram-studio-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "ALKARAM-3PLWN-V7-AHMD-07",
-        "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
-        "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
       }
     ]
   },
