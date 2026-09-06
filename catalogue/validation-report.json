@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-06T04:43:40.761Z",
+  "generatedAt": "2026-09-06T15:30:15.174Z",
   "summary": {
-    "products": 335,
-    "removedProducts": 1406,
-    "brands": 46,
-    "collectionPages": 48,
-    "sitemapUrls": 386,
-    "metaFeedRows": 321,
-    "metadataPages": 335,
-    "internalHtmlFiles": 1795,
+    "products": 312,
+    "removedProducts": 1429,
+    "brands": 40,
+    "collectionPages": 42,
+    "sitemapUrls": 357,
+    "metaFeedRows": 299,
+    "metadataPages": 312,
+    "internalHtmlFiles": 1789,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "48 products currently lack retained supplier description text."
+    "36 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -44,11 +44,7 @@
     ],
     "missingDescriptions": [
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-14",
-      "FLOWS-ALMRH-LWN-CT-3P-16",
-      "BONANZA-2PLWN-V1-ABR-04",
       "BONANZA-2PLWN-V1-ABR-06",
-      "CROSS-2PLWN-V2-ABR-10",
       "CROSS-2PLWN-V2-ABR-11",
       "CROSS-2PLWN-V2-ABR-02",
       "CROSS-2PLWN-V2-ABR-06",
@@ -65,9 +61,13 @@
       "MUSE-SILK-3P-14371-B",
       "MUSE-SILK-3P-14371-C",
       "MUSE-SILK-3P-14371-D",
-      "SINGHAR-SILK-SKIN-3P-FB258",
       "ELAN-2PLWN-V1-ABR-01",
-      "ELAN-2PLWN-V1-ABR-14"
+      "ELAN-2PLWN-V1-ABR-03",
+      "KHAADI-2PLWN-V1-ABR-07",
+      "LIMELIGHT-2PLWN-V2-ABR-15",
+      "DASTAN-CKLWN-3P-NRJ-01",
+      "DASTAN-CKLWN-3P-NRJ-02",
+      "DASTAN-CKLWN-3P-NRJ-07"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
