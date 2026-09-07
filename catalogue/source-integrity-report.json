@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-07T04:46:40.936Z",
+  "generatedAt": "2026-09-07T17:45:30.329Z",
   "summary": {
-    "products": 309,
-    "available": 298,
-    "formal": 50,
+    "products": 308,
+    "available": 296,
+    "formal": 49,
     "luxury": 259,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 298,
-    "canonicalBrands": 40,
+    "metaFeedProducts": 297,
+    "canonicalBrands": 38,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 9,
     "classificationConflicts": 4,
     "unspecifiedPieces": 18,
-    "removedProducts": 1432,
-    "newlyRemovedProducts": 3,
+    "removedProducts": 1433,
+    "newlyRemovedProducts": 4,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -84,19 +84,24 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "AROOB-DL-SILK-TPINK-FB-314",
-      "name": "Aroob | Lava Silk | Dressline — FB-314",
-      "path": "products/aroob-dl-silk-tpink-fb-314-aroob-lava-silk-dressline/"
+      "code": "BONANZA-2PLWN-V1-ABR-06",
+      "name": "Bonanza Satrangi Digital Printed All Over Two Piece Lawn 2PC — 6",
+      "path": "products/bonanza-2plwn-v1-abr-06-bonanza-satrangi-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "AROOB-DL-SILK-PINK-FB-316",
-      "name": "Aroob | Lava Silk | Dressline — FB-316",
-      "path": "products/aroob-dl-silk-pink-fb-316-aroob-lava-silk-dressline/"
+      "code": "KHAADI-2PLWN-V1-ABR-07",
+      "name": "Khaadi Digital Printed All Over Two Piece Lawn 2PC — 7",
+      "path": "products/khaadi-2plwn-v1-abr-07-khaadi-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "MARIAB-LWN-3P-1916",
-      "name": "Maria B Plain Embroidered Lawn 3PC — 1916",
-      "path": "products/mariab-lwn-3p-1916-maria-b-plain-embroidered-lawn-3pc/"
+      "code": "CROSS-2PLWN-V2-ABR-02",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 2",
+      "path": "products/cross-2plwn-v2-abr-02-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "IMP-EMBCK-SKIN-2P-ABR-06",
+      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
+      "path": "products/imp-embck-skin-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
     }
   ]
 }

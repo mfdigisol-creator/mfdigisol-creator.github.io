@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-07T04:46:43.513Z",
+  "generatedAt": "2026-09-07T17:45:33.338Z",
   "summary": {
-    "products": 309,
-    "removedProducts": 1432,
-    "brands": 40,
-    "collectionPages": 42,
-    "sitemapUrls": 354,
-    "metaFeedRows": 298,
-    "metadataPages": 309,
-    "internalHtmlFiles": 1789,
+    "products": 308,
+    "removedProducts": 1433,
+    "brands": 38,
+    "collectionPages": 40,
+    "sitemapUrls": 351,
+    "metaFeedRows": 297,
+    "metadataPages": 308,
+    "internalHtmlFiles": 1787,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "36 products currently lack retained supplier description text."
+    "34 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -44,9 +44,7 @@
     ],
     "missingDescriptions": [
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "BONANZA-2PLWN-V1-ABR-06",
       "CROSS-2PLWN-V2-ABR-11",
-      "CROSS-2PLWN-V2-ABR-02",
       "CROSS-2PLWN-V2-ABR-06",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
@@ -63,11 +61,13 @@
       "MUSE-SILK-3P-14371-D",
       "ELAN-2PLWN-V1-ABR-01",
       "ELAN-2PLWN-V1-ABR-03",
-      "KHAADI-2PLWN-V1-ABR-07",
       "LIMELIGHT-2PLWN-V2-ABR-15",
       "DASTAN-CKLWN-3P-NRJ-01",
       "DASTAN-CKLWN-3P-NRJ-02",
-      "DASTAN-CKLWN-3P-NRJ-07"
+      "DASTAN-CKLWN-3P-NRJ-07",
+      "DASTAN-CKLWN-3P-NRJ-08",
+      "LIFESTYLE-RR-ASTER-3P-BL-2",
+      "LIFESTYLE-RR-LUNA-3P-BL-9"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
