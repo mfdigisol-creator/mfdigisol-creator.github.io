@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-07T17:45:33.338Z",
+  "generatedAt": "2026-09-08T04:41:57.978Z",
   "summary": {
-    "products": 308,
-    "removedProducts": 1433,
-    "brands": 38,
-    "collectionPages": 40,
-    "sitemapUrls": 351,
-    "metaFeedRows": 297,
-    "metadataPages": 308,
-    "internalHtmlFiles": 1787,
+    "products": 397,
+    "removedProducts": 1406,
+    "brands": 57,
+    "collectionPages": 59,
+    "sitemapUrls": 459,
+    "metaFeedRows": 386,
+    "metadataPages": 397,
+    "internalHtmlFiles": 1868,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "34 products currently lack retained supplier description text."
+    "57 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -43,7 +43,15 @@
       }
     ],
     "missingDescriptions": [
+      "ABRISH-2PLWN-V1-ABR-16",
+      "ABRISH-2PLWN-V1-ABR-03",
+      "ABRISH-2PLWN-V1-ABR-05",
       "FLEUR-ALMRH-LWN-CT-3P-09",
+      "FLOWS-ALMRH-LWN-CT-3P-12",
+      "FLOWS-ALMRH-LWN-CT-3P-13",
+      "FLOWS-ALMRH-LWN-CT-3P-14",
+      "BONANZA-2PLWN-V1-ABR-01",
+      "CHINYERE-2PLWN-V1-ABR-06",
       "CROSS-2PLWN-V2-ABR-11",
       "CROSS-2PLWN-V2-ABR-06",
       "AIRA-ORG-PISTA-1547",
@@ -59,15 +67,7 @@
       "MUSE-SILK-3P-14371-B",
       "MUSE-SILK-3P-14371-C",
       "MUSE-SILK-3P-14371-D",
-      "ELAN-2PLWN-V1-ABR-01",
-      "ELAN-2PLWN-V1-ABR-03",
-      "LIMELIGHT-2PLWN-V2-ABR-15",
-      "DASTAN-CKLWN-3P-NRJ-01",
-      "DASTAN-CKLWN-3P-NRJ-02",
-      "DASTAN-CKLWN-3P-NRJ-07",
-      "DASTAN-CKLWN-3P-NRJ-08",
-      "LIFESTYLE-RR-ASTER-3P-BL-2",
-      "LIFESTYLE-RR-LUNA-3P-BL-9"
+      "BONANZA-2PLWN-V1-ABR-12"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

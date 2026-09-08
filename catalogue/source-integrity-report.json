@@ -1,28 +1,32 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-07T17:45:30.329Z",
+  "generatedAt": "2026-09-08T04:41:53.886Z",
   "summary": {
-    "products": 308,
-    "available": 296,
-    "formal": 49,
+    "products": 397,
+    "available": 385,
+    "formal": 138,
     "luxury": 259,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 297,
-    "canonicalBrands": 38,
+    "metaFeedProducts": 386,
+    "canonicalBrands": 57,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 9,
+    "duplicateNames": 10,
     "classificationConflicts": 4,
     "unspecifiedPieces": 18,
-    "removedProducts": 1433,
-    "newlyRemovedProducts": 4,
+    "removedProducts": 1406,
+    "newlyRemovedProducts": 3,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
   "duplicateCodes": [],
   "duplicatePaths": [],
   "duplicateNames": [
+    {
+      "value": "bin saeed digital printed lawn 3pc — 3",
+      "count": 2
+    },
     {
       "value": "aira | organza | dressline — 1547",
       "count": 4
@@ -57,7 +61,7 @@
     },
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
-      "count": 2
+      "count": 3
     }
   ],
   "classificationConflicts": [
@@ -84,24 +88,19 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "BONANZA-2PLWN-V1-ABR-06",
-      "name": "Bonanza Satrangi Digital Printed All Over Two Piece Lawn 2PC — 6",
-      "path": "products/bonanza-2plwn-v1-abr-06-bonanza-satrangi-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "MALIHA-ANAYANOOR-S26-AN-05",
+      "name": "Maliha By Anaya Noor Emb Lawn 3PC — 5",
+      "path": "products/maliha-anayanoor-s26-an-05-maliha-by-anaya-noor-emb-lawn-3pc/"
     },
     {
-      "code": "KHAADI-2PLWN-V1-ABR-07",
-      "name": "Khaadi Digital Printed All Over Two Piece Lawn 2PC — 7",
-      "path": "products/khaadi-2plwn-v1-abr-07-khaadi-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "ZARA-2PLWN-V1-ABR-12",
+      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 12",
+      "path": "products/zara-2plwn-v1-abr-12-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "CROSS-2PLWN-V2-ABR-02",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 2",
-      "path": "products/cross-2plwn-v2-abr-02-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "IMP-EMBCK-SKIN-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-skin-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
+      "code": "ELAN-2PLWN-V1-ABR-01",
+      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 1",
+      "path": "products/elan-2plwn-v1-abr-01-elan-digital-printed-all-over-two-piece-lawn-2pc/"
     }
   ]
 }
