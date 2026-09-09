@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-09T04:46:45.657Z",
+  "generatedAt": "2026-09-09T16:41:14.430Z",
   "summary": {
-    "products": 306,
-    "removedProducts": 1499,
-    "brands": 39,
-    "collectionPages": 41,
-    "sitemapUrls": 350,
-    "metaFeedRows": 295,
-    "metadataPages": 306,
-    "internalHtmlFiles": 1852,
+    "products": 307,
+    "removedProducts": 1504,
+    "brands": 40,
+    "collectionPages": 42,
+    "sitemapUrls": 352,
+    "metaFeedRows": 296,
+    "metadataPages": 307,
+    "internalHtmlFiles": 1859,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "31 products currently lack retained supplier description text."
+    "29 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -58,7 +58,6 @@
       "MUSE-SILK-3P-14371-B",
       "MUSE-SILK-3P-14371-C",
       "MUSE-SILK-3P-14371-D",
-      "ELAN-2PLWN-V1-ABR-01",
       "ELAN-2PLWN-V1-ABR-03",
       "LIMELIGHT-2PLWN-V2-ABR-15",
       "DASTAN-CKLWN-3P-NRJ-01",
@@ -67,7 +66,8 @@
       "DASTAN-CKLWN-3P-NRJ-08",
       "LIFESTYLE-RR-LUNA-3P-BL-9",
       "CRIMSON-BLK-3PC-AK15",
-      "CRIMSON-BLUE-3PC-AK15"
+      "CRIMSON-BLUE-3PC-AK15",
+      "CRIMSON-MUST-3PC-AK15"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
