@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-10T04:47:09.413Z",
+  "generatedAt": "2026-09-10T16:27:04.759Z",
   "summary": {
-    "products": 305,
-    "available": 293,
-    "formal": 51,
-    "luxury": 254,
+    "products": 312,
+    "available": 300,
+    "formal": 60,
+    "luxury": 252,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 295,
-    "canonicalBrands": 39,
+    "metaFeedProducts": 302,
+    "canonicalBrands": 45,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 9,
     "classificationConflicts": 4,
-    "unspecifiedPieces": 17,
-    "removedProducts": 1506,
-    "newlyRemovedProducts": 2,
+    "unspecifiedPieces": 16,
+    "removedProducts": 1503,
+    "newlyRemovedProducts": 5,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -84,14 +84,29 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "AROOB-DL-SILK-FEROZ-FB-314",
-      "name": "Aroob | Lava Silk | Dressline — FB-314",
-      "path": "products/aroob-dl-silk-feroz-fb-314-aroob-lava-silk-dressline/"
+      "code": "ZARQOON-ORG-GOLD-3P-FB-270",
+      "name": "Zarqoon | Organza | Dressline — FB-270",
+      "path": "products/zarqoon-org-gold-3p-fb-270-zarqoon-organza-dressline/"
     },
     {
-      "code": "RAHAT-LWN-V3-3P-02",
-      "name": "Rahat By Janan Digital Printed Lawn 3PC — 2",
-      "path": "products/rahat-lwn-v3-3p-02-rahat-by-janan-digital-printed-lawn-3pc/"
+      "code": "SUMERQUEN-LWN-V2-3P-SQ-12",
+      "name": "Summer Queen By Parishay Vol-2 | Lawn'26 — SQ-12",
+      "path": "products/sumerquen-lwn-v2-3p-sq-12-summer-queen-by-parishay-vol-2-lawn-26/"
+    },
+    {
+      "code": "MAUSUM-3PLWN-V1-ONYX-HM-02",
+      "name": "Mausummery Digital Printed Lawn 3PC — 2",
+      "path": "products/mausum-3plwn-v1-onyx-hm-02-mausummery-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "ELAF-3PLWN-V2-UK-EPV-3A",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-3A",
+      "path": "products/elaf-3plwn-v2-uk-epv-3a-elaf-premium-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "ELAN-2PLWN-V1-ABR-03",
+      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 3",
+      "path": "products/elan-2plwn-v1-abr-03-elan-digital-printed-all-over-two-piece-lawn-2pc/"
     }
   ]
 }
