@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-09T16:41:11.824Z",
+  "generatedAt": "2026-09-10T04:47:09.413Z",
   "summary": {
-    "products": 307,
-    "available": 295,
-    "formal": 52,
-    "luxury": 255,
-    "priceOnEnquiry": 11,
-    "metaFeedProducts": 296,
-    "canonicalBrands": 40,
+    "products": 305,
+    "available": 293,
+    "formal": 51,
+    "luxury": 254,
+    "priceOnEnquiry": 10,
+    "metaFeedProducts": 295,
+    "canonicalBrands": 39,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 9,
     "classificationConflicts": 4,
     "unspecifiedPieces": 17,
-    "removedProducts": 1504,
-    "newlyRemovedProducts": 5,
+    "removedProducts": 1506,
+    "newlyRemovedProducts": 2,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -84,29 +84,14 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "SERA-LAWN-3P-SP-09",
-      "name": "Sera By Mahnur | Lawn'26 — SP-09",
-      "path": "products/sera-lawn-3p-sp-09-sera-by-mahnur-lawn-26/"
+      "code": "AROOB-DL-SILK-FEROZ-FB-314",
+      "name": "Aroob | Lava Silk | Dressline — FB-314",
+      "path": "products/aroob-dl-silk-feroz-fb-314-aroob-lava-silk-dressline/"
     },
     {
-      "code": "ANEELAS-LWN-MERN-3P-HA-306",
-      "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 306",
-      "path": "products/aneelas-lwn-mern-3p-ha-306-aneelas-embroiderd-and-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "PAYAL-DL-LWN-3P-FB-360-A",
-      "name": "Payal | Lawn | Dressline — FB-360-A",
-      "path": "products/payal-dl-lwn-3p-fb-360-a-payal-lawn-dressline/"
-    },
-    {
-      "code": "ZARA-2PLWN-V1-ABR-20",
-      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 20",
-      "path": "products/zara-2plwn-v1-abr-20-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "ELAN-2PLWN-V1-ABR-01",
-      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 1",
-      "path": "products/elan-2plwn-v1-abr-01-elan-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "RAHAT-LWN-V3-3P-02",
+      "name": "Rahat By Janan Digital Printed Lawn 3PC — 2",
+      "path": "products/rahat-lwn-v3-3p-02-rahat-by-janan-digital-printed-lawn-3pc/"
     }
   ]
 }
