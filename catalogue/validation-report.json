@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-10T16:27:08.952Z",
+  "generatedAt": "2026-09-11T04:45:10.066Z",
   "summary": {
-    "products": 312,
-    "removedProducts": 1503,
-    "brands": 45,
-    "collectionPages": 47,
-    "sitemapUrls": 362,
-    "metaFeedRows": 302,
-    "metadataPages": 312,
-    "internalHtmlFiles": 1867,
+    "products": 305,
+    "removedProducts": 1510,
+    "brands": 41,
+    "collectionPages": 43,
+    "sitemapUrls": 351,
+    "metaFeedRows": 295,
+    "metadataPages": 305,
+    "internalHtmlFiles": 1863,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "32 products currently lack retained supplier description text."
+    "29 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -43,12 +43,9 @@
       }
     ],
     "missingDescriptions": [
-      "ABRISH-2PLWN-V2-ABR-02",
       "FLEUR-ALMRH-LWN-CT-3P-09",
       "BONANZA-2PLWN-V1-ABR-06",
       "CROSS-2PLWN-V1-ABR-13",
-      "CROSS-2PLWN-V2-ABR-11",
-      "CROSS-2PLWN-V2-ABR-06",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
       "AIRA-ORG-PURP-1547",
@@ -67,7 +64,10 @@
       "DASTAN-CKLWN-3P-NRJ-02",
       "DASTAN-CKLWN-3P-NRJ-07",
       "DASTAN-CKLWN-3P-NRJ-08",
-      "LIFESTYLE-RR-LUNA-3P-BL-9"
+      "LIFESTYLE-RR-LUNA-3P-BL-9",
+      "CRIMSON-BLK-3PC-AK15",
+      "CRIMSON-BLUE-3PC-AK15",
+      "CRIMSON-MUST-3PC-AK15"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -84,6 +84,11 @@
         "code": "ABRISH-2PLWN-V1-ABR-16",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 16",
         "path": "products/abrish-2plwn-v1-abr-16-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
+        "code": "ABRISH-2PLWN-V2-ABR-02",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 2",
+        "path": "products/abrish-2plwn-v2-abr-02-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
         "code": "ABRISH-2PLWN-V1-ABR-22",
@@ -194,11 +199,6 @@
         "code": "ALKARAM-LWN-V1-3P-LDS-06",
         "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 6",
         "path": "products/alkaram-lwn-v1-3p-lds-06-alkaram-spring-summer-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "ALKARAM-LWN-V2-3P-LDS-06",
-        "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 6",
-        "path": "products/alkaram-lwn-v2-3p-lds-06-alkaram-spring-summer-digital-printed-lawn-3pc/"
       }
     ]
   },
