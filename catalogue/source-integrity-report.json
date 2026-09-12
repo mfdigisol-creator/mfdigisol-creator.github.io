@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-11T16:31:13.011Z",
+  "generatedAt": "2026-09-12T04:39:24.534Z",
   "summary": {
-    "products": 303,
-    "available": 291,
-    "formal": 51,
-    "luxury": 252,
-    "priceOnEnquiry": 10,
-    "metaFeedProducts": 293,
-    "canonicalBrands": 38,
+    "products": 494,
+    "available": 481,
+    "formal": 221,
+    "luxury": 273,
+    "priceOnEnquiry": 11,
+    "metaFeedProducts": 483,
+    "canonicalBrands": 71,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 9,
-    "classificationConflicts": 4,
-    "unspecifiedPieces": 16,
-    "removedProducts": 1513,
-    "newlyRemovedProducts": 5,
+    "duplicateNames": 12,
+    "classificationConflicts": 8,
+    "unspecifiedPieces": 17,
+    "removedProducts": 1409,
+    "newlyRemovedProducts": 13,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -44,7 +44,7 @@
       "count": 3
     },
     {
-      "value": "imported embroidered & digital lawn 2pc — 8",
+      "value": "imported chikenkari digital lawn 2pc — 7",
       "count": 2
     },
     {
@@ -53,14 +53,36 @@
     },
     {
       "value": "imported emb chickenkari lawn 2pc — 5",
-      "count": 5
+      "count": 6
+    },
+    {
+      "value": "imported emb chickenkari lawn 2pc — 6",
+      "count": 7
     },
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
       "count": 3
+    },
+    {
+      "value": "imported emb chickenkari lawn 3pc — 30",
+      "count": 2
+    },
+    {
+      "value": "pinterest plain emb allover two piece lawn 2pc — 1",
+      "count": 2
     }
   ],
   "classificationConflicts": [
+    {
+      "code": "AGHA-EMB-PLAIN-3P-1882",
+      "name": "Agha Noor Luxury Embroidered Lawn 3PC — 1882",
+      "category": "Formal"
+    },
+    {
+      "code": "ANEELAS-LUX-S26-D-64",
+      "name": "Aneelas Luxury Embroidered Lawn 3PC — 64",
+      "category": "Formal"
+    },
     {
       "code": "JAZMIN-S26-JZ-D05",
       "name": "Jazmin Luxury Embroidered Lawn 3PC — D05",
@@ -77,6 +99,16 @@
       "category": "Formal"
     },
     {
+      "code": "QALAMKAR-S26-RP-15",
+      "name": "Qalamkar Luxury Embroidered Lawn 3PC — RP-15",
+      "category": "Formal"
+    },
+    {
+      "code": "SAIRARZ-EMB-LWN-3P-1886",
+      "name": "Saira Rizwan Luxury Embroidered Lawn 3PC — 1886",
+      "category": "Formal"
+    },
+    {
       "code": "ZS-3P-EMB-D-1032",
       "name": "Zara Shahjahan Emb Luxury Lawn 3PC",
       "category": "Formal"
@@ -84,29 +116,69 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "BONANZA-2PLWN-V1-ABR-06",
-      "name": "Bonanza Satrangi Digital Printed All Over Two Piece Lawn 2PC — 6",
-      "path": "products/bonanza-2plwn-v1-abr-06-bonanza-satrangi-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "PANACHE-DL-ORG-14290-A",
+      "name": "Panache | Organza | Dressline — 14290-A",
+      "path": "products/panache-dl-org-14290-a-panache-organza-dressline/"
     },
     {
-      "code": "KAYSERIA-3PLWN-V13-LALA-X7142-R",
-      "name": "Kayseria Digital Printed Lawn 3PC — X7142-R",
-      "path": "products/kayseria-3plwn-v13-lala-x7142-r-kayseria-digital-printed-lawn-3pc/"
+      "code": "SATRANGI-MHN-LWN-ST-09",
+      "name": "Satrangi By Mahnur | Lawn'26 — ST-09",
+      "path": "products/satrangi-mhn-lwn-st-09-satrangi-by-mahnur-lawn-26/"
     },
     {
-      "code": "ANEELAS-LWN-BLCK-3P-HA-306",
-      "name": "Aneelas Embroiderd & Digital Printed Lawn With Patches 3PC — 306",
-      "path": "products/aneelas-lwn-blck-3p-ha-306-aneelas-embroiderd-and-digital-printed-lawn-with-patches-3pc/"
+      "code": "DILERAQSUM-PARSHY-DQ-10",
+      "name": "Dil-e-Raqsum By Parishay | Lawn'26 — DQ-10",
+      "path": "products/dileraqsum-parshy-dq-10-dil-e-raqsum-by-parishay-lawn-26/"
     },
     {
-      "code": "BAROQUE-LWN-V2-3P-AHMD-D6067",
-      "name": "Baroque Digital Printed Lawn 3PC — D6067",
-      "path": "products/baroque-lwn-v2-3p-ahmd-d6067-baroque-digital-printed-lawn-3pc/"
+      "code": "PAYAL-DL-LWN-3P-FB-360-B",
+      "name": "Payal | Lawn | Dressline — FB-360-B",
+      "path": "products/payal-dl-lwn-3p-fb-360-b-payal-lawn-dressline/"
     },
     {
-      "code": "CROSS-2PLWN-V1-ABR-13",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 13",
-      "path": "products/cross-2plwn-v1-abr-13-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "SIRENE-LWN-3P-S-04",
+      "name": "Sirene By Mahnur | Lawn'26 — S-04",
+      "path": "products/sirene-lwn-3p-s-04-sirene-by-mahnur-lawn-26/"
+    },
+    {
+      "code": "FLORENT-LWN-FZ-7B",
+      "name": "Florent Embroidered | Lawn'26 — FZ-7B",
+      "path": "products/florent-lwn-fz-7b-florent-embroidered-lawn-26/"
+    },
+    {
+      "code": "IMP-EMBCK-LEMN-2P-ABR-08",
+      "name": "Imported Embroidered & Digital Lawn 2PC — 8",
+      "path": "products/imp-embck-lemn-2p-abr-08-imported-embroidered-and-digital-lawn-2pc/"
+    },
+    {
+      "code": "SAHIBA-CKLWN-V17-3P-PF-636",
+      "name": "Sahiba By Pak Fabrics Printed & Emb Chickenkari Lawn 3PC — D-636",
+      "path": "products/sahiba-cklwn-v17-3p-pf-636-sahiba-by-pak-fabrics-printed-and-emb-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "RANG-E-SERMA-SAR-11",
+      "name": "Rang-e-Sarma | Parishay | Khaddar — 11",
+      "path": "products/rang-e-serma-sar-11-rang-e-sarma-parishay-khaddar/"
+    },
+    {
+      "code": "RANG-E-SERMA-SAR-12",
+      "name": "Rang-e-Sarma | Parishay | Khaddar — 12",
+      "path": "products/rang-e-serma-sar-12-rang-e-sarma-parishay-khaddar/"
+    },
+    {
+      "code": "CHINYERE-2PLWN-V2-ABR-01",
+      "name": "Chinyere Digital Printed All Over Two Piece Lawn 2PC — 1",
+      "path": "products/chinyere-2plwn-v2-abr-01-chinyere-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "IMP-EMBCK-BPINK-2P-ABR-14",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 14",
+      "path": "products/imp-embck-bpink-2p-abr-14-imported-emb-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "MARIAB-BFLY-EMB-2P-AC-04",
+      "name": "Maria B Butterfly Emb Lawn Shirt & Trouser 2PC — 4",
+      "path": "products/mariab-bfly-emb-2p-ac-04-maria-b-butterfly-emb-lawn-shirt-and-trouser-2pc/"
     }
   ]
 }
