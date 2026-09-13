@@ -1,0 +1,676 @@
+/* Al Huma Collection — Warm Ivory / Noir theme layer
+   Visual-mass target: 70% Warm Ivory / 20% Noir-Charcoal / 7% Champagne / 3% Gold.
+   This file changes presentation only; commerce and catalogue behavior remain untouched. */
+
+:root {
+  --alhuma-warm-ivory: #F8F5EF;
+  --alhuma-champagne-ivory: #EFE9DE;
+  --alhuma-soft-noir: #171717;
+  --alhuma-warm-charcoal: #5E5A54;
+  --alhuma-deep-noir: #1F211F;
+  --alhuma-muted-gold: #B08A4A;
+  --alhuma-gold-light: #D7C29A;
+  --alhuma-soft-beige: #DDD5C7;
+  --ink: #171717 !important;
+  --charcoal: #5E5A54 !important;
+  --ivory: #F8F5EF !important;
+  --paper: #F8F5EF !important;
+  --gold: #B08A4A !important;
+  --gold-light: #D7C29A !important;
+  --line: #DDD5C7 !important;
+}
+
+body {
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+
+/* Keyboard focus uses strong noir contrast on light surfaces. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--alhuma-deep-noir);
+  outline-offset: 3px;
+}
+.hero a:focus-visible,
+.collections footer a:focus-visible,
+.collection-card button:focus-visible,
+.rail-card:focus-visible {
+  outline-color: var(--alhuma-gold-light);
+}
+
+/* Header: warm ivory, dark typography, gold only as a restrained line/detail. */
+.site-header,
+.site-header.scrolled {
+  background: rgba(248, 245, 239, .96) !important;
+  color: var(--alhuma-soft-noir) !important;
+  border-bottom: 1px solid var(--alhuma-soft-beige) !important;
+  backdrop-filter: blur(16px);
+}
+.site-header .monogram {
+  border-color: var(--alhuma-muted-gold) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.site-header .monogram::after {
+  border-color: var(--alhuma-muted-gold) !important;
+  background: var(--alhuma-warm-ivory) !important;
+}
+.site-header .wordmark small {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.site-nav a,
+.site-nav button,
+.nav-dropdown-toggle,
+.live-nav-dropdown summary {
+  color: var(--alhuma-soft-noir) !important;
+}
+.site-nav a::after,
+.text-button::after {
+  background: var(--alhuma-muted-gold) !important;
+}
+.nav-dropdown-toggle span,
+.live-nav-dropdown summary span {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.nav-dropdown-menu,
+.live-nav-menu {
+  background: rgba(248, 245, 239, .99) !important;
+  border-color: var(--alhuma-soft-beige) !important;
+  color: var(--alhuma-soft-noir) !important;
+  box-shadow: 0 18px 45px rgba(31, 33, 31, .12) !important;
+}
+.nav-dropdown-menu a,
+.live-nav-menu a,
+.live-nav-all {
+  border-color: var(--alhuma-soft-beige) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.nav-dropdown-menu a:hover,
+.live-nav-menu a:hover {
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.nav-dropdown-menu span,
+.nav-dropdown-menu small,
+.live-nav-groups strong,
+.live-nav-all {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.site-header .cart-launcher {
+  border-color: var(--alhuma-deep-noir) !important;
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.site-header .cart-launcher::before {
+  color: var(--alhuma-gold-light) !important;
+}
+.site-header .cart-launcher b {
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-deep-noir) !important;
+}
+.site-header .cart-launcher:hover {
+  border-color: var(--alhuma-soft-noir) !important;
+  background: var(--alhuma-soft-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.site-header .cart-launcher:hover::before {
+  color: var(--alhuma-gold-light) !important;
+}
+.menu-toggle span:not(.sr-only) {
+  background: var(--alhuma-soft-noir) !important;
+}
+.site-header .menu-toggle {
+  color: var(--alhuma-soft-noir) !important;
+}
+
+/* Hero: preserve photography; reduce gold from typography to decorative detail. */
+.hero {
+  color: var(--alhuma-warm-ivory) !important;
+}
+.hero .eyebrow,
+.hero h1,
+.hero h1 em,
+.hero .hero-copy,
+.hero .scroll-cue {
+  color: var(--alhuma-warm-ivory) !important;
+}
+.hero .eyebrow span,
+.hero .scroll-cue i {
+  background: var(--alhuma-muted-gold) !important;
+}
+.hero .button-gold {
+  background: var(--alhuma-deep-noir) !important;
+  border-color: rgba(248, 245, 239, .42) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.hero .button-gold:hover {
+  background: var(--alhuma-soft-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.hero .button-ghost {
+  border-color: rgba(248, 245, 239, .58) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.hero .button-ghost:hover {
+  border-color: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.hero-note span {
+  color: var(--alhuma-gold-light) !important;
+}
+
+/* Light editorial sections. */
+.story,
+.catalogue,
+.recently-viewed,
+.faq-section,
+.order-steps,
+.customer-reviews {
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.order-steps,
+.customer-reviews,
+.recently-viewed {
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.story h2 em,
+.catalogue h2 em,
+.recent-head h2 em,
+.faq-intro h2 em,
+.order-heading h2 em,
+.reviews-heading h2 em,
+.booking-dialog h2 em,
+.gallery-copy h2 em {
+  color: var(--alhuma-soft-noir) !important;
+}
+.eyebrow.dark,
+.story-copy > p:not(.story-lead),
+.catalogue-summary > p,
+.catalogue-results,
+.collection-label > p,
+.product-copy > div > span,
+.recent-card span,
+.faq-intro > p:last-child,
+.faq-list details p,
+.order-heading > p:last-child,
+.order-grid p,
+.order-note,
+.reviews-heading > p:last-child,
+.trust-grid span,
+.review-card p,
+.review-card p span,
+.review-empty p,
+.review-form-head p,
+.review-form label,
+.review-form fieldset {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.story-mark svg {
+  stroke: var(--alhuma-muted-gold) !important;
+}
+.values,
+.values article + article,
+.category-bar,
+.product-copy,
+.faq-section,
+.faq-list details,
+.faq-list details:first-child,
+.gallery-status,
+.live-product-collection + .live-product-collection {
+  border-color: var(--alhuma-soft-beige) !important;
+}
+.values b,
+.category-chip span,
+.collection-label span,
+.recent-card small,
+.faq-list summary span,
+.order-grid span,
+.trust-grid b,
+.review-stars {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.arrow-link,
+.recent-head > button,
+.product-copy a,
+.share-product {
+  border-color: var(--alhuma-muted-gold) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.catalogue-tools,
+.trust-grid,
+.review-form {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.catalogue-tools label,
+.review-form-head span {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.catalogue-tools input,
+.catalogue-tools select,
+.review-form input,
+.review-form textarea {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: #FFFDFA !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.catalogue-tools input:focus,
+.catalogue-tools select:focus,
+.review-form input:focus,
+.review-form textarea:focus {
+  border-color: var(--alhuma-soft-noir) !important;
+  box-shadow: 0 0 0 1px var(--alhuma-soft-noir) !important;
+}
+.catalogue-tools > button,
+.category-chip.active,
+.button-dark {
+  border-color: var(--alhuma-deep-noir) !important;
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.category-chip {
+  border-color: var(--alhuma-soft-beige) !important;
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.product-image,
+.product-gallery,
+.gallery-thumbs {
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.stock,
+.gallery-open {
+  background: rgba(31, 33, 31, .92) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.gallery-open:hover {
+  background: var(--alhuma-soft-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.recent-card,
+.order-grid article,
+.trust-grid article,
+.review-card,
+.review-form,
+.review-empty {
+  background: var(--alhuma-warm-ivory) !important;
+  border-color: var(--alhuma-soft-beige) !important;
+}
+.rating-input label {
+  color: var(--alhuma-soft-beige) !important;
+}
+.rating-input input:checked ~ label,
+.rating-input label:hover,
+.rating-input label:hover ~ label {
+  color: var(--alhuma-muted-gold) !important;
+}
+
+/* Featured editorial rail: light section, photographic cards retain dark overlays. */
+.featured-collections {
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.featured-collections h2,
+.featured-collections h2 em,
+.featured-head {
+  color: var(--alhuma-soft-noir) !important;
+}
+.rail-controls button {
+  border-color: var(--alhuma-soft-beige) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.rail-controls button:hover {
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.rail-hint {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+
+/* Live catalogue: convert dark shop floor to light editorial commerce. */
+.live-catalogue {
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.live-catalogue .eyebrow,
+.live-catalogue-summary,
+.live-sync-meta,
+.live-collection-showcase-head span,
+.live-product-collection-head span,
+.live-product-collection-head p,
+.live-results,
+.live-tools label,
+.live-view {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.live-catalogue .eyebrow span {
+  background: var(--alhuma-muted-gold) !important;
+}
+.live-catalogue h2 em {
+  color: var(--alhuma-soft-noir) !important;
+}
+.live-collection-showcase,
+.live-product-collection + .live-product-collection {
+  border-color: var(--alhuma-soft-beige) !important;
+}
+.live-collection-arrows button {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: transparent !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.live-collection-arrows button:hover {
+  border-color: var(--alhuma-deep-noir) !important;
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.live-collection-slider {
+  scrollbar-color: var(--alhuma-warm-charcoal) var(--alhuma-champagne-ivory) !important;
+}
+.live-collection-slide,
+.live-product {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: #FFFDFA !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.live-collection-slide:hover,
+.live-product:hover {
+  border-color: var(--alhuma-warm-charcoal) !important;
+}
+.live-collection-image,
+.live-product-media {
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.live-collection-image i,
+.live-product-badge {
+  background: rgba(31, 33, 31, .92) !important;
+  color: var(--alhuma-gold-light) !important;
+}
+.live-collection-copy small,
+.live-product-brand,
+.live-price small {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.live-collection-copy b {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.live-tools input,
+.live-tools select,
+.live-tools option {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: #FFFDFA !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.live-chips button,
+.live-filter-summary > button {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: transparent !important;
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.live-price strong {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.live-enquire,
+.live-product > .live-enquire,
+.live-product-collection-head a {
+  color: var(--alhuma-soft-noir) !important;
+  border-color: var(--alhuma-muted-gold) !important;
+}
+.live-add-cart,
+.live-load-more {
+  border-color: var(--alhuma-deep-noir) !important;
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.live-empty {
+  border-color: var(--alhuma-soft-beige) !important;
+  color: var(--alhuma-warm-charcoal) !important;
+  background: var(--alhuma-champagne-ivory) !important;
+}
+
+/* Product quick view and modal surfaces. */
+.live-product-dialog,
+.product-dialog,
+.booking-dialog {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.live-dialog-close {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.live-dialog-gallery,
+.live-dialog-thumbs,
+.product-gallery,
+.gallery-thumbs {
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.live-dialog-thumbs button.active,
+.gallery-thumbs button.active {
+  border-color: var(--alhuma-muted-gold) !important;
+}
+.live-dialog-copy dl,
+.live-dialog-copy dl div,
+.gallery-status {
+  border-color: var(--alhuma-soft-beige) !important;
+}
+.live-dialog-copy dt,
+.live-dialog-price small,
+.live-dialog-note,
+.gallery-copy > p:not(.eyebrow),
+.dialog-intro,
+.booking-dialog label,
+.booking-dialog .field-help {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.live-dialog-price strong,
+.gallery-status strong {
+  color: var(--alhuma-soft-noir) !important;
+}
+.button-outline-dark {
+  border-color: var(--alhuma-soft-noir) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.captcha-field {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.booking-dialog input,
+.booking-dialog select {
+  border-color: var(--alhuma-soft-beige) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+
+/* Cart and secure checkout: palette-only normalization. */
+.cart-drawer,
+.checkout-dialog,
+.checkout-wrap {
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.cart-head,
+.cart-item,
+.cart-summary,
+.checkout-dialog,
+.checkout-total,
+.checkout-security,
+.checkout-measurement {
+  border-color: var(--alhuma-soft-beige) !important;
+}
+.cart-item small,
+.cart-summary small,
+.checkout-wrap > p,
+.checkout-note,
+.checkout-security > small,
+.checkout-status[data-status="info"] {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.cart-qty button {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: transparent !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.cart-checkout,
+.checkout-submit {
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea,
+.checkout-security {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: #FFFDFA !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.checkout-total,
+.checkout-measurement {
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.cart-toast {
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+
+/* Assistant: noir header/CTA, light conversation surfaces, minimal gold. */
+.chat-launcher {
+  border-color: var(--alhuma-deep-noir) !important;
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.chat-launcher span {
+  color: var(--alhuma-gold-light) !important;
+}
+.chat-panel {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.chat-panel > header {
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.chat-message.assistant {
+  background: var(--alhuma-champagne-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.chat-message.customer,
+.chat-form button {
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.chat-actions a,
+.chat-quick button,
+.chat-form,
+.chat-quick,
+.chat-form input {
+  border-color: var(--alhuma-soft-beige) !important;
+}
+.chat-actions a,
+.chat-quick button,
+.chat-note {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+
+/* Final editorial/contact area becomes light; footer remains the deep-noir anchor. */
+.collections {
+  background: var(--alhuma-champagne-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.collection-cta {
+  border-color: var(--alhuma-soft-beige) !important;
+}
+.collection-cta .button-gold {
+  background: var(--alhuma-deep-noir) !important;
+  border-color: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+}
+.contact-section {
+  border-color: var(--alhuma-soft-beige) !important;
+  background: var(--alhuma-warm-ivory) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.contact-intro > p:last-child,
+.contact-details i,
+.social-contact > p,
+.social-contact small,
+.contact-map p {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.contact-details a,
+.social-contact,
+.social-contact a,
+.contact-map {
+  border-color: var(--alhuma-soft-beige) !important;
+}
+.contact-details span,
+.social-contact > p span,
+.social-contact i {
+  color: var(--alhuma-warm-charcoal) !important;
+}
+.social-contact a {
+  color: var(--alhuma-soft-noir) !important;
+  background: transparent !important;
+}
+.social-contact a:hover {
+  border-color: var(--alhuma-warm-charcoal) !important;
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.social-contact b {
+  border-color: var(--alhuma-muted-gold) !important;
+  color: var(--alhuma-soft-noir) !important;
+}
+.contact-map {
+  background: var(--alhuma-champagne-ivory) !important;
+}
+.contact-map span,
+.contact-map a {
+  color: var(--alhuma-soft-noir) !important;
+}
+.contact-map a {
+  border-color: var(--alhuma-muted-gold) !important;
+}
+.collections footer {
+  background: var(--alhuma-deep-noir) !important;
+  color: var(--alhuma-warm-ivory) !important;
+  box-shadow: 0 0 0 100vmax var(--alhuma-deep-noir);
+  clip-path: inset(0 -100vmax);
+  padding-bottom: 2.25rem;
+}
+.collections .footer-brand,
+.collections footer .wordmark,
+.collections footer .monogram,
+.collections footer a {
+  color: var(--alhuma-warm-ivory) !important;
+}
+.collections footer .monogram {
+  border-color: var(--alhuma-muted-gold) !important;
+}
+.collections footer .wordmark small,
+.collections footer > p,
+.collections footer > small,
+.collections .footer-links a {
+  color: rgba(248, 245, 239, .72) !important;
+}
+.collections footer .wordmark small {
+  color: var(--alhuma-gold-light) !important;
+}
+
+/* Mobile navigation remains light and legible. */
+@media (max-width: 900px) {
+  .site-nav {
+    background: rgba(248, 245, 239, .99) !important;
+    border-bottom-color: var(--alhuma-soft-beige) !important;
+  }
+  .site-nav a,
+  .site-nav button {
+    border-bottom-color: var(--alhuma-soft-beige) !important;
+    color: var(--alhuma-soft-noir) !important;
+  }
+  .nav-dropdown-menu {
+    background: var(--alhuma-champagne-ivory) !important;
+  }
+}
