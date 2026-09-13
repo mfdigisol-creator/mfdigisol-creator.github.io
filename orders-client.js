@@ -44,9 +44,9 @@
   }
 
   function configurationError() {
-    if (!['legacy', 'staging'].includes(config.mode)) return 'Invalid order mode';
+    if (!['legacy', 'staging', 'production'].includes(config.mode)) return 'Invalid order mode';
     if (config.mode === 'legacy') return '';
-    if (!endpointIsValid(config.endpoint)) return 'Invalid staging order endpoint';
+    if (!endpointIsValid(config.endpoint)) return 'Invalid secure order endpoint';
     if (!siteKeyIsValid(config.turnstileSiteKey)) return 'Turnstile site key is not configured';
     if (!Number.isInteger(config.consentVersion) || config.consentVersion < 1) return 'Invalid consent version';
     return '';
@@ -153,7 +153,7 @@
   async function submitOrder(input) {
     const problem = configurationError();
     if (problem) throw new OrderSubmissionError('CONFIGURATION_ERROR', problem);
-    if (config.mode !== 'staging') {
+    if (!['staging', 'production'].includes(config.mode)) {
       throw new OrderSubmissionError('LEGACY_MODE', 'The secure order service is not active.');
     }
 

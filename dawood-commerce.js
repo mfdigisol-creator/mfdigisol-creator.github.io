@@ -5,7 +5,7 @@
   const LEGACY_ENDPOINT = 'https://formsubmit.co/alhumacollection@gmail.com';
   const rawMode = window.AL_HUMA_ORDERS_CONFIG?.mode || 'legacy';
   const ordersClient = window.AlHumaOrdersClient;
-  const stagingMode = rawMode === 'staging';
+  const secureMode = ['staging', 'production'].includes(rawMode);
   const legacyMode = rawMode === 'legacy';
   const money = value => value == null ? 'Price on enquiry' : `Rs. ${Number(value).toLocaleString('en-PK')}`;
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({
@@ -160,7 +160,7 @@
   }
 
   async function ensureTurnstile() {
-    if (!stagingMode || turnstileWidgetId !== null) return;
+    if (!secureMode || turnstileWidgetId !== null) return;
     const problem = !ordersClient ? 'Secure ordering code is unavailable.' : ordersClient.configurationError();
     if (problem) {
       setStatus('Secure checkout configuration is incomplete. Please contact us on WhatsApp.', 'error');
@@ -251,7 +251,7 @@
     return `${messages[error.code] || 'Your order could not be submitted. Please try again or contact us on WhatsApp.'}${reference}`;
   }
 
-  async function submitStaging(event) {
+  async function submitSecure(event) {
     event.preventDefault();
     if (submitting) return;
     if (!cart.length) {
@@ -350,7 +350,7 @@
     updateCheckout();
     setStatus();
     dialog.showModal();
-    if (stagingMode) ensureTurnstile();
+    if (secureMode) ensureTurnstile();
   };
 
   city.onchange = () => {
@@ -359,11 +359,11 @@
     updateCheckout();
   };
 
-  if (stagingMode) {
+  if (secureMode) {
     measurement.hidden = false;
     security.hidden = false;
     submitButton.disabled = true;
-    form.addEventListener('submit', submitStaging);
+    form.addEventListener('submit', submitSecure);
   } else if (legacyMode) {
     form.action = LEGACY_ENDPOINT;
     form.addEventListener('submit', event => {
