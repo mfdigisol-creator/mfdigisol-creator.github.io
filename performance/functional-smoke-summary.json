@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-31T21:10:04.511Z",
+  "generatedAt": "2026-09-13T21:19:40.662Z",
   "baseUrl": "http://127.0.0.1:4173",
   "chromePath": "/usr/bin/google-chrome",
   "profiles": [
@@ -16,6 +16,8 @@
         "catalogue-content-versioned",
         "catalogue-search",
         "product-dialog",
+        "product-description",
+        "product-image-loaded",
         "add-to-cart",
         "checkout-dialog",
         "assistant-lazy-load",
@@ -25,11 +27,15 @@
         "no-console-errors"
       ],
       "screenshots": {
-        "hero": 673027,
-        "catalogue": 696260,
-        "productDialog": 70239,
-        "checkout": 76376,
-        "assistant": 417205
+        "hero": 706837,
+        "catalogue": 651415,
+        "productDialog": 646248,
+        "checkout": 77188,
+        "assistant": 229760
+      },
+      "productDescription": {
+        "heading": "Product description",
+        "text": "Aifa Printed Embroidered Lawn Collection 3PC; Printed & Embroidered Lawn Shirt; Printed & Embroidered Voil Dupatta; Printed Cotton Trouser"
       },
       "exceptions": [],
       "consoleErrors": []
@@ -46,6 +52,8 @@
         "catalogue-content-versioned",
         "catalogue-search",
         "product-dialog",
+        "product-description",
+        "product-image-loaded",
         "add-to-cart",
         "checkout-dialog",
         "assistant-lazy-load",
@@ -55,11 +63,15 @@
         "no-console-errors"
       ],
       "screenshots": {
-        "hero": 319531,
-        "catalogue": 1059699,
-        "productDialog": 680983,
-        "checkout": 206075,
-        "assistant": 743992
+        "hero": 405742,
+        "catalogue": 966685,
+        "productDialog": 558999,
+        "checkout": 183169,
+        "assistant": 670206
+      },
+      "productDescription": {
+        "heading": "Product description",
+        "text": "Aifa Printed Embroidered Lawn Collection 3PC; Printed & Embroidered Lawn Shirt; Printed & Embroidered Voil Dupatta; Printed Cotton Trouser"
       },
       "exceptions": [],
       "consoleErrors": []
