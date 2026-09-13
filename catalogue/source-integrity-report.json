@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-13T04:52:37.770Z",
+  "generatedAt": "2026-09-13T16:21:20.341Z",
   "summary": {
-    "products": 334,
-    "available": 321,
-    "formal": 65,
-    "luxury": 269,
-    "priceOnEnquiry": 11,
-    "metaFeedProducts": 323,
-    "canonicalBrands": 43,
+    "products": 315,
+    "available": 304,
+    "formal": 55,
+    "luxury": 260,
+    "priceOnEnquiry": 10,
+    "metaFeedProducts": 305,
+    "canonicalBrands": 40,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 8,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1569,
-    "newlyRemovedProducts": 11,
+    "removedProducts": 1588,
+    "newlyRemovedProducts": 20,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -85,59 +85,104 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "NASHEMAN-ANAYA-NOOR-S26-04",
-      "name": "Nasheman By Anaya Noor Exclusive Heavy Emb Lawn 3PC — 4",
-      "path": "products/nasheman-anaya-noor-s26-04-nasheman-by-anaya-noor-exclusive-heavy-emb-lawn-3pc/"
+      "code": "ANAYANOOR-BD-LWN-BLUE-20",
+      "name": "Anaya Noor Emb Bana Dora Lawn With Daman Patches 3PC — 20",
+      "path": "products/anayanoor-bd-lwn-blue-20-anaya-noor-emb-bana-dora-lawn-with-daman-patches-3pc/"
     },
     {
-      "code": "P&P-ALMRH-LWN-CT-3P-11",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 11",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-11-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
+      "code": "AROOB-DL-SILK-PISTA-FB-316",
+      "name": "Aroob | Lava Silk | Dressline — FB-316",
+      "path": "products/aroob-dl-silk-pista-fb-316-aroob-lava-silk-dressline/"
     },
     {
-      "code": "IMP-EMBCK-PAROT-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-parot-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
+      "code": "KHUWAB-DL-LKLWN-14426-D",
+      "name": "Khuwab | Lawn | Dressline — 14426-D",
+      "path": "products/khuwab-dl-lklwn-14426-d-khuwab-lawn-dressline/"
     },
     {
-      "code": "IMP-EMBCK-PIST-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-pist-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
+      "code": "WADA-DL-LWN-3P-14415-A",
+      "name": "Wada | Lawn | Dressline — 14415-A",
+      "path": "products/wada-dl-lwn-3p-14415-a-wada-lawn-dressline/"
     },
     {
-      "code": "MADHAM-3PLWN-V13-HM-LS-0794",
-      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0794",
-      "path": "products/madham-3plwn-v13-hm-ls-0794-madham-by-lala-digital-printed-airjet-lawn-3pc/"
+      "code": "MONACO-LWN-MN-02",
+      "name": "Monaco By Parishay | Lawn'26 — MN-02",
+      "path": "products/monaco-lwn-mn-02-monaco-by-parishay-lawn-26/"
     },
     {
-      "code": "IMP-EMBCK-PGRN-2P-ABR-12",
-      "name": "Imported Emb Chickenkari Lawn 3PC — 12",
-      "path": "products/imp-embck-pgrn-2p-abr-12-imported-emb-chickenkari-lawn-3pc/"
+      "code": "SUMERQUEN-LWN-V2-3P-SQ-11",
+      "name": "Summer Queen By Parishay Vol-2 | Lawn'26 — SQ-11",
+      "path": "products/sumerquen-lwn-v2-3p-sq-11-summer-queen-by-parishay-vol-2-lawn-26/"
     },
     {
-      "code": "GULAHMED-LWN-V1-3P-LDS-05",
-      "name": "Gul Ahmed Printed Doriya Lawn 3PC — 5",
-      "path": "products/gulahmed-lwn-v1-3p-lds-05-gul-ahmed-printed-doriya-lawn-3pc/"
+      "code": "RR-FEROZI-3PC-AK40",
+      "name": "Rang Rasiya Luxury Embroidered Lawn 3PC — FEROZI",
+      "path": "products/rr-ferozi-3pc-ak40-rang-rasiya-luxury-embroidered-lawn-3pc/"
     },
     {
-      "code": "IMP-EMBCK-FEROZ-2P-ABR-07",
-      "name": "Imported Chikenkari Digital Lawn 2PC — 7",
-      "path": "products/imp-embck-feroz-2p-abr-07-imported-chikenkari-digital-lawn-2pc/"
+      "code": "RR-PEACH-3PC-AK40",
+      "name": "Rang Rasiya Luxury Embroidered Lawn 3PC — PEACH",
+      "path": "products/rr-peach-3pc-ak40-rang-rasiya-luxury-embroidered-lawn-3pc/"
     },
     {
-      "code": "IMP-EMBCK-GREY-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-grey-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
+      "code": "RR-PURPLE-3PC-AK40",
+      "name": "Rang Rasiya Luxury Embroidered Lawn 3PC — PURPLE",
+      "path": "products/rr-purple-3pc-ak40-rang-rasiya-luxury-embroidered-lawn-3pc/"
     },
     {
-      "code": "IMP-EMBCK-BEIGE-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-beige-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
+      "code": "P&P-ALMRH-LWN-CT-3P-04",
+      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 4",
+      "path": "products/p-and-p-almrh-lwn-ct-3p-04-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
     },
     {
-      "code": "IMP-EMBCK-PISTA-2P-ABR-17",
-      "name": "Imported Emb Chickenkari Lawn 3PC — 17",
-      "path": "products/imp-embck-pista-2p-abr-17-imported-emb-chickenkari-lawn-3pc/"
+      "code": "ANAYA-LWN-2P-DLWR-16",
+      "name": "Anaya Noor Digital Printed Lawn 2PC — 16",
+      "path": "products/anaya-lwn-2p-dlwr-16-anaya-noor-digital-printed-lawn-2pc/"
+    },
+    {
+      "code": "PARIZAD-PLTR-LWN-V11-2P-04",
+      "name": "Parizad By Paltar Premium Printed Lawn 2PC — 4",
+      "path": "products/parizad-pltr-lwn-v11-2p-04-parizad-by-paltar-premium-printed-lawn-2pc/"
+    },
+    {
+      "code": "PARIZAD-PLTR-LWN-V11-2P-08",
+      "name": "Parizad By Paltar Premium Printed Lawn 2PC — 8",
+      "path": "products/parizad-pltr-lwn-v11-2p-08-parizad-by-paltar-premium-printed-lawn-2pc/"
+    },
+    {
+      "code": "MISAAL-DL-LWN-3P-FB-383-B",
+      "name": "Misaal | Lawn | Dressline — FB-383-B",
+      "path": "products/misaal-dl-lwn-3p-fb-383-b-misaal-lawn-dressline/"
+    },
+    {
+      "code": "ALKARAM-3PLWN-V7-AHMD-07",
+      "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
+      "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "ELAF-3PLWN-V2-UK-EPV-9A",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-9A",
+      "path": "products/elaf-3plwn-v2-uk-epv-9a-elaf-premium-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "MARIAB-LWN-3P-1916",
+      "name": "Maria B Plain Embroidered Lawn 3PC — 1916",
+      "path": "products/mariab-lwn-3p-1916-maria-b-plain-embroidered-lawn-3pc/"
+    },
+    {
+      "code": "ANEELAS-LWN-BLCK-3P-HA-306",
+      "name": "Aneelas Embroiderd & Digital Printed Lawn With Patches 3PC — 306",
+      "path": "products/aneelas-lwn-blck-3p-ha-306-aneelas-embroiderd-and-digital-printed-lawn-with-patches-3pc/"
+    },
+    {
+      "code": "PRINTED-GRIP-3PC-S26-09",
+      "name": "Digital Printed Imported Grip-3PC — 9",
+      "path": "products/printed-grip-3pc-s26-09-digital-printed-imported-grip-3pc/"
+    },
+    {
+      "code": "RIJJA-PRN-LWN-V10-3P-09",
+      "name": "Rijja By Murashe Digital Printed Lawn 3PC — 9",
+      "path": "products/rijja-prn-lwn-v10-3p-09-rijja-by-murashe-digital-printed-lawn-3pc/"
     }
   ]
 }

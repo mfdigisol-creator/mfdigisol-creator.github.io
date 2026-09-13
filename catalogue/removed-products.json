@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-13T04:52:37.752Z",
+  "generatedAt": "2026-09-13T16:21:20.315Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V1-ABR-14",
@@ -661,6 +661,27 @@
       "firstSeenAt": "2026-09-04T21:24:14+05:00",
       "lastSeenAt": "2026-09-04T21:24:14+05:00",
       "removedAt": "2026-09-05T04:34:18.585Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ALKARAM-3PLWN-V7-AHMD-07",
+      "id": "15524996743539-64318899224947",
+      "name": "Alkaram Studio Digital Printed Lawn 3PC — 7",
+      "productName": "Alkaram Studio Digital Printed Lawn 3PC",
+      "brand": "Alkaram",
+      "sourceBrand": "Alkaram",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_phsd5nphsd5nphsd.jpg?v=1788019120",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_phsd5nphsd5nphsd.jpg?v=1788019120"
+      ],
+      "path": "products/alkaram-3plwn-v7-ahmd-07-alkaram-studio-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-13T09:52:35+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -1458,28 +1479,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "P&P-ALMRH-LWN-CT-3P-11",
-      "id": "15380025737587-62857335669107",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 11",
-      "productName": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC",
-      "brand": "Almeerah",
-      "sourceBrand": "Almeerah",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3113.jpg?v=1780478054",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3113.jpg?v=1780478054",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3114.jpg?v=1780478054"
-      ],
-      "path": "products/p-and-p-almrh-lwn-ct-3p-11-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/",
-      "firstSeenAt": "2026-07-31T22:26:15+05:00",
-      "lastSeenAt": "2026-09-12T20:34:24+05:00",
-      "removedAt": "2026-09-13T04:52:37.727Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "P&P-ALMRH-LWN-CT-3P-12",
       "id": "15380025770355-62857335701875",
       "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 12",
@@ -1675,6 +1674,28 @@
       "firstSeenAt": "2026-07-31T22:26:15+05:00",
       "lastSeenAt": "2026-08-06T15:17:16+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "P&P-ALMRH-LWN-CT-3P-04",
+      "id": "15380025475443-62857335406963",
+      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 4",
+      "productName": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC",
+      "brand": "Almeerah",
+      "sourceBrand": "Almeerah",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3127.jpg?v=1780477731",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3127.jpg?v=1780477731",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3128.jpg?v=1780477731"
+      ],
+      "path": "products/p-and-p-almrh-lwn-ct-3p-04-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/",
+      "firstSeenAt": "2026-07-31T22:26:15+05:00",
+      "lastSeenAt": "2026-09-13T09:52:35+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -2392,6 +2413,28 @@
       "firstSeenAt": "2026-07-31T22:26:05+05:00",
       "lastSeenAt": "2026-08-06T15:17:05+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ANAYA-LWN-2P-DLWR-16",
+      "id": "15398175080819-62913916764531",
+      "name": "Anaya Noor Digital Printed Lawn 2PC — 16",
+      "productName": "Anaya Noor Digital Printed Lawn 2PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2650,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3752.jpg?v=1780595391",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3752.jpg?v=1780595391",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3753.jpg?v=1780595391"
+      ],
+      "path": "products/anaya-lwn-2p-dlwr-16-anaya-noor-digital-printed-lawn-2pc/",
+      "firstSeenAt": "2026-07-31T22:26:05+05:00",
+      "lastSeenAt": "2026-09-13T09:52:35+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -3998,6 +4041,28 @@
       "firstSeenAt": "2026-07-31T22:26:10+05:00",
       "lastSeenAt": "2026-08-06T15:17:10+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ANAYANOOR-BD-LWN-BLUE-20",
+      "id": "15331411034483-62682325221747",
+      "name": "Anaya Noor Emb Bana Dora Lawn With Daman Patches 3PC — 20",
+      "productName": "Anaya Noor Emb Bana Dora Lawn With Daman Patches 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-0934.jpg?v=1775466531",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-0934.jpg?v=1775466531",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-0935.jpg?v=1775466531"
+      ],
+      "path": "products/anayanoor-bd-lwn-blue-20-anaya-noor-emb-bana-dora-lawn-with-daman-patches-3pc/",
+      "firstSeenAt": "2026-07-31T22:26:10+05:00",
+      "lastSeenAt": "2026-09-13T09:52:36+05:00",
+      "removedAt": "2026-09-13T16:21:20.289Z",
       "reason": "supplier-removed"
     },
     {
@@ -9856,6 +9921,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ANEELAS-LWN-BLCK-3P-HA-306",
+      "id": "15489866498419-63951894872435",
+      "name": "Aneelas Embroiderd & Digital Printed Lawn With Patches 3PC — 306",
+      "productName": "Aneelas Embroiderd & Digital Printed Lawn With Patches 3PC",
+      "brand": "Aneelas",
+      "sourceBrand": "Aneelas",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/41bff20f-6f4d-4229-8b74-6fd3e427b98a.png?v=1786474382",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/41bff20f-6f4d-4229-8b74-6fd3e427b98a.png?v=1786474382"
+      ],
+      "path": "products/aneelas-lwn-blck-3p-ha-306-aneelas-embroiderd-and-digital-printed-lawn-with-patches-3pc/",
+      "firstSeenAt": "2026-09-10T21:27:02+05:00",
+      "lastSeenAt": "2026-09-13T09:52:36+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ANEELAS-LAWN-S26-AR-01",
       "id": "15331406250355-62682290192755",
       "name": "Aneelas Full Embroidered Lawn With Emb Paches 3PC — 1",
@@ -13558,6 +13644,32 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "AROOB-DL-SILK-PISTA-FB-316",
+      "id": "15427930882419-63054121107827",
+      "name": "Aroob | Lava Silk | Dressline — FB-316",
+      "productName": "Aroob | Lava Silk | Dressline",
+      "brand": "Dressline",
+      "sourceBrand": "Dressline",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "unknown",
+      "price": null,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15_74baef76-57b6-4e86-85f9-a040843477a1.jpg?v=1783157755",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15_74baef76-57b6-4e86-85f9-a040843477a1.jpg?v=1783157755",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_0a4e226b-b72e-4973-9aa9-4473153a30ff.jpg?v=1783157755",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_ee5df270-03a8-4423-af8a-d9a141b76ca0.jpg?v=1783157755",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/18_7a7271a4-5735-46c8-b7d8-8e79e7ad914f.jpg?v=1783157755",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/19_3a80a5b8-0767-4c5f-a066-7bc9332b9665.jpg?v=1783157755",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/20_c5ddf6eb-abf7-40e3-a48c-7ff97bf62b96.jpg?v=1783157755"
+      ],
+      "path": "products/aroob-dl-silk-pista-fb-316-aroob-lava-silk-dressline/",
+      "firstSeenAt": "2026-07-31T22:27:37+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "AYEFA-DL-LWN-3P-1839",
       "id": "15427926557043-63054115701107",
       "name": "Ayefa | Lawn | Dressline — 1839",
@@ -14204,6 +14316,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "KHUWAB-DL-LKLWN-14426-D",
+      "id": "15427931242867-63054121566579",
+      "name": "Khuwab | Lawn | Dressline — 14426-D",
+      "productName": "Khuwab | Lawn | Dressline",
+      "brand": "Dressline",
+      "sourceBrand": "Dressline",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 8500,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_60737319-4d17-4a52-867a-ecfe4bd3eafb.jpg?v=1783157768",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_60737319-4d17-4a52-867a-ecfe4bd3eafb.jpg?v=1783157768",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/6_fa83fe35-cc58-45c5-9670-dcee69a7a78a.jpg?v=1783157768",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_f25e6cd8-be74-4303-9aa8-67d3ad493efc.jpg?v=1783157768",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/8_8b63b017-248f-4b9a-b346-d12105b7096f.jpg?v=1783157768"
+      ],
+      "path": "products/khuwab-dl-lklwn-14426-d-khuwab-lawn-dressline/",
+      "firstSeenAt": "2026-07-31T22:27:37+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "KOMAL-DL-1218",
       "id": "15427974267251-63054175568243",
       "name": "Komal | Dressline | Chiffone — 1218",
@@ -14248,6 +14384,30 @@
       "firstSeenAt": "2026-07-31T22:27:37+05:00",
       "lastSeenAt": "2026-09-12T09:39:24+05:00",
       "removedAt": "2026-09-12T15:34:26.029Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MISAAL-DL-LWN-3P-FB-383-B",
+      "id": "15447063822707-63122454446451",
+      "name": "Misaal | Lawn | Dressline — FB-383-B",
+      "productName": "Misaal | Lawn | Dressline",
+      "brand": "Dressline",
+      "sourceBrand": "Dressline",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 7800,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_2.jpg?v=1784707190",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_2.jpg?v=1784707190",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_1.jpg?v=1784707190",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_4.jpg?v=1784707190",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_3.jpg?v=1784707190"
+      ],
+      "path": "products/misaal-dl-lwn-3p-fb-383-b-misaal-lawn-dressline/",
+      "firstSeenAt": "2026-08-06T15:18:36+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -14988,6 +15148,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "WADA-DL-LWN-3P-14415-A",
+      "id": "15427932258675-63054122975603",
+      "name": "Wada | Lawn | Dressline — 14415-A",
+      "productName": "Wada | Lawn | Dressline",
+      "brand": "Dressline",
+      "sourceBrand": "Dressline",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 8300,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_6f16bf15-1ccd-4e6b-82e5-47db6420bf55.jpg?v=1783157789",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_6f16bf15-1ccd-4e6b-82e5-47db6420bf55.jpg?v=1783157789",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/18_d5e93fe2-e714-4df2-8d13-a059c5e2ad0a.jpg?v=1783157789",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/19_391ed603-d977-4fb7-b0f0-b60299c8af56.jpg?v=1783157789",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/20_ffcb8d82-d4f5-4f2c-8207-f01b0894e87d.jpg?v=1783157789"
+      ],
+      "path": "products/wada-dl-lwn-3p-14415-a-wada-lawn-dressline/",
+      "firstSeenAt": "2026-07-31T22:27:37+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "SHAISTA-ORG-3P-14269",
       "id": "15427964371315-63054165082483",
       "name": "Zaib-o-Zeenat | Dreslsine | Shaista - Organza — 14269",
@@ -15407,6 +15591,29 @@
       "firstSeenAt": "2026-09-01T01:34:09+05:00",
       "lastSeenAt": "2026-09-05T20:16:56+05:00",
       "removedAt": "2026-09-06T04:43:33.830Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ELAF-3PLWN-V2-UK-EPV-9A",
+      "id": "15524468818291-64292831101299",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-9A",
+      "productName": "Elaf Premium Digital Printed Lawn 3PC",
+      "brand": "Elaf",
+      "sourceBrand": "Elaf",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3150,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_23b04v23b04v23b0.jpg?v=1788248620",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_23b04v23b04v23b0.jpg?v=1788248620",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9A_2.jpg?v=1788180432",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9A_1.jpg?v=1788180431"
+      ],
+      "path": "products/elaf-3plwn-v2-uk-epv-9a-elaf-premium-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-13T09:52:35+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -25617,6 +25824,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MARIAB-LWN-3P-1916",
+      "id": "15380228604275-62858140975475",
+      "name": "Maria B Plain Embroidered Lawn 3PC — 1916",
+      "productName": "Maria B Plain Embroidered Lawn 3PC",
+      "brand": "Maria B",
+      "sourceBrand": "Maria B",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 7132,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3255.jpg?v=1780489101",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3255.jpg?v=1780489101",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3256.jpg?v=1780489101",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/D-2607-A_MariaBRedPremiumEmbroideredNetStitchedSuit1.webp?v=1782897627"
+      ],
+      "path": "products/mariab-lwn-3p-1916-maria-b-plain-embroidered-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:10+05:00",
+      "lastSeenAt": "2026-09-13T09:52:36+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MAROOJ-LWN-V30-3P-04",
       "id": "15289292325235-62520040325491",
       "name": "Marooj Gold Magic Printed Lawn 3PC — 4",
@@ -26007,6 +26237,28 @@
       "firstSeenAt": "2026-09-12T09:39:22+05:00",
       "lastSeenAt": "2026-09-12T09:39:22+05:00",
       "removedAt": "2026-09-12T15:34:26.030Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "PRINTED-GRIP-3PC-S26-09",
+      "id": "15367025885555-62811969028467",
+      "name": "Digital Printed Imported Grip-3PC — 9",
+      "productName": "Digital Printed Imported Grip-3PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2850,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/CAB6797D-7B50-403F-9399-92F4B8AC416E.jpg?v=1778057800",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/CAB6797D-7B50-403F-9399-92F4B8AC416E.jpg?v=1778057800",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/44B9C499-B936-4A3D-B35E-EB79AFDC1EB1.jpg?v=1778057800"
+      ],
+      "path": "products/printed-grip-3pc-s26-09-digital-printed-imported-grip-3pc/",
+      "firstSeenAt": "2026-09-12T09:39:22+05:00",
+      "lastSeenAt": "2026-09-13T09:52:35+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -26577,6 +26829,28 @@
       "firstSeenAt": "2026-07-31T22:26:12+05:00",
       "lastSeenAt": "2026-08-06T15:17:13+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "RIJJA-PRN-LWN-V10-3P-09",
+      "id": "15343641428339-62733934821747",
+      "name": "Rijja By Murashe Digital Printed Lawn 3PC — 9",
+      "productName": "Rijja By Murashe Digital Printed Lawn 3PC",
+      "brand": "Murashe",
+      "sourceBrand": "Murashe",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3495,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1647.jpg?v=1777886294",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1647.jpg?v=1777886294",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1648.jpg?v=1777886294"
+      ],
+      "path": "products/rijja-prn-lwn-v10-3p-09-rijja-by-murashe-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-12T09:39:22+05:00",
+      "lastSeenAt": "2026-09-13T09:52:35+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -29347,6 +29621,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "PARIZAD-PLTR-LWN-V11-2P-04",
+      "id": "15386701594995-62902636052851",
+      "name": "Parizad By Paltar Premium Printed Lawn 2PC — 4",
+      "productName": "Parizad By Paltar Premium Printed Lawn 2PC",
+      "brand": "Paltar",
+      "sourceBrand": "Paltar",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2695,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P4_2.jpg?v=1780330942",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P4_2.jpg?v=1780330942",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P4_3.jpg?v=1780330942",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P4_4.jpg?v=1780330942",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P4_1.jpg?v=1780330942"
+      ],
+      "path": "products/parizad-pltr-lwn-v11-2p-04-parizad-by-paltar-premium-printed-lawn-2pc/",
+      "firstSeenAt": "2026-07-31T22:26:14+05:00",
+      "lastSeenAt": "2026-09-13T09:52:35+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "PARIZAD-LWN-V5-2P-05",
       "id": "15290793623923-62534103892339",
       "name": "Parizad By Paltar Premium Printed Lawn 2PC — 5",
@@ -29510,6 +29808,30 @@
       "firstSeenAt": "2026-07-31T22:26:14+05:00",
       "lastSeenAt": "2026-08-06T15:17:14+05:00",
       "removedAt": "2026-08-31T20:34:11.602Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "PARIZAD-PLTR-LWN-V11-2P-08",
+      "id": "15386701726067-62902636118387",
+      "name": "Parizad By Paltar Premium Printed Lawn 2PC — 8",
+      "productName": "Parizad By Paltar Premium Printed Lawn 2PC",
+      "brand": "Paltar",
+      "sourceBrand": "Paltar",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2695,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P8_2.jpg?v=1780330946",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P8_2.jpg?v=1780330946",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P8_3.jpg?v=1780330946",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P8_4.jpg?v=1780330946",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P8_1.jpg?v=1780330946"
+      ],
+      "path": "products/parizad-pltr-lwn-v11-2p-08-parizad-by-paltar-premium-printed-lawn-2pc/",
+      "firstSeenAt": "2026-07-31T22:26:14+05:00",
+      "lastSeenAt": "2026-09-13T09:52:35+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -30525,6 +30847,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MONACO-LWN-MN-02",
+      "id": "15427951296883-63054146109811",
+      "name": "Monaco By Parishay | Lawn'26 — MN-02",
+      "productName": "Monaco By Parishay | Lawn'26",
+      "brand": "Parishay",
+      "sourceBrand": "Parishay",
+      "category": "Luxury",
+      "pieceType": "1 Piece",
+      "pricingClass": "embroidered",
+      "price": 12925,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_87f4bae3-bf62-47c5-92de-96dcd8c34374.jpg?v=1783158584",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_87f4bae3-bf62-47c5-92de-96dcd8c34374.jpg?v=1783158584",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/6_d3477697-1cb5-476e-b3d9-6aa3f1514fad.jpg?v=1783158584",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_6f9ee5fd-490b-44f5-b455-305efb659b2c.jpg?v=1783158584"
+      ],
+      "path": "products/monaco-lwn-mn-02-monaco-by-parishay-lawn-26/",
+      "firstSeenAt": "2026-07-31T22:27:29+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MONACO-LWN-MN-07",
       "id": "15427951100275-63054145945971",
       "name": "Monaco By Parishay | Lawn'26 — MN-07",
@@ -30846,6 +31191,30 @@
       "firstSeenAt": "2026-07-31T22:27:29+05:00",
       "lastSeenAt": "2026-08-06T15:18:28+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "SUMERQUEN-LWN-V2-3P-SQ-11",
+      "id": "15427946742131-63054139785587",
+      "name": "Summer Queen By Parishay Vol-2 | Lawn'26 — SQ-11",
+      "productName": "Summer Queen By Parishay Vol-2 | Lawn'26",
+      "brand": "Parishay",
+      "sourceBrand": "Parishay",
+      "category": "Luxury",
+      "pieceType": "1 Piece",
+      "pricingClass": "embroidered",
+      "price": 9992,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/44_91c4e0fc-6635-4fe9-8eb0-ecde8061379a.jpg?v=1783158382",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/44_91c4e0fc-6635-4fe9-8eb0-ecde8061379a.jpg?v=1783158382",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/45_c88b7dd0-3567-4312-a37b-2ee4642001cd.jpg?v=1783158382",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/42_397a3f1b-d1b7-4a89-a856-e647af2b59ea.jpg?v=1783158382",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/43_ea935b24-1f6c-424d-9650-b6d473edb8b4.jpg?v=1783158382"
+      ],
+      "path": "products/sumerquen-lwn-v2-3p-sq-11-summer-queen-by-parishay-vol-2-lawn-26/",
+      "firstSeenAt": "2026-07-31T22:27:29+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -31456,6 +31825,75 @@
       "firstSeenAt": "2026-09-01T01:34:11+05:00",
       "lastSeenAt": "2026-09-02T21:37:06+05:00",
       "removedAt": "2026-09-03T04:36:44.625Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "RR-FEROZI-3PC-AK40",
+      "id": "15427924754803-63054110949747",
+      "name": "Rang Rasiya Luxury Embroidered Lawn 3PC — FEROZI",
+      "productName": "Rang Rasiya Luxury Embroidered Lawn 3PC",
+      "brand": "Rang Rasiya",
+      "sourceBrand": "Rang Rasiya",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 8500,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/A2EAE47E-9FD9-41E2-8D22-1B6D20ECED3A.jpg?v=1783157237",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/A2EAE47E-9FD9-41E2-8D22-1B6D20ECED3A.jpg?v=1783157237",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11B72946-3999-448A-8D34-B7F4D27F13AC.jpg?v=1783157238",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9C121A2C-CB73-47D1-9F3F-2E4EE5223A71.jpg?v=1783157237"
+      ],
+      "path": "products/rr-ferozi-3pc-ak40-rang-rasiya-luxury-embroidered-lawn-3pc/",
+      "firstSeenAt": "2026-07-31T22:27:11+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "RR-PEACH-3PC-AK40",
+      "id": "15427924754803-63054110982515",
+      "name": "Rang Rasiya Luxury Embroidered Lawn 3PC — PEACH",
+      "productName": "Rang Rasiya Luxury Embroidered Lawn 3PC",
+      "brand": "Rang Rasiya",
+      "sourceBrand": "Rang Rasiya",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 8500,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11B72946-3999-448A-8D34-B7F4D27F13AC.jpg?v=1783157238",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/A2EAE47E-9FD9-41E2-8D22-1B6D20ECED3A.jpg?v=1783157237",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11B72946-3999-448A-8D34-B7F4D27F13AC.jpg?v=1783157238",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9C121A2C-CB73-47D1-9F3F-2E4EE5223A71.jpg?v=1783157237"
+      ],
+      "path": "products/rr-peach-3pc-ak40-rang-rasiya-luxury-embroidered-lawn-3pc/",
+      "firstSeenAt": "2026-07-31T22:27:11+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "RR-PURPLE-3PC-AK40",
+      "id": "15427924754803-63054111015283",
+      "name": "Rang Rasiya Luxury Embroidered Lawn 3PC — PURPLE",
+      "productName": "Rang Rasiya Luxury Embroidered Lawn 3PC",
+      "brand": "Rang Rasiya",
+      "sourceBrand": "Rang Rasiya",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 8500,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9C121A2C-CB73-47D1-9F3F-2E4EE5223A71.jpg?v=1783157237",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/A2EAE47E-9FD9-41E2-8D22-1B6D20ECED3A.jpg?v=1783157237",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11B72946-3999-448A-8D34-B7F4D27F13AC.jpg?v=1783157238",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9C121A2C-CB73-47D1-9F3F-2E4EE5223A71.jpg?v=1783157237"
+      ],
+      "path": "products/rr-purple-3pc-ak40-rang-rasiya-luxury-embroidered-lawn-3pc/",
+      "firstSeenAt": "2026-07-31T22:27:11+05:00",
+      "lastSeenAt": "2026-09-13T09:52:37+05:00",
+      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
