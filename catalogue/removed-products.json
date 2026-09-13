@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-12T15:34:26.055Z",
+  "generatedAt": "2026-09-13T04:52:37.752Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V1-ABR-14",
@@ -1455,6 +1455,28 @@
       "firstSeenAt": "2026-07-31T22:26:15+05:00",
       "lastSeenAt": "2026-09-12T09:39:22+05:00",
       "removedAt": "2026-09-12T15:34:26.029Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "P&P-ALMRH-LWN-CT-3P-11",
+      "id": "15380025737587-62857335669107",
+      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 11",
+      "productName": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC",
+      "brand": "Almeerah",
+      "sourceBrand": "Almeerah",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3113.jpg?v=1780478054",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3113.jpg?v=1780478054",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3114.jpg?v=1780478054"
+      ],
+      "path": "products/p-and-p-almrh-lwn-ct-3p-11-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/",
+      "firstSeenAt": "2026-07-31T22:26:15+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.727Z",
       "reason": "supplier-removed"
     },
     {
@@ -7745,6 +7767,30 @@
       "firstSeenAt": "2026-07-31T22:26:06+05:00",
       "lastSeenAt": "2026-08-06T15:17:06+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "NASHEMAN-ANAYA-NOOR-S26-04",
+      "id": "15375842181491-62836100530547",
+      "name": "Nasheman By Anaya Noor Exclusive Heavy Emb Lawn 3PC — 4",
+      "productName": "Nasheman By Anaya Noor Exclusive Heavy Emb Lawn 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 8000,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_9-Copy.png?v=1779029999",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_9-Copy.png?v=1779029999",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_9.png?v=1779029998",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_8-Copy.png?v=1779029998",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_8_5d786774-3157-48dc-89e2-103ad8e7edc0.png?v=1779029998"
+      ],
+      "path": "products/nasheman-anaya-noor-s26-04-nasheman-by-anaya-noor-exclusive-heavy-emb-lawn-3pc/",
+      "firstSeenAt": "2026-07-31T22:26:06+05:00",
+      "lastSeenAt": "2026-09-12T20:34:25+05:00",
+      "removedAt": "2026-09-13T04:52:37.727Z",
       "reason": "supplier-removed"
     },
     {
@@ -18809,6 +18855,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "GULAHMED-LWN-V1-3P-LDS-05",
+      "id": "15405835878771-62941629481331",
+      "name": "Gul Ahmed Printed Doriya Lawn 3PC — 5",
+      "productName": "Gul Ahmed Printed Doriya Lawn 3PC",
+      "brand": "Gul Ahmed",
+      "sourceBrand": "Gul Ahmed",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4275.jpg?v=1781374889",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4275.jpg?v=1781374889",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4276.jpg?v=1781374888"
+      ],
+      "path": "products/gulahmed-lwn-v1-3p-lds-05-gul-ahmed-printed-doriya-lawn-3pc/",
+      "firstSeenAt": "2026-09-12T09:39:22+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "GULAHMED-LWN-V1-3P-LDS-09",
       "id": "15405836108147-62941629874547",
       "name": "Gul Ahmed Printed Doriya Lawn 3PC — 9",
@@ -18897,6 +18965,30 @@
       "firstSeenAt": "2026-07-31T22:26:10+05:00",
       "lastSeenAt": "2026-08-01T20:44:25+05:00",
       "removedAt": "2026-08-02T15:49:38.896Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "IMP-EMBCK-FEROZ-2P-ABR-07",
+      "id": "15402449699187-62929897816435",
+      "name": "Imported Chikenkari Digital Lawn 2PC — 7",
+      "productName": "Imported Chikenkari Digital Lawn 2PC",
+      "brand": "Imported",
+      "sourceBrand": "Imported",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "embroidered",
+      "price": 4490,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3996.jpg?v=1781013143",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3996.jpg?v=1781013143",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3994.jpg?v=1781013143",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3995.jpg?v=1781013143",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3997.jpg?v=1781013143"
+      ],
+      "path": "products/imp-embck-feroz-2p-abr-07-imported-chikenkari-digital-lawn-2pc/",
+      "firstSeenAt": "2026-09-12T09:39:22+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
       "reason": "supplier-removed"
     },
     {
@@ -20938,6 +21030,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MADHAM-3PLWN-V13-HM-LS-0794",
+      "id": "15499404837235-63974322602355",
+      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0794",
+      "productName": "Madham By Lala Digital Printed Airjet Lawn 3PC",
+      "brand": "Lala",
+      "sourceBrand": "Lala",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_ulvpu2ulvpu2ulvp.jpg?v=1786974220",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_ulvpu2ulvpu2ulvp.jpg?v=1786974220"
+      ],
+      "path": "products/madham-3plwn-v13-hm-ls-0794-madham-by-lala-digital-printed-airjet-lawn-3pc/",
+      "firstSeenAt": "2026-09-08T09:41:51+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MADHAM-3PLWN-V13-HM-LS-0795",
       "id": "15499404902771-63974322667891",
       "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0795",
@@ -21612,6 +21725,94 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "IMP-EMBCK-BEIGE-2P-ABR-06",
+      "id": "15403728109939-62934150054259",
+      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
+      "productName": "Imported Emb Chickenkari Lawn 2PC",
+      "brand": "lmported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14573_2.jpg?v=1784624985",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14573_2.jpg?v=1784624985",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14573_1.jpg?v=1784624985"
+      ],
+      "path": "products/imp-embck-beige-2p-abr-06-imported-emb-chickenkari-lawn-2pc/",
+      "firstSeenAt": "2026-09-12T09:39:22+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "IMP-EMBCK-GREY-2P-ABR-06",
+      "id": "15403724996979-62934132687219",
+      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
+      "productName": "Imported Emb Chickenkari Lawn 2PC",
+      "brand": "lmported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "embroidered",
+      "price": 4490,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14570_2.jpg?v=1784560984",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14570_2.jpg?v=1784560984",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14570_1.jpg?v=1784560984"
+      ],
+      "path": "products/imp-embck-grey-2p-abr-06-imported-emb-chickenkari-lawn-2pc/",
+      "firstSeenAt": "2026-09-12T09:39:22+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "IMP-EMBCK-PAROT-2P-ABR-06",
+      "id": "15403724669299-62934131704179",
+      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
+      "productName": "Imported Emb Chickenkari Lawn 2PC",
+      "brand": "lmported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "embroidered",
+      "price": 4490,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14563_5.jpg?v=1784625402",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14563_5.jpg?v=1784625402",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14563_4.jpg?v=1784625402"
+      ],
+      "path": "products/imp-embck-parot-2p-abr-06-imported-emb-chickenkari-lawn-2pc/",
+      "firstSeenAt": "2026-09-05T09:34:16+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "IMP-EMBCK-PIST-2P-ABR-06",
+      "id": "15403727946099-62934149300595",
+      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
+      "productName": "Imported Emb Chickenkari Lawn 2PC",
+      "brand": "lmported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "embroidered",
+      "price": 4490,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14571_2.jpg?v=1784624959",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14571_2.jpg?v=1784624959",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14571_1.jpg?v=1784624959"
+      ],
+      "path": "products/imp-embck-pist-2p-abr-06-imported-emb-chickenkari-lawn-2pc/",
+      "firstSeenAt": "2026-09-05T09:34:16+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "IMP-EMBCK-SKIN-2P-ABR-06",
       "id": "15403724603763-62934131409267",
       "name": "Imported Emb Chickenkari Lawn 2PC — 6",
@@ -21722,6 +21923,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "IMP-EMBCK-PGRN-2P-ABR-12",
+      "id": "15403423170931-62932973191539",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 12",
+      "productName": "Imported Emb Chickenkari Lawn 3PC",
+      "brand": "lmported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14605_2.jpg?v=1784549014",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14605_2.jpg?v=1784549014",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14605_1.jpg?v=1784549013"
+      ],
+      "path": "products/imp-embck-pgrn-2p-abr-12-imported-emb-chickenkari-lawn-3pc/",
+      "firstSeenAt": "2026-09-08T09:41:52+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "IMP-EMBCK-BPINK-2P-ABR-14",
       "id": "15403423498611-62932973519219",
       "name": "Imported Emb Chickenkari Lawn 3PC — 14",
@@ -21785,6 +22008,28 @@
       "firstSeenAt": "2026-09-02T21:37:05+05:00",
       "lastSeenAt": "2026-09-02T21:37:05+05:00",
       "removedAt": "2026-09-03T04:36:44.625Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "IMP-EMBCK-PISTA-2P-ABR-17",
+      "id": "15403424055667-62932975026547",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 17",
+      "productName": "Imported Emb Chickenkari Lawn 3PC",
+      "brand": "lmported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14621_2.jpg?v=1784548709",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14621_2.jpg?v=1784548709",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14621_1.jpg?v=1784548709"
+      ],
+      "path": "products/imp-embck-pista-2p-abr-17-imported-emb-chickenkari-lawn-3pc/",
+      "firstSeenAt": "2026-09-12T09:39:22+05:00",
+      "lastSeenAt": "2026-09-12T20:34:24+05:00",
+      "removedAt": "2026-09-13T04:52:37.728Z",
       "reason": "supplier-removed"
     },
     {
