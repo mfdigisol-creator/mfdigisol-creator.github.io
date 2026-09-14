@@ -102,7 +102,7 @@
 .live-dialog-layout { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr); min-height:640px; }
 .live-dialog-gallery { display:grid; grid-template-columns:82px 1fr; min-width:0; background:#ded7cb; }
 .live-dialog-stage { min-width:0; display:grid; place-items:center; overflow:hidden; }
-.live-dialog-stage img { width:100%; height:100%; max-height:82vh; object-fit:contain; }
+.live-dialog-stage img { width:100%; height:100%; max-height:82vh; object-fit:contain; object-position:center top; }
 .live-dialog-thumbs { grid-row:1; grid-column:1; padding:.65rem; overflow:auto; }
 .live-dialog-thumbs button { display:block; width:100%; margin-bottom:.55rem; padding:0; border:1px solid transparent; background:none; cursor:pointer; }
 .live-dialog-thumbs button.active { border-color:#9c7433; }
