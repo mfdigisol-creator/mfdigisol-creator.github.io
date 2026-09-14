@@ -1,31 +1,26 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-14T05:00:37.818Z",
+  "generatedAt": "2026-09-14T14:19:04.202Z",
   "summary": {
-    "products": 493,
-    "removedProducts": 1520,
-    "brands": 69,
-    "collectionPages": 71,
-    "sitemapUrls": 567,
-    "metaFeedRows": 483,
-    "metadataPages": 493,
-    "internalHtmlFiles": 2089,
+    "products": 401,
+    "removedProducts": 1632,
+    "brands": 59,
+    "collectionPages": 61,
+    "sitemapUrls": 465,
+    "metaFeedRows": 390,
+    "metadataPages": 401,
+    "internalHtmlFiles": 2099,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
-    "6 products contain “Luxury” but inherit the Formal supplier section.",
-    "77 products currently lack retained supplier description text."
+    "5 products contain “Luxury” but inherit the Formal supplier section.",
+    "56 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [
-      {
-        "code": "CRIMSON-S26-D-3A",
-        "name": "Crimson Luxury Embroidered Lawn 3PC — D-3A",
-        "category": "Formal"
-      },
       {
         "code": "JAZMIN-S26-JZ-D05",
         "name": "Jazmin Luxury Embroidered Lawn 3PC — D05",
@@ -53,31 +48,31 @@
       }
     ],
     "missingDescriptions": [
-      "ABRISH-2PLWN-V1-ABR-11",
       "ABRISH-2PLWN-V1-ABR-13",
-      "ABRISH-2PLWN-V1-ABR-20",
       "ABRISH-2PLWN-V1-ABR-43",
-      "ALKARAM-3PLWN-V10-ZINC-AHMD-1",
-      "ALKARAM-3PLWN-V10-RED-AHMD-4",
-      "ALKARAM-3PLWN-V10-PISTA-AHMD-5",
-      "ALKARAM-3PLWN-V10-MGREEN-AHMD-6",
+      "ABRISH-2PLWN-V2-ABR-06",
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-11",
-      "FLOWS-ALMRH-LWN-CT-3P-15",
+      "FLOWS-ALMRH-LWN-CT-3P-16",
       "FLOWS-ALMRH-LWN-CT-3P-18",
-      "FLOWS-ALMRH-LWN-CT-3P-20",
       "FLOWS-ALMRH-LWN-CT-3P-21",
+      "FLOWS-ALMRH-LWN-CT-3P-05",
+      "P&P-ALMRH-LWN-CT-3P-13",
       "P&P-ALMRH-LWN-CT-3P-17",
-      "BONANZA-2PLWN-V1-ABR-02",
-      "BONANZA-2PLWN-V1-ABR-05",
-      "BONANZA-2PLWN-V1-ABR-09",
-      "CROSS-2PLWN-V1-ABR-20",
+      "P&P-ALMRH-LWN-CT-3P-09",
+      "ANAYANOOR-PRNLWN-3P-02",
+      "CHINYERE-2PLWN-V1-ABR-18",
       "CROSS-2PLWN-V1-ABR-24",
-      "CROSS-2PLWN-V2-ABR-01",
-      "CROSS-2PLWN-V2-ABR-13",
+      "CROSS-2PLWN-V1-ABR-07",
       "CROSS-2PLWN-V2-ABR-14",
       "CS-EMB-LWN-3P-1856",
-      "AIRA-ORG-PISTA-1547"
+      "AIRA-ORG-PISTA-1547",
+      "AIRA-ORG-PEACH-1547",
+      "AIRA-ORG-PURP-1547",
+      "AIRA-ORG-SKY-1547",
+      "DASTAK-DL-LWN-3P-FB-322",
+      "DASTAK-DL-LWN-3P-FB-323",
+      "DASTAK-DL-LWN-3P-FB-324",
+      "DASTAK-DL-LWN-3P-FB-325"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -85,6 +80,11 @@
     "duplicateSchemaNames": [],
     "brokenInternalLinks": [],
     "removedProducts": [
+      {
+        "code": "ABRISH-2PLWN-V1-ABR-11",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 11",
+        "path": "products/abrish-2plwn-v1-abr-11-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
       {
         "code": "ABRISH-2PLWN-V1-ABR-14",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 14",
@@ -101,6 +101,11 @@
         "path": "products/abrish-2plwn-v2-abr-02-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
+        "code": "ABRISH-2PLWN-V1-ABR-20",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 20",
+        "path": "products/abrish-2plwn-v1-abr-20-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
         "code": "ABRISH-2PLWN-V1-ABR-22",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 22",
         "path": "products/abrish-2plwn-v1-abr-22-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
@@ -109,6 +114,11 @@
         "code": "ABRISH-2PLWN-V1-ABR-23",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 23",
         "path": "products/abrish-2plwn-v1-abr-23-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
+        "code": "ABRISH-2PLWN-V1-ABR-28",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 28",
+        "path": "products/abrish-2plwn-v1-abr-28-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
         "code": "ABRISH-2PLWN-V1-ABR-03",
@@ -131,9 +141,9 @@
         "path": "products/abrish-2plwn-v1-abr-51-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
-        "code": "ABRISH-2PLWN-V2-ABR-06",
-        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 6",
-        "path": "products/abrish-2plwn-v2-abr-06-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+        "code": "ABRISH-2PLWN-V1-ABR-55",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 55",
+        "path": "products/abrish-2plwn-v1-abr-55-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
         "code": "ABRISH-2PLWN-V2-ABR-08",
@@ -181,34 +191,19 @@
         "path": "products/umang-ck-lwn-3p-au-010-umang-by-aifa-printed-and-chickenkari-emb-lawn-3pc/"
       },
       {
-        "code": "ALKARAM-3PLWN-V10-SKIN-AHMD-3",
-        "name": "Alkaram Classic Digital Printed Lawn 3PC — 3",
-        "path": "products/alkaram-3plwn-v10-skin-ahmd-3-alkaram-classic-digital-printed-lawn-3pc/"
+        "code": "ALKARAM-3PLWN-V10-ZINC-AHMD-1",
+        "name": "Alkaram Classic Digital Printed Lawn 3PC — 1",
+        "path": "products/alkaram-3plwn-v10-zinc-ahmd-1-alkaram-classic-digital-printed-lawn-3pc/"
       },
       {
-        "code": "ALKARAM-3PLWN-V10-BLUE-AHMD-7",
-        "name": "Alkaram Classic Digital Printed Lawn 3PC — 7",
-        "path": "products/alkaram-3plwn-v10-blue-ahmd-7-alkaram-classic-digital-printed-lawn-3pc/"
+        "code": "ALKARAM-3PLWN-V631-AHMD-146",
+        "name": "Alkaram Classic Digital Printed Lawn 3PC — 146",
+        "path": "products/alkaram-3plwn-v631-ahmd-146-alkaram-classic-digital-printed-lawn-3pc/"
       },
       {
-        "code": "ALKARAM-3PLWN-V10-WHITE-AHMD-9",
-        "name": "Alkaram Classic Digital Printed Lawn 3PC — 9",
-        "path": "products/alkaram-3plwn-v10-white-ahmd-9-alkaram-classic-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "ALKARAM-LWN-V1-3P-LDS-03",
-        "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 3",
-        "path": "products/alkaram-lwn-v1-3p-lds-03-alkaram-spring-summer-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "ALKARAM-LWN-V2-3P-LDS-04",
-        "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 4",
-        "path": "products/alkaram-lwn-v2-3p-lds-04-alkaram-spring-summer-digital-printed-lawn-3pc/"
-      },
-      {
-        "code": "ALKARAM-LWN-V1-3P-LDS-06",
-        "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 6",
-        "path": "products/alkaram-lwn-v1-3p-lds-06-alkaram-spring-summer-digital-printed-lawn-3pc/"
+        "code": "ALKARAM-3PLWN-V631-AHMD-154",
+        "name": "Alkaram Classic Digital Printed Lawn 3PC — 154",
+        "path": "products/alkaram-3plwn-v631-ahmd-154-alkaram-classic-digital-printed-lawn-3pc/"
       }
     ]
   },
