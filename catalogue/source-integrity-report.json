@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-14T14:31:02.431Z",
+  "generatedAt": "2026-09-14T14:58:32.284Z",
   "summary": {
-    "products": 397,
-    "available": 386,
-    "formal": 131,
+    "products": 402,
+    "available": 391,
+    "formal": 136,
     "luxury": 266,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 386,
+    "metaFeedProducts": 391,
     "canonicalBrands": 57,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 10,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1636,
-    "newlyRemovedProducts": 6,
+    "removedProducts": 1634,
+    "newlyRemovedProducts": 1,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -93,34 +93,9 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-16",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 16",
-      "path": "products/flows-almrh-lwn-ct-3p-16-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "KAYSERIA-LWN-V3-3P-AHMD-E6956",
-      "name": "Kayseria Digital Printed Lawn 3PC — E6956",
-      "path": "products/kayseria-lwn-v3-3p-ahmd-e6956-kayseria-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "CORAL-3PLWN-V634-AHMD-CS-7892",
-      "name": "Coral By Cross Stitch Digital Printed Lawn 3PC — CS-7892",
-      "path": "products/coral-3plwn-v634-ahmd-cs-7892-coral-by-cross-stitch-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "NAINA-SHN-LWN-V212-2P-08",
-      "name": "Naina By Shanaya Digital Printed Two Piece Lawn 2PC — 8",
-      "path": "products/naina-shn-lwn-v212-2p-08-naina-by-shanaya-digital-printed-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "AFREEN-3PLWN-V3-HM-LS-0787",
-      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0787",
-      "path": "products/afreen-3plwn-v3-hm-ls-0787-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
-    },
-    {
-      "code": "GUFTGU-3PLWN-AHMD-OTL-24-216",
-      "name": "Guftagu By Orient Summer Digital Printed Lawn 3PC — OTL-24-216",
-      "path": "products/guftgu-3plwn-ahmd-otl-24-216-guftagu-by-orient-summer-digital-printed-lawn-3pc/"
+      "code": "BINSAEED-LWN-V2-3P-HM-11",
+      "name": "Bin Saeed Digital Printed Lawn 3PC — 11",
+      "path": "products/binsaeed-lwn-v2-3p-hm-11-bin-saeed-digital-printed-lawn-3pc/"
     }
   ]
 }
