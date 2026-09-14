@@ -31,10 +31,10 @@
     }
     const root = section.querySelector('[data-approved-reviews]');
     if (root) {
-      root.innerHTML = '<div class="review-empty"><span>Product-specific reviews</span><h3>Reviews now belong to each design.</h3><p>Open any design in the live catalogue to read approved reviews or submit your own experience for moderation.</p></div>';
+      root.innerHTML = '<div class="review-empty"><span>Product-specific reviews</span><h3>Reviews now belong to each design.</h3><p>Open any design in the live catalogue to read published reviews or submit your own experience. Reviews are published as submitted and are not edited by Al Huma Collection.</p></div>';
     }
     const intro = section.querySelector('.reviews-heading > p:last-child');
-    if (intro) intro.textContent = 'Approved customer reviews are shown against the exact design they describe. Open a product below to read or submit a review.';
+    if (intro) intro.textContent = 'Published customer reviews are shown against the exact design they describe. Reviews are published as submitted and are not edited by Al Huma Collection.';
   }
 
   neutralizeLegacyHomepageReviews();
@@ -88,8 +88,8 @@
 
     if (summary) {
       summary.innerHTML = count && Number.isFinite(average)
-        ? `<strong>${average.toFixed(1)} / 5</strong><span>${count} approved review${count === 1 ? '' : 's'}</span>`
-        : '<strong>No approved reviews yet</strong><span>Be the first to share a genuine product experience.</span>';
+        ? `<strong>${average.toFixed(1)} / 5</strong><span>${count} published review${count === 1 ? '' : 's'}</span>`
+        : '<strong>No reviews yet</strong><span>Be the first to share a genuine product experience.</span>';
     }
     if (!list) return;
     list.innerHTML = reviews.length ? reviews.map(review => {
@@ -99,7 +99,7 @@
         ? date.toLocaleDateString('en-PK', { year: 'numeric', month: 'short', day: 'numeric' })
         : '';
       return `<article class="review-card"><div class="review-stars" aria-label="${rating} out of 5 stars">${stars(rating)}</div><blockquote>“${escapeHtml(review.review_text)}”</blockquote><p><strong>${escapeHtml(review.display_name)}</strong>${dateText ? `<span>${escapeHtml(dateText)}</span>` : ''}</p></article>`;
-    }).join('') : '<div class="review-empty"><span>Moderated customer reviews</span><h3>No approved reviews for this design yet.</h3><p>You can submit a genuine product experience below. Reviews appear publicly only after moderation.</p></div>';
+    }).join('') : '<div class="review-empty"><span>Customer reviews</span><h3>No reviews for this design yet.</h3><p>Your review is published as submitted after security verification. Al Huma Collection does not edit customer ratings or review text. Spam, abusive, unrelated or fraudulent content may be removed.</p></div>';
   }
 
   async function responseJson(response) {
@@ -112,7 +112,7 @@
 
   async function loadApprovedReviews(productId, root) {
     const list = root.querySelector('[data-product-approved-reviews]');
-    if (list) list.innerHTML = '<div class="review-empty"><p>Loading approved reviews…</p></div>';
+    if (list) list.innerHTML = '<div class="review-empty"><p>Loading published reviews…</p></div>';
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
     try {
@@ -128,7 +128,7 @@
       });
       const body = await responseJson(response);
       if (!response.ok || body?.success !== true || body?.product_id !== productId || !Array.isArray(body?.reviews)) {
-        throw new ReviewError(String(body?.code || 'REVIEWS_UNAVAILABLE'), String(body?.message || 'Approved reviews could not be loaded.'), {
+        throw new ReviewError(String(body?.code || 'REVIEWS_UNAVAILABLE'), String(body?.message || 'Published reviews could not be loaded.'), {
           status: response.status,
           requestId: String(body?.request_id || '')
         });
@@ -137,8 +137,8 @@
     } catch (error) {
       if (!root.isConnected) return;
       const message = error?.name === 'AbortError'
-        ? 'Approved reviews took too long to load. You can still submit a review below.'
-        : 'Approved reviews are temporarily unavailable. You can still submit a review below.';
+        ? 'Published reviews took too long to load. You can still submit a review below.'
+        : 'Published reviews are temporarily unavailable. You can still submit a review below.';
       if (list) list.innerHTML = `<div class="review-empty"><h3>Reviews could not be loaded.</h3><p>${escapeHtml(message)}</p></div>`;
     } finally {
       window.clearTimeout(timeout);
@@ -215,11 +215,11 @@
     root.innerHTML = `
       <div class="product-reviews-head">
         <div><span>Customer reviews</span><h3 id="${instanceId}-title">Reviews for this design</h3></div>
-        <p data-review-summary><strong>Loading…</strong><span>Checking approved reviews.</span></p>
+        <p data-review-summary><strong>Loading…</strong><span>Checking published reviews.</span></p>
       </div>
       <div class="approved-reviews product-approved-reviews" data-product-approved-reviews aria-live="polite"></div>
       <form class="review-form product-review-form" data-product-review-form novalidate>
-        <div class="review-form-head"><div><span>Share your experience</span><h3>Leave a review</h3></div><p>Your review is linked to product code <strong>${escapeHtml(productId)}</strong> and appears publicly only after moderation.</p></div>
+        <div class="review-form-head"><div><span>Share your experience</span><h3>Leave a review</h3></div><p>Your review is linked to product code <strong>${escapeHtml(productId)}</strong> and is published as submitted after security verification. Al Huma Collection does not edit customer ratings or review text. Spam, abusive, unrelated or fraudulent content may be removed.</p></div>
         <fieldset><legend>Rating</legend><div class="rating-input">
           <input id="${instanceId}-rate5" type="radio" name="rating" value="5" required><label for="${instanceId}-rate5" title="5 stars">★</label>
           <input id="${instanceId}-rate4" type="radio" name="rating" value="4"><label for="${instanceId}-rate4" title="4 stars">★</label>
@@ -231,7 +231,7 @@
         <label class="review-wide">Your review<textarea name="review_text" required minlength="10" maxlength="1000" rows="5" placeholder="Tell us about this product or your experience with it."></textarea></label>
         <div class="review-wide review-security"><strong>Security verification</strong><div data-review-turnstile></div><small>This check helps prevent automated and duplicate review submissions.</small></div>
         <p class="review-wide review-status" data-review-status role="status" aria-live="polite"></p>
-        <button class="button button-dark review-wide" type="submit" disabled>Submit review for approval</button>
+        <button class="button button-dark review-wide" type="submit" disabled>Publish review</button>
       </form>`;
     copy.append(root);
 
@@ -329,7 +329,7 @@
 
       submitting = true;
       submit.disabled = true;
-      submit.textContent = 'Submitting review…';
+      submit.textContent = 'Publishing review…';
       setStatus('Submitting your review securely. Please do not click again.', 'info');
       const controller = new AbortController();
       const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
@@ -352,10 +352,14 @@
         }
         attempt = null;
         form.reset();
-        setStatus(body.status === 'pending'
-          ? 'Thank you. Your review was received and is awaiting moderation.'
-          : 'Your review submission was already received.', 'success');
+        const published = body.status === 'approved';
+        setStatus(published
+          ? (body.idempotent ? 'Your review was already published as submitted.' : 'Thank you. Your review has been published as submitted.')
+          : body.status === 'pending'
+            ? 'Your earlier review was received before immediate publishing was enabled and is still awaiting moderation.'
+            : 'Your earlier review is not currently published.', published ? 'success' : 'info');
         resetSecurity();
+        if (published) await loadApprovedReviews(productId, root);
       } catch (error) {
         const normalized = error instanceof ReviewError
           ? error
@@ -368,7 +372,7 @@
       } finally {
         window.clearTimeout(timeout);
         submitting = false;
-        submit.textContent = 'Submit review for approval';
+        submit.textContent = 'Publish review';
       }
     });
 
