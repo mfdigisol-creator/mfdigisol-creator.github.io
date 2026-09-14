@@ -98,7 +98,7 @@
       const dateText = date && !Number.isNaN(date.getTime())
         ? date.toLocaleDateString('en-PK', { year: 'numeric', month: 'short', day: 'numeric' })
         : '';
-      return `<article class="review-card"><div class="review-stars" aria-label="${rating} out of 5 stars">${stars(rating)}</div><blockquote>“${escapeHtml(review.review_text)}”</blockquote><p><strong>${escapeHtml(review.display_name)}</strong>${dateText ? `<span>${escapeHtml(dateText)}</span>` : ''}</p>${review.verified_purchase ? '<small>Verified order</small>' : ''}</article>`;
+      return `<article class="review-card"><div class="review-stars" aria-label="${rating} out of 5 stars">${stars(rating)}</div><blockquote>“${escapeHtml(review.review_text)}”</blockquote><p><strong>${escapeHtml(review.display_name)}</strong>${dateText ? `<span>${escapeHtml(dateText)}</span>` : ''}</p></article>`;
     }).join('') : '<div class="review-empty"><span>Moderated customer reviews</span><h3>No approved reviews for this design yet.</h3><p>You can submit a genuine product experience below. Reviews appear publicly only after moderation.</p></div>';
   }
 
