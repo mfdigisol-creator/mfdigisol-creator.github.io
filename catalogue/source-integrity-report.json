@@ -1,28 +1,36 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-13T22:27:28.235Z",
+  "generatedAt": "2026-09-14T05:00:34.354Z",
   "summary": {
-    "products": 312,
-    "available": 301,
-    "formal": 52,
+    "products": 493,
+    "available": 479,
+    "formal": 233,
     "luxury": 260,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 302,
-    "canonicalBrands": 40,
+    "metaFeedProducts": 483,
+    "canonicalBrands": 69,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 8,
-    "classificationConflicts": 5,
+    "duplicateNames": 12,
+    "classificationConflicts": 6,
     "unspecifiedPieces": 17,
-    "removedProducts": 1591,
-    "newlyRemovedProducts": 3,
+    "removedProducts": 1520,
+    "newlyRemovedProducts": 0,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
   "duplicateCodes": [],
   "duplicatePaths": [],
   "duplicateNames": [
+    {
+      "value": "bareeze plain emb shirt & trouser lawn 2pc — 2",
+      "count": 2
+    },
+    {
+      "value": "bin saeed digital printed lawn 3pc — 10",
+      "count": 2
+    },
     {
       "value": "aira | organza | dressline — 1547",
       "count": 4
@@ -44,6 +52,10 @@
       "count": 3
     },
     {
+      "value": "limelight digital printed all over two piece lawn 2pc — 15",
+      "count": 2
+    },
+    {
       "value": "imported emb chickenkari lawn 2pc — 19",
       "count": 5
     },
@@ -54,9 +66,18 @@
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
       "count": 2
+    },
+    {
+      "value": "imported emb chickenkari lawn 3pc — 30",
+      "count": 2
     }
   ],
   "classificationConflicts": [
+    {
+      "code": "CRIMSON-S26-D-3A",
+      "name": "Crimson Luxury Embroidered Lawn 3PC — D-3A",
+      "category": "Formal"
+    },
     {
       "code": "JAZMIN-S26-JZ-D05",
       "name": "Jazmin Luxury Embroidered Lawn 3PC — D05",
@@ -83,21 +104,5 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": [
-    {
-      "code": "P&P-ALMRH-LWN-CT-3P-11",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 11",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-11-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-13",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 13",
-      "path": "products/flows-almrh-lwn-ct-3p-13-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-05",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 5",
-      "path": "products/mahira-lklwn-v1-3p-far-05-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
-    }
-  ]
+  "newlyRemovedProducts": []
 }
