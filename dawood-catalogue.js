@@ -30,6 +30,15 @@
     section.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
   }
 
+  const deferredAnchorHashes = new Set(['#how-to-order', '#contact']);
+  function realignDeferredAnchor() {
+    if (!deferredAnchorHashes.has(location.hash)) return;
+    const target = document.querySelector(location.hash);
+    if (!target) return;
+    requestAnimationFrame(() => target.scrollIntoView({ block:'start' }));
+  }
+  window.addEventListener('alhuma:catalogue-ready', realignDeferredAnchor);
+
   document.addEventListener('click', event => {
     if (liveNav?.open && !liveNav.contains(event.target)) liveNav.removeAttribute('open');
   });
