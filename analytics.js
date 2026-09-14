@@ -70,7 +70,7 @@
     if (config.debug) console.info('[Al Huma analytics]',payload);
     return id;
   }
-  function consentCommand(action,state){ dataLayer.push(['consent',action,{ analytics_storage:state.analytics?'granted':'denied', ad_storage:state.marketing?'granted':'denied', ad_user_data:state.marketing?'granted':'denied', ad_personalization:state.marketing?'granted':'denied', functionality_storage:'granted', security_storage:'granted' }]); }
+  function consentCommand(action,state){ window.gtag=window.gtag || function(){ dataLayer.push(arguments); }; window.gtag('consent',action,{ analytics_storage:state.analytics?'granted':'denied', ad_storage:state.marketing?'granted':'denied', ad_user_data:state.marketing?'granted':'denied', ad_personalization:state.marketing?'granted':'denied', functionality_storage:'granted', security_storage:'granted' }); }
   consentCommand('default',consent || {analytics:false,marketing:false});
   function loadScript(src,id){ if(id && document.getElementById(id))return; const script=document.createElement('script'); script.async=true; script.src=src; if(id)script.id=id; document.head.append(script); }
   function trackConfiguredPageEvent(){
