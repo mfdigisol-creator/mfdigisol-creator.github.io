@@ -30,14 +30,13 @@
     section.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
   }
 
-  const deferredAnchorHashes = new Set(['#how-to-order', '#contact']);
-  function realignDeferredAnchor() {
-    if (!deferredAnchorHashes.has(location.hash)) return;
-    const target = document.querySelector(location.hash);
+  const stableHashTargets = new Set(['#live-catalogue', '#new-arrivals', '#how-to-order', '#contact']);
+  function scrollToStableHash(hash, behavior = 'smooth') {
+    if (!stableHashTargets.has(hash)) return;
+    const target = document.querySelector(hash);
     if (!target) return;
-    requestAnimationFrame(() => target.scrollIntoView({ block:'start' }));
+    requestAnimationFrame(() => requestAnimationFrame(() => target.scrollIntoView({ behavior, block:'start' })));
   }
-  window.addEventListener('alhuma:catalogue-ready', realignDeferredAnchor);
 
   document.addEventListener('click', event => {
     if (liveNav?.open && !liveNav.contains(event.target)) liveNav.removeAttribute('open');
@@ -321,15 +320,21 @@
   }
 
   document.addEventListener('click', event => {
-    const link = event.target.closest('a[href="#live-catalogue"], a[href="#new-arrivals"]');
+    const link = event.target.closest('a[href="#live-catalogue"], a[href="#new-arrivals"], a[href="#how-to-order"], a[href="#contact"]');
     if (!link || link.hasAttribute('data-nav-brand')) return;
+    const hash = link.getAttribute('href');
     event.preventDefault();
     liveNav?.removeAttribute('open');
-    track('catalogue_navigation_open', { source:(link.textContent || 'catalogue link').trim() });
+    if (hash === '#live-catalogue' || hash === '#new-arrivals') {
+      track('catalogue_navigation_open', { source:(link.textContent || 'catalogue link').trim() });
+    }
+    history.pushState(null, '', hash);
     loadCatalogue().then(() => {
-      if (!products.length) return;
-      resetCatalogue();
-      section.scrollIntoView({ behavior:'smooth', block:'start' });
+      if (hash === '#live-catalogue' || hash === '#new-arrivals') {
+        if (!products.length) return;
+        resetCatalogue();
+      }
+      scrollToStableHash(hash);
     });
   });
 
@@ -375,6 +380,16 @@
   document.querySelector('[data-live-nav] summary')?.addEventListener('pointerenter', loadCatalogue, { once:true });
   document.querySelector('[data-live-nav] summary')?.addEventListener('focus', loadCatalogue, { once:true });
   document.querySelector('[data-live-nav] summary')?.addEventListener('click', loadCatalogue, { once:true });
-  const initialCatalogueTarget = location.hash === '#live-catalogue' || location.hash === '#new-arrivals' || new URLSearchParams(location.search).has('product');
-  if (initialCatalogueTarget) loadCatalogue().then(() => section.scrollIntoView({ block:'start' }));
+  const initialHashTarget = stableHashTargets.has(location.hash);
+  const initialProductTarget = new URLSearchParams(location.search).has('product');
+  if (initialHashTarget || initialProductTarget) {
+    loadCatalogue().then(() => {
+      if (initialHashTarget) {
+        if ((location.hash === '#live-catalogue' || location.hash === '#new-arrivals') && products.length) resetCatalogue();
+        scrollToStableHash(location.hash, 'auto');
+      } else if (initialProductTarget && products.length) {
+        section.scrollIntoView({ block:'start' });
+      }
+    });
+  }
 })();
