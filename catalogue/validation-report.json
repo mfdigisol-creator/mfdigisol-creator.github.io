@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-14T14:19:04.202Z",
+  "generatedAt": "2026-09-14T14:31:06.370Z",
   "summary": {
-    "products": 401,
-    "removedProducts": 1632,
-    "brands": 59,
-    "collectionPages": 61,
-    "sitemapUrls": 465,
-    "metaFeedRows": 390,
-    "metadataPages": 401,
-    "internalHtmlFiles": 2099,
+    "products": 397,
+    "removedProducts": 1636,
+    "brands": 57,
+    "collectionPages": 59,
+    "sitemapUrls": 459,
+    "metaFeedRows": 386,
+    "metadataPages": 397,
+    "internalHtmlFiles": 2097,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "56 products currently lack retained supplier description text."
+    "55 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -52,7 +52,6 @@
       "ABRISH-2PLWN-V1-ABR-43",
       "ABRISH-2PLWN-V2-ABR-06",
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-16",
       "FLOWS-ALMRH-LWN-CT-3P-18",
       "FLOWS-ALMRH-LWN-CT-3P-21",
       "FLOWS-ALMRH-LWN-CT-3P-05",
@@ -72,7 +71,8 @@
       "DASTAK-DL-LWN-3P-FB-322",
       "DASTAK-DL-LWN-3P-FB-323",
       "DASTAK-DL-LWN-3P-FB-324",
-      "DASTAK-DL-LWN-3P-FB-325"
+      "DASTAK-DL-LWN-3P-FB-325",
+      "JAVERIA-ORG-OFWHT-3P-04"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

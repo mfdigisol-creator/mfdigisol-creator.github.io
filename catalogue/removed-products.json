@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T14:19:00.988Z",
+  "generatedAt": "2026-09-14T14:31:02.411Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V1-ABR-11",
@@ -1358,6 +1358,28 @@
       "firstSeenAt": "2026-09-01T10:14:09+05:00",
       "lastSeenAt": "2026-09-14T10:00:32+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "FLOWS-ALMRH-LWN-CT-3P-16",
+      "id": "15380028162419-62857358836083",
+      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 16",
+      "productName": "Flows By Almeerah Premium Printed Stripe Lawn 3PC",
+      "brand": "Almeerah",
+      "sourceBrand": "Almeerah",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3074.jpg?v=1780476670",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3074.jpg?v=1780476670",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3075.jpg?v=1780476670"
+      ],
+      "path": "products/flows-almrh-lwn-ct-3p-16-flows-by-almeerah-premium-printed-stripe-lawn-3pc/",
+      "firstSeenAt": "2026-09-05T09:34:16+05:00",
+      "lastSeenAt": "2026-09-14T19:18:58+05:00",
+      "removedAt": "2026-09-14T14:31:02.385Z",
       "reason": "supplier-removed"
     },
     {
@@ -13511,6 +13533,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "CORAL-3PLWN-V634-AHMD-CS-7892",
+      "id": "15521704509811-64275597656435",
+      "name": "Coral By Cross Stitch Digital Printed Lawn 3PC — CS-7892",
+      "productName": "Coral By Cross Stitch Digital Printed Lawn 3PC",
+      "brand": "Cross Stitch",
+      "sourceBrand": "Cross Stitch",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-25at1.36.02PM_8.jpg?v=1787652192",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-25at1.36.02PM_8.jpg?v=1787652192"
+      ],
+      "path": "products/coral-3plwn-v634-ahmd-cs-7892-coral-by-cross-stitch-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-14T10:00:32+05:00",
+      "lastSeenAt": "2026-09-14T19:18:58+05:00",
+      "removedAt": "2026-09-14T14:31:02.385Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "CORAL-3PLWN-V634-AHMD-CS-7894",
       "id": "15521704673651-64275597820275",
       "name": "Coral By Cross Stitch Digital Printed Lawn 3PC — CS-7894",
@@ -14776,30 +14819,6 @@
       "firstSeenAt": "2026-07-31T22:27:37+05:00",
       "lastSeenAt": "2026-09-12T09:39:24+05:00",
       "removedAt": "2026-09-12T15:34:26.029Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "MISAAL-DL-LWN-3P-FB-383-B",
-      "id": "15447063822707-63122454446451",
-      "name": "Misaal | Lawn | Dressline — FB-383-B",
-      "productName": "Misaal | Lawn | Dressline",
-      "brand": "Dressline",
-      "sourceBrand": "Dressline",
-      "category": "Luxury",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "price": 7800,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_2.jpg?v=1784707190",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_2.jpg?v=1784707190",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_1.jpg?v=1784707190",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_4.jpg?v=1784707190",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/383B_3.jpg?v=1784707190"
-      ],
-      "path": "products/misaal-dl-lwn-3p-fb-383-b-misaal-lawn-dressline/",
-      "firstSeenAt": "2026-08-06T15:18:36+05:00",
-      "lastSeenAt": "2026-09-13T09:52:37+05:00",
-      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -20098,6 +20117,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "KAYSERIA-LWN-V3-3P-AHMD-E6956",
+      "id": "15489492058483-63950440956275",
+      "name": "Kayseria Digital Printed Lawn 3PC — E6956",
+      "productName": "Kayseria Digital Printed Lawn 3PC",
+      "brand": "Kayseria",
+      "sourceBrand": "Kayseria",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/322-2-729561-product-1_1.webp?v=1786461646",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/322-2-729561-product-1_1.webp?v=1786461646"
+      ],
+      "path": "products/kayseria-lwn-v3-3p-ahmd-e6956-kayseria-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-05T09:34:16+05:00",
+      "lastSeenAt": "2026-09-14T19:18:58+05:00",
+      "removedAt": "2026-09-14T14:31:02.385Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "KAYSERIA-LWN-V3-3P-AHMD-E6959",
       "id": "15489492189555-63950444593523",
       "name": "Kayseria Digital Printed Lawn 3PC — E6959",
@@ -21344,6 +21384,27 @@
       "firstSeenAt": "2026-09-14T10:00:32+05:00",
       "lastSeenAt": "2026-09-14T10:00:32+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "AFREEN-3PLWN-V3-HM-LS-0787",
+      "id": "15523738616179-64288241156467",
+      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0787",
+      "productName": "Afreen By Lala Digital Printed Airjet Lawn 3PC",
+      "brand": "Lala",
+      "sourceBrand": "Lala",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/0787.jpg?v=1787828264",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/0787.jpg?v=1787828264"
+      ],
+      "path": "products/afreen-3plwn-v3-hm-ls-0787-afreen-by-lala-digital-printed-airjet-lawn-3pc/",
+      "firstSeenAt": "2026-09-14T19:18:58+05:00",
+      "lastSeenAt": "2026-09-14T19:18:58+05:00",
+      "removedAt": "2026-09-14T14:31:02.385Z",
       "reason": "supplier-removed"
     },
     {
@@ -29417,6 +29478,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "GUFTGU-3PLWN-AHMD-OTL-24-216",
+      "id": "15490568356211-63953801249139",
+      "name": "Guftagu By Orient Summer Digital Printed Lawn 3PC — OTL-24-216",
+      "productName": "Guftagu By Orient Summer Digital Printed Lawn 3PC",
+      "brand": "Orient",
+      "sourceBrand": "Orient",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_3k7d8w3k7d8w3k7d.png?v=1786603605",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_3k7d8w3k7d8w3k7d.png?v=1786603605"
+      ],
+      "path": "products/guftgu-3plwn-ahmd-otl-24-216-guftagu-by-orient-summer-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-14T19:18:58+05:00",
+      "lastSeenAt": "2026-09-14T19:18:58+05:00",
+      "removedAt": "2026-09-14T14:31:02.385Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "SAHIBA-CKLWN-V17-3P-PF-635",
       "id": "15448026317171-63127654367603",
       "name": "Sahiba By Pak Fabrics Printed & Emb Chickenkari Lawn 3PC — D-635",
@@ -31588,29 +31670,6 @@
       "firstSeenAt": "2026-07-31T22:27:29+05:00",
       "lastSeenAt": "2026-08-03T17:44:02+05:00",
       "removedAt": "2026-08-04T10:20:36.826Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "MONACO-LWN-MN-02",
-      "id": "15427951296883-63054146109811",
-      "name": "Monaco By Parishay | Lawn'26 — MN-02",
-      "productName": "Monaco By Parishay | Lawn'26",
-      "brand": "Parishay",
-      "sourceBrand": "Parishay",
-      "category": "Luxury",
-      "pieceType": "1 Piece",
-      "pricingClass": "embroidered",
-      "price": 12925,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_87f4bae3-bf62-47c5-92de-96dcd8c34374.jpg?v=1783158584",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_87f4bae3-bf62-47c5-92de-96dcd8c34374.jpg?v=1783158584",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/6_d3477697-1cb5-476e-b3d9-6aa3f1514fad.jpg?v=1783158584",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_6f9ee5fd-490b-44f5-b455-305efb659b2c.jpg?v=1783158584"
-      ],
-      "path": "products/monaco-lwn-mn-02-monaco-by-parishay-lawn-26/",
-      "firstSeenAt": "2026-07-31T22:27:29+05:00",
-      "lastSeenAt": "2026-09-13T09:52:37+05:00",
-      "removedAt": "2026-09-13T16:21:20.290Z",
       "reason": "supplier-removed"
     },
     {
@@ -35453,6 +35512,30 @@
       "firstSeenAt": "2026-09-14T10:00:32+05:00",
       "lastSeenAt": "2026-09-14T10:00:32+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "NAINA-SHN-LWN-V212-2P-08",
+      "id": "15460231315827-63596251513203",
+      "name": "Naina By Shanaya Digital Printed Two Piece Lawn 2PC — 8",
+      "productName": "Naina By Shanaya Digital Printed Two Piece Lawn 2PC",
+      "brand": "Shanaya",
+      "sourceBrand": "Shanaya",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15896_1_e10938c6-fa4b-4f45-bd9b-bb05264e197b.jpg?v=1785493959",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15896_1_e10938c6-fa4b-4f45-bd9b-bb05264e197b.jpg?v=1785493959",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15896_2_dddd0289-4cf4-4c9d-8d87-6d88003c5784.jpg?v=1785493959",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15896_2.jpg?v=1785421543",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15896_1.jpg?v=1785421542"
+      ],
+      "path": "products/naina-shn-lwn-v212-2p-08-naina-by-shanaya-digital-printed-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-14T10:00:31+05:00",
+      "lastSeenAt": "2026-09-14T19:18:58+05:00",
+      "removedAt": "2026-09-14T14:31:02.385Z",
       "reason": "supplier-removed"
     },
     {
