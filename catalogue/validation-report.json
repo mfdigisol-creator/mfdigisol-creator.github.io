@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-14T18:05:10.955Z",
+  "generatedAt": "2026-09-14T18:46:02.027Z",
   "summary": {
-    "products": 360,
-    "removedProducts": 1676,
-    "brands": 52,
-    "collectionPages": 54,
-    "sitemapUrls": 417,
-    "metaFeedRows": 349,
-    "metadataPages": 360,
-    "internalHtmlFiles": 2095,
+    "products": 353,
+    "removedProducts": 1683,
+    "brands": 50,
+    "collectionPages": 52,
+    "sitemapUrls": 408,
+    "metaFeedRows": 342,
+    "metadataPages": 353,
+    "internalHtmlFiles": 2094,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "42 products currently lack retained supplier description text."
+    "40 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -55,8 +55,6 @@
       "P&P-ALMRH-LWN-CT-3P-17",
       "P&P-ALMRH-LWN-CT-3P-09",
       "ANAYANOOR-PRNLWN-3P-02",
-      "CHINYERE-2PLWN-V1-ABR-12",
-      "CROSS-2PLWN-V1-ABR-07",
       "CS-EMB-LWN-3P-1856",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
@@ -72,7 +70,9 @@
       "MUSE-SILK-3P-14371-C",
       "MUSE-SILK-3P-14371-D",
       "SINGHAR-SILK-SKIN-3P-FB258",
-      "KHAADI-2PLWN-V1-ABR-10"
+      "KHAADI-2PLWN-V1-ABR-10",
+      "LIMELIGHT-2PLWN-V2-ABR-15",
+      "MUSHQ-EMB-LWN-3P-1860"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
