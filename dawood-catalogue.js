@@ -188,14 +188,24 @@
     const product = products.find(item => item.code === code);
     if (!product) return;
     const images = [...new Set([product.image, ...(product.images || [])].filter(Boolean))];
+    const dialogSources = image => ({
+      small: thumbnailUrl(image, 600),
+      medium: thumbnailUrl(image, 900),
+      large: thumbnailUrl(image, 1200),
+      thumb: thumbnailUrl(image, 180)
+    });
+    const initialImage = dialogSources(images[0]);
     const priceCopy = product.price == null ? '<strong>Price on enquiry</strong><small>Our automated system could not classify this design with sufficient confidence, so no estimated price is shown.</small>' : `<strong>${money(product.price)}</strong><small>Al Huma Collection retail price</small>`;
     const description = descriptionForProduct(product);
     dialog.querySelector('[data-live-dialog-content]').innerHTML = `<div class="live-dialog-layout">
-      <div class="live-dialog-gallery"><div class="live-dialog-stage"><img src="${escapeHtml(images[0])}" alt="${escapeHtml(product.name)}" data-dialog-main /></div><div class="live-dialog-thumbs">${images.map((image,index) => `<button type="button" data-dialog-image="${escapeHtml(image)}" class="${index === 0 ? 'active' : ''}"><img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)} view ${index+1}" loading="lazy" /></button>`).join('')}</div></div>
+      <div class="live-dialog-gallery"><div class="live-dialog-stage"><img src="${escapeHtml(initialImage.medium)}" srcset="${escapeHtml(initialImage.small)} 600w, ${escapeHtml(initialImage.medium)} 900w, ${escapeHtml(initialImage.large)} 1200w" sizes="(max-width:1000px) 100vw, 50vw" alt="${escapeHtml(product.name)}" loading="eager" decoding="async" fetchpriority="high" referrerpolicy="no-referrer" data-dialog-main /></div><div class="live-dialog-thumbs">${images.map((image,index) => `<button type="button" data-dialog-image="${escapeHtml(image)}" class="${index === 0 ? 'active' : ''}"><img src="${escapeHtml(dialogSources(image).thumb)}" alt="${escapeHtml(product.name)} view ${index+1}" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></button>`).join('')}</div></div>
       <div class="live-dialog-copy"><p class="eyebrow dark"><span></span>${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</p><h2>${escapeHtml(product.name)}</h2><dl><div><dt>Product code</dt><dd>${escapeHtml(product.code)}</dd></div><div><dt>Style</dt><dd>${product.pricingClass === 'embroidered' ? 'Embroidered' : product.pricingClass === 'non-embroidered' ? 'Printed / non-embroidered' : 'Classification pending'}</dd></div><div><dt>Suit type</dt><dd>${escapeHtml(product.pieceType)}</dd></div><div><dt>Availability</dt><dd>${product.available ? 'Available to order — confirmation required' : 'Currently unavailable'}</dd></div></dl><div class="live-dialog-note live-dialog-description"><strong>${escapeHtml(description.heading)}</strong><p>${escapeHtml(description.text)}</p></div><div class="live-dialog-price">${priceCopy}</div><div class="live-dialog-actions">${product.available ? `<button class="button button-dark" type="button" data-dialog-cart="${escapeHtml(product.code)}">Add to cart</button>` : ''}<a class="button button-outline-dark" href="${whatsapp(product, product.price == null)}" target="_blank" rel="noopener noreferrer" data-dialog-order>${product.price == null ? 'Enquire for price' : 'Order on WhatsApp'}</a><button class="button button-outline-dark" type="button" data-dialog-share>Share product</button></div><p class="live-dialog-note">Availability is synchronized from our approved supplier source approximately every 12 hours. Please confirm with our team before payment.</p></div>
     </div>`;
     dialog.querySelectorAll('[data-dialog-image]').forEach(button => button.addEventListener('click', () => {
-      dialog.querySelector('[data-dialog-main]').src = button.dataset.dialogImage;
+      const main = dialog.querySelector('[data-dialog-main]');
+      const selected = dialogSources(button.dataset.dialogImage);
+      main.src = selected.medium;
+      main.srcset = `${selected.small} 600w, ${selected.medium} 900w, ${selected.large} 1200w`;
       dialog.querySelectorAll('[data-dialog-image]').forEach(item => item.classList.toggle('active', item === button));
     }));
     dialog.querySelector('[data-dialog-share]').addEventListener('click', async () => {
