@@ -3,6 +3,14 @@ html, body { max-width: 100%; overflow-x: clip; }
 img, svg, video, iframe { max-width: 100%; }
 input, select, textarea, button { max-width: 100%; }
 
+/* Fixed-header anchor clearance and practical contact-detail readability. */
+#how-to-order,
+#contact { scroll-margin-top: 104px; }
+.contact-details strong {
+  font-family: var(--sans);
+  font-weight: 500;
+}
+
 @media (max-width: 760px) {
   /* Catalogue content is populated after load; never leave it transparent if
      an Android browser misses the reveal observer transition. */
