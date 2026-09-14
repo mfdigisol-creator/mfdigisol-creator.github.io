@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-14T18:45:58.920Z",
+  "generatedAt": "2026-09-14T19:16:50.923Z",
   "summary": {
-    "products": 353,
-    "available": 341,
-    "formal": 88,
+    "products": 351,
+    "available": 339,
+    "formal": 86,
     "luxury": 265,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 342,
+    "metaFeedProducts": 340,
     "canonicalBrands": 50,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 9,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1683,
-    "newlyRemovedProducts": 7,
+    "removedProducts": 1685,
+    "newlyRemovedProducts": 2,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -89,39 +89,14 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "BINSAEED-LWN-V1-3P-HM-29",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 29",
-      "path": "products/binsaeed-lwn-v1-3p-hm-29-bin-saeed-digital-printed-lawn-3pc/"
+      "code": "TWKL-LWN-3P-EHT-1922",
+      "name": "Tawakkal Plain Embroidered Lawn 3PC — 1922",
+      "path": "products/twkl-lwn-3p-eht-1922-tawakkal-plain-embroidered-lawn-3pc/"
     },
     {
-      "code": "IMP-EMBCK-PAROT-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-parot-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
-    },
-    {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-09",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 9",
-      "path": "products/mahira-lklwn-v1-3p-far-09-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
-    },
-    {
-      "code": "COCO-3PLWN-AHMD-CP-7334",
-      "name": "Coco Prints Summer Digital Fancy Printed Lawn 3PC — CP-7334",
-      "path": "products/coco-3plwn-ahmd-cp-7334-coco-prints-summer-digital-fancy-printed-lawn-3pc/"
-    },
-    {
-      "code": "CROSS-2PLWN-V1-ABR-07",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 7",
-      "path": "products/cross-2plwn-v1-abr-07-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "MILI-EMBCK-GREN-2P-ABR-04",
-      "name": "Imported Digital Embroidered Lawn 2PC — 4",
-      "path": "products/mili-embck-gren-2p-abr-04-imported-digital-embroidered-lawn-2pc/"
-    },
-    {
-      "code": "CHINYERE-2PLWN-V1-ABR-12",
-      "name": "Chinyere Digital Printed All Over Two Piece Lawn 2PC — 12",
-      "path": "products/chinyere-2plwn-v1-abr-12-chinyere-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "RP-LWN-V7-3P-RAYS6626-35R",
+      "name": "Rang Preet Digital Printed Lawn 3PC — RAYS6626-35R",
+      "path": "products/rp-lwn-v7-3p-rays6626-35r-rang-preet-digital-printed-lawn-3pc/"
     }
   ]
 }
