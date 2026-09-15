@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T09:31:48.596Z",
+  "generatedAt": "2026-09-15T10:39:35.414Z",
   "summary": {
-    "products": 341,
+    "products": 347,
     "removedProducts": 1702,
-    "brands": 45,
-    "collectionPages": 47,
-    "sitemapUrls": 391,
-    "metaFeedRows": 330,
-    "metadataPages": 341,
-    "internalHtmlFiles": 2096,
+    "brands": 43,
+    "collectionPages": 45,
+    "sitemapUrls": 395,
+    "metaFeedRows": 336,
+    "metadataPages": 347,
+    "internalHtmlFiles": 2101,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "36 products currently lack retained supplier description text."
+    "40 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -49,9 +49,11 @@
     ],
     "missingDescriptions": [
       "FLEUR-ALMRH-LWN-CT-3P-09",
+      "FLOWS-ALMRH-LWN-CT-3P-13",
       "FLOWS-ALMRH-LWN-CT-3P-18",
       "P&P-ALMRH-LWN-CT-3P-17",
       "ANAYANOOR-PRNLWN-3P-02",
+      "CHINYERE-2PLWN-V1-ABR-01",
       "CS-EMB-LWN-3P-1856",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
@@ -70,9 +72,7 @@
       "KHAADI-2PLWN-V1-ABR-10",
       "LIMELIGHT-2PLWN-V2-ABR-15",
       "MUSHQ-EMB-LWN-3P-1860",
-      "DASTAN-CKLWN-3P-NRJ-01",
-      "DASTAN-CKLWN-3P-NRJ-02",
-      "DASTAN-CKLWN-3P-NRJ-07"
+      "DASTAN-CKLWN-3P-NRJ-01"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

@@ -1,25 +1,106 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T09:31:43.697Z",
+  "generatedAt": "2026-09-15T10:39:30.403Z",
   "summary": {
-    "products": 341,
-    "available": 329,
-    "formal": 76,
+    "products": 347,
+    "available": 335,
+    "formal": 82,
     "luxury": 265,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 330,
-    "canonicalBrands": 45,
-    "aliasCorrections": 0,
+    "metaFeedProducts": 336,
+    "canonicalBrands": 43,
+    "aliasCorrections": 16,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 8,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
     "removedProducts": 1702,
-    "newlyRemovedProducts": 10,
+    "newlyRemovedProducts": 3,
     "supplierRefreshUsed": true
   },
-  "aliasCorrections": [],
+  "aliasCorrections": [
+    {
+      "code": "IMP-EMBCK-PURP-2P-ABR-19",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-FEROZ-2P-ABR-19",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-TPINK-2P-ABR-19",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PISTA-2P-ABR-19",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PECH-2P-ABR-19",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PURP-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-LEMN-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-TPNK-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PISTA-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-LJAMN-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-LPISTA-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PIST-2P-ABR-06",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-BRWN-2P-ABR-12",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PAROT-2P-ABR-12",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-GREN-2P-ABR-23",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-GREY-2P-ABR-30",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    }
+  ],
   "duplicateCodes": [],
   "duplicatePaths": [],
   "duplicateNames": [
@@ -85,54 +166,19 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "ALKARAM-LWN-V1-3P-LDS-03",
-      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 3",
-      "path": "products/alkaram-lwn-v1-3p-lds-03-alkaram-spring-summer-digital-printed-lawn-3pc/"
+      "code": "SAPPHIRE-LWN-V11-ZULEYHA-AHMD-1",
+      "name": "Sapphire Digital Printed Bana Dora Lawn 3PC — 1",
+      "path": "products/sapphire-lwn-v11-zuleyha-ahmd-1-sapphire-digital-printed-bana-dora-lawn-3pc/"
     },
     {
-      "code": "ALKARAM-LWN-V1-3P-LDS-06",
-      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 6",
-      "path": "products/alkaram-lwn-v1-3p-lds-06-alkaram-spring-summer-digital-printed-lawn-3pc/"
+      "code": "NAINA-SHN-LWN-V212-3P-08",
+      "name": "Naina By Shanaya Digital Printed Lawn 3PC — 8",
+      "path": "products/naina-shn-lwn-v212-3p-08-naina-by-shanaya-digital-printed-lawn-3pc/"
     },
     {
-      "code": "P&P-ALMRH-LWN-CT-3P-13",
-      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 13",
-      "path": "products/p-and-p-almrh-lwn-ct-3p-13-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "ANEELAS-LWN-MERN-3P-HA-306",
-      "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 306",
-      "path": "products/aneelas-lwn-mern-3p-ha-306-aneelas-embroiderd-and-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "ANEELAS-LAWN-3P-08",
-      "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 8",
-      "path": "products/aneelas-lawn-3p-08-aneelas-embroiderd-and-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-21",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 21",
-      "path": "products/flows-almrh-lwn-ct-3p-21-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "AFREEN-LALA-HM-PRNT-09",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 9",
-      "path": "products/afreen-lala-hm-prnt-09-afreen-by-lala-airjet-printed-lawn-3pc/"
-    },
-    {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-18",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 18",
-      "path": "products/mahira-lklwn-v1-3p-far-18-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
-    },
-    {
-      "code": "GULAHMED-LWN-V1-3P-LDS-05",
-      "name": "Gul Ahmed Printed Doriya Lawn 3PC — 5",
-      "path": "products/gulahmed-lwn-v1-3p-lds-05-gul-ahmed-printed-doriya-lawn-3pc/"
-    },
-    {
-      "code": "ALKARAM-3PLWN-V631-AHMD-17",
-      "name": "Alkaram Classic Digital Printed Lawn 3PC — 17",
-      "path": "products/alkaram-3plwn-v631-ahmd-17-alkaram-classic-digital-printed-lawn-3pc/"
+      "code": "KAYSERIA-LWN-V3-3P-AHMD-E6955",
+      "name": "Kayseria Digital Printed Lawn 3PC — E6955",
+      "path": "products/kayseria-lwn-v3-3p-ahmd-e6955-kayseria-digital-printed-lawn-3pc/"
     }
   ]
 }
