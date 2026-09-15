@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-14T19:16:50.923Z",
+  "generatedAt": "2026-09-15T04:57:49.591Z",
   "summary": {
-    "products": 351,
-    "available": 339,
-    "formal": 86,
+    "products": 346,
+    "available": 334,
+    "formal": 81,
     "luxury": 265,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 340,
-    "canonicalBrands": 50,
+    "metaFeedProducts": 335,
+    "canonicalBrands": 47,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 9,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1685,
-    "newlyRemovedProducts": 2,
+    "removedProducts": 1690,
+    "newlyRemovedProducts": 5,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -89,14 +89,29 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "TWKL-LWN-3P-EHT-1922",
-      "name": "Tawakkal Plain Embroidered Lawn 3PC — 1922",
-      "path": "products/twkl-lwn-3p-eht-1922-tawakkal-plain-embroidered-lawn-3pc/"
+      "code": "MC-SHN-LWN-V166-3P-10",
+      "name": "Shanaya Digital Emb Lawn 3PC — 10",
+      "path": "products/mc-shn-lwn-v166-3p-10-shanaya-digital-emb-lawn-3pc/"
     },
     {
-      "code": "RP-LWN-V7-3P-RAYS6626-35R",
-      "name": "Rang Preet Digital Printed Lawn 3PC — RAYS6626-35R",
-      "path": "products/rp-lwn-v7-3p-rays6626-35r-rang-preet-digital-printed-lawn-3pc/"
+      "code": "BINSAEED-LWN-V2-3P-HM-07",
+      "name": "Bin Saeed Digital Printed Lawn 3PC — 7",
+      "path": "products/binsaeed-lwn-v2-3p-hm-07-bin-saeed-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "RP-LWN-V7-3P-RAYS6626-33R",
+      "name": "Rang Preet Digital Printed Lawn 3PC — RAYS6626-33R",
+      "path": "products/rp-lwn-v7-3p-rays6626-33r-rang-preet-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "AFREEN-LALA-HM-PRNT-03",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 3",
+      "path": "products/afreen-lala-hm-prnt-03-afreen-by-lala-airjet-printed-lawn-3pc/"
+    },
+    {
+      "code": "NISHAT-2PLWN-V2-ABR-16",
+      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 16",
+      "path": "products/nishat-2plwn-v2-abr-16-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
     }
   ]
 }

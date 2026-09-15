@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-14T19:16:54.525Z",
+  "generatedAt": "2026-09-15T04:57:53.173Z",
   "summary": {
-    "products": 351,
-    "removedProducts": 1685,
-    "brands": 50,
-    "collectionPages": 52,
-    "sitemapUrls": 406,
-    "metaFeedRows": 340,
-    "metadataPages": 351,
-    "internalHtmlFiles": 2094,
+    "products": 346,
+    "removedProducts": 1690,
+    "brands": 47,
+    "collectionPages": 49,
+    "sitemapUrls": 398,
+    "metaFeedRows": 335,
+    "metadataPages": 346,
+    "internalHtmlFiles": 2091,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "40 products currently lack retained supplier description text."
+    "39 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
