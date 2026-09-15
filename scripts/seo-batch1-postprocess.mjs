@@ -12,7 +12,8 @@ const BASE = 'https://alhumacollection.com';
 const BRAND_ALIASES = new Map([
   ['anaya noor', 'Anaya Noor'],
   ['lime light', 'Limelight'],
-  ['limelight', 'Limelight']
+  ['limelight', 'Limelight'],
+  ['lmported', 'Imported']
 ]);
 
 const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
