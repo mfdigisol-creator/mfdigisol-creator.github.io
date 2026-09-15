@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T13:28:18.723Z",
+  "generatedAt": "2026-09-15T17:02:49.389Z",
   "summary": {
-    "products": 329,
-    "removedProducts": 1720,
-    "brands": 39,
-    "collectionPages": 41,
-    "sitemapUrls": 373,
-    "metaFeedRows": 318,
-    "metadataPages": 329,
-    "internalHtmlFiles": 2154,
+    "products": 326,
+    "removedProducts": 1732,
+    "brands": 38,
+    "collectionPages": 40,
+    "sitemapUrls": 369,
+    "metaFeedRows": 315,
+    "metadataPages": 326,
+    "internalHtmlFiles": 2163,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "38 products currently lack retained supplier description text."
+    "32 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -49,10 +49,7 @@
     ],
     "missingDescriptions": [
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-15",
-      "FLOWS-ALMRH-LWN-CT-3P-18",
       "P&P-ALMRH-LWN-CT-3P-17",
-      "ANAYANOOR-PRNLWN-3P-02",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
@@ -72,7 +69,10 @@
       "MUSE-SILK-3P-14371-C",
       "MUSE-SILK-3P-14371-D",
       "SINGHAR-SILK-SKIN-3P-FB258",
-      "KHAADI-2PLWN-V1-ABR-10"
+      "LIMELIGHT-2PLWN-V2-ABR-15",
+      "MUSHQ-EMB-LWN-3P-1860",
+      "DASTAN-CKLWN-3P-NRJ-01",
+      "DASTAN-CKLWN-3P-NRJ-02"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
