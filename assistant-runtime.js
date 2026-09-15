@@ -168,11 +168,11 @@ export function init({ open = false } = {}) {
       addChatMessage(`Our synchronized ${category} catalogue currently shows ${list.filter(item=>item.available).length} available designs, with displayed prices from ${rangeText(range)}.`, 'assistant', assistantActions);
     } else if (includesAny(question,['how many','product count','number of products','total products'])) {
       addChatMessage(`The synchronized catalogue currently contains ${catalogueProducts.length} products, including ${catalogueProducts.filter(item=>item.available).length} marked available to order.`, 'assistant', assistantActions);
-    } else if (includesAny(question,['delivery','shipping','courier','tcs','leopards','how long','tat'])) {
+    } else if (includesAny(question,['delivery','shipping','courier','tcs','leopards','how long']) || questionTerms.includes('tat')) {
       addChatMessage('Delivery is normally through TCS or Leopards Courier. Charges are Rs. 300 within Sialkot and Rs. 600 outside Sialkot for parcels up to 1 kg. Charges may increase with weight or volume. Estimated delivery TAT is up to 7 days after confirmation and may vary due to unforeseen circumstances.', 'assistant', [{label:'Delivery policies',href:'policies.html'}]);
     } else if (includesAny(question,['cancel','cancellation'])) {
       addChatMessage('To cancel before the confirmation call, WhatsApp our official number with your order details.', 'assistant', [{label:'Request cancellation',href:'https://wa.me/923216115731?text=Hello%20Al%20Huma%20Collection%2C%20I%20would%20like%20to%20cancel%20my%20order%20before%20the%20confirmation%20call.%20My%20order%20details%20are%3A%20',external:true}]);
-    } else if (includesAny(question,['payment','cod','cash on delivery','pay'])) {
+    } else if (includesAny(question,['payment','cash on delivery','pay']) || questionTerms.includes('cod')) {
       addChatMessage('We currently offer Cash on Delivery within Pakistan. No online card payment is required. Our team calls to confirm availability and final charges before dispatch.', 'assistant', [{label:'How to order',href:'#how-to-order'}]);
     } else if (includesAny(question,['cart','basket','saved product'])) {
       addChatMessage('Use “Add to cart” on any available product. Your cart is saved in this browser until you remove the item or successfully place the order.', 'assistant', [{label:'Browse products',href:'#live-catalogue'}]);
