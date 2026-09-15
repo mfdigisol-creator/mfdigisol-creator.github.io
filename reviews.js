@@ -31,10 +31,10 @@
     }
     const root = section.querySelector('[data-approved-reviews]');
     if (root) {
-      root.innerHTML = '<div class="review-empty"><span>Product-specific reviews</span><h3>Reviews now belong to each design.</h3><p>Open any design in the live catalogue to read published reviews or submit your own experience. Reviews are published as submitted and are not edited by Al Huma Collection.</p></div>';
+      root.innerHTML = '<div class="review-empty"><span>Product-specific reviews</span><h3>Reviews now belong to each design.</h3><p>Open any design in the live catalogue to read published reviews or submit your own experience. Reviews are published as submitted after security verification. Al Huma Collection does not edit customer ratings or review text. Spam, abusive, unrelated or fraudulent content may be hidden or removed through post-publication moderation.</p></div>';
     }
     const intro = section.querySelector('.reviews-heading > p:last-child');
-    if (intro) intro.textContent = 'Published customer reviews are shown against the exact design they describe. Reviews are published as submitted and are not edited by Al Huma Collection.';
+    if (intro) intro.textContent = 'Published customer reviews are shown against the exact design they describe. Reviews are published as submitted after security verification and are not edited by Al Huma Collection. Spam, abusive, unrelated or fraudulent content may be hidden or removed through post-publication moderation.';
   }
 
   neutralizeLegacyHomepageReviews();
