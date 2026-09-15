@@ -58,11 +58,52 @@ export function init({ open = false } = {}) {
   };
   window.addEventListener('alhuma:catalogue-ready', hydrateAssistantCatalogue);
   if (window.AlHumaCatalogueSnapshot) hydrateAssistantCatalogue({ detail:window.AlHumaCatalogueSnapshot });
+  let catalogueLoadPromise = null;
+  const ensureAssistantCatalogue = async () => {
+    if (catalogueProducts.length) return true;
+    const loadCatalogue = window.AlHumaCatalogue?.load;
+    if (typeof loadCatalogue !== 'function') return false;
+    catalogueLoadPromise ||= Promise.resolve(loadCatalogue()).catch(() => null);
+    await catalogueLoadPromise;
+    if (!catalogueProducts.length && window.AlHumaCatalogueSnapshot) hydrateAssistantCatalogue({ detail:window.AlHumaCatalogueSnapshot });
+    if (!catalogueProducts.length) catalogueLoadPromise = null;
+    return catalogueProducts.length > 0;
+  };
   const includesAny = (question, terms) => terms.some(term => question.includes(term));
   const assistantActions = [{ label:'Browse catalogue', href:'#live-catalogue' }, { label:'Ask our team', href:generalWhatsApp, external:true }];
   
-  const answerChatQuestion = rawQuestion => {
+  const answerChatQuestion = async rawQuestion => {
     const question = normalizeQuestion(rawQuestion);
+    const questionTerms = question.split(' ');
+    const orderQuestion = ['order','buy','purchase','book','checkout'].some(term => questionTerms.includes(term));
+    const productCodeQuestion = /\b(?=[A-Za-z0-9-]*\d)[A-Za-z0-9]+(?:-[A-Za-z0-9]+){2,}\b/.test(rawQuestion);
+    if (!catalogueProducts.length && orderQuestion) await ensureAssistantCatalogue();
+    const earlyStaticQuestion = includesAny(question, [
+      'fabric quality','fabric','cloth quality','material quality','kapra','kapray','quality kaisi','quality of suit',
+      'why al huma','why should i buy','why buy from','why choose','al huma se kyun','ap se kyun','direct from brand','brand directly','brand website','official website','instead of brand',
+      'compare','comparison','versus',' vs ','marketplace','market place','other shop','other website','daraz','competitor','different brand','better than','cheaper than',
+      'trust','genuine','original','authentic','reliable','safe to order','fraud','scam'
+    ]);
+    const shortMiddleStaticQuestion = ['cod','pay','tat'].some(term => questionTerms.includes(term));
+    const middleStaticQuestion = shortMiddleStaticQuestion || includesAny(question, [
+      'delivery','shipping','courier','tcs','leopards','how long','cancel','cancellation','payment','cash on delivery',
+      'cart','basket','saved product','review','rating','feedback','return','exchange','refund','order','buy','purchase','book','checkout'
+    ]);
+    const lateStaticQuestion = ['hello','hi','salam','assalam'].includes(question) || includesAny(question, [
+      'location','address','map','shop','visit','email','contact','phone','whatsapp','phone number','whatsapp number','contact number','facebook','instagram'
+    ]);
+    const dynamicBeforeMiddle = includesAny(question, [
+      'price','prices','cost','range','rate','how much','cheapest','expensive','budget','under','below','upto','up to',
+      'embroidered','embroidery','printed','non embroidered','formal','luxury','how many','product count','number of products','total products'
+    ]);
+    const dynamicBeforeLate = dynamicBeforeMiddle || includesAny(question, [
+      'available','availability','stock','collection','catalog','catalogue','design','product','brand'
+    ]);
+    const catalogueIndependentQuestion = !productCodeQuestion && (earlyStaticQuestion || (middleStaticQuestion && !dynamicBeforeMiddle) || (lateStaticQuestion && !dynamicBeforeLate));
+    if (!catalogueProducts.length && !catalogueIndependentQuestion && !(await ensureAssistantCatalogue())) {
+      addChatMessage('The synchronized catalogue is temporarily unavailable, so I cannot safely calculate current prices, product counts or availability right now. Please contact our team on official WhatsApp for current product information.', 'assistant', [{ label:'Contact on WhatsApp', href:generalWhatsApp, external:true }]);
+      return;
+    }
     const product = catalogueEntries.find(item => {
       const code = normalizeQuestion(item.code), name = normalizeQuestion(item.product);
       return question.includes(code) || (name.length > 7 && question.includes(name));
@@ -123,18 +164,18 @@ export function init({ open = false } = {}) {
       }
       addChatMessage(`For currently available products with displayed prices, the overall range is ${rangeText(all)}. Formal designs range from ${rangeText(formal)}, while Luxury designs range from ${rangeText(luxury)}. Some products remain “Price on enquiry” when classification is uncertain.`, 'assistant', assistantActions);
     } else if (includesAny(question,['embroidered','embroidery','printed','non embroidered'])) {
-      const embroidered = question.includes('embroider'), type = embroidered ? 'embroidered' : 'non-embroidered', list = catalogueProducts.filter(item => item.pricingClass === type), range=productRange(list);
+      const embroidered = !question.includes('non embroidered') && question.includes('embroider'), type = embroidered ? 'embroidered' : 'non-embroidered', list = catalogueProducts.filter(item => item.pricingClass === type), range=productRange(list);
       addChatMessage(`There are ${list.filter(item=>item.available).length} currently available ${embroidered ? 'embroidered' : 'printed / non-embroidered'} designs. Displayed prices range from ${rangeText(range)}.`, 'assistant', assistantActions);
     } else if (includesAny(question,['formal','luxury'])) {
       const category = question.includes('luxury') ? 'Luxury' : 'Formal', list=catalogueProducts.filter(item=>item.category===category), range=productRange(list);
       addChatMessage(`Our synchronized ${category} catalogue currently shows ${list.filter(item=>item.available).length} available designs, with displayed prices from ${rangeText(range)}.`, 'assistant', assistantActions);
     } else if (includesAny(question,['how many','product count','number of products','total products'])) {
       addChatMessage(`The synchronized catalogue currently contains ${catalogueProducts.length} products, including ${catalogueProducts.filter(item=>item.available).length} marked available to order.`, 'assistant', assistantActions);
-    } else if (includesAny(question,['delivery','shipping','courier','tcs','leopards','how long','tat'])) {
+    } else if (includesAny(question,['delivery','shipping','courier','tcs','leopards','how long']) || questionTerms.includes('tat')) {
       addChatMessage('Delivery is normally through TCS or Leopards Courier. Charges are Rs. 300 within Sialkot and Rs. 600 outside Sialkot for parcels up to 1 kg. Charges may increase with weight or volume. Estimated delivery TAT is up to 7 days after confirmation and may vary due to unforeseen circumstances.', 'assistant', [{label:'Delivery policies',href:'policies.html'}]);
     } else if (includesAny(question,['cancel','cancellation'])) {
       addChatMessage('To cancel before the confirmation call, WhatsApp our official number with your order details.', 'assistant', [{label:'Request cancellation',href:'https://wa.me/923216115731?text=Hello%20Al%20Huma%20Collection%2C%20I%20would%20like%20to%20cancel%20my%20order%20before%20the%20confirmation%20call.%20My%20order%20details%20are%3A%20',external:true}]);
-    } else if (includesAny(question,['payment','cod','cash on delivery','pay'])) {
+    } else if (includesAny(question,['payment','cash on delivery','pay']) || questionTerms.includes('cod')) {
       addChatMessage('We currently offer Cash on Delivery within Pakistan. No online card payment is required. Our team calls to confirm availability and final charges before dispatch.', 'assistant', [{label:'How to order',href:'#how-to-order'}]);
     } else if (includesAny(question,['cart','basket','saved product'])) {
       addChatMessage('Use “Add to cart” on any available product. Your cart is saved in this browser until you remove the item or successfully place the order.', 'assistant', [{label:'Browse products',href:'#live-catalogue'}]);
