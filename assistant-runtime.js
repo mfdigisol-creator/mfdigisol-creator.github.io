@@ -74,14 +74,16 @@ export function init({ open = false } = {}) {
   
   const answerChatQuestion = async rawQuestion => {
     const question = normalizeQuestion(rawQuestion);
+    const questionTerms = question.split(' ');
     const earlyStaticQuestion = includesAny(question, [
       'fabric quality','fabric','cloth quality','material quality','kapra','kapray','quality kaisi','quality of suit',
       'why al huma','why should i buy','why buy from','why choose','al huma se kyun','ap se kyun','direct from brand','brand directly','brand website','official website','instead of brand',
       'compare','comparison','versus',' vs ','marketplace','market place','other shop','other website','daraz','competitor','different brand','better than','cheaper than',
       'trust','genuine','original','authentic','reliable','safe to order','fraud','scam'
     ]);
-    const middleStaticQuestion = includesAny(question, [
-      'delivery','shipping','courier','tcs','leopards','how long','tat','cancel','cancellation','payment','cod','cash on delivery','pay',
+    const shortMiddleStaticQuestion = ['cod','pay','tat'].some(term => questionTerms.includes(term));
+    const middleStaticQuestion = shortMiddleStaticQuestion || includesAny(question, [
+      'delivery','shipping','courier','tcs','leopards','how long','cancel','cancellation','payment','cash on delivery',
       'cart','basket','saved product','review','rating','feedback','return','exchange','refund','order','buy','purchase','book','checkout'
     ]);
     const lateStaticQuestion = ['hello','hi','salam','assalam'].includes(question) || includesAny(question, [
