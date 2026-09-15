@@ -18,6 +18,14 @@ const BRAND_ALIASES = new Map([
 
 const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
 const canonicalBrand = value => BRAND_ALIASES.get(clean(value).toLowerCase()) || clean(value) || 'Other designs';
+const canonicalProductBrand = (item, sourceBrand) => {
+  const productName = clean(item.productName || item.name);
+  if (sourceBrand.toLowerCase() === 'silknstories') {
+    if (productName.startsWith('Crimson ')) return 'Crimson';
+    if (productName.startsWith('Zarmeen & Emaan ')) return 'Zarmeen & Emaan';
+  }
+  return canonicalBrand(item.brand);
+};
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
 const productPath = item => clean(item.path) || `products/${slugify(item.code)}-${slugify(item.productName || item.name)}/`;
 const csv = value => `"${String(value ?? '').replace(/\r?\n/g, ' ').replace(/"/g, '""')}"`;
@@ -60,7 +68,7 @@ async function main() {
   const aliasCorrections = [];
   const products = rawProducts.map(item => {
     const sourceBrand = clean(item.sourceBrand || item.brand);
-    const brand = canonicalBrand(item.brand);
+    const brand = canonicalProductBrand(item, sourceBrand);
     if (brand !== item.brand) aliasCorrections.push({ code: item.code, sourceBrand: item.brand, canonicalBrand: brand });
     return { ...item, sourceBrand, brand };
   }).sort((a, b) => Number(b.available) - Number(a.available) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
