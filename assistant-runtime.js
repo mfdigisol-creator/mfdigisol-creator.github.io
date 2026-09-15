@@ -139,7 +139,7 @@ export function init({ open = false } = {}) {
     } else if (includesAny(question,['cart','basket','saved product'])) {
       addChatMessage('Use “Add to cart” on any available product. Your cart is saved in this browser until you remove the item or successfully place the order.', 'assistant', [{label:'Browse products',href:'#live-catalogue'}]);
     } else if (includesAny(question,['review','rating','feedback'])) {
-      addChatMessage('You can submit a genuine 1–5 star review in our Customer Voices section. Reviews are sent privately for moderation and published only after approval.', 'assistant', [{label:'Leave a review',href:'#reviews'}]);
+      addChatMessage('You can submit a genuine 1–5 star review against an individual product. Reviews are published as submitted after security verification. Al Huma Collection does not edit customer ratings or review text. Spam, abusive, unrelated or fraudulent content may be removed.', 'assistant', [{label:'Browse products to review',href:'#live-catalogue'}]);
     } else if (includesAny(question,['return','exchange','refund'])) {
       addChatMessage('Exchange or return eligibility depends on product condition and the order circumstances. Please inspect the parcel promptly and contact our team with the product code and photographs before returning anything.', 'assistant', [{label:'Read policies',href:'policies.html'},{label:'Contact our team',href:generalWhatsApp,external:true}]);
     } else if (includesAny(question,['order','buy','purchase','book','checkout'])) {
