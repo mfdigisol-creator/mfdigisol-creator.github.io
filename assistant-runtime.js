@@ -75,6 +75,7 @@ export function init({ open = false } = {}) {
   const answerChatQuestion = async rawQuestion => {
     const question = normalizeQuestion(rawQuestion);
     const questionTerms = question.split(' ');
+    const productCodeQuestion = /\b(?=[A-Za-z0-9-]*\d)[A-Za-z0-9]+(?:-[A-Za-z0-9]+){2,}\b/.test(rawQuestion);
     const earlyStaticQuestion = includesAny(question, [
       'fabric quality','fabric','cloth quality','material quality','kapra','kapray','quality kaisi','quality of suit',
       'why al huma','why should i buy','why buy from','why choose','al huma se kyun','ap se kyun','direct from brand','brand directly','brand website','official website','instead of brand',
@@ -96,7 +97,7 @@ export function init({ open = false } = {}) {
     const dynamicBeforeLate = dynamicBeforeMiddle || includesAny(question, [
       'available','availability','stock','collection','catalog','catalogue','design','product','brand'
     ]);
-    const catalogueIndependentQuestion = earlyStaticQuestion || (middleStaticQuestion && !dynamicBeforeMiddle) || (lateStaticQuestion && !dynamicBeforeLate);
+    const catalogueIndependentQuestion = !productCodeQuestion && (earlyStaticQuestion || (middleStaticQuestion && !dynamicBeforeMiddle) || (lateStaticQuestion && !dynamicBeforeLate));
     if (!catalogueProducts.length && !catalogueIndependentQuestion && !(await ensureAssistantCatalogue())) {
       addChatMessage('The synchronized catalogue is temporarily unavailable, so I cannot safely calculate current prices, product counts or availability right now. Please contact our team on official WhatsApp for current product information.', 'assistant', [{ label:'Contact on WhatsApp', href:generalWhatsApp, external:true }]);
       return;
