@@ -31,13 +31,23 @@
   }
 
   const stableHashTargets = new Set(['#live-catalogue', '#new-arrivals', '#how-to-order', '#contact']);
+  const downstreamHashTargets = new Set(['#how-to-order', '#contact']);
+
+  function stabilizeCatalogueLayoutForHash(hash) {
+    if (!downstreamHashTargets.has(hash)) return;
+    section.querySelectorAll('.live-product-collection').forEach(collection => {
+      collection.style.contentVisibility = 'visible';
+    });
+    void section.offsetHeight;
+  }
+
   function scrollToStableHash(hash, behavior = 'smooth') {
     if (!stableHashTargets.has(hash)) return;
     const target = document.querySelector(hash);
     if (!target) return;
+    stabilizeCatalogueLayoutForHash(hash);
     requestAnimationFrame(() => requestAnimationFrame(() => target.scrollIntoView({ behavior, block:'start' })));
   }
-
   document.addEventListener('click', event => {
     if (liveNav?.open && !liveNav.contains(event.target)) liveNav.removeAttribute('open');
   });
