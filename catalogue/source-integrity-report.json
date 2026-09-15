@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T07:35:53.178Z",
+  "generatedAt": "2026-09-15T09:31:43.697Z",
   "summary": {
-    "products": 342,
+    "products": 341,
     "available": 329,
-    "formal": 77,
+    "formal": 76,
     "luxury": 265,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 331,
+    "metaFeedProducts": 330,
     "canonicalBrands": 45,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 8,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1697,
-    "newlyRemovedProducts": 2,
+    "removedProducts": 1702,
+    "newlyRemovedProducts": 10,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [],
@@ -85,14 +85,54 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "COCO-3PLWN-AHMD-CP-7177",
-      "name": "Coco Prints Summer Digital Fancy Printed Lawn 3PC — CP-7177",
-      "path": "products/coco-3plwn-ahmd-cp-7177-coco-prints-summer-digital-fancy-printed-lawn-3pc/"
+      "code": "ALKARAM-LWN-V1-3P-LDS-03",
+      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 3",
+      "path": "products/alkaram-lwn-v1-3p-lds-03-alkaram-spring-summer-digital-printed-lawn-3pc/"
     },
     {
-      "code": "COCO-ZS-3PLWN-V2-LALA-04",
-      "name": "Coco By Zara Shahjahan Digital Printed Lawn 3PC — 4",
-      "path": "products/coco-zs-3plwn-v2-lala-04-coco-by-zara-shahjahan-digital-printed-lawn-3pc/"
+      "code": "ALKARAM-LWN-V1-3P-LDS-06",
+      "name": "Alkaram Spring Summer Digital Printed Lawn 3PC — 6",
+      "path": "products/alkaram-lwn-v1-3p-lds-06-alkaram-spring-summer-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "P&P-ALMRH-LWN-CT-3P-13",
+      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 13",
+      "path": "products/p-and-p-almrh-lwn-ct-3p-13-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
+    },
+    {
+      "code": "ANEELAS-LWN-MERN-3P-HA-306",
+      "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 306",
+      "path": "products/aneelas-lwn-mern-3p-ha-306-aneelas-embroiderd-and-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "ANEELAS-LAWN-3P-08",
+      "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 8",
+      "path": "products/aneelas-lawn-3p-08-aneelas-embroiderd-and-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "FLOWS-ALMRH-LWN-CT-3P-21",
+      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 21",
+      "path": "products/flows-almrh-lwn-ct-3p-21-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
+    },
+    {
+      "code": "AFREEN-LALA-HM-PRNT-09",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 9",
+      "path": "products/afreen-lala-hm-prnt-09-afreen-by-lala-airjet-printed-lawn-3pc/"
+    },
+    {
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-18",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 18",
+      "path": "products/mahira-lklwn-v1-3p-far-18-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+    },
+    {
+      "code": "GULAHMED-LWN-V1-3P-LDS-05",
+      "name": "Gul Ahmed Printed Doriya Lawn 3PC — 5",
+      "path": "products/gulahmed-lwn-v1-3p-lds-05-gul-ahmed-printed-doriya-lawn-3pc/"
+    },
+    {
+      "code": "ALKARAM-3PLWN-V631-AHMD-17",
+      "name": "Alkaram Classic Digital Printed Lawn 3PC — 17",
+      "path": "products/alkaram-3plwn-v631-ahmd-17-alkaram-classic-digital-printed-lawn-3pc/"
     }
   ]
 }
