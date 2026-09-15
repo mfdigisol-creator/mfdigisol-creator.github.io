@@ -100,7 +100,7 @@
       </div>
     `).join('') : '<p>Your cart is empty.</p>';
     const total = totals();
-    summary.innerHTML = `<p><span>Products subtotal</span><strong>${money(total.known)}${total.unknown ? ' + enquiry items' : ''}</strong></p><small>Delivery at checkout: Rs. 300 within Sialkot or Rs. 600 elsewhere in Pakistan, normally for parcels up to 1 kg.</small><button class="cart-checkout" type="button" ${cart.length ? '' : 'disabled'}>Proceed to checkout</button>`;
+    summary.innerHTML = `<p><span>Products subtotal</span><strong>${money(total.known)}${total.unknown ? ' + enquiry items' : ''}</strong></p>${total.unknown ? '<small>Price-on-enquiry items cannot be checked out. Remove them and use WhatsApp enquiry before proceeding.</small>' : '<small>Delivery at checkout: Rs. 300 within Sialkot or Rs. 600 elsewhere in Pakistan, normally for parcels up to 1 kg.</small>'}<button class="cart-checkout" type="button" ${cart.length && !total.unknown ? '' : 'disabled'}>Proceed to checkout</button>`;
   }
 
   function save() {
@@ -258,6 +258,10 @@
       setStatus('Your cart is empty.', 'error');
       return;
     }
+    if (totals().unknown) {
+      setStatus('Price-on-enquiry items cannot be submitted through COD checkout. Remove them and enquire on WhatsApp.', 'error');
+      return;
+    }
     if (!form.reportValidity()) return;
     if (!turnstileToken) {
       setStatus('Please complete the security verification before placing your order.', 'error');
@@ -297,6 +301,10 @@
 
   window.addEventListener('alhuma:add-to-cart', event => {
     const product = event.detail.product;
+    if (product.price == null) {
+      notify('This product is available by price enquiry only. Please use WhatsApp to confirm the current price before ordering.');
+      return;
+    }
     const existing = cart.find(item => item.code === product.code);
     if (existing && existing.qty >= 20) {
       notify('The maximum quantity for one product is 20.');
@@ -345,6 +353,10 @@
   summary.onclick = event => {
     if (!event.target.closest('.cart-checkout')) return;
     const total = totals();
+    if (total.unknown) {
+      notify('Remove price-on-enquiry items before checkout and enquire on WhatsApp.');
+      return;
+    }
     track('begin_checkout', { currency: 'PKR', value: total.known, items: cart, meta_event: 'InitiateCheckout', content_ids: cart.map(item => item.code) });
     closeCart();
     updateCheckout();
@@ -367,8 +379,9 @@
   } else if (legacyMode) {
     form.action = LEGACY_ENDPOINT;
     form.addEventListener('submit', event => {
-      if (!cart.length) {
+      if (!cart.length || totals().unknown) {
         event.preventDefault();
+        if (totals().unknown) setStatus('Price-on-enquiry items cannot be submitted through COD checkout. Remove them and enquire on WhatsApp.', 'error');
         return;
       }
       prepareLegacySubmission();
