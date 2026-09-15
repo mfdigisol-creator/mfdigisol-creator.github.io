@@ -138,7 +138,7 @@ export function init({ open = false } = {}) {
       }
       addChatMessage(`For currently available products with displayed prices, the overall range is ${rangeText(all)}. Formal designs range from ${rangeText(formal)}, while Luxury designs range from ${rangeText(luxury)}. Some products remain “Price on enquiry” when classification is uncertain.`, 'assistant', assistantActions);
     } else if (includesAny(question,['embroidered','embroidery','printed','non embroidered'])) {
-      const embroidered = question.includes('embroider'), type = embroidered ? 'embroidered' : 'non-embroidered', list = catalogueProducts.filter(item => item.pricingClass === type), range=productRange(list);
+      const embroidered = !question.includes('non embroidered') && question.includes('embroider'), type = embroidered ? 'embroidered' : 'non-embroidered', list = catalogueProducts.filter(item => item.pricingClass === type), range=productRange(list);
       addChatMessage(`There are ${list.filter(item=>item.available).length} currently available ${embroidered ? 'embroidered' : 'printed / non-embroidered'} designs. Displayed prices range from ${rangeText(range)}.`, 'assistant', assistantActions);
     } else if (includesAny(question,['formal','luxury'])) {
       const category = question.includes('luxury') ? 'Luxury' : 'Formal', list=catalogueProducts.filter(item=>item.category===category), range=productRange(list);
