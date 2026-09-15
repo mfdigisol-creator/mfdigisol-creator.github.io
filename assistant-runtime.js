@@ -74,16 +74,27 @@ export function init({ open = false } = {}) {
   
   const answerChatQuestion = async rawQuestion => {
     const question = normalizeQuestion(rawQuestion);
-    const greetingQuestion = question.split(' ').some(term => ['hello','hi','salam','assalam'].includes(term));
-    const catalogueIndependentQuestion = greetingQuestion || includesAny(question, [
+    const earlyStaticQuestion = includesAny(question, [
       'fabric quality','fabric','cloth quality','material quality','kapra','kapray','quality kaisi','quality of suit',
       'why al huma','why should i buy','why buy from','why choose','al huma se kyun','ap se kyun','direct from brand','brand directly','brand website','official website','instead of brand',
       'compare','comparison','versus',' vs ','marketplace','market place','other shop','other website','daraz','competitor','different brand','better than','cheaper than',
-      'trust','genuine','original','authentic','reliable','safe to order','fraud','scam',
-      'delivery','shipping','courier','tcs','leopards','how long','tat','cancel','cancellation','payment','cod','cash on delivery','pay',
-      'cart','basket','saved product','review','rating','feedback','return','exchange','refund','location','address','map','shop','visit',
-      'email','contact','phone','whatsapp','phone number','whatsapp number','contact number','facebook','instagram'
+      'trust','genuine','original','authentic','reliable','safe to order','fraud','scam'
     ]);
+    const middleStaticQuestion = includesAny(question, [
+      'delivery','shipping','courier','tcs','leopards','how long','tat','cancel','cancellation','payment','cod','cash on delivery','pay',
+      'cart','basket','saved product','review','rating','feedback','return','exchange','refund','order','buy','purchase','book','checkout'
+    ]);
+    const lateStaticQuestion = ['hello','hi','salam','assalam'].includes(question) || includesAny(question, [
+      'location','address','map','shop','visit','email','contact','phone','whatsapp','phone number','whatsapp number','contact number','facebook','instagram'
+    ]);
+    const dynamicBeforeMiddle = includesAny(question, [
+      'price','prices','cost','range','rate','how much','cheapest','expensive','budget','under','below','upto','up to',
+      'embroidered','embroidery','printed','non embroidered','formal','luxury','how many','product count','number of products','total products'
+    ]);
+    const dynamicBeforeLate = dynamicBeforeMiddle || includesAny(question, [
+      'available','availability','stock','collection','catalog','catalogue','design','product','brand'
+    ]);
+    const catalogueIndependentQuestion = earlyStaticQuestion || (middleStaticQuestion && !dynamicBeforeMiddle) || (lateStaticQuestion && !dynamicBeforeLate);
     if (!catalogueProducts.length && !catalogueIndependentQuestion && !(await ensureAssistantCatalogue())) {
       addChatMessage('The synchronized catalogue is temporarily unavailable, so I cannot safely calculate current prices, product counts or availability right now. Please contact our team on official WhatsApp for current product information.', 'assistant', [{ label:'Contact on WhatsApp', href:generalWhatsApp, external:true }]);
       return;
