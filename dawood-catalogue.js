@@ -172,6 +172,7 @@
       const name = product.brand || product.sourceCollection || 'Other designs';
       if (!groups.has(name)) groups.set(name, []);
       groups.get(name).push(product);
+      return groups;
     }, new Map());
     grid.innerHTML = matches.length ? [...collections].map(([name, items], collectionIndex) => {
       const visibleCount = Math.min(items.length, visibleByCollection.get(name) || initialCollectionLimit());
