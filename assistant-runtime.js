@@ -82,7 +82,7 @@ export function init({ open = false } = {}) {
       'trust','genuine','original','authentic','reliable','safe to order','fraud','scam',
       'delivery','shipping','courier','tcs','leopards','how long','tat','cancel','cancellation','payment','cod','cash on delivery','pay',
       'cart','basket','saved product','review','rating','feedback','return','exchange','refund','location','address','map','shop','visit',
-      'email','contact','phone','whatsapp','number','facebook','instagram'
+      'email','contact','phone','whatsapp','phone number','whatsapp number','contact number','facebook','instagram'
     ]);
     if (!catalogueProducts.length && !catalogueIndependentQuestion && !(await ensureAssistantCatalogue())) {
       addChatMessage('The synchronized catalogue is temporarily unavailable, so I cannot safely calculate current prices, product counts or availability right now. Please contact our team on official WhatsApp for current product information.', 'assistant', [{ label:'Contact on WhatsApp', href:generalWhatsApp, external:true }]);
