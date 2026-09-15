@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T04:57:53.173Z",
+  "generatedAt": "2026-09-15T06:38:29.873Z",
   "summary": {
-    "products": 346,
-    "removedProducts": 1690,
-    "brands": 47,
-    "collectionPages": 49,
-    "sitemapUrls": 398,
-    "metaFeedRows": 335,
-    "metadataPages": 346,
+    "products": 342,
+    "removedProducts": 1695,
+    "brands": 46,
+    "collectionPages": 48,
+    "sitemapUrls": 393,
+    "metaFeedRows": 331,
+    "metadataPages": 342,
     "internalHtmlFiles": 2091,
     "errors": 0,
     "warnings": 2
@@ -16,7 +16,7 @@
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "39 products currently lack retained supplier description text."
+    "38 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -53,7 +53,6 @@
       "FLOWS-ALMRH-LWN-CT-3P-21",
       "P&P-ALMRH-LWN-CT-3P-13",
       "P&P-ALMRH-LWN-CT-3P-17",
-      "P&P-ALMRH-LWN-CT-3P-09",
       "ANAYANOOR-PRNLWN-3P-02",
       "CS-EMB-LWN-3P-1856",
       "AIRA-ORG-PISTA-1547",
@@ -72,7 +71,8 @@
       "SINGHAR-SILK-SKIN-3P-FB258",
       "KHAADI-2PLWN-V1-ABR-10",
       "LIMELIGHT-2PLWN-V2-ABR-15",
-      "MUSHQ-EMB-LWN-3P-1860"
+      "MUSHQ-EMB-LWN-3P-1860",
+      "DASTAN-CKLWN-3P-NRJ-01"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

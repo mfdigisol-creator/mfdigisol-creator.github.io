@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T04:57:49.591Z",
+  "generatedAt": "2026-09-15T06:38:26.670Z",
   "summary": {
-    "products": 346,
-    "available": 334,
-    "formal": 81,
+    "products": 342,
+    "available": 330,
+    "formal": 77,
     "luxury": 265,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 335,
-    "canonicalBrands": 47,
+    "metaFeedProducts": 331,
+    "canonicalBrands": 46,
     "aliasCorrections": 0,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 9,
+    "duplicateNames": 8,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1690,
+    "removedProducts": 1695,
     "newlyRemovedProducts": 5,
     "supplierRefreshUsed": true
   },
@@ -23,10 +23,6 @@
   "duplicateCodes": [],
   "duplicatePaths": [],
   "duplicateNames": [
-    {
-      "value": "bareeze plain emb shirt & trouser lawn 2pc — 2",
-      "count": 2
-    },
     {
       "value": "aira | organza | dressline — 1547",
       "count": 4
@@ -89,29 +85,29 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "MC-SHN-LWN-V166-3P-10",
-      "name": "Shanaya Digital Emb Lawn 3PC — 10",
-      "path": "products/mc-shn-lwn-v166-3p-10-shanaya-digital-emb-lawn-3pc/"
+      "code": "P&P-ALMRH-LWN-CT-3P-09",
+      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 9",
+      "path": "products/p-and-p-almrh-lwn-ct-3p-09-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
     },
     {
-      "code": "BINSAEED-LWN-V2-3P-HM-07",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 7",
-      "path": "products/binsaeed-lwn-v2-3p-hm-07-bin-saeed-digital-printed-lawn-3pc/"
+      "code": "AFREEN-LALA-HM-PRNT-05",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 5",
+      "path": "products/afreen-lala-hm-prnt-05-afreen-by-lala-airjet-printed-lawn-3pc/"
     },
     {
-      "code": "RP-LWN-V7-3P-RAYS6626-33R",
-      "name": "Rang Preet Digital Printed Lawn 3PC — RAYS6626-33R",
-      "path": "products/rp-lwn-v7-3p-rays6626-33r-rang-preet-digital-printed-lawn-3pc/"
+      "code": "NISHA-LWN-V578-3P-AHMD-01",
+      "name": "Nisha Designer Digital Printed Lawn 3PC — 1",
+      "path": "products/nisha-lwn-v578-3p-ahmd-01-nisha-designer-digital-printed-lawn-3pc/"
     },
     {
-      "code": "AFREEN-LALA-HM-PRNT-03",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 3",
-      "path": "products/afreen-lala-hm-prnt-03-afreen-by-lala-airjet-printed-lawn-3pc/"
+      "code": "BAREEZE-V2LWN-MERN-2P-DD-02",
+      "name": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC — 2",
+      "path": "products/bareeze-v2lwn-mern-2p-dd-02-bareeze-plain-emb-shirt-and-trouser-lawn-2pc/"
     },
     {
-      "code": "NISHAT-2PLWN-V2-ABR-16",
-      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 16",
-      "path": "products/nishat-2plwn-v2-abr-16-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "AFREEN-3PLWN-V2-HM-LS-0725",
+      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0725",
+      "path": "products/afreen-3plwn-v2-hm-ls-0725-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
     }
   ]
 }
