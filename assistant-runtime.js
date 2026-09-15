@@ -58,11 +58,26 @@ export function init({ open = false } = {}) {
   };
   window.addEventListener('alhuma:catalogue-ready', hydrateAssistantCatalogue);
   if (window.AlHumaCatalogueSnapshot) hydrateAssistantCatalogue({ detail:window.AlHumaCatalogueSnapshot });
+  let catalogueLoadPromise = null;
+  const ensureAssistantCatalogue = async () => {
+    if (catalogueProducts.length) return true;
+    const loadCatalogue = window.AlHumaCatalogue?.load;
+    if (typeof loadCatalogue !== 'function') return false;
+    catalogueLoadPromise ||= Promise.resolve(loadCatalogue()).catch(() => null);
+    await catalogueLoadPromise;
+    if (!catalogueProducts.length && window.AlHumaCatalogueSnapshot) hydrateAssistantCatalogue({ detail:window.AlHumaCatalogueSnapshot });
+    if (!catalogueProducts.length) catalogueLoadPromise = null;
+    return catalogueProducts.length > 0;
+  };
   const includesAny = (question, terms) => terms.some(term => question.includes(term));
   const assistantActions = [{ label:'Browse catalogue', href:'#live-catalogue' }, { label:'Ask our team', href:generalWhatsApp, external:true }];
   
-  const answerChatQuestion = rawQuestion => {
+  const answerChatQuestion = async rawQuestion => {
     const question = normalizeQuestion(rawQuestion);
+    if (!(await ensureAssistantCatalogue())) {
+      addChatMessage('The synchronized catalogue is temporarily unavailable, so I cannot safely calculate current prices, product counts or availability right now. Please contact our team on official WhatsApp for current product information.', 'assistant', [{ label:'Contact on WhatsApp', href:generalWhatsApp, external:true }]);
+      return;
+    }
     const product = catalogueEntries.find(item => {
       const code = normalizeQuestion(item.code), name = normalizeQuestion(item.product);
       return question.includes(code) || (name.length > 7 && question.includes(name));
