@@ -2,6 +2,7 @@
   'use strict';
 
   const CART_KEY = 'alhuma-cart-v1';
+  const CONFIRMATION_KEY = 'alhuma-order-confirmation-v1';
   const LEGACY_ENDPOINT = 'https://formsubmit.co/alhumacollection@gmail.com';
   const rawMode = window.AL_HUMA_ORDERS_CONFIG?.mode || 'legacy';
   const ordersClient = window.AlHumaOrdersClient;
@@ -203,6 +204,14 @@
     submitButton.disabled = true;
   }
 
+  function createConfirmationUrl(baseUrl) {
+    const token = window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}-${Math.random().toString(36).slice(2)}`;
+    sessionStorage.setItem(CONFIRMATION_KEY, JSON.stringify({ token, createdAt: Date.now() }));
+    const url = new URL(baseUrl, window.location.href);
+    url.searchParams.set('order_success', token);
+    return url.toString();
+  }
+
   function prepareLegacySubmission() {
     const id = `AH-${Date.now().toString().slice(-8)}`;
     const delivery = city.value === 'Sialkot' ? 300 : 600;
@@ -287,8 +296,9 @@
         meta_event: marketingConsent ? 'Lead' : undefined,
         content_ids: cart.map(item => item.code)
       });
+      const confirmedUrl = createConfirmationUrl(ordersClient.config.confirmedUrl);
       setStatus('Order registered successfully. Opening your confirmation page…', 'success');
-      window.location.assign(ordersClient.config.confirmedUrl);
+      window.location.assign(confirmedUrl);
     } catch (error) {
       if (error.code === 'IDEMPOTENCY_CONFLICT') ordersClient.resetAttempt();
       resetTurnstile();
@@ -384,6 +394,7 @@
         if (totals().unknown) setStatus('Price-on-enquiry items cannot be submitted through COD checkout. Remove them and enquire on WhatsApp.', 'error');
         return;
       }
+      form.elements._next.value = createConfirmationUrl(form.elements._next.value);
       prepareLegacySubmission();
     });
   } else {
