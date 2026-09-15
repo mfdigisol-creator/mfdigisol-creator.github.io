@@ -1,0 +1,4 @@
+{% assign alhuma_path_root = page.path | split: '/' | first %}
+{% if alhuma_path_root == 'docs' or alhuma_path_root == 'performance' %}
+<meta name="robots" content="noindex">
+{% endif %}
