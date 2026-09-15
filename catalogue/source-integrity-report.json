@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T10:39:30.403Z",
+  "generatedAt": "2026-09-15T11:12:49.706Z",
   "summary": {
-    "products": 347,
-    "available": 335,
-    "formal": 82,
+    "products": 336,
+    "available": 324,
+    "formal": 71,
     "luxury": 265,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 336,
-    "canonicalBrands": 43,
+    "metaFeedProducts": 325,
+    "canonicalBrands": 42,
     "aliasCorrections": 16,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 8,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1702,
-    "newlyRemovedProducts": 3,
+    "removedProducts": 1713,
+    "newlyRemovedProducts": 11,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -166,19 +166,59 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "SAPPHIRE-LWN-V11-ZULEYHA-AHMD-1",
-      "name": "Sapphire Digital Printed Bana Dora Lawn 3PC — 1",
-      "path": "products/sapphire-lwn-v11-zuleyha-ahmd-1-sapphire-digital-printed-bana-dora-lawn-3pc/"
+      "code": "RAMEEN-ANAYANOOR-3PC-S26-04",
+      "name": "Rameen By Anaya Noor Printed & Laser Cutwork Emb Lawn 3PC — 4",
+      "path": "products/rameen-anayanoor-3pc-s26-04-rameen-by-anaya-noor-printed-and-laser-cutwork-emb-lawn-3pc/"
     },
     {
-      "code": "NAINA-SHN-LWN-V212-3P-08",
-      "name": "Naina By Shanaya Digital Printed Lawn 3PC — 8",
-      "path": "products/naina-shn-lwn-v212-3p-08-naina-by-shanaya-digital-printed-lawn-3pc/"
+      "code": "BINSAEED-LWN-V3-3P-HM-05",
+      "name": "Bin Saeed Digital Printed Lawn 3PC — 5",
+      "path": "products/binsaeed-lwn-v3-3p-hm-05-bin-saeed-digital-printed-lawn-3pc/"
     },
     {
-      "code": "KAYSERIA-LWN-V3-3P-AHMD-E6955",
-      "name": "Kayseria Digital Printed Lawn 3PC — E6955",
-      "path": "products/kayseria-lwn-v3-3p-ahmd-e6955-kayseria-digital-printed-lawn-3pc/"
+      "code": "BEECHTREE-CKLWN-3P-BL-03",
+      "name": "Beechtree Chickenkari Lawn 3PC — 3",
+      "path": "products/beechtree-cklwn-3p-bl-03-beechtree-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "BEECHTREE-CKLWN-3P-BL-07",
+      "name": "Beechtree Chickenkari Lawn 3PC — 7",
+      "path": "products/beechtree-cklwn-3p-bl-07-beechtree-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "RISE-EMB-BPINK-3P-AN-06",
+      "name": "Rise By Anaya Noor Heavy Plain Emb Lawn 3PC — 6",
+      "path": "products/rise-emb-bpink-3p-an-06-rise-by-anaya-noor-heavy-plain-emb-lawn-3pc/"
+    },
+    {
+      "code": "BEECHTREE-CKLWN-3P-BL-05",
+      "name": "Beechtree Chickenkari Lawn 3PC — 5",
+      "path": "products/beechtree-cklwn-3p-bl-05-beechtree-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "BEECHTREE-CKLWN-3P-BL-01",
+      "name": "Beechtree Chickenkari Lawn 3PC — 1",
+      "path": "products/beechtree-cklwn-3p-bl-01-beechtree-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "BEECHTREE-CKLWN-3P-BL-10",
+      "name": "Beechtree Chickenkari Lawn 3PC — 10",
+      "path": "products/beechtree-cklwn-3p-bl-10-beechtree-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "BEECHTREE-CKLWN-3P-BL-02",
+      "name": "Beechtree Chickenkari Lawn 3PC — 2",
+      "path": "products/beechtree-cklwn-3p-bl-02-beechtree-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "BEECHTREE-CKLWN-3P-BL-04",
+      "name": "Beechtree Chickenkari Lawn 3PC — 4",
+      "path": "products/beechtree-cklwn-3p-bl-04-beechtree-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "BEECHTREE-CKLWN-3P-BL-08",
+      "name": "Beechtree Chickenkari Lawn 3PC — 8",
+      "path": "products/beechtree-cklwn-3p-bl-08-beechtree-chickenkari-lawn-3pc/"
     }
   ]
 }
