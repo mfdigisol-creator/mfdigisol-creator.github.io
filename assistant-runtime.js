@@ -75,7 +75,9 @@ export function init({ open = false } = {}) {
   const answerChatQuestion = async rawQuestion => {
     const question = normalizeQuestion(rawQuestion);
     const questionTerms = question.split(' ');
+    const orderQuestion = ['order','buy','purchase','book','checkout'].some(term => questionTerms.includes(term));
     const productCodeQuestion = /\b(?=[A-Za-z0-9-]*\d)[A-Za-z0-9]+(?:-[A-Za-z0-9]+){2,}\b/.test(rawQuestion);
+    if (!catalogueProducts.length && orderQuestion) await ensureAssistantCatalogue();
     const earlyStaticQuestion = includesAny(question, [
       'fabric quality','fabric','cloth quality','material quality','kapra','kapray','quality kaisi','quality of suit',
       'why al huma','why should i buy','why buy from','why choose','al huma se kyun','ap se kyun','direct from brand','brand directly','brand website','official website','instead of brand',
