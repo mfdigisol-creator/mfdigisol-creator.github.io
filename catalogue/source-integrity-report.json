@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T13:04:47.609Z",
+  "generatedAt": "2026-09-15T13:28:13.565Z",
   "summary": {
     "products": 329,
     "available": 317,
@@ -16,7 +16,7 @@
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
     "removedProducts": 1720,
-    "newlyRemovedProducts": 3,
+    "newlyRemovedProducts": 0,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -194,21 +194,5 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": [
-    {
-      "code": "PANEL-LWN-MUSTARD-01",
-      "name": "Rise By Anaya Noor Heavy Plain Emb Lawn 3PC — 1",
-      "path": "products/panel-lwn-mustard-01-rise-by-anaya-noor-heavy-plain-emb-lawn-3pc/"
-    },
-    {
-      "code": "ELAF-3PLWN-V2-UK-EPV-9A",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-9A",
-      "path": "products/elaf-3plwn-v2-uk-epv-9a-elaf-premium-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "JAFFRANI-LKLWN-3P-AIFA-07",
-      "name": "Jaffrani Premium Printed & Emb Laserkari Lawn 3PC — 7",
-      "path": "products/jaffrani-lklwn-3p-aifa-07-jaffrani-premium-printed-and-emb-laserkari-lawn-3pc/"
-    }
-  ]
+  "newlyRemovedProducts": []
 }
