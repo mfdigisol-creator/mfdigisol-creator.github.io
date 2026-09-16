@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T15:04:07.208Z",
+  "generatedAt": "2026-09-16T15:47:24.764Z",
   "summary": {
-    "indexableUrls": 583,
-    "measuredIndexablePages": 583,
-    "activeProductPages": 513,
-    "pricedProductPageEvents": 502,
+    "indexableUrls": 576,
+    "measuredIndexablePages": 576,
+    "activeProductPages": 504,
+    "pricedProductPageEvents": 493,
     "enquiryProductPageEvents": 11,
-    "unavailablePricedProductPageEvents": 13,
+    "unavailablePricedProductPageEvents": 12,
     "clientPurchaseEmitters": 0,
     "errors": 0
   },
@@ -18,9 +18,24 @@
     "currency": "PKR",
     "addPaymentInfo": "not_applicable_cod",
     "purchaseAuthority": "server-side only after backend order-status policy permits it",
-    "configuredPageEventIndependentOfAdvertisingConsent": true
+    "configuredPageEventIndependentOfAdvertisingConsent": true,
+    "externalMeasurementIsolation": {
+      "productionHosts": [
+        "alhumacollection.com",
+        "www.alhumacollection.com"
+      ],
+      "nonProductionHostsBlocked": true,
+      "qaTestContextsBlocked": [
+        "test_event_code",
+        "tagassistant.google.com",
+        "eventsmanager.facebook.com"
+      ],
+      "localDataLayerPreserved": true
+    }
   },
   "notes": [
+    "External GA4/GTM/Meta/CAPI delivery is limited to alhumacollection.com / www.alhumacollection.com and suppressed for persisted test_event_code, Tag Assistant and Events Manager QA contexts.",
+    "Local dataLayer/custom-event behavior remains available in suppressed contexts so functional QA can inspect measurement without polluting external production analytics.",
     "add_payment_info is intentionally not emitted because the current checkout is Cash on Delivery and collects no payment instrument."
   ],
   "errors": []
