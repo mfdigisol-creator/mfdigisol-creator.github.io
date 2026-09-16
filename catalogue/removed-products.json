@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T12:19:48.705Z",
+  "generatedAt": "2026-09-16T12:51:34.784Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V1-ABR-11",
@@ -22493,6 +22493,30 @@
       "firstSeenAt": "2026-09-14T10:00:32+05:00",
       "lastSeenAt": "2026-09-14T10:00:32+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "AFREEN-LALA-HM-PRNT-03",
+      "id": "15517540057459-64186344046963",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 3",
+      "productName": "Afreen By Lala Airjet Printed Lawn 3PC",
+      "brand": "Lala",
+      "sourceBrand": "Lala",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img54-Copy.jpg?v=1787466200",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img54-Copy.jpg?v=1787466200",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img54.jpg?v=1787466200",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img49-Copy.jpg?v=1787466200",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img49_42d06c67-12a3-420d-97c4-22b640775c0e.jpg?v=1787466241"
+      ],
+      "path": "products/afreen-lala-hm-prnt-03-afreen-by-lala-airjet-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-08T09:41:51+05:00",
+      "lastSeenAt": "2026-09-16T17:19:46+05:00",
+      "removedAt": "2026-09-16T12:51:34.763Z",
       "reason": "supplier-removed"
     },
     {
