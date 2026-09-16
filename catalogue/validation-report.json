@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T14:21:14.796Z",
+  "generatedAt": "2026-09-16T14:41:27.686Z",
   "summary": {
-    "products": 499,
-    "removedProducts": 1645,
+    "products": 498,
+    "removedProducts": 1649,
     "brands": 62,
     "collectionPages": 64,
-    "sitemapUrls": 566,
-    "metaFeedRows": 488,
-    "metadataPages": 499,
-    "internalHtmlFiles": 2251,
+    "sitemapUrls": 565,
+    "metaFeedRows": 487,
+    "metadataPages": 498,
+    "internalHtmlFiles": 2254,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "6 products contain “Luxury” but inherit the Formal supplier section.",
-    "96 products currently lack retained supplier description text."
+    "95 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -69,6 +69,7 @@
       "FLOWS-ALMRH-LWN-CT-3P-17",
       "FLOWS-ALMRH-LWN-CT-3P-19",
       "FLOWS-ALMRH-LWN-CT-3P-20",
+      "FLOWS-ALMRH-LWN-CT-3P-21",
       "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
       "BONANZA-2PLWN-V1-ABR-11",
@@ -76,8 +77,7 @@
       "BONANZA-2PLWN-V1-ABR-07",
       "BONANZA-2PLWN-V1-ABR-08",
       "CHINYERE-2PLWN-V2-ABR-03",
-      "CHINYERE-2PLWN-V2-ABR-04",
-      "CHINYERE-2PLWN-V2-ABR-05"
+      "CHINYERE-2PLWN-V2-ABR-04"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T14:21:10.397Z",
+  "generatedAt": "2026-09-16T14:41:23.174Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V1-ABR-13",
@@ -1430,28 +1430,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-21",
-      "id": "15380028424563-62857359327603",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 21",
-      "productName": "Flows By Almeerah Premium Printed Stripe Lawn 3PC",
-      "brand": "Almeerah",
-      "sourceBrand": "Almeerah",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3059.jpg?v=1780476878",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3059.jpg?v=1780476878",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3060.jpg?v=1780476878"
-      ],
-      "path": "products/flows-almrh-lwn-ct-3p-21-flows-by-almeerah-premium-printed-stripe-lawn-3pc/",
-      "firstSeenAt": "2026-09-01T10:14:09+05:00",
-      "lastSeenAt": "2026-09-15T12:35:51+05:00",
-      "removedAt": "2026-09-15T09:31:43.654Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "FLOWS-ALMRH-LWN-CT-3P-23",
       "id": "15380028457331-62857359360371",
       "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 23",
@@ -2381,6 +2359,28 @@
       "firstSeenAt": "2026-08-04T15:19:11+05:00",
       "lastSeenAt": "2026-08-04T15:19:11+05:00",
       "removedAt": "2026-08-06T10:18:37.401Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ANAYANOOR-PRINT-CO-ORD-3P-16",
+      "id": "15468651839859-63829765325171",
+      "name": "Anaya Noor Co-Ord Collection Digital Print 3PC — 16",
+      "productName": "Anaya Noor Co-Ord Collection Digital Print 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2895,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/242954C3-25B2-461D-8448-DBD10E5F7D49.jpg?v=1785602383",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/242954C3-25B2-461D-8448-DBD10E5F7D49.jpg?v=1785602383",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/C262E89B-76C3-411C-9F3D-259F575CA821.jpg?v=1785602384"
+      ],
+      "path": "products/anayanoor-print-co-ord-3p-16-anaya-noor-co-ord-collection-digital-print-3pc/",
+      "firstSeenAt": "2026-09-16T19:21:08+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
       "reason": "supplier-removed"
     },
     {
@@ -13567,6 +13567,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "CROSS-2PLWN-V1-ABR-22",
+      "id": "15474668175731-63840466993523",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 22",
+      "productName": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Cross stitch",
+      "sourceBrand": "Cross stitch",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2295,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-22_2.jpg?v=1785923764",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-22_2.jpg?v=1785923764",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/cro-22_1.jpg?v=1785923764"
+      ],
+      "path": "products/cross-2plwn-v1-abr-22-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-16T19:21:07+05:00",
+      "lastSeenAt": "2026-09-16T19:21:07+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "CROSS-2PLWN-V1-ABR-24",
       "id": "15474668208499-63840467026291",
       "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 24",
@@ -15945,6 +15967,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ELAF-3PLWN-V2-UK-EPV-10A",
+      "id": "15524468851059-64292831134067",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-10A",
+      "productName": "Elaf Premium Digital Printed Lawn 3PC",
+      "brand": "Elaf",
+      "sourceBrand": "Elaf",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3150,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_s5ub3ls5ub3ls5ub.jpg?v=1788249008",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_s5ub3ls5ub3ls5ub.jpg?v=1788249008",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/10A_2.jpg?v=1788180391",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/10A_1.jpg?v=1788180389"
+      ],
+      "path": "products/elaf-3plwn-v2-uk-epv-10a-elaf-premium-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ELAF-3PLWN-V2-UK-EPV-1B",
       "id": "15524468752755-64292831035763",
       "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-1B",
@@ -15965,6 +16010,29 @@
       "firstSeenAt": "2026-09-01T01:34:09+05:00",
       "lastSeenAt": "2026-09-14T10:00:32+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ELAF-3PLWN-V2-UK-EPV-2A",
+      "id": "15524468719987-64292831002995",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-2A",
+      "productName": "Elaf Premium Digital Printed Lawn 3PC",
+      "brand": "Elaf",
+      "sourceBrand": "Elaf",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3150,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_wu68q0wu68q0wu68.jpg?v=1788171870",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_wu68q0wu68q0wu68.jpg?v=1788171870",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/2A_2.jpg?v=1788180512",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/2A_1.jpg?v=1788180511"
+      ],
+      "path": "products/elaf-3plwn-v2-uk-epv-2a-elaf-premium-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-16T19:21:08+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
       "reason": "supplier-removed"
     },
     {
@@ -16208,6 +16276,27 @@
       "firstSeenAt": "2026-09-05T09:34:15+05:00",
       "lastSeenAt": "2026-09-06T09:43:30+05:00",
       "removedAt": "2026-09-06T15:30:12.467Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ELAN-2PLWN-V1-ABR-17",
+      "id": "15495731249523-63965612671347",
+      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 17",
+      "productName": "Elan Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Elan",
+      "sourceBrand": "Elan",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/ela-17.jpg?v=1786784858",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/ela-17.jpg?v=1786784858"
+      ],
+      "path": "products/elan-2plwn-v1-abr-17-elan-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-05T20:16:55+05:00",
+      "lastSeenAt": "2026-09-16T19:21:07+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
       "reason": "supplier-removed"
     },
     {
@@ -20315,27 +20404,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "KAYSERIA-3PLWN-V9-AHMD-06",
-      "id": "15524947788147-64310906683763",
-      "name": "Kayseria Digital Printed Lawn 3PC — 6",
-      "productName": "Kayseria Digital Printed Lawn 3PC",
-      "brand": "Kayseria",
-      "sourceBrand": "Kayseria",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_35bf7q35bf7q35bf.jpg?v=1788016096",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_35bf7q35bf7q35bf.jpg?v=1788016096"
-      ],
-      "path": "products/kayseria-3plwn-v9-ahmd-06-kayseria-digital-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-05T20:16:56+05:00",
-      "lastSeenAt": "2026-09-05T20:16:56+05:00",
-      "removedAt": "2026-09-06T04:43:33.830Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "KAYSERIA-LWN-V3-3P-AHMD-E6951",
       "id": "15489491861875-63950440792435",
       "name": "Kayseria Digital Printed Lawn 3PC — E6951",
@@ -20354,27 +20422,6 @@
       "firstSeenAt": "2026-09-05T09:34:16+05:00",
       "lastSeenAt": "2026-09-05T09:34:16+05:00",
       "removedAt": "2026-09-05T15:16:58.037Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "KAYSERIA-LWN-V3-3P-AHMD-E6952",
-      "id": "15489491894643-63950440825203",
-      "name": "Kayseria Digital Printed Lawn 3PC — E6952",
-      "productName": "Kayseria Digital Printed Lawn 3PC",
-      "brand": "Kayseria",
-      "sourceBrand": "Kayseria",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/322-2-729554-product-1_1.webp?v=1786461337",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/322-2-729554-product-1_1.webp?v=1786461337"
-      ],
-      "path": "products/kayseria-lwn-v3-3p-ahmd-e6952-kayseria-digital-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-14T10:00:32+05:00",
-      "lastSeenAt": "2026-09-14T10:00:32+05:00",
-      "removedAt": "2026-09-14T14:19:00.964Z",
       "reason": "supplier-removed"
     },
     {
@@ -20483,9 +20530,9 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "KAYSERIA-3PLWN-V13-LALA-X7121",
-      "id": "15524752490867-64294101320051",
-      "name": "Kayseria Digital Printed Lawn 3PC — X7121",
+      "code": "KAYSERIA-3PLWN-V13-LALA-X7103",
+      "id": "15524752458099-64294101287283",
+      "name": "Kayseria Digital Printed Lawn 3PC — X7103",
       "productName": "Kayseria Digital Printed Lawn 3PC",
       "brand": "Kayseria",
       "sourceBrand": "Kayseria",
@@ -20493,17 +20540,17 @@
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
       "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_93hntm93hntm93hn.jpg?v=1787985182",
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_v49lfhv49lfhv49l.jpg?v=1787984454",
       "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_93hntm93hntm93hn.jpg?v=1787985182",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_mvrik9mvrik9mvri.jpg?v=1787985398",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9243.jpg?v=1788023402",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9244.jpg?v=1788023401"
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_v49lfhv49lfhv49l.jpg?v=1787984454",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_mf2cg3mf2cg3mf2c.jpg?v=1787984341",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9240.jpg?v=1788023414",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9241.jpg?v=1788023415"
       ],
-      "path": "products/kayseria-3plwn-v13-lala-x7121-kayseria-digital-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-01T01:34:09+05:00",
-      "lastSeenAt": "2026-09-14T10:00:32+05:00",
-      "removedAt": "2026-09-14T14:19:00.964Z",
+      "path": "products/kayseria-3plwn-v13-lala-x7103-kayseria-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-16T19:21:08+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
       "reason": "supplier-removed"
     },
     {
@@ -20528,30 +20575,6 @@
       "firstSeenAt": "2026-09-14T10:00:32+05:00",
       "lastSeenAt": "2026-09-14T10:00:32+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "KAYSERIA-3PLWN-V13-LALA-X7205",
-      "id": "15524752621939-64294101451123",
-      "name": "Kayseria Digital Printed Lawn 3PC — X7205",
-      "productName": "Kayseria Digital Printed Lawn 3PC",
-      "brand": "Kayseria",
-      "sourceBrand": "Kayseria",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_msw06ymsw06ymsw0.jpg?v=1787986448",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_msw06ymsw06ymsw0.jpg?v=1787986448",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_cq2e7mcq2e7mcq2e.jpg?v=1787986535",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9234.jpg?v=1788023343",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9235.jpg?v=1788023343"
-      ],
-      "path": "products/kayseria-3plwn-v13-lala-x7205-kayseria-digital-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-01T01:34:09+05:00",
-      "lastSeenAt": "2026-09-02T21:37:04+05:00",
-      "removedAt": "2026-09-03T04:36:44.625Z",
       "reason": "supplier-removed"
     },
     {
@@ -20657,27 +20680,6 @@
       "firstSeenAt": "2026-09-14T10:00:31+05:00",
       "lastSeenAt": "2026-09-14T10:00:31+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "KHAADI-2PLWN-V1-ABR-06",
-      "id": "15495701954931-63965552771443",
-      "name": "Khaadi Digital Printed All Over Two Piece Lawn 2PC — 6",
-      "productName": "Khaadi Digital Printed All Over Two Piece Lawn 2PC",
-      "brand": "Khaadi",
-      "sourceBrand": "Khaadi",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2195,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/kha-06.jpg?v=1786727024",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/kha-06.jpg?v=1786727024"
-      ],
-      "path": "products/khaadi-2plwn-v1-abr-06-khaadi-digital-printed-all-over-two-piece-lawn-2pc/",
-      "firstSeenAt": "2026-09-08T09:41:51+05:00",
-      "lastSeenAt": "2026-09-08T09:41:51+05:00",
-      "removedAt": "2026-09-08T16:40:46.171Z",
       "reason": "supplier-removed"
     },
     {
@@ -21561,28 +21563,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "MADHAM-PRNLWN-3P-HM-13",
-      "id": "15524258382195-64292379066739",
-      "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 13",
-      "productName": "Madham By Lala Digital Airjet Printed Lawn 3PC",
-      "brand": "Lala",
-      "sourceBrand": "Lala",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/13_2_68b99b85-2f1b-4677-8e3b-3352845faea3.jpg?v=1788349135",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/13_2_68b99b85-2f1b-4677-8e3b-3352845faea3.jpg?v=1788349135",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/13_1_08e2c83e-0411-4594-87ed-c597152ea6aa.jpg?v=1788349135"
-      ],
-      "path": "products/madham-prnlwn-3p-hm-13-madham-by-lala-digital-airjet-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-02T21:37:04+05:00",
-      "lastSeenAt": "2026-09-02T21:37:04+05:00",
-      "removedAt": "2026-09-03T04:36:44.625Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "MADHAM-PRNLWN-3P-HM-14",
       "id": "15524258414963-64292379099507",
       "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 14",
@@ -21715,28 +21695,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "MADHAM-PRNLWN-3P-HM-05",
-      "id": "15524258152819-64292378837363",
-      "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 5",
-      "productName": "Madham By Lala Digital Airjet Printed Lawn 3PC",
-      "brand": "Lala",
-      "sourceBrand": "Lala",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/05_2_ceecc13a-1012-47b1-b6e6-0191bc6d08d4.jpg?v=1788349261",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/05_2_ceecc13a-1012-47b1-b6e6-0191bc6d08d4.jpg?v=1788349261",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/05_1_96e95a3b-ed9b-4c0e-982b-38a1e2f633a7.jpg?v=1788349261"
-      ],
-      "path": "products/madham-prnlwn-3p-hm-05-madham-by-lala-digital-airjet-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-02T21:37:04+05:00",
-      "lastSeenAt": "2026-09-02T21:37:04+05:00",
-      "removedAt": "2026-09-03T04:36:44.625Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "MADHAM-PRNLWN-3P-HM-06",
       "id": "15524258087283-64292378771827",
       "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 6",
@@ -21846,6 +21804,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MADHAM-3PLWN-V12-HM-LS-0772",
+      "id": "15500920062323-63977411805555",
+      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0772",
+      "productName": "Madham By Lala Digital Printed Airjet Lawn 3PC",
+      "brand": "Lala",
+      "sourceBrand": "Lala",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_bl23hubl23hubl23_1.jpg?v=1787049739",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_bl23hubl23hubl23_1.jpg?v=1787049739"
+      ],
+      "path": "products/madham-3plwn-v12-hm-ls-0772-madham-by-lala-digital-printed-airjet-lawn-3pc/",
+      "firstSeenAt": "2026-09-16T18:46:00+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MADHAM-3PLWN-V12-HM-LS-0773",
       "id": "15500920029555-63977411772787",
       "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0773",
@@ -21927,6 +21906,27 @@
       "firstSeenAt": "2026-09-05T09:34:16+05:00",
       "lastSeenAt": "2026-09-05T09:34:16+05:00",
       "removedAt": "2026-09-05T15:16:58.037Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MADHAM-3PLWN-V12-HM-LS-0779",
+      "id": "15500921078131-63977413804403",
+      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0779",
+      "productName": "Madham By Lala Digital Printed Airjet Lawn 3PC",
+      "brand": "Lala",
+      "sourceBrand": "Lala",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_ipk3cnipk3cnipk3.jpg?v=1787051438",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_ipk3cnipk3cnipk3.jpg?v=1787051438"
+      ],
+      "path": "products/madham-3plwn-v12-hm-ls-0779-madham-by-lala-digital-printed-airjet-lawn-3pc/",
+      "firstSeenAt": "2026-09-05T09:34:16+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
       "reason": "supplier-removed"
     },
     {
@@ -22551,28 +22551,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "LIMELIGHT-2PLWN-V1-ABR-06",
-      "id": "15474374869363-63839873761651",
-      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 6",
-      "productName": "Limelight Digital Printed All Over Two Piece Lawn 2PC",
-      "brand": "Limelight",
-      "sourceBrand": "Limelight",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2295,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/lime-06_2.jpg?v=1785928133",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/lime-06_2.jpg?v=1785928133",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/lime-06_1.jpg?v=1785928134"
-      ],
-      "path": "products/limelight-2plwn-v1-abr-06-limelight-digital-printed-all-over-two-piece-lawn-2pc/",
-      "firstSeenAt": "2026-09-05T09:34:15+05:00",
-      "lastSeenAt": "2026-09-05T09:34:15+05:00",
-      "removedAt": "2026-09-05T15:16:58.037Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "LIMELIGHT-2PLWN-V1-ABR-08",
       "id": "15474374902131-63839873794419",
       "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 8",
@@ -22655,27 +22633,6 @@
       "firstSeenAt": "2026-09-14T19:58:30+05:00",
       "lastSeenAt": "2026-09-14T19:58:30+05:00",
       "removedAt": "2026-09-14T18:05:07.167Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "LIMELIGHT-3PLWN-V606-AHMD-7650",
-      "id": "15490535063923-63953710154099",
-      "name": "Limelight Digital Printed Lawn 3PC — 7650",
-      "productName": "Limelight Digital Printed Lawn 3PC",
-      "brand": "Limelight",
-      "sourceBrand": "Limelight",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/322-2-729542-product-1_1.webp?v=1786530086",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/322-2-729542-product-1_1.webp?v=1786530086"
-      ],
-      "path": "products/limelight-3plwn-v606-ahmd-7650-limelight-digital-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-12T09:39:22+05:00",
-      "lastSeenAt": "2026-09-12T09:39:22+05:00",
-      "removedAt": "2026-09-12T15:34:26.030Z",
       "reason": "supplier-removed"
     },
     {
@@ -23311,27 +23268,6 @@
       "firstSeenAt": "2026-09-08T09:41:52+05:00",
       "lastSeenAt": "2026-09-14T10:00:32+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "MAHIRA-LKLWN-V5-3P-FAR-26534",
-      "id": "15496148222323-63967120523635",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 26534",
-      "productName": "Mahira Essential Printed & Emb Laserkari Lawn 3PC",
-      "brand": "Mahira",
-      "sourceBrand": "Mahira",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "price": 5250,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-15at6.07.10PM_3.jpg?v=1786799576",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-15at6.07.10PM_3.jpg?v=1786799576"
-      ],
-      "path": "products/mahira-lklwn-v5-3p-far-26534-mahira-essential-printed-and-emb-laserkari-lawn-3pc/",
-      "firstSeenAt": "2026-09-06T09:43:31+05:00",
-      "lastSeenAt": "2026-09-06T09:43:31+05:00",
-      "removedAt": "2026-09-06T15:30:12.467Z",
       "reason": "supplier-removed"
     },
     {
@@ -32974,6 +32910,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "REGALIA-3PLWN-V4-HM-04",
+      "id": "15493006066035-63958736765299",
+      "name": "Regalia Digital Printed Lawn 3PC — 4",
+      "productName": "Regalia Digital Printed Lawn 3PC",
+      "brand": "Regalia",
+      "sourceBrand": "Regalia",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-14at12.12.30PM_8.jpg?v=1786692749",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-14at12.12.30PM_8.jpg?v=1786692749",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-14at12.12.30PM_7.jpg?v=1786692748"
+      ],
+      "path": "products/regalia-3plwn-v4-hm-04-regalia-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-16T18:46:00+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "REGALIA-3PLWN-V4-HM-06",
       "id": "15493006229875-63958736896371",
       "name": "Regalia Digital Printed Lawn 3PC — 6",
@@ -34543,6 +34501,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "BAHAAR-SHAJARNOOR-3PC-S26-01",
+      "id": "15386700775795-62868760134003",
+      "name": "Bahaar By Shajar Noor Digital Printed Lawn 3PC — 1",
+      "productName": "Bahaar By Shajar Noor Digital Printed Lawn 3PC",
+      "brand": "Shajar Noor",
+      "sourceBrand": "Shajar Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3436.jpg?v=1780408774",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3436.jpg?v=1780408774",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3437.jpg?v=1780408773"
+      ],
+      "path": "products/bahaar-shajarnoor-3pc-s26-01-bahaar-by-shajar-noor-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T10:14:09+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "BAHAAR-SHAJARNOOR-3PC-S26-03",
       "id": "15386700808563-62868760166771",
       "name": "Bahaar By Shajar Noor Digital Printed Lawn 3PC — 3",
@@ -35145,6 +35125,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "AFSANAH-SHN-LWN-V214-3P-08",
+      "id": "15460230496627-63596152127859",
+      "name": "Afsaanah By Shanaya Digital Printed Lawn 3PC — 8",
+      "productName": "Afsaanah By Shanaya Digital Printed Lawn 3PC",
+      "brand": "Shanaya",
+      "sourceBrand": "Shanaya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15906_2_9e050085-83f5-4b6e-981d-80d88cfd9eee.jpg?v=1785402064",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15906_2_9e050085-83f5-4b6e-981d-80d88cfd9eee.jpg?v=1785402064",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15906_1_918d9a5f-2f8d-4677-8f08-725c1baac0a2.jpg?v=1785402063",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15906_2.jpg?v=1785401068",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15906_1.jpg?v=1785401067"
+      ],
+      "path": "products/afsanah-shn-lwn-v214-3p-08-afsaanah-by-shanaya-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-05T09:34:16+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "AFSANAH-SHN-LWN-V214-3P-09",
       "id": "15460230594931-63596152226163",
       "name": "Afsaanah By Shanaya Digital Printed Lawn 3PC — 9",
@@ -35254,6 +35258,28 @@
       "firstSeenAt": "2026-08-04T15:19:12+05:00",
       "lastSeenAt": "2026-08-04T15:19:12+05:00",
       "removedAt": "2026-08-06T10:18:37.401Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MHNUR-SHN-AIRJET-LWN-04",
+      "id": "15379104072051-62855399244147",
+      "name": "Mahnur By Shanaya Airjet Printed Lawn 3PC — 4",
+      "productName": "Mahnur By Shanaya Airjet Printed Lawn 3PC",
+      "brand": "Shanaya",
+      "sourceBrand": "Shanaya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3284.jpg?v=1780241182",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3284.jpg?v=1780241182",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3285.jpg?v=1780241181"
+      ],
+      "path": "products/mhnur-shn-airjet-lwn-04-mahnur-by-shanaya-airjet-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-16T19:21:08+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
       "reason": "supplier-removed"
     },
     {
@@ -36965,6 +36991,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "COCO-ZS-3PLWN-V2-LALA-10",
+      "id": "15496135573875-63967075205491",
+      "name": "Coco By Zara Shahjahan Digital Printed Lawn 3PC — 10",
+      "productName": "Coco By Zara Shahjahan Digital Printed Lawn 3PC",
+      "brand": "Zara Shahjahan",
+      "sourceBrand": "Zara Shahjahan",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/10_8905cfba-017e-4336-bd82-b722a22b0f4b.jpg?v=1786803164",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/10_8905cfba-017e-4336-bd82-b722a22b0f4b.jpg?v=1786803164"
+      ],
+      "path": "products/coco-zs-3plwn-v2-lala-10-coco-by-zara-shahjahan-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-14T10:00:32+05:00",
+      "lastSeenAt": "2026-09-16T19:21:08+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "COCO-ZS-3PLWN-V2-LALA-03",
       "id": "15496135213427-63967074320755",
       "name": "Coco By Zara Shahjahan Digital Printed Lawn 3PC — 3",
@@ -37273,6 +37320,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ZARA-2PLWN-V1-ABR-15",
+      "id": "15495729971571-63965611295091",
+      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 15",
+      "productName": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Zara Shahjahan",
+      "sourceBrand": "Zara Shahjahan",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/zara-15.jpg?v=1786779509",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/zara-15.jpg?v=1786779509"
+      ],
+      "path": "products/zara-2plwn-v1-abr-15-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-14T10:00:31+05:00",
+      "lastSeenAt": "2026-09-16T19:21:07+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ZARA-2PLWN-V1-ABR-17",
       "id": "15495730037107-63965611360627",
       "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 17",
@@ -37312,6 +37380,27 @@
       "firstSeenAt": "2026-09-05T09:34:15+05:00",
       "lastSeenAt": "2026-09-14T10:00:31+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZARA-2PLWN-V1-ABR-02",
+      "id": "15495729545587-63965610836339",
+      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 2",
+      "productName": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC",
+      "brand": "Zara Shahjahan",
+      "sourceBrand": "Zara Shahjahan",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2195,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/zara-2.jpg?v=1786778671",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/zara-2.jpg?v=1786778671"
+      ],
+      "path": "products/zara-2plwn-v1-abr-02-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-16T19:21:07+05:00",
+      "lastSeenAt": "2026-09-16T19:21:07+05:00",
+      "removedAt": "2026-09-16T14:41:23.150Z",
       "reason": "supplier-removed"
     },
     {
