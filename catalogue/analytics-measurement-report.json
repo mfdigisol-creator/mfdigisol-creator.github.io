@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "generatedAt": "2026-09-16T15:04:07.208Z",
+  "summary": {
+    "indexableUrls": 583,
+    "measuredIndexablePages": 583,
+    "activeProductPages": 513,
+    "pricedProductPageEvents": 502,
+    "enquiryProductPageEvents": 11,
+    "unavailablePricedProductPageEvents": 13,
+    "clientPurchaseEmitters": 0,
+    "errors": 0
+  },
+  "measurement": {
+    "gtmContainerConfigured": true,
+    "ga4FallbackConfigured": true,
+    "metaPixelConfigured": true,
+    "currency": "PKR",
+    "addPaymentInfo": "not_applicable_cod",
+    "purchaseAuthority": "server-side only after backend order-status policy permits it",
+    "configuredPageEventIndependentOfAdvertisingConsent": true
+  },
+  "notes": [
+    "add_payment_info is intentionally not emitted because the current checkout is Cash on Delivery and collects no payment instrument."
+  ],
+  "errors": []
+}
