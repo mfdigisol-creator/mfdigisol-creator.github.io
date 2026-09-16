@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T08:55:44.723Z",
+  "generatedAt": "2026-09-16T10:12:09.899Z",
   "summary": {
-    "products": 359,
-    "available": 347,
-    "formal": 87,
+    "products": 358,
+    "available": 346,
+    "formal": 86,
     "luxury": 272,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 348,
-    "canonicalBrands": 48,
-    "aliasCorrections": 23,
+    "metaFeedProducts": 347,
+    "canonicalBrands": 47,
+    "aliasCorrections": 22,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 11,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1730,
-    "newlyRemovedProducts": 6,
+    "removedProducts": 1731,
+    "newlyRemovedProducts": 3,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -72,11 +72,6 @@
     },
     {
       "code": "IMP-EMBCK-LPISTA-2P-ABR-05",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-PIST-2P-ABR-06",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -213,34 +208,19 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-10A",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-10A",
-      "path": "products/elaf-3plwn-v2-uk-epv-10a-elaf-premium-digital-printed-lawn-3pc/"
+      "code": "MAROOJ-LWN-V30-3P-04",
+      "name": "Marooj Gold Magic Printed Lawn 3PC — 4",
+      "path": "products/marooj-lwn-v30-3p-04-marooj-gold-magic-printed-lawn-3pc/"
     },
     {
-      "code": "BAROQUE-LWN-BLCK-3P-HA-204",
-      "name": "Baroque Embroiderd & Digital Printed Lawn 3PC — 204",
-      "path": "products/baroque-lwn-blck-3p-ha-204-baroque-embroiderd-and-digital-printed-lawn-3pc/"
+      "code": "IMP-EMBCK-PIST-2P-ABR-06",
+      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
+      "path": "products/imp-embck-pist-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
     },
     {
-      "code": "AFREEN-LALA-HM-PRNT-07",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 7",
-      "path": "products/afreen-lala-hm-prnt-07-afreen-by-lala-airjet-printed-lawn-3pc/"
-    },
-    {
-      "code": "JOFA-3PLWN-V558-AHMD-JF-7222",
-      "name": "Jofa Digital Fancy Printed Lawn 3PC — JF-7222",
-      "path": "products/jofa-3plwn-v558-ahmd-jf-7222-jofa-digital-fancy-printed-lawn-3pc/"
-    },
-    {
-      "code": "NISHAT-2PLWN-V2-ABR-14",
-      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 14",
-      "path": "products/nishat-2plwn-v2-abr-14-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "SAPPHIRE-LWN-V14-ELVAN-AHMD-2",
-      "name": "Sapphire Digital Printed Fancy Lawn 3PC — 2",
-      "path": "products/sapphire-lwn-v14-elvan-ahmd-2-sapphire-digital-printed-fancy-lawn-3pc/"
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-18",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 18",
+      "path": "products/mahira-lklwn-v1-3p-far-18-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
     }
   ]
 }
