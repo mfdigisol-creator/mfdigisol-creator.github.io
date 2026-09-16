@@ -22,6 +22,7 @@ const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
 const productPath = item => clean(item.path) || `products/${slugify(item.code)}-${slugify(item.productName || item.name)}/`;
 const productPageFile = item => `${productPath(item).replace(/^\/+|\/+$/g, '')}/index.html`;
+const isNoindexRedirect = source => source.includes('content="noindex,follow"') && source.includes('http-equiv="refresh"');
 
 const policySchema = {
   '@context': 'https://schema.org',
@@ -103,8 +104,13 @@ async function patchPolicies(changed) {
 
 async function patchGeneratedPage(relative, changed) {
   const before = await read(relative);
-  const after = replaceControlled(before, LEGACY_GENERATED_BRAND, GENERATED_BRAND, `${relative} generated textual AH brand placeholder`);
-  await writeIfChanged(relative, before, after, changed);
+  if (before.includes(GENERATED_BRAND)) return;
+  if (before.includes(LEGACY_GENERATED_BRAND)) {
+    await writeIfChanged(relative, before, before.replace(LEGACY_GENERATED_BRAND, GENERATED_BRAND), changed);
+    return;
+  }
+  if (isNoindexRedirect(before)) return;
+  throw new Error(`Could not locate ${relative} generated textual AH brand placeholder; refusing Step 11 entity rewrite.`);
 }
 
 async function htmlFilesUnder(relative) {
@@ -203,8 +209,13 @@ async function validate(products) {
   }
 
   let collectionPagesChecked = 0;
+  let collectionRedirectsSkipped = 0;
   for (const relative of await htmlFilesUnder('collections')) {
     const page = await read(relative);
+    if (isNoindexRedirect(page)) {
+      collectionRedirectsSkipped += 1;
+      continue;
+    }
     assert(page.includes(GENERATED_BRAND), `${relative}: official brand header is missing.`);
     assert(!page.includes('<b>AH</b>'), `${relative}: obsolete textual AH placeholder remains.`);
     assert(page.includes(`"isPartOf":{"@id":"${WEBSITE_ID}"}`), `${relative}: CollectionPage WebSite relationship mismatch.`);
@@ -241,6 +252,7 @@ async function validate(products) {
     productPagesChecked,
     pricedSellerRefs,
     collectionPagesChecked,
+    collectionRedirectsSkipped,
     shopPagesChecked,
     guidePagesChecked: 1,
     organizationId: ORGANIZATION_ID,
