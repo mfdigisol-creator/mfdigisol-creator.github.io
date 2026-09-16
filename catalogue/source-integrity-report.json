@@ -1,25 +1,30 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T13:21:43.697Z",
+  "generatedAt": "2026-09-16T13:46:02.649Z",
   "summary": {
-    "products": 358,
-    "available": 346,
-    "formal": 86,
+    "products": 390,
+    "available": 376,
+    "formal": 118,
     "luxury": 272,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 347,
-    "canonicalBrands": 48,
-    "aliasCorrections": 20,
+    "metaFeedProducts": 379,
+    "canonicalBrands": 55,
+    "aliasCorrections": 21,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 10,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1732,
-    "newlyRemovedProducts": 1,
+    "removedProducts": 1714,
+    "newlyRemovedProducts": 0,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-03",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
     {
       "code": "IMP-EMBCK-PURP-2P-ABR-19",
       "sourceBrand": "lmported",
@@ -192,11 +197,5 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": [
-    {
-      "code": "IMP-EMBCK-LPISTA-2P-ABR-30",
-      "name": "Imported Emb Chickenkari Lawn 3PC — 30",
-      "path": "products/imp-embck-lpista-2p-abr-30-imported-emb-chickenkari-lawn-3pc/"
-    }
-  ]
+  "newlyRemovedProducts": []
 }

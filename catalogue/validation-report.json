@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T13:21:48.740Z",
+  "generatedAt": "2026-09-16T13:46:08.784Z",
   "summary": {
-    "products": 358,
-    "removedProducts": 1732,
-    "brands": 48,
-    "collectionPages": 50,
-    "sitemapUrls": 411,
-    "metaFeedRows": 347,
-    "metadataPages": 358,
-    "internalHtmlFiles": 2195,
+    "products": 390,
+    "removedProducts": 1714,
+    "brands": 55,
+    "collectionPages": 57,
+    "sitemapUrls": 450,
+    "metaFeedRows": 379,
+    "metadataPages": 390,
+    "internalHtmlFiles": 2211,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "61 products currently lack retained supplier description text."
+    "65 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -55,6 +55,7 @@
       "ALKARAM-3PLWN-V10-MGREEN-AHMD-6",
       "FLEUR-ALMRH-LWN-CT-3P-09",
       "FLOWS-ALMRH-LWN-CT-3P-15",
+      "FLOWS-ALMRH-LWN-CT-3P-17",
       "FLOWS-ALMRH-LWN-CT-3P-20",
       "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
@@ -62,6 +63,7 @@
       "CHINYERE-2PLWN-V2-ABR-03",
       "CHINYERE-2PLWN-V2-ABR-04",
       "CHINYERE-2PLWN-V2-ABR-05",
+      "CHINYERE-2PLWN-V2-ABR-06",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
@@ -70,9 +72,7 @@
       "CS-EMB-LWN-3P-1856",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
-      "AIRA-ORG-PURP-1547",
-      "AIRA-ORG-SKY-1547",
-      "DASTAK-DL-LWN-3P-FB-322"
+      "AIRA-ORG-PURP-1547"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
