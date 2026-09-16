@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T07:52:19.096Z",
+  "generatedAt": "2026-09-16T08:55:44.723Z",
   "summary": {
-    "products": 365,
-    "available": 353,
-    "formal": 93,
+    "products": 359,
+    "available": 347,
+    "formal": 87,
     "luxury": 272,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 354,
-    "canonicalBrands": 50,
+    "metaFeedProducts": 348,
+    "canonicalBrands": 48,
     "aliasCorrections": 23,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 11,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1724,
-    "newlyRemovedProducts": 0,
+    "removedProducts": 1730,
+    "newlyRemovedProducts": 6,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -211,5 +211,36 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": []
+  "newlyRemovedProducts": [
+    {
+      "code": "ELAF-3PLWN-V2-UK-EPV-10A",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-10A",
+      "path": "products/elaf-3plwn-v2-uk-epv-10a-elaf-premium-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "BAROQUE-LWN-BLCK-3P-HA-204",
+      "name": "Baroque Embroiderd & Digital Printed Lawn 3PC — 204",
+      "path": "products/baroque-lwn-blck-3p-ha-204-baroque-embroiderd-and-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "AFREEN-LALA-HM-PRNT-07",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 7",
+      "path": "products/afreen-lala-hm-prnt-07-afreen-by-lala-airjet-printed-lawn-3pc/"
+    },
+    {
+      "code": "JOFA-3PLWN-V558-AHMD-JF-7222",
+      "name": "Jofa Digital Fancy Printed Lawn 3PC — JF-7222",
+      "path": "products/jofa-3plwn-v558-ahmd-jf-7222-jofa-digital-fancy-printed-lawn-3pc/"
+    },
+    {
+      "code": "NISHAT-2PLWN-V2-ABR-14",
+      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 14",
+      "path": "products/nishat-2plwn-v2-abr-14-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "SAPPHIRE-LWN-V14-ELVAN-AHMD-2",
+      "name": "Sapphire Digital Printed Fancy Lawn 3PC — 2",
+      "path": "products/sapphire-lwn-v14-elvan-ahmd-2-sapphire-digital-printed-fancy-lawn-3pc/"
+    }
+  ]
 }
