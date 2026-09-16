@@ -67,16 +67,9 @@ const faqSection = `      <section class="faq-section section-pad" id="faq" aria
 `;
 
 const reviews = `      <section class="customer-reviews section-pad" id="reviews" aria-labelledby="reviews-title">
-        <div class="reviews-heading reveal"><p class="eyebrow dark"><span></span> Customer voices</p><h2 id="reviews-title">Shared with<br /><em>confidence.</em></h2><p>Only customer reviews approved by Al Huma Collection are published. Submit your genuine experience for moderation.</p></div>
+        <div class="reviews-heading reveal"><p class="eyebrow dark"><span></span> Customer voices</p><h2 id="reviews-title">Shared with<br /><em>confidence.</em></h2><p>Published customer reviews are shown against the exact design they describe. Reviews are published as submitted after security verification and are not edited by Al Huma Collection. Spam, abusive, unrelated or fraudulent content may be hidden or removed through post-publication moderation.</p></div>
         <div class="trust-grid" aria-label="Why shop with Al Huma Collection"><article><b>01</b><strong>Cash on Delivery</strong><span>Order within Pakistan and pay when your parcel arrives.</span></article><article><b>02</b><strong>Personal confirmation</strong><span>Our team confirms availability and final charges before dispatch.</span></article><article><b>03</b><strong>Official support</strong><span>Order assistance through our verified WhatsApp number.</span></article></div>
-        <div class="approved-reviews" data-approved-reviews><p>Loading approved reviews…</p></div>
-        <form class="review-form reveal" action="https://formsubmit.co/alhumacollection@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New customer review — approval required"><input type="hidden" name="_captcha" value="true"><input type="hidden" name="_next" value="https://alhumacollection.com/review-thanks.html">
-          <div class="review-form-head"><div><span>Share your experience</span><h3>Leave a review</h3></div><p>Your review is sent privately to our team and appears publicly only after moderation.</p></div>
-          <fieldset><legend>Rating</legend><div class="rating-input"><input id="rate5" type="radio" name="Rating" value="5 stars" required><label for="rate5" title="5 stars">★</label><input id="rate4" type="radio" name="Rating" value="4 stars"><label for="rate4" title="4 stars">★</label><input id="rate3" type="radio" name="Rating" value="3 stars"><label for="rate3" title="3 stars">★</label><input id="rate2" type="radio" name="Rating" value="2 stars"><label for="rate2" title="2 stars">★</label><input id="rate1" type="radio" name="Rating" value="1 star"><label for="rate1" title="1 star">★</label></div></fieldset>
-          <label>Display name<input name="Display name" required maxlength="60" placeholder="Your first name or preferred public name"></label><label>City (optional)<input name="City" maxlength="60" placeholder="e.g. Sialkot"></label><label>Order ID (optional)<input name="Order ID" maxlength="30" placeholder="e.g. AH-12345678"></label><label class="review-wide">Your review<textarea name="Review" required minlength="20" maxlength="700" rows="5" placeholder="Tell us about the product, ordering experience or service you received."></textarea></label>
-          <label class="review-consent review-wide"><span><input type="checkbox" name="Publication consent" value="Approved" required> This is my genuine experience, and I allow Al Huma Collection to publish my display name, city, rating and review after moderation.</span></label><button class="button button-dark review-wide" type="submit">Submit review for approval</button>
-        </form>
+        <div class="approved-reviews" data-approved-reviews><div class="review-empty"><span>Product-specific reviews</span><h3>Reviews now belong to each design.</h3><p>Open any design in the live catalogue to read published reviews or submit your own experience. Reviews are published as submitted after security verification. Al Huma Collection does not edit customer ratings or review text. Spam, abusive, unrelated or fraudulent content may be hidden or removed through post-publication moderation.</p></div></div>
       </section>
 
 `;
@@ -382,8 +375,11 @@ if (!html.includes('rel="canonical"')) insertBefore('</head>', `    <link rel="c
     <meta property="og:description" content="Browse synchronized formal and luxury ladies suit collections with current prices and WhatsApp ordering." />
     <meta property="og:url" content="https://alhumacollection.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Al Huma Collection","url":"https://alhumacollection.com/","email":"alhumacollection@gmail.com","telephone":"+923216115731","address":{"@type":"PostalAddress","streetAddress":"87 Peer, Muradia Rd, Model Town","addressLocality":"Sialkot","addressCountry":"PK"},"priceRange":"PKR"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Al Huma Collection","url":"https://alhumacollection.com/","email":"alhumacollection@gmail.com","telephone":"+923216115731","address":{"@type":"PostalAddress","streetAddress":"87 Peer, Muradia Rd, Model Town","addressLocality":"Sialkot","addressCountry":"PK"},"currenciesAccepted":"PKR"}</script>
   `, 'document head');
+
+// Keep the current homepage entity schema semantically correct across future catalogue syncs.
+html = html.replace(/"priceRange"\s*:\s*"PKR"/g, '"currenciesAccepted":"PKR"');
 
 await fs.writeFile(file, html);
 console.log(`Dawood catalogue integration installed; index.html is ${Buffer.byteLength(html).toLocaleString()} bytes.`);
