@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T12:51:34.799Z",
+  "generatedAt": "2026-09-16T13:21:43.697Z",
   "summary": {
-    "products": 357,
-    "available": 345,
-    "formal": 85,
+    "products": 358,
+    "available": 346,
+    "formal": 86,
     "luxury": 272,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 346,
-    "canonicalBrands": 46,
-    "aliasCorrections": 21,
+    "metaFeedProducts": 347,
+    "canonicalBrands": 48,
+    "aliasCorrections": 20,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 11,
+    "duplicateNames": 10,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1733,
+    "removedProducts": 1732,
     "newlyRemovedProducts": 1,
     "supplierRefreshUsed": true
   },
@@ -87,11 +87,6 @@
     },
     {
       "code": "IMP-EMBCK-GREY-2P-ABR-30",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-LPISTA-2P-ABR-30",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -168,10 +163,6 @@
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
       "count": 2
-    },
-    {
-      "value": "imported emb chickenkari lawn 3pc — 30",
-      "count": 2
     }
   ],
   "classificationConflicts": [
@@ -203,9 +194,9 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "AFREEN-LALA-HM-PRNT-03",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 3",
-      "path": "products/afreen-lala-hm-prnt-03-afreen-by-lala-airjet-printed-lawn-3pc/"
+      "code": "IMP-EMBCK-LPISTA-2P-ABR-30",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 30",
+      "path": "products/imp-embck-lpista-2p-abr-30-imported-emb-chickenkari-lawn-3pc/"
     }
   ]
 }
