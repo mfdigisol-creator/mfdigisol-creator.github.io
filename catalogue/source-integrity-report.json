@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T04:53:07.777Z",
+  "generatedAt": "2026-09-16T07:52:19.096Z",
   "summary": {
-    "products": 347,
-    "available": 335,
-    "formal": 75,
+    "products": 365,
+    "available": 353,
+    "formal": 93,
     "luxury": 272,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 336,
-    "canonicalBrands": 45,
-    "aliasCorrections": 21,
+    "metaFeedProducts": 354,
+    "canonicalBrands": 50,
+    "aliasCorrections": 23,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 10,
+    "duplicateNames": 11,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1736,
-    "newlyRemovedProducts": 1,
+    "removedProducts": 1724,
+    "newlyRemovedProducts": 0,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -96,6 +96,16 @@
       "canonicalBrand": "Imported"
     },
     {
+      "code": "IMP-EMBCK-LPISTA-2P-ABR-30",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-SGRN-2P-ABR-31",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
       "code": "CRIMSON-BLK-3PC-AK15",
       "sourceBrand": "silknstories",
       "canonicalBrand": "Crimson"
@@ -168,6 +178,10 @@
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
       "count": 2
+    },
+    {
+      "value": "imported emb chickenkari lawn 3pc — 30",
+      "count": 2
     }
   ],
   "classificationConflicts": [
@@ -197,11 +211,5 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": [
-    {
-      "code": "RANG-E-SERMA-SAR-12",
-      "name": "Rang-e-Sarma | Parishay | Khaddar — 12",
-      "path": "products/rang-e-serma-sar-12-rang-e-sarma-parishay-khaddar/"
-    }
-  ]
+  "newlyRemovedProducts": []
 }
