@@ -20,6 +20,10 @@ async function listProductPages() {
   return pages;
 }
 
+function schemaTypes(value) {
+  return Array.isArray(value?.['@type']) ? value['@type'] : [value?.['@type']];
+}
+
 async function main() {
   const policies = await fs.readFile(path.join(ROOT, 'policies.html'), 'utf8');
   if (!policies.includes('id="exchange-returns"')) throw new Error('The exchange and returns policy anchor is missing.');
@@ -29,7 +33,7 @@ async function main() {
     try { schemas.push(JSON.parse(match[1])); }
     catch (error) { throw new Error(`Invalid JSON-LD on policies.html: ${error.message}`); }
   }
-  const store = schemas.find(value => ['OnlineStore', 'Organization'].includes(value?.['@type']));
+  const store = schemas.find(value => schemaTypes(value).some(type => ['OnlineStore', 'Organization'].includes(type)));
   if (!store) throw new Error('OnlineStore or Organization policy schema is missing.');
   if (store.hasMerchantReturnPolicy?.merchantReturnLink !== RETURN_LINK) throw new Error('Merchant return-policy link is missing or incorrect.');
 
