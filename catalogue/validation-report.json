@@ -1,26 +1,31 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T13:46:08.784Z",
+  "generatedAt": "2026-09-16T14:21:14.796Z",
   "summary": {
-    "products": 390,
-    "removedProducts": 1714,
-    "brands": 55,
-    "collectionPages": 57,
-    "sitemapUrls": 450,
-    "metaFeedRows": 379,
-    "metadataPages": 390,
-    "internalHtmlFiles": 2211,
+    "products": 499,
+    "removedProducts": 1645,
+    "brands": 62,
+    "collectionPages": 64,
+    "sitemapUrls": 566,
+    "metaFeedRows": 488,
+    "metadataPages": 499,
+    "internalHtmlFiles": 2251,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
-    "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "65 products currently lack retained supplier description text."
+    "6 products contain “Luxury” but inherit the Formal supplier section.",
+    "96 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [
+      {
+        "code": "CRIMSON-S26-D-3A",
+        "name": "Crimson Luxury Embroidered Lawn 3PC — D-3A",
+        "category": "Formal"
+      },
       {
         "code": "JAZMIN-S26-JZ-D05",
         "name": "Jazmin Luxury Embroidered Lawn 3PC — D05",
@@ -49,30 +54,30 @@
     ],
     "missingDescriptions": [
       "ABRISH-2PLWN-V2-ABR-01",
+      "ABRISH-2PLWN-V1-ABR-11",
+      "ABRISH-2PLWN-V1-ABR-24",
       "ABRISH-2PLWN-V2-ABR-04",
+      "ABRISH-2PLWN-V1-ABR-04",
       "ABRISH-2PLWN-V2-ABR-05",
+      "ABRISH-2PLWN-V1-ABR-58",
       "ABRISH-2PLWN-V2-ABR-07",
+      "ALKARAM-3PLWN-V10-RED-AHMD-4",
       "ALKARAM-3PLWN-V10-MGREEN-AHMD-6",
       "FLEUR-ALMRH-LWN-CT-3P-09",
+      "FLOWS-ALMRH-LWN-CT-3P-14",
       "FLOWS-ALMRH-LWN-CT-3P-15",
       "FLOWS-ALMRH-LWN-CT-3P-17",
+      "FLOWS-ALMRH-LWN-CT-3P-19",
       "FLOWS-ALMRH-LWN-CT-3P-20",
       "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
+      "BONANZA-2PLWN-V1-ABR-11",
       "BONANZA-2PLWN-V1-ABR-03",
+      "BONANZA-2PLWN-V1-ABR-07",
+      "BONANZA-2PLWN-V1-ABR-08",
       "CHINYERE-2PLWN-V2-ABR-03",
       "CHINYERE-2PLWN-V2-ABR-04",
-      "CHINYERE-2PLWN-V2-ABR-05",
-      "CHINYERE-2PLWN-V2-ABR-06",
-      "CRIMSON-BLK-3PC-AK15",
-      "CRIMSON-BLUE-3PC-AK15",
-      "CRIMSON-MUST-3PC-AK15",
-      "CRIMSON-PINK-3PC-AK15",
-      "NISHAT-2PLWN-V1-ABR-31",
-      "CS-EMB-LWN-3P-1856",
-      "AIRA-ORG-PISTA-1547",
-      "AIRA-ORG-PEACH-1547",
-      "AIRA-ORG-PURP-1547"
+      "CHINYERE-2PLWN-V2-ABR-05"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -80,11 +85,6 @@
     "duplicateSchemaNames": [],
     "brokenInternalLinks": [],
     "removedProducts": [
-      {
-        "code": "ABRISH-2PLWN-V1-ABR-11",
-        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 11",
-        "path": "products/abrish-2plwn-v1-abr-11-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
-      },
       {
         "code": "ABRISH-2PLWN-V1-ABR-13",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 13",
@@ -164,6 +164,11 @@
         "code": "ABRISH-2PLWN-V2-ABR-08",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 8",
         "path": "products/abrish-2plwn-v2-abr-08-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
+        "code": "AFSARAH-EMB-3P-EHT-1935",
+        "name": "Afsarah Apparel Plain Emb Lawm 3PC — 1935",
+        "path": "products/afsarah-emb-3p-eht-1935-afsarah-apparel-plain-emb-lawm-3pc/"
       },
       {
         "code": "AGHA-EMB-PLAIN-3P-1882",

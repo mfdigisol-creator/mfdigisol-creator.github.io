@@ -1,25 +1,30 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T13:46:02.649Z",
+  "generatedAt": "2026-09-16T14:21:10.417Z",
   "summary": {
-    "products": 390,
-    "available": 376,
-    "formal": 118,
+    "products": 499,
+    "available": 487,
+    "formal": 227,
     "luxury": 272,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 379,
-    "canonicalBrands": 55,
-    "aliasCorrections": 21,
+    "metaFeedProducts": 488,
+    "canonicalBrands": 62,
+    "aliasCorrections": 26,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 10,
-    "classificationConflicts": 5,
+    "duplicateNames": 18,
+    "classificationConflicts": 6,
     "unspecifiedPieces": 17,
-    "removedProducts": 1714,
-    "newlyRemovedProducts": 0,
+    "removedProducts": 1645,
+    "newlyRemovedProducts": 7,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
+    {
+      "code": "AABRO-ANAYANOOR-S26-AN-01",
+      "sourceBrand": "Anaya noor",
+      "canonicalBrand": "Anaya Noor"
+    },
     {
       "code": "AABRO-ANAYANOOR-S26-AN-03",
       "sourceBrand": "Anaya noor",
@@ -91,7 +96,27 @@
       "canonicalBrand": "Imported"
     },
     {
+      "code": "IMP-EMBCK-LEMN-2P-ABR-15",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PURP-2P-ABR-15",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-GREN-2P-ABR-18",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
       "code": "IMP-EMBCK-GREY-2P-ABR-30",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-DPISTA-2P-ABR-30",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -129,6 +154,26 @@
   "duplicateCodes": [],
   "duplicatePaths": [],
   "duplicateNames": [
+    {
+      "value": "abrish digital printed all over two piece lawn 2pc — 4",
+      "count": 2
+    },
+    {
+      "value": "alkaram studio digital printed lawn 3pc — 6",
+      "count": 2
+    },
+    {
+      "value": "bin saeed digital printed lawn 3pc — 10",
+      "count": 2
+    },
+    {
+      "value": "bin saeed digital printed lawn 3pc — 8",
+      "count": 2
+    },
+    {
+      "value": "cross stitch digital printed all over two piece lawn 2pc — 3",
+      "count": 2
+    },
     {
       "value": "aira | organza | dressline — 1547",
       "count": 4
@@ -168,9 +213,26 @@
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
       "count": 2
+    },
+    {
+      "value": "imported emb chickenkari lawn 3pc — 15",
+      "count": 2
+    },
+    {
+      "value": "imported emb chickenkari lawn 3pc — 30",
+      "count": 2
+    },
+    {
+      "value": "limelight digital printed all over two piece lawn 2pc — 5",
+      "count": 2
     }
   ],
   "classificationConflicts": [
+    {
+      "code": "CRIMSON-S26-D-3A",
+      "name": "Crimson Luxury Embroidered Lawn 3PC — D-3A",
+      "category": "Formal"
+    },
     {
       "code": "JAZMIN-S26-JZ-D05",
       "name": "Jazmin Luxury Embroidered Lawn 3PC — D05",
@@ -197,5 +259,41 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": []
+  "newlyRemovedProducts": [
+    {
+      "code": "AFSANAH-SHN-LWN-V214-3P-01",
+      "name": "Afsaanah By Shanaya Digital Printed Lawn 3PC — 1",
+      "path": "products/afsanah-shn-lwn-v214-3p-01-afsaanah-by-shanaya-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "ZESH-PRNLWN-3P-377",
+      "name": "Zesh Digital Printed Lawn 3PC — 377",
+      "path": "products/zesh-prnlwn-3p-377-zesh-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "AFREEN-3PLWN-V2-HM-LS-0723",
+      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0723",
+      "path": "products/afreen-3plwn-v2-hm-ls-0723-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
+    },
+    {
+      "code": "AFSARAH-EMB-3P-EHT-1935",
+      "name": "Afsarah Apparel Plain Emb Lawm 3PC — 1935",
+      "path": "products/afsarah-emb-3p-eht-1935-afsarah-apparel-plain-emb-lawm-3pc/"
+    },
+    {
+      "code": "FLORENT-LWN-V1-2P-DLWR-39",
+      "name": "Florent Digital Printed All Over Lawn 2PC — 39",
+      "path": "products/florent-lwn-v1-2p-dlwr-39-florent-digital-printed-all-over-lawn-2pc/"
+    },
+    {
+      "code": "SAPPHIRE-LWN-ZINC-2P-D-1009",
+      "name": "Sapphire Embroidered Lawn 2PC — D-1009",
+      "path": "products/sapphire-lwn-zinc-2p-d-1009-sapphire-embroidered-lawn-2pc/"
+    },
+    {
+      "code": "ZESH-PRNLWN-3P-391",
+      "name": "Zesh Digital Printed Lawn 3PC — 391",
+      "path": "products/zesh-prnlwn-3p-391-zesh-digital-printed-lawn-3pc/"
+    }
+  ]
 }
