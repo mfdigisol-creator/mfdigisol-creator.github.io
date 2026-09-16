@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = process.cwd();
+const INDEX_FILE = path.join(ROOT, 'index.html');
 const DATA_FILE = path.join(ROOT, 'catalogue/dawood-products.json');
 const STATUS_FILE = path.join(ROOT, 'catalogue/sync-status.json');
 const FEED_FILE = path.join(ROOT, 'catalogue/meta-product-feed.csv');
@@ -36,6 +37,12 @@ async function readJson(file, fallback) {
   catch { return fallback; }
 }
 
+function replaceHomepageText(source, before, after, description) {
+  if (source.includes(after)) return source;
+  if (!source.includes(before)) throw new Error(`Could not locate ${description}; refusing GEO homepage rewrite.`);
+  return source.replace(before, after);
+}
+
 function historyRecord(item, previous = {}) {
   const now = new Date().toISOString();
   return {
@@ -58,6 +65,27 @@ function historyRecord(item, previous = {}) {
 }
 
 async function main() {
+  let homepage = await fs.readFile(INDEX_FILE, 'utf8');
+  homepage = replaceHomepageText(
+    homepage,
+    '<p class="story-lead">Al Huma Collection is an expression of confident femininity—where familiar craft language meets a composed, modern sensibility.</p>',
+    '<p class="story-lead">Al Huma Collection is a Sialkot-based retailer and curated showroom for branded ladies’ unstitched suits—bringing together formal, embroidered and luxury collections with a composed, modern point of view.</p>',
+    'homepage business-role statement'
+  );
+  homepage = replaceHomepageText(
+    homepage,
+    '<p>Each edit is designed around balance: intricate detail without excess, graceful proportion without compromise, and pieces that feel special long after the occasion.</p>',
+    '<p>Each catalogue edit is curated around balance: intricate detail without excess, graceful proportion without compromise, and pieces selected to feel special long after the occasion.</p>',
+    'homepage curation statement'
+  );
+  homepage = replaceHomepageText(
+    homepage,
+    '<div class="values" aria-label="Our design values">',
+    '<div class="values" aria-label="Our curation values">',
+    'homepage curation-values label'
+  );
+  await fs.writeFile(INDEX_FILE, homepage);
+
   const catalogue = JSON.parse(await fs.readFile(DATA_FILE, 'utf8'));
   const status = await readJson(STATUS_FILE, { ok: true });
   const history = await readJson(HISTORY_FILE, { schemaVersion: 1, products: {} });
