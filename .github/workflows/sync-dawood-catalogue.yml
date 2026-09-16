@@ -17,6 +17,7 @@ on:
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
+      - "scripts/image-seo-postprocess.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -45,6 +46,7 @@ on:
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
+      - "scripts/image-seo-postprocess.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -100,6 +102,7 @@ jobs:
           node scripts/version-performance-assets.mjs
           test -s assets/alhuma-collection-logo.webp
           node scripts/apply-official-brand.mjs
+          node scripts/image-seo-postprocess.mjs
           node --check assistant-runtime.js
           node --check dawood-catalogue.js
           node scripts/test-product-descriptions.mjs
