@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-15T19:12:47.399Z",
+  "generatedAt": "2026-09-16T04:53:07.777Z",
   "summary": {
-    "products": 348,
-    "available": 336,
+    "products": 347,
+    "available": 335,
     "formal": 75,
-    "luxury": 273,
+    "luxury": 272,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 337,
+    "metaFeedProducts": 336,
     "canonicalBrands": 45,
     "aliasCorrections": 21,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 10,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1735,
-    "newlyRemovedProducts": 3,
+    "removedProducts": 1736,
+    "newlyRemovedProducts": 1,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -199,19 +199,9 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "LIMELIGHT-2PLWN-V2-ABR-15",
-      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 15",
-      "path": "products/limelight-2plwn-v2-abr-15-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "IMP-EMBCK-PAROT-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-parot-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
-    },
-    {
-      "code": "IMP-EMBCK-GREN-2P-ABR-23",
-      "name": "Imported Emb Chickenkari Lawn 3PC — 23",
-      "path": "products/imp-embck-gren-2p-abr-23-imported-emb-chickenkari-lawn-3pc/"
+      "code": "RANG-E-SERMA-SAR-12",
+      "name": "Rang-e-Sarma | Parishay | Khaddar — 12",
+      "path": "products/rang-e-serma-sar-12-rang-e-sarma-parishay-khaddar/"
     }
   ]
 }

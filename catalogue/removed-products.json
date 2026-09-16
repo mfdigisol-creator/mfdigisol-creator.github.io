@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T19:12:47.379Z",
+  "generatedAt": "2026-09-16T04:53:07.757Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V1-ABR-11",
@@ -33579,6 +33579,32 @@
       "firstSeenAt": "2026-09-01T01:34:11+05:00",
       "lastSeenAt": "2026-09-11T21:31:12+05:00",
       "removedAt": "2026-09-12T04:39:24.489Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "RANG-E-SERMA-SAR-12",
+      "id": "15427972890995-63054174093683",
+      "name": "Rang-e-Sarma | Parishay | Khaddar — 12",
+      "productName": "Rang-e-Sarma | Parishay | Khaddar",
+      "brand": "Parishay",
+      "sourceBrand": "Parishay",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 8560,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/SAR-12_8_490x.progressive_ff0e25fc-b07f-4f80-8a4d-8c0623188fda.webp?v=1783159474",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/SAR-12_8_490x.progressive_ff0e25fc-b07f-4f80-8a4d-8c0623188fda.webp?v=1783159474",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/SAR-12_2_490x.progressive_2238bcbc-5d6d-4794-9c95-eab7a2983830.webp?v=1783159474",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/SAR-12_3_490x.progressive_10b96d38-d139-49a2-b70e-2b97be039a8d.webp?v=1783159474",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/SAR-12_4_490x.progressive_77c5556f-c342-4c3e-a36f-f11b90ce9d83.webp?v=1783159474",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/SAR-12_5_490x.progressive_c126d8d1-d1e7-4a9e-a49b-fb40b05ac57f.webp?v=1783159474",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/SAR-12_6_490x.progressive_dc06315b-b293-455c-9063-b2b76f48e7f7.webp?v=1783159474"
+      ],
+      "path": "products/rang-e-serma-sar-12-rang-e-sarma-parishay-khaddar/",
+      "firstSeenAt": "2026-09-01T01:34:11+05:00",
+      "lastSeenAt": "2026-09-16T00:12:46+05:00",
+      "removedAt": "2026-09-16T04:53:07.729Z",
       "reason": "supplier-removed"
     },
     {
