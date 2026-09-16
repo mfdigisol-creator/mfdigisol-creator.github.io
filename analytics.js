@@ -90,8 +90,9 @@
       window.fbq('init',config.metaPixelId);
       window.fbq('set','autoConfig',false,config.metaPixelId);
       sendMetaEvent('PageView',eventId('PageView'));
-      trackConfiguredPageEvent();
     }
+    // Page-level analytics events are independent of advertising consent.
+    if(consent.analytics || consent.marketing) trackConfiguredPageEvent();
   }
   function saveConsent(next){ consent={analytics:!!next.analytics,marketing:!!next.marketing,updatedAt:new Date().toISOString()}; localStorage.setItem(CONSENT_KEY,JSON.stringify(consent)); consentCommand('update',consent); document.querySelector('[data-consent-banner]')?.remove(); loadIntegrations(); track('consent_update',{analytics:consent.analytics,marketing:consent.marketing}); }
   function showConsent(){
