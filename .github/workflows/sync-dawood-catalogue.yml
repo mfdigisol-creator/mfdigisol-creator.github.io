@@ -10,6 +10,7 @@ on:
       - "scripts/product-description.mjs"
       - "scripts/test-product-descriptions.mjs"
       - "scripts/install-dawood-integration.mjs"
+      - "scripts/apply-official-brand.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/performance-p1-postprocess.mjs"
@@ -27,6 +28,7 @@ on:
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
       - "assistant-runtime.js"
+      - "assets/alhuma-collection-logo.webp"
   pull_request:
     branches:
       - main
@@ -35,6 +37,7 @@ on:
       - "scripts/sync-dawood.mjs"
       - "scripts/product-description.mjs"
       - "scripts/test-product-descriptions.mjs"
+      - "scripts/apply-official-brand.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/performance-p1-postprocess.mjs"
@@ -50,6 +53,7 @@ on:
       - "policies.html"
       - "dawood-catalogue.js"
       - "assistant-runtime.js"
+      - "assets/alhuma-collection-logo.webp"
   schedule:
     - cron: "17 */12 * * *"
   workflow_dispatch:
@@ -91,6 +95,8 @@ jobs:
           node scripts/performance-p1-postprocess.mjs
           node scripts/performance-p2p3-postprocess.mjs
           node scripts/version-performance-assets.mjs
+          test -s assets/alhuma-collection-logo.webp
+          node scripts/apply-official-brand.mjs
           node --check assistant-runtime.js
           node --check dawood-catalogue.js
           node scripts/test-product-descriptions.mjs
