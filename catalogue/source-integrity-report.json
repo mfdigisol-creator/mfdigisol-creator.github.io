@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T10:12:09.899Z",
+  "generatedAt": "2026-09-16T10:25:07.301Z",
   "summary": {
     "products": 358,
-    "available": 346,
+    "available": 344,
     "formal": 86,
     "luxury": 272,
     "priceOnEnquiry": 11,
@@ -16,7 +16,7 @@
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
     "removedProducts": 1731,
-    "newlyRemovedProducts": 3,
+    "newlyRemovedProducts": 0,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -206,21 +206,5 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": [
-    {
-      "code": "MAROOJ-LWN-V30-3P-04",
-      "name": "Marooj Gold Magic Printed Lawn 3PC — 4",
-      "path": "products/marooj-lwn-v30-3p-04-marooj-gold-magic-printed-lawn-3pc/"
-    },
-    {
-      "code": "IMP-EMBCK-PIST-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-pist-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
-    },
-    {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-18",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 18",
-      "path": "products/mahira-lklwn-v1-3p-far-18-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
-    }
-  ]
+  "newlyRemovedProducts": []
 }
