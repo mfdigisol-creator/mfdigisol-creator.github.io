@@ -232,9 +232,13 @@ async function auditHomepage() {
   for (const [index, tag] of tags.entries()) {
     const alt = getAttr(tag, 'alt');
     if (alt == null) throw new Error(`Homepage image ${index + 1} is missing alt.`);
-    if (!decodeHtml(alt).trim() && getAttr(tag, 'aria-hidden') !== 'true') {
-      throw new Error(`Homepage image ${index + 1} has empty alt without aria-hidden=true.`);
-    }
+  }
+
+  const logos = tags.filter(tag => /class=["'][^"']*official-brand-logo/.test(tag));
+  if (logos.length !== 2) throw new Error(`Homepage expected 2 visible official-brand-logo images; found ${logos.length}.`);
+  for (const logo of logos) {
+    if (decodeHtml(getAttr(logo, 'alt')).trim()) throw new Error('Official brand logo should retain decorative empty alt text next to the visible wordmark.');
+    if (getAttr(logo, 'aria-hidden') !== 'true') throw new Error('Official brand logo should retain aria-hidden=true next to the visible wordmark.');
   }
 
   const hero = tags.find(tag => /class=["'][^"']*hero-image/.test(tag));
@@ -244,7 +248,11 @@ async function auditHomepage() {
   if (!decodeHtml(getAttr(hero, 'src')).endsWith('.webp')) throw new Error('Homepage hero is no longer served as the accepted WebP asset.');
   if (!/max-image-preview:large/i.test(document)) throw new Error('Homepage lost max-image-preview:large.');
 
-  return tags.length;
+  return {
+    total: tags.length,
+    decorative: tags.filter(tag => !decodeHtml(getAttr(tag, 'alt')).trim()).length,
+    officialBrandLogos: logos.length
+  };
 }
 
 async function auditDynamicCatalogueRuntime() {
