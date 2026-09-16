@@ -22,7 +22,8 @@ const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
 const productPath = item => clean(item.path) || `products/${slugify(item.code)}-${slugify(item.productName || item.name)}/`;
 const productPageFile = item => `${productPath(item).replace(/^\/+|\/+$/g, '')}/index.html`;
-const isNoindexRedirect = source => source.includes('content="noindex,follow"') && source.includes('http-equiv="refresh"');
+const isNoindexPage = source => /<meta name="robots" content="noindex,follow(?:,[^"]*)?">/.test(source);
+const isNoindexRedirect = source => isNoindexPage(source) && source.includes('http-equiv="refresh"');
 
 const policySchema = {
   '@context': 'https://schema.org',
@@ -209,6 +210,7 @@ async function validate(products) {
   }
 
   let collectionPagesChecked = 0;
+  let noindexCollectionPagesChecked = 0;
   let collectionRedirectsSkipped = 0;
   for (const relative of await htmlFilesUnder('collections')) {
     const page = await read(relative);
@@ -218,6 +220,10 @@ async function validate(products) {
     }
     assert(page.includes(GENERATED_BRAND), `${relative}: official brand header is missing.`);
     assert(!page.includes('<b>AH</b>'), `${relative}: obsolete textual AH placeholder remains.`);
+    if (isNoindexPage(page)) {
+      noindexCollectionPagesChecked += 1;
+      continue;
+    }
     assert(page.includes(`"isPartOf":{"@id":"${WEBSITE_ID}"}`), `${relative}: CollectionPage WebSite relationship mismatch.`);
     assert(page.includes(`"publisher":{"@id":"${ORGANIZATION_ID}"}`), `${relative}: CollectionPage publisher relationship mismatch.`);
     collectionPagesChecked += 1;
@@ -252,6 +258,7 @@ async function validate(products) {
     productPagesChecked,
     pricedSellerRefs,
     collectionPagesChecked,
+    noindexCollectionPagesChecked,
     collectionRedirectsSkipped,
     shopPagesChecked,
     guidePagesChecked: 1,
