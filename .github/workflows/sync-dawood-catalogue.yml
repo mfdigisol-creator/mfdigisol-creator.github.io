@@ -18,6 +18,7 @@ on:
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
       - "scripts/image-seo-postprocess.mjs"
+      - "scripts/entity-consistency-postprocess.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -47,6 +48,7 @@ on:
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
       - "scripts/image-seo-postprocess.mjs"
+      - "scripts/entity-consistency-postprocess.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -103,6 +105,7 @@ jobs:
           test -s assets/alhuma-collection-logo.webp
           node scripts/apply-official-brand.mjs
           node scripts/image-seo-postprocess.mjs
+          node scripts/entity-consistency-postprocess.mjs
           node --check assistant-runtime.js
           node --check dawood-catalogue.js
           node scripts/test-product-descriptions.mjs
@@ -112,13 +115,13 @@ jobs:
       - name: Publish validated catalogue update
         if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
         run: |
-          if test -z "$(git status --porcelain -- index.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml)"; then
+          if test -z "$(git status --porcelain -- index.html policies.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml)"; then
             echo "Catalogue is already current."
             exit 0
           fi
           git config user.name "Al Huma Catalogue Sync"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml
+          git add index.html policies.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml
           git commit -m "Update synchronized catalogue"
           git push
 
