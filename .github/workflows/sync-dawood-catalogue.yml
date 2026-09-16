@@ -13,6 +13,7 @@ on:
       - "scripts/apply-official-brand.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/generate-step9b-guide.mjs"
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
@@ -40,6 +41,7 @@ on:
       - "scripts/apply-official-brand.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/generate-step9b-guide.mjs"
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
@@ -92,6 +94,7 @@ jobs:
         run: |
           node scripts/seo-batch1-postprocess.mjs
           node scripts/generate-seo-pages-v2.mjs
+          node scripts/generate-step9b-guide.mjs
           node scripts/performance-p1-postprocess.mjs
           node scripts/performance-p2p3-postprocess.mjs
           node scripts/version-performance-assets.mjs
@@ -106,13 +109,13 @@ jobs:
       - name: Publish validated catalogue update
         if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
         run: |
-          if test -z "$(git status --porcelain -- index.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/)"; then
+          if test -z "$(git status --porcelain -- index.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml)"; then
             echo "Catalogue is already current."
             exit 0
           fi
           git config user.name "Al Huma Catalogue Sync"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/
+          git add index.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml
           git commit -m "Update synchronized catalogue"
           git push
 
