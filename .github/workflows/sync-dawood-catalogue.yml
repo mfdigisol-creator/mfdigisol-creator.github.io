@@ -21,6 +21,7 @@ on:
       - "scripts/entity-consistency-postprocess.mjs"
       - "scripts/search-ecosystem-postprocess.mjs"
       - "scripts/validate-search-ecosystem-consistency.mjs"
+      - "scripts/validate-analytics-measurement.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -32,6 +33,12 @@ on:
       - "seo-pages.css"
       - "dawood-catalogue.css"
       - "dawood-catalogue.js"
+      - "dawood-commerce.js"
+      - "analytics-config.js"
+      - "analytics.js"
+      - "orders-client.js"
+      - "orders-config.js"
+      - "order-confirmed.html"
       - "assistant-runtime.js"
       - "assets/alhuma-collection-logo.webp"
   pull_request:
@@ -53,6 +60,7 @@ on:
       - "scripts/entity-consistency-postprocess.mjs"
       - "scripts/search-ecosystem-postprocess.mjs"
       - "scripts/validate-search-ecosystem-consistency.mjs"
+      - "scripts/validate-analytics-measurement.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
       - "catalogue/removed-products.json"
@@ -62,6 +70,12 @@ on:
       - "404.html"
       - "policies.html"
       - "dawood-catalogue.js"
+      - "dawood-commerce.js"
+      - "analytics-config.js"
+      - "analytics.js"
+      - "orders-client.js"
+      - "orders-config.js"
+      - "order-confirmed.html"
       - "assistant-runtime.js"
       - "assets/alhuma-collection-logo.webp"
   schedule:
@@ -113,10 +127,12 @@ jobs:
           node scripts/search-ecosystem-postprocess.mjs
           node --check assistant-runtime.js
           node --check dawood-catalogue.js
+          node --check analytics.js
           node scripts/test-product-descriptions.mjs
           node scripts/validate-catalogue.mjs
           node scripts/validate-merchant-policy.mjs
           node scripts/validate-search-ecosystem-consistency.mjs
+          node scripts/validate-analytics-measurement.mjs
 
       - name: Publish validated catalogue update
         if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
