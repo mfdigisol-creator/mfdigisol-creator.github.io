@@ -72,7 +72,7 @@ assert(analytics.includes('if(consent.analytics || consent.marketing) trackConfi
 assert((analytics.match(/sendMetaEvent\('PageView'/g) || []).length === 1, 'Meta PageView must have one source path to avoid client duplication');
 
 assert(catalogueRuntime.includes("track('view_item'"), 'Dynamic catalogue must emit view_item');
-assert(catalogueRuntime.includes("track('search'"), 'Dynamic catalogue must emit search');
+assert(/track\(isSearch\s*&&\s*control\.value\.trim\(\)\s*\?\s*['"]search['"]\s*:\s*['"]filter_catalogue['"]/.test(catalogueRuntime), 'Dynamic catalogue must emit search for non-empty search input');
 assert(commerce.includes("track('add_to_cart'"), 'Commerce runtime must emit add_to_cart');
 assert(commerce.includes("track('begin_checkout'"), 'Commerce runtime must emit begin_checkout');
 assert(commerce.includes("track('generate_lead'"), 'Secure/legacy order registration must emit generate_lead');
