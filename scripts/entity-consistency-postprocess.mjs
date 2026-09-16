@@ -18,6 +18,11 @@ const LEGACY_CONTACT_PARAGRAPH = '<p>Al Huma Collection is a curated womenswear 
 const LEGACY_GENERATED_BRAND = '<a class="brand" href="/" aria-label="Al Huma Collection home"><b>AH</b><span>AL HUMA COLLECTION</span></a>';
 const GENERATED_BRAND = '<a class="brand" href="/" aria-label="Al Huma Collection home"><img class="official-brand-logo" src="/assets/alhuma-collection-logo.webp" alt="" aria-hidden="true" width="42" height="42" decoding="async" style="width:42px;height:42px;object-fit:contain;flex:0 0 auto;"><span>AL HUMA COLLECTION</span></a>';
 
+const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
+const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
+const productPath = item => clean(item.path) || `products/${slugify(item.code)}-${slugify(item.productName || item.name)}/`;
+const productPageFile = item => `${productPath(item).replace(/^\/+|\/+$/g, '')}/index.html`;
+
 const policySchema = {
   '@context': 'https://schema.org',
   '@type': ['Organization', 'ClothingStore'],
@@ -77,7 +82,7 @@ function assert(condition, message) {
 async function patchHomepage(changed) {
   const relative = 'index.html';
   const before = await read(relative);
-  let after = replaceControlled(before, LEGACY_CONTACT_PARAGRAPH, CONTACT_PARAGRAPH, 'legacy homepage contact paragraph');
+  const after = replaceControlled(before, LEGACY_CONTACT_PARAGRAPH, CONTACT_PARAGRAPH, 'legacy homepage contact paragraph');
   await writeIfChanged(relative, before, after, changed);
 }
 
@@ -122,7 +127,7 @@ async function patchGenerated(changed) {
   if (products.length < 20) throw new Error(`Step 11 refused: only ${products.length} active catalogue products found.`);
 
   for (const item of products) {
-    const relative = String(item.path || '').replace(/^\//, '').replace(/\/$/, '') + '/index.html';
+    const relative = productPageFile(item);
     if (!relative.startsWith('products/') || !await exists(relative)) throw new Error(`Active product page missing for ${item.code}: ${relative}`);
     await patchGeneratedPage(relative, changed);
   }
@@ -185,7 +190,7 @@ async function validate(products) {
   let productPagesChecked = 0;
   let pricedSellerRefs = 0;
   for (const item of products) {
-    const relative = String(item.path || '').replace(/^\//, '').replace(/\/$/, '') + '/index.html';
+    const relative = productPageFile(item);
     const page = await read(relative);
     assert(page.includes(GENERATED_BRAND), `${relative}: official brand header is missing.`);
     assert(!page.includes('<b>AH</b>'), `${relative}: obsolete textual AH placeholder remains.`);
