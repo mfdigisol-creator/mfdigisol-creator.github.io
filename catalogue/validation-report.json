@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T15:47:23.750Z",
+  "generatedAt": "2026-09-16T17:01:26.931Z",
   "summary": {
-    "products": 504,
-    "removedProducts": 1661,
-    "brands": 64,
-    "collectionPages": 66,
-    "sitemapUrls": 573,
-    "metaFeedRows": 493,
-    "metadataPages": 504,
-    "internalHtmlFiles": 2272,
+    "products": 461,
+    "removedProducts": 1719,
+    "brands": 62,
+    "collectionPages": 64,
+    "sitemapUrls": 528,
+    "metaFeedRows": 450,
+    "metadataPages": 461,
+    "internalHtmlFiles": 2287,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "6 products contain “Luxury” but inherit the Formal supplier section.",
-    "98 products currently lack retained supplier description text."
+    "88 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -58,15 +58,12 @@
       "ABRISH-2PLWN-V1-ABR-24",
       "ABRISH-2PLWN-V2-ABR-04",
       "ABRISH-2PLWN-V2-ABR-05",
-      "ABRISH-2PLWN-V1-ABR-58",
       "ABRISH-2PLWN-V2-ABR-07",
-      "ALKARAM-3PLWN-V10-MGREEN-AHMD-6",
       "ALKARAM-3PLWN-V10-BLUE-AHMD-7",
       "FLEUR-ALMRH-LWN-CT-3P-09",
       "FLOWS-ALMRH-LWN-CT-3P-12",
       "FLOWS-ALMRH-LWN-CT-3P-14",
       "FLOWS-ALMRH-LWN-CT-3P-17",
-      "FLOWS-ALMRH-LWN-CT-3P-20",
       "FLOWS-ALMRH-LWN-CT-3P-09",
       "P&P-ALMRH-LWN-CT-3P-11",
       "P&P-ALMRH-LWN-CT-3P-17",
@@ -77,7 +74,10 @@
       "BONANZA-2PLWN-V1-ABR-07",
       "BONANZA-2PLWN-V1-ABR-08",
       "CHINYERE-2PLWN-V2-ABR-03",
-      "CHINYERE-2PLWN-V2-ABR-04"
+      "CHINYERE-2PLWN-V2-ABR-04",
+      "CHINYERE-2PLWN-V2-ABR-05",
+      "CHINYERE-2PLWN-V2-ABR-06",
+      "CRIMSON-BLK-3PC-AK15"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -161,6 +161,11 @@
         "path": "products/abrish-2plwn-v1-abr-55-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
+        "code": "ABRISH-2PLWN-V1-ABR-58",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 58",
+        "path": "products/abrish-2plwn-v1-abr-58-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
         "code": "ABRISH-2PLWN-V2-ABR-06",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 6",
         "path": "products/abrish-2plwn-v2-abr-06-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
@@ -204,11 +209,6 @@
         "code": "AIFA-SKIN-LWNEMB-910",
         "name": "Aifa Printed & Embroidered Lawn 3PC — 910",
         "path": "products/aifa-skin-lwnemb-910-aifa-printed-and-embroidered-lawn-3pc/"
-      },
-      {
-        "code": "UMANG-CK-LWN-3P-AU-002",
-        "name": "Umang By Aifa Printed & Chickenkari Emb Lawn 3PC — AU-002",
-        "path": "products/umang-ck-lwn-3p-au-002-umang-by-aifa-printed-and-chickenkari-emb-lawn-3pc/"
       }
     ]
   },

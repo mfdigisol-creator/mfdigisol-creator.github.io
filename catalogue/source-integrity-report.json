@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T15:47:16.812Z",
+  "generatedAt": "2026-09-16T17:01:22.327Z",
   "summary": {
-    "products": 504,
-    "available": 492,
-    "formal": 232,
-    "luxury": 272,
+    "products": 461,
+    "available": 449,
+    "formal": 174,
+    "luxury": 287,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 493,
-    "canonicalBrands": 64,
+    "metaFeedProducts": 450,
+    "canonicalBrands": 62,
     "aliasCorrections": 26,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 17,
+    "duplicateNames": 14,
     "classificationConflicts": 6,
     "unspecifiedPieces": 17,
-    "removedProducts": 1661,
-    "newlyRemovedProducts": 40,
+    "removedProducts": 1719,
+    "newlyRemovedProducts": 58,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -155,10 +155,6 @@
   "duplicatePaths": [],
   "duplicateNames": [
     {
-      "value": "alkaram studio digital printed lawn 3pc — 6",
-      "count": 2
-    },
-    {
       "value": "cross stitch digital printed all over two piece lawn 2pc — 3",
       "count": 2
     },
@@ -211,14 +207,6 @@
       "count": 2
     },
     {
-      "value": "limelight digital printed all over two piece lawn 2pc — 5",
-      "count": 2
-    },
-    {
-      "value": "limelight digital printed all over two piece lawn 2pc — 6",
-      "count": 2
-    },
-    {
       "value": "pinterest plain emb allover two piece lawn 2pc — 1",
       "count": 2
     }
@@ -257,204 +245,294 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-10A",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-10A",
-      "path": "products/elaf-3plwn-v2-uk-epv-10a-elaf-premium-digital-printed-lawn-3pc/"
+      "code": "RAMEEN-ANAYANOOR-3PC-S26-05",
+      "name": "Rameen By Anaya Noor Printed & Laser Cutwork Emb Lawn 3PC — 5",
+      "path": "products/rameen-anayanoor-3pc-s26-05-rameen-by-anaya-noor-printed-and-laser-cutwork-emb-lawn-3pc/"
     },
     {
-      "code": "AFREEN-3PLWN-V2-HM-LS-0729",
-      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0729",
-      "path": "products/afreen-3plwn-v2-hm-ls-0729-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
+      "code": "KAYSERIA-3PLWN-V13-LALA-X7125",
+      "name": "Kayseria Digital Printed Lawn 3PC — X7125",
+      "path": "products/kayseria-3plwn-v13-lala-x7125-kayseria-digital-printed-lawn-3pc/"
     },
     {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-15",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 15",
-      "path": "products/flows-almrh-lwn-ct-3p-15-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
+      "code": "KAYSERIA-3PLWN-V13-LALA-X7205",
+      "name": "Kayseria Digital Printed Lawn 3PC — X7205",
+      "path": "products/kayseria-3plwn-v13-lala-x7205-kayseria-digital-printed-lawn-3pc/"
     },
     {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-21",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 21",
-      "path": "products/flows-almrh-lwn-ct-3p-21-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
+      "code": "BAREEZE-3PLWN-V6280-AHMD-1881",
+      "name": "Bareeze Summer Digital Printed Lawn 3PC — 1881",
+      "path": "products/bareeze-3plwn-v6280-ahmd-1881-bareeze-summer-digital-printed-lawn-3pc/"
     },
     {
-      "code": "BINSAEED-LWN-V1-3P-HM-21",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 21",
-      "path": "products/binsaeed-lwn-v1-3p-hm-21-bin-saeed-digital-printed-lawn-3pc/"
+      "code": "MADHAM-PRNLWN-3P-HM-13",
+      "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 13",
+      "path": "products/madham-prnlwn-3p-hm-13-madham-by-lala-digital-airjet-printed-lawn-3pc/"
     },
     {
-      "code": "MADHAM-PRNLWN-3P-HM-02",
-      "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 2",
-      "path": "products/madham-prnlwn-3p-hm-02-madham-by-lala-digital-airjet-printed-lawn-3pc/"
+      "code": "MADHAM-PRNLWN-3P-HM-05",
+      "name": "Madham By Lala Digital Airjet Printed Lawn 3PC — 5",
+      "path": "products/madham-prnlwn-3p-hm-05-madham-by-lala-digital-airjet-printed-lawn-3pc/"
     },
     {
-      "code": "BINSAEED-LWN-V3-3P-HM-10",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 10",
-      "path": "products/binsaeed-lwn-v3-3p-hm-10-bin-saeed-digital-printed-lawn-3pc/"
+      "code": "ANEELAS-EMBLWN-3P-HA-01",
+      "name": "Aneelas Embroiderd & Digital Printed Lawn 3PC — 1",
+      "path": "products/aneelas-emblwn-3p-ha-01-aneelas-embroiderd-and-digital-printed-lawn-3pc/"
     },
     {
-      "code": "BINSAEED-LWN-V2-3P-HM-12",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 12",
-      "path": "products/binsaeed-lwn-v2-3p-hm-12-bin-saeed-digital-printed-lawn-3pc/"
+      "code": "LIMELIGHT-2PLWN-V1-ABR-06",
+      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 6",
+      "path": "products/limelight-2plwn-v1-abr-06-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "SUKOON-LWN-3P-LALA-32",
-      "name": "Sukoon By Sapphire Digital Printed Lawn 3PC — 32",
-      "path": "products/sukoon-lwn-3p-lala-32-sukoon-by-sapphire-digital-printed-lawn-3pc/"
+      "code": "MAHIRA-LKLWN-V5-3P-FAR-26533",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 26533",
+      "path": "products/mahira-lklwn-v5-3p-far-26533-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
     },
     {
-      "code": "TWKL-LWN-3P-EHT-1925",
-      "name": "Tawakkal Plain Embroidered Lawn 3PC — 1925",
-      "path": "products/twkl-lwn-3p-eht-1925-tawakkal-plain-embroidered-lawn-3pc/"
+      "code": "SUKOON-LWN-3P-LALA-17",
+      "name": "Sukoon By Sapphire Digital Printed Lawn 3PC — 17",
+      "path": "products/sukoon-lwn-3p-lala-17-sukoon-by-sapphire-digital-printed-lawn-3pc/"
     },
     {
-      "code": "ALKARAM-3PLWN-V10-RED-AHMD-4",
-      "name": "Alkaram Classic Digital Printed Lawn 3PC — 4",
-      "path": "products/alkaram-3plwn-v10-red-ahmd-4-alkaram-classic-digital-printed-lawn-3pc/"
+      "code": "NISHA-LWN-V584-3P-AHMD-06",
+      "name": "Nisha Designer Digital Printed Lawn 3PC — 6",
+      "path": "products/nisha-lwn-v584-3p-ahmd-06-nisha-designer-digital-printed-lawn-3pc/"
     },
     {
-      "code": "KAYSERIA-3PLWN-V9-AHMD-06",
-      "name": "Kayseria Digital Printed Lawn 3PC — 6",
-      "path": "products/kayseria-3plwn-v9-ahmd-06-kayseria-digital-printed-lawn-3pc/"
+      "code": "MAHIRA-LKLWN-V5-3P-FAR-26534",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 26534",
+      "path": "products/mahira-lklwn-v5-3p-far-26534-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
     },
     {
-      "code": "BINSAEED-LWN-V2-3P-HM-11",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 11",
-      "path": "products/binsaeed-lwn-v2-3p-hm-11-bin-saeed-digital-printed-lawn-3pc/"
+      "code": "SULE-LWN-V2-3P-ABR-12",
+      "name": "Sule By Zara Shahjahan Digital Printed Lawn 3PC — 12",
+      "path": "products/sule-lwn-v2-3p-abr-12-sule-by-zara-shahjahan-digital-printed-lawn-3pc/"
     },
     {
-      "code": "BAHAREH-2PLWN-LALA-08",
-      "name": "Bahareh By J. Digital Printed Summer Collection Lawn 2PC — 8",
-      "path": "products/bahareh-2plwn-lala-08-bahareh-by-j-digital-printed-summer-collection-lawn-2pc/"
+      "code": "BINSAEED-LWN-V1-3P-HM-26",
+      "name": "Bin Saeed Digital Printed Lawn 3PC — 26",
+      "path": "products/binsaeed-lwn-v1-3p-hm-26-bin-saeed-digital-printed-lawn-3pc/"
     },
     {
-      "code": "AFREEN-LALA-HM-PRNT-08",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 8",
-      "path": "products/afreen-lala-hm-prnt-08-afreen-by-lala-airjet-printed-lawn-3pc/"
+      "code": "BINSAEED-LWN-V3-3P-HM-04",
+      "name": "Bin Saeed Digital Printed Lawn 3PC — 4",
+      "path": "products/binsaeed-lwn-v3-3p-hm-04-bin-saeed-digital-printed-lawn-3pc/"
     },
     {
-      "code": "BINSAEED-LWN-V1-3P-HM-24",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 24",
-      "path": "products/binsaeed-lwn-v1-3p-hm-24-bin-saeed-digital-printed-lawn-3pc/"
+      "code": "KHAADI-2PLWN-V1-ABR-06",
+      "name": "Khaadi Digital Printed All Over Two Piece Lawn 2PC — 6",
+      "path": "products/khaadi-2plwn-v1-abr-06-khaadi-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "AFSANAH-SHN-LWN-V214-3P-02",
-      "name": "Afsaanah By Shanaya Digital Printed Lawn 3PC — 2",
-      "path": "products/afsanah-shn-lwn-v214-3p-02-afsaanah-by-shanaya-digital-printed-lawn-3pc/"
+      "code": "AFREEN-LALA-HM-PRNT-04",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 4",
+      "path": "products/afreen-lala-hm-prnt-04-afreen-by-lala-airjet-printed-lawn-3pc/"
     },
     {
-      "code": "SOBIA-LWN-BLCK-3P-HA-338",
-      "name": "Sobia Nazir Embroiderd & Digital Printed Lawn 3PC — 338",
-      "path": "products/sobia-lwn-blck-3p-ha-338-sobia-nazir-embroiderd-and-digital-printed-lawn-3pc/"
+      "code": "AFREEN-LALA-HM-PRNT-06",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 6",
+      "path": "products/afreen-lala-hm-prnt-06-afreen-by-lala-airjet-printed-lawn-3pc/"
     },
     {
-      "code": "BAROQUE-LWN-BLCK-3P-HA-204",
-      "name": "Baroque Embroiderd & Digital Printed Lawn 3PC — 204",
-      "path": "products/baroque-lwn-blck-3p-ha-204-baroque-embroiderd-and-digital-printed-lawn-3pc/"
+      "code": "AFREEN-3PLWN-V2-HM-LS-0724",
+      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0724",
+      "path": "products/afreen-3plwn-v2-hm-ls-0724-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
     },
     {
-      "code": "BINSAEED-LWN-V3-3P-HM-07",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 7",
-      "path": "products/binsaeed-lwn-v3-3p-hm-07-bin-saeed-digital-printed-lawn-3pc/"
+      "code": "NAINA-SHN-LWN-V212-3P-02",
+      "name": "Naina By Shanaya Digital Printed Lawn 3PC — 2",
+      "path": "products/naina-shn-lwn-v212-3p-02-naina-by-shanaya-digital-printed-lawn-3pc/"
     },
     {
-      "code": "BINSAEED-LWN-V2-3P-HM-08",
+      "code": "FARASHA-LWN-NBLOM-SQB-02",
+      "name": "Farasha Digital Printed Lawn 3PC — 2",
+      "path": "products/farasha-lwn-nblom-sqb-02-farasha-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-10",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 10",
+      "path": "products/mahira-lklwn-v1-3p-far-10-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+    },
+    {
+      "code": "MAHIRA-LKLWN-V5-3P-FAR-26528",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 26528",
+      "path": "products/mahira-lklwn-v5-3p-far-26528-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+    },
+    {
+      "code": "ALKARAM-3PLWN-V631-AHMD-17",
+      "name": "Alkaram Classic Digital Printed Lawn 3PC — 17",
+      "path": "products/alkaram-3plwn-v631-ahmd-17-alkaram-classic-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "ALKARAM-3PLWN-V10-MGREEN-AHMD-6",
+      "name": "Alkaram Classic Digital Printed Lawn 3PC — 6",
+      "path": "products/alkaram-3plwn-v10-mgreen-ahmd-6-alkaram-classic-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "FLOWS-ALMRH-LWN-CT-3P-20",
+      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 20",
+      "path": "products/flows-almrh-lwn-ct-3p-20-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
+    },
+    {
+      "code": "BAROQUE-LWN-V3-3P-AHMD-D7930",
+      "name": "Baroque Digital Printed Lawn 3PC — D7930",
+      "path": "products/baroque-lwn-v3-3p-ahmd-d7930-baroque-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "KAYSERIA-3PLWN-V13-LALA-X7119",
+      "name": "Kayseria Digital Printed Lawn 3PC — X7119",
+      "path": "products/kayseria-3plwn-v13-lala-x7119-kayseria-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "AFREEN-LALA-HM-PRNT-07",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 7",
+      "path": "products/afreen-lala-hm-prnt-07-afreen-by-lala-airjet-printed-lawn-3pc/"
+    },
+    {
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-09",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 9",
+      "path": "products/mahira-lklwn-v1-3p-far-09-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+    },
+    {
+      "code": "BAREEZE-3PLWN-V4-AHMD-6431",
+      "name": "Bareeze Digital Classic Printed Lawn 3PC — 6431",
+      "path": "products/bareeze-3plwn-v4-ahmd-6431-bareeze-digital-classic-printed-lawn-3pc/"
+    },
+    {
+      "code": "MHNUR-SHN-AIRJET-LWN-06",
+      "name": "Mahnur By Shanaya Airjet Printed Lawn 3PC — 6",
+      "path": "products/mhnur-shn-airjet-lwn-06-mahnur-by-shanaya-airjet-printed-lawn-3pc/"
+    },
+    {
+      "code": "ABRISH-2PLWN-V1-ABR-58",
+      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 58",
+      "path": "products/abrish-2plwn-v1-abr-58-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "ALKARAM-3PLWN-V7-AHMD-06",
+      "name": "Alkaram Studio Digital Printed Lawn 3PC — 6",
+      "path": "products/alkaram-3plwn-v7-ahmd-06-alkaram-studio-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "BAREEZE-3PLWN-V4-AHMD-6430",
+      "name": "Bareeze Digital Classic Printed Lawn 3PC — 6430",
+      "path": "products/bareeze-3plwn-v4-ahmd-6430-bareeze-digital-classic-printed-lawn-3pc/"
+    },
+    {
+      "code": "BAROQUE-LWN-V2-3P-AHMD-D7297",
+      "name": "Baroque Digital Printed Lawn 3PC — D7297",
+      "path": "products/baroque-lwn-v2-3p-ahmd-d7297-baroque-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "BINSAEED-LWN-V3-3P-HM-08",
       "name": "Bin Saeed Digital Printed Lawn 3PC — 8",
-      "path": "products/binsaeed-lwn-v2-3p-hm-08-bin-saeed-digital-printed-lawn-3pc/"
+      "path": "products/binsaeed-lwn-v3-3p-hm-08-bin-saeed-digital-printed-lawn-3pc/"
     },
     {
-      "code": "KAYSERIA-LWN-V3-3P-AHMD-E6952",
-      "name": "Kayseria Digital Printed Lawn 3PC — E6952",
-      "path": "products/kayseria-lwn-v3-3p-ahmd-e6952-kayseria-digital-printed-lawn-3pc/"
+      "code": "EDEN-3PLWN-V2-AHMD-35102",
+      "name": "Edenrobe Digital Printed Lawn 3PC — 35102",
+      "path": "products/eden-3plwn-v2-ahmd-35102-edenrobe-digital-printed-lawn-3pc/"
     },
     {
-      "code": "AFREEN-LALA-HM-PRNT-02",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 2",
-      "path": "products/afreen-lala-hm-prnt-02-afreen-by-lala-airjet-printed-lawn-3pc/"
+      "code": "ELAN-2PLWN-V1-ABR-11",
+      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 11",
+      "path": "products/elan-2plwn-v1-abr-11-elan-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "AFREEN-LALA-HM-PRNT-05",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 5",
-      "path": "products/afreen-lala-hm-prnt-05-afreen-by-lala-airjet-printed-lawn-3pc/"
+      "code": "BAHAREH-2PLWN-LALA-10",
+      "name": "Bahareh By J. Digital Printed Summer Collection Lawn 2PC — 10",
+      "path": "products/bahareh-2plwn-lala-10-bahareh-by-j-digital-printed-summer-collection-lawn-2pc/"
     },
     {
-      "code": "REGALIA-3PLWN-V4-HM-03",
-      "name": "Regalia Digital Printed Lawn 3PC — 3",
-      "path": "products/regalia-3plwn-v4-hm-03-regalia-digital-printed-lawn-3pc/"
+      "code": "BAHAREH-2PLWN-LALA-06",
+      "name": "Bahareh By J. Digital Printed Summer Collection Lawn 2PC — 6",
+      "path": "products/bahareh-2plwn-lala-06-bahareh-by-j-digital-printed-summer-collection-lawn-2pc/"
     },
     {
-      "code": "ALKARAM-3PLWN-V8-AHMD-05",
-      "name": "Alkaram Studio Digital Printed Lawn 3PC — 5",
-      "path": "products/alkaram-3plwn-v8-ahmd-05-alkaram-studio-digital-printed-lawn-3pc/"
+      "code": "KAYSERIA-3PLWN-V13-LALA-X7103",
+      "name": "Kayseria Digital Printed Lawn 3PC — X7103",
+      "path": "products/kayseria-3plwn-v13-lala-x7103-kayseria-digital-printed-lawn-3pc/"
     },
     {
-      "code": "RP-LWN-V7-3P-RAYS6626-36R",
-      "name": "Rang Preet Digital Printed Lawn 3PC — RAYS6626-36R",
-      "path": "products/rp-lwn-v7-3p-rays6626-36r-rang-preet-digital-printed-lawn-3pc/"
+      "code": "MADHAM-3PLWN-V12-HM-LS-0778",
+      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0778",
+      "path": "products/madham-3plwn-v12-hm-ls-0778-madham-by-lala-digital-printed-airjet-lawn-3pc/"
     },
     {
-      "code": "ABRISH-2PLWN-V1-ABR-04",
-      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 4",
-      "path": "products/abrish-2plwn-v1-abr-04-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "LIMELIGHT-2PLWN-V1-ABR-05",
+      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 5",
+      "path": "products/limelight-2plwn-v1-abr-05-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "EDEN-3PLWN-V2-AHMD-35085",
-      "name": "Edenrobe Digital Printed Lawn 3PC — 35085",
-      "path": "products/eden-3plwn-v2-ahmd-35085-edenrobe-digital-printed-lawn-3pc/"
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-15",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 15",
+      "path": "products/mahira-lklwn-v1-3p-far-15-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
     },
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-2A",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-2A",
-      "path": "products/elaf-3plwn-v2-uk-epv-2a-elaf-premium-digital-printed-lawn-3pc/"
+      "code": "SAFINA-LWN-V3-3P-LDS-01",
+      "name": "Safina Digital Printed Lawn 3PC — 1",
+      "path": "products/safina-lwn-v3-3p-lds-01-safina-digital-printed-lawn-3pc/"
     },
     {
-      "code": "BAHAREH-2PLWN-LALA-09",
-      "name": "Bahareh By J. Digital Printed Summer Collection Lawn 2PC — 9",
-      "path": "products/bahareh-2plwn-lala-09-bahareh-by-j-digital-printed-summer-collection-lawn-2pc/"
+      "code": "SUKOON-LWN-3P-LALA-8",
+      "name": "Sukoon By Sapphire Digital Printed Lawn 3PC — 8",
+      "path": "products/sukoon-lwn-3p-lala-8-sukoon-by-sapphire-digital-printed-lawn-3pc/"
     },
     {
-      "code": "URBANE-LWN-V3-3P-LDS-305",
-      "name": "Jade By Firdous Digital Classic Printed Lawn 3PC — 305",
-      "path": "products/urbane-lwn-v3-3p-lds-305-jade-by-firdous-digital-classic-printed-lawn-3pc/"
+      "code": "NAINA-SHN-LWN-V212-2P-02",
+      "name": "Naina By Shanaya Digital Printed Two Piece Lawn 2PC — 2",
+      "path": "products/naina-shn-lwn-v212-2p-02-naina-by-shanaya-digital-printed-two-piece-lawn-2pc/"
     },
     {
-      "code": "SUKOON-LWN-3P-LALA-168",
-      "name": "Sukoon By Sapphire Digital Printed Lawn 3PC — 168",
-      "path": "products/sukoon-lwn-3p-lala-168-sukoon-by-sapphire-digital-printed-lawn-3pc/"
+      "code": "ZARA-2PLWN-V1-ABR-11",
+      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 11",
+      "path": "products/zara-2plwn-v1-abr-11-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "SAYA-LWN-V632-3P-AHMD-25624",
-      "name": "Saya Digital Printed Lawn 3PC — 25624",
-      "path": "products/saya-lwn-v632-3p-ahmd-25624-saya-digital-printed-lawn-3pc/"
+      "code": "LIMELIGHT-3PLWN-V606-AHMD-7652",
+      "name": "Limelight Digital Printed Lawn 3PC — 7652",
+      "path": "products/limelight-3plwn-v606-ahmd-7652-limelight-digital-printed-lawn-3pc/"
     },
     {
-      "code": "NAINA-SHN-LWN-V212-3P-06",
-      "name": "Naina By Shanaya Digital Printed Lawn 3PC — 6",
-      "path": "products/naina-shn-lwn-v212-3p-06-naina-by-shanaya-digital-printed-lawn-3pc/"
+      "code": "KAYSERIA-LWN-V3-3P-AHMD-E6958",
+      "name": "Kayseria Digital Printed Lawn 3PC — E6958",
+      "path": "products/kayseria-lwn-v3-3p-ahmd-e6958-kayseria-digital-printed-lawn-3pc/"
     },
     {
-      "code": "BAROQUE-LAWN-3P-01",
-      "name": "Baroque Embroiderd & Digital Printed Lawn 3PC — 1",
-      "path": "products/baroque-lawn-3p-01-baroque-embroiderd-and-digital-printed-lawn-3pc/"
+      "code": "KHAADI-3PLWN-V12-AHMD-SS2183A",
+      "name": "Khaadi Digital Printed Lawn 3PC — SS2183A",
+      "path": "products/khaadi-3plwn-v12-ahmd-ss2183a-khaadi-digital-printed-lawn-3pc/"
     },
     {
-      "code": "KHAADI-LWN-V10-3P-LALA-SS1110A",
-      "name": "Khaadi Digital Printed Lawn 3PC — SS1110A",
-      "path": "products/khaadi-lwn-v10-3p-lala-ss1110a-khaadi-digital-printed-lawn-3pc/"
+      "code": "ALKARAM-3PLWN-V8-AHMD-08",
+      "name": "Alkaram Studio Digital Printed Lawn 3PC — 8",
+      "path": "products/alkaram-3plwn-v8-ahmd-08-alkaram-studio-digital-printed-lawn-3pc/"
     },
     {
-      "code": "KHAADI-3PLWN-V12-AHMD-SS716A",
-      "name": "Khaadi Digital Printed Lawn 3PC — SS716A",
-      "path": "products/khaadi-3plwn-v12-ahmd-ss716a-khaadi-digital-printed-lawn-3pc/"
+      "code": "ANAYA-LWN-2P-DLWR-10",
+      "name": "Anaya Noor Digital Printed Lawn 2PC — 10",
+      "path": "products/anaya-lwn-2p-dlwr-10-anaya-noor-digital-printed-lawn-2pc/"
     },
     {
-      "code": "SAYA-LWN-V632-3P-AHMD-10276",
-      "name": "Saya Digital Printed Lawn 3PC — 10276",
-      "path": "products/saya-lwn-v632-3p-ahmd-10276-saya-digital-printed-lawn-3pc/"
+      "code": "BAREEZA-3PLWN-V2522-AHMD-2058",
+      "name": "Bareeza Summer Digital Printed Lawn 3PC — 2058",
+      "path": "products/bareeza-3plwn-v2522-ahmd-2058-bareeza-summer-digital-printed-lawn-3pc/"
     },
     {
-      "code": "NAINA-SHN-LWN-V212-2P-07",
-      "name": "Naina By Shanaya Digital Printed Two Piece Lawn 2PC — 7",
-      "path": "products/naina-shn-lwn-v212-2p-07-naina-by-shanaya-digital-printed-two-piece-lawn-2pc/"
+      "code": "BAREEZA-3PLWN-V2522-AHMD-2059",
+      "name": "Bareeza Summer Digital Printed Lawn 3PC — 2059",
+      "path": "products/bareeza-3plwn-v2522-ahmd-2059-bareeza-summer-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "JAFFRANI-LKLWN-3P-AIFA-27",
+      "name": "Jaffrani Premium Printed & Emb Laserkari Lawn 3PC — 27",
+      "path": "products/jaffrani-lklwn-3p-aifa-27-jaffrani-premium-printed-and-emb-laserkari-lawn-3pc/"
+    },
+    {
+      "code": "SAFINA-LWN-V3-3P-LDS-08",
+      "name": "Safina Digital Printed Lawn 3PC — 8",
+      "path": "products/safina-lwn-v3-3p-lds-08-safina-digital-printed-lawn-3pc/"
     }
   ]
 }
