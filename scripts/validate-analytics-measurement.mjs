@@ -64,12 +64,25 @@ assert(/debug:\s*false/.test(analyticsConfig), 'Production analytics debug mode 
 assert(!/test_event_code\s*:\s*['"][^'"]+['"]/.test(analyticsConfig), 'Production analytics config must not hard-code a Meta test event code');
 
 assert(analytics.includes("consentCommand('default',consent || {analytics:false,marketing:false})"), 'Optional analytics and advertising storage must default to denied');
-assert(analytics.includes('if(consent.analytics && valid.gtm(config.gtmId))'), 'GTM loading must remain gated by analytics consent');
-assert(analytics.includes('else if(consent.analytics && valid.ga4(config.ga4MeasurementId))'), 'Direct GA4 must remain a fallback when GTM is not configured');
-assert(analytics.includes('if(consent.marketing && valid.meta(config.metaPixelId))'), 'Meta Pixel loading must remain gated by marketing consent');
+assert(analytics.includes("const PRODUCTION_HOSTS = new Set(['alhumacollection.com','www.alhumacollection.com']);"), 'External measurement must be restricted to the approved production hosts');
+assert(analytics.includes("const TEST_CONTEXT_KEY = 'alhuma-measurement-test-context';"), 'Measurement QA/test context must persist for the current browser session');
+assert(analytics.includes("const TEST_REFERRER_HOSTS = new Set(['tagassistant.google.com','eventsmanager.facebook.com']);"), 'Known Tag Assistant and Events Manager QA referrals must be classified as test contexts');
+assert(analytics.includes('const detected=Boolean(metaTestEventCode()) || TEST_REFERRER_HOSTS.has(referrerHost);'), 'Existing test_event_code and known QA referrals must suppress external measurement');
+assert(analytics.includes("if(detected) sessionStorage.setItem(TEST_CONTEXT_KEY,'1');"), 'Detected measurement test context must persist across same-session navigation');
+assert(analytics.includes('return PRODUCTION_HOSTS.has(location.hostname.toLowerCase()) && !measurementTestContext();'), 'External measurement must require an approved production hostname and a non-test context');
+assert(analytics.includes('if(!externalMeasurementAllowed() || !valid.endpoint(config.metaCapiEndpoint))return;'), 'Browser CAPI delivery must be blocked outside approved production measurement contexts');
+assert(analytics.includes('if(!consent?.marketing || !eventName || !externalMeasurementAllowed())return;'), 'Meta browser/server delivery must be blocked outside approved production measurement contexts');
+assert(analytics.includes('if (consent?.analytics || consent?.marketing) dataLayer.push(payload);'), 'Local dataLayer measurement payloads must remain available for functional QA');
+assert(analytics.includes('if (consent?.analytics && externalMeasurementAllowed() && !valid.gtm(config.gtmId) && valid.ga4(config.ga4MeasurementId) && window.gtag)'), 'Direct GA4 fallback delivery must be blocked outside approved production measurement contexts');
+assert(analytics.includes('const allowExternal=externalMeasurementAllowed();'), 'Integration loading must evaluate the external-measurement isolation guard');
+assert(analytics.includes('if(allowExternal && consent.analytics && valid.gtm(config.gtmId))'), 'GTM loading must require analytics consent and an approved production measurement context');
+assert(analytics.includes('else if(allowExternal && consent.analytics && valid.ga4(config.ga4MeasurementId))'), 'Direct GA4 fallback loading must require analytics consent and an approved production measurement context');
+assert(analytics.includes('if(allowExternal && consent.marketing && valid.meta(config.metaPixelId))'), 'Meta Pixel loading must require marketing consent and an approved production measurement context');
 assert(analytics.includes('// Page-level analytics events are independent of advertising consent.'), 'Configured page events must document independent analytics-consent handling');
-assert(analytics.includes('if(consent.analytics || consent.marketing) trackConfiguredPageEvent();'), 'Configured page events must run for analytics consent even when advertising consent is absent');
+assert(analytics.includes('if(consent.analytics || consent.marketing) trackConfiguredPageEvent();'), 'Configured page events must remain locally trackable for analytics consent even when external delivery is suppressed');
 assert((analytics.match(/sendMetaEvent\('PageView'/g) || []).length === 1, 'Meta PageView must have one source path to avoid client duplication');
+notes.push('External GA4/GTM/Meta/CAPI delivery is limited to alhumacollection.com / www.alhumacollection.com and suppressed for persisted test_event_code, Tag Assistant and Events Manager QA contexts.');
+notes.push('Local dataLayer/custom-event behavior remains available in suppressed contexts so functional QA can inspect measurement without polluting external production analytics.');
 
 assert(catalogueRuntime.includes("track('view_item'"), 'Dynamic catalogue must emit view_item');
 assert(/track\(isSearch\s*&&\s*control\.value\.trim\(\)\s*\?\s*['"]search['"]\s*:\s*['"]filter_catalogue['"]/.test(catalogueRuntime), 'Dynamic catalogue must emit search for non-empty search input');
@@ -166,7 +179,13 @@ const report = {
     currency: 'PKR',
     addPaymentInfo: 'not_applicable_cod',
     purchaseAuthority: 'server-side only after backend order-status policy permits it',
-    configuredPageEventIndependentOfAdvertisingConsent: true
+    configuredPageEventIndependentOfAdvertisingConsent: true,
+    externalMeasurementIsolation: {
+      productionHosts: ['alhumacollection.com', 'www.alhumacollection.com'],
+      nonProductionHostsBlocked: true,
+      qaTestContextsBlocked: ['test_event_code', 'tagassistant.google.com', 'eventsmanager.facebook.com'],
+      localDataLayerPreserved: true
+    }
   },
   notes,
   errors

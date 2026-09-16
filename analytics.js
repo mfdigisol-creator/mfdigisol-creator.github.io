@@ -2,6 +2,9 @@
   'use strict';
   const config = Object.assign({ gtmId:'', ga4MeasurementId:'', metaPixelId:'', metaCapiEndpoint:'', consentVersion:1, currency:'PKR', debug:false }, window.AL_HUMA_ANALYTICS_CONFIG || {});
   const CONSENT_KEY = `alhuma-consent-v${config.consentVersion}`;
+  const PRODUCTION_HOSTS = new Set(['alhumacollection.com','www.alhumacollection.com']);
+  const TEST_CONTEXT_KEY = 'alhuma-measurement-test-context';
+  const TEST_REFERRER_HOSTS = new Set(['tagassistant.google.com','eventsmanager.facebook.com']);
   const valid = { gtm:v => /^GTM-[A-Z0-9]+$/i.test(v || ''), ga4:v => /^G-[A-Z0-9]+$/i.test(v || ''), meta:v => /^\d{5,20}$/.test(v || ''), endpoint:v => { try { const url=new URL(v); return url.protocol==='https:' && url.pathname.endsWith('/events'); } catch { return false; } } };
   const dataLayer = window.dataLayer = window.dataLayer || [];
   let consent = readConsent(), integrationsLoaded = false, pageEventTracked = false;
@@ -17,6 +20,20 @@
     } catch {
       return param || '';
     }
+  }
+  function measurementTestContext(){
+    let referrerHost='';
+    try { referrerHost=new URL(document.referrer).hostname.toLowerCase(); } catch { /* Empty or invalid referrer. */ }
+    const detected=Boolean(metaTestEventCode()) || TEST_REFERRER_HOSTS.has(referrerHost);
+    try {
+      if(detected) sessionStorage.setItem(TEST_CONTEXT_KEY,'1');
+      return detected || sessionStorage.getItem(TEST_CONTEXT_KEY)==='1';
+    } catch {
+      return detected;
+    }
+  }
+  function externalMeasurementAllowed(){
+    return PRODUCTION_HOSTS.has(location.hostname.toLowerCase()) && !measurementTestContext();
   }
   function cleanItem(item={}){ const price=Number(item.price); return { item_id:String(item.item_id || item.code || ''), item_name:String(item.item_name || item.name || ''), item_brand:String(item.item_brand || item.brand || ''), item_category:String(item.item_category || item.category || ''), price:Number.isFinite(price) ? price : undefined, quantity:Math.max(1, Number(item.quantity || item.qty || 1)) }; }
   function cookie(name){ return document.cookie.split(';').map(value=>value.trim()).find(value=>value.startsWith(`${name}=`))?.slice(name.length+1) || ''; }
@@ -34,7 +51,7 @@
     };
   }
   function sendServerEvent(eventName,id,params={}){
-    if(!valid.endpoint(config.metaCapiEndpoint))return;
+    if(!externalMeasurementAllowed() || !valid.endpoint(config.metaCapiEndpoint))return;
     const fbclid=new URLSearchParams(location.search).get('fbclid');
     const payload={
       event_name:eventName,
@@ -55,7 +72,7 @@
       .catch(error=>{ if(config.debug) console.warn('[Al Huma CAPI]',error); });
   }
   function sendMetaEvent(eventName,id,params={}){
-    if(!consent?.marketing || !eventName)return;
+    if(!consent?.marketing || !eventName || !externalMeasurementAllowed())return;
     if(valid.meta(config.metaPixelId) && window.fbq) window.fbq('track',eventName,metaCustomData(params),{eventID:id});
     sendServerEvent(eventName,id,params);
   }
@@ -64,7 +81,7 @@
     const id=params.event_id || eventId(event), payload={ event, event_id:id, ...params };
     if (Array.isArray(params.items)) { payload.ecommerce={ currency:params.currency || config.currency, value:params.value, items:params.items.map(cleanItem) }; delete payload.items; delete payload.currency; delete payload.value; }
     if (consent?.analytics || consent?.marketing) dataLayer.push(payload);
-    if (consent?.analytics && !valid.gtm(config.gtmId) && valid.ga4(config.ga4MeasurementId) && window.gtag) window.gtag('event',event,payload.ecommerce ? {...params,...payload.ecommerce} : params);
+    if (consent?.analytics && externalMeasurementAllowed() && !valid.gtm(config.gtmId) && valid.ga4(config.ga4MeasurementId) && window.gtag) window.gtag('event',event,payload.ecommerce ? {...params,...payload.ecommerce} : params);
     if (params.meta_event) sendMetaEvent(params.meta_event,id,params);
     window.dispatchEvent(new CustomEvent('alhuma:measurement',{detail:payload}));
     if (config.debug) console.info('[Al Huma analytics]',payload);
@@ -81,9 +98,10 @@
   }
   function loadIntegrations(){
     if(!consent || integrationsLoaded)return; integrationsLoaded=true;
-    if(consent.analytics && valid.gtm(config.gtmId)){ dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'}); loadScript(`https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(config.gtmId)}`,'alhuma-gtm'); }
-    else if(consent.analytics && valid.ga4(config.ga4MeasurementId)){ loadScript(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(config.ga4MeasurementId)}`,'alhuma-ga4'); window.gtag=window.gtag || function(){dataLayer.push(arguments)}; window.gtag('js',new Date()); window.gtag('config',config.ga4MeasurementId,{send_page_view:true}); }
-    if(consent.marketing && valid.meta(config.metaPixelId)){
+    const allowExternal=externalMeasurementAllowed();
+    if(allowExternal && consent.analytics && valid.gtm(config.gtmId)){ dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'}); loadScript(`https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(config.gtmId)}`,'alhuma-gtm'); }
+    else if(allowExternal && consent.analytics && valid.ga4(config.ga4MeasurementId)){ loadScript(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(config.ga4MeasurementId)}`,'alhuma-ga4'); window.gtag=window.gtag || function(){dataLayer.push(arguments)}; window.gtag('js',new Date()); window.gtag('config',config.ga4MeasurementId,{send_page_view:true}); }
+    if(allowExternal && consent.marketing && valid.meta(config.metaPixelId)){
       window.fbq=window.fbq || function(){ if(window.fbq.callMethod) window.fbq.callMethod.apply(window.fbq,arguments); else window.fbq.queue.push(arguments); };
       window.fbq.queue=window.fbq.queue || []; window.fbq.loaded=true; window.fbq.version='2.0';
       loadScript('https://connect.facebook.net/en_US/fbevents.js','alhuma-meta-pixel');
