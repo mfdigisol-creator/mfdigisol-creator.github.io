@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T10:25:12.034Z",
+  "generatedAt": "2026-09-16T12:19:52.693Z",
   "summary": {
     "products": 358,
-    "removedProducts": 1731,
+    "removedProducts": 1732,
     "brands": 47,
     "collectionPages": 49,
     "sitemapUrls": 410,
     "metaFeedRows": 347,
     "metadataPages": 358,
-    "internalHtmlFiles": 2194,
+    "internalHtmlFiles": 2195,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "59 products currently lack retained supplier description text."
+    "60 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -52,8 +52,10 @@
       "ABRISH-2PLWN-V2-ABR-04",
       "ABRISH-2PLWN-V2-ABR-05",
       "ABRISH-2PLWN-V2-ABR-07",
+      "ALKARAM-3PLWN-V10-MGREEN-AHMD-6",
       "FLEUR-ALMRH-LWN-CT-3P-09",
       "FLOWS-ALMRH-LWN-CT-3P-15",
+      "FLOWS-ALMRH-LWN-CT-3P-20",
       "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
       "BONANZA-2PLWN-V1-ABR-03",
@@ -70,9 +72,7 @@
       "AIRA-ORG-PURP-1547",
       "AIRA-ORG-SKY-1547",
       "DASTAK-DL-LWN-3P-FB-322",
-      "DASTAK-DL-LWN-3P-FB-323",
-      "DASTAK-DL-LWN-3P-FB-324",
-      "DASTAK-DL-LWN-3P-FB-325"
+      "DASTAK-DL-LWN-3P-FB-323"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

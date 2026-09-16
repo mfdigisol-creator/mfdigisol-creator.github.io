@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-16T10:25:07.301Z",
+  "generatedAt": "2026-09-16T12:19:48.724Z",
   "summary": {
     "products": 358,
-    "available": 344,
+    "available": 346,
     "formal": 86,
     "luxury": 272,
     "priceOnEnquiry": 11,
     "metaFeedProducts": 347,
     "canonicalBrands": 47,
-    "aliasCorrections": 22,
+    "aliasCorrections": 21,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 11,
     "classificationConflicts": 5,
     "unspecifiedPieces": 17,
-    "removedProducts": 1731,
-    "newlyRemovedProducts": 0,
+    "removedProducts": 1732,
+    "newlyRemovedProducts": 6,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -92,11 +92,6 @@
     },
     {
       "code": "IMP-EMBCK-LPISTA-2P-ABR-30",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-SGRN-2P-ABR-31",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -206,5 +201,36 @@
       "category": "Formal"
     }
   ],
-  "newlyRemovedProducts": []
+  "newlyRemovedProducts": [
+    {
+      "code": "MAHRU-ANAYANOOR-S26-AN-11",
+      "name": "Maahru By Anaya Noor Digital Printed Lawn With Patches 3PC — 11",
+      "path": "products/mahru-anayanoor-s26-an-11-maahru-by-anaya-noor-digital-printed-lawn-with-patches-3pc/"
+    },
+    {
+      "code": "P&P-ALMRH-LWN-CT-3P-11",
+      "name": "Petals & Paisley By Almeerah Premium Printed Stripe Lawn 3PC — 11",
+      "path": "products/p-and-p-almrh-lwn-ct-3p-11-petals-and-paisley-by-almeerah-premium-printed-stripe-lawn-3pc/"
+    },
+    {
+      "code": "AFREEN-LALA-HM-PRNT-09",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 9",
+      "path": "products/afreen-lala-hm-prnt-09-afreen-by-lala-airjet-printed-lawn-3pc/"
+    },
+    {
+      "code": "GUFTGU-3PLWN-AHMD-OTL-24-141",
+      "name": "Guftagu By Orient Summer Digital Printed Lawn 3PC — OTL-24-141",
+      "path": "products/guftgu-3plwn-ahmd-otl-24-141-guftagu-by-orient-summer-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "IMP-EMBCK-SGRN-2P-ABR-31",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 31",
+      "path": "products/imp-embck-sgrn-2p-abr-31-imported-emb-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "AFREEN-3PLWN-V2-HM-LS-0721",
+      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0721",
+      "path": "products/afreen-3plwn-v2-hm-ls-0721-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
+    }
+  ]
 }
