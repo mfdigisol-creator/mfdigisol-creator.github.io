@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T04:56:31.957Z",
+  "generatedAt": "2026-09-17T17:02:43.176Z",
   "brands": {
     "Abrish": "abrish",
     "Aifa": "aifa",
     "Alkaram": "alkaram",
     "Almeerah": "almeerah",
     "Anaya Noor": "anaya-noor",
-    "Aneelas": "aneelas",
     "Bareeze": "bareeze",
     "Baroque": "baroque",
     "Beechtree": "beechtree",
@@ -16,7 +15,6 @@
     "Bonanza Satrangi": "bonanza-satrangi",
     "Chinyere": "chinyere",
     "Crimson": "crimson",
-    "Cross stitch": "cross-stitch",
     "Cross Stitch": "cross-stitch-2",
     "Dr.Haris": "dr-haris",
     "Dressline": "dressline",
@@ -33,7 +31,6 @@
     "Jazmin": "jazmin",
     "Kayseria": "kayseria",
     "Khaadi": "khaadi",
-    "Lala": "lala",
     "Limelight": "limelight",
     "Mahira": "mahira",
     "Mahnur": "mahnur",
@@ -56,6 +53,7 @@
   },
   "redirects": {
     "anaya-noor-2": "anaya-noor",
+    "cross-stitch": "cross-stitch-2",
     "lmported": "imported",
     "silknstories": "crimson"
   }
