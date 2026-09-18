@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-17T17:02:49.658Z",
+  "generatedAt": "2026-09-18T04:48:07.087Z",
   "summary": {
-    "products": 381,
-    "removedProducts": 1799,
-    "brands": 48,
-    "collectionPages": 50,
-    "sitemapUrls": 434,
-    "metaFeedRows": 370,
-    "metadataPages": 381,
+    "products": 369,
+    "removedProducts": 1811,
+    "brands": 46,
+    "collectionPages": 48,
+    "sitemapUrls": 420,
+    "metaFeedRows": 358,
+    "metadataPages": 369,
     "internalHtmlFiles": 2287,
     "errors": 0,
     "warnings": 2
@@ -16,7 +16,7 @@
   "errors": [],
   "warnings": [
     "5 products contain “Luxury” but inherit the Formal supplier section.",
-    "66 products currently lack retained supplier description text."
+    "60 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -51,12 +51,7 @@
       "ABRISH-2PLWN-V2-ABR-01",
       "ABRISH-2PLWN-V2-ABR-04",
       "ABRISH-2PLWN-V2-ABR-05",
-      "ABRISH-2PLWN-V1-ABR-58",
-      "ABRISH-2PLWN-V2-ABR-07",
-      "ALKARAM-3PLWN-V10-RED-AHMD-4",
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-09",
-      "P&P-ALMRH-LWN-CT-3P-11",
       "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
       "CHINYERE-2PLWN-V2-ABR-03",
@@ -66,13 +61,18 @@
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
-      "CROSS-2PLWN-V2-ABR-14",
       "CS-EMB-LWN-3P-1856",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
       "AIRA-ORG-PURP-1547",
       "AIRA-ORG-SKY-1547",
-      "DASTAK-DL-LWN-3P-FB-322"
+      "DASTAK-DL-LWN-3P-FB-322",
+      "DASTAK-DL-LWN-3P-FB-323",
+      "DASTAK-DL-LWN-3P-FB-324",
+      "DASTAK-DL-LWN-3P-FB-325",
+      "JAVERIA-ORG-OFWHT-3P-04",
+      "MUSE-SILK-3P-14371-A",
+      "MUSE-SILK-3P-14371-B"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -166,9 +166,19 @@
         "path": "products/abrish-2plwn-v1-abr-55-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
+        "code": "ABRISH-2PLWN-V1-ABR-58",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 58",
+        "path": "products/abrish-2plwn-v1-abr-58-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
         "code": "ABRISH-2PLWN-V2-ABR-06",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 6",
         "path": "products/abrish-2plwn-v2-abr-06-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
+        "code": "ABRISH-2PLWN-V2-ABR-07",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 7",
+        "path": "products/abrish-2plwn-v2-abr-07-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
         "code": "ABRISH-2PLWN-V2-ABR-08",
@@ -194,16 +204,6 @@
         "code": "EID-AIFA-LKLWN-3P-AE-1101",
         "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1101",
         "path": "products/eid-aifa-lklwn-3p-ae-1101-aifa-luxury-emb-laserkari-dyed-lawn-3pc/"
-      },
-      {
-        "code": "EID-AIFA-LKLWN-3P-AE-1103",
-        "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1103",
-        "path": "products/eid-aifa-lklwn-3p-ae-1103-aifa-luxury-emb-laserkari-dyed-lawn-3pc/"
-      },
-      {
-        "code": "AIFA-PARROT-LWNEMB-902",
-        "name": "Aifa Printed & Embroidered Lawn 3PC — 902",
-        "path": "products/aifa-parrot-lwnemb-902-aifa-printed-and-embroidered-lawn-3pc/"
       }
     ]
   },
