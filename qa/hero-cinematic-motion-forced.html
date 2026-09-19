@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Al Huma Hero Cinematic QA</title>
+<style>
+:root { --ink:#11100e; --ivory:#f3eee4; --gold:#b89453; --gold-light:#d8bd86; --sans:Arial,sans-serif; --serif:Georgia,serif; }
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;background:var(--ink);color:var(--ivory);font-family:var(--sans)}
+.qa-header{position:fixed;inset:0 0 auto;height:82px;z-index:20;display:flex;align-items:center;padding:0 5vw;background:rgba(16,15,13,.36);border-bottom:1px solid rgba(216,189,134,.2);backdrop-filter:blur(8px)}
+.qa-header b{font-family:var(--serif);font-size:1.1rem;font-weight:400;letter-spacing:.08em}
+.hero{min-height:100svh;position:relative;display:grid;align-items:center;isolation:isolate;overflow:hidden}
+.hero-image{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;object-position:center;z-index:-4;animation:hero-in 1.8s cubic-bezier(.2,.7,.2,1) both}
+.hero::before{content:none}
+.hero-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(12,11,10,.94) 0%,rgba(12,11,10,.72) 31%,rgba(12,11,10,.08) 69%,rgba(12,11,10,.25) 100%),linear-gradient(0deg,rgba(8,7,6,.45),transparent 45%)}
+.hero-content{width:min(680px,72vw);padding:8.5rem 0 5rem clamp(1.5rem,8.5vw,10rem)}
+.eyebrow{display:flex;align-items:center;gap:.8rem;margin:0 0 1.6rem;color:var(--gold-light);font-size:.66rem;letter-spacing:.28em;text-transform:uppercase}.eyebrow span{width:34px;height:1px;background:currentColor}
+h1{margin:0;font-family:var(--serif);font-weight:400;letter-spacing:-.035em;line-height:.84;font-size:clamp(4.4rem,9.5vw,9.2rem)} h1 em{color:var(--gold-light);font-weight:inherit}
+.hero-copy{max-width:485px;margin:2.2rem 0 0;color:rgba(243,238,228,.74);font-size:clamp(.96rem,1.25vw,1.13rem);line-height:1.8}
+.hero-actions{display:flex;gap:.85rem;margin-top:2.2rem}.button{min-height:52px;display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.5rem;border:1px solid transparent;font-size:.68rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase}.button-gold{background:var(--gold);color:var(--ink)}.button-ghost{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.03);color:var(--ivory)}
+@keyframes hero-in{from{transform:scale(1.045);opacity:.5}to{transform:scale(1);opacity:1}}
+@keyframes hero-model-cinematic{
+  0%,100%{opacity:1;transform-origin:80% 52%;translate:0 0;scale:1}
+  55%{opacity:1;translate:4px -3px;scale:1.01}
+  80%{opacity:1;translate:2px -1px;scale:1.004}
+  92%{opacity:1;translate:0 0;scale:1}
+}
+@media (min-width:901px) and (prefers-reduced-motion:no-preference){
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-3;pointer-events:none;opacity:0;
+    background:url("https://alhumacollection.com/assets/alhuma-home-hero-v1.webp") center/cover no-repeat;
+    transform-origin:center;
+    -webkit-mask-image:radial-gradient(ellipse 17% 52% at 80% 52%,#000 0 62%,rgba(0,0,0,.96) 70%,rgba(0,0,0,.55) 84%,transparent 100%);
+    mask-image:radial-gradient(ellipse 17% 52% at 80% 52%,#000 0 62%,rgba(0,0,0,.96) 70%,rgba(0,0,0,.55) 84%,transparent 100%);
+    animation:hero-in 1.8s cubic-bezier(.2,.7,.2,1) 1 both,hero-model-cinematic 4.8s cubic-bezier(.22,.62,.24,1) 1.8s infinite;
+  }
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="qa-header"><b>AL HUMA COLLECTION</b></header>
+<section class="hero" id="top">
+  <img class="hero-image" src="https://alhumacollection.com/assets/alhuma-home-hero-v1.webp" alt="">
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <p class="eyebrow"><span></span>The Signature Edit · 2026</p>
+    <h1>Unstitched suits,<br><em>quietly iconic.</em></h1>
+    <p class="hero-copy">Shop elegant formal, embroidered and luxury lawn suits online—curated for women across Pakistan and delivered with personal confirmation.</p>
+    <div class="hero-actions"><span class="button button-gold">Explore latest designs</span><span class="button button-ghost">Discover our story</span></div>
+  </div>
+</section>
+</body>
+</html>
