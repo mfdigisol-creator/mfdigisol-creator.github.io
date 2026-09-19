@@ -674,3 +674,71 @@ summary:focus-visible {
     background: var(--alhuma-champagne-ivory) !important;
   }
 }
+
+/* Product-card perimeter light: interaction-only, presentation-only enhancement. */
+@property --alhuma-card-sweep-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: -70deg;
+}
+
+.live-product {
+  position: relative;
+}
+
+.live-product::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 2;
+  border: 1px solid transparent;
+  pointer-events: none;
+  opacity: 0;
+  --alhuma-card-sweep-angle: -70deg;
+  border-image: conic-gradient(
+    from var(--alhuma-card-sweep-angle),
+    transparent 0deg,
+    transparent 300deg,
+    rgba(176, 138, 74, .08) 312deg,
+    rgba(215, 194, 154, .72) 330deg,
+    rgba(248, 238, 215, .96) 340deg,
+    rgba(176, 138, 74, .82) 351deg,
+    transparent 360deg
+  ) 1;
+}
+
+@keyframes alhuma-card-border-sweep {
+  0% {
+    --alhuma-card-sweep-angle: -70deg;
+    opacity: 0;
+  }
+  8% {
+    opacity: .82;
+  }
+  88% {
+    opacity: .82;
+  }
+  100% {
+    --alhuma-card-sweep-angle: 290deg;
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .live-product:hover::after {
+    animation: alhuma-card-border-sweep 1.55s cubic-bezier(.22, .7, .24, 1) 1 both;
+  }
+}
+
+.live-product:focus-within::after {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-product::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
+
