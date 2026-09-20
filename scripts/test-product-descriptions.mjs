@@ -3,7 +3,7 @@ import path from 'node:path';
 import { descriptionForProduct, factualProductDescription, sanitizeSupplierDescription } from './product-description.mjs';
 
 const ROOT = process.cwd();
-const DATA_FILE = path.join(ROOT, 'catalogue/dawood-products.json');
+const DATA_FILE = path.join(ROOT, 'catalogue/products.json');
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -52,25 +52,25 @@ async function main() {
   assert(sanitized.includes('Shirt: Embroidered lawn front with embroidered sleeves'), 'Meaningful shirt detail was not retained.');
   assert(sanitized.includes('Trouser: Dyed cotton trouser'), 'Meaningful trouser detail was not retained.');
   assert(sanitized.includes('Dupatta: Chiffon dupatta with embroidered border'), 'Meaningful dupatta detail was not retained.');
-  assert(!unsafePattern.test(sanitized), `Unsafe or commercial supplier text survived sanitization: ${sanitized}`);
-  assert(!promotionalPattern.test(sanitized), `Promotional supplier text survived sanitization: ${sanitized}`);
+  assert(!unsafePattern.test(sanitized), `Unsafe or commercial source text survived sanitization: ${sanitized}`);
+  assert(!promotionalPattern.test(sanitized), `Promotional source text survived sanitization: ${sanitized}`);
 
   const weak = sanitizeSupplierDescription('<p>Sample Embroidered Lawn 3PC</p>', { productTitle:'Sample Embroidered Lawn 3PC' });
-  assert(weak === '', 'Title-only supplier copy must be treated as insufficient.');
+  assert(weak === '', 'Title-only source copy must be treated as insufficient.');
 
   const promotional = sanitizeSupplierDescription('<p>Stunning embroidered lawn shirt perfect for Eid</p><p>Beautiful must-have design for your wardrobe</p>', { productTitle:'Another Design' });
   assert(promotional === '', 'Generic supplier promotional prose must not be retained.');
 
   const malicious = sanitizeSupplierDescription('<p>Premium embroidered lawn shirt</p><img src=x onerror=alert(1)><p>Visit https://example.com</p>', { productTitle:'Another Design' });
-  assert(malicious === '', 'Promotional, HTML or URL-only supplier copy must be rejected.');
+  assert(malicious === '', 'Promotional, HTML or URL-only source copy must be rejected.');
 
-  const supplierProduct = {
+  const retainedProduct = {
     code:'TEST-SUPPLIER-001', name:'Sample Embroidered Lawn 3PC', productName:'Sample Embroidered Lawn 3PC', brand:'Sample Brand',
     category:'Formal', pieceType:'3 Piece', pricingClass:'embroidered', available:true, sourceDescription:sanitized
   };
-  const supplierDescription = descriptionForProduct(supplierProduct);
-  assert(supplierDescription.source === 'retained-detail', 'Meaningful retained catalogue description was not selected.');
-  assert(supplierDescription.heading === 'Product description', 'Supplier description heading is incorrect.');
+  const retainedDescription = descriptionForProduct(retainedProduct);
+  assert(retainedDescription.source === 'retained-detail', 'Meaningful retained catalogue description was not selected.');
+  assert(retainedDescription.heading === 'Product description', 'Retained description heading is incorrect.');
 
   const fallbackProduct = {
     code:'TEST-FALLBACK-001', name:'Printed Lawn 3PC', productName:'Printed Lawn 3PC', brand:'Sample Brand',
@@ -121,7 +121,7 @@ async function main() {
     generated.push({ label:representative.label, ...(await validateGeneratedPage(representative.item)) });
   }
 
-  const catalogueScript = await fs.readFile(path.join(ROOT, 'dawood-catalogue.js'), 'utf8');
+  const catalogueScript = await fs.readFile(path.join(ROOT, 'catalogue.js'), 'utf8');
   assert(catalogueScript.includes('live-dialog-description'), 'Main catalogue dialog is not wired to render product descriptions.');
   assert(catalogueScript.includes('escapeHtml(description.text)'), 'Main catalogue dialog does not HTML-escape description text.');
 
@@ -130,7 +130,7 @@ async function main() {
     catalogueProducts:products.length,
     retainedDescriptions:retainedDescriptions.length,
     fallbackDescriptions:products.length - retainedDescriptions.length,
-    fixtureSupplierDescription:sanitized,
+    fixtureRetainedDescription:sanitized,
     representatives:generated
   };
   console.log(JSON.stringify(summary, null, 2));
