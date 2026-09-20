@@ -171,11 +171,30 @@ async function main() {
     if (!existing || (item.category === 'Luxury' && existing.category !== 'Luxury')) deduplicated.set(item.id, item);
   }
   const previous = await fs.readFile(OUTPUT, 'utf8').then(JSON.parse).catch(() => ({ products: [] }));
-  const previousPrices = new Map((previous.products || []).map(item => [item.code, Number(item.sourcePrice)]));
+  const previousByCode = new Map((previous.products || []).map(item => [item.code, item]));
+  const previousTrustedSourcePrice = item => {
+    if (!item) return null;
+    const retainedSourcePrice = Number(item.sourcePrice);
+    if (Number.isFinite(retainedSourcePrice) && retainedSourcePrice > 0) return retainedSourcePrice;
+    const displayedPrice = Number(item.price);
+    const previousMarkup = item.pricingClass === 'embroidered'
+      ? 2500
+      : item.pricingClass === 'non-embroidered' ? 1000 : null;
+    if (Number.isFinite(displayedPrice) && previousMarkup !== null && displayedPrice > previousMarkup) {
+      return displayedPrice - previousMarkup;
+    }
+    return null;
+  };
   const products = [...deduplicated.values()]
     .filter(item => item.image && item.sourcePrice > 0)
     .map(item => {
-      const oldPrice = previousPrices.get(item.code);
+      const previousItem = previousByCode.get(item.code);
+      const oldPrice = previousTrustedSourcePrice(previousItem);
+      const previousKnownClassHeldForReview = previousItem?.price == null
+        && ['embroidered', 'non-embroidered'].includes(previousItem?.pricingClass);
+      if (previousKnownClassHeldForReview && item.markup !== null) {
+        return { ...item, price: null, markup: null, pricingStatus: 'enquire', pricingReason: 'continued-price-review' };
+      }
       const changedTooFar = oldPrice > 0 && Math.abs(item.sourcePrice - oldPrice) / oldPrice > MAX_SOURCE_PRICE_CHANGE;
       if (!changedTooFar) return item;
       return { ...item, price: null, markup: null, pricingStatus: 'enquire', pricingReason: 'source-price-change-review' };
