@@ -256,8 +256,8 @@ async function auditHomepage() {
 }
 
 async function auditDynamicCatalogueRuntime() {
-  const runtime = await fs.readFile(path.join(ROOT, 'dawood-catalogue.js'), 'utf8');
-  const css = await fs.readFile(path.join(ROOT, 'dawood-catalogue.css'), 'utf8');
+  const runtime = await fs.readFile(path.join(ROOT, 'catalogue.js'), 'utf8');
+  const css = await fs.readFile(path.join(ROOT, 'catalogue.css'), 'utf8');
   for (const required of ['srcset=', 'sizes=', 'alt=', 'loading=', 'fetchpriority="high"']) {
     if (!runtime.includes(required)) throw new Error(`Dynamic catalogue runtime is missing ${required}.`);
   }
