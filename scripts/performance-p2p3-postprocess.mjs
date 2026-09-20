@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 const ROOT = process.cwd();
 const INDEX_FILE = path.join(ROOT, 'index.html');
 const CATALOGUE_RUNTIME_FILE = path.join(ROOT, 'dawood-catalogue.js');
-const CATALOGUE_DATA_FILE = path.join(ROOT, 'catalogue/dawood-products.json');
+const CATALOGUE_DATA_FILE = path.join(ROOT, 'catalogue/products.json');
 const ASSISTANT_RUNTIME_RELATIVE = 'assistant-runtime.js';
 const ASSISTANT_RUNTIME_FILE = path.join(ROOT, ASSISTANT_RUNTIME_RELATIVE);
 
@@ -177,7 +177,7 @@ async function optimizeCatalogueRuntime() {
     changed = true;
   }
 
-  const fetchStart = runtime.indexOf("  fetch(`catalogue/dawood-products.json?v=${Date.now()}`, { cache:'no-store' })");
+  const fetchStart = runtime.indexOf("  fetch(`catalogue/products.json?v=${Date.now()}`, { cache:'no-store' })");
   if (fetchStart >= 0) {
     const catchMarker = "    .catch(() => { section.hidden=true; if(navGroups) navGroups.innerHTML='<a href=\"https://wa.me/923216115731\">Catalogue temporarily unavailable — contact our team</a>'; });";
     const catchStart = runtime.indexOf(catchMarker, fetchStart);
@@ -186,8 +186,8 @@ async function optimizeCatalogueRuntime() {
     let chain = runtime.slice(fetchStart, fetchEnd);
 
     chain = chain.replace(
-      "  fetch(`catalogue/dawood-products.json?v=${Date.now()}`, { cache:'no-store' })",
-      "    return fetch(`catalogue/dawood-products.json?v=${encodeURIComponent(catalogueVersion)}`, { cache:'default' })"
+      "  fetch(`catalogue/products.json?v=${Date.now()}`, { cache:'no-store' })",
+      "    return fetch(`catalogue/products.json?v=${encodeURIComponent(catalogueVersion)}`, { cache:'default' })"
     );
     chain = chain.replace(
       catchMarker.trimStart(),
