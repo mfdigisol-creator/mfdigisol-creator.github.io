@@ -69,7 +69,7 @@ async function main() {
     category:'Formal', pieceType:'3 Piece', pricingClass:'embroidered', available:true, sourceDescription:sanitized
   };
   const supplierDescription = descriptionForProduct(supplierProduct);
-  assert(supplierDescription.source === 'supplier', 'Meaningful retained source description was not selected.');
+  assert(supplierDescription.source === 'retained-detail', 'Meaningful retained catalogue description was not selected.');
   assert(supplierDescription.heading === 'Product description', 'Supplier description heading is incorrect.');
 
   const fallbackProduct = {
@@ -77,7 +77,7 @@ async function main() {
     category:'Formal', pieceType:'3 Piece', pricingClass:'non-embroidered', available:true
   };
   const fallback = descriptionForProduct(fallbackProduct);
-  assert(fallback.source === 'catalogue', 'Missing supplier description did not use catalogue fallback.');
+  assert(fallback.source === 'catalogue', 'Missing retained description did not use catalogue fallback.');
   assert(fallback.text === factualProductDescription(fallbackProduct), 'Fallback description is not deterministic.');
   assert(/3 Piece printed \/ non-embroidered unstitched design from Sample Brand/.test(fallback.text), 'Fallback omitted verified style/piece information.');
   assert(fallback.text.includes('Product code TEST-FALLBACK-001.'), 'Fallback omitted product code.');
@@ -110,10 +110,10 @@ async function main() {
     }
   }
 
-  const sourceDescriptions = products.filter(item => clean(item.sourceDescription));
-  for (const item of sourceDescriptions) {
-    assert(!unsafePattern.test(item.sourceDescription), `Unsafe retained supplier description detected for ${item.code}.`);
-    assert(!promotionalPattern.test(item.sourceDescription), `Promotional retained supplier description detected for ${item.code}.`);
+  const retainedDescriptions = products.filter(item => clean(item.description || item.sourceDescription));
+  for (const item of retainedDescriptions) {
+    assert(!unsafePattern.test(item.description || item.sourceDescription), `Unsafe retained catalogue description detected for ${item.code}.`);
+    assert(!promotionalPattern.test(item.description || item.sourceDescription), `Promotional retained catalogue description detected for ${item.code}.`);
   }
 
   const generated = [];
@@ -128,8 +128,8 @@ async function main() {
   const summary = {
     passed:true,
     catalogueProducts:products.length,
-    retainedSupplierDescriptions:sourceDescriptions.length,
-    fallbackDescriptions:products.length - sourceDescriptions.length,
+    retainedDescriptions:retainedDescriptions.length,
+    fallbackDescriptions:products.length - retainedDescriptions.length,
     fixtureSupplierDescription:sanitized,
     representatives:generated
   };
