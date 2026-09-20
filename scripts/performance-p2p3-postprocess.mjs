@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 
 const ROOT = process.cwd();
 const INDEX_FILE = path.join(ROOT, 'index.html');
-const CATALOGUE_RUNTIME_FILE = path.join(ROOT, 'dawood-catalogue.js');
+const CATALOGUE_RUNTIME_FILE = path.join(ROOT, 'catalogue.js');
 const CATALOGUE_DATA_FILE = path.join(ROOT, 'catalogue/products.json');
 const ASSISTANT_RUNTIME_RELATIVE = 'assistant-runtime.js';
 const ASSISTANT_RUNTIME_FILE = path.join(ROOT, ASSISTANT_RUNTIME_RELATIVE);
@@ -141,8 +141,8 @@ async function optimizeHomepage() {
   changed ||= assistant.changed;
 
   const versionedCatalogueScript = document.replace(
-    /dawood-catalogue\.js\?v=[^"']+/,
-    `dawood-catalogue.js?v=${catalogueVersion}`
+    /catalogue\.js\?v=[^"']+/,
+    `catalogue.js?v=${catalogueVersion}`
   );
   if (versionedCatalogueScript !== document) {
     document = versionedCatalogueScript;
@@ -243,7 +243,7 @@ async function optimizeCatalogueRuntime() {
     changed = true;
   }
 
-  if (runtime.includes("cache:'no-store'") || runtime.includes('dawood-products.json?v=${Date.now()}')) {
+  if (runtime.includes("cache:'no-store'") || runtime.includes('products.json?v=${Date.now()}')) {
     throw new Error('Catalogue runtime still bypasses browser caching.');
   }
   if (!runtime.includes('window.AlHumaCatalogueSnapshot = catalogueSnapshot;')) {
