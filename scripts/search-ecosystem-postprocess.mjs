@@ -35,7 +35,7 @@ function productSchema(html) {
 }
 
 async function main() {
-  const catalogue = JSON.parse(await fs.readFile(path.join(ROOT, 'catalogue/dawood-products.json'), 'utf8'));
+  const catalogue = JSON.parse(await fs.readFile(path.join(ROOT, 'catalogue/products.json'), 'utf8'));
   const products = Array.isArray(catalogue.products) ? catalogue.products : [];
   const priced = products.filter(item => Number.isFinite(item.price) && item.price > 0);
   if (priced.length < 20) throw new Error(`Only ${priced.length} products qualify for the final product feed; refusing an incomplete feed.`);
