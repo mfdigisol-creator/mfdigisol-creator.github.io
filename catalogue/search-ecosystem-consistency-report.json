@@ -1,17 +1,17 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-19T15:54:52.219Z",
+  "generatedAt": "2026-09-20T04:57:13.784Z",
   "summary": {
-    "products": 373,
-    "productPagesChecked": 373,
-    "pricedProducts": 362,
+    "products": 351,
+    "productPagesChecked": 351,
+    "pricedProducts": 340,
     "enquiryProducts": 11,
-    "feedRows": 362,
-    "sitemapUrls": 424,
-    "pricedPagesChecked": 362,
+    "feedRows": 340,
+    "sitemapUrls": 401,
+    "pricedPagesChecked": 340,
     "enquiryPagesChecked": 11,
-    "unavailablePricedProducts": 12,
-    "primaryImageMatches": 373,
+    "unavailablePricedProducts": 11,
+    "primaryImageMatches": 351,
     "staleFeedRows": 0,
     "removedFeedRows": 0,
     "removedSitemapUrls": 0,
@@ -21,7 +21,7 @@
   "errors": [],
   "upstreamCatalogueWarnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "72 products currently lack retained supplier description text."
+    "57 products currently lack retained supplier description text."
   ],
   "safeguards": {
     "canonicalOrigin": "https://alhumacollection.com",
