@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const BASE = 'https://alhumacollection.com';
-const DATA_FILE = path.join(ROOT, 'catalogue/dawood-products.json');
+const DATA_FILE = path.join(ROOT, 'catalogue/products.json');
 const SITE_NAME = 'Al Huma Collection';
 const PHONE = '+923216115731';
 
