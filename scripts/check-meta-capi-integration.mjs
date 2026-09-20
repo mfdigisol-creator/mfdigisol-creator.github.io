@@ -27,7 +27,7 @@ for (const file of generated) {
   assert(html.includes('/analytics.js?v=20260726-meta-capi-v1'), `Analytics runtime missing from ${file}`);
   if (file.startsWith('products/')) {
     assert(html.includes('window.AL_HUMA_PAGE_EVENT='), `ViewContent payload missing from ${file}`);
-    assert(!html.match(/AL_HUMA_PAGE_EVENT=.*dawooddesigners/i), `Supplier source leaked into page event in ${file}`);
+    assert(!html.match(/AL_HUMA_PAGE_EVENT=.*(?:source[_-]?url|source[_-]?price|supplier[_-]?id)/i), `Internal source metadata leaked into page event in ${file}`);
   }
 }
 assert(!/track\(['"]purchase['"]/i.test(analytics), 'Unverified Purchase tracking must remain disabled');
