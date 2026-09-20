@@ -10,8 +10,8 @@ on:
       - "scripts/static-audit-server.mjs"
       - "index.html"
       - "assistant-runtime.js"
-      - "dawood-catalogue.js"
-      - "dawood-commerce.js"
+      - "catalogue.js"
+      - "commerce.js"
       - "analytics.js"
       - "analytics-config.js"
   workflow_dispatch:
