@@ -173,7 +173,7 @@ async function runProfile(profile) {
     checks.push('site-loader-released');
 
     const initialResources = await cdp.evaluate('performance.getEntriesByType("resource").map(entry => entry.name)');
-    assert(!initialResources.some(url => url.includes('dawood-products.json')), 'Catalogue JSON loaded before catalogue intent.');
+    assert(!initialResources.some(url => url.includes('products.json')), 'Catalogue JSON loaded before catalogue intent.');
     assert(!initialResources.some(url => url.includes('assistant-runtime.js')), 'Assistant runtime loaded before assistant intent.');
     checks.push('initial-catalogue-deferred', 'initial-assistant-deferred');
     screenshots.hero = await screenshot(cdp, `${profile.key}-hero`);
@@ -186,8 +186,8 @@ async function runProfile(profile) {
     await click(cdp, 'a[href="#live-catalogue"]');
     await cdp.waitFor('window.AlHumaCatalogueSnapshot?.products?.length >= 20', { timeout:30000, message:'catalogue snapshot' });
     await cdp.waitFor('!document.querySelector("[data-live-catalogue]").hidden && document.querySelectorAll("[data-open-product]").length > 0', { timeout:10000, message:'catalogue render' });
-    const catalogueResource = await cdp.evaluate('performance.getEntriesByType("resource").map(entry => entry.name).find(url => url.includes("dawood-products.json")) || null');
-    assert(catalogueResource && /dawood-products\.json\?v=[a-f0-9]{16}/.test(catalogueResource), `Catalogue URL is not content-versioned: ${catalogueResource}`);
+    const catalogueResource = await cdp.evaluate('performance.getEntriesByType("resource").map(entry => entry.name).find(url => url.includes("products.json")) || null');
+    assert(catalogueResource && /products\.json\?v=[a-f0-9]{16}/.test(catalogueResource), `Catalogue URL is not content-versioned: ${catalogueResource}`);
     checks.push('catalogue-loaded-on-intent', 'catalogue-content-versioned');
     screenshots.catalogue = await screenshot(cdp, `${profile.key}-catalogue`);
 
