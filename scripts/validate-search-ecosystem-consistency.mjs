@@ -116,7 +116,7 @@ async function readJson(relative, fallback = null) {
 
 async function main() {
   const errors = [];
-  const catalogue = await readJson('catalogue/dawood-products.json', { products: [], counts: {} });
+  const catalogue = await readJson('catalogue/products.json', { products: [], counts: {} });
   const removedRegistry = await readJson('catalogue/removed-products.json', { products: [] });
   const catalogueValidation = await readJson('catalogue/validation-report.json', { warnings: [] });
   const products = Array.isArray(catalogue.products) ? catalogue.products : [];
