@@ -2,10 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const FILES = [
-  'catalogue/products.json',
-  'catalogue/dawood-products.json'
-];
+const PUBLIC_CATALOGUE = 'catalogue/products.json';
 
 const TOP_LEVEL_ALLOWED = new Set(['schemaVersion', 'synchronizedAt', 'counts', 'products']);
 const COUNTS_ALLOWED = new Set(['products', 'available', 'formal', 'luxury', 'priceOnEnquiry', 'metaFeedProducts']);
@@ -101,10 +98,8 @@ function validateRegistry(payload, allowed, label, collection) {
 }
 
 async function main() {
-  const [neutral, legacy] = await Promise.all(FILES.map(read));
-  validateCatalogue(neutral, FILES[0]);
-  validateCatalogue(legacy, FILES[1]);
-  assert(JSON.stringify(neutral) === JSON.stringify(legacy), 'Neutral and legacy compatibility catalogues must be byte-equivalent after parsing.');
+  const catalogue = await read(PUBLIC_CATALOGUE);
+  validateCatalogue(catalogue, PUBLIC_CATALOGUE);
 
   const history = await read('catalogue/product-history.json');
   const removed = await read('catalogue/removed-products.json');
@@ -128,7 +123,7 @@ async function main() {
 
   console.log(JSON.stringify({
     ok: true,
-    products: neutral.products.length,
+    products: catalogue.products.length,
     productFields: [...PRODUCT_ALLOWED],
     historicalFields: [...HISTORY_ALLOWED],
     removedFields: [...REMOVED_ALLOWED]
