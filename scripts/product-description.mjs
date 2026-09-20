@@ -107,7 +107,7 @@ export function factualProductDescription(item) {
 export function descriptionForProduct(item) {
   const retained = clean(item?.description || item?.sourceDescription);
   if (retained && materiallyDifferentFromTitle(retained, item?.productName || item?.name || '')) {
-    return { text: retained, source: 'supplier', heading: 'Product description' };
+    return { text: retained, source: 'retained-detail', heading: 'Product description' };
   }
   return { text: factualProductDescription(item), source: 'catalogue', heading: 'Product information' };
 }
