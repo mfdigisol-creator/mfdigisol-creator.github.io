@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 
 const ROOT = process.cwd();
 const indexFile = path.join(ROOT, 'index.html');
-const catalogueRuntimeFile = path.join(ROOT, 'dawood-catalogue.js');
+const catalogueRuntimeFile = path.join(ROOT, 'catalogue.js');
 const assistantRuntimeFile = path.join(ROOT, 'assistant-runtime.js');
 
 const digest = value => createHash('sha256').update(value).digest('hex').slice(0, 16);
@@ -19,15 +19,15 @@ async function main() {
   const original = await fs.readFile(indexFile, 'utf8');
   const updated = original
     .replace(
-      /dawood-catalogue\.js\?v=[^"']+/,
-      `dawood-catalogue.js?v=${catalogueRuntimeVersion}`
+      /catalogue\.js\?v=[^"']+/,
+      `catalogue.js?v=${catalogueRuntimeVersion}`
     )
     .replace(
       /assistant-runtime\.js\?v=[^"']+/,
       `assistant-runtime.js?v=${assistantRuntimeVersion}`
     );
 
-  if (!updated.includes(`dawood-catalogue.js?v=${catalogueRuntimeVersion}`)) {
+  if (!updated.includes(`catalogue.js?v=${catalogueRuntimeVersion}`)) {
     throw new Error('Versioned catalogue runtime reference was not produced.');
   }
   if (!updated.includes(`assistant-runtime.js?v=${assistantRuntimeVersion}`)) {
