@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-20T04:57:13.298Z",
+  "generatedAt": "2026-09-20T16:10:47.269Z",
   "summary": {
-    "products": 351,
-    "removedProducts": 1833,
-    "brands": 45,
-    "collectionPages": 47,
-    "sitemapUrls": 401,
-    "metaFeedRows": 340,
-    "metadataPages": 351,
+    "products": 346,
+    "removedProducts": 1838,
+    "brands": 44,
+    "collectionPages": 46,
+    "sitemapUrls": 395,
+    "metaFeedRows": 335,
+    "metadataPages": 346,
     "internalHtmlFiles": 2291,
     "errors": 0,
     "warnings": 2
@@ -16,7 +16,7 @@
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "57 products currently lack retained supplier description text."
+    "54 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -45,9 +45,7 @@
     "missingDescriptions": [
       "ABRISH-2PLWN-V2-ABR-01",
       "ABRISH-2PLWN-V2-ABR-05",
-      "ABRISH-2PLWN-V2-ABR-06",
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-12",
       "FLOWS-ALMRH-LWN-CT-3P-09",
       "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
@@ -67,7 +65,9 @@
       "DASTAK-DL-LWN-3P-FB-322",
       "DASTAK-DL-LWN-3P-FB-323",
       "DASTAK-DL-LWN-3P-FB-324",
-      "DASTAK-DL-LWN-3P-FB-325"
+      "DASTAK-DL-LWN-3P-FB-325",
+      "JAVERIA-ORG-OFWHT-3P-04",
+      "MUSE-SILK-3P-14371-A"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -171,6 +171,11 @@
         "path": "products/abrish-2plwn-v1-abr-58-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
+        "code": "ABRISH-2PLWN-V2-ABR-06",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 6",
+        "path": "products/abrish-2plwn-v2-abr-06-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
         "code": "ABRISH-2PLWN-V2-ABR-07",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 7",
         "path": "products/abrish-2plwn-v2-abr-07-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
@@ -194,11 +199,6 @@
         "code": "AIFA-LWN-3P-AIIS-26301",
         "name": "Aifa Digital Printed & Embroidered Lawn 3PC — AIIS-26301",
         "path": "products/aifa-lwn-3p-aiis-26301-aifa-digital-printed-and-embroidered-lawn-3pc/"
-      },
-      {
-        "code": "EID-AIFA-LKLWN-3P-AE-1101",
-        "name": "Aifa Luxury Emb Laserkari Dyed Lawn 3PC — AE-1101",
-        "path": "products/eid-aifa-lklwn-3p-ae-1101-aifa-luxury-emb-laserkari-dyed-lawn-3pc/"
       }
     ]
   },
