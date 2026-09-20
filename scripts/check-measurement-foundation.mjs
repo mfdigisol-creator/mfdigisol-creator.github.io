@@ -2,10 +2,10 @@ import fs from 'node:fs';
 
 const read = file => fs.readFileSync(file, 'utf8');
 const analytics = read('analytics.js');
-const catalogue = read('dawood-catalogue.js');
-const commerce = read('dawood-commerce.js');
+const catalogue = read('catalogue.js');
+const commerce = read('commerce.js');
 const index = read('index.html');
-const installer = read('scripts/install-dawood-integration.mjs');
+const installer = read('scripts/install-catalogue-integration.mjs');
 const config = read('analytics-config.js');
 const requiredEvents = ['view_item','search','add_to_cart','begin_checkout','generate_lead','whatsapp_click','assistant_open','assistant_question','assistant_recommendation_click'];
 
@@ -24,7 +24,7 @@ if (!analytics.includes("sendMetaEvent('PageView',eventId('PageView'))")) throw 
 if (!analytics.includes("credentials:'omit'")) throw new Error('CAPI request must not send website credentials');
 if (analytics.includes('META_ACCESS_TOKEN') || config.includes('META_ACCESS_TOKEN')) throw new Error('Meta access token must never be present in website code');
 if (!analytics.includes('Accept all optional')) throw new Error('Consent acceptance label must accurately cover analytics and advertising');
-for (const asset of ['analytics-config.js','analytics.js','dawood-catalogue.js','dawood-commerce.js']) {
+for (const asset of ['analytics-config.js','analytics.js','catalogue.js','commerce.js']) {
   const version = ['analytics-config.js','analytics.js'].includes(asset) ? '20260726-meta-capi-v1' : '20260722-measurement-foundation';
   if (!index.includes(`${asset}?v=${version}`)) throw new Error(`Homepage cache version missing: ${asset}`);
   if (!installer.includes(`${asset}?v=${version}`)) throw new Error(`Installer persistence missing: ${asset}`);
