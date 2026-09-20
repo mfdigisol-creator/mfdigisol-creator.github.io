@@ -24,6 +24,8 @@ on:
       - "scripts/validate-analytics-measurement.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
+      - "scripts/sanitize-public-catalogue.mjs"
+      - "scripts/validate-public-catalogue-safety.mjs"
       - "catalogue/removed-products.json"
       - "catalogue/brand-slugs.json"
       - "catalogue/host-canonical-policy.json"
@@ -63,6 +65,8 @@ on:
       - "scripts/validate-analytics-measurement.mjs"
       - "scripts/validate-catalogue.mjs"
       - "scripts/validate-merchant-policy.mjs"
+      - "scripts/sanitize-public-catalogue.mjs"
+      - "scripts/validate-public-catalogue-safety.mjs"
       - "catalogue/removed-products.json"
       - "catalogue/brand-slugs.json"
       - "catalogue/host-canonical-policy.json"
@@ -133,6 +137,8 @@ jobs:
           node scripts/validate-merchant-policy.mjs
           node scripts/validate-search-ecosystem-consistency.mjs
           node scripts/validate-analytics-measurement.mjs
+          node scripts/sanitize-public-catalogue.mjs
+          node scripts/validate-public-catalogue-safety.mjs
 
       - name: Publish validated catalogue update
         if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
