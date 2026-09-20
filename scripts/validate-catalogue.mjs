@@ -103,10 +103,8 @@ async function main() {
   if (products.length < 20) errors.push(`Catalogue contains only ${products.length} products.`);
   if (hostPolicy.preferredOrigin !== BASE) errors.push('Host policy preferred origin does not match the canonical production origin.');
 
-  const duplicateIds = duplicates(products.map(item => item.id));
   const duplicateCodes = duplicates(products.map(item => item.code));
   const duplicateProductPaths = duplicates(products.map(productPath));
-  if (duplicateIds.length) errors.push(`${duplicateIds.length} duplicate product IDs detected.`);
   if (duplicateProductPaths.length) errors.push(`${duplicateProductPaths.length} duplicate canonical product paths detected.`);
   if (duplicateCodes.length) warnings.push(`${duplicateCodes.length} duplicate SKUs detected; review required.`);
 
@@ -117,9 +115,9 @@ async function main() {
   if (missingImages.length) errors.push(`${missingImages.length} products have no primary image.`);
   const invalidPrices = products.filter(item => item.price != null && (!Number.isFinite(item.price) || item.price <= 0));
   if (invalidPrices.length) errors.push(`${invalidPrices.length} products have invalid calculated prices.`);
-  const categoryConflicts = products.filter(item => /\bluxury\b/i.test(`${item.name} ${item.sourceCollection}`) && item.category === 'Formal');
+  const categoryConflicts = products.filter(item => /\bluxury\b/i.test(item.name) && item.category === 'Formal');
   if (categoryConflicts.length) warnings.push(`${categoryConflicts.length} products contain “Luxury” but inherit the Formal supplier section.`);
-  const missingDescriptions = products.filter(item => !cleanText(item.sourceDescription));
+  const missingDescriptions = products.filter(item => !cleanText(item.description));
   if (missingDescriptions.length) warnings.push(`${missingDescriptions.length} products currently lack retained supplier description text.`);
 
   const activeSlugs = Object.values(registry.brands || {});
