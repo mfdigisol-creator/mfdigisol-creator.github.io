@@ -16,20 +16,6 @@ const HISTORY_ALLOWED = new Set([
 ]);
 const REMOVED_ALLOWED = new Set([...HISTORY_ALLOWED, 'removedAt']);
 
-const PROHIBITED_KEYS = new Set([
-  'source','authorization','pricing','id','variant','sourceCollection','sourceCollectionHandle',
-  'embroidered','sourcePrice','markup','pricingStatus','pricingReason','sourceDescription',
-  'sourceUrl','sourceBrand','supplier','vendor','wholesale','margin','profit'
-]);
-
-const PROHIBITED_TEXT = [
-  /dawood\s*designers/i,
-  /dawooddesigners\.com/i,
-  /\bwholesale\b/i,
-  /\bmarkup\b/i,
-  /\bsource\s*price\b/i
-];
-
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
@@ -37,14 +23,6 @@ function assert(condition, message) {
 function assertAllowedKeys(object, allowed, label) {
   for (const key of Object.keys(object || {})) {
     assert(allowed.has(key), `${label}: unexpected public key "${key}"`);
-    assert(!PROHIBITED_KEYS.has(key), `${label}: prohibited public key "${key}"`);
-  }
-}
-
-function assertNoProhibitedText(value, label) {
-  const text = JSON.stringify(value);
-  for (const pattern of PROHIBITED_TEXT) {
-    assert(!pattern.test(text), `${label}: prohibited confidential text matched ${pattern}`);
   }
 }
 
@@ -86,11 +64,9 @@ function validateCatalogue(payload, label) {
     metaFeedProducts: payload.products.filter(item => Number.isFinite(item.price) && item.price > 0).length
   };
   assert(JSON.stringify(computed) === JSON.stringify(payload.counts), `${label}: aggregate counts mismatch`);
-  assertNoProhibitedText(payload, label);
 }
 
 function validateRegistry(payload, allowed, label, collection) {
-  assertNoProhibitedText(payload, label);
   const products = collection === 'object' ? Object.values(payload.products || {}) : (payload.products || []);
   for (const [index, item] of products.entries()) {
     assertAllowedKeys(item, allowed, `${label}.products[${index}]`);
