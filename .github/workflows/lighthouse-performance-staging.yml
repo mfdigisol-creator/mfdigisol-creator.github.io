@@ -10,7 +10,7 @@ on:
       - "scripts/run-lighthouse-audit.mjs"
       - "index.html"
       - "assistant-runtime.js"
-      - "dawood-catalogue.js"
+      - "catalogue.js"
       - "assets/**"
       - "collections/**"
       - "products/**"
@@ -42,16 +42,16 @@ jobs:
       - name: Verify P2 and P3 materialization
         run: |
           node --check assistant-runtime.js
-          node --check dawood-catalogue.js
+          node --check catalogue.js
           grep --quiet 'data-catalogue-version=' index.html
           grep --quiet 'loadAssistantRuntime' index.html
-          grep --quiet 'window.AlHumaCatalogueSnapshot = catalogueSnapshot' dawood-catalogue.js
-          grep --quiet "cache:'default'" dawood-catalogue.js
-          if grep --quiet "cache:'no-store'" dawood-catalogue.js; then
+          grep --quiet 'window.AlHumaCatalogueSnapshot = catalogueSnapshot' catalogue.js
+          grep --quiet "cache:'default'" catalogue.js
+          if grep --quiet "cache:'no-store'" catalogue.js; then
             echo "Legacy no-store catalogue fetch remains."
             exit 1
           fi
-          if grep --quiet 'dawood-products.json?v=${Date.now()}' dawood-catalogue.js; then
+          if grep --quiet 'products.json?v=${Date.now()}' catalogue.js; then
             echo "Legacy timestamp cache-busting remains."
             exit 1
           fi
