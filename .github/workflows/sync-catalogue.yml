@@ -1,0 +1,191 @@
+name: Synchronize customer-safe catalogue
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/sync-catalogue.yml"
+      - "scripts/install-catalogue-integration.mjs"
+      - "scripts/product-description.mjs"
+      - "scripts/test-product-descriptions.mjs"
+      - "scripts/seo-batch1-postprocess.mjs"
+      - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/generate-step9b-guide.mjs"
+      - "scripts/performance-p1-postprocess.mjs"
+      - "scripts/performance-p2p3-postprocess.mjs"
+      - "scripts/version-performance-assets.mjs"
+      - "scripts/image-seo-postprocess.mjs"
+      - "scripts/entity-consistency-postprocess.mjs"
+      - "scripts/search-ecosystem-postprocess.mjs"
+      - "scripts/validate-search-ecosystem-consistency.mjs"
+      - "scripts/validate-analytics-measurement.mjs"
+      - "scripts/validate-catalogue.mjs"
+      - "scripts/validate-merchant-policy.mjs"
+      - "scripts/validate-public-catalogue-safety.mjs"
+      - "catalogue/products.json"
+      - "catalogue/removed-products.json"
+      - "catalogue/brand-slugs.json"
+      - "catalogue/host-canonical-policy.json"
+      - "sitemap-pages.xml"
+      - "404.html"
+      - "policies.html"
+      - "seo-pages.css"
+      - "catalogue.css"
+      - "catalogue.js"
+      - "commerce.css"
+      - "commerce.js"
+      - "analytics-config.js"
+      - "analytics.js"
+      - "orders-client.js"
+      - "orders-config.js"
+      - "order-confirmed.html"
+      - "assistant-runtime.js"
+      - "assets/alhuma-collection-logo.webp"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/sync-catalogue.yml"
+      - "scripts/install-catalogue-integration.mjs"
+      - "scripts/product-description.mjs"
+      - "scripts/test-product-descriptions.mjs"
+      - "scripts/seo-batch1-postprocess.mjs"
+      - "scripts/generate-seo-pages-v2.mjs"
+      - "scripts/generate-step9b-guide.mjs"
+      - "scripts/performance-p1-postprocess.mjs"
+      - "scripts/performance-p2p3-postprocess.mjs"
+      - "scripts/version-performance-assets.mjs"
+      - "scripts/image-seo-postprocess.mjs"
+      - "scripts/entity-consistency-postprocess.mjs"
+      - "scripts/search-ecosystem-postprocess.mjs"
+      - "scripts/validate-search-ecosystem-consistency.mjs"
+      - "scripts/validate-analytics-measurement.mjs"
+      - "scripts/validate-catalogue.mjs"
+      - "scripts/validate-merchant-policy.mjs"
+      - "scripts/validate-public-catalogue-safety.mjs"
+      - "catalogue/products.json"
+      - "catalogue/removed-products.json"
+      - "catalogue/brand-slugs.json"
+      - "catalogue/host-canonical-policy.json"
+      - "sitemap-pages.xml"
+      - "404.html"
+      - "policies.html"
+      - "catalogue.js"
+      - "commerce.js"
+      - "analytics-config.js"
+      - "analytics.js"
+      - "orders-client.js"
+      - "orders-config.js"
+      - "order-confirmed.html"
+      - "assistant-runtime.js"
+      - "assets/alhuma-collection-logo.webp"
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: customer-safe-catalogue-sync-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Refresh customer-safe catalogue snapshot
+        id: catalogue
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --max-time 30             -H 'Accept: application/json'             'https://orders-api.alhumacollection.com/v1/catalogue'             -o /tmp/alhuma-products.json
+          node - <<'NODE'
+          const fs = require('fs');
+          const input = JSON.parse(fs.readFileSync('/tmp/alhuma-products.json', 'utf8'));
+          if (input?.schemaVersion !== 3 || !Array.isArray(input.products) || input.products.length < 20) {
+            throw new Error('Private catalogue endpoint returned an invalid customer-safe payload.');
+          }
+          if (!Number.isFinite(Date.parse(input.synchronizedAt))) {
+            throw new Error('Private catalogue endpoint returned an invalid synchronization timestamp.');
+          }
+          fs.writeFileSync('catalogue/products.json', JSON.stringify(input, null, 2) + '\n');
+          fs.writeFileSync('catalogue/sync-status.json', JSON.stringify({
+            ok: true,
+            completedAt: input.synchronizedAt,
+            ...input.counts
+          }, null, 2) + '\n');
+          NODE
+
+      - name: Record refresh failure for cached-catalogue rendering
+        if: github.event_name != 'pull_request' && steps.catalogue.outcome == 'failure'
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const cached = JSON.parse(fs.readFileSync('catalogue/products.json', 'utf8'));
+          fs.writeFileSync('catalogue/sync-status.json', JSON.stringify({
+            ok: false,
+            failedAt: new Date().toISOString(),
+            cataloguePreserved: Array.isArray(cached.products) && cached.products.length >= 20,
+            cachedProducts: Array.isArray(cached.products) ? cached.products.length : 0
+          }, null, 2) + '\n');
+          NODE
+
+      - name: Normalize, optimize and generate crawlable catalogue
+        id: generate
+        if: always()
+        run: |
+          node scripts/install-catalogue-integration.mjs
+          node scripts/seo-batch1-postprocess.mjs
+          node scripts/generate-seo-pages-v2.mjs
+          node scripts/generate-step9b-guide.mjs
+          node scripts/performance-p1-postprocess.mjs
+          node scripts/performance-p2p3-postprocess.mjs
+          node scripts/version-performance-assets.mjs
+          test -s assets/alhuma-collection-logo.webp
+          node scripts/apply-official-brand.mjs
+          node scripts/image-seo-postprocess.mjs
+          node scripts/entity-consistency-postprocess.mjs
+          node scripts/search-ecosystem-postprocess.mjs
+          node --check assistant-runtime.js
+          node --check catalogue.js
+          node --check commerce.js
+          node --check analytics.js
+          node scripts/test-product-descriptions.mjs
+          node scripts/validate-catalogue.mjs
+          node scripts/validate-merchant-policy.mjs
+          node scripts/validate-search-ecosystem-consistency.mjs
+          node scripts/validate-analytics-measurement.mjs
+          node scripts/validate-public-catalogue-safety.mjs
+
+      - name: Publish validated catalogue update
+        if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
+        run: |
+          if test -z "$(git status --porcelain -- index.html policies.html assistant-runtime.js catalogue.js commerce.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml)"; then
+            echo "Catalogue is already current."
+            exit 0
+          fi
+          git config user.name "Al Huma Catalogue Sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html policies.html assistant-runtime.js catalogue.js commerce.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml
+          git commit -m "Update synchronized catalogue"
+          git push
+
+      - name: Report private catalogue refresh failure
+        if: github.event_name != 'pull_request' && steps.catalogue.outcome == 'failure'
+        run: |
+          cat catalogue/sync-status.json
+          echo "The cached customer-safe catalogue was preserved and validated, but the private refresh failed."
+          exit 1
