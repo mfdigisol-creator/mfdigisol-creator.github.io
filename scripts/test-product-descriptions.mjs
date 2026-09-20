@@ -13,7 +13,7 @@ const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
 const html = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[char]));
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
 const productPath = item => clean(item.path) || `products/${slugify(item.code)}-${slugify(item.productName || item.name)}/`;
-const unsafePattern = /<\/?[a-z][^>]*>|https?:\/\/|www\.|\b(?:whats?app|phone|mobile|contact|email|cash\s+on\s+delivery|cod|shipping|delivery|dispatch|courier|price|discount|dawood\s+designers?)\b|\b(?:rs\.?|pkr)\s*[\d,]+/i;
+const unsafePattern = /<\/?[a-z][^>]*>|https?:\/\/|www\.|\b(?:whats?app|phone|mobile|contact|email|cash\s+on\s+delivery|cod|shipping|delivery|dispatch|courier|price|discount)\b|\b(?:rs\.?|pkr)\s*[\d,]+/i;
 const promotionalPattern = /\b(?:premium(?:\s+quality)?|high[- ]?quality|stunning|beautiful|gorgeous|amazing|must[- ]?have|perfect\s+for|ideal\s+for|best[- ]?selling|exclusive\s+offer)\b/i;
 
 function productSchema(page) {
