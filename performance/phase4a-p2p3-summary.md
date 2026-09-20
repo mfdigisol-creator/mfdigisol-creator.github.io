@@ -19,7 +19,7 @@ Generated: 2026-07-31
 - Catalogue validator: passed with the existing two non-blocking warnings.
 - Merchant policy validator: passed.
 - `assistant-runtime.js`: syntax check passed.
-- `dawood-catalogue.js`: syntax check passed.
+- `catalogue.js`: syntax check passed.
 - Controlled invalid URL: HTTP 404 and custom document passed.
 - Lighthouse: 60 successful audits, representing three runs for each of ten page types on mobile and desktop.
 
