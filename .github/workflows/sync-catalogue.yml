@@ -169,6 +169,12 @@ jobs:
           node scripts/validate-merchant-policy.mjs
           node scripts/validate-search-ecosystem-consistency.mjs
           node scripts/validate-analytics-measurement.mjs
+          rm -f \
+            catalogue/analytics-measurement-report.json \
+            catalogue/search-ecosystem-consistency-report.json \
+            catalogue/seo-generation-report.json \
+            catalogue/source-integrity-report.json \
+            catalogue/validation-report.json
           node scripts/validate-public-catalogue-safety.mjs
 
       - name: Publish validated catalogue update
