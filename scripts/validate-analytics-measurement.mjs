@@ -46,11 +46,11 @@ function findType(objects, type) {
 
 const analyticsConfig = read('analytics-config.js');
 const analytics = read('analytics.js');
-const catalogueRuntime = read('dawood-catalogue.js');
-const commerce = read('dawood-commerce.js');
+const catalogueRuntime = read('catalogue.js');
+const commerce = read('commerce.js');
 const ordersConfig = read('orders-config.js');
 const confirmed = read('order-confirmed.html');
-const catalogue = JSON.parse(read('catalogue/dawood-products.json'));
+const catalogue = JSON.parse(read('catalogue/products.json'));
 const productsByCode = new Map(catalogue.products.map(product => [String(product.code), product]));
 
 const gtm = analyticsConfig.match(/gtmId:\s*['"]([^'"]+)['"]/)?.[1] || '';
@@ -93,7 +93,7 @@ assert(!commerce.includes("track('add_payment_info'"), 'Cash on Delivery flow mu
 notes.push('add_payment_info is intentionally not emitted because the current checkout is Cash on Delivery and collects no payment instrument.');
 
 const clientPurchasePattern = /(?:track\s*\(\s*['"]purchase['"]|meta_event\s*:\s*['"]Purchase['"]|event\s*:\s*['"]purchase['"])/i;
-for (const [name, source] of [['analytics.js', analytics], ['dawood-catalogue.js', catalogueRuntime], ['dawood-commerce.js', commerce], ['order-confirmed.html', confirmed]]) {
+for (const [name, source] of [['analytics.js', analytics], ['catalogue.js', catalogueRuntime], ['commerce.js', commerce], ['order-confirmed.html', confirmed]]) {
   assert(!clientPurchasePattern.test(source), `${name} must not emit a client-side Purchase event`);
 }
 assert(/noindex/.test(confirmed), 'order-confirmed.html must remain noindex');
