@@ -3,13 +3,13 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const INDEX_FILE = path.join(ROOT, 'index.html');
-const DATA_FILE = path.join(ROOT, 'catalogue/dawood-products.json');
+const DATA_FILE = path.join(ROOT, 'catalogue/products.json');
 const STATUS_FILE = path.join(ROOT, 'catalogue/sync-status.json');
 const FEED_FILE = path.join(ROOT, 'catalogue/meta-product-feed.csv');
-const REPORT_FILE = path.join(ROOT, 'catalogue/source-integrity-report.json');
 const HISTORY_FILE = path.join(ROOT, 'catalogue/product-history.json');
 const REMOVED_FILE = path.join(ROOT, 'catalogue/removed-products.json');
 const BASE = 'https://alhumacollection.com';
+
 const BRAND_ALIASES = new Map([
   ['anaya noor', 'Anaya Noor'],
   ['lime light', 'Limelight'],
@@ -19,14 +19,6 @@ const BRAND_ALIASES = new Map([
 
 const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
 const canonicalBrand = value => BRAND_ALIASES.get(clean(value).toLowerCase()) || clean(value) || 'Other designs';
-const canonicalProductBrand = (item, sourceBrand) => {
-  const productName = clean(item.productName || item.name);
-  if (sourceBrand.toLowerCase() === 'silknstories') {
-    if (productName.startsWith('Crimson ')) return 'Crimson';
-    if (productName.startsWith('Zarmeen & Emaan ')) return 'Zarmeen & Emaan';
-  }
-  return canonicalBrand(item.brand);
-};
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
 const productPath = item => clean(item.path) || `products/${slugify(item.code)}-${slugify(item.productName || item.name)}/`;
 const csv = value => `"${String(value ?? '').replace(/\r?\n/g, ' ').replace(/"/g, '""')}"`;
@@ -39,7 +31,7 @@ async function readJson(file, fallback) {
 
 function replaceHomepageText(source, before, after, description) {
   if (source.includes(after)) return source;
-  if (!source.includes(before)) throw new Error(`Could not locate ${description}; refusing GEO homepage rewrite.`);
+  if (!source.includes(before)) throw new Error(`Could not locate ${description}; refusing homepage rewrite.`);
   return source.replace(before, after);
 }
 
@@ -47,11 +39,9 @@ function historyRecord(item, previous = {}) {
   const now = new Date().toISOString();
   return {
     code: item.code,
-    id: item.id,
     name: item.name,
     productName: item.productName || item.name,
-    brand: item.brand,
-    sourceBrand: item.sourceBrand || item.brand,
+    brand: canonicalBrand(item.brand),
     category: item.category,
     pieceType: item.pieceType,
     pricingClass: item.pricingClass,
@@ -59,7 +49,7 @@ function historyRecord(item, previous = {}) {
     image: item.image,
     images: Array.isArray(item.images) ? item.images : [],
     path: productPath(item),
-    firstSeenAt: previous.firstSeenAt || item.createdAt || item.updatedAt || now,
+    firstSeenAt: previous.firstSeenAt || item.updatedAt || now,
     lastSeenAt: item.updatedAt || now
   };
 }
@@ -88,17 +78,16 @@ async function main() {
 
   const catalogue = JSON.parse(await fs.readFile(DATA_FILE, 'utf8'));
   const status = await readJson(STATUS_FILE, { ok: true });
-  const history = await readJson(HISTORY_FILE, { schemaVersion: 1, products: {} });
-  const removedRegistry = await readJson(REMOVED_FILE, { schemaVersion: 1, products: [] });
+  const history = await readJson(HISTORY_FILE, { schemaVersion: 2, products: {} });
+  const removedRegistry = await readJson(REMOVED_FILE, { schemaVersion: 2, products: [] });
   const rawProducts = Array.isArray(catalogue.products) ? catalogue.products : [];
   if (rawProducts.length < 20) throw new Error(`Post-processing refused: only ${rawProducts.length} products found.`);
 
   const aliasCorrections = [];
   const products = rawProducts.map(item => {
-    const sourceBrand = clean(item.sourceBrand || item.brand);
-    const brand = canonicalProductBrand(item, sourceBrand);
-    if (brand !== item.brand) aliasCorrections.push({ code: item.code, sourceBrand: item.brand, canonicalBrand: brand });
-    return { ...item, sourceBrand, brand };
+    const brand = canonicalBrand(item.brand);
+    if (brand !== item.brand) aliasCorrections.push({ code: item.code, from: item.brand, to: brand });
+    return { ...item, brand };
   }).sort((a, b) => Number(b.available) - Number(a.available) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
 
   const counts = {
@@ -109,7 +98,11 @@ async function main() {
     priceOnEnquiry: products.filter(item => item.price == null).length,
     metaFeedProducts: products.filter(item => Number.isFinite(item.price) && item.price > 0).length
   };
-  await fs.writeFile(DATA_FILE, `${JSON.stringify({ ...catalogue, schemaVersion: Math.max(2, Number(catalogue.schemaVersion) || 1), counts, products }, null, 2)}\n`);
+
+  await fs.writeFile(
+    DATA_FILE,
+    `${JSON.stringify({ ...catalogue, schemaVersion: 3, counts, products }, null, 2)}\n`
+  );
 
   const activeCodes = new Set(products.map(item => item.code));
   const nextHistory = { ...(history.products || {}) };
@@ -122,8 +115,7 @@ async function main() {
       const existing = removedByCode.get(prior.code);
       const removed = {
         ...prior,
-        removedAt: existing?.removedAt || new Date().toISOString(),
-        reason: existing?.reason || 'supplier-removed'
+        removedAt: existing?.removedAt || new Date().toISOString()
       };
       removedByCode.set(prior.code, removed);
       if (!existing) removedNow.push(removed);
@@ -135,9 +127,13 @@ async function main() {
     removedByCode.delete(item.code);
   }
 
-  const removedProducts = [...removedByCode.values()].sort((a, b) => clean(a.brand).localeCompare(clean(b.brand)) || clean(a.name).localeCompare(clean(b.name)) || clean(a.code).localeCompare(clean(b.code)));
-  await fs.writeFile(HISTORY_FILE, `${JSON.stringify({ schemaVersion: 1, generatedAt: new Date().toISOString(), products: nextHistory }, null, 2)}\n`);
-  await fs.writeFile(REMOVED_FILE, `${JSON.stringify({ schemaVersion: 1, generatedAt: new Date().toISOString(), products: removedProducts }, null, 2)}\n`);
+  const removedProducts = [...removedByCode.values()]
+    .map(item => historyRecord(item, item))
+    .map(item => ({ ...item, removedAt: removedByCode.get(item.code)?.removedAt || new Date().toISOString() }))
+    .sort((a, b) => clean(a.brand).localeCompare(clean(b.brand)) || clean(a.name).localeCompare(clean(b.name)) || clean(a.code).localeCompare(clean(b.code)));
+
+  await fs.writeFile(HISTORY_FILE, `${JSON.stringify({ schemaVersion: 2, generatedAt: new Date().toISOString(), products: nextHistory }, null, 2)}\n`);
+  await fs.writeFile(REMOVED_FILE, `${JSON.stringify({ schemaVersion: 2, generatedAt: new Date().toISOString(), products: removedProducts }, null, 2)}\n`);
 
   const nameCounts = products.reduce((map, item) => {
     const key = clean(item.name).toLowerCase();
@@ -159,39 +155,37 @@ async function main() {
     item.brand,
     `Women > Unstitched Suits > ${item.category}`
   ].map(csv).join(','));
-  if (rows.length !== counts.metaFeedProducts) throw new Error('Meta feed row count does not match the normalized catalogue.');
+
+  if (rows.length !== counts.metaFeedProducts) {
+    throw new Error('Meta feed row count does not match the normalized catalogue.');
+  }
   await fs.writeFile(FEED_FILE, `${headers.map(csv).join(',')}\n${rows.join('\n')}\n`);
 
   const duplicateCodes = duplicateValues(products.map(item => item.code));
   const duplicatePaths = duplicateValues(products.map(productPath));
-  const classificationConflicts = products.filter(item => /\bluxury\b/i.test(`${item.name} ${item.sourceCollection}`) && item.category === 'Formal').map(item => ({ code: item.code, name: item.name, category: item.category }));
-  const duplicateNames = duplicateValues(products.map(item => clean(item.name).toLowerCase()));
-  const report = {
-    ok: duplicatePaths.length === 0,
-    generatedAt: new Date().toISOString(),
-    summary: {
-      ...counts,
-      canonicalBrands: new Set(products.map(item => item.brand)).size,
-      aliasCorrections: aliasCorrections.length,
-      duplicateCodes: duplicateCodes.length,
-      duplicatePaths: duplicatePaths.length,
-      duplicateNames: duplicateNames.length,
-      classificationConflicts: classificationConflicts.length,
-      unspecifiedPieces: products.filter(item => item.pieceType === 'Unspecified').length,
-      removedProducts: removedProducts.length,
-      newlyRemovedProducts: removedNow.length,
-      supplierRefreshUsed: status.ok !== false
-    },
-    aliasCorrections: aliasCorrections.slice(0, 250),
-    duplicateCodes,
-    duplicatePaths,
-    duplicateNames,
-    classificationConflicts: classificationConflicts.slice(0, 500),
-    newlyRemovedProducts: removedNow.slice(0, 100).map(item => ({ code: item.code, name: item.name, path: item.path }))
-  };
-  await fs.writeFile(REPORT_FILE, `${JSON.stringify(report, null, 2)}\n`);
-  if (duplicatePaths.length) throw new Error(`Post-processing found ${duplicatePaths.length} duplicate canonical product paths.`);
-  console.log(`Normalized ${products.length} products, retained ${removedProducts.length} removed-product records and generated ${rows.length} canonical Meta feed rows.`);
+  const classificationConflicts = products
+    .filter(item => /\bluxury\b/i.test(item.name) && item.category === 'Formal')
+    .map(item => ({ code: item.code, name: item.name, category: item.category }));
+
+  if (duplicatePaths.length) {
+    throw new Error(`Post-processing found ${duplicatePaths.length} duplicate canonical product paths.`);
+  }
+
+  console.log(JSON.stringify({
+    ok: true,
+    catalogueRefreshUsed: status.ok !== false,
+    counts,
+    canonicalBrands: new Set(products.map(item => item.brand)).size,
+    aliasCorrections: aliasCorrections.length,
+    duplicateCodes: duplicateCodes.length,
+    duplicatePaths: duplicatePaths.length,
+    classificationConflicts: classificationConflicts.length,
+    removedProducts: removedProducts.length,
+    newlyRemovedProducts: removedNow.length
+  }, null, 2));
 }
 
-main().catch(error => { console.error(error); process.exitCode = 1; });
+main().catch(error => {
+  console.error(error);
+  process.exitCode = 1;
+});
