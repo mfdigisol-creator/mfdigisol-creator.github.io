@@ -94,7 +94,7 @@ function routeFile(route) {
 async function main() {
   const errors = [];
   const warnings = [];
-  const catalogue = await readJson('catalogue/dawood-products.json');
+  const catalogue = await readJson('catalogue/products.json');
   const registry = await readJson('catalogue/brand-slugs.json');
   const removedRegistry = await readJson('catalogue/removed-products.json');
   const hostPolicy = await readJson('catalogue/host-canonical-policy.json');
@@ -116,9 +116,9 @@ async function main() {
   const invalidPrices = products.filter(item => item.price != null && (!Number.isFinite(item.price) || item.price <= 0));
   if (invalidPrices.length) errors.push(`${invalidPrices.length} products have invalid calculated prices.`);
   const categoryConflicts = products.filter(item => /\bluxury\b/i.test(item.name) && item.category === 'Formal');
-  if (categoryConflicts.length) warnings.push(`${categoryConflicts.length} products contain “Luxury” but inherit the Formal supplier section.`);
+  if (categoryConflicts.length) warnings.push(`${categoryConflicts.length} products contain “Luxury” while classified as Formal.`);
   const missingDescriptions = products.filter(item => !cleanText(item.description));
-  if (missingDescriptions.length) warnings.push(`${missingDescriptions.length} products currently lack retained supplier description text.`);
+  if (missingDescriptions.length) warnings.push(`${missingDescriptions.length} products currently lack retained catalogue description text.`);
 
   const activeSlugs = Object.values(registry.brands || {});
   const duplicateSlugs = duplicates(activeSlugs);
