@@ -6,7 +6,7 @@ on:
       - agent/performance-p1-staging
     paths:
       - ".github/workflows/performance-p1-staging.yml"
-      - ".github/workflows/sync-dawood-catalogue.yml"
+      - ".github/workflows/sync-catalogue.yml"
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
@@ -39,7 +39,7 @@ jobs:
           node scripts/performance-p2p3-postprocess.mjs
           node scripts/version-performance-assets.mjs
           node --check assistant-runtime.js
-          node --check dawood-catalogue.js
+          node --check catalogue.js
 
       - name: Validate catalogue and merchant policy
         run: |
@@ -48,12 +48,12 @@ jobs:
 
       - name: Commit materialized staging output
         run: |
-          if test -z "$(git status --porcelain -- index.html assistant-runtime.js dawood-catalogue.js assets/ products/ collections/)"; then
+          if test -z "$(git status --porcelain -- index.html assistant-runtime.js catalogue.js assets/ products/ collections/)"; then
             echo "Performance staging output is already materialized."
             exit 0
           fi
           git config user.name "Al Huma Performance Staging"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html assistant-runtime.js dawood-catalogue.js assets/ products/ collections/
+          git add index.html assistant-runtime.js catalogue.js assets/ products/ collections/
           git commit -m "Materialize Phase 4A performance P2 and P3 changes"
           git push
