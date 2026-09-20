@@ -127,10 +127,7 @@ if (!hasStylesheet('header-cart.css')) insertBefore('</head>', '    <link rel="s
 if (!hasStylesheet('reviews.css')) insertBefore('</head>', '    <link rel="stylesheet" href="reviews.css" />\n  ', 'document head');
 if (!hasStylesheet('mobile-responsive.css')) insertBefore('</head>', '    <link rel="stylesheet" href="mobile-responsive.css" />\n  ', 'document head');
 if (!html.includes('src="catalogue.js')) insertBefore('</body>', '    <script src="catalogue.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
-html = html.replace(/src="dawood-catalogue\.js(?:\?[^\"]*)?"/g, 'src="catalogue.js?v=20260722-measurement-foundation"');
-html = html.replace(/href="dawood-catalogue\.css(?:\?[^\"]*)?"/g, 'href="catalogue.css?v=20260722-image-performance"');
 if (!html.includes('src="commerce.js')) insertBefore('</body>', '    <script src="commerce.js?v=20260722-measurement-foundation" defer></script>\n  ', 'document body');
-html = html.replace(/src="dawood-commerce\.js(?:\?[^\"]*)?"/g, 'src="commerce.js?v=20260722-measurement-foundation"');
 if (!html.includes('src="reviews.js"')) insertBefore('</body>', '    <script src="reviews.js" defer></script>\n  ', 'document body');
 if (!html.includes('src="analytics-config.js')) insertBefore('</body>', '    <script src="analytics-config.js?v=20260726-meta-capi-v1" defer></script>\n  ', 'document body');
 if (!html.includes('src="analytics.js')) insertBefore('</body>', '    <script src="analytics.js?v=20260726-meta-capi-v1" defer></script>\n  ', 'document body');
