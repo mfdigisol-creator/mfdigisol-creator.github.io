@@ -129,7 +129,7 @@ async function htmlFilesUnder(relative) {
 }
 
 async function patchGenerated(changed) {
-  const catalogue = JSON.parse(await read('catalogue/dawood-products.json'));
+  const catalogue = JSON.parse(await read('catalogue/products.json'));
   const products = Array.isArray(catalogue.products) ? catalogue.products : [];
   if (products.length < 20) throw new Error(`Step 11 refused: only ${products.length} active catalogue products found.`);
 
