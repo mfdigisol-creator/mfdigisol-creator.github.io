@@ -94,8 +94,8 @@
     return `https://wa.me/923216115731?text=${encodeURIComponent(`Hello Al Huma Collection, I am interested in ${product.name} (${product.code}). ${priceText} availability and ordering details. ${productUrl(product)}`)}`;
   };
   const descriptionForProduct = product => {
-    const retained = String(product?.sourceDescription || '').replace(/\s+/g, ' ').trim();
-    if (retained) return { text:retained, source:'supplier', heading:'Product description' };
+    const retained = String(product?.description || '').replace(/\s+/g, ' ').trim();
+    if (retained) return { text:retained, source:'catalogue', heading:'Product description' };
     const brand = String(product?.brand || 'the Al Huma Collection catalogue').replace(/\s+/g, ' ').trim();
     const category = String(product?.category || '').replace(/\s+/g, ' ').trim();
     const pieceType = String(product?.pieceType || '').replace(/\s+/g, ' ').trim();
@@ -125,7 +125,7 @@
     const query = controls.search.value.trim().toLowerCase();
     const priceRange = controls.price.value;
     const matches = products.filter(product => {
-      const searchable = `${product.name} ${product.code} ${product.brand} ${product.sourceCollection}`.toLowerCase();
+      const searchable = `${product.name} ${product.code} ${product.brand}`.toLowerCase();
       const priceMatch = priceRange === 'all' || (priceRange === 'enquire' ? product.price == null : (() => {
         if (product.price == null) return false;
         const [min,max] = priceRange.split('-').map(Number);
@@ -169,7 +169,7 @@
     if (!preserveLimits) visibleByCollection.clear();
     results.textContent = `${matches.length} design${matches.length === 1 ? '' : 's'} found`;
     const collections = matches.reduce((groups, product) => {
-      const name = product.brand || product.sourceCollection || 'Other designs';
+      const name = product.brand || 'Other designs';
       if (!groups.has(name)) groups.set(name, []);
       groups.get(name).push(product);
       return groups;
@@ -231,7 +231,7 @@
       if (navigator.share) await navigator.share(data).catch(() => {}); else await navigator.clipboard.writeText(data.url);
       track('share_product',{ product_code:product.code });
     });
-    dialog.querySelector('[data-dialog-order]').addEventListener('click', () => track('whatsapp_order',{ product_code:product.code, price_status:product.pricingStatus }));
+    dialog.querySelector('[data-dialog-order]').addEventListener('click', () => track('whatsapp_order',{ product_code:product.code, price_status:product.price == null ? 'enquire' : 'calculated' }));
     dialog.querySelector('[data-dialog-cart]')?.addEventListener('click', () => {
       dialog.close();
       window.dispatchEvent(new CustomEvent('alhuma:add-to-cart',{detail:{product}}));
@@ -353,7 +353,7 @@
   function loadCatalogue() {
     if (cataloguePromise) return cataloguePromise;
     cataloguePromise = (() => {
-    return fetch(`catalogue/dawood-products.json?v=${encodeURIComponent(catalogueVersion)}`, { cache:'default' })
+    return fetch(`catalogue/products.json?v=${encodeURIComponent(catalogueVersion)}`, { cache:'default' })
     .then(response => { if (!response.ok) throw new Error('Catalogue is not ready'); return response.json(); })
     .then(data => {
       products = Array.isArray(data.products) ? data.products : [];
