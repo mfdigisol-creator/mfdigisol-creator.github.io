@@ -77,6 +77,7 @@ export function init({ open = false } = {}) {
     const questionTerms = question.split(' ');
     const orderQuestion = ['order','buy','purchase','book','checkout'].some(term => questionTerms.includes(term));
     const productCodeQuestion = /\b(?=[A-Za-z0-9-]*\d)[A-Za-z0-9]+(?:-[A-Za-z0-9]+){2,}\b/.test(rawQuestion);
+    const pieceTypeMatch = question.match(/\b([23])\s*(?:piece|pc)\b/);
     if (!catalogueProducts.length && orderQuestion) await ensureAssistantCatalogue();
     const earlyStaticQuestion = includesAny(question, [
       'fabric quality','fabric','cloth quality','material quality','kapra','kapray','quality kaisi','quality of suit',
@@ -99,7 +100,7 @@ export function init({ open = false } = {}) {
     const dynamicBeforeLate = dynamicBeforeMiddle || includesAny(question, [
       'available','availability','stock','collection','catalog','catalogue','design','product','brand'
     ]);
-    const catalogueIndependentQuestion = !productCodeQuestion && (earlyStaticQuestion || (middleStaticQuestion && !dynamicBeforeMiddle) || (lateStaticQuestion && !dynamicBeforeLate));
+    const catalogueIndependentQuestion = !productCodeQuestion && !pieceTypeMatch && (earlyStaticQuestion || (middleStaticQuestion && !dynamicBeforeMiddle) || (lateStaticQuestion && !dynamicBeforeLate));
     if (!catalogueProducts.length && !catalogueIndependentQuestion && !(await ensureAssistantCatalogue())) {
       addChatMessage('The synchronized catalogue is temporarily unavailable, so I cannot safely calculate current prices, product counts or availability right now. Please contact our team on official WhatsApp for current product information.', 'assistant', [{ label:'Contact on WhatsApp', href:generalWhatsApp, external:true }]);
       return;
@@ -148,6 +149,12 @@ export function init({ open = false } = {}) {
       const matches = catalogueProducts.filter(item => item.available && Number.isFinite(item.price) && item.price <= amount).sort((a,b) => b.price-a.price);
       const examples = matches.slice(0,3).map(item => `${item.name} (${item.code}) — ${chatMoney(item.price)}`).join('; ');
       addChatMessage(matches.length ? `I found ${matches.length} currently available design${matches.length === 1 ? '' : 's'} priced up to ${chatMoney(amount)}. Examples: ${examples}. Use the price filters for the full selection.` : `I could not find a currently available design with a displayed price up to ${chatMoney(amount)}. Some designs are marked “Price on enquiry,” so our team may still help.`, 'assistant', assistantActions);
+      return;
+    }
+  
+    if (pieceTypeMatch) {
+      const pieceNumber = pieceTypeMatch[1], pieceType = `${pieceNumber} Piece`, list = catalogueProducts.filter(item => item.pieceType === pieceType), available = list.filter(item => item.available), range = productRange(list);
+      addChatMessage(asksPrice ? `There are ${available.length} currently available ${pieceNumber}-piece designs. Displayed prices range from ${rangeText(range)}.` : `There are ${available.length} currently available ${pieceNumber}-piece designs. Use the Pieces filter to view them; final availability is confirmed by our team.`, 'assistant', assistantActions);
       return;
     }
   
