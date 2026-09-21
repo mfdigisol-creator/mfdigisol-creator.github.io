@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T10:10:13.141Z",
+  "generatedAt": "2026-09-21T11:49:51.195Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V1-ABR-11",
@@ -1595,28 +1595,6 @@
       "firstSeenAt": "2026-07-31T22:26:15+05:00",
       "lastSeenAt": "2026-09-12T09:39:22+05:00",
       "removedAt": "2026-09-12T15:34:26.029Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-11",
-      "id": "15380027998579-62857358672243",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 11",
-      "productName": "Flows By Almeerah Premium Printed Stripe Lawn 3PC",
-      "brand": "Almeerah",
-      "sourceBrand": "Almeerah",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3069.jpg?v=1780476500",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3069.jpg?v=1780476500",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3070.jpg?v=1780476500"
-      ],
-      "path": "products/flows-almrh-lwn-ct-3p-11-flows-by-almeerah-premium-printed-stripe-lawn-3pc/",
-      "firstSeenAt": "2026-09-14T10:00:32+05:00",
-      "lastSeenAt": "2026-09-14T10:00:32+05:00",
-      "removedAt": "2026-09-14T14:19:00.964Z",
       "reason": "supplier-removed"
     },
     {
@@ -13661,27 +13639,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "BONANZA-2PLWN-V1-ABR-02",
-      "id": "15495730168179-63965611491699",
-      "name": "Bonanza Satrangi Digital Printed All Over Two Piece Lawn 2PC — 2",
-      "productName": "Bonanza Satrangi Digital Printed All Over Two Piece Lawn 2PC",
-      "brand": "Bonanza Satrangi",
-      "sourceBrand": "Bonanza Satrangi",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2195,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/bon-02.jpg?v=1786782530",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/bon-02.jpg?v=1786782530"
-      ],
-      "path": "products/bonanza-2plwn-v1-abr-02-bonanza-satrangi-digital-printed-all-over-two-piece-lawn-2pc/",
-      "firstSeenAt": "2026-09-14T10:00:31+05:00",
-      "lastSeenAt": "2026-09-14T10:00:31+05:00",
-      "removedAt": "2026-09-14T14:19:00.964Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "BONANZA-2PLWN-V1-ABR-03",
       "id": "15495730233715-63965611557235",
       "name": "Bonanza Satrangi Digital Printed All Over Two Piece Lawn 2PC — 3",
@@ -17953,6 +17910,29 @@
       "firstSeenAt": "2026-09-01T01:34:09+05:00",
       "lastSeenAt": "2026-09-08T09:41:51+05:00",
       "removedAt": "2026-09-08T16:40:46.171Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ELAF-3PLWN-V2-UK-EPV-4B",
+      "id": "15524468949363-64292831232371",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-4B",
+      "productName": "Elaf Premium Digital Printed Lawn 3PC",
+      "brand": "Elaf",
+      "sourceBrand": "Elaf",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3150,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_ylmz99ylmz99ylmz.jpg?v=1788247154",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_ylmz99ylmz99ylmz.jpg?v=1788247154",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4B_2.jpg?v=1788180317",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4B_1.jpg?v=1788180316"
+      ],
+      "path": "products/elaf-3plwn-v2-uk-epv-4b-elaf-premium-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-21T15:10:11+05:00",
+      "removedAt": "2026-09-21T11:49:51.168Z",
       "reason": "supplier-removed"
     },
     {
@@ -23008,30 +22988,6 @@
       "firstSeenAt": "2026-09-14T10:00:32+05:00",
       "lastSeenAt": "2026-09-14T10:00:32+05:00",
       "removedAt": "2026-09-14T14:19:00.964Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "KAYSERIA-3PLWN-V13-LALA-X7205",
-      "id": "15524752621939-64294101451123",
-      "name": "Kayseria Digital Printed Lawn 3PC — X7205",
-      "productName": "Kayseria Digital Printed Lawn 3PC",
-      "brand": "Kayseria",
-      "sourceBrand": "Kayseria",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2990,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_msw06ymsw06ymsw0.jpg?v=1787986448",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_msw06ymsw06ymsw0.jpg?v=1787986448",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_cq2e7mcq2e7mcq2e.jpg?v=1787986535",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9234.jpg?v=1788023343",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_9235.jpg?v=1788023343"
-      ],
-      "path": "products/kayseria-3plwn-v13-lala-x7205-kayseria-digital-printed-lawn-3pc/",
-      "firstSeenAt": "2026-09-01T01:34:09+05:00",
-      "lastSeenAt": "2026-09-16T20:47:14+05:00",
-      "removedAt": "2026-09-16T17:01:22.283Z",
       "reason": "supplier-removed"
     },
     {
