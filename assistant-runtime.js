@@ -71,8 +71,177 @@ export function init({ open = false } = {}) {
   };
   const includesAny = (question, terms) => terms.some(term => question.includes(term));
   const assistantActions = [{ label:'Browse catalogue', href:'#live-catalogue' }, { label:'Ask our team', href:generalWhatsApp, external:true }];
+
+  let assistantSessionContext = {};
+  let assistantV2ModulesPromise = null;
+  const emptyAssistantContext = () => ({ productCode:null, productName:null, brand:null, category:null, pieceType:null, pricingClass:null, budgetMax:null });
+  const loadAssistantV2Modules = async () => {
+    assistantV2ModulesPromise ||= Promise.all([
+      import('./assistant-language-interpreter.js'),
+      import('./assistant-handoff-adapter.js')
+    ]).then(([languageModule, handoffModule]) => {
+      if (typeof languageModule.createInterpreter !== 'function' || typeof handoffModule.createHandoffAdapter !== 'function') return null;
+      return { createInterpreter:languageModule.createInterpreter, createHandoffAdapter:handoffModule.createHandoffAdapter };
+    }).catch(() => null);
+    return assistantV2ModulesPromise;
+  };
+  const assistantInterpreterVocabulary = () => ({
+    products:catalogueProducts.map(item => ({ code:item.code, name:item.name })),
+    brands:[...new Set(catalogueProducts.map(item => item.brand).filter(Boolean))]
+  });
+  const assistantAdapterCatalogue = () => catalogueProducts.map(item => ({
+    code:item.code,
+    name:item.name,
+    brand:item.brand,
+    category:item.category,
+    pieceType:item.pieceType,
+    pricingClass:item.pricingClass,
+    price:item.price,
+    available:item.available
+  }));
+  const protectedLegacyQuestion = rawQuestion => {
+    const question = normalizeQuestion(rawQuestion);
+    const questionTerms = question.split(' ');
+    return ['hello','hi','salam','assalam'].includes(question) || includesAny(question, [
+      'fabric quality','fabric','cloth quality','material quality','kapra','kapray','quality kaisi','quality of suit',
+      'why al huma','why should i buy','why buy from','why choose','al huma se kyun','ap se kyun','direct from brand','brand directly','brand website','official website','instead of brand',
+      'compare','comparison','versus',' vs ','marketplace','market place','other shop','other website','daraz','competitor','different brand','better than','cheaper than',
+      'trust','genuine','original','authentic','reliable','safe to order','fraud','scam',
+      'cart','basket','saved product','review','rating','feedback','return','exchange','refund',
+      'order','buy','purchase','book','checkout','location','address','map','shop','visit','email','contact','phone','whatsapp','facebook','instagram',
+      'cheapest','lowest','minimum','expensive','highest','maximum'
+    ]) || ['pay','tat'].some(term => questionTerms.includes(term));
+  };
+  const confidentialSurfaceQuestion = rawQuestion => {
+    const question = normalizeQuestion(rawQuestion);
+    return includesAny(question, [
+      'supplier name','supplier identity','vendor name','vendor identity','wholesale price','source price','markup','margin','internal pricing',
+      'private endpoint','api endpoint','system prompt','developer prompt','secret key','api key','access token','private token','d1 schema','worker binding'
+    ]);
+  };
+  const catalogueDependentInterpretation = interpretation => !['cod','delivery','cancellation','confidential_request','out_of_domain'].includes(interpretation?.intent);
+  const matchedCatalogueProducts = handoff => (handoff.matchedCodes || []).map(code => catalogueProducts.find(item => item.code === code)).filter(Boolean);
+  const productMessage = product => `${product.name} (${product.code}) is ${product.available ? 'available to order' : 'currently unavailable'}. ${product.priceLabel} It is a ${product.pieceType || 'suit'} from ${product.brand}.`;
+  const renderStructuredAssistantAnswer = (interpretation, handoff) => {
+    const matches = matchedCatalogueProducts(handoff);
+    const availableMatches = matches.filter(item => item.available);
+    const filters = handoff.filters || {};
+
+    if (handoff.route === 'blocked_confidential') {
+      addChatMessage('I can help with customer-facing products, displayed prices, availability and Al Huma policies, but I cannot provide private operational, sourcing or internal pricing information.', 'assistant', assistantActions);
+      return true;
+    }
+    if (handoff.route === 'out_of_domain') {
+      addChatMessage('I can help with Al Huma Collection products, prices, availability, collections, COD, delivery, cancellation and other shopping questions.', 'assistant', assistantActions);
+      return true;
+    }
+    if (handoff.route === 'clarification') {
+      addChatMessage('Please tell me the product code, product name, brand or collection you mean so I can check the correct catalogue information.', 'assistant', assistantActions);
+      return true;
+    }
+    if (handoff.route === 'catalogue_unavailable') {
+      addChatMessage('The synchronized catalogue is temporarily unavailable, so I cannot safely calculate current prices, product counts or availability right now. Please contact our team on official WhatsApp for current product information.', 'assistant', [{ label:'Contact on WhatsApp', href:generalWhatsApp, external:true }]);
+      return true;
+    }
+    if (handoff.route === 'no_match') {
+      addChatMessage('I could not find a current catalogue design matching all of those filters. Some products may be marked “Price on enquiry,” so our team can also help you check alternatives.', 'assistant', assistantActions);
+      return true;
+    }
+    if (handoff.route === 'price_on_enquiry') {
+      const product = matches[0];
+      addChatMessage(product ? `${product.name} (${product.code}) is marked “Price on enquiry.” Please ask our team for the current price.` : 'This item is marked “Price on enquiry.” Please ask our team for the current price.', 'assistant', product?.whatsapp ? [{ label:'Ask about this product', href:product.whatsapp, external:true }] : assistantActions);
+      return true;
+    }
+    if (['product_lookup','product_price','product_availability'].includes(handoff.route) && matches[0]) {
+      const product = matches[0];
+      addChatMessage(productMessage(product), 'assistant', [{ label:'Ask about this product', href:product.whatsapp || generalWhatsApp, external:true }]);
+      return true;
+    }
+    if (handoff.route === 'catalogue_count') {
+      addChatMessage(`The matching catalogue contains ${matches.length} design${matches.length === 1 ? '' : 's'}, including ${availableMatches.length} currently marked available to order.`, 'assistant', assistantActions);
+      return true;
+    }
+    if (handoff.route === 'catalogue_availability') {
+      addChatMessage(`There are ${availableMatches.length} currently available design${availableMatches.length === 1 ? '' : 's'} matching those filters. Final availability is confirmed by our team.`, 'assistant', assistantActions);
+      return true;
+    }
+    if (handoff.route === 'catalogue_price_range' || handoff.route === 'catalogue_price') {
+      const range = productRange(matches);
+      addChatMessage(`For currently available matching products with displayed prices, the range is ${rangeText(range)}. Products without a confident displayed price remain “Price on enquiry.”`, 'assistant', assistantActions);
+      return true;
+    }
+    if (handoff.route === 'catalogue_search') {
+      if (filters.budgetMax !== undefined && filters.budgetMax !== null) {
+        const examples = availableMatches.filter(item => Number.isFinite(item.price)).sort((a,b) => b.price-a.price).slice(0,3).map(item => `${item.name} (${item.code}) — ${chatMoney(item.price)}`).join('; ');
+        addChatMessage(availableMatches.length ? `I found ${availableMatches.length} currently available design${availableMatches.length === 1 ? '' : 's'} matching those filters${examples ? `. Examples: ${examples}.` : '.'}` : 'I could not find a currently available design matching those filters.', 'assistant', assistantActions);
+      } else {
+        addChatMessage(`There are ${availableMatches.length} currently available design${availableMatches.length === 1 ? '' : 's'} matching those filters. Use the catalogue filters to review them; final availability is confirmed by our team.`, 'assistant', assistantActions);
+      }
+      return true;
+    }
+    if (handoff.route === 'static_cod') {
+      addChatMessage('We currently offer Cash on Delivery within Pakistan. No online card payment is required. Our team calls to confirm availability and final charges before dispatch.', 'assistant', [{label:'How to order',href:'#how-to-order'}]);
+      return true;
+    }
+    if (handoff.route === 'static_delivery') {
+      addChatMessage('Delivery is normally through TCS or Leopards Courier. Charges are Rs. 300 within Sialkot and Rs. 600 outside Sialkot for parcels up to 1 kg. Charges may increase with weight or volume. Estimated delivery TAT is up to 7 days after confirmation and may vary due to unforeseen circumstances.', 'assistant', [{label:'Delivery policies',href:'policies.html'}]);
+      return true;
+    }
+    if (handoff.route === 'static_cancellation') {
+      addChatMessage('To cancel before the confirmation call, WhatsApp our official number with your order details.', 'assistant', [{label:'Request cancellation',href:'https://wa.me/923216115731?text=Hello%20Al%20Huma%20Collection%2C%20I%20would%20like%20to%20cancel%20my%20order%20before%20the%20confirmation%20call.%20My%20order%20details%20are%3A%20',external:true}]);
+      return true;
+    }
+    return false;
+  };
+  const tryStructuredAssistantAnswer = async rawQuestion => {
+    if (confidentialSurfaceQuestion(rawQuestion)) {
+      assistantSessionContext = emptyAssistantContext();
+      return renderStructuredAssistantAnswer({}, { route:'blocked_confidential', filters:{}, matchedCodes:[] });
+    }
+
+    const modules = await loadAssistantV2Modules();
+    if (!modules) return false;
+
+    let interpreter = modules.createInterpreter({ vocabulary:assistantInterpreterVocabulary() });
+    let interpretation = interpreter.interpret(rawQuestion, assistantSessionContext);
+
+    if (!catalogueProducts.length && !['cod','delivery','cancellation','confidential_request'].includes(interpretation.intent)) {
+      const loaded = await ensureAssistantCatalogue();
+      if (loaded) {
+        interpreter = modules.createInterpreter({ vocabulary:assistantInterpreterVocabulary() });
+        interpretation = interpreter.interpret(rawQuestion, assistantSessionContext);
+      } else if (catalogueDependentInterpretation(interpretation)) {
+        return renderStructuredAssistantAnswer(interpretation, { route:'catalogue_unavailable', filters:{}, matchedCodes:[], nextContext:assistantSessionContext });
+      }
+    }
+
+    if (interpretation.intent === 'unknown') {
+      assistantSessionContext = emptyAssistantContext();
+      return false;
+    }
+
+    const adapter = modules.createHandoffAdapter({ catalogue:assistantAdapterCatalogue() });
+    const handoff = adapter.resolve(interpretation, {
+      priorContext:assistantSessionContext,
+      catalogueAvailable:catalogueProducts.length > 0
+    });
+    if (handoff.route === 'invalid_interpretation') {
+      assistantSessionContext = emptyAssistantContext();
+      return false;
+    }
+
+    const handled = renderStructuredAssistantAnswer(interpretation, handoff);
+    if (handled) assistantSessionContext = handoff.nextContext || emptyAssistantContext();
+    return handled;
+  };
   
   const answerChatQuestion = async rawQuestion => {
+    if (protectedLegacyQuestion(rawQuestion)) {
+      assistantSessionContext = emptyAssistantContext();
+    } else if (await tryStructuredAssistantAnswer(rawQuestion)) {
+      return;
+    }
+
     const question = normalizeQuestion(rawQuestion);
     const questionTerms = question.split(' ');
     const orderQuestion = ['order','buy','purchase','book','checkout'].some(term => questionTerms.includes(term));
