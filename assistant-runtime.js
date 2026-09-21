@@ -238,6 +238,10 @@ export function init({ open = false } = {}) {
   };
   
   const answerChatQuestion = async rawQuestion => {
+    if (confidentialSurfaceQuestion(rawQuestion)) {
+      await tryStructuredAssistantAnswer(rawQuestion);
+      return;
+    }
     if (protectedLegacyQuestion(rawQuestion)) {
       assistantSessionContext = emptyAssistantContext();
     } else if (await tryStructuredAssistantAnswer(rawQuestion)) {
