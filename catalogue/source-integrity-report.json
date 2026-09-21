@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-21T11:49:51.215Z",
+  "generatedAt": "2026-09-21T18:13:00.309Z",
   "summary": {
-    "products": 348,
-    "available": 337,
-    "formal": 73,
-    "luxury": 275,
+    "products": 340,
+    "available": 328,
+    "formal": 67,
+    "luxury": 273,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 337,
-    "canonicalBrands": 43,
-    "aliasCorrections": 20,
+    "metaFeedProducts": 329,
+    "canonicalBrands": 41,
+    "aliasCorrections": 21,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 10,
     "classificationConflicts": 4,
     "unspecifiedPieces": 17,
-    "removedProducts": 1836,
-    "newlyRemovedProducts": 1,
+    "removedProducts": 1844,
+    "newlyRemovedProducts": 9,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -82,6 +82,11 @@
     },
     {
       "code": "IMP-EMBCK-PURP-2P-ABR-15",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-LPISTA-2P-ABR-22",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -189,9 +194,49 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-4B",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-4B",
-      "path": "products/elaf-3plwn-v2-uk-epv-4b-elaf-premium-digital-printed-lawn-3pc/"
+      "code": "WADA-DL-LWN-3P-14415-E",
+      "name": "Wada | Lawn | Dressline — 14415-E",
+      "path": "products/wada-dl-lwn-3p-14415-e-wada-lawn-dressline/"
+    },
+    {
+      "code": "RAIHA-LWN-V8-3P-HOB-193",
+      "name": "Raiha Premium Printed Lawn 3PC — 193",
+      "path": "products/raiha-lwn-v8-3p-hob-193-raiha-premium-printed-lawn-3pc/"
+    },
+    {
+      "code": "KAYSERIA-3PLWN-V13-LALA-X7205",
+      "name": "Kayseria Digital Printed Lawn 3PC — X7205",
+      "path": "products/kayseria-3plwn-v13-lala-x7205-kayseria-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "MOTZ-EMBLWN-QUIL-5847",
+      "name": "QUIL — 5847",
+      "path": "products/motz-emblwn-quil-5847-quil/"
+    },
+    {
+      "code": "ZARA-2PLWN-V1-ABR-04",
+      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 4",
+      "path": "products/zara-2plwn-v1-abr-04-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "LIMELIGHT-2PLWN-V2-ABR-15",
+      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 15",
+      "path": "products/limelight-2plwn-v2-abr-15-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-02",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 2",
+      "path": "products/mahira-lklwn-v1-3p-far-02-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+    },
+    {
+      "code": "BONANZA-2PLWN-V1-ABR-02",
+      "name": "Bonanza Satrangi Digital Printed All Over Two Piece Lawn 2PC — 2",
+      "path": "products/bonanza-2plwn-v1-abr-02-bonanza-satrangi-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "COCO-ZS-3PLWN-V2-LALA-04",
+      "name": "Coco By Zara Shahjahan Digital Printed Lawn 3PC — 4",
+      "path": "products/coco-zs-3plwn-v2-lala-04-coco-by-zara-shahjahan-digital-printed-lawn-3pc/"
     }
   ]
 }
