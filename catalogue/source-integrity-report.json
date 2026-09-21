@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-21T05:00:38.653Z",
+  "generatedAt": "2026-09-21T10:10:13.160Z",
   "summary": {
-    "products": 342,
-    "available": 331,
-    "formal": 68,
-    "luxury": 274,
+    "products": 346,
+    "available": 335,
+    "formal": 71,
+    "luxury": 275,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 331,
+    "metaFeedProducts": 335,
     "canonicalBrands": 42,
     "aliasCorrections": 20,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 10,
     "classificationConflicts": 4,
     "unspecifiedPieces": 17,
-    "removedProducts": 1842,
-    "newlyRemovedProducts": 4,
+    "removedProducts": 1838,
+    "newlyRemovedProducts": 1,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -189,24 +189,9 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-09",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 9",
-      "path": "products/flows-almrh-lwn-ct-3p-09-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
-    },
-    {
-      "code": "CROSS-2PLWN-V1-ABR-23",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 23",
-      "path": "products/cross-2plwn-v1-abr-23-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "GUFTGU-3PLWN-AHMD-OTL-24-216",
-      "name": "Guftagu By Orient Summer Digital Printed Lawn 3PC — OTL-24-216",
-      "path": "products/guftgu-3plwn-ahmd-otl-24-216-guftagu-by-orient-summer-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "BATIK-EMB-LWN-2P-D-1012",
-      "name": "Batik Embroidered Lawn 2PC — D-1012",
-      "path": "products/batik-emb-lwn-2p-d-1012-batik-embroidered-lawn-2pc/"
+      "code": "CROSS-2PLWN-V1-ABR-04",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 4",
+      "path": "products/cross-2plwn-v1-abr-04-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
     }
   ]
 }
