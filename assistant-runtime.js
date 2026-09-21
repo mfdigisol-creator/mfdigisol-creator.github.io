@@ -166,6 +166,7 @@ export function init({ open = false } = {}) {
       return true;
     }
     if (handoff.route === 'catalogue_price_range' || handoff.route === 'catalogue_price') {
+      if (!Object.keys(filters).length) return false;
       const range = productRange(matches);
       addChatMessage(`For currently available matching products with displayed prices, the range is ${rangeText(range)}. Products without a confident displayed price remain “Price on enquiry.”`, 'assistant', assistantActions);
       return true;
@@ -175,7 +176,8 @@ export function init({ open = false } = {}) {
         const examples = availableMatches.filter(item => Number.isFinite(item.price)).sort((a,b) => b.price-a.price).slice(0,3).map(item => `${item.name} (${item.code}) — ${chatMoney(item.price)}`).join('; ');
         addChatMessage(availableMatches.length ? `I found ${availableMatches.length} currently available design${availableMatches.length === 1 ? '' : 's'} matching those filters${examples ? `. Examples: ${examples}.` : '.'}` : 'I could not find a currently available design matching those filters.', 'assistant', assistantActions);
       } else {
-        addChatMessage(`There are ${availableMatches.length} currently available design${availableMatches.length === 1 ? '' : 's'} matching those filters. Use the catalogue filters to review them; final availability is confirmed by our team.`, 'assistant', assistantActions);
+        const rangeNote = (filters.category || filters.pricingClass) ? ` Displayed prices range from ${rangeText(productRange(matches))}.` : '';
+        addChatMessage(`There are ${availableMatches.length} currently available design${availableMatches.length === 1 ? '' : 's'} matching those filters.${rangeNote} Use the catalogue filters to review them; final availability is confirmed by our team.`, 'assistant', assistantActions);
       }
       return true;
     }
