@@ -252,7 +252,7 @@
     document.head.append(script);
   }
 
-  section.addEventListener('pointerdown', event => {
+  section.addEventListener('pointerup', event => {
     if (event.pointerType === 'mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const productCard = event.target.closest('.live-product');
     if (!productCard || !section.contains(productCard) || productCard.classList.contains('is-surface-sweeping')) return;
@@ -260,7 +260,7 @@
   });
 
   section.addEventListener('animationend', event => {
-    if (event.animationName !== 'alhuma-card-surface-tap-sweep') return;
+    if (event.animationName !== 'alhuma-card-surface-sweep') return;
     event.target.closest('.live-product')?.classList.remove('is-surface-sweeping');
   });
 
