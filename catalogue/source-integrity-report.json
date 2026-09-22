@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-22T06:46:03.966Z",
+  "generatedAt": "2026-09-22T16:59:40.975Z",
   "summary": {
-    "products": 342,
-    "available": 330,
+    "products": 340,
+    "available": 328,
     "formal": 70,
-    "luxury": 272,
-    "priceOnEnquiry": 11,
-    "metaFeedProducts": 331,
-    "canonicalBrands": 45,
+    "luxury": 270,
+    "priceOnEnquiry": 10,
+    "metaFeedProducts": 330,
+    "canonicalBrands": 43,
     "aliasCorrections": 20,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 10,
     "classificationConflicts": 4,
     "unspecifiedPieces": 17,
-    "removedProducts": 1843,
-    "newlyRemovedProducts": 1,
+    "removedProducts": 1845,
+    "newlyRemovedProducts": 10,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -42,6 +42,11 @@
     },
     {
       "code": "IMP-EMBCK-PECH-2P-ABR-19",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PURP-2P-ABR-05",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -77,11 +82,6 @@
     },
     {
       "code": "IMP-EMBCK-PAROT-2P-ABR-12",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-LPISTA-2P-ABR-22",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -158,7 +158,7 @@
     },
     {
       "value": "imported emb chickenkari lawn 2pc — 5",
-      "count": 5
+      "count": 6
     },
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
@@ -189,9 +189,54 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "MISAAL-DL-LWN-3P-FB-383-B",
-      "name": "Misaal | Lawn | Dressline — FB-383-B",
-      "path": "products/misaal-dl-lwn-3p-fb-383-b-misaal-lawn-dressline/"
+      "code": "SINGHAR-SILK-SKIN-3P-FB258",
+      "name": "Singhar | Sheesha Silk | Dressline — FB-258",
+      "path": "products/singhar-silk-skin-3p-fb258-singhar-sheesha-silk-dressline/"
+    },
+    {
+      "code": "SHAISTA-ORG-3P-14298",
+      "name": "Shaista | Organza | Dressline — 14298",
+      "path": "products/shaista-org-3p-14298-shaista-organza-dressline/"
+    },
+    {
+      "code": "MAUSUM-EMBLWN-GARNET-01",
+      "name": "Mausummery Embroidered & Printed Lawn 3PC — 1",
+      "path": "products/mausum-emblwn-garnet-01-mausummery-embroidered-and-printed-lawn-3pc/"
+    },
+    {
+      "code": "IMP-EMBCK-LPISTA-2P-ABR-22",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 22",
+      "path": "products/imp-embck-lpista-2p-abr-22-imported-emb-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "NISHAT-2PLWN-V2-ABR-13",
+      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 13",
+      "path": "products/nishat-2plwn-v2-abr-13-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "BINSAEED-LWN-V3-3P-HM-07",
+      "name": "Bin Saeed Digital Printed Lawn 3PC — 7",
+      "path": "products/binsaeed-lwn-v3-3p-hm-07-bin-saeed-digital-printed-lawn-3pc/"
+    },
+    {
+      "code": "AFREEN-LALA-HM-PRNT-07",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 7",
+      "path": "products/afreen-lala-hm-prnt-07-afreen-by-lala-airjet-printed-lawn-3pc/"
+    },
+    {
+      "code": "ABRISH-2PLWN-V2-ABR-01",
+      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 1",
+      "path": "products/abrish-2plwn-v2-abr-01-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "ABRISH-2PLWN-V2-ABR-05",
+      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 5",
+      "path": "products/abrish-2plwn-v2-abr-05-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "RANGPREET-STLWN-2P-RP-33",
+      "name": "Rang Preet Digital Printed Shirt Trouser Lawn 2PC — 33",
+      "path": "products/rangpreet-stlwn-2p-rp-33-rang-preet-digital-printed-shirt-trouser-lawn-2pc/"
     }
   ]
 }
