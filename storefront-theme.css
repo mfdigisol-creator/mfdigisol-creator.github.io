@@ -790,23 +790,6 @@ summary:focus-visible {
   }
 }
 
-@keyframes alhuma-card-surface-tap-sweep {
-  0% {
-    transform: translate3d(-115%, 0, 0) skewX(-12deg);
-    opacity: 0;
-  }
-  12% {
-    opacity: .68;
-  }
-  82% {
-    opacity: .56;
-  }
-  100% {
-    transform: translate3d(300%, 0, 0) skewX(-12deg);
-    opacity: 0;
-  }
-}
-
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .live-product:hover .live-product-surface-light::before {
     animation: alhuma-card-surface-sweep .72s cubic-bezier(.22, .7, .24, 1) 1 both;
@@ -821,7 +804,7 @@ summary:focus-visible {
   }
 
   .live-product.is-surface-sweeping .live-product-surface-light::before {
-    animation: alhuma-card-surface-tap-sweep .56s cubic-bezier(.22, .7, .24, 1) 1 both;
+    animation: alhuma-card-surface-sweep .56s cubic-bezier(.22, .7, .24, 1) 1 both;
   }
 }
 
