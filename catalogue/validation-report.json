@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-21T18:13:07.380Z",
+  "generatedAt": "2026-09-22T05:01:19.675Z",
   "summary": {
-    "products": 340,
+    "products": 341,
     "removedProducts": 1844,
-    "brands": 41,
-    "collectionPages": 43,
-    "sitemapUrls": 386,
-    "metaFeedRows": 329,
-    "metadataPages": 340,
-    "internalHtmlFiles": 2291,
+    "brands": 43,
+    "collectionPages": 45,
+    "sitemapUrls": 389,
+    "metaFeedRows": 330,
+    "metadataPages": 341,
+    "internalHtmlFiles": 2292,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "52 products currently lack retained supplier description text."
+    "53 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -46,7 +46,6 @@
       "ABRISH-2PLWN-V2-ABR-01",
       "ABRISH-2PLWN-V2-ABR-05",
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-11",
       "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
       "CHINYERE-2PLWN-V2-ABR-04",
@@ -67,7 +66,8 @@
       "JAVERIA-ORG-OFWHT-3P-04",
       "MUSE-SILK-3P-14371-A",
       "MUSE-SILK-3P-14371-B",
-      "MUSE-SILK-3P-14371-C"
+      "MUSE-SILK-3P-14371-C",
+      "MUSE-SILK-3P-14371-D"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

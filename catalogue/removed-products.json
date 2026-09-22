@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T18:13:00.287Z",
+  "generatedAt": "2026-09-22T05:01:14.285Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V1-ABR-11",
@@ -1595,6 +1595,28 @@
       "firstSeenAt": "2026-07-31T22:26:15+05:00",
       "lastSeenAt": "2026-09-12T09:39:22+05:00",
       "removedAt": "2026-09-12T15:34:26.029Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "FLOWS-ALMRH-LWN-CT-3P-11",
+      "id": "15380027998579-62857358672243",
+      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 11",
+      "productName": "Flows By Almeerah Premium Printed Stripe Lawn 3PC",
+      "brand": "Almeerah",
+      "sourceBrand": "Almeerah",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3069.jpg?v=1780476500",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3069.jpg?v=1780476500",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3070.jpg?v=1780476500"
+      ],
+      "path": "products/flows-almrh-lwn-ct-3p-11-flows-by-almeerah-premium-printed-stripe-lawn-3pc/",
+      "firstSeenAt": "2026-09-14T10:00:32+05:00",
+      "lastSeenAt": "2026-09-21T23:12:57+05:00",
+      "removedAt": "2026-09-22T05:01:14.258Z",
       "reason": "supplier-removed"
     },
     {
@@ -11514,28 +11536,6 @@
         "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4200.jpg?v=1781959175"
       ],
       "path": "products/bareze-emblwn-v2-3p-re-14-bareeze-plain-emb-lawn-with-chiffone-dupatta-3pc/",
-      "firstSeenAt": "2026-07-31T22:26:12+05:00",
-      "lastSeenAt": "2026-08-06T15:17:13+05:00",
-      "removedAt": "2026-08-31T20:34:11.601Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "BAREZE-EMBLWN-V2-3P-RE-16",
-      "id": "15413389132147-62999479222643",
-      "name": "Bareeze Plain Emb Lawn With Chiffone Dupatta 3PC — 16",
-      "productName": "Bareeze Plain Emb Lawn With Chiffone Dupatta 3PC",
-      "brand": "Bareeze",
-      "sourceBrand": "Bareeze",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "price": 5895,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4187.jpg?v=1781959236",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4187.jpg?v=1781959236",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4188.jpg?v=1781959236"
-      ],
-      "path": "products/bareze-emblwn-v2-3p-re-16-bareeze-plain-emb-lawn-with-chiffone-dupatta-3pc/",
       "firstSeenAt": "2026-07-31T22:26:12+05:00",
       "lastSeenAt": "2026-08-06T15:17:13+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
@@ -21537,6 +21537,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "GULAHMED-LWN-V1-3P-LDS-02",
+      "id": "15405835780467-62941629284723",
+      "name": "Gul Ahmed Printed Doriya Lawn 3PC — 2",
+      "productName": "Gul Ahmed Printed Doriya Lawn 3PC",
+      "brand": "Gul Ahmed",
+      "sourceBrand": "Gul Ahmed",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4265.jpg?v=1781374666",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4265.jpg?v=1781374666",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-4266.jpg?v=1781374666"
+      ],
+      "path": "products/gulahmed-lwn-v1-3p-lds-02-gul-ahmed-printed-doriya-lawn-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-09-21T23:12:57+05:00",
+      "removedAt": "2026-09-22T05:01:14.258Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "GULAHMED-LWN-V1-3P-LDS-05",
       "id": "15405835878771-62941629481331",
       "name": "Gul Ahmed Printed Doriya Lawn 3PC — 5",
@@ -21853,6 +21875,28 @@
       "firstSeenAt": "2026-09-02T21:37:05+05:00",
       "lastSeenAt": "2026-09-17T22:02:41+05:00",
       "removedAt": "2026-09-18T04:48:00.566Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "IMP-EMBCK-PURP-2P-ABR-15",
+      "id": "15403423793523-62932973814131",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 15",
+      "productName": "Imported Emb Chickenkari Lawn 3PC",
+      "brand": "Imported",
+      "sourceBrand": "lmported",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14616_2.jpg?v=1784548827",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14616_2.jpg?v=1784548827",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14616_1.jpg?v=1784548827"
+      ],
+      "path": "products/imp-embck-purp-2p-abr-15-imported-emb-chickenkari-lawn-3pc/",
+      "firstSeenAt": "2026-09-02T21:37:05+05:00",
+      "lastSeenAt": "2026-09-21T23:12:58+05:00",
+      "removedAt": "2026-09-22T05:01:14.258Z",
       "reason": "supplier-removed"
     },
     {
@@ -29812,29 +29856,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "MARIAB-LWN-3P-1916",
-      "id": "15380228604275-62858140975475",
-      "name": "Maria B Plain Embroidered Lawn 3PC — 1916",
-      "productName": "Maria B Plain Embroidered Lawn 3PC",
-      "brand": "Maria B",
-      "sourceBrand": "Maria B",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "price": 7132,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3255.jpg?v=1780489101",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3255.jpg?v=1780489101",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3256.jpg?v=1780489101",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/D-2607-A_MariaBRedPremiumEmbroideredNetStitchedSuit1.webp?v=1782897627"
-      ],
-      "path": "products/mariab-lwn-3p-1916-maria-b-plain-embroidered-lawn-3pc/",
-      "firstSeenAt": "2026-09-01T01:34:10+05:00",
-      "lastSeenAt": "2026-09-13T09:52:36+05:00",
-      "removedAt": "2026-09-13T16:21:20.290Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "MAROOJ-LWN-V30-3P-04",
       "id": "15289292325235-62520040325491",
       "name": "Marooj Gold Magic Printed Lawn 3PC — 4",
@@ -33728,30 +33749,6 @@
         "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14_1_001314db-4036-4e2c-9804-6cf34cb12b8e.png?v=1771092225"
       ],
       "path": "products/parizad-lwn-v5-2p-14-parizad-by-paltar-premium-printed-lawn-2pc/",
-      "firstSeenAt": "2026-07-31T22:26:14+05:00",
-      "lastSeenAt": "2026-08-06T15:17:14+05:00",
-      "removedAt": "2026-08-31T20:34:11.602Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "PARIZAD-PLTR-LWN-V11-2P-14",
-      "id": "15386701857139-62902636216691",
-      "name": "Parizad By Paltar Premium Printed Lawn 2PC — 14",
-      "productName": "Parizad By Paltar Premium Printed Lawn 2PC",
-      "brand": "Paltar",
-      "sourceBrand": "Paltar",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 2695,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P14_2.jpg?v=1780330951",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P14_2.jpg?v=1780330951",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P14_1.jpg?v=1780330952",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P14_3.jpg?v=1780330951",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/P14_4.jpg?v=1780330952"
-      ],
-      "path": "products/parizad-pltr-lwn-v11-2p-14-parizad-by-paltar-premium-printed-lawn-2pc/",
       "firstSeenAt": "2026-07-31T22:26:14+05:00",
       "lastSeenAt": "2026-08-06T15:17:14+05:00",
       "removedAt": "2026-08-31T20:34:11.602Z",
