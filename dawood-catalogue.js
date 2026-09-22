@@ -155,6 +155,7 @@
   function card(product, eager = false) {
     const priceLabel = product.price == null ? '<small>Pricing</small><strong>Price on enquiry</strong>' : `<small>${escapeHtml(product.code)}</small><strong>${money(product.price)}</strong>`;
     return `<article class="live-product" data-product-code="${escapeHtml(product.code)}">
+      <span class="live-product-surface-light" aria-hidden="true"></span>
       <button class="live-product-open" type="button" data-open-product="${escapeHtml(product.code)}" aria-label="View ${escapeHtml(product.name)} details">
         <span class="live-product-media">${responsiveImage(product.image, product.name, { eager })}<span class="live-product-badge${product.available ? '' : ' sold'}">${product.available ? 'Available to order' : 'Currently unavailable'}</span></span>
         <span class="live-product-copy"><span class="live-product-brand">${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</span><strong class="live-product-name">${escapeHtml(product.name)}</strong><span class="live-product-row"><span class="live-price">${priceLabel}</span><span class="live-view">View details ↗</span></span></span>
@@ -250,6 +251,18 @@
     script.textContent = JSON.stringify({ '@context':'https://schema.org','@type':'Product',name:product.name,sku:product.code,image:product.images?.length ? product.images : [product.image],description:description.text,brand:{'@type':'Brand',name:product.brand},offers:product.price == null ? undefined : {'@type':'Offer',priceCurrency:'PKR',price:product.price,availability:product.available ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',url:productUrl(product)} });
     document.head.append(script);
   }
+
+  section.addEventListener('pointerdown', event => {
+    if (event.pointerType === 'mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const productCard = event.target.closest('.live-product');
+    if (!productCard || !section.contains(productCard) || productCard.classList.contains('is-surface-sweeping')) return;
+    productCard.classList.add('is-surface-sweeping');
+  });
+
+  section.addEventListener('animationend', event => {
+    if (event.animationName !== 'alhuma-card-surface-tap-sweep') return;
+    event.target.closest('.live-product')?.classList.remove('is-surface-sweeping');
+  });
 
   section.addEventListener('click', event => {
     const open = event.target.closest('[data-open-product]'); if (open) openProduct(open.dataset.openProduct);
