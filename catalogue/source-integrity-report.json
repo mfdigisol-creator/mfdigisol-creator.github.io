@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-22T05:01:14.305Z",
+  "generatedAt": "2026-09-22T06:46:03.966Z",
   "summary": {
-    "products": 341,
-    "available": 329,
-    "formal": 68,
-    "luxury": 273,
+    "products": 342,
+    "available": 330,
+    "formal": 70,
+    "luxury": 272,
     "priceOnEnquiry": 11,
-    "metaFeedProducts": 330,
-    "canonicalBrands": 43,
+    "metaFeedProducts": 331,
+    "canonicalBrands": 45,
     "aliasCorrections": 20,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 10,
     "classificationConflicts": 4,
     "unspecifiedPieces": 17,
-    "removedProducts": 1844,
-    "newlyRemovedProducts": 3,
+    "removedProducts": 1843,
+    "newlyRemovedProducts": 1,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -189,19 +189,9 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "GULAHMED-LWN-V1-3P-LDS-02",
-      "name": "Gul Ahmed Printed Doriya Lawn 3PC — 2",
-      "path": "products/gulahmed-lwn-v1-3p-lds-02-gul-ahmed-printed-doriya-lawn-3pc/"
-    },
-    {
-      "code": "IMP-EMBCK-PURP-2P-ABR-15",
-      "name": "Imported Emb Chickenkari Lawn 3PC — 15",
-      "path": "products/imp-embck-purp-2p-abr-15-imported-emb-chickenkari-lawn-3pc/"
-    },
-    {
-      "code": "FLOWS-ALMRH-LWN-CT-3P-11",
-      "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 11",
-      "path": "products/flows-almrh-lwn-ct-3p-11-flows-by-almeerah-premium-printed-stripe-lawn-3pc/"
+      "code": "MISAAL-DL-LWN-3P-FB-383-B",
+      "name": "Misaal | Lawn | Dressline — FB-383-B",
+      "path": "products/misaal-dl-lwn-3p-fb-383-b-misaal-lawn-dressline/"
     }
   ]
 }
