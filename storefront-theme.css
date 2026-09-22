@@ -742,3 +742,77 @@ summary:focus-visible {
   }
 }
 
+
+/* Product-card surface light: interaction-only and clipped independently from the perimeter light. */
+.live-product-surface-light {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.live-product-surface-light::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 52%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(248, 238, 215, 0) 18%,
+    rgba(248, 238, 215, .08) 36%,
+    rgba(248, 238, 215, .28) 50%,
+    rgba(215, 194, 154, .16) 62%,
+    rgba(248, 238, 215, 0) 82%,
+    transparent 100%
+  );
+  transform: translate3d(-115%, 0, 0) skewX(-12deg);
+  opacity: 0;
+}
+
+@keyframes alhuma-card-surface-sweep {
+  0% {
+    transform: translate3d(-115%, 0, 0) skewX(-12deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: .68;
+  }
+  82% {
+    opacity: .56;
+  }
+  100% {
+    transform: translate3d(300%, 0, 0) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .live-product:hover .live-product-surface-light::before {
+    animation: alhuma-card-surface-sweep .72s cubic-bezier(.22, .7, .24, 1) 1 both;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports selector(.live-product:has(:focus-visible)) {
+    .live-product:has(:focus-visible) .live-product-surface-light::before {
+      animation: alhuma-card-surface-sweep .72s cubic-bezier(.22, .7, .24, 1) 1 both;
+    }
+  }
+
+  .live-product.is-surface-sweeping .live-product-surface-light::before {
+    animation: alhuma-card-surface-sweep .56s cubic-bezier(.22, .7, .24, 1) 1 both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-product-surface-light::before {
+    animation: none !important;
+    opacity: 0 !important;
+    transform: translate3d(-115%, 0, 0) skewX(-12deg) !important;
+  }
+}
+
