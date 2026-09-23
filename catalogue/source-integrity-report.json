@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-22T16:59:40.975Z",
+  "generatedAt": "2026-09-23T04:48:53.683Z",
   "summary": {
-    "products": 340,
-    "available": 328,
-    "formal": 70,
+    "products": 335,
+    "available": 323,
+    "formal": 65,
     "luxury": 270,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 330,
-    "canonicalBrands": 43,
+    "metaFeedProducts": 325,
+    "canonicalBrands": 41,
     "aliasCorrections": 20,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 10,
     "classificationConflicts": 4,
     "unspecifiedPieces": 17,
-    "removedProducts": 1845,
-    "newlyRemovedProducts": 10,
+    "removedProducts": 1850,
+    "newlyRemovedProducts": 5,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -189,54 +189,29 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "SINGHAR-SILK-SKIN-3P-FB258",
-      "name": "Singhar | Sheesha Silk | Dressline — FB-258",
-      "path": "products/singhar-silk-skin-3p-fb258-singhar-sheesha-silk-dressline/"
+      "code": "BAREZE-EMBLWN-V2-3P-RE-16",
+      "name": "Bareeze Plain Emb Lawn With Chiffone Dupatta 3PC — 16",
+      "path": "products/bareze-emblwn-v2-3p-re-16-bareeze-plain-emb-lawn-with-chiffone-dupatta-3pc/"
     },
     {
-      "code": "SHAISTA-ORG-3P-14298",
-      "name": "Shaista | Organza | Dressline — 14298",
-      "path": "products/shaista-org-3p-14298-shaista-organza-dressline/"
+      "code": "KHAAS-SHN-V186-3P-08",
+      "name": "Khaas By Shanaya Digital Printed Lawn 3PC — 8",
+      "path": "products/khaas-shn-v186-3p-08-khaas-by-shanaya-digital-printed-lawn-3pc/"
     },
     {
-      "code": "MAUSUM-EMBLWN-GARNET-01",
-      "name": "Mausummery Embroidered & Printed Lawn 3PC — 1",
-      "path": "products/mausum-emblwn-garnet-01-mausummery-embroidered-and-printed-lawn-3pc/"
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-02",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 2",
+      "path": "products/mahira-lklwn-v1-3p-far-02-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
     },
     {
-      "code": "IMP-EMBCK-LPISTA-2P-ABR-22",
-      "name": "Imported Emb Chickenkari Lawn 3PC — 22",
-      "path": "products/imp-embck-lpista-2p-abr-22-imported-emb-chickenkari-lawn-3pc/"
+      "code": "BINSAEED-LWN-V1-3P-HM-24",
+      "name": "Bin Saeed Digital Printed Lawn 3PC — 24",
+      "path": "products/binsaeed-lwn-v1-3p-hm-24-bin-saeed-digital-printed-lawn-3pc/"
     },
     {
-      "code": "NISHAT-2PLWN-V2-ABR-13",
-      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 13",
-      "path": "products/nishat-2plwn-v2-abr-13-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "BINSAEED-LWN-V3-3P-HM-07",
-      "name": "Bin Saeed Digital Printed Lawn 3PC — 7",
-      "path": "products/binsaeed-lwn-v3-3p-hm-07-bin-saeed-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "AFREEN-LALA-HM-PRNT-07",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 7",
-      "path": "products/afreen-lala-hm-prnt-07-afreen-by-lala-airjet-printed-lawn-3pc/"
-    },
-    {
-      "code": "ABRISH-2PLWN-V2-ABR-01",
-      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 1",
-      "path": "products/abrish-2plwn-v2-abr-01-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "ABRISH-2PLWN-V2-ABR-05",
-      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 5",
-      "path": "products/abrish-2plwn-v2-abr-05-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "RANGPREET-STLWN-2P-RP-33",
-      "name": "Rang Preet Digital Printed Shirt Trouser Lawn 2PC — 33",
-      "path": "products/rangpreet-stlwn-2p-rp-33-rang-preet-digital-printed-shirt-trouser-lawn-2pc/"
+      "code": "BAREEZE-V2LWN-DMEHN-2P-DD-01",
+      "name": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC — 1",
+      "path": "products/bareeze-v2lwn-dmehn-2p-dd-01-bareeze-plain-emb-shirt-and-trouser-lawn-2pc/"
     }
   ]
 }
