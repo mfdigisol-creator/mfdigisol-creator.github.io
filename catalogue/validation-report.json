@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-23T17:05:47.807Z",
+  "generatedAt": "2026-09-24T04:56:18.282Z",
   "summary": {
-    "products": 338,
-    "removedProducts": 1853,
-    "brands": 41,
-    "collectionPages": 43,
-    "sitemapUrls": 384,
-    "metaFeedRows": 328,
-    "metadataPages": 338,
+    "products": 335,
+    "removedProducts": 1856,
+    "brands": 40,
+    "collectionPages": 42,
+    "sitemapUrls": 380,
+    "metaFeedRows": 325,
+    "metadataPages": 335,
     "internalHtmlFiles": 2298,
     "errors": 0,
     "warnings": 2
@@ -16,7 +16,7 @@
   "errors": [],
   "warnings": [
     "4 products contain “Luxury” but inherit the Formal supplier section.",
-    "48 products currently lack retained supplier description text."
+    "46 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -43,7 +43,6 @@
       }
     ],
     "missingDescriptions": [
-      "ABRISH-2PLWN-V2-ABR-04",
       "FLEUR-ALMRH-LWN-CT-3P-09",
       "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
@@ -67,7 +66,8 @@
       "MUSE-SILK-3P-14371-C",
       "MUSE-SILK-3P-14371-D",
       "ELAN-2PLWN-V1-ABR-04",
-      "ELAN-2PLWN-V1-ABR-05"
+      "ELAN-2PLWN-V1-ABR-05",
+      "LIMELIGHT-2PLWN-V2-ABR-02"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -141,6 +141,11 @@
         "path": "products/abrish-2plwn-v1-abr-04-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       },
       {
+        "code": "ABRISH-2PLWN-V2-ABR-04",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 4",
+        "path": "products/abrish-2plwn-v2-abr-04-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
+      {
         "code": "ABRISH-2PLWN-V1-ABR-43",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 43",
         "path": "products/abrish-2plwn-v1-abr-43-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
@@ -194,11 +199,6 @@
         "code": "AFSARAH-EMB-3P-EHT-1935",
         "name": "Afsarah Apparel Plain Emb Lawm 3PC — 1935",
         "path": "products/afsarah-emb-3p-eht-1935-afsarah-apparel-plain-emb-lawm-3pc/"
-      },
-      {
-        "code": "AGHA-EMB-PLAIN-3P-1882",
-        "name": "Agha Noor Luxury Embroidered Lawn 3PC — 1882",
-        "path": "products/agha-emb-plain-3p-1882-agha-noor-luxury-embroidered-lawn-3pc/"
       }
     ]
   },
