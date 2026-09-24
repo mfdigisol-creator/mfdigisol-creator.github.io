@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-24T04:56:11.495Z",
+  "generatedAt": "2026-09-24T17:14:45.258Z",
   "summary": {
-    "products": 335,
-    "available": 323,
-    "formal": 61,
-    "luxury": 274,
+    "products": 434,
+    "available": 421,
+    "formal": 158,
+    "luxury": 276,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 325,
-    "canonicalBrands": 40,
-    "aliasCorrections": 19,
+    "metaFeedProducts": 424,
+    "canonicalBrands": 54,
+    "aliasCorrections": 21,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 11,
-    "classificationConflicts": 4,
+    "duplicateNames": 13,
+    "classificationConflicts": 3,
     "unspecifiedPieces": 17,
-    "removedProducts": 1856,
-    "newlyRemovedProducts": 3,
+    "removedProducts": 1769,
+    "newlyRemovedProducts": 8,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -71,12 +71,22 @@
       "canonicalBrand": "Imported"
     },
     {
+      "code": "IMP-EMBCK-SKY-2P-ABR-06",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
       "code": "IMP-EMBCK-BRWN-2P-ABR-12",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
     {
       "code": "IMP-EMBCK-PAROT-2P-ABR-12",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-GREN-2P-ABR-18",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -120,6 +130,18 @@
   "duplicatePaths": [],
   "duplicateNames": [
     {
+      "value": "abrish digital printed all over two piece lawn 2pc — 3",
+      "count": 2
+    },
+    {
+      "value": "bareeze plain emb shirt & trouser lawn 2pc — 1",
+      "count": 2
+    },
+    {
+      "value": "bareeze plain emb shirt & trouser lawn 2pc — 2",
+      "count": 2
+    },
+    {
       "value": "aira | organza | dressline — 1547",
       "count": 4
     },
@@ -158,10 +180,6 @@
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
       "count": 2
-    },
-    {
-      "value": "limelight digital printed all over two piece lawn 2pc — 6",
-      "count": 2
     }
   ],
   "classificationConflicts": [
@@ -179,28 +197,48 @@
       "code": "MUSHQ-EMB-PLAIN-3P-1881",
       "name": "Mushq Luxury Embroidered Lawn 3PC — 1881",
       "category": "Formal"
-    },
-    {
-      "code": "ZS-3P-EMB-D-1032",
-      "name": "Zara Shahjahan Emb Luxury Lawn 3PC",
-      "category": "Formal"
     }
   ],
   "newlyRemovedProducts": [
     {
-      "code": "SUMERQUEN-LWN-V2-3P-SQ-11",
-      "name": "Summer Queen By Parishay Vol-2 | Lawn'26 — SQ-11",
-      "path": "products/sumerquen-lwn-v2-3p-sq-11-summer-queen-by-parishay-vol-2-lawn-26/"
+      "code": "MARIAB-LWN-3P-1916",
+      "name": "Maria B Plain Embroidered Lawn 3PC — 1916",
+      "path": "products/mariab-lwn-3p-1916-maria-b-plain-embroidered-lawn-3pc/"
     },
     {
-      "code": "ABRISH-2PLWN-V2-ABR-04",
-      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 4",
-      "path": "products/abrish-2plwn-v2-abr-04-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "SAHIBA-CKLWN-V17-3P-PF-636",
+      "name": "Sahiba By Pak Fabrics Printed & Emb Chickenkari Lawn 3PC — D-636",
+      "path": "products/sahiba-cklwn-v17-3p-pf-636-sahiba-by-pak-fabrics-printed-and-emb-chickenkari-lawn-3pc/"
     },
     {
-      "code": "NISHAT-2PLWN-V2-ABR-02",
-      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 2",
-      "path": "products/nishat-2plwn-v2-abr-02-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "ZS-3P-EMB-D-1032",
+      "name": "Zara Shahjahan Emb Luxury Lawn 3PC",
+      "path": "products/zs-3p-emb-d-1032-zara-shahjahan-emb-luxury-lawn-3pc/"
+    },
+    {
+      "code": "MARIAB-LWN-WHITE-3P-D-17153",
+      "name": "Maria B Digital Printed Lawn With Chiffon Dupatta 3PC — D-17153",
+      "path": "products/mariab-lwn-white-3p-d-17153-maria-b-digital-printed-lawn-with-chiffon-dupatta-3pc/"
+    },
+    {
+      "code": "LIMELIGHT-2PLWN-V1-ABR-06",
+      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 6",
+      "path": "products/limelight-2plwn-v1-abr-06-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "MUSHQ-EMB-LWN-3P-1860",
+      "name": "Mushq Embroidered Lawn 3PC — 1860",
+      "path": "products/mushq-emb-lwn-3p-1860-mushq-embroidered-lawn-3pc/"
+    },
+    {
+      "code": "ELAN-2PLWN-V1-ABR-04",
+      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 4",
+      "path": "products/elan-2plwn-v1-abr-04-elan-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "SAPPHIRE-2PLWN-V1-ABR-03",
+      "name": "Sapphire Digital Printed All Over Two Piece Lawn 2PC — 3",
+      "path": "products/sapphire-2plwn-v1-abr-03-sapphire-digital-printed-all-over-two-piece-lawn-2pc/"
     }
   ]
 }
