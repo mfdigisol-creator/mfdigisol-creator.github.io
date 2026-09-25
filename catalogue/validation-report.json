@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-25T05:01:14.496Z",
+  "generatedAt": "2026-09-25T17:15:15.987Z",
   "summary": {
-    "products": 371,
-    "removedProducts": 1832,
-    "brands": 47,
-    "collectionPages": 49,
-    "sitemapUrls": 423,
-    "metaFeedRows": 361,
-    "metadataPages": 371,
-    "internalHtmlFiles": 2310,
+    "products": 361,
+    "removedProducts": 1843,
+    "brands": 48,
+    "collectionPages": 50,
+    "sitemapUrls": 414,
+    "metaFeedRows": 351,
+    "metadataPages": 361,
+    "internalHtmlFiles": 2311,
     "errors": 0,
     "warnings": 2
   },
   "errors": [],
   "warnings": [
     "3 products contain “Luxury” but inherit the Formal supplier section.",
-    "57 products currently lack retained supplier description text."
+    "58 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -38,17 +38,18 @@
       }
     ],
     "missingDescriptions": [
+      "ABRISH-2PLWN-V1-ABR-57",
       "FLEUR-ALMRH-LWN-CT-3P-09",
       "FLOWS-ALMRH-LWN-CT-3P-14",
-      "P&P-ALMRH-LWN-CT-3P-17",
       "BONANZA-2PLWN-V1-ABR-10",
       "BONANZA-2PLWN-V1-ABR-06",
+      "CHINYERE-2PLWN-V2-ABR-04",
       "CHINYERE-2PLWN-V2-ABR-05",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
-      "CROSS-2PLWN-V2-ABR-06",
+      "CROSS-2PLWN-V2-ABR-07",
       "CS-EMB-LWN-3P-1856",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
@@ -61,7 +62,6 @@
       "JAVERIA-ORG-OFWHT-3P-04",
       "MUSE-SILK-3P-14371-A",
       "MUSE-SILK-3P-14371-B",
-      "MUSE-SILK-3P-14371-C",
       "MUSE-SILK-3P-14371-D"
     ],
     "duplicateTitles": [],
