@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-25T17:15:15.987Z",
+  "generatedAt": "2026-09-26T05:03:20.766Z",
   "summary": {
-    "products": 361,
-    "removedProducts": 1843,
-    "brands": 48,
-    "collectionPages": 50,
-    "sitemapUrls": 414,
-    "metaFeedRows": 351,
-    "metadataPages": 361,
+    "products": 337,
+    "removedProducts": 1867,
+    "brands": 43,
+    "collectionPages": 45,
+    "sitemapUrls": 385,
+    "metaFeedRows": 327,
+    "metadataPages": 337,
     "internalHtmlFiles": 2311,
     "errors": 0,
     "warnings": 2
@@ -16,7 +16,7 @@
   "errors": [],
   "warnings": [
     "3 products contain “Luxury” but inherit the Formal supplier section.",
-    "58 products currently lack retained supplier description text."
+    "45 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -40,16 +40,12 @@
     "missingDescriptions": [
       "ABRISH-2PLWN-V1-ABR-57",
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-14",
       "BONANZA-2PLWN-V1-ABR-10",
-      "BONANZA-2PLWN-V1-ABR-06",
-      "CHINYERE-2PLWN-V2-ABR-04",
       "CHINYERE-2PLWN-V2-ABR-05",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
-      "CROSS-2PLWN-V2-ABR-07",
       "CS-EMB-LWN-3P-1856",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
@@ -62,7 +58,11 @@
       "JAVERIA-ORG-OFWHT-3P-04",
       "MUSE-SILK-3P-14371-A",
       "MUSE-SILK-3P-14371-B",
-      "MUSE-SILK-3P-14371-D"
+      "MUSE-SILK-3P-14371-D",
+      "ELAN-2PLWN-V1-ABR-03",
+      "ELAN-2PLWN-V1-ABR-05",
+      "LIMELIGHT-2PLWN-V2-ABR-15",
+      "LIMELIGHT-2PLWN-V2-ABR-02"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
