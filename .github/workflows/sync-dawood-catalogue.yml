@@ -137,7 +137,7 @@ jobs:
           node --check dawood-catalogue.js
           node --check analytics.js
           node scripts/test-product-descriptions.mjs
-          node scripts/validate-catalogue.mjs
+          node scripts/validate-catalogue.mjs || { cat catalogue/validation-report.json; exit 1; }
           node scripts/validate-merchant-policy.mjs
           node scripts/validate-search-ecosystem-consistency.mjs
           node scripts/validate-analytics-measurement.mjs
