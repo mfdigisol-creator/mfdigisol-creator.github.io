@@ -19,7 +19,6 @@ const MIN_SOURCE_PRODUCTS = 100;
 const MIN_SOURCE_COLLECTIONS = 20;
 const MAX_AMBIGUOUS_SHARE = 0.10;
 const MAX_AMBIGUOUS_ABSOLUTE_WITHOUT_REVIEW = 50;
-const MIN_COLLECTION_MEMBERSHIP_SHARE = 0.50;
 const MAX_DOWNSTREAM_PRODUCTS = 10_000;
 const DRY_RUN = process.argv.includes('--dry-run');
 
@@ -123,21 +122,19 @@ function assertProductSchema(products) {
 }
 
 async function discoverSupplier() {
-  const [products, rawCollections] = await Promise.all([
-    fetchPaged('/products.json', 'products', { maxPages: 80 }),
-    fetchPaged('/collections.json', 'collections', { maxPages: 20 })
-  ]);
+  const rawCollections = await fetchPaged('/collections.json', 'collections', { maxPages: 20 });
   const collections = rawCollections.map(normalizeCollection);
-  const schemaHealth = assertProductSchema(products);
-  if (products.length < MIN_SOURCE_PRODUCTS) throw new Error(`Supplier discovery returned only ${products.length} products; refusing probable source drift.`);
   if (collections.length < MIN_SOURCE_COLLECTIONS) throw new Error(`Supplier discovery returned only ${collections.length} collections; refusing probable source drift.`);
-  return { products, collections, schemaHealth };
+  return { collections };
 }
 
 async function buildCollectionMemberships(collections) {
   const membership = new Map();
+  const productMap = new Map();
   const anomalies = [];
+  let fetchedMemberships = 0;
   const active = collections.filter(collection => collection.handle && collection.productsCount > 0);
+  const reportedMemberships = active.reduce((sum, collection) => sum + collection.productsCount, 0);
   const discovered = await mapLimit(active, 6, async collection => {
     const maxPages = Math.max(2, Math.ceil(collection.productsCount / 250) + 2);
     try {
@@ -163,9 +160,11 @@ async function buildCollectionMemberships(collections) {
       reportedProducts: collection.productsCount,
       anomaly
     });
+    fetchedMemberships += products.length;
     for (const product of products) {
       const key = String(product?.id ?? '');
       if (!key) continue;
+      if (!productMap.has(key)) productMap.set(key, product);
       if (!membership.has(key)) membership.set(key, []);
       membership.get(key).push(collection);
     }
@@ -174,7 +173,14 @@ async function buildCollectionMemberships(collections) {
   for (const list of membership.values()) {
     list.sort((a, b) => a.title.localeCompare(b.title) || a.handle.localeCompare(b.handle));
   }
-  return { membership, anomalies, activeCollections: active.length };
+  return {
+    membership,
+    products: [...productMap.values()],
+    anomalies,
+    activeCollections: active.length,
+    reportedMemberships,
+    fetchedMemberships
+  };
 }
 
 function taxonomyFingerprint(products, collections) {
@@ -246,9 +252,7 @@ function normalizeProduct(product, classification) {
 function buildDriftReport({ source, scope, products, previous, snapshot, priorSnapshot }) {
   const previousCount = Array.isArray(previous.products) ? previous.products.length : 0;
   const ambiguousShare = source.products.length ? scope.ambiguous / source.products.length : 1;
-  const membershipShare = source.products.length
-    ? [...source.products].filter(product => source.memberships.has(String(product.id))).length / source.products.length
-    : 0;
+  const collectionCoverage = source.reportedMemberships > 0 ? source.fetchedMemberships / source.reportedMemberships : 0;
   const allowedCollectionAnomalies = Math.max(5, Math.ceil(source.activeCollections * 0.05));
   const minimumAfterShrink = previousCount
     ? Math.floor(previousCount * (1 - MAX_CATALOGUE_SHRINK_PERCENT / 100))
@@ -258,7 +262,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
     { id: 'source-product-floor', ok: source.products.length >= MIN_SOURCE_PRODUCTS, actual: source.products.length, required: MIN_SOURCE_PRODUCTS },
     { id: 'source-collection-floor', ok: source.collections.length >= MIN_SOURCE_COLLECTIONS, actual: source.collections.length, required: MIN_SOURCE_COLLECTIONS },
     { id: 'collection-fetch-anomalies', ok: source.collectionAnomalies.length <= allowedCollectionAnomalies, actual: source.collectionAnomalies.length, requiredMaximum: allowedCollectionAnomalies },
-    { id: 'collection-membership-share', ok: membershipShare >= MIN_COLLECTION_MEMBERSHIP_SHARE, actual: membershipShare, required: MIN_COLLECTION_MEMBERSHIP_SHARE },
+    { id: 'collection-product-coverage', ok: collectionCoverage >= 0.90, actual: collectionCoverage, required: 0.90, fetchedMemberships: source.fetchedMemberships, reportedMemberships: source.reportedMemberships },
     { id: 'ambiguous-scope-share', ok: scope.ambiguous <= MAX_AMBIGUOUS_ABSOLUTE_WITHOUT_REVIEW || ambiguousShare <= MAX_AMBIGUOUS_SHARE, actual: ambiguousShare, count: scope.ambiguous, required: MAX_AMBIGUOUS_SHARE },
     { id: 'catalogue-emergency-floor', ok: products.length >= MIN_CATALOGUE_PRODUCTS, actual: products.length, required: MIN_CATALOGUE_PRODUCTS },
     { id: 'catalogue-shrink-limit', ok: !previousCount || products.length >= minimumAfterShrink, actual: products.length, required: minimumAfterShrink, previous: previousCount },
@@ -280,7 +284,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
       candidateProducts: products.length,
       previousCatalogueProducts: previousCount,
       candidateVsPreviousPercent: percent(products.length, previousCount),
-      collectionMembershipShare: membershipShare,
+      collectionProductCoverage: collectionCoverage,
       taxonomyFingerprint: snapshot.taxonomyFingerprint,
       previousTaxonomyFingerprint: priorSnapshot.taxonomyFingerprint || null
     },
@@ -334,7 +338,10 @@ async function main() {
   const discovered = await discoverSupplier();
   const membershipDiscovery = await buildCollectionMemberships(discovered.collections);
   const memberships = membershipDiscovery.membership;
-  const classified = discovered.products.map(product => ({
+  const sourceProducts = membershipDiscovery.products;
+  const schemaHealth = assertProductSchema(sourceProducts);
+  if (sourceProducts.length < MIN_SOURCE_PRODUCTS) throw new Error(`Supplier collection discovery returned only ${sourceProducts.length} unique products; refusing probable source drift.`);
+  const classified = sourceProducts.map(product => ({
     product,
     classification: classifyProduct(product, memberships.get(String(product.id)) || [])
   }));
@@ -362,23 +369,23 @@ async function main() {
     })
     .sort((a, b) => Number(b.available) - Number(a.available) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
 
-  const collectionMembershipProducts = discovered.products.filter(product => memberships.has(String(product.id))).length;
   const snapshot = {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
     source: SOURCE,
-    sourceProducts: discovered.products.length,
+    sourceProducts: sourceProducts.length,
     sourceCollections: discovered.collections.length,
-    collectionMembershipProducts,
-    collectionMembershipShare: discovered.products.length ? collectionMembershipProducts / discovered.products.length : 0,
     activeSourceCollections: membershipDiscovery.activeCollections,
+    reportedCollectionMemberships: membershipDiscovery.reportedMemberships,
+    fetchedCollectionMemberships: membershipDiscovery.fetchedMemberships,
+    collectionProductCoverage: membershipDiscovery.reportedMemberships > 0 ? membershipDiscovery.fetchedMemberships / membershipDiscovery.reportedMemberships : 0,
     collectionAnomalies: membershipDiscovery.anomalies,
     includedSourceProducts: scope.included,
     excludedSourceProducts: scope.excluded,
     ambiguousSourceProducts: scope.ambiguous,
     candidateProducts: products.length,
-    taxonomyFingerprint: taxonomyFingerprint(discovered.products, discovered.collections),
-    schemaHealth: discovered.schemaHealth,
+    taxonomyFingerprint: taxonomyFingerprint(sourceProducts, discovered.collections),
+    schemaHealth,
     seasons: [...new Set(classified.flatMap(item => item.classification.seasons))].sort(),
     brands: [...new Set(products.map(item => item.brand).filter(Boolean))].sort(),
     collections: discovered.collections.map(collection => ({
@@ -392,10 +399,14 @@ async function main() {
 
   const source = {
     ...discovered,
+    products: sourceProducts,
+    schemaHealth,
     memberships,
     classified,
     activeCollections: membershipDiscovery.activeCollections,
-    collectionAnomalies: membershipDiscovery.anomalies
+    collectionAnomalies: membershipDiscovery.anomalies,
+    reportedMemberships: membershipDiscovery.reportedMemberships,
+    fetchedMemberships: membershipDiscovery.fetchedMemberships
   };
   const drift = buildDriftReport({ source, scope, products, previous, snapshot, priorSnapshot });
 
@@ -403,7 +414,7 @@ async function main() {
     mode: DRY_RUN ? 'dry-run' : 'synchronize',
     startedAt,
     completedAt: new Date().toISOString(),
-    sourceProducts: discovered.products.length,
+    sourceProducts: sourceProducts.length,
     sourceCollections: discovered.collections.length,
     included: scope.included,
     excluded: scope.excluded,
@@ -435,7 +446,7 @@ async function main() {
     synchronizedAt: new Date().toISOString(),
     discovery: {
       mode: 'dynamic-shopify-storefront',
-      sourceProducts: discovered.products.length,
+      sourceProducts: sourceProducts.length,
       sourceCollections: discovered.collections.length,
       includedSourceProducts: scope.included,
       excludedSourceProducts: scope.excluded,
