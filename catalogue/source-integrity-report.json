@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-26T16:26:39.683Z",
+  "generatedAt": "2026-09-27T05:22:02.402Z",
   "summary": {
-    "products": 352,
-    "available": 339,
-    "formal": 80,
+    "products": 338,
+    "available": 325,
+    "formal": 66,
     "luxury": 272,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 342,
-    "canonicalBrands": 47,
-    "aliasCorrections": 22,
+    "metaFeedProducts": 328,
+    "canonicalBrands": 43,
+    "aliasCorrections": 21,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 10,
     "classificationConflicts": 3,
     "unspecifiedPieces": 17,
-    "removedProducts": 1853,
-    "newlyRemovedProducts": 9,
+    "removedProducts": 1867,
+    "newlyRemovedProducts": 14,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -72,11 +72,6 @@
     },
     {
       "code": "IMP-EMBCK-LPISTA-2P-ABR-05",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-SKIN-2P-ABR-06",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -194,49 +189,74 @@
   ],
   "newlyRemovedProducts": [
     {
-      "code": "MAUSUM-3PLWN-V1-ONYX-HM-02",
-      "name": "Mausummery Digital Printed Lawn 3PC — 2",
-      "path": "products/mausum-3plwn-v1-onyx-hm-02-mausummery-digital-printed-lawn-3pc/"
+      "code": "BAREEZE-V2LWN-DGRN-2P-DD-02",
+      "name": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC — 2",
+      "path": "products/bareeze-v2lwn-dgrn-2p-dd-02-bareeze-plain-emb-shirt-and-trouser-lawn-2pc/"
     },
     {
-      "code": "COCO-3PLWN-AHMD-CP-7177",
-      "name": "Coco Prints Summer Digital Fancy Printed Lawn 3PC — CP-7177",
-      "path": "products/coco-3plwn-ahmd-cp-7177-coco-prints-summer-digital-fancy-printed-lawn-3pc/"
+      "code": "KAYSERIA-3PLWN-V13-LALA-X7142-R",
+      "name": "Kayseria Digital Printed Lawn 3PC — X7142-R",
+      "path": "products/kayseria-3plwn-v13-lala-x7142-r-kayseria-digital-printed-lawn-3pc/"
     },
     {
-      "code": "NISHAT-2PLWN-V2-ABR-08",
-      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 8",
-      "path": "products/nishat-2plwn-v2-abr-08-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "SULE-LWN-V2-3P-ABR-08",
+      "name": "Sule By Zara Shahjahan Digital Printed Lawn 3PC — 8",
+      "path": "products/sule-lwn-v2-3p-abr-08-sule-by-zara-shahjahan-digital-printed-lawn-3pc/"
     },
     {
-      "code": "ZARA-2PLWN-V1-ABR-12",
-      "name": "Zara Shahjahan Digital Printed All Over Two Piece Lawn 2PC — 12",
-      "path": "products/zara-2plwn-v1-abr-12-zara-shahjahan-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "LIMELIGHT-2PLWN-V2-ABR-15",
+      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 15",
+      "path": "products/limelight-2plwn-v2-abr-15-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "BAREEZE-V2LWN-BLCK-2P-DD-01",
-      "name": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC — 1",
-      "path": "products/bareeze-v2lwn-blck-2p-dd-01-bareeze-plain-emb-shirt-and-trouser-lawn-2pc/"
+      "code": "IMP-EMBCK-SKIN-2P-ABR-06",
+      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
+      "path": "products/imp-embck-skin-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
     },
     {
-      "code": "BAREEZE-V2LWN-DMEHN-2P-DD-01",
-      "name": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC — 1",
-      "path": "products/bareeze-v2lwn-dmehn-2p-dd-01-bareeze-plain-emb-shirt-and-trouser-lawn-2pc/"
+      "code": "SULE-LWN-V2-3P-ABR-12",
+      "name": "Sule By Zara Shahjahan Digital Printed Lawn 3PC — 12",
+      "path": "products/sule-lwn-v2-3p-abr-12-sule-by-zara-shahjahan-digital-printed-lawn-3pc/"
     },
     {
-      "code": "SEROSIA-TWKL-VISC-3P-5779",
-      "name": "Serosia By Tawakkal Viscose Grip 3PC — 5779",
-      "path": "products/serosia-twkl-visc-3p-5779-serosia-by-tawakkal-viscose-grip-3pc/"
+      "code": "MADHAM-3PLWN-V12-HM-LS-0774",
+      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0774",
+      "path": "products/madham-3plwn-v12-hm-ls-0774-madham-by-lala-digital-printed-airjet-lawn-3pc/"
     },
     {
-      "code": "SEROSIA-TWKL-VISC-3P-5781",
-      "name": "Serosia By Tawakkal Viscose Grip 3PC — 5781",
-      "path": "products/serosia-twkl-visc-3p-5781-serosia-by-tawakkal-viscose-grip-3pc/"
+      "code": "SULE-LWN-V2-3P-ABR-01",
+      "name": "Sule By Zara Shahjahan Digital Printed Lawn 3PC — 1",
+      "path": "products/sule-lwn-v2-3p-abr-01-sule-by-zara-shahjahan-digital-printed-lawn-3pc/"
     },
     {
-      "code": "ABRISH-2PLWN-V1-ABR-57",
-      "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 57",
-      "path": "products/abrish-2plwn-v1-abr-57-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-18",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 18",
+      "path": "products/mahira-lklwn-v1-3p-far-18-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+    },
+    {
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-05",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 5",
+      "path": "products/mahira-lklwn-v1-3p-far-05-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+    },
+    {
+      "code": "CROSS-2PLWN-V1-ABR-13",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 13",
+      "path": "products/cross-2plwn-v1-abr-13-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "AFREEN-LALA-HM-PRNT-10",
+      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 10",
+      "path": "products/afreen-lala-hm-prnt-10-afreen-by-lala-airjet-printed-lawn-3pc/"
+    },
+    {
+      "code": "ELAN-2PLWN-V1-ABR-04",
+      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 4",
+      "path": "products/elan-2plwn-v1-abr-04-elan-digital-printed-all-over-two-piece-lawn-2pc/"
+    },
+    {
+      "code": "MADHAM-3PLWN-V13-HM-LS-0792",
+      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0792",
+      "path": "products/madham-3plwn-v13-hm-ls-0792-madham-by-lala-digital-printed-airjet-lawn-3pc/"
     }
   ]
 }
