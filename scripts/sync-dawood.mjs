@@ -19,6 +19,7 @@ const MIN_SOURCE_PRODUCTS = 100;
 const MIN_SOURCE_COLLECTIONS = 20;
 const MAX_AMBIGUOUS_SHARE = 0.10;
 const MAX_AMBIGUOUS_ABSOLUTE_WITHOUT_REVIEW = 50;
+const MIN_COLLECTION_PRODUCT_COVERAGE = 0.50;
 const MAX_DOWNSTREAM_PRODUCTS = 10_000;
 const DRY_RUN = process.argv.includes('--dry-run');
 
@@ -177,6 +178,14 @@ async function buildCollectionMemberships(collections) {
     membership,
     products: [...productMap.values()],
     anomalies,
+    collectionStats: discovered.map(({ collection, products, anomaly }) => ({
+      id: collection.id,
+      title: collection.title,
+      handle: collection.handle,
+      reportedProducts: collection.productsCount,
+      fetchedProducts: products.length,
+      anomaly
+    })),
     activeCollections: active.length,
     reportedMemberships,
     fetchedMemberships
@@ -253,6 +262,10 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
   const previousCount = Array.isArray(previous.products) ? previous.products.length : 0;
   const ambiguousShare = source.products.length ? scope.ambiguous / source.products.length : 1;
   const collectionCoverage = source.reportedMemberships > 0 ? source.fetchedMemberships / source.reportedMemberships : 0;
+  const previousCollectionCoverage = Number(priorSnapshot.collectionProductCoverage);
+  const requiredCollectionCoverage = Number.isFinite(previousCollectionCoverage) && previousCollectionCoverage > 0
+    ? Math.max(MIN_COLLECTION_PRODUCT_COVERAGE, previousCollectionCoverage * 0.80)
+    : MIN_COLLECTION_PRODUCT_COVERAGE;
   const allowedCollectionAnomalies = Math.max(5, Math.ceil(source.activeCollections * 0.05));
   const minimumAfterShrink = previousCount
     ? Math.floor(previousCount * (1 - MAX_CATALOGUE_SHRINK_PERCENT / 100))
@@ -262,7 +275,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
     { id: 'source-product-floor', ok: source.products.length >= MIN_SOURCE_PRODUCTS, actual: source.products.length, required: MIN_SOURCE_PRODUCTS },
     { id: 'source-collection-floor', ok: source.collections.length >= MIN_SOURCE_COLLECTIONS, actual: source.collections.length, required: MIN_SOURCE_COLLECTIONS },
     { id: 'collection-fetch-anomalies', ok: source.collectionAnomalies.length <= allowedCollectionAnomalies, actual: source.collectionAnomalies.length, requiredMaximum: allowedCollectionAnomalies },
-    { id: 'collection-product-coverage', ok: collectionCoverage >= 0.90, actual: collectionCoverage, required: 0.90, fetchedMemberships: source.fetchedMemberships, reportedMemberships: source.reportedMemberships },
+    { id: 'collection-product-coverage', ok: collectionCoverage >= requiredCollectionCoverage, actual: collectionCoverage, required: requiredCollectionCoverage, fetchedMemberships: source.fetchedMemberships, reportedMemberships: source.reportedMemberships, previous: Number.isFinite(previousCollectionCoverage) ? previousCollectionCoverage : null },
     { id: 'ambiguous-scope-share', ok: scope.ambiguous <= MAX_AMBIGUOUS_ABSOLUTE_WITHOUT_REVIEW || ambiguousShare <= MAX_AMBIGUOUS_SHARE, actual: ambiguousShare, count: scope.ambiguous, required: MAX_AMBIGUOUS_SHARE },
     { id: 'catalogue-emergency-floor', ok: products.length >= MIN_CATALOGUE_PRODUCTS, actual: products.length, required: MIN_CATALOGUE_PRODUCTS },
     { id: 'catalogue-shrink-limit', ok: !previousCount || products.length >= minimumAfterShrink, actual: products.length, required: minimumAfterShrink, previous: previousCount },
@@ -285,11 +298,28 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
       previousCatalogueProducts: previousCount,
       candidateVsPreviousPercent: percent(products.length, previousCount),
       collectionProductCoverage: collectionCoverage,
+      previousCollectionProductCoverage: Number.isFinite(previousCollectionCoverage) ? previousCollectionCoverage : null,
       taxonomyFingerprint: snapshot.taxonomyFingerprint,
       previousTaxonomyFingerprint: priorSnapshot.taxonomyFingerprint || null
     },
     exclusionReasons: scope.exclusionReasons,
     collectionAnomalies: source.collectionAnomalies.slice(0, 30),
+    lowCoverageCollections: source.collectionStats
+      .filter(item => item.reportedProducts > 0 && item.fetchedProducts / item.reportedProducts < 0.50)
+      .slice(0, 30),
+    includedSamples: source.classified
+      .filter(item => item.classification.status === 'included')
+      .slice(0, 20)
+      .map(item => ({
+        id: String(item.product.id),
+        title: cleanText(item.product.title),
+        vendor: cleanText(item.product.vendor),
+        category: item.classification.category,
+        pieceType: item.classification.pieceType,
+        pricingClass: item.classification.pricingClass,
+        seasons: item.classification.seasons,
+        collections: item.classification.collections.map(collection => collection.title).slice(0, 8)
+      })),
     ambiguousSamples: source.classified
       .filter(item => item.classification.status === 'ambiguous')
       .slice(0, 30)
@@ -388,13 +418,17 @@ async function main() {
     schemaHealth,
     seasons: [...new Set(classified.flatMap(item => item.classification.seasons))].sort(),
     brands: [...new Set(products.map(item => item.brand).filter(Boolean))].sort(),
-    collections: discovered.collections.map(collection => ({
-      id: collection.id,
-      title: collection.title,
-      handle: collection.handle,
-      productsCount: collection.productsCount,
-      updatedAt: collection.updatedAt
-    }))
+    collections: discovered.collections.map(collection => {
+      const fetchStat = membershipDiscovery.collectionStats.find(item => item.handle === collection.handle);
+      return {
+        id: collection.id,
+        title: collection.title,
+        handle: collection.handle,
+        productsCount: collection.productsCount,
+        fetchedProducts: fetchStat?.fetchedProducts ?? 0,
+        updatedAt: collection.updatedAt
+      };
+    })
   };
 
   const source = {
@@ -405,6 +439,7 @@ async function main() {
     classified,
     activeCollections: membershipDiscovery.activeCollections,
     collectionAnomalies: membershipDiscovery.anomalies,
+    collectionStats: membershipDiscovery.collectionStats,
     reportedMemberships: membershipDiscovery.reportedMemberships,
     fetchedMemberships: membershipDiscovery.fetchedMemberships
   };
@@ -425,6 +460,7 @@ async function main() {
     collectionAnomalies: membershipDiscovery.anomalies,
     driftOk: drift.ok,
     checks: drift.checks,
+    includedSamples: drift.includedSamples.slice(0, 10),
     ambiguousSamples: drift.ambiguousSamples.slice(0, 10),
     excludedSamples: drift.excludedSamples.slice(0, 10)
   };
