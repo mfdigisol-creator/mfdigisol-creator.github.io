@@ -1,37 +1,32 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-27T05:22:02.402Z",
+  "generatedAt": "2026-09-27T15:46:27.333Z",
   "summary": {
-    "products": 338,
-    "available": 325,
-    "formal": 66,
-    "luxury": 272,
+    "products": 1060,
+    "available": 906,
+    "formal": 677,
+    "luxury": 383,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 328,
-    "canonicalBrands": 43,
-    "aliasCorrections": 21,
+    "metaFeedProducts": 1050,
+    "canonicalBrands": 75,
+    "aliasCorrections": 20,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 10,
-    "classificationConflicts": 3,
-    "unspecifiedPieces": 17,
-    "removedProducts": 1867,
-    "newlyRemovedProducts": 14,
+    "duplicateNames": 43,
+    "classificationConflicts": 0,
+    "unspecifiedPieces": 0,
+    "removedProducts": 1739,
+    "newlyRemovedProducts": 13,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
     {
-      "code": "IMP-EMBCK-PURP-2P-ABR-19",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-TPINK-2P-ABR-19",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
       "code": "IMP-EMBCK-FEROZ-2P-ABR-19",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PURP-2P-ABR-19",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -46,17 +41,7 @@
       "canonicalBrand": "Imported"
     },
     {
-      "code": "IMP-EMBCK-PURP-2P-ABR-05",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-LEMN-2P-ABR-05",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-TPNK-2P-ABR-05",
+      "code": "IMP-EMBCK-TPINK-2P-ABR-19",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -66,12 +51,22 @@
       "canonicalBrand": "Imported"
     },
     {
-      "code": "IMP-EMBCK-LJAMN-2P-ABR-05",
+      "code": "IMP-EMBCK-TPNK-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-LEMN-2P-ABR-05",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
     {
       "code": "IMP-EMBCK-LPISTA-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-LJAMN-2P-ABR-05",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -130,6 +125,62 @@
   "duplicatePaths": [],
   "duplicateNames": [
     {
+      "value": "anaya digital printed linen 3pc — 2",
+      "count": 2
+    },
+    {
+      "value": "anaya digital printed linen 3pc — 4",
+      "count": 2
+    },
+    {
+      "value": "anaya digital printed linen 3pc — 6",
+      "count": 2
+    },
+    {
+      "value": "anaya digital printed linen 3pc — 8",
+      "count": 2
+    },
+    {
+      "value": "bareeze fully emb rice karandi 2pc — 1",
+      "count": 6
+    },
+    {
+      "value": "bareeze fully emb rice karandi 2pc — 10",
+      "count": 5
+    },
+    {
+      "value": "bareeze fully emb rice karandi 2pc — 2",
+      "count": 4
+    },
+    {
+      "value": "bareeze fully emb rice karandi 2pc — 3",
+      "count": 6
+    },
+    {
+      "value": "bareeze fully emb rice karandi 2pc — 4",
+      "count": 7
+    },
+    {
+      "value": "bareeze fully emb rice karandi 2pc — 5",
+      "count": 2
+    },
+    {
+      "value": "cross stitch premium jacquard viscose 3pc — 3",
+      "count": 2
+    },
+    {
+      "value": "cross stitch premium jacquard viscose 3pc — 4",
+      "count": 2
+    },
+    {
+      "value": "cross stitch premium jacquard viscose 3pc — 5",
+      "count": 2
+    },
+    {
+      "value": "cross stitch premium jacquard viscose 3pc — 6",
+      "count": 2
+    },
+    {
       "value": "aira | organza | dressline — 1547",
       "count": 4
     },
@@ -163,100 +214,155 @@
     },
     {
       "value": "imported emb chickenkari lawn 2pc — 5",
-      "count": 6
+      "count": 5
     },
     {
       "value": "imported emb chickenkari lawn 3pc — 12",
       "count": 2
-    }
-  ],
-  "classificationConflicts": [
-    {
-      "code": "JAZMIN-S26-JZ-D05",
-      "name": "Jazmin Luxury Embroidered Lawn 3PC — D05",
-      "category": "Formal"
     },
     {
-      "code": "MARIAB-LWN-3P-1890",
-      "name": "Maria B Luxury Emb Lawn 3PC — 1890",
-      "category": "Formal"
+      "value": "kayseria digital printed bana dora linen 3pc — 1",
+      "count": 2
     },
     {
-      "code": "MUSHQ-EMB-PLAIN-3P-1881",
-      "name": "Mushq Luxury Embroidered Lawn 3PC — 1881",
-      "category": "Formal"
+      "value": "kayseria digital printed bana dora linen 3pc — 10",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 11",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 12",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 13",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 14",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 2",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 5",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 7",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 8",
+      "count": 2
+    },
+    {
+      "value": "kayseria digital printed bana dora linen 3pc — 9",
+      "count": 2
+    },
+    {
+      "value": "mausummery digital printed linen 3pc — 1",
+      "count": 2
+    },
+    {
+      "value": "mausummery digital printed linen 3pc — 7",
+      "count": 2
+    },
+    {
+      "value": "rijja by murashe digital printed khaddar 3pc — 2",
+      "count": 3
+    },
+    {
+      "value": "rijja by murashe digital printed khaddar 3pc — 6",
+      "count": 2
+    },
+    {
+      "value": "rijja by murashe premium printed linen viscose 3pc — 4",
+      "count": 2
+    },
+    {
+      "value": "rijja by murashe premium printed linen viscose 3pc — 8",
+      "count": 2
+    },
+    {
+      "value": "zarmeen & emaan premium emb lawn 3pc — ze-630",
+      "count": 2
+    },
+    {
+      "value": "zarmeen & emaan premium emb lawn 3pc — ze-706",
+      "count": 2
     }
   ],
+  "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "BAREEZE-V2LWN-DGRN-2P-DD-02",
-      "name": "Bareeze Plain Emb Shirt & Trouser Lawn 2PC — 2",
-      "path": "products/bareeze-v2lwn-dgrn-2p-dd-02-bareeze-plain-emb-shirt-and-trouser-lawn-2pc/"
+      "code": "GULNAAR-ANAYANOOR-S26-AN-08",
+      "name": "Gulnaar By Anaya Noor Digital Printed Lawn 3PC — 8",
+      "path": "products/gulnaar-anayanoor-s26-an-08-gulnaar-by-anaya-noor-digital-printed-lawn-3pc/"
     },
     {
-      "code": "KAYSERIA-3PLWN-V13-LALA-X7142-R",
-      "name": "Kayseria Digital Printed Lawn 3PC — X7142-R",
-      "path": "products/kayseria-3plwn-v13-lala-x7142-r-kayseria-digital-printed-lawn-3pc/"
+      "code": "MALIHA-ANAYANOOR-S26-AN-05",
+      "name": "Maliha By Anaya Noor Emb Lawn 3PC — 5",
+      "path": "products/maliha-anayanoor-s26-an-05-maliha-by-anaya-noor-emb-lawn-3pc/"
     },
     {
-      "code": "SULE-LWN-V2-3P-ABR-08",
-      "name": "Sule By Zara Shahjahan Digital Printed Lawn 3PC — 8",
-      "path": "products/sule-lwn-v2-3p-abr-08-sule-by-zara-shahjahan-digital-printed-lawn-3pc/"
+      "code": "ELAF-3PLWN-V2-UK-EPV-3A",
+      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-3A",
+      "path": "products/elaf-3plwn-v2-uk-epv-3a-elaf-premium-digital-printed-lawn-3pc/"
     },
     {
-      "code": "LIMELIGHT-2PLWN-V2-ABR-15",
-      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 15",
-      "path": "products/limelight-2plwn-v2-abr-15-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "IMP-EMBCK-PURP-2P-ABR-05",
+      "name": "Imported Emb Chickenkari Lawn 2PC — 5",
+      "path": "products/imp-embck-purp-2p-abr-05-imported-emb-chickenkari-lawn-2pc/"
     },
     {
-      "code": "IMP-EMBCK-SKIN-2P-ABR-06",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 6",
-      "path": "products/imp-embck-skin-2p-abr-06-imported-emb-chickenkari-lawn-2pc/"
+      "code": "LIMELIGHT-2PLWN-V2-ABR-08",
+      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 8",
+      "path": "products/limelight-2plwn-v2-abr-08-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "SULE-LWN-V2-3P-ABR-12",
-      "name": "Sule By Zara Shahjahan Digital Printed Lawn 3PC — 12",
-      "path": "products/sule-lwn-v2-3p-abr-12-sule-by-zara-shahjahan-digital-printed-lawn-3pc/"
+      "code": "CROSS-2PLWN-V2-ABR-11",
+      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 11",
+      "path": "products/cross-2plwn-v2-abr-11-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
     },
     {
-      "code": "MADHAM-3PLWN-V12-HM-LS-0774",
-      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0774",
-      "path": "products/madham-3plwn-v12-hm-ls-0774-madham-by-lala-digital-printed-airjet-lawn-3pc/"
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-02",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 2",
+      "path": "products/mahira-lklwn-v1-3p-far-02-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
     },
     {
-      "code": "SULE-LWN-V2-3P-ABR-01",
-      "name": "Sule By Zara Shahjahan Digital Printed Lawn 3PC — 1",
-      "path": "products/sule-lwn-v2-3p-abr-01-sule-by-zara-shahjahan-digital-printed-lawn-3pc/"
+      "code": "MAHIRA-LKLWN-V1-3P-FAR-08",
+      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 8",
+      "path": "products/mahira-lklwn-v1-3p-far-08-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
     },
     {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-18",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 18",
-      "path": "products/mahira-lklwn-v1-3p-far-18-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+      "code": "BT-LAWN-V5-3P-LDS-05",
+      "name": "Beechtree Digital Printed Lawn 3PC — 4145",
+      "path": "products/bt-lawn-v5-3p-lds-05-beechtree-digital-printed-lawn-3pc/"
     },
     {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-05",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 5",
-      "path": "products/mahira-lklwn-v1-3p-far-05-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
+      "code": "MILI-EMBCK-SKIN-2P-ABR-01",
+      "name": "Imported Chikenkari Digital Lawn 2PC — 1",
+      "path": "products/mili-embck-skin-2p-abr-01-imported-chikenkari-digital-lawn-2pc/"
     },
     {
-      "code": "CROSS-2PLWN-V1-ABR-13",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 13",
-      "path": "products/cross-2plwn-v1-abr-13-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "PRINTED-GRIP-3PC-S26-09",
+      "name": "Digital Printed Imported Grip-3PC — 9",
+      "path": "products/printed-grip-3pc-s26-09-digital-printed-imported-grip-3pc/"
     },
     {
-      "code": "AFREEN-LALA-HM-PRNT-10",
-      "name": "Afreen By Lala Airjet Printed Lawn 3PC — 10",
-      "path": "products/afreen-lala-hm-prnt-10-afreen-by-lala-airjet-printed-lawn-3pc/"
+      "code": "GUFTGU-3PLWN-AHMD-OTL-24-141",
+      "name": "Guftagu By Orient Summer Digital Printed Lawn 3PC — OTL-24-141",
+      "path": "products/guftgu-3plwn-ahmd-otl-24-141-guftagu-by-orient-summer-digital-printed-lawn-3pc/"
     },
     {
-      "code": "ELAN-2PLWN-V1-ABR-04",
-      "name": "Elan Digital Printed All Over Two Piece Lawn 2PC — 4",
-      "path": "products/elan-2plwn-v1-abr-04-elan-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "MADHAM-3PLWN-V13-HM-LS-0792",
-      "name": "Madham By Lala Digital Printed Airjet Lawn 3PC — LS-0792",
-      "path": "products/madham-3plwn-v13-hm-ls-0792-madham-by-lala-digital-printed-airjet-lawn-3pc/"
+      "code": "LIMELIGHT-2PLWN-V2-ABR-07",
+      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 7",
+      "path": "products/limelight-2plwn-v2-abr-07-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
     }
   ]
 }
