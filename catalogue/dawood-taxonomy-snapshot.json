@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T15:46:27.060Z",
+  "generatedAt": "2026-09-27T16:15:30.442Z",
   "source": "https://dawooddesigners.com",
-  "sourceProducts": 1211,
+  "sourceProducts": 1207,
   "sourceCollections": 97,
   "activeSourceCollections": 88,
-  "reportedCollectionMemberships": 6920,
-  "fetchedCollectionMemberships": 5173,
-  "collectionProductCoverage": 0.7475433526011561,
+  "reportedCollectionMemberships": 6898,
+  "fetchedCollectionMemberships": 5151,
+  "collectionProductCoverage": 0.746738184981154,
   "collectionAnomalies": [
     {
       "id": "704434307443",
@@ -109,13 +109,13 @@
       ]
     }
   ],
-  "includedSourceProducts": 1040,
+  "includedSourceProducts": 1036,
   "excludedSourceProducts": 166,
   "ambiguousSourceProducts": 5,
-  "candidateProducts": 1060,
+  "candidateProducts": 1056,
   "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
   "schemaHealth": {
-    "valid": 1211,
+    "valid": 1207,
     "invalid": 0,
     "validShare": 1
   },
@@ -352,9 +352,9 @@
       "id": "701140107635",
       "title": "DD-SHANAYA",
       "handle": "dd-shanya",
-      "productsCount": 30,
-      "fetchedProducts": 14,
-      "updatedAt": "2026-09-27T19:53:42+05:00"
+      "productsCount": 28,
+      "fetchedProducts": 12,
+      "updatedAt": "2026-09-27T21:10:31+05:00"
     },
     {
       "id": "700141732211",
@@ -696,9 +696,9 @@
       "id": "643109880179",
       "title": "PRINTED",
       "handle": "printed",
-      "productsCount": 577,
-      "fetchedProducts": 431,
-      "updatedAt": "2026-09-27T19:55:32+05:00"
+      "productsCount": 573,
+      "fetchedProducts": 427,
+      "updatedAt": "2026-09-27T21:10:31+05:00"
     },
     {
       "id": "701975331187",
@@ -872,9 +872,9 @@
       "id": "642743009651",
       "title": "Three Piece Printed Summer Collection",
       "handle": "three-piece-winter-collection",
-      "productsCount": 375,
-      "fetchedProducts": 266,
-      "updatedAt": "2026-09-27T19:38:42+05:00"
+      "productsCount": 372,
+      "fetchedProducts": 263,
+      "updatedAt": "2026-09-27T21:10:31+05:00"
     },
     {
       "id": "701023584627",
@@ -888,9 +888,9 @@
       "id": "701023486323",
       "title": "Two Piece Printed Summer Collection",
       "handle": "two-piece-summer-collection",
-      "productsCount": 178,
-      "fetchedProducts": 142,
-      "updatedAt": "2026-09-27T19:55:32+05:00"
+      "productsCount": 177,
+      "fetchedProducts": 141,
+      "updatedAt": "2026-09-27T21:01:37+05:00"
     },
     {
       "id": "703940166003",
@@ -904,17 +904,17 @@
       "id": "703940297075",
       "title": "Unstitched Daily Wear Winter Printed 2PC",
       "handle": "unstitched-daily-wear-winter-printed-2pc",
-      "productsCount": 155,
-      "fetchedProducts": 119,
-      "updatedAt": "2026-09-27T19:53:30+05:00"
+      "productsCount": 154,
+      "fetchedProducts": 118,
+      "updatedAt": "2026-09-27T21:01:37+05:00"
     },
     {
       "id": "703930204531",
       "title": "Unstitched Daily Wear Winter Printed 3PC",
       "handle": "unstitched-daily-wear-winter-printed-3pc",
-      "productsCount": 296,
-      "fetchedProducts": 228,
-      "updatedAt": "2026-09-27T19:38:42+05:00"
+      "productsCount": 293,
+      "fetchedProducts": 225,
+      "updatedAt": "2026-09-27T21:10:31+05:00"
     },
     {
       "id": "703938756979",
@@ -928,9 +928,9 @@
       "id": "642743533939",
       "title": "WINTER 2026",
       "handle": "winter-2026",
-      "productsCount": 637,
-      "fetchedProducts": 495,
-      "updatedAt": "2026-09-27T20:36:50+05:00"
+      "productsCount": 633,
+      "fetchedProducts": 491,
+      "updatedAt": "2026-09-27T21:10:31+05:00"
     },
     {
       "id": "704567542131",
@@ -960,9 +960,9 @@
       "id": "703271010675",
       "title": "Zarmeen & Emaan",
       "handle": "zarmeen-emaan",
-      "productsCount": 1572,
-      "fetchedProducts": 1036,
-      "updatedAt": "2026-09-27T20:36:50+05:00"
+      "productsCount": 1568,
+      "fetchedProducts": 1032,
+      "updatedAt": "2026-09-27T21:10:31+05:00"
     },
     {
       "id": "703275172211",

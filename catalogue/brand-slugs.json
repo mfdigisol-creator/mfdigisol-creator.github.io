@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T15:46:27.425Z",
+  "generatedAt": "2026-09-27T16:15:30.811Z",
   "brands": {
     "Aifa": "aifa",
     "Almeerah": "almeerah",
@@ -19,7 +19,6 @@
     "Crimson": "crimson",
     "Cross stitch": "cross-stitch",
     "Cross Stitch": "cross-stitch-2",
-    "DawoodDesigner": "dawooddesigner",
     "Dr.Haris": "dr-haris",
     "Dressline": "dressline",
     "Elaf": "elaf",
@@ -57,6 +56,7 @@
     "Nishat": "nishat",
     "Noor Jahan": "noor-jahan",
     "Omre": "omre",
+    "Other designs": "other-designs",
     "Paltar": "paltar",
     "Panache": "panache",
     "Parishay": "parishay",
@@ -80,6 +80,7 @@
   },
   "redirects": {
     "anaya-noor-2": "anaya-noor",
+    "dawooddesigner": "other-designs",
     "lmported": "imported",
     "silknstories": "crimson"
   }

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-09-27T15:46:27.061Z",
+  "generatedAt": "2026-09-27T16:15:30.444Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1211,
+      "actual": 1207,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7475433526011561,
-      "required": 0.5,
-      "fetchedMemberships": 5173,
-      "reportedMemberships": 6920,
-      "previous": null
+      "actual": 0.746738184981154,
+      "required": 0.5980346820809249,
+      "fetchedMemberships": 5151,
+      "reportedMemberships": 6898,
+      "previous": 0.7475433526011561
     },
     {
       "id": "duplicate-supplier-skus",
@@ -40,43 +40,43 @@
     {
       "id": "ambiguous-scope-share",
       "ok": true,
-      "actual": 0.004128819157720892,
+      "actual": 0.004142502071251036,
       "count": 5,
       "required": 0.1
     },
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1060,
+      "actual": 1056,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1060,
-      "required": 270,
-      "previous": 338
+      "actual": 1056,
+      "required": 848,
+      "previous": 1060
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1060,
+      "actual": 1056,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1211,
+    "sourceProducts": 1207,
     "sourceCollections": 97,
-    "includedSourceProducts": 1040,
+    "includedSourceProducts": 1036,
     "excludedSourceProducts": 166,
     "ambiguousSourceProducts": 5,
-    "candidateProducts": 1060,
-    "previousCatalogueProducts": 338,
-    "candidateVsPreviousPercent": 213.6094674556213,
-    "collectionProductCoverage": 0.7475433526011561,
-    "previousCollectionProductCoverage": null,
+    "candidateProducts": 1056,
+    "previousCatalogueProducts": 1060,
+    "candidateVsPreviousPercent": -0.37735849056603776,
+    "collectionProductCoverage": 0.746738184981154,
+    "previousCollectionProductCoverage": 0.7475433526011561,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
-    "previousTaxonomyFingerprint": null
+    "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9"
   },
   "exclusionReasons": {
     "menswear-signal": 62,
@@ -214,8 +214,8 @@
       "id": "701140107635",
       "title": "DD-SHANAYA",
       "handle": "dd-shanya",
-      "reportedProducts": 30,
-      "fetchedProducts": 14,
+      "reportedProducts": 28,
+      "fetchedProducts": 12,
       "anomaly": null
     },
     {

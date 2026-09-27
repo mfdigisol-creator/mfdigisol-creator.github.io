@@ -1,25 +1,55 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-27T15:46:27.333Z",
+  "generatedAt": "2026-09-27T16:15:30.713Z",
   "summary": {
-    "products": 1060,
-    "available": 906,
-    "formal": 677,
+    "products": 1056,
+    "available": 902,
+    "formal": 673,
     "luxury": 383,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 1050,
+    "metaFeedProducts": 1046,
     "canonicalBrands": 75,
-    "aliasCorrections": 20,
+    "aliasCorrections": 26,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 43,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 1739,
-    "newlyRemovedProducts": 13,
+    "removedProducts": 1743,
+    "newlyRemovedProducts": 4,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-349",
+      "sourceBrand": "DawoodDesigner",
+      "canonicalBrand": "Other designs"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-350",
+      "sourceBrand": "DawoodDesigner",
+      "canonicalBrand": "Other designs"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-351",
+      "sourceBrand": "DawoodDesigner",
+      "canonicalBrand": "Other designs"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-352",
+      "sourceBrand": "DawoodDesigner",
+      "canonicalBrand": "Other designs"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-353",
+      "sourceBrand": "DawoodDesigner",
+      "canonicalBrand": "Other designs"
+    },
+    {
+      "code": "SALINA-LWN-CHP1-3P-10",
+      "sourceBrand": "DawoodDesigner",
+      "canonicalBrand": "Other designs"
+    },
     {
       "code": "IMP-EMBCK-FEROZ-2P-ABR-19",
       "sourceBrand": "lmported",
@@ -300,69 +330,24 @@
   "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "GULNAAR-ANAYANOOR-S26-AN-08",
-      "name": "Gulnaar By Anaya Noor Digital Printed Lawn 3PC — 8",
-      "path": "products/gulnaar-anayanoor-s26-an-08-gulnaar-by-anaya-noor-digital-printed-lawn-3pc/"
+      "code": "BEECHTREE-3PLIN-V6-AHMD-6403",
+      "name": "Beechtree Digital Printed Linen 3PC — 6403",
+      "path": "products/beechtree-3plin-v6-ahmd-6403-beechtree-digital-printed-linen-3pc/"
     },
     {
-      "code": "MALIHA-ANAYANOOR-S26-AN-05",
-      "name": "Maliha By Anaya Noor Emb Lawn 3PC — 5",
-      "path": "products/maliha-anayanoor-s26-an-05-maliha-by-anaya-noor-emb-lawn-3pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-257",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 257",
+      "path": "products/mixbrand-prnkhd-2p-bl-257-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-3A",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-3A",
-      "path": "products/elaf-3plwn-v2-uk-epv-3a-elaf-premium-digital-printed-lawn-3pc/"
+      "code": "NIRVANA-SHN-LIN-V284-3P-02",
+      "name": "Nirvana By Shanaya Digital Printed Linen 3PC — 2",
+      "path": "products/nirvana-shn-lin-v284-3p-02-nirvana-by-shanaya-digital-printed-linen-3pc/"
     },
     {
-      "code": "IMP-EMBCK-PURP-2P-ABR-05",
-      "name": "Imported Emb Chickenkari Lawn 2PC — 5",
-      "path": "products/imp-embck-purp-2p-abr-05-imported-emb-chickenkari-lawn-2pc/"
-    },
-    {
-      "code": "LIMELIGHT-2PLWN-V2-ABR-08",
-      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 8",
-      "path": "products/limelight-2plwn-v2-abr-08-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "CROSS-2PLWN-V2-ABR-11",
-      "name": "Cross Stitch Digital Printed All Over Two Piece Lawn 2PC — 11",
-      "path": "products/cross-2plwn-v2-abr-11-cross-stitch-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-02",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 2",
-      "path": "products/mahira-lklwn-v1-3p-far-02-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
-    },
-    {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-08",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 8",
-      "path": "products/mahira-lklwn-v1-3p-far-08-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
-    },
-    {
-      "code": "BT-LAWN-V5-3P-LDS-05",
-      "name": "Beechtree Digital Printed Lawn 3PC — 4145",
-      "path": "products/bt-lawn-v5-3p-lds-05-beechtree-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "MILI-EMBCK-SKIN-2P-ABR-01",
-      "name": "Imported Chikenkari Digital Lawn 2PC — 1",
-      "path": "products/mili-embck-skin-2p-abr-01-imported-chikenkari-digital-lawn-2pc/"
-    },
-    {
-      "code": "PRINTED-GRIP-3PC-S26-09",
-      "name": "Digital Printed Imported Grip-3PC — 9",
-      "path": "products/printed-grip-3pc-s26-09-digital-printed-imported-grip-3pc/"
-    },
-    {
-      "code": "GUFTGU-3PLWN-AHMD-OTL-24-141",
-      "name": "Guftagu By Orient Summer Digital Printed Lawn 3PC — OTL-24-141",
-      "path": "products/guftgu-3plwn-ahmd-otl-24-141-guftagu-by-orient-summer-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "LIMELIGHT-2PLWN-V2-ABR-07",
-      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 7",
-      "path": "products/limelight-2plwn-v2-abr-07-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "NIRVANA-SHN-LIN-V284-3P-03",
+      "name": "Nirvana By Shanaya Digital Printed Linen 3PC — 3",
+      "path": "products/nirvana-shn-lin-v284-3p-03-nirvana-by-shanaya-digital-printed-linen-3pc/"
     }
   ]
 }
