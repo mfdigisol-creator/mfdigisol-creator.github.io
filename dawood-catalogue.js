@@ -64,6 +64,8 @@
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
   const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'design';
   const collectionId = name => `collection-${String(name || 'other-designs').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9_-]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase()}`;
+  const isOtherDesigns = value => String(value || '').trim().toLowerCase() === 'other designs';
+  const otherDesignsLast = (left, right) => Number(isOtherDesigns(left)) - Number(isOtherDesigns(right));
   const thumbnailUrl = (url, width = 600) => {
     try {
       const image = new URL(url, location.href);
@@ -183,7 +185,7 @@
       groups.get(name).push(product);
       return groups;
     }, new Map());
-    grid.innerHTML = matches.length ? [...collections].map(([name, items], collectionIndex) => {
+    grid.innerHTML = matches.length ? [...collections].sort(([left],[right]) => otherDesignsLast(left, right)).map(([name, items], collectionIndex) => {
       const visibleCount = Math.min(items.length, visibleByCollection.get(name) || initialCollectionLimit());
       const remaining = items.length - visibleCount;
       return `<section class="live-product-collection" id="${collectionId(name)}" aria-labelledby="${collectionId(name)}-title">
@@ -303,7 +305,7 @@
   }
 
   function populateNavigation() {
-    const brands = [...new Set(products.map(product => product.brand).filter(Boolean))].sort();
+    const brands = [...new Set(products.map(product => product.brand).filter(Boolean))].sort((a,b) => otherDesignsLast(a,b) || a.localeCompare(b));
     const supplierCollections = [...new Set(products.flatMap(product => Array.isArray(product.sourceCollections) ? product.sourceCollections.map(item => item?.title).filter(Boolean) : []))].sort();
     const seasons = [...new Set(products.flatMap(product => Array.isArray(product.seasons) ? product.seasons : []))].sort();
     controls.brand.innerHTML = '<option value="all">All brands</option>' + brands.map(brand => `<option value="${escapeHtml(brand)}">${escapeHtml(brand)}</option>`).join('');
@@ -312,13 +314,13 @@
     const enquirySelect = document.querySelector('[data-live-enquiry-collection]');
     if (enquirySelect) {
       enquirySelect.innerHTML = '<option value="Help me choose">Help me choose</option>' + ['Formal','Luxury'].map(group => {
-        const list = [...new Set(products.filter(product => product.category === group).map(product => product.brand).filter(Boolean))].sort();
+        const list = [...new Set(products.filter(product => product.category === group).map(product => product.brand).filter(Boolean))].sort((a,b) => otherDesignsLast(a,b) || a.localeCompare(b));
         return `<optgroup label="${group} collections">${list.map(brand => `<option value="${escapeHtml(brand)}">${escapeHtml(brand)}</option>`).join('')}</optgroup>`;
       }).join('');
     }
     if (!navGroups) return;
     navGroups.innerHTML = ['Formal','Luxury'].map(group => {
-      const list = [...new Set(products.filter(product => product.category === group).map(product => product.brand))].sort();
+      const list = [...new Set(products.filter(product => product.category === group).map(product => product.brand))].sort((a,b) => otherDesignsLast(a,b) || a.localeCompare(b));
       return `<div><strong>${group}</strong>${list.map(brand => `<a href="#${collectionId(brand)}" data-nav-brand="${escapeHtml(brand)}">${escapeHtml(brand)}</a>`).join('')}</div>`;
     }).join('');
     navGroups.addEventListener('click', event => {
@@ -338,7 +340,7 @@
       const cover = (available[0] || items[0])?.image;
       const category = items.find(product => product.category)?.category || 'Collection';
       return { brand, items, available, cover, category };
-    }).filter(collection => collection.cover).sort((a,b) => b.available.length - a.available.length || a.brand.localeCompare(b.brand));
+    }).filter(collection => collection.cover).sort((a,b) => otherDesignsLast(a.brand,b.brand) || b.available.length - a.available.length || a.brand.localeCompare(b.brand));
     collectionSlider.innerHTML = collections.map((collection, index) => `<button type="button" class="live-collection-slide" data-slide-brand="${escapeHtml(collection.brand)}" aria-label="Open ${escapeHtml(collection.brand)} collection">
       <span class="live-collection-image">${responsiveImage(collection.cover, `${collection.brand} collection`, { width:600, eager:index < 2 })}<i>${escapeHtml(collection.category)}</i></span>
       <span class="live-collection-copy"><strong>${escapeHtml(collection.brand)}</strong><small>${collection.available.length} design${collection.available.length === 1 ? '' : 's'} available</small><b>Explore collection →</b></span>
