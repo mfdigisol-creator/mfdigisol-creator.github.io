@@ -14,7 +14,10 @@ const BRAND_ALIASES = new Map([
   ['anaya noor', 'Anaya Noor'],
   ['lime light', 'Limelight'],
   ['limelight', 'Limelight'],
-  ['lmported', 'Imported']
+  ['lmported', 'Imported'],
+  ['dawooddesigner', 'Other designs'],
+  ['dawood designer', 'Other designs'],
+  ['dawood designers', 'Other designs']
 ]);
 
 const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
