@@ -7,6 +7,8 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/dawood-taxonomy.mjs"
+      - "scripts/test-dawood-taxonomy.mjs"
       - "scripts/product-description.mjs"
       - "scripts/test-product-descriptions.mjs"
       - "scripts/install-dawood-integration.mjs"
@@ -47,6 +49,8 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/dawood-taxonomy.mjs"
+      - "scripts/test-dawood-taxonomy.mjs"
       - "scripts/product-description.mjs"
       - "scripts/test-product-descriptions.mjs"
       - "scripts/apply-official-brand.mjs"
@@ -102,6 +106,42 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Test dynamic supplier taxonomy
+        run: node scripts/test-dawood-taxonomy.mjs
+
+      - name: Read-only live Dawood taxonomy preflight
+        if: github.event_name == 'pull_request'
+        run: node scripts/sync-dawood.mjs --dry-run
+
+      - name: Validate dynamic candidate in isolated runner workspace
+        if: github.event_name == 'pull_request'
+        run: |
+          candidate="$RUNNER_TEMP/alhuma-dynamic-candidate"
+          rm -rf "$candidate"
+          mkdir -p "$candidate"
+          cp -a . "$candidate/"
+          cd "$candidate"
+          node scripts/sync-dawood.mjs
+          node scripts/seo-batch1-postprocess.mjs
+          node scripts/generate-seo-pages-v2.mjs
+          node scripts/generate-step9b-guide.mjs
+          node scripts/performance-p1-postprocess.mjs
+          node scripts/performance-p2p3-postprocess.mjs
+          node scripts/version-performance-assets.mjs
+          test -s assets/alhuma-collection-logo.webp
+          node scripts/apply-official-brand.mjs
+          node scripts/image-seo-postprocess.mjs
+          node scripts/entity-consistency-postprocess.mjs
+          node scripts/search-ecosystem-postprocess.mjs
+          node --check assistant-runtime.js
+          node --check dawood-catalogue.js
+          node --check analytics.js
+          node scripts/test-product-descriptions.mjs
+          node scripts/validate-catalogue.mjs || { cat catalogue/validation-report.json; exit 1; }
+          node scripts/validate-merchant-policy.mjs
+          node scripts/validate-search-ecosystem-consistency.mjs
+          node scripts/validate-analytics-measurement.mjs
+
       - name: Build approved catalogue data
         id: catalogue
         if: github.event_name != 'pull_request'
@@ -135,7 +175,7 @@ jobs:
           node scripts/validate-analytics-measurement.mjs
 
       - name: Publish validated catalogue update
-        if: always() && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
+        if: always() && steps.catalogue.outcome == 'success' && steps.generate.outcome == 'success' && github.event_name != 'pull_request'
         run: |
           if test -z "$(git status --porcelain -- index.html policies.html assistant-runtime.js dawood-catalogue.js assets/ catalogue/ products/ collections/ shop/ guides/ sitemap-pages.xml)"; then
             echo "Catalogue is already current."

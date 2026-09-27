@@ -101,6 +101,17 @@ async function main() {
   const products = Array.isArray(catalogue.products) ? catalogue.products : [];
   const removedProducts = Array.isArray(removedRegistry.products) ? removedRegistry.products : [];
   if (products.length < 20) errors.push(`Catalogue contains only ${products.length} products.`);
+
+  if (Number(catalogue.schemaVersion) >= 3) {
+    const drift = await readJson('catalogue/dawood-drift-report.json');
+    if (catalogue.discovery?.mode !== 'dynamic-shopify-storefront') errors.push('Schema-v3 catalogue is missing dynamic supplier discovery metadata.');
+    if (!drift?.ok) errors.push('Latest Dawood taxonomy drift report is missing or not safe.');
+    const missingTaxonomy = products.filter(item => !Array.isArray(item.sourceCollections) || !Array.isArray(item.seasons) || !Array.isArray(item.scopeReasons));
+    if (missingTaxonomy.length) errors.push(`${missingTaxonomy.length} schema-v3 products are missing supplier taxonomy metadata.`);
+    const invalidScope = products.filter(item => item.sourceCollections?.some(collection => !collection || !collection.title || !collection.handle));
+    if (invalidScope.length) errors.push(`${invalidScope.length} schema-v3 products contain invalid supplier collection memberships.`);
+    if (products.length < 50) errors.push('Schema-v3 catalogue is below the 50-product storefront emergency floor.');
+  }
   if (hostPolicy.preferredOrigin !== BASE) errors.push('Host policy preferred origin does not match the canonical production origin.');
 
   const duplicateIds = duplicates(products.map(item => item.id));

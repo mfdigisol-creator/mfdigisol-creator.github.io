@@ -1,122 +1,220 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { sanitizeSupplierDescription } from './product-description.mjs';
+import { classifyProduct, normalizeCollection, summarizeScope } from './dawood-taxonomy.mjs';
 
 const SOURCE = 'https://dawooddesigners.com';
 const OUTPUT = path.resolve('catalogue/dawood-products.json');
 const STATUS_OUTPUT = path.resolve('catalogue/sync-status.json');
 const PRODUCT_SITEMAP_OUTPUT = path.resolve('catalogue/products-sitemap.xml');
 const META_PRODUCT_FEED_OUTPUT = path.resolve('catalogue/meta-product-feed.csv');
-const APPROVED_COLLECTIONS = Object.freeze([
-  { handle: 'unstitched-daily-wear-printed-2pc', label: 'Unstitched Printed 2PC', group: 'Formal' },
-  { handle: 'unstitched-daily-wear-printed-3pc', label: 'Unstitched Printed 3PC', group: 'Formal' },
-  { handle: 'unstitched-daily-wear-embroidered-2pc', label: 'Unstitched Embroidered 2PC', group: 'Formal' },
-  { handle: 'unstitched-daily-wear-embroidered-3pc', label: 'Unstitched Embroidered 3PC', group: 'Formal' },
-  { handle: 'summer-trending-plain-embroidered-hit-codes', label: 'Unstitched Hit Codes 3 PC', group: 'Formal' },
-  { handle: 'luxury-unstitch', label: 'Luxury Unstitch', group: 'Luxury' }
-]);
-const EMBROIDERY_PATTERN = /\bemb(?:\.|roidery|roidered)?\b|chikan|chicken|schiffli|shiffli|laser[ -]?cut|cutwork|boring|patch|appliqu[eé]|sequence|sequins?/i;
-const NON_EMBROIDERY_PATTERN = /\bdigital(?:ly)?\s+print|\bprinted\b|\bprint\b|\bplain\b|\bsolid\b|\bblock\s*print|\bwash\s*&?\s*wear\b/i;
-const PIECE_PATTERN = /\b([123])\s*(?:pc|pcs|piece)\b/i;
+const TAXONOMY_SNAPSHOT_OUTPUT = path.resolve('catalogue/dawood-taxonomy-snapshot.json');
+const DRIFT_REPORT_OUTPUT = path.resolve('catalogue/dawood-drift-report.json');
+
 const MAX_SOURCE_PRICE_CHANGE = 0.5;
+const MIN_CATALOGUE_PRODUCTS = 50;
+const MAX_CATALOGUE_SHRINK_PERCENT = 20;
+const MIN_SOURCE_PRODUCTS = 100;
+const MIN_SOURCE_COLLECTIONS = 20;
+const MAX_AMBIGUOUS_SHARE = 0.10;
+const MAX_AMBIGUOUS_ABSOLUTE_WITHOUT_REVIEW = 50;
+const MIN_COLLECTION_PRODUCT_COVERAGE = 0.50;
+const MAX_DOWNSTREAM_PRODUCTS = 10_000;
+const DRY_RUN = process.argv.includes('--dry-run');
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const cleanText = value => String(value ?? '')
+  .replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"')
+  .replace(/&ndash;|&#8211;/g, '–').replace(/&mdash;|&#8212;/g, '—')
+  .replace(/&nbsp;/g, ' ').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+const money = value => Number.parseFloat(String(value || '0').replace(/,/g, ''));
+const safeImage = image => image?.src ? image.src.replace(/^\/\//, 'https://') : '';
+const csvCell = value => `"${String(value ?? '').replace(/\r?\n/g, ' ').replace(/"/g, '""')}"`;
+const percent = (current, previous) => previous > 0 ? ((current - previous) / previous) * 100 : null;
+
+async function readJson(file, fallback) {
+  try { return JSON.parse(await fs.readFile(file, 'utf8')); }
+  catch { return fallback; }
+}
 
 async function fetchText(url, attempt = 1) {
   try {
     const response = await fetch(url, {
       headers: {
-        accept: 'text/html,application/json',
-        'user-agent': 'AlHumaCollectionCatalogueSync/1.0 (+https://alhumacollection.com)'
+        accept: 'application/json,text/html',
+        'user-agent': 'AlHumaCollectionCatalogueSync/2.0 (+https://alhumacollection.com)'
       },
       signal: AbortSignal.timeout(30_000)
     });
     if ((response.status === 429 || response.status >= 500) && attempt < 6) {
-      await sleep(Math.min(30_000, 1500 * 2 ** attempt));
+      await sleep(Math.min(30_000, 1250 * 2 ** attempt));
       return fetchText(url, attempt + 1);
     }
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`);
     return response.text();
   } catch (error) {
     if (attempt < 6 && (error.name === 'AbortError' || error.name === 'TimeoutError' || error instanceof TypeError)) {
-      await sleep(Math.min(30_000, 1500 * 2 ** attempt));
+      await sleep(Math.min(30_000, 1250 * 2 ** attempt));
       return fetchText(url, attempt + 1);
     }
     throw error;
   }
 }
 
-const decodeEntities = value => value
-  .replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"')
-  .replace(/&ndash;|&#8211;/g, '–').replace(/&mdash;|&#8212;/g, '—')
-  .replace(/&nbsp;/g, ' ');
-
-const cleanText = value => decodeEntities(value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim());
-
-function approvedCollections() {
-  if (APPROVED_COLLECTIONS.length < 5) {
-    throw new Error(`Only ${APPROVED_COLLECTIONS.length} approved collections were configured; refusing an incomplete update.`);
-  }
-  return APPROVED_COLLECTIONS.map(item => ({ ...item }));
+async function fetchJson(url) {
+  const text = await fetchText(url);
+  try { return JSON.parse(text); }
+  catch (error) { throw new Error(`Supplier returned invalid JSON for ${url}: ${error.message}`); }
 }
 
-async function collectionProducts(collection) {
-  const products = [];
-  for (let page = 1; page <= 20; page += 1) {
-    const url = `${SOURCE}/collections/${collection.handle}/products.json?limit=250&page=${page}`;
-    const payload = JSON.parse(await fetchText(url));
-    const batch = Array.isArray(payload.products) ? payload.products : [];
-    products.push(...batch);
-    if (batch.length < 250) break;
-    await sleep(150);
+async function fetchPaged(pathname, key, { maxPages = 80, allowEmpty = false } = {}) {
+  const all = [];
+  const signatures = new Set();
+  let completed = false;
+  for (let page = 1; page <= maxPages; page += 1) {
+    const url = new URL(pathname, SOURCE);
+    url.searchParams.set('limit', '250');
+    url.searchParams.set('page', String(page));
+    const payload = await fetchJson(url.href);
+    const batch = Array.isArray(payload?.[key]) ? payload[key] : null;
+    if (!batch) throw new Error(`Supplier schema drift: ${pathname} no longer returns an array named ${key}.`);
+    if (!batch.length) { completed = true; break; }
+    const signature = batch.slice(0, 5).map(item => item?.id).join(',');
+    if (signature && signatures.has(signature)) throw new Error(`Supplier pagination repeated page content for ${pathname}; refusing incomplete discovery.`);
+    if (signature) signatures.add(signature);
+    all.push(...batch);
+    if (batch.length < 250) { completed = true; break; }
+    await sleep(80);
   }
-  if (!products.length) throw new Error(`Approved collection ${collection.handle} returned no products; refusing an incomplete update.`);
-  return products.map(product => ({ product, collection }));
+  if (!completed) throw new Error(`Supplier pagination exceeded the safety limit for ${pathname}.`);
+  if (!allowEmpty && !all.length) throw new Error(`Supplier discovery returned no ${key} from ${pathname}.`);
+  return all;
 }
 
-const money = value => Number.parseFloat(String(value || '0').replace(/,/g, ''));
-const safeImage = image => image?.src ? image.src.replace(/^\/\//, 'https://') : '';
-const csvCell = value => `"${String(value ?? '').replace(/\r?\n/g, ' ').replace(/"/g, '""')}"`;
+async function mapLimit(items, limit, worker) {
+  const results = new Array(items.length);
+  let cursor = 0;
+  async function run() {
+    while (cursor < items.length) {
+      const index = cursor++;
+      results[index] = await worker(items[index], index);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, run));
+  return results;
+}
 
-async function writeMetaProductFeed(products) {
-  const metaFeedHeaders = ['id', 'title', 'description', 'availability', 'condition', 'price', 'link', 'image_link', 'brand', 'product_type'];
-  const metaFeedRows = products
-    .filter(item => Number.isFinite(item.price) && item.price > 0)
-    .map(item => {
-      const description = `${item.name}. ${item.pieceType} unstitched suit by ${item.brand}. Cash on Delivery in Pakistan. Availability is confirmed before dispatch.`;
-      return [
-        item.code,
-        item.name,
-        description,
-        item.available ? 'in stock' : 'out of stock',
-        'new',
-        `${item.price.toFixed(2)} PKR`,
-        `https://alhumacollection.com/?product=${encodeURIComponent(item.code)}`,
-        item.image,
-        item.brand,
-        `Women > Unstitched Suits > ${item.category}`
-      ].map(csvCell).join(',');
+function assertProductSchema(products) {
+  const required = product => product
+    && product.id != null
+    && typeof product.title === 'string'
+    && typeof product.handle === 'string'
+    && Array.isArray(product.tags)
+    && Array.isArray(product.variants)
+    && Array.isArray(product.images)
+    && typeof product.product_type === 'string';
+  const valid = products.filter(required).length;
+  const ratio = products.length ? valid / products.length : 0;
+  if (ratio < 0.98) {
+    throw new Error(`Supplier schema drift: only ${valid}/${products.length} products match the expected Shopify storefront shape.`);
+  }
+  return { valid, invalid: products.length - valid, validShare: ratio };
+}
+
+async function discoverSupplier() {
+  const rawCollections = await fetchPaged('/collections.json', 'collections', { maxPages: 20 });
+  const collections = rawCollections.map(normalizeCollection);
+  if (collections.length < MIN_SOURCE_COLLECTIONS) throw new Error(`Supplier discovery returned only ${collections.length} collections; refusing probable source drift.`);
+  return { collections };
+}
+
+async function buildCollectionMemberships(collections) {
+  const membership = new Map();
+  const productMap = new Map();
+  const anomalies = [];
+  let fetchedMemberships = 0;
+  const active = collections.filter(collection => collection.handle && collection.productsCount > 0);
+  const reportedMemberships = active.reduce((sum, collection) => sum + collection.productsCount, 0);
+  const discovered = await mapLimit(active, 6, async collection => {
+    const maxPages = Math.max(2, Math.ceil(collection.productsCount / 250) + 2);
+    try {
+      const products = await fetchPaged(
+        `/collections/${encodeURIComponent(collection.handle)}/products.json`,
+        'products',
+        { maxPages, allowEmpty: true }
+      );
+      if (!products.length) {
+        return { collection, products, anomaly: 'registry-count-positive-but-endpoint-empty' };
+      }
+      return { collection, products, anomaly: null };
+    } catch (error) {
+      return { collection, products: [], anomaly: `collection-fetch-failed: ${error.message}` };
+    }
+  });
+
+  for (const { collection, products, anomaly } of discovered) {
+    if (anomaly) anomalies.push({
+      id: collection.id,
+      title: collection.title,
+      handle: collection.handle,
+      reportedProducts: collection.productsCount,
+      anomaly
     });
-  if (metaFeedRows.length < 20) {
-    throw new Error(`Only ${metaFeedRows.length} products qualified for the Meta feed; refusing an incomplete feed.`);
+    fetchedMemberships += products.length;
+    for (const product of products) {
+      const key = String(product?.id ?? '');
+      if (!key) continue;
+      if (!productMap.has(key)) productMap.set(key, product);
+      if (!membership.has(key)) membership.set(key, []);
+      membership.get(key).push(collection);
+    }
   }
-  await fs.writeFile(META_PRODUCT_FEED_OUTPUT, `${metaFeedHeaders.map(csvCell).join(',')}\n${metaFeedRows.join('\n')}\n`);
-  return metaFeedRows.length;
+
+  for (const list of membership.values()) {
+    list.sort((a, b) => a.title.localeCompare(b.title) || a.handle.localeCompare(b.handle));
+  }
+  return {
+    membership,
+    products: [...productMap.values()],
+    anomalies,
+    collectionStats: discovered.map(({ collection, products, anomaly }) => ({
+      id: collection.id,
+      title: collection.title,
+      handle: collection.handle,
+      reportedProducts: collection.productsCount,
+      fetchedProducts: products.length,
+      anomaly
+    })),
+    activeCollections: active.length,
+    reportedMemberships,
+    fetchedMemberships
+  };
 }
 
-function normalizeProduct({ product, collection }) {
+function taxonomyFingerprint(products, collections) {
+  const productKeys = [...new Set(products.slice(0, 100).flatMap(product => Object.keys(product || {})))].sort();
+  const collectionKeys = [...new Set(collections.slice(0, 100).flatMap(collection => Object.keys(collection || {})))].sort();
+  return createHash('sha256')
+    .update(JSON.stringify({ productKeys, collectionKeys }))
+    .digest('hex');
+}
+
+function normalizeProduct(product, classification) {
   const imageById = new Map((product.images || []).map(image => [image.id, safeImage(image)]));
-  const searchText = [product.title, product.body_html, product.product_type, ...(product.tags || [])].join(' ');
-  const normalizedSearchText = cleanText(searchText);
-  const pricingClass = EMBROIDERY_PATTERN.test(normalizedSearchText)
-    ? 'embroidered'
-    : NON_EMBROIDERY_PATTERN.test(normalizedSearchText) ? 'non-embroidered' : 'unknown';
+  const pricingClass = classification.pricingClass;
   const embroidered = pricingClass === 'embroidered' ? true : pricingClass === 'non-embroidered' ? false : null;
   const markup = pricingClass === 'embroidered' ? 2500 : pricingClass === 'non-embroidered' ? 1000 : null;
-  const pieceMatch = normalizedSearchText.match(PIECE_PATTERN);
-  const pieceType = pieceMatch ? `${pieceMatch[1]} Piece` : 'Unspecified';
-  const sourceDescription = sanitizeSupplierDescription(product.body_html, { productTitle:product.title });
-  const variants = product.variants?.length ? product.variants : [{ id: product.id, title: 'Default Title', price: '0', available: false }];
+  const sourceDescription = sanitizeSupplierDescription(product.body_html, { productTitle: product.title });
+  const variants = product.variants?.length
+    ? product.variants
+    : [{ id: product.id, title: 'Default Title', price: '0', available: false }];
+  const primaryCollection = classification.primaryCollection;
+  const sourceCollections = classification.collections.map(collection => ({
+    id: collection.id,
+    title: collection.title,
+    handle: collection.handle
+  }));
 
   return variants.map((variant, index) => {
     const hasNamedVariant = variants.length > 1 || !/^default title$/i.test(variant.title || '');
@@ -127,14 +225,18 @@ function normalizeProduct({ product, collection }) {
     const name = hasNamedVariant ? `${product.title} — ${variant.title}` : product.title;
     return {
       id: `${product.id}-${variant.id}`,
+      sourceProductId: String(product.id),
       code,
       name: cleanText(name),
       productName: cleanText(product.title),
       variant: hasNamedVariant ? cleanText(variant.title) : '',
-      brand: cleanText(product.vendor || collection.label),
-      category: collection.group,
-      sourceCollection: collection.label,
-      sourceCollectionHandle: collection.handle,
+      brand: cleanText(product.vendor || primaryCollection?.title || 'Other designs'),
+      category: classification.category,
+      sourceCollection: primaryCollection?.title || 'Supplier catalogue',
+      sourceCollectionHandle: primaryCollection?.handle || '',
+      sourceCollections,
+      seasons: classification.seasons,
+      scopeReasons: classification.reasons,
       embroidered,
       sourcePrice,
       markup,
@@ -142,53 +244,331 @@ function normalizeProduct({ product, collection }) {
       pricingClass,
       pricingStatus: markup === null ? 'enquire' : 'calculated',
       pricingReason: markup === null ? 'classification-uncertain' : null,
-      pieceType,
+      pieceType: classification.pieceType,
       sourceDescription: sourceDescription || null,
       currency: 'PKR',
       available: Boolean(variant.available),
       image,
       images: (product.images || []).map(safeImage).filter(Boolean).slice(0, 6),
       sourceUrl: `${SOURCE}/products/${product.handle}`,
+      publishedAt: product.published_at || null,
+      createdAt: product.created_at || null,
       updatedAt: product.updated_at || null
     };
   });
 }
 
+function mergeUniqueCollections(items) {
+  const map = new Map();
+  for (const item of items.flatMap(product => product.sourceCollections || [])) {
+    const key = item.id || item.handle || item.title;
+    if (key && !map.has(key)) map.set(key, item);
+  }
+  return [...map.values()].sort((a, b) => String(a.title).localeCompare(String(b.title)));
+}
+
+function canonicalDuplicateRecord(items) {
+  return [...items].sort((a, b) => {
+    const available = Number(b.available) - Number(a.available);
+    if (available) return available;
+    const date = value => Date.parse(value || '') || 0;
+    const published = date(b.publishedAt) - date(a.publishedAt);
+    if (published) return published;
+    const updated = date(b.updatedAt) - date(a.updatedAt);
+    if (updated) return updated;
+    const created = date(b.createdAt) - date(a.createdAt);
+    if (created) return created;
+    return Number(b.sourceProductId || 0) - Number(a.sourceProductId || 0);
+  })[0];
+}
+
+function collapseDuplicateSupplierCodes(records) {
+  const byCode = new Map();
+  for (const item of records) {
+    const code = cleanText(item.code);
+    if (!byCode.has(code)) byCode.set(code, []);
+    byCode.get(code).push(item);
+  }
+
+  const products = [];
+  const duplicateCodes = [];
+  for (const [code, items] of byCode) {
+    if (items.length === 1) {
+      products.push(items[0]);
+      continue;
+    }
+
+    const canonical = canonicalDuplicateRecord(items);
+    const sourcePrices = [...new Set(items.map(item => item.sourcePrice).filter(Number.isFinite))].sort((a, b) => a - b);
+    const pricingClasses = [...new Set(items.map(item => item.pricingClass).filter(Boolean))];
+    const merged = {
+      ...canonical,
+      category: items.some(item => item.category === 'Luxury') ? 'Luxury' : canonical.category,
+      sourceCollections: mergeUniqueCollections(items),
+      seasons: [...new Set(items.flatMap(item => item.seasons || []))].sort(),
+      scopeReasons: [...new Set(items.flatMap(item => item.scopeReasons || []))].sort(),
+      sourceProductIds: [...new Set(items.map(item => item.sourceProductId).filter(Boolean))].sort(),
+      duplicateSourceRecords: items.length,
+      duplicateSourcePrices: sourcePrices
+    };
+
+    if (pricingClasses.length > 1) {
+      merged.pricingClass = 'unknown';
+      merged.embroidered = null;
+      merged.markup = null;
+      merged.price = null;
+      merged.pricingStatus = 'enquire';
+      merged.pricingReason = 'duplicate-source-classification-conflict';
+    }
+
+    products.push(merged);
+    duplicateCodes.push({
+      code,
+      records: items.length,
+      selectedSourceProductId: canonical.sourceProductId,
+      selectedSourcePrice: canonical.sourcePrice,
+      selectedPublishedAt: canonical.publishedAt,
+      sourceProductIds: merged.sourceProductIds,
+      sourcePrices,
+      pricingClasses
+    });
+  }
+  return { products, duplicateCodes };
+}
+
+function buildDriftReport({ source, scope, products, previous, snapshot, priorSnapshot }) {
+  const previousCount = Array.isArray(previous.products) ? previous.products.length : 0;
+  const ambiguousShare = source.products.length ? scope.ambiguous / source.products.length : 1;
+  const collectionCoverage = source.reportedMemberships > 0 ? source.fetchedMemberships / source.reportedMemberships : 0;
+  const previousCollectionCoverage = Number(priorSnapshot.collectionProductCoverage);
+  const requiredCollectionCoverage = Number.isFinite(previousCollectionCoverage) && previousCollectionCoverage > 0
+    ? Math.max(MIN_COLLECTION_PRODUCT_COVERAGE, previousCollectionCoverage * 0.80)
+    : MIN_COLLECTION_PRODUCT_COVERAGE;
+  const allowedCollectionAnomalies = Math.max(5, Math.ceil(source.activeCollections * 0.05));
+  const allowedDuplicateCodes = Math.max(20, Math.ceil(products.length * 0.02));
+  const minimumAfterShrink = previousCount
+    ? Math.floor(previousCount * (1 - MAX_CATALOGUE_SHRINK_PERCENT / 100))
+    : MIN_CATALOGUE_PRODUCTS;
+
+  const checks = [
+    { id: 'source-product-floor', ok: source.products.length >= MIN_SOURCE_PRODUCTS, actual: source.products.length, required: MIN_SOURCE_PRODUCTS },
+    { id: 'source-collection-floor', ok: source.collections.length >= MIN_SOURCE_COLLECTIONS, actual: source.collections.length, required: MIN_SOURCE_COLLECTIONS },
+    { id: 'collection-fetch-anomalies', ok: source.collectionAnomalies.length <= allowedCollectionAnomalies, actual: source.collectionAnomalies.length, requiredMaximum: allowedCollectionAnomalies },
+    { id: 'collection-product-coverage', ok: collectionCoverage >= requiredCollectionCoverage, actual: collectionCoverage, required: requiredCollectionCoverage, fetchedMemberships: source.fetchedMemberships, reportedMemberships: source.reportedMemberships, previous: Number.isFinite(previousCollectionCoverage) ? previousCollectionCoverage : null },
+    { id: 'duplicate-supplier-skus', ok: source.duplicateCodes.length <= allowedDuplicateCodes, actual: source.duplicateCodes.length, requiredMaximum: allowedDuplicateCodes },
+    { id: 'ambiguous-scope-share', ok: scope.ambiguous <= MAX_AMBIGUOUS_ABSOLUTE_WITHOUT_REVIEW || ambiguousShare <= MAX_AMBIGUOUS_SHARE, actual: ambiguousShare, count: scope.ambiguous, required: MAX_AMBIGUOUS_SHARE },
+    { id: 'catalogue-emergency-floor', ok: products.length >= MIN_CATALOGUE_PRODUCTS, actual: products.length, required: MIN_CATALOGUE_PRODUCTS },
+    { id: 'catalogue-shrink-limit', ok: !previousCount || products.length >= minimumAfterShrink, actual: products.length, required: minimumAfterShrink, previous: previousCount },
+    { id: 'downstream-size-limit', ok: products.length <= MAX_DOWNSTREAM_PRODUCTS, actual: products.length, requiredMaximum: MAX_DOWNSTREAM_PRODUCTS }
+  ];
+
+  return {
+    schemaVersion: 1,
+    ok: checks.every(check => check.ok),
+    generatedAt: new Date().toISOString(),
+    dryRun: DRY_RUN,
+    checks,
+    summary: {
+      sourceProducts: source.products.length,
+      sourceCollections: source.collections.length,
+      includedSourceProducts: scope.included,
+      excludedSourceProducts: scope.excluded,
+      ambiguousSourceProducts: scope.ambiguous,
+      candidateProducts: products.length,
+      previousCatalogueProducts: previousCount,
+      candidateVsPreviousPercent: percent(products.length, previousCount),
+      collectionProductCoverage: collectionCoverage,
+      previousCollectionProductCoverage: Number.isFinite(previousCollectionCoverage) ? previousCollectionCoverage : null,
+      taxonomyFingerprint: snapshot.taxonomyFingerprint,
+      previousTaxonomyFingerprint: priorSnapshot.taxonomyFingerprint || null
+    },
+    exclusionReasons: scope.exclusionReasons,
+    duplicateSourceCodes: source.duplicateCodes.slice(0, 30),
+    collectionAnomalies: source.collectionAnomalies.slice(0, 30),
+    lowCoverageCollections: source.collectionStats
+      .filter(item => item.reportedProducts > 0 && item.fetchedProducts / item.reportedProducts < 0.50)
+      .slice(0, 30),
+    includedSamples: source.classified
+      .filter(item => item.classification.status === 'included')
+      .slice(0, 20)
+      .map(item => ({
+        id: String(item.product.id),
+        title: cleanText(item.product.title),
+        vendor: cleanText(item.product.vendor),
+        category: item.classification.category,
+        pieceType: item.classification.pieceType,
+        pricingClass: item.classification.pricingClass,
+        seasons: item.classification.seasons,
+        collections: item.classification.collections.map(collection => collection.title).slice(0, 8)
+      })),
+    ambiguousSamples: source.classified
+      .filter(item => item.classification.status === 'ambiguous')
+      .slice(0, 30)
+      .map(item => ({
+        id: String(item.product.id),
+        title: cleanText(item.product.title),
+        vendor: cleanText(item.product.vendor),
+        reasons: item.classification.reasons,
+        collections: item.classification.collections.map(collection => collection.title).slice(0, 8)
+      })),
+    excludedSamples: source.classified
+      .filter(item => item.classification.status === 'excluded')
+      .slice(0, 30)
+      .map(item => ({
+        id: String(item.product.id),
+        title: cleanText(item.product.title),
+        vendor: cleanText(item.product.vendor),
+        reasons: item.classification.reasons
+      }))
+  };
+}
+
+async function writeMetaProductFeed(products) {
+  const headers = ['id', 'title', 'description', 'availability', 'condition', 'price', 'link', 'image_link', 'brand', 'product_type'];
+  const rows = products
+    .filter(item => Number.isFinite(item.price) && item.price > 0)
+    .map(item => [
+      item.code,
+      item.name,
+      `${item.name}. ${item.pieceType} unstitched suit by ${item.brand}. Cash on Delivery in Pakistan. Availability is confirmed before dispatch.`,
+      item.available ? 'in stock' : 'out of stock',
+      'new',
+      `${item.price.toFixed(2)} PKR`,
+      `https://alhumacollection.com/?product=${encodeURIComponent(item.code)}`,
+      item.image,
+      item.brand,
+      `Women > Unstitched Suits > ${item.category}`
+    ].map(csvCell).join(','));
+  if (rows.length < 20) throw new Error(`Only ${rows.length} products qualified for the Meta feed; refusing an incomplete feed.`);
+  await fs.writeFile(META_PRODUCT_FEED_OUTPUT, `${headers.map(csvCell).join(',')}\n${rows.join('\n')}\n`);
+  return rows.length;
+}
+
 async function main() {
   const startedAt = new Date().toISOString();
-  const collections = approvedCollections();
-  const records = [];
+  const discovered = await discoverSupplier();
+  const membershipDiscovery = await buildCollectionMemberships(discovered.collections);
+  const memberships = membershipDiscovery.membership;
+  const sourceProducts = membershipDiscovery.products;
+  const schemaHealth = assertProductSchema(sourceProducts);
+  if (sourceProducts.length < MIN_SOURCE_PRODUCTS) throw new Error(`Supplier collection discovery returned only ${sourceProducts.length} unique products; refusing probable source drift.`);
+  const classified = sourceProducts.map(product => ({
+    product,
+    classification: classifyProduct(product, memberships.get(String(product.id)) || [])
+  }));
+  const scope = summarizeScope(classified);
 
-  for (const collection of collections) {
-    const items = await collectionProducts(collection);
-    records.push(...items.flatMap(normalizeProduct));
-    await sleep(175);
-  }
-
-  const deduplicated = new Map();
-  for (const item of records) {
-    const existing = deduplicated.get(item.id);
-    if (!existing || (item.category === 'Luxury' && existing.category !== 'Luxury')) deduplicated.set(item.id, item);
-  }
-  const previous = await fs.readFile(OUTPUT, 'utf8').then(JSON.parse).catch(() => ({ products: [] }));
+  const previous = await readJson(OUTPUT, { products: [] });
+  const priorSnapshot = await readJson(TAXONOMY_SNAPSHOT_OUTPUT, {});
   const previousPrices = new Map((previous.products || []).map(item => [item.code, Number(item.sourcePrice)]));
-  const products = [...deduplicated.values()]
-    .filter(item => item.image && item.sourcePrice > 0)
+  const records = classified
+    .filter(item => item.classification.status === 'included')
+    .flatMap(item => normalizeProduct(item.product, item.classification));
+
+  const validRecords = records.filter(item => item.image && item.sourcePrice > 0);
+  const collapsed = collapseDuplicateSupplierCodes(validRecords);
+  const products = collapsed.products
     .map(item => {
       const oldPrice = previousPrices.get(item.code);
       const changedTooFar = oldPrice > 0 && Math.abs(item.sourcePrice - oldPrice) / oldPrice > MAX_SOURCE_PRICE_CHANGE;
-      if (!changedTooFar) return item;
+      if (!changedTooFar || item.price === null) return item;
       return { ...item, price: null, markup: null, pricingStatus: 'enquire', pricingReason: 'source-price-change-review' };
     })
     .sort((a, b) => Number(b.available) - Number(a.available) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
 
-  if (products.length < 20) throw new Error(`Only ${products.length} products were produced; refusing an incomplete update.`);
+  const snapshot = {
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    source: SOURCE,
+    sourceProducts: sourceProducts.length,
+    sourceCollections: discovered.collections.length,
+    activeSourceCollections: membershipDiscovery.activeCollections,
+    reportedCollectionMemberships: membershipDiscovery.reportedMemberships,
+    fetchedCollectionMemberships: membershipDiscovery.fetchedMemberships,
+    collectionProductCoverage: membershipDiscovery.reportedMemberships > 0 ? membershipDiscovery.fetchedMemberships / membershipDiscovery.reportedMemberships : 0,
+    collectionAnomalies: membershipDiscovery.anomalies,
+    duplicateSourceCodes: collapsed.duplicateCodes,
+    includedSourceProducts: scope.included,
+    excludedSourceProducts: scope.excluded,
+    ambiguousSourceProducts: scope.ambiguous,
+    candidateProducts: products.length,
+    taxonomyFingerprint: taxonomyFingerprint(sourceProducts, discovered.collections),
+    schemaHealth,
+    seasons: [...new Set(classified.flatMap(item => item.classification.seasons))].sort(),
+    brands: [...new Set(products.map(item => item.brand).filter(Boolean))].sort(),
+    collections: discovered.collections.map(collection => {
+      const fetchStat = membershipDiscovery.collectionStats.find(item => item.handle === collection.handle);
+      return {
+        id: collection.id,
+        title: collection.title,
+        handle: collection.handle,
+        productsCount: collection.productsCount,
+        fetchedProducts: fetchStat?.fetchedProducts ?? 0,
+        updatedAt: collection.updatedAt
+      };
+    })
+  };
+
+  const source = {
+    ...discovered,
+    products: sourceProducts,
+    schemaHealth,
+    memberships,
+    classified,
+    activeCollections: membershipDiscovery.activeCollections,
+    collectionAnomalies: membershipDiscovery.anomalies,
+    duplicateCodes: collapsed.duplicateCodes,
+    collectionStats: membershipDiscovery.collectionStats,
+    reportedMemberships: membershipDiscovery.reportedMemberships,
+    fetchedMemberships: membershipDiscovery.fetchedMemberships
+  };
+  const drift = buildDriftReport({ source, scope, products, previous, snapshot, priorSnapshot });
+
+  const preflight = {
+    mode: DRY_RUN ? 'dry-run' : 'synchronize',
+    startedAt,
+    completedAt: new Date().toISOString(),
+    sourceProducts: sourceProducts.length,
+    sourceCollections: discovered.collections.length,
+    included: scope.included,
+    excluded: scope.excluded,
+    ambiguous: scope.ambiguous,
+    candidateProducts: products.length,
+    seasons: snapshot.seasons,
+    brands: snapshot.brands.length,
+    collectionAnomalies: membershipDiscovery.anomalies,
+    duplicateSourceCodes: collapsed.duplicateCodes,
+    driftOk: drift.ok,
+    checks: drift.checks,
+    includedSamples: drift.includedSamples.slice(0, 10),
+    ambiguousSamples: drift.ambiguousSamples.slice(0, 10),
+    excludedSamples: drift.excludedSamples.slice(0, 10)
+  };
+
+  if (DRY_RUN) {
+    console.log(JSON.stringify(preflight, null, 2));
+    if (!drift.ok) throw new Error('Dynamic supplier preflight detected unsafe taxonomy/catalogue drift.');
+    return;
+  }
+
+  await fs.mkdir(path.dirname(OUTPUT), { recursive: true });
+  await fs.writeFile(DRIFT_REPORT_OUTPUT, `${JSON.stringify(drift, null, 2)}\n`);
+  if (!drift.ok) throw new Error('Dynamic supplier preflight detected unsafe taxonomy/catalogue drift.');
 
   const catalogue = {
-    schemaVersion: 1,
+    schemaVersion: 3,
     source: SOURCE,
     authorization: 'Dawood Designers approval dated 2026-07-21',
     synchronizedAt: new Date().toISOString(),
+    discovery: {
+      mode: 'dynamic-shopify-storefront',
+      sourceProducts: sourceProducts.length,
+      sourceCollections: discovered.collections.length,
+      includedSourceProducts: scope.included,
+      excludedSourceProducts: scope.excluded,
+      ambiguousSourceProducts: scope.ambiguous,
+      taxonomyFingerprint: snapshot.taxonomyFingerprint
+    },
     pricing: { nonEmbroideredMarkup: 1000, embroideredMarkup: 2500, currency: 'PKR' },
     counts: {
       products: products.length,
@@ -201,16 +581,31 @@ async function main() {
     products
   };
 
-  await fs.mkdir(path.dirname(OUTPUT), { recursive: true });
+  await fs.writeFile(TAXONOMY_SNAPSHOT_OUTPUT, `${JSON.stringify(snapshot, null, 2)}\n`);
   await fs.writeFile(OUTPUT, `${JSON.stringify(catalogue, null, 2)}\n`);
-  await fs.writeFile(STATUS_OUTPUT, `${JSON.stringify({ ok: true, startedAt, completedAt: catalogue.synchronizedAt, ...catalogue.counts }, null, 2)}\n`);
-  const productUrls = products.map(item => `  <url><loc>https://alhumacollection.com/?product=${encodeURIComponent(item.code).replace(/&/g, '&amp;')}</loc><lastmod>${catalogue.synchronizedAt.slice(0,10)}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>`).join('\n');
+  await fs.writeFile(STATUS_OUTPUT, `${JSON.stringify({
+    ok: true,
+    startedAt,
+    completedAt: catalogue.synchronizedAt,
+    discovery: catalogue.discovery,
+    ...catalogue.counts
+  }, null, 2)}\n`);
+
+  const productUrls = products
+    .map(item => `  <url><loc>https://alhumacollection.com/?product=${encodeURIComponent(item.code).replace(/&/g, '&amp;')}</loc><lastmod>${catalogue.synchronizedAt.slice(0, 10)}</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>`)
+    .join('\n');
   await fs.writeFile(PRODUCT_SITEMAP_OUTPUT, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${productUrls}\n</urlset>\n`);
   await writeMetaProductFeed(products);
-  console.log(`Synchronized ${products.length} products from ${collections.length} approved catalogue collections.`);
+  console.log(JSON.stringify(preflight, null, 2));
 }
 
 main().catch(async error => {
+  if (DRY_RUN) {
+    console.error(error);
+    process.exitCode = 1;
+    return;
+  }
+
   await fs.mkdir(path.dirname(STATUS_OUTPUT), { recursive: true });
   let cachedMetaFeedProducts = 0;
   try {
