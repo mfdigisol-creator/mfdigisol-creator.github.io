@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-27T16:26:42.185Z",
+  "generatedAt": "2026-09-27T17:00:20.897Z",
   "summary": {
-    "products": 1055,
-    "available": 901,
-    "formal": 672,
+    "products": 1053,
+    "available": 899,
+    "formal": 670,
     "luxury": 383,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 1045,
+    "metaFeedProducts": 1043,
     "canonicalBrands": 75,
     "aliasCorrections": 26,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 43,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 1744,
-    "newlyRemovedProducts": 1,
+    "removedProducts": 1746,
+    "newlyRemovedProducts": 2,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -330,9 +330,14 @@
   "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "ZESH-PRN-KHD-V3-3P-HM-12",
-      "name": "Zesh Digital Printed Khaddar 3PC — 12",
-      "path": "products/zesh-prn-khd-v3-3p-hm-12-zesh-digital-printed-khaddar-3pc/"
+      "code": "LUXURIA-ANAYANOOR-3P-D01",
+      "name": "Luxuria By Anaya Noor Heavy Emb Dhanak With Plachi Shawl 3PC — 1",
+      "path": "products/luxuria-anayanoor-3p-d01-luxuria-by-anaya-noor-heavy-emb-dhanak-with-plachi-shawl-3pc/"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-374",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 374",
+      "path": "products/mixbrand-prnkhd-2p-bl-374-mix-brand-digital-printed-allover-khaddar-2pc/"
     }
   ]
 }
