@@ -5,6 +5,7 @@
   const $ = selector => section.querySelector(selector);
   const controls = {
     search: $('[data-live-search]'), category: $('[data-live-category]'), brand: $('[data-live-brand]'),
+    collection: $('[data-live-collection]'), season: $('[data-live-season]'),
     style: $('[data-live-style]'), pieces: $('[data-live-pieces]'), price: $('[data-live-price]'),
     availability: $('[data-live-availability]'), sort: $('[data-live-sort]')
   };
@@ -125,7 +126,12 @@
     const query = controls.search.value.trim().toLowerCase();
     const priceRange = controls.price.value;
     const matches = products.filter(product => {
-      const searchable = `${product.name} ${product.code} ${product.brand} ${product.sourceCollection}`.toLowerCase();
+      const supplierCollections = Array.isArray(product.sourceCollections) ? product.sourceCollections : [];
+      const seasons = Array.isArray(product.seasons) ? product.seasons : [];
+      const supplierCollectionText = supplierCollections.map(item => `${item.title || ""} ${item.handle || ""}`).join(' ');
+      const searchable = `${product.name} ${product.code} ${product.brand} ${product.sourceCollection} ${supplierCollectionText} ${seasons.join(" ")}`.toLowerCase();
+      const collectionMatch = controls.collection.value === 'all' || supplierCollections.some(item => item.title === controls.collection.value);
+      const seasonMatch = controls.season.value === 'all' || seasons.includes(controls.season.value);
       const priceMatch = priceRange === 'all' || (priceRange === 'enquire' ? product.price == null : (() => {
         if (product.price == null) return false;
         const [min,max] = priceRange.split('-').map(Number);
@@ -134,6 +140,8 @@
       return (!query || searchable.includes(query))
         && (controls.category.value === 'all' || product.category === controls.category.value)
         && (controls.brand.value === 'all' || product.brand === controls.brand.value)
+        && collectionMatch
+        && seasonMatch
         && (controls.style.value === 'all' || product.pricingClass === controls.style.value)
         && (controls.pieces.value === 'all' || product.pieceType === controls.pieces.value)
         && priceMatch
@@ -147,7 +155,7 @@
     });
   }
 
-  const labels = { category:'Category', brand:'Collection', style:'Style', pieces:'Pieces', price:'Price', availability:'Availability', sort:'Sort' };
+  const labels = { category:'Category', brand:'Brand', collection:'Supplier collection', season:'Season', style:'Style', pieces:'Pieces', price:'Price', availability:'Availability', sort:'Sort' };
   function renderChips() {
     chips.innerHTML = Object.entries(controls).filter(([key,control]) => key !== 'search' && control.value !== 'all' && !(key === 'availability' && control.value === 'available') && !(key === 'sort' && control.value === 'newest')).map(([key,control]) => `<button type="button" data-reset-filter="${key}">${escapeHtml(labels[key])}: ${escapeHtml(control.options[control.selectedIndex].text)} ×</button>`).join('');
   }
@@ -180,7 +188,7 @@
       const remaining = items.length - visibleCount;
       return `<section class="live-product-collection" id="${collectionId(name)}" aria-labelledby="${collectionId(name)}-title">
       <div class="live-product-collection-head">
-        <div><span>Collection</span><h3 id="${collectionId(name)}-title">${escapeHtml(name)}</h3><a href="${escapeHtml(collectionPageUrl(name))}">Open ${escapeHtml(name)} collection page</a></div>
+        <div><span>Brand</span><h3 id="${collectionId(name)}-title">${escapeHtml(name)}</h3><a href="${escapeHtml(collectionPageUrl(name))}">Open ${escapeHtml(name)} brand page</a></div>
         <p>Showing ${visibleCount} of ${items.length} design${items.length === 1 ? '' : 's'}</p>
       </div>
       <div class="live-collection-products">${items.slice(0, visibleCount).map((product, productIndex) => card(product, collectionIndex === 0 && productIndex < 2)).join('')}</div>
@@ -296,7 +304,11 @@
 
   function populateNavigation() {
     const brands = [...new Set(products.map(product => product.brand).filter(Boolean))].sort();
-    controls.brand.innerHTML = '<option value="all">All collections</option>' + brands.map(brand => `<option value="${escapeHtml(brand)}">${escapeHtml(brand)}</option>`).join('');
+    const supplierCollections = [...new Set(products.flatMap(product => Array.isArray(product.sourceCollections) ? product.sourceCollections.map(item => item?.title).filter(Boolean) : []))].sort();
+    const seasons = [...new Set(products.flatMap(product => Array.isArray(product.seasons) ? product.seasons : []))].sort();
+    controls.brand.innerHTML = '<option value="all">All brands</option>' + brands.map(brand => `<option value="${escapeHtml(brand)}">${escapeHtml(brand)}</option>`).join('');
+    controls.collection.innerHTML = '<option value="all">All supplier collections</option>' + supplierCollections.map(name => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join('');
+    controls.season.innerHTML = '<option value="all">All seasons</option>' + seasons.map(season => `<option value="${escapeHtml(season)}">${escapeHtml(season)}</option>`).join('');
     const enquirySelect = document.querySelector('[data-live-enquiry-collection]');
     if (enquirySelect) {
       enquirySelect.innerHTML = '<option value="Help me choose">Help me choose</option>' + ['Formal','Luxury'].map(group => {
@@ -378,7 +390,7 @@
       syncTime.title = `Last successful synchronization: ${date.toISOString()}`;
       syncTime.classList.toggle('stale',stale);
       populateNavigation(); populateCollectionSlider(); section.hidden=false; revealCatalogue(); render();
-      const catalogueSnapshot = { synchronizedAt:data.synchronizedAt, products:products.map(product => { const description=descriptionForProduct(product); return ({ code:product.code, name:product.name, brand:product.brand, category:product.category, available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, description:description.text, descriptionSource:description.source, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) }); }) };
+      const catalogueSnapshot = { synchronizedAt:data.synchronizedAt, products:products.map(product => { const description=descriptionForProduct(product); return ({ code:product.code, name:product.name, brand:product.brand, category:product.category, sourceCollections:product.sourceCollections || [], seasons:product.seasons || [], available:product.available, price:product.price, pricingClass:product.pricingClass, pieceType:product.pieceType, description:description.text, descriptionSource:description.source, priceLabel:product.price == null ? 'Please enquire on WhatsApp for the current price.' : `The displayed retail price is ${money(product.price)}.`, whatsapp:whatsapp(product, product.price == null) }); }) };
       window.AlHumaCatalogueSnapshot = catalogueSnapshot;
       window.dispatchEvent(new CustomEvent('alhuma:catalogue-ready', { detail:catalogueSnapshot }));
       const requested = new URLSearchParams(location.search).get('product'); if(requested) setTimeout(() => openProduct(requested,false),100);
