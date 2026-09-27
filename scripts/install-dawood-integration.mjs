@@ -9,13 +9,15 @@ const catalogueSection = `      <section class="live-catalogue section-pad" id="
           <div class="live-catalogue-summary"><p>Explore current unstitched formal and luxury collections. Catalogue information is refreshed approximately every 12 hours.</p><div class="live-sync-meta"><span data-live-sync-time>Preparing catalogue</span><span>Official WhatsApp ordering</span></div></div>
         </div>
         <div class="live-collection-showcase reveal" id="new-arrivals" data-live-collection-showcase aria-label="Browse collections">
-          <div class="live-collection-showcase-head"><div><span>Curated for you</span><h3>Shop by collection</h3></div><div class="live-collection-arrows"><button type="button" data-collection-prev aria-label="Previous collections">←</button><button type="button" data-collection-next aria-label="Next collections">→</button></div></div>
+          <div class="live-collection-showcase-head"><div><span>Curated for you</span><h3>Shop by brand</h3></div><div class="live-collection-arrows"><button type="button" data-collection-prev aria-label="Previous collections">←</button><button type="button" data-collection-next aria-label="Next collections">→</button></div></div>
           <div class="live-collection-slider" data-live-collection-slider tabindex="0"><p>Loading collections…</p></div>
         </div>
         <div class="live-tools" aria-label="Search and filter synchronized catalogue">
           <label class="live-search"><span>Search designs</span><input type="search" placeholder="Product, brand or code" autocomplete="off" data-live-search /></label>
           <label><span>Category</span><select data-live-category><option value="all">All categories</option><option value="Formal">Formal</option><option value="Luxury">Luxury</option></select></label>
-          <label><span>Collection</span><select data-live-brand><option value="all">All collections</option></select></label>
+          <label><span>Brand</span><select data-live-brand><option value="all">All brands</option></select></label>
+          <label><span>Supplier collection</span><select data-live-collection><option value="all">All supplier collections</option></select></label>
+          <label><span>Season</span><select data-live-season><option value="all">All seasons</option></select></label>
           <label><span>Style</span><select data-live-style><option value="all">All styles</option><option value="embroidered">Embroidered</option><option value="non-embroidered">Printed / non-embroidered</option><option value="unknown">Price on enquiry</option></select></label>
           <label><span>Pieces</span><select data-live-pieces><option value="all">All suit types</option><option value="2 Piece">2 Piece</option><option value="3 Piece">3 Piece</option></select></label>
           <label><span>Price</span><select data-live-price><option value="all">All prices</option><option value="0-3999">Under Rs. 4,000</option><option value="4000-5999">Rs. 4,000–5,999</option><option value="6000-7999">Rs. 6,000–7,999</option><option value="8000-999999">Rs. 8,000+</option><option value="enquire">Price on enquiry</option></select></label>
@@ -30,8 +32,8 @@ const catalogueSection = `      <section class="live-catalogue section-pad" id="
 `;
 
 const nav = `        <details class="live-nav-dropdown" data-live-nav>
-          <summary>Collections <span aria-hidden="true">⌄</span></summary>
-          <div class="live-nav-menu"><a class="live-nav-all" href="#live-catalogue">View all collections</a><div class="live-nav-groups" data-live-nav-groups><span>Loading collections…</span></div></div>
+          <summary>Brands <span aria-hidden="true">⌄</span></summary>
+          <div class="live-nav-menu"><a class="live-nav-all" href="#live-catalogue">View all brands</a><div class="live-nav-groups" data-live-nav-groups><span>Loading brands…</span></div></div>
         </details>
         <a href="#new-arrivals">New arrivals</a>
         <a href="#how-to-order">How to order</a>
@@ -173,7 +175,7 @@ if (!html.includes('class="social-contact"')) {
 const enquirySelectStart = html.indexOf('<label>Collection<select name="collection"');
 const enquirySelectEnd = html.indexOf('</select></label>', enquirySelectStart);
 if (enquirySelectStart >= 0 && enquirySelectEnd > enquirySelectStart) {
-  const replacement = '<label>Preferred collection<select name="collection" data-live-enquiry-collection><option value="Help me choose">Help me choose</option></select><small class="field-help">Choose a current brand, or let our team guide you.</small></label>';
+  const replacement = '<label>Preferred brand<select name="collection" data-live-enquiry-collection><option value="Help me choose">Help me choose</option></select><small class="field-help">Choose a current brand, or let our team guide you.</small></label>';
   html = `${html.slice(0, enquirySelectStart)}${replacement}${html.slice(enquirySelectEnd + '</select></label>'.length)}`;
 }
 
