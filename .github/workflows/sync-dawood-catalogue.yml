@@ -113,6 +113,35 @@ jobs:
         if: github.event_name == 'pull_request'
         run: node scripts/sync-dawood.mjs --dry-run
 
+      - name: Validate dynamic candidate in isolated runner workspace
+        if: github.event_name == 'pull_request'
+        run: |
+          candidate="$RUNNER_TEMP/alhuma-dynamic-candidate"
+          rm -rf "$candidate"
+          mkdir -p "$candidate"
+          cp -a . "$candidate/"
+          cd "$candidate"
+          node scripts/sync-dawood.mjs
+          node scripts/seo-batch1-postprocess.mjs
+          node scripts/generate-seo-pages-v2.mjs
+          node scripts/generate-step9b-guide.mjs
+          node scripts/performance-p1-postprocess.mjs
+          node scripts/performance-p2p3-postprocess.mjs
+          node scripts/version-performance-assets.mjs
+          test -s assets/alhuma-collection-logo.webp
+          node scripts/apply-official-brand.mjs
+          node scripts/image-seo-postprocess.mjs
+          node scripts/entity-consistency-postprocess.mjs
+          node scripts/search-ecosystem-postprocess.mjs
+          node --check assistant-runtime.js
+          node --check dawood-catalogue.js
+          node --check analytics.js
+          node scripts/test-product-descriptions.mjs
+          node scripts/validate-catalogue.mjs
+          node scripts/validate-merchant-policy.mjs
+          node scripts/validate-search-ecosystem-consistency.mjs
+          node scripts/validate-analytics-measurement.mjs
+
       - name: Build approved catalogue data
         id: catalogue
         if: github.event_name != 'pull_request'
