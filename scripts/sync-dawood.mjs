@@ -136,18 +136,33 @@ async function discoverSupplier() {
 
 async function buildCollectionMemberships(collections) {
   const membership = new Map();
+  const anomalies = [];
   const active = collections.filter(collection => collection.handle && collection.productsCount > 0);
   const discovered = await mapLimit(active, 6, async collection => {
     const maxPages = Math.max(2, Math.ceil(collection.productsCount / 250) + 2);
-    const products = await fetchPaged(
-      `/collections/${encodeURIComponent(collection.handle)}/products.json`,
-      'products',
-      { maxPages, allowEmpty: false }
-    );
-    return { collection, products };
+    try {
+      const products = await fetchPaged(
+        `/collections/${encodeURIComponent(collection.handle)}/products.json`,
+        'products',
+        { maxPages, allowEmpty: true }
+      );
+      if (!products.length) {
+        return { collection, products, anomaly: 'registry-count-positive-but-endpoint-empty' };
+      }
+      return { collection, products, anomaly: null };
+    } catch (error) {
+      return { collection, products: [], anomaly: `collection-fetch-failed: ${error.message}` };
+    }
   });
 
-  for (const { collection, products } of discovered) {
+  for (const { collection, products, anomaly } of discovered) {
+    if (anomaly) anomalies.push({
+      id: collection.id,
+      title: collection.title,
+      handle: collection.handle,
+      reportedProducts: collection.productsCount,
+      anomaly
+    });
     for (const product of products) {
       const key = String(product?.id ?? '');
       if (!key) continue;
@@ -159,7 +174,7 @@ async function buildCollectionMemberships(collections) {
   for (const list of membership.values()) {
     list.sort((a, b) => a.title.localeCompare(b.title) || a.handle.localeCompare(b.handle));
   }
-  return membership;
+  return { membership, anomalies, activeCollections: active.length };
 }
 
 function taxonomyFingerprint(products, collections) {
@@ -234,6 +249,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
   const membershipShare = source.products.length
     ? [...source.products].filter(product => source.memberships.has(String(product.id))).length / source.products.length
     : 0;
+  const allowedCollectionAnomalies = Math.max(5, Math.ceil(source.activeCollections * 0.05));
   const minimumAfterShrink = previousCount
     ? Math.floor(previousCount * (1 - MAX_CATALOGUE_SHRINK_PERCENT / 100))
     : MIN_CATALOGUE_PRODUCTS;
@@ -241,6 +257,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
   const checks = [
     { id: 'source-product-floor', ok: source.products.length >= MIN_SOURCE_PRODUCTS, actual: source.products.length, required: MIN_SOURCE_PRODUCTS },
     { id: 'source-collection-floor', ok: source.collections.length >= MIN_SOURCE_COLLECTIONS, actual: source.collections.length, required: MIN_SOURCE_COLLECTIONS },
+    { id: 'collection-fetch-anomalies', ok: source.collectionAnomalies.length <= allowedCollectionAnomalies, actual: source.collectionAnomalies.length, requiredMaximum: allowedCollectionAnomalies },
     { id: 'collection-membership-share', ok: membershipShare >= MIN_COLLECTION_MEMBERSHIP_SHARE, actual: membershipShare, required: MIN_COLLECTION_MEMBERSHIP_SHARE },
     { id: 'ambiguous-scope-share', ok: scope.ambiguous <= MAX_AMBIGUOUS_ABSOLUTE_WITHOUT_REVIEW || ambiguousShare <= MAX_AMBIGUOUS_SHARE, actual: ambiguousShare, count: scope.ambiguous, required: MAX_AMBIGUOUS_SHARE },
     { id: 'catalogue-emergency-floor', ok: products.length >= MIN_CATALOGUE_PRODUCTS, actual: products.length, required: MIN_CATALOGUE_PRODUCTS },
@@ -268,6 +285,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
       previousTaxonomyFingerprint: priorSnapshot.taxonomyFingerprint || null
     },
     exclusionReasons: scope.exclusionReasons,
+    collectionAnomalies: source.collectionAnomalies.slice(0, 30),
     ambiguousSamples: source.classified
       .filter(item => item.classification.status === 'ambiguous')
       .slice(0, 30)
@@ -314,7 +332,8 @@ async function writeMetaProductFeed(products) {
 async function main() {
   const startedAt = new Date().toISOString();
   const discovered = await discoverSupplier();
-  const memberships = await buildCollectionMemberships(discovered.collections);
+  const membershipDiscovery = await buildCollectionMemberships(discovered.collections);
+  const memberships = membershipDiscovery.membership;
   const classified = discovered.products.map(product => ({
     product,
     classification: classifyProduct(product, memberships.get(String(product.id)) || [])
@@ -352,6 +371,8 @@ async function main() {
     sourceCollections: discovered.collections.length,
     collectionMembershipProducts,
     collectionMembershipShare: discovered.products.length ? collectionMembershipProducts / discovered.products.length : 0,
+    activeSourceCollections: membershipDiscovery.activeCollections,
+    collectionAnomalies: membershipDiscovery.anomalies,
     includedSourceProducts: scope.included,
     excludedSourceProducts: scope.excluded,
     ambiguousSourceProducts: scope.ambiguous,
@@ -369,7 +390,13 @@ async function main() {
     }))
   };
 
-  const source = { ...discovered, memberships, classified };
+  const source = {
+    ...discovered,
+    memberships,
+    classified,
+    activeCollections: membershipDiscovery.activeCollections,
+    collectionAnomalies: membershipDiscovery.anomalies
+  };
   const drift = buildDriftReport({ source, scope, products, previous, snapshot, priorSnapshot });
 
   const preflight = {
@@ -384,6 +411,7 @@ async function main() {
     candidateProducts: products.length,
     seasons: snapshot.seasons,
     brands: snapshot.brands.length,
+    collectionAnomalies: membershipDiscovery.anomalies,
     driftOk: drift.ok,
     checks: drift.checks,
     ambiguousSamples: drift.ambiguousSamples.slice(0, 10),
