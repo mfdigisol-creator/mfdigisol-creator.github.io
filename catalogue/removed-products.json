@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T16:15:30.674Z",
+  "generatedAt": "2026-09-27T16:26:42.152Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V2-ABR-01",
@@ -39638,6 +39638,32 @@
       "firstSeenAt": "2026-07-31T22:26:20+05:00",
       "lastSeenAt": "2026-08-06T15:17:21+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZESH-PRN-KHD-V3-3P-HM-12",
+      "id": "15539296272755-64628807827827",
+      "name": "Zesh Digital Printed Khaddar 3PC — 12",
+      "productName": "Zesh Digital Printed Khaddar 3PC",
+      "brand": "Zesh",
+      "sourceBrand": "Zesh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3350,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_a5b53d1b-7a95-4d79-900a-dbe2bf4391a5.jpg?v=1789547251",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_a5b53d1b-7a95-4d79-900a-dbe2bf4391a5.jpg?v=1789547251",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_bf31a045-8e8f-49b8-bbc7-e2585132acfd.jpg?v=1789547251",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/18_0aa02d50-5742-4311-9bf5-6388a0c3cb33.jpg?v=1789547251",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15_4acf7e8b-00df-45da-95ea-6f2af5ac2272.jpg?v=1789547251",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/12_2_a1a83c13-fa64-42ae-a561-ac780215f878.jpg?v=1789125679",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/12_1_690628fd-4f0f-480c-ab4c-9982c13aba4f.jpg?v=1789125679"
+      ],
+      "path": "products/zesh-prn-khd-v3-3p-hm-12-zesh-digital-printed-khaddar-3pc/",
+      "firstSeenAt": "2026-09-10T15:19:56+05:00",
+      "lastSeenAt": "2026-09-27T21:15:27+05:00",
+      "removedAt": "2026-09-27T16:26:42.116Z",
       "reason": "supplier-removed"
     },
     {

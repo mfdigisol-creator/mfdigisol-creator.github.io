@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-09-27T16:15:30.444Z",
+  "generatedAt": "2026-09-27T16:26:41.926Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1207,
+      "actual": 1206,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.746738184981154,
-      "required": 0.5980346820809249,
-      "fetchedMemberships": 5151,
-      "reportedMemberships": 6898,
-      "previous": 0.7475433526011561
+      "actual": 0.7466627974463146,
+      "required": 0.5973905479849232,
+      "fetchedMemberships": 5146,
+      "reportedMemberships": 6892,
+      "previous": 0.746738184981154
     },
     {
       "id": "duplicate-supplier-skus",
@@ -40,41 +40,41 @@
     {
       "id": "ambiguous-scope-share",
       "ok": true,
-      "actual": 0.004142502071251036,
+      "actual": 0.0041459369817578775,
       "count": 5,
       "required": 0.1
     },
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1056,
+      "actual": 1055,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1056,
-      "required": 848,
-      "previous": 1060
+      "actual": 1055,
+      "required": 844,
+      "previous": 1056
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1056,
+      "actual": 1055,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1207,
+    "sourceProducts": 1206,
     "sourceCollections": 97,
-    "includedSourceProducts": 1036,
+    "includedSourceProducts": 1035,
     "excludedSourceProducts": 166,
     "ambiguousSourceProducts": 5,
-    "candidateProducts": 1056,
-    "previousCatalogueProducts": 1060,
-    "candidateVsPreviousPercent": -0.37735849056603776,
-    "collectionProductCoverage": 0.746738184981154,
-    "previousCollectionProductCoverage": 0.7475433526011561,
+    "candidateProducts": 1055,
+    "previousCatalogueProducts": 1056,
+    "candidateVsPreviousPercent": -0.0946969696969697,
+    "collectionProductCoverage": 0.7466627974463146,
+    "previousCollectionProductCoverage": 0.746738184981154,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9"
   },

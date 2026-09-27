@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-27T16:15:30.713Z",
+  "generatedAt": "2026-09-27T16:26:42.185Z",
   "summary": {
-    "products": 1056,
-    "available": 902,
-    "formal": 673,
+    "products": 1055,
+    "available": 901,
+    "formal": 672,
     "luxury": 383,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 1046,
+    "metaFeedProducts": 1045,
     "canonicalBrands": 75,
     "aliasCorrections": 26,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 43,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 1743,
-    "newlyRemovedProducts": 4,
+    "removedProducts": 1744,
+    "newlyRemovedProducts": 1,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -330,24 +330,9 @@
   "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "BEECHTREE-3PLIN-V6-AHMD-6403",
-      "name": "Beechtree Digital Printed Linen 3PC — 6403",
-      "path": "products/beechtree-3plin-v6-ahmd-6403-beechtree-digital-printed-linen-3pc/"
-    },
-    {
-      "code": "MIXBRAND-PRNKHD-2P-BL-257",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 257",
-      "path": "products/mixbrand-prnkhd-2p-bl-257-mix-brand-digital-printed-allover-khaddar-2pc/"
-    },
-    {
-      "code": "NIRVANA-SHN-LIN-V284-3P-02",
-      "name": "Nirvana By Shanaya Digital Printed Linen 3PC — 2",
-      "path": "products/nirvana-shn-lin-v284-3p-02-nirvana-by-shanaya-digital-printed-linen-3pc/"
-    },
-    {
-      "code": "NIRVANA-SHN-LIN-V284-3P-03",
-      "name": "Nirvana By Shanaya Digital Printed Linen 3PC — 3",
-      "path": "products/nirvana-shn-lin-v284-3p-03-nirvana-by-shanaya-digital-printed-linen-3pc/"
+      "code": "ZESH-PRN-KHD-V3-3P-HM-12",
+      "name": "Zesh Digital Printed Khaddar 3PC — 12",
+      "path": "products/zesh-prn-khd-v3-3p-hm-12-zesh-digital-printed-khaddar-3pc/"
     }
   ]
 }
