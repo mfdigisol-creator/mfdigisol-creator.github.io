@@ -258,6 +258,84 @@ function normalizeProduct(product, classification) {
   });
 }
 
+function mergeUniqueCollections(items) {
+  const map = new Map();
+  for (const item of items.flatMap(product => product.sourceCollections || [])) {
+    const key = item.id || item.handle || item.title;
+    if (key && !map.has(key)) map.set(key, item);
+  }
+  return [...map.values()].sort((a, b) => String(a.title).localeCompare(String(b.title)));
+}
+
+function canonicalDuplicateRecord(items) {
+  return [...items].sort((a, b) => {
+    const available = Number(b.available) - Number(a.available);
+    if (available) return available;
+    const date = value => Date.parse(value || '') || 0;
+    const published = date(b.publishedAt) - date(a.publishedAt);
+    if (published) return published;
+    const updated = date(b.updatedAt) - date(a.updatedAt);
+    if (updated) return updated;
+    const created = date(b.createdAt) - date(a.createdAt);
+    if (created) return created;
+    return Number(b.sourceProductId || 0) - Number(a.sourceProductId || 0);
+  })[0];
+}
+
+function collapseDuplicateSupplierCodes(records) {
+  const byCode = new Map();
+  for (const item of records) {
+    const code = cleanText(item.code);
+    if (!byCode.has(code)) byCode.set(code, []);
+    byCode.get(code).push(item);
+  }
+
+  const products = [];
+  const duplicateCodes = [];
+  for (const [code, items] of byCode) {
+    if (items.length === 1) {
+      products.push(items[0]);
+      continue;
+    }
+
+    const canonical = canonicalDuplicateRecord(items);
+    const sourcePrices = [...new Set(items.map(item => item.sourcePrice).filter(Number.isFinite))].sort((a, b) => a - b);
+    const pricingClasses = [...new Set(items.map(item => item.pricingClass).filter(Boolean))];
+    const merged = {
+      ...canonical,
+      category: items.some(item => item.category === 'Luxury') ? 'Luxury' : canonical.category,
+      sourceCollections: mergeUniqueCollections(items),
+      seasons: [...new Set(items.flatMap(item => item.seasons || []))].sort(),
+      scopeReasons: [...new Set(items.flatMap(item => item.scopeReasons || []))].sort(),
+      sourceProductIds: [...new Set(items.map(item => item.sourceProductId).filter(Boolean))].sort(),
+      duplicateSourceRecords: items.length,
+      duplicateSourcePrices: sourcePrices
+    };
+
+    if (pricingClasses.length > 1) {
+      merged.pricingClass = 'unknown';
+      merged.embroidered = null;
+      merged.markup = null;
+      merged.price = null;
+      merged.pricingStatus = 'enquire';
+      merged.pricingReason = 'duplicate-source-classification-conflict';
+    }
+
+    products.push(merged);
+    duplicateCodes.push({
+      code,
+      records: items.length,
+      selectedSourceProductId: canonical.sourceProductId,
+      selectedSourcePrice: canonical.sourcePrice,
+      selectedPublishedAt: canonical.publishedAt,
+      sourceProductIds: merged.sourceProductIds,
+      sourcePrices,
+      pricingClasses
+    });
+  }
+  return { products, duplicateCodes };
+}
+
 function buildDriftReport({ source, scope, products, previous, snapshot, priorSnapshot }) {
   const previousCount = Array.isArray(previous.products) ? previous.products.length : 0;
   const ambiguousShare = source.products.length ? scope.ambiguous / source.products.length : 1;
@@ -267,6 +345,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
     ? Math.max(MIN_COLLECTION_PRODUCT_COVERAGE, previousCollectionCoverage * 0.80)
     : MIN_COLLECTION_PRODUCT_COVERAGE;
   const allowedCollectionAnomalies = Math.max(5, Math.ceil(source.activeCollections * 0.05));
+  const allowedDuplicateCodes = Math.max(20, Math.ceil(products.length * 0.02));
   const minimumAfterShrink = previousCount
     ? Math.floor(previousCount * (1 - MAX_CATALOGUE_SHRINK_PERCENT / 100))
     : MIN_CATALOGUE_PRODUCTS;
@@ -276,6 +355,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
     { id: 'source-collection-floor', ok: source.collections.length >= MIN_SOURCE_COLLECTIONS, actual: source.collections.length, required: MIN_SOURCE_COLLECTIONS },
     { id: 'collection-fetch-anomalies', ok: source.collectionAnomalies.length <= allowedCollectionAnomalies, actual: source.collectionAnomalies.length, requiredMaximum: allowedCollectionAnomalies },
     { id: 'collection-product-coverage', ok: collectionCoverage >= requiredCollectionCoverage, actual: collectionCoverage, required: requiredCollectionCoverage, fetchedMemberships: source.fetchedMemberships, reportedMemberships: source.reportedMemberships, previous: Number.isFinite(previousCollectionCoverage) ? previousCollectionCoverage : null },
+    { id: 'duplicate-supplier-skus', ok: source.duplicateCodes.length <= allowedDuplicateCodes, actual: source.duplicateCodes.length, requiredMaximum: allowedDuplicateCodes },
     { id: 'ambiguous-scope-share', ok: scope.ambiguous <= MAX_AMBIGUOUS_ABSOLUTE_WITHOUT_REVIEW || ambiguousShare <= MAX_AMBIGUOUS_SHARE, actual: ambiguousShare, count: scope.ambiguous, required: MAX_AMBIGUOUS_SHARE },
     { id: 'catalogue-emergency-floor', ok: products.length >= MIN_CATALOGUE_PRODUCTS, actual: products.length, required: MIN_CATALOGUE_PRODUCTS },
     { id: 'catalogue-shrink-limit', ok: !previousCount || products.length >= minimumAfterShrink, actual: products.length, required: minimumAfterShrink, previous: previousCount },
@@ -303,6 +383,7 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
       previousTaxonomyFingerprint: priorSnapshot.taxonomyFingerprint || null
     },
     exclusionReasons: scope.exclusionReasons,
+    duplicateSourceCodes: source.duplicateCodes.slice(0, 30),
     collectionAnomalies: source.collectionAnomalies.slice(0, 30),
     lowCoverageCollections: source.collectionStats
       .filter(item => item.reportedProducts > 0 && item.fetchedProducts / item.reportedProducts < 0.50)
@@ -384,17 +465,13 @@ async function main() {
     .filter(item => item.classification.status === 'included')
     .flatMap(item => normalizeProduct(item.product, item.classification));
 
-  const deduplicated = new Map();
-  for (const item of records) {
-    if (!deduplicated.has(item.id)) deduplicated.set(item.id, item);
-  }
-
-  const products = [...deduplicated.values()]
-    .filter(item => item.image && item.sourcePrice > 0)
+  const validRecords = records.filter(item => item.image && item.sourcePrice > 0);
+  const collapsed = collapseDuplicateSupplierCodes(validRecords);
+  const products = collapsed.products
     .map(item => {
       const oldPrice = previousPrices.get(item.code);
       const changedTooFar = oldPrice > 0 && Math.abs(item.sourcePrice - oldPrice) / oldPrice > MAX_SOURCE_PRICE_CHANGE;
-      if (!changedTooFar) return item;
+      if (!changedTooFar || item.price === null) return item;
       return { ...item, price: null, markup: null, pricingStatus: 'enquire', pricingReason: 'source-price-change-review' };
     })
     .sort((a, b) => Number(b.available) - Number(a.available) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
@@ -410,6 +487,7 @@ async function main() {
     fetchedCollectionMemberships: membershipDiscovery.fetchedMemberships,
     collectionProductCoverage: membershipDiscovery.reportedMemberships > 0 ? membershipDiscovery.fetchedMemberships / membershipDiscovery.reportedMemberships : 0,
     collectionAnomalies: membershipDiscovery.anomalies,
+    duplicateSourceCodes: collapsed.duplicateCodes,
     includedSourceProducts: scope.included,
     excludedSourceProducts: scope.excluded,
     ambiguousSourceProducts: scope.ambiguous,
@@ -439,6 +517,7 @@ async function main() {
     classified,
     activeCollections: membershipDiscovery.activeCollections,
     collectionAnomalies: membershipDiscovery.anomalies,
+    duplicateCodes: collapsed.duplicateCodes,
     collectionStats: membershipDiscovery.collectionStats,
     reportedMemberships: membershipDiscovery.reportedMemberships,
     fetchedMemberships: membershipDiscovery.fetchedMemberships
@@ -458,6 +537,7 @@ async function main() {
     seasons: snapshot.seasons,
     brands: snapshot.brands.length,
     collectionAnomalies: membershipDiscovery.anomalies,
+    duplicateSourceCodes: collapsed.duplicateCodes,
     driftOk: drift.ok,
     checks: drift.checks,
     includedSamples: drift.includedSamples.slice(0, 10),
