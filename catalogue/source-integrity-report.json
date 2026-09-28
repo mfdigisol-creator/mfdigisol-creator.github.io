@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-27T17:00:20.897Z",
+  "generatedAt": "2026-09-28T05:28:30.474Z",
   "summary": {
-    "products": 1053,
-    "available": 899,
-    "formal": 670,
-    "luxury": 383,
+    "products": 1038,
+    "available": 884,
+    "formal": 657,
+    "luxury": 381,
     "priceOnEnquiry": 10,
-    "metaFeedProducts": 1043,
+    "metaFeedProducts": 1028,
     "canonicalBrands": 75,
-    "aliasCorrections": 26,
+    "aliasCorrections": 25,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
     "duplicateNames": 43,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 1746,
-    "newlyRemovedProducts": 2,
+    "removedProducts": 1763,
+    "newlyRemovedProducts": 17,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -111,11 +111,6 @@
       "canonicalBrand": "Imported"
     },
     {
-      "code": "IMP-EMBCK-GREN-2P-ABR-18",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
       "code": "IMP-EMBCK-GREY-2P-ABR-30",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
@@ -180,7 +175,7 @@
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 2",
-      "count": 4
+      "count": 5
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 3",
@@ -188,7 +183,7 @@
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 4",
-      "count": 7
+      "count": 6
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 5",
@@ -304,7 +299,7 @@
     },
     {
       "value": "rijja by murashe digital printed khaddar 3pc — 2",
-      "count": 3
+      "count": 2
     },
     {
       "value": "rijja by murashe digital printed khaddar 3pc — 6",
@@ -330,14 +325,89 @@
   "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "LUXURIA-ANAYANOOR-3P-D01",
-      "name": "Luxuria By Anaya Noor Heavy Emb Dhanak With Plachi Shawl 3PC — 1",
-      "path": "products/luxuria-anayanoor-3p-d01-luxuria-by-anaya-noor-heavy-emb-dhanak-with-plachi-shawl-3pc/"
+      "code": "RIWAJ-DL-CHF-3P-D-1186",
+      "name": "Rivaj | Chiffon | Dressline — D-1186",
+      "path": "products/riwaj-dl-chf-3p-d-1186-rivaj-chiffon-dressline/"
     },
     {
-      "code": "MIXBRAND-PRNKHD-2P-BL-374",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 374",
-      "path": "products/mixbrand-prnkhd-2p-bl-374-mix-brand-digital-printed-allover-khaddar-2pc/"
+      "code": "IMP-EMBCK-GREN-2P-ABR-18",
+      "name": "Imported Emb Chickenkari Lawn 3PC — 18",
+      "path": "products/imp-embck-gren-2p-abr-18-imported-emb-chickenkari-lawn-3pc/"
+    },
+    {
+      "code": "ANAYANOOR-KHD-V3-3P-10",
+      "name": "Anaya Noor Printed & Emb Khaddar 3PC — 10",
+      "path": "products/anayanoor-khd-v3-3p-10-anaya-noor-printed-and-emb-khaddar-3pc/"
+    },
+    {
+      "code": "KEHKASHAN-ANAYANOOR-3P-AN-02",
+      "name": "Kehkashan By Anaya Noor Fully Emb Viscose 3PC — 2",
+      "path": "products/kehkashan-anayanoor-3p-an-02-kehkashan-by-anaya-noor-fully-emb-viscose-3pc/"
+    },
+    {
+      "code": "LUXURIA-ANAYANOOR-3P-D04",
+      "name": "Luxuria By Anaya Noor Heavy Emb Dhanak With Plachi Shawl 3PC — 4",
+      "path": "products/luxuria-anayanoor-3p-d04-luxuria-by-anaya-noor-heavy-emb-dhanak-with-plachi-shawl-3pc/"
+    },
+    {
+      "code": "BAREEZE-RC-V14-2026-DD-03",
+      "name": "Bareeze Fully Emb Rice Karandi 2PC — 3",
+      "path": "products/bareeze-rc-v14-2026-dd-03-bareeze-fully-emb-rice-karandi-2pc/"
+    },
+    {
+      "code": "BAREEZE-RC-V3-2026-DD-04",
+      "name": "Bareeze Fully Emb Rice Karandi 2PC — 4",
+      "path": "products/bareeze-rc-v3-2026-dd-04-bareeze-fully-emb-rice-karandi-2pc/"
+    },
+    {
+      "code": "CROSSSTITCH-V3-S26-A-02",
+      "name": "Cross Stitch Premium Jacquard Viscose 3PC — 2",
+      "path": "products/crossstitch-v3-s26-a-02-cross-stitch-premium-jacquard-viscose-3pc/"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-152",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 152",
+      "path": "products/mixbrand-prnkhd-2p-bl-152-mix-brand-digital-printed-allover-khaddar-2pc/"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-235",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 235",
+      "path": "products/mixbrand-prnkhd-2p-bl-235-mix-brand-digital-printed-allover-khaddar-2pc/"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-308",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 308",
+      "path": "products/mixbrand-prnkhd-2p-bl-308-mix-brand-digital-printed-allover-khaddar-2pc/"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-328",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 328",
+      "path": "products/mixbrand-prnkhd-2p-bl-328-mix-brand-digital-printed-allover-khaddar-2pc/"
+    },
+    {
+      "code": "RIJJA-PRN-KHD-V2-3P-02",
+      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 2",
+      "path": "products/rijja-prn-khd-v2-3p-02-rijja-by-murashe-digital-printed-khaddar-3pc/"
+    },
+    {
+      "code": "WADI-E-GUL-PLTR-LIN-V2-3P-04",
+      "name": "Wadi-e-Gull By Paltar Premium Printed Fancy Linen 3PC — 4",
+      "path": "products/wadi-e-gul-pltr-lin-v2-3p-04-wadi-e-gull-by-paltar-premium-printed-fancy-linen-3pc/"
+    },
+    {
+      "code": "WADI-E-GUL-PLTR-LIN-V2-3P-06",
+      "name": "Wadi-e-Gull By Paltar Premium Printed Fancy Linen 3PC — 6",
+      "path": "products/wadi-e-gul-pltr-lin-v2-3p-06-wadi-e-gull-by-paltar-premium-printed-fancy-linen-3pc/"
+    },
+    {
+      "code": "VERNDA-PRSHY-KRND-VR-13",
+      "name": "Veranda By Parishay | Winter'26 — VR-13",
+      "path": "products/vernda-prshy-krnd-vr-13-veranda-by-parishay-winter-26/"
+    },
+    {
+      "code": "ZELBURY-3PLIN-V1-AHMD-X30659",
+      "name": "Zellbury Digital Printed Fancy Linen 3PC — X30659",
+      "path": "products/zelbury-3plin-v1-ahmd-x30659-zellbury-digital-printed-fancy-linen-3pc/"
     }
   ]
 }
