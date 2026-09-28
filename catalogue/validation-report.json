@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-28T05:28:40.337Z",
+  "generatedAt": "2026-09-28T19:41:58.963Z",
   "summary": {
-    "products": 1038,
-    "removedProducts": 1763,
-    "brands": 75,
-    "collectionPages": 82,
-    "sitemapUrls": 1123,
-    "metaFeedRows": 1028,
-    "metadataPages": 1038,
-    "internalHtmlFiles": 2933,
+    "products": 1048,
+    "removedProducts": 1799,
+    "brands": 72,
+    "collectionPages": 79,
+    "sitemapUrls": 1130,
+    "metaFeedRows": 1038,
+    "metadataPages": 1048,
+    "internalHtmlFiles": 2979,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "47 products currently lack retained supplier description text."
+    "44 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -41,11 +41,11 @@
       "MUSE-SILK-3P-14371-A",
       "MUSE-SILK-3P-14371-B",
       "MUSE-SILK-3P-14371-D",
-      "ELAN-2PLWN-V1-ABR-03",
       "ELAN-2PLWN-V1-ABR-05",
       "LIMELIGHT-2PLWN-V2-ABR-02",
       "LIMELIGHT-2PLWN-V2-ABR-03",
-      "LIMELIGHT-2PLWN-V2-ABR-05"
+      "LIMELIGHT-2PLWN-V2-ABR-05",
+      "LIMELIGHT-2PLWN-V2-ABR-06"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

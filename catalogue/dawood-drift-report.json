@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-09-28T05:28:30.192Z",
+  "generatedAt": "2026-09-28T19:41:49.273Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1188,
+      "actual": 1198,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.744295598410128,
-      "required": 0.59746982695943,
-      "fetchedMemberships": 5056,
-      "reportedMemberships": 6793,
-      "previous": 0.7468372836992875
+      "actual": 0.7626240189545387,
+      "required": 0.5954364787281025,
+      "fetchedMemberships": 5150,
+      "reportedMemberships": 6753,
+      "previous": 0.744295598410128
     },
     {
       "id": "duplicate-supplier-skus",
@@ -40,49 +40,49 @@
     {
       "id": "ambiguous-scope-share",
       "ok": true,
-      "actual": 0.004208754208754209,
+      "actual": 0.004173622704507512,
       "count": 5,
       "required": 0.1
     },
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1038,
+      "actual": 1048,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1038,
-      "required": 842,
-      "previous": 1053
+      "actual": 1048,
+      "required": 830,
+      "previous": 1038
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1038,
+      "actual": 1048,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1188,
+    "sourceProducts": 1198,
     "sourceCollections": 97,
-    "includedSourceProducts": 1018,
+    "includedSourceProducts": 1028,
     "excludedSourceProducts": 165,
     "ambiguousSourceProducts": 5,
-    "candidateProducts": 1038,
-    "previousCatalogueProducts": 1053,
-    "candidateVsPreviousPercent": -1.4245014245014245,
-    "collectionProductCoverage": 0.744295598410128,
-    "previousCollectionProductCoverage": 0.7468372836992875,
+    "candidateProducts": 1048,
+    "previousCatalogueProducts": 1038,
+    "candidateVsPreviousPercent": 0.9633911368015413,
+    "collectionProductCoverage": 0.7626240189545387,
+    "previousCollectionProductCoverage": 0.744295598410128,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9"
   },
   "exclusionReasons": {
-    "menswear-signal": 62,
-    "single-piece-not-approved-suit-scope": 12,
-    "garment-size-variants": 91,
-    "ready-to-wear-or-stitched-signal": 89
+    "menswear-signal": 61,
+    "single-piece-not-approved-suit-scope": 14,
+    "garment-size-variants": 90,
+    "ready-to-wear-or-stitched-signal": 88
   },
   "duplicateSourceCodes": [
     {
@@ -195,14 +195,6 @@
       "anomaly": null
     },
     {
-      "id": "646040453491",
-      "title": "Anaya Noor",
-      "handle": "anaya-noor",
-      "reportedProducts": 108,
-      "fetchedProducts": 53,
-      "anomaly": null
-    },
-    {
       "id": "701973397875",
       "title": "Anaya Vol -1",
       "handle": "anaya-vol-1",
@@ -222,8 +214,8 @@
       "id": "701140107635",
       "title": "DD-SHANAYA",
       "handle": "dd-shanya",
-      "reportedProducts": 28,
-      "fetchedProducts": 12,
+      "reportedProducts": 31,
+      "fetchedProducts": 15,
       "anomaly": null
     },
     {
@@ -251,22 +243,6 @@
       "anomaly": "registry-count-positive-but-endpoint-empty"
     },
     {
-      "id": "704434045299",
-      "title": "Mausummery Digital Printed Linen 3PC",
-      "handle": "mausummery-digital-printed-linen-3pc",
-      "reportedProducts": 15,
-      "fetchedProducts": 7,
-      "anomaly": null
-    },
-    {
-      "id": "703930466675",
-      "title": "Mausummery Linen",
-      "handle": "mausummery-linen",
-      "reportedProducts": 15,
-      "fetchedProducts": 7,
-      "anomaly": null
-    },
-    {
       "id": "701972644211",
       "title": "Pakeezah",
       "handle": "pakeezah",
@@ -278,8 +254,8 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 130,
-      "fetchedProducts": 60,
+      "reportedProducts": 128,
+      "fetchedProducts": 58,
       "anomaly": null
     },
     {
@@ -294,8 +270,8 @@
       "id": "701074964851",
       "title": "Summer Unstitched Daily Wear Embroidered 3pc",
       "handle": "unstitched-daily-wear-embroidered-3pc",
-      "reportedProducts": 29,
-      "fetchedProducts": 6,
+      "reportedProducts": 31,
+      "fetchedProducts": 8,
       "anomaly": null
     },
     {
@@ -318,6 +294,25 @@
       "seasons": [],
       "collections": [
         "Amelia"
+      ]
+    },
+    {
+      "id": "15568658006387",
+      "title": "Anaya Noor Pashmina With Kacha tanka Shawl 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
       ]
     },
     {
@@ -492,45 +487,7 @@
       ]
     },
     {
-      "id": "15547712897395",
-      "title": "Sukhaina By Anaya Noor Fully Emb Slub Marina 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
       "id": "15547712700787",
-      "title": "Sukhaina By Anaya Noor Fully Emb Slub Marina 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15547712405875",
       "title": "Sukhaina By Anaya Noor Fully Emb Slub Marina 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
@@ -686,6 +643,25 @@
         "WINTER 2026",
         "Zarmeen & Emaan"
       ]
+    },
+    {
+      "id": "15536603398515",
+      "title": "Tahniyat By Anaya Noor Digital Printed & Emb Karandi 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
     }
   ],
   "ambiguousSamples": [
@@ -750,7 +726,7 @@
       ]
     },
     {
-      "id": "15045681021299",
+      "id": "15045681152371",
       "title": "Digital Printed Wool Dhanak Shirt",
       "vendor": "Dhanak Shirt",
       "reasons": [
@@ -772,6 +748,14 @@
       "vendor": "Indicot",
       "reasons": [
         "menswear-signal"
+      ]
+    },
+    {
+      "id": "15501461848435",
+      "title": "Alkaram Silver Digital Printed Khaddar Shirt 1PC",
+      "vendor": "Alkaram",
+      "reasons": [
+        "single-piece-not-approved-suit-scope"
       ]
     },
     {
@@ -808,6 +792,14 @@
     },
     {
       "id": "15501461487987",
+      "title": "Alkaram Silver Digital Printed Khaddar Shirt 1PC",
+      "vendor": "Alkaram",
+      "reasons": [
+        "single-piece-not-approved-suit-scope"
+      ]
+    },
+    {
+      "id": "15501461324147",
       "title": "Alkaram Silver Digital Printed Khaddar Shirt 1PC",
       "vendor": "Alkaram",
       "reasons": [
@@ -984,22 +976,6 @@
     },
     {
       "id": "15531248943475",
-      "title": "Alkaram Deepal Winter Wash & Wear Mens Suit",
-      "vendor": "Alkaram",
-      "reasons": [
-        "menswear-signal"
-      ]
-    },
-    {
-      "id": "15531248910707",
-      "title": "Alkaram Deepal Winter Wash & Wear Mens Suit",
-      "vendor": "Alkaram",
-      "reasons": [
-        "menswear-signal"
-      ]
-    },
-    {
-      "id": "15531248845171",
       "title": "Alkaram Deepal Winter Wash & Wear Mens Suit",
       "vendor": "Alkaram",
       "reasons": [
