@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-29T18:06:29.308Z",
+  "generatedAt": "2026-09-30T05:36:59.441Z",
   "summary": {
-    "products": 1118,
-    "removedProducts": 1885,
-    "brands": 77,
-    "collectionPages": 84,
-    "sitemapUrls": 1205,
-    "metaFeedRows": 1108,
-    "metadataPages": 1118,
-    "internalHtmlFiles": 3137,
+    "products": 1106,
+    "removedProducts": 1920,
+    "brands": 76,
+    "collectionPages": 83,
+    "sitemapUrls": 1192,
+    "metaFeedRows": 1096,
+    "metadataPages": 1106,
+    "internalHtmlFiles": 3160,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "58 products currently lack retained supplier description text."
+    "54 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -44,8 +44,8 @@
       "ELAN-2PLWN-V1-ABR-05",
       "KAYSERIA-KHD-V1-2P-JLAL-01",
       "KAYSERIA-KHD-V1-2P-JLAL-11",
-      "KAYSERIA-KHD-V1-2P-JLAL-12",
-      "KAYSERIA-KHD-V1-2P-JLAL-13"
+      "KAYSERIA-KHD-V1-2P-JLAL-13",
+      "KAYSERIA-KHD-V1-2P-JLAL-02"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
