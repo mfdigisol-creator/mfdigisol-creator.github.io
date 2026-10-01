@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-09-30T18:00:59.180Z",
+  "generatedAt": "2026-10-01T06:00:57.323Z",
   "summary": {
-    "products": 1232,
-    "removedProducts": 1928,
+    "products": 1216,
+    "removedProducts": 1949,
     "brands": 76,
     "collectionPages": 85,
-    "sitemapUrls": 1320,
-    "metaFeedRows": 1221,
-    "metadataPages": 1232,
-    "internalHtmlFiles": 3296,
+    "sitemapUrls": 1304,
+    "metaFeedRows": 1205,
+    "metadataPages": 1216,
+    "internalHtmlFiles": 3301,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "53 products currently lack retained supplier description text."
+    "50 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -43,9 +43,9 @@
       "MUSE-SILK-3P-14371-A",
       "MUSE-SILK-3P-14371-B",
       "MUSE-SILK-3P-14371-D",
-      "ELAN-2PLWN-V1-ABR-10",
       "ELAN-2PLWN-V1-ABR-14",
-      "ELAN-2PLWN-V1-ABR-05"
+      "ELAN-2PLWN-V1-ABR-05",
+      "KAYSERIA-KHD-V1-2P-JLAL-01"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
