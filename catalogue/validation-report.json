@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-02T17:53:43.544Z",
+  "generatedAt": "2026-10-03T05:22:36.672Z",
   "summary": {
-    "products": 1236,
-    "removedProducts": 2047,
-    "brands": 78,
+    "products": 1242,
+    "removedProducts": 2077,
+    "brands": 77,
     "collectionPages": 87,
-    "sitemapUrls": 1326,
-    "metaFeedRows": 1225,
-    "metadataPages": 1236,
-    "internalHtmlFiles": 3419,
+    "sitemapUrls": 1332,
+    "metaFeedRows": 1231,
+    "metadataPages": 1242,
+    "internalHtmlFiles": 3456,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "60 products currently lack retained supplier description text."
+    "56 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -44,8 +44,8 @@
       "ELAN-2PLWN-V1-ABR-05",
       "KAYSERIA-KHD-V1-2P-JLAL-02",
       "KAYSERIA-KHD-V1-2P-JLAL-09",
-      "LIMELIGHT-2PLWN-V2-ABR-15",
-      "LIMELIGHT-2PLWN-V2-ABR-02"
+      "LIMELIGHT-2PLWN-V2-ABR-02",
+      "LIMELIGHT-2PLWN-V2-ABR-03"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
