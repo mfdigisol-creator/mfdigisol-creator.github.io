@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-03T05:22:25.668Z",
+  "generatedAt": "2026-10-03T16:20:21.732Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1403,
+      "actual": 1464,
       "required": 100
     },
     {
@@ -25,64 +25,64 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.8213392974608604,
-      "required": 0.6573161086211443,
-      "fetchedMemberships": 6243,
-      "reportedMemberships": 7601,
-      "previous": 0.8216451357764303
+      "actual": 0.8273218549704663,
+      "required": 0.6570714379686884,
+      "fetchedMemberships": 6583,
+      "reportedMemberships": 7957,
+      "previous": 0.8213392974608604
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 4,
-      "requiredMaximum": 25
+      "requiredMaximum": 27
     },
     {
       "id": "ambiguous-scope-share",
       "ok": true,
-      "actual": 0.002851033499643621,
-      "count": 4,
+      "actual": 0,
+      "count": 0,
       "required": 0.1
     },
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1242,
+      "actual": 1307,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1242,
-      "required": 988,
-      "previous": 1236
+      "actual": 1307,
+      "required": 993,
+      "previous": 1242
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1242,
+      "actual": 1307,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1403,
+    "sourceProducts": 1464,
     "sourceCollections": 97,
-    "includedSourceProducts": 1222,
+    "includedSourceProducts": 1287,
     "excludedSourceProducts": 177,
-    "ambiguousSourceProducts": 4,
-    "candidateProducts": 1242,
-    "previousCatalogueProducts": 1236,
-    "candidateVsPreviousPercent": 0.48543689320388345,
-    "collectionProductCoverage": 0.8213392974608604,
-    "previousCollectionProductCoverage": 0.8216451357764303,
+    "ambiguousSourceProducts": 0,
+    "candidateProducts": 1307,
+    "previousCatalogueProducts": 1242,
+    "candidateVsPreviousPercent": 5.233494363929147,
+    "collectionProductCoverage": 0.8273218549704663,
+    "previousCollectionProductCoverage": 0.8213392974608604,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9"
   },
   "exclusionReasons": {
-    "menswear-signal": 78,
+    "menswear-signal": 79,
     "single-piece-not-approved-suit-scope": 10,
-    "garment-size-variants": 89,
-    "ready-to-wear-or-stitched-signal": 87
+    "garment-size-variants": 88,
+    "ready-to-wear-or-stitched-signal": 86
   },
   "duplicateSourceCodes": [
     {
@@ -209,14 +209,6 @@
       "anomaly": null
     },
     {
-      "id": "704735740275",
-      "title": "Summer 2026 Untitched Daily Wear",
-      "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 128,
-      "fetchedProducts": 58,
-      "anomaly": null
-    },
-    {
       "id": "693258322291",
       "title": "Summer Trending Hit Codes Printed + Embroidered",
       "handle": "summer-trending-hit-codes",
@@ -228,16 +220,16 @@
       "id": "701074964851",
       "title": "Summer Unstitched Daily Wear Embroidered 3pc",
       "handle": "unstitched-daily-wear-embroidered-3pc",
-      "reportedProducts": 31,
-      "fetchedProducts": 8,
+      "reportedProducts": 30,
+      "fetchedProducts": 7,
       "anomaly": null
     },
     {
       "id": "701074997619",
       "title": "Summer Unstitched Daily Wear Printed 3pc",
       "handle": "unstitched-daily-wear-printed-3pc",
-      "reportedProducts": 33,
-      "fetchedProducts": 2,
+      "reportedProducts": 49,
+      "fetchedProducts": 18,
       "anomaly": null
     }
   ],
@@ -626,68 +618,7 @@
       ]
     }
   ],
-  "ambiguousSamples": [
-    {
-      "id": "15045684068723",
-      "title": "Digital Printed Wool Dhanak Shirt",
-      "vendor": "Dhanak Shirt",
-      "reasons": [
-        "fabric-suit-signal"
-      ],
-      "collections": [
-        "Luxury Heavy Embroidered",
-        "PRINTED",
-        "Special Price Collection",
-        "Untitched Daily Wear Winter Only Shirt",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15045682823539",
-      "title": "Digital Printed Wool Dhanak Shirt",
-      "vendor": "Dhanak Shirt",
-      "reasons": [
-        "fabric-suit-signal"
-      ],
-      "collections": [
-        "Luxury Heavy Embroidered",
-        "PRINTED",
-        "Special Price Collection",
-        "Untitched Daily Wear Winter Only Shirt",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15045682495859",
-      "title": "Digital Printed Wool Dhanak Shirt",
-      "vendor": "Dhanak Shirt",
-      "reasons": [
-        "fabric-suit-signal"
-      ],
-      "collections": [
-        "Luxury Heavy Embroidered",
-        "PRINTED",
-        "Special Price Collection",
-        "Untitched Daily Wear Winter Only Shirt",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15045681873267",
-      "title": "Digital Printed Wool Dhanak Shirt",
-      "vendor": "Dhanak Shirt",
-      "reasons": [
-        "fabric-suit-signal"
-      ],
-      "collections": [
-        "Luxury Heavy Embroidered",
-        "PRINTED",
-        "Special Price Collection",
-        "Untitched Daily Wear Winter Only Shirt",
-        "Zarmeen & Emaan"
-      ]
-    }
-  ],
+  "ambiguousSamples": [],
   "excludedSamples": [
     {
       "id": "15528085520755",

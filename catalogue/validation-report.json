@@ -1,28 +1,30 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-03T05:22:36.672Z",
+  "generatedAt": "2026-10-03T16:20:31.680Z",
   "summary": {
-    "products": 1242,
-    "removedProducts": 2077,
-    "brands": 77,
-    "collectionPages": 87,
-    "sitemapUrls": 1332,
-    "metaFeedRows": 1231,
-    "metadataPages": 1242,
-    "internalHtmlFiles": 3456,
+    "products": 1307,
+    "removedProducts": 2087,
+    "brands": 80,
+    "collectionPages": 90,
+    "sitemapUrls": 1400,
+    "metaFeedRows": 1296,
+    "metadataPages": 1307,
+    "internalHtmlFiles": 3533,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "56 products currently lack retained supplier description text."
+    "57 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
+      "ABRISH-2PLWN-V2-ABR-07",
       "FLEUR-ALMRH-LWN-CT-3P-09",
       "BONANZA-2PLWN-V1-ABR-10",
+      "CHINYERE-2PLWN-V2-ABR-03",
       "CHINYERE-2PLWN-V2-ABR-05",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
@@ -42,10 +44,8 @@
       "MUSE-SILK-3P-14371-B",
       "MUSE-SILK-3P-14371-D",
       "ELAN-2PLWN-V1-ABR-05",
-      "KAYSERIA-KHD-V1-2P-JLAL-02",
-      "KAYSERIA-KHD-V1-2P-JLAL-09",
-      "LIMELIGHT-2PLWN-V2-ABR-02",
-      "LIMELIGHT-2PLWN-V2-ABR-03"
+      "KAYSERIA-KHD-V1-2P-JLAL-21",
+      "KAYSERIA-KHD-V1-2P-JLAL-23"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
