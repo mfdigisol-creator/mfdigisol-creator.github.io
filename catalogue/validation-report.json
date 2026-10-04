@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-04T05:58:34.486Z",
+  "generatedAt": "2026-10-04T16:52:20.061Z",
   "summary": {
-    "products": 1239,
-    "removedProducts": 2155,
-    "brands": 78,
-    "collectionPages": 88,
-    "sitemapUrls": 1330,
-    "metaFeedRows": 1228,
-    "metadataPages": 1239,
+    "products": 1175,
+    "removedProducts": 2219,
+    "brands": 76,
+    "collectionPages": 86,
+    "sitemapUrls": 1264,
+    "metaFeedRows": 1165,
+    "metadataPages": 1175,
     "internalHtmlFiles": 3533,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "48 products currently lack retained supplier description text."
+    "46 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -23,7 +23,6 @@
     "missingDescriptions": [
       "FLEUR-ALMRH-LWN-CT-3P-09",
       "BONANZA-2PLWN-V1-ABR-10",
-      "CHINYERE-2PLWN-V2-ABR-05",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
@@ -44,8 +43,9 @@
       "ELAN-2PLWN-V1-ABR-05",
       "KAYSERIA-KHD-V1-2P-JLAL-09",
       "LIMELIGHT-2PLWN-V2-ABR-03",
-      "LIMELIGHT-2PLWN-V2-ABR-06",
-      "NISHAT-2PLWN-V2-ABR-01"
+      "NISHAT-2PLWN-V2-ABR-01",
+      "NISHAT-2PLWN-V2-ABR-05",
+      "DASTAN-CKLWN-3P-NRJ-01"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
