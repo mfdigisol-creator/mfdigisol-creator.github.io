@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-04T16:52:20.061Z",
+  "generatedAt": "2026-10-05T05:46:29.808Z",
   "summary": {
-    "products": 1175,
-    "removedProducts": 2219,
+    "products": 1154,
+    "removedProducts": 2240,
     "brands": 76,
     "collectionPages": 86,
-    "sitemapUrls": 1264,
-    "metaFeedRows": 1165,
-    "metadataPages": 1175,
+    "sitemapUrls": 1243,
+    "metaFeedRows": 1144,
+    "metadataPages": 1154,
     "internalHtmlFiles": 3533,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "46 products currently lack retained supplier description text."
+    "45 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -42,10 +42,10 @@
       "MUSE-SILK-3P-14371-D",
       "ELAN-2PLWN-V1-ABR-05",
       "KAYSERIA-KHD-V1-2P-JLAL-09",
-      "LIMELIGHT-2PLWN-V2-ABR-03",
       "NISHAT-2PLWN-V2-ABR-01",
       "NISHAT-2PLWN-V2-ABR-05",
-      "DASTAN-CKLWN-3P-NRJ-01"
+      "DASTAN-CKLWN-3P-NRJ-01",
+      "DASTAN-CKLWN-3P-NRJ-02"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
