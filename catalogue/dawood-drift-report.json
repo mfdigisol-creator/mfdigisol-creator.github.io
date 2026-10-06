@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-05T20:34:52.772Z",
+  "generatedAt": "2026-10-06T06:25:51.765Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1476,
+      "actual": 1443,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.8274872050929971,
-      "required": 0.6453094371324559,
-      "fetchedMemberships": 6629,
-      "reportedMemberships": 8011,
-      "previous": 0.8066367964155698
+      "actual": 0.8137835454201839,
+      "required": 0.6619897640743977,
+      "fetchedMemberships": 6459,
+      "reportedMemberships": 7937,
+      "previous": 0.8274872050929971
     },
     {
       "id": "duplicate-supplier-skus",
@@ -47,42 +47,42 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1300,
+      "actual": 1269,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1300,
-      "required": 923,
-      "previous": 1154
+      "actual": 1269,
+      "required": 1040,
+      "previous": 1300
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1300,
+      "actual": 1269,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1476,
+    "sourceProducts": 1443,
     "sourceCollections": 98,
-    "includedSourceProducts": 1280,
-    "excludedSourceProducts": 196,
+    "includedSourceProducts": 1249,
+    "excludedSourceProducts": 194,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1300,
-    "previousCatalogueProducts": 1154,
-    "candidateVsPreviousPercent": 12.65164644714038,
-    "collectionProductCoverage": 0.8274872050929971,
-    "previousCollectionProductCoverage": 0.8066367964155698,
+    "candidateProducts": 1269,
+    "previousCatalogueProducts": 1300,
+    "candidateVsPreviousPercent": -2.3846153846153846,
+    "collectionProductCoverage": 0.8137835454201839,
+    "previousCollectionProductCoverage": 0.8274872050929971,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9"
   },
   "exclusionReasons": {
     "menswear-signal": 78,
-    "single-piece-not-approved-suit-scope": 12,
-    "garment-size-variants": 106,
-    "ready-to-wear-or-stitched-signal": 104
+    "single-piece-not-approved-suit-scope": 11,
+    "garment-size-variants": 105,
+    "ready-to-wear-or-stitched-signal": 103
   },
   "duplicateSourceCodes": [
     {
@@ -220,8 +220,8 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 123,
-      "fetchedProducts": 53,
+      "reportedProducts": 125,
+      "fetchedProducts": 55,
       "anomaly": null
     },
     {
@@ -244,8 +244,8 @@
       "id": "701074997619",
       "title": "Summer Unstitched Daily Wear Printed 3pc",
       "handle": "unstitched-daily-wear-printed-3pc",
-      "reportedProducts": 39,
-      "fetchedProducts": 8,
+      "reportedProducts": 41,
+      "fetchedProducts": 10,
       "anomaly": null
     }
   ],
@@ -641,14 +641,6 @@
       ]
     },
     {
-      "id": "15501461717363",
-      "title": "Alkaram Silver Digital Printed Khaddar Shirt 1PC",
-      "vendor": "Alkaram",
-      "reasons": [
-        "single-piece-not-approved-suit-scope"
-      ]
-    },
-    {
       "id": "15501461619059",
       "title": "Alkaram Silver Digital Printed Khaddar Shirt 1PC",
       "vendor": "Alkaram",
@@ -866,6 +858,14 @@
     },
     {
       "id": "15531247731059",
+      "title": "Bareeze Winter Wash & Wear Mens Suit",
+      "vendor": "Bareeze",
+      "reasons": [
+        "menswear-signal"
+      ]
+    },
+    {
+      "id": "15531247567219",
       "title": "Bareeze Winter Wash & Wear Mens Suit",
       "vendor": "Bareeze",
       "reasons": [
