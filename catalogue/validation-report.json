@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-07T06:04:54.545Z",
+  "generatedAt": "2026-10-07T18:58:07.755Z",
   "summary": {
-    "products": 1252,
-    "removedProducts": 2287,
-    "brands": 75,
-    "collectionPages": 85,
-    "sitemapUrls": 1340,
-    "metaFeedRows": 1242,
-    "metadataPages": 1252,
-    "internalHtmlFiles": 3679,
+    "products": 1267,
+    "removedProducts": 2316,
+    "brands": 77,
+    "collectionPages": 88,
+    "sitemapUrls": 1358,
+    "metaFeedRows": 1258,
+    "metadataPages": 1267,
+    "internalHtmlFiles": 3725,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "65 products currently lack retained supplier description text."
+    "75 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -29,8 +29,6 @@
       "BT-CO-ORD-KHD-2P-DD-13",
       "BT-CO-ORD-KHD-2P-DD-14",
       "BT-CO-ORD-KHD-2P-DD-15",
-      "BT-CO-ORD-KHD-2P-DD-16",
-      "BT-CO-ORD-KHD-2P-DD-17",
       "BT-CO-ORD-KHD-2P-DD-19",
       "BT-CO-ORD-KHD-2P-DD-02",
       "BT-CO-ORD-KHD-2P-DD-03",
@@ -40,12 +38,14 @@
       "BT-CO-ORD-KHD-2P-DD-07",
       "BT-CO-ORD-KHD-2P-DD-08",
       "BT-CO-ORD-KHD-2P-DD-09",
-      "BONANZA-2PLWN-V1-ABR-06",
+      "CHINYERE-2PLWN-V2-ABR-05",
+      "CHINYERE-2PLWN-V2-ABR-07",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
-      "CS-EMB-LWN-3P-1856"
+      "CS-EMB-LWN-3P-1856",
+      "AIRA-ORG-PURP-1547"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
