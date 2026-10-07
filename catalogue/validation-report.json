@@ -1,28 +1,27 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-06T18:25:09.969Z",
+  "generatedAt": "2026-10-07T06:04:54.545Z",
   "summary": {
-    "products": 1315,
-    "removedProducts": 2224,
-    "brands": 78,
-    "collectionPages": 89,
-    "sitemapUrls": 1407,
-    "metaFeedRows": 1305,
-    "metadataPages": 1315,
-    "internalHtmlFiles": 3680,
+    "products": 1252,
+    "removedProducts": 2287,
+    "brands": 75,
+    "collectionPages": 85,
+    "sitemapUrls": 1340,
+    "metaFeedRows": 1242,
+    "metadataPages": 1252,
+    "internalHtmlFiles": 3679,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "73 products currently lack retained supplier description text."
+    "65 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
       "FLEUR-ALMRH-LWN-CT-3P-09",
-      "FLOWS-ALMRH-LWN-CT-3P-21",
       "BT-CO-ORD-KHD-2P-DD-01",
       "BT-CO-ORD-KHD-2P-DD-10",
       "BT-CO-ORD-KHD-2P-DD-11",
@@ -41,11 +40,12 @@
       "BT-CO-ORD-KHD-2P-DD-07",
       "BT-CO-ORD-KHD-2P-DD-08",
       "BT-CO-ORD-KHD-2P-DD-09",
-      "BONANZA-2PLWN-V1-ABR-03",
       "BONANZA-2PLWN-V1-ABR-06",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
-      "CRIMSON-MUST-3PC-AK15"
+      "CRIMSON-MUST-3PC-AK15",
+      "CRIMSON-PINK-3PC-AK15",
+      "CS-EMB-LWN-3P-1856"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-06T18:24:58.061Z",
+  "generatedAt": "2026-10-07T06:04:39.915Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1490,
+      "actual": 1425,
       "required": 100
     },
     {
@@ -25,17 +25,17 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.8114237205918021,
-      "required": 0.6510268363361472,
-      "fetchedMemberships": 6691,
-      "reportedMemberships": 8246,
-      "previous": 0.8137835454201839
+      "actual": 0.8033139387806729,
+      "required": 0.6491389764734418,
+      "fetchedMemberships": 6351,
+      "reportedMemberships": 7906,
+      "previous": 0.8114237205918021
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 4,
-      "requiredMaximum": 27
+      "requiredMaximum": 26
     },
     {
       "id": "ambiguous-scope-share",
@@ -47,42 +47,42 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1315,
+      "actual": 1252,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1315,
-      "required": 1015,
-      "previous": 1269
+      "actual": 1252,
+      "required": 1052,
+      "previous": 1315
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1315,
+      "actual": 1252,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1490,
+    "sourceProducts": 1425,
     "sourceCollections": 98,
-    "includedSourceProducts": 1294,
-    "excludedSourceProducts": 196,
+    "includedSourceProducts": 1231,
+    "excludedSourceProducts": 194,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1315,
-    "previousCatalogueProducts": 1269,
-    "candidateVsPreviousPercent": 3.6249014972419227,
-    "collectionProductCoverage": 0.8114237205918021,
-    "previousCollectionProductCoverage": 0.8137835454201839,
+    "candidateProducts": 1252,
+    "previousCatalogueProducts": 1315,
+    "candidateVsPreviousPercent": -4.790874524714829,
+    "collectionProductCoverage": 0.8033139387806729,
+    "previousCollectionProductCoverage": 0.8114237205918021,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9"
   },
   "exclusionReasons": {
     "menswear-signal": 78,
     "single-piece-not-approved-suit-scope": 10,
-    "garment-size-variants": 108,
-    "ready-to-wear-or-stitched-signal": 106
+    "garment-size-variants": 106,
+    "ready-to-wear-or-stitched-signal": 104
   },
   "duplicateSourceCodes": [
     {
@@ -220,16 +220,16 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 130,
-      "fetchedProducts": 60,
+      "reportedProducts": 118,
+      "fetchedProducts": 48,
       "anomaly": null
     },
     {
       "id": "693258322291",
       "title": "Summer Trending Hit Codes Printed + Embroidered",
       "handle": "summer-trending-hit-codes",
-      "reportedProducts": 12,
-      "fetchedProducts": 3,
+      "reportedProducts": 11,
+      "fetchedProducts": 2,
       "anomaly": null
     },
     {
@@ -244,34 +244,12 @@
       "id": "701074997619",
       "title": "Summer Unstitched Daily Wear Printed 3pc",
       "handle": "unstitched-daily-wear-printed-3pc",
-      "reportedProducts": 40,
-      "fetchedProducts": 9,
+      "reportedProducts": 36,
+      "fetchedProducts": 5,
       "anomaly": null
     }
   ],
   "includedSamples": [
-    {
-      "id": "15405916225907",
-      "title": "Alkaram Spring Summer Digital Printed Lawn 3PC",
-      "vendor": "Alkaram",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer",
-        "Spring"
-      ],
-      "collections": [
-        "Alkaram Digital Printed Lawn 3PC",
-        "Lawn 2026",
-        "PRINTED",
-        "Summer 2026 Untitched Daily Wear",
-        "Summer Unstitched Daily Wear Printed 3pc",
-        "Three Piece Printed Summer Collection",
-        "Zarmeen & Emaan"
-      ]
-    },
     {
       "id": "15405916094835",
       "title": "Alkaram Spring Summer Digital Printed Lawn 3PC",
@@ -459,25 +437,6 @@
       ]
     },
     {
-      "id": "15581068394867",
-      "title": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
       "id": "15581068427635",
       "title": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
       "vendor": "Anaya Noor",
@@ -554,25 +513,6 @@
       ]
     },
     {
-      "id": "15568658006387",
-      "title": "Anaya Noor Pashmina With Kacha tanka Shawl 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
       "id": "15561026994547",
       "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
       "vendor": "Anaya Noor",
@@ -612,6 +552,63 @@
     },
     {
       "id": "15561026732403",
+      "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15561026797939",
+      "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15561026634099",
+      "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15561026404723",
       "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
