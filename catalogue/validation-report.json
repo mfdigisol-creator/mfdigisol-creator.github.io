@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-07T18:58:07.755Z",
+  "generatedAt": "2026-10-08T06:10:32.233Z",
   "summary": {
-    "products": 1267,
-    "removedProducts": 2316,
+    "products": 1262,
+    "removedProducts": 2322,
     "brands": 77,
     "collectionPages": 88,
-    "sitemapUrls": 1358,
-    "metaFeedRows": 1258,
-    "metadataPages": 1267,
-    "internalHtmlFiles": 3725,
+    "sitemapUrls": 1353,
+    "metaFeedRows": 1253,
+    "metadataPages": 1262,
+    "internalHtmlFiles": 3726,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "75 products currently lack retained supplier description text."
+    "74 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -39,13 +39,13 @@
       "BT-CO-ORD-KHD-2P-DD-08",
       "BT-CO-ORD-KHD-2P-DD-09",
       "CHINYERE-2PLWN-V2-ABR-05",
-      "CHINYERE-2PLWN-V2-ABR-07",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
       "CS-EMB-LWN-3P-1856",
-      "AIRA-ORG-PURP-1547"
+      "AIRA-ORG-SKY-1547",
+      "AIRA-ORG-PISTA-1547"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
