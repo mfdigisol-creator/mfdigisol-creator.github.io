@@ -1,27 +1,26 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-08T06:10:32.233Z",
+  "generatedAt": "2026-10-08T18:52:37.854Z",
   "summary": {
-    "products": 1262,
-    "removedProducts": 2322,
+    "products": 1242,
+    "removedProducts": 2360,
     "brands": 77,
     "collectionPages": 88,
-    "sitemapUrls": 1353,
-    "metaFeedRows": 1253,
-    "metadataPages": 1262,
-    "internalHtmlFiles": 3726,
+    "sitemapUrls": 1333,
+    "metaFeedRows": 1233,
+    "metadataPages": 1242,
+    "internalHtmlFiles": 3746,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "74 products currently lack retained supplier description text."
+    "62 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
-      "FLEUR-ALMRH-LWN-CT-3P-09",
       "BT-CO-ORD-KHD-2P-DD-01",
       "BT-CO-ORD-KHD-2P-DD-10",
       "BT-CO-ORD-KHD-2P-DD-11",
@@ -29,6 +28,7 @@
       "BT-CO-ORD-KHD-2P-DD-13",
       "BT-CO-ORD-KHD-2P-DD-14",
       "BT-CO-ORD-KHD-2P-DD-15",
+      "BT-CO-ORD-KHD-2P-DD-16",
       "BT-CO-ORD-KHD-2P-DD-19",
       "BT-CO-ORD-KHD-2P-DD-02",
       "BT-CO-ORD-KHD-2P-DD-03",
@@ -38,14 +38,14 @@
       "BT-CO-ORD-KHD-2P-DD-07",
       "BT-CO-ORD-KHD-2P-DD-08",
       "BT-CO-ORD-KHD-2P-DD-09",
-      "CHINYERE-2PLWN-V2-ABR-05",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
       "CS-EMB-LWN-3P-1856",
       "AIRA-ORG-SKY-1547",
-      "AIRA-ORG-PISTA-1547"
+      "AIRA-ORG-PURP-1547",
+      "AIRA-ORG-PEACH-1547"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
