@@ -1,28 +1,28 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-09T06:14:12.556Z",
+  "generatedAt": "2026-10-09T18:23:22.813Z",
   "summary": {
-    "products": 1220,
-    "removedProducts": 2382,
-    "brands": 74,
-    "collectionPages": 85,
-    "sitemapUrls": 1308,
-    "metaFeedRows": 1211,
-    "metadataPages": 1220,
-    "internalHtmlFiles": 3746,
+    "products": 1245,
+    "removedProducts": 2409,
+    "brands": 76,
+    "collectionPages": 87,
+    "sitemapUrls": 1335,
+    "metaFeedRows": 1236,
+    "metadataPages": 1245,
+    "internalHtmlFiles": 3798,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "61 products currently lack retained supplier description text."
+    "57 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
+      "FLEUR-ALMRH-LWN-CT-3P-09",
       "BT-CO-ORD-KHD-2P-DD-01",
-      "BT-CO-ORD-KHD-2P-DD-10",
       "BT-CO-ORD-KHD-2P-DD-11",
       "BT-CO-ORD-KHD-2P-DD-12",
       "BT-CO-ORD-KHD-2P-DD-13",
@@ -42,10 +42,10 @@
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
       "CS-EMB-LWN-3P-1856",
-      "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
-      "AIRA-ORG-PURP-1547",
-      "AIRA-ORG-SKY-1547"
+      "AIRA-ORG-PISTA-1547",
+      "AIRA-ORG-SKY-1547",
+      "AIRA-ORG-PURP-1547"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
