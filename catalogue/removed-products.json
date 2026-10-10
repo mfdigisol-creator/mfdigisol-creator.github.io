@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T05:57:06.723Z",
+  "generatedAt": "2026-10-10T17:21:44.071Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V2-ABR-01",
@@ -1682,6 +1682,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "FLEUR-ALMRH-LWN-CT-3P-09",
+      "id": "15378615730547-62852838162803",
+      "name": "Fleur By Almeerah Premium Printed Lawn With Emb Patches 3PC — 9",
+      "productName": "Fleur By Almeerah Premium Printed Lawn With Emb Patches 3PC",
+      "brand": "Almeerah",
+      "sourceBrand": "Almeerah",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3149.jpg?v=1779108755",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3149.jpg?v=1779108755",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-3150.jpg?v=1779108755",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/09_baa5d661-6984-4ba6-90e2-a9ed3ca7d4d3.jpg?v=1778976653"
+      ],
+      "path": "products/fleur-almrh-lwn-ct-3p-09-fleur-by-almeerah-premium-printed-lawn-with-emb-patches-3pc/",
+      "firstSeenAt": "2026-09-01T01:34:10+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.025Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "FLOWS-ALMRH-LWN-CT-3P-01",
       "id": "15380027736435-62857358410099",
       "name": "Flows By Almeerah Premium Printed Stripe Lawn 3PC — 1",
@@ -2845,6 +2868,28 @@
       "firstSeenAt": "2026-09-01T18:19:33+05:00",
       "lastSeenAt": "2026-10-07T11:04:36+05:00",
       "removedAt": "2026-10-07T18:57:55.131Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ANAYA-SHN-LINEN-V259-3P-08",
+      "id": "15528414773619-64552647754099",
+      "name": "Anaya Digital Printed Linen 3PC — 8",
+      "productName": "Anaya Digital Printed Linen 3PC",
+      "brand": "Anaya",
+      "sourceBrand": "Anaya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3295,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/033A6EC6-7A6F-49A6-902D-B398DC8B1D94.png?v=1788334156",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/033A6EC6-7A6F-49A6-902D-B398DC8B1D94.png?v=1788334156",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/3_4eded457-24d4-4b4e-b363-ff89fb3feaa4.jpg?v=1788271714"
+      ],
+      "path": "products/anaya-shn-linen-v259-3p-08-anaya-digital-printed-linen-3pc/",
+      "firstSeenAt": "2026-09-01T18:17:04+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.025Z",
       "reason": "supplier-removed"
     },
     {
@@ -5899,6 +5944,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ANAYANOOR-KHD-V4-3P-AC-11",
+      "id": "15559980515699-64704146768243",
+      "name": "Anaya Noor Printed Chamki Khaddar 3PC — 11",
+      "productName": "Anaya Noor Printed Chamki Khaddar 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3650,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11_2_b5b143f4-a758-4304-b320-f3c5759549b5.jpg?v=1790072172",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11_2_b5b143f4-a758-4304-b320-f3c5759549b5.jpg?v=1790072172",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11_1_86cfc26e-6090-4ea0-8489-f5050d36f0cf.jpg?v=1790072172"
+      ],
+      "path": "products/anayanoor-khd-v4-3p-ac-11-anaya-noor-printed-chamki-khaddar-3pc/",
+      "firstSeenAt": "2026-09-22T12:45:13+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ANAYANOOR-KHD-V4-3P-AC-12",
       "id": "15559980482931-64704146735475",
       "name": "Anaya Noor Printed Chamki Khaddar 3PC — 12",
@@ -6008,6 +6075,29 @@
       "firstSeenAt": "2026-09-22T17:18:49+05:00",
       "lastSeenAt": "2026-10-08T11:10:14+05:00",
       "removedAt": "2026-10-08T18:52:29.077Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "AREESHA-ANAYANOOR-3P-D08",
+      "id": "15561027092851-64707888808307",
+      "name": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC — 8",
+      "productName": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6200,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/3_3_8d9fd33d-d91d-4c5c-aa36-7ab12b224a62.jpg?v=1790591071",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/3_3_8d9fd33d-d91d-4c5c-aa36-7ab12b224a62.jpg?v=1790591071",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/3_2_21c7764e-958e-4244-8f7c-8f28f2db7f3e.jpg?v=1790591071",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/3_1_c225e917-f7c4-4d3b-a42c-94d946eb4178.jpg?v=1790591071"
+      ],
+      "path": "products/areesha-anayanoor-3p-d08-areesha-by-anaya-noor-heavy-emb-khaddar-3pc/",
+      "firstSeenAt": "2026-09-22T17:18:55+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -6677,6 +6767,28 @@
       "firstSeenAt": "2026-09-15T14:03:08+05:00",
       "lastSeenAt": "2026-10-06T11:25:46+05:00",
       "removedAt": "2026-10-06T18:24:58.272Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "DARK-PLAIN-DHANAK-3P-AC-06",
+      "id": "15544391172467-64645951226227",
+      "name": "Dark Color Plain Embroidered Dhanak 3PC — 6",
+      "productName": "Dark Color Plain Embroidered Dhanak 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6650,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/06_2_d20b0f4b-79d7-47c2-ba19-83960357abdb.jpg?v=1789643491",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/06_2_d20b0f4b-79d7-47c2-ba19-83960357abdb.jpg?v=1789643491",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/06_1_d4bd8af1-5176-45a2-868e-66770b6555c5.jpg?v=1789643491"
+      ],
+      "path": "products/dark-plain-dhanak-3p-ac-06-dark-color-plain-embroidered-dhanak-3pc/",
+      "firstSeenAt": "2026-09-15T14:03:10+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -7965,6 +8077,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "KEHKASHAN-ANAYANOOR-3P-AN-09",
+      "id": "15547719287155-64657742430579",
+      "name": "Kehkashan By Anaya Noor Fully Emb Viscose 3PC — 9",
+      "productName": "Kehkashan By Anaya Noor Fully Emb Viscose 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6150,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/2_7_7e675fe4-7b2d-4317-99a4-83bdde2ee414.png?v=1789629798",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/2_7_7e675fe4-7b2d-4317-99a4-83bdde2ee414.png?v=1789629798",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/2_8_a44f5a9b-9c96-4456-be90-addf6f049f46.png?v=1789629797",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/2_2_d5df35db-0d86-4114-b8e6-4fa385e82a3f.png?v=1789629798",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/2_3_2bd40a5e-0618-42b9-96d9-f7f28d3df77e.png?v=1789629798"
+      ],
+      "path": "products/kehkashan-anayanoor-3p-an-09-kehkashan-by-anaya-noor-fully-emb-viscose-3pc/",
+      "firstSeenAt": "2026-09-17T11:02:02+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.025Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "KHOSHBO-SA-ANAYANOOR-AN-01",
       "id": "15544242798963-64645486150003",
       "name": "Khoshbo Sa By Anaya Noor Full Emb Dhanak With Plachi Shawl 3PC — 1",
@@ -8078,6 +8214,32 @@
       "firstSeenAt": "2026-09-15T12:53:04+05:00",
       "lastSeenAt": "2026-10-09T11:13:58+05:00",
       "removedAt": "2026-10-09T18:23:10.755Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "LAZERKARI-ANAYANOOR-VOL-01-D02",
+      "id": "15530236117363-64592762962291",
+      "name": "Lazer Kari By Anaya Noor Emb Viscose 3PC — 2",
+      "productName": "Lazer Kari By Anaya Noor Emb Viscose 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 7200,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_8__jpg.jpg?v=1788766144",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_8__jpg.jpg?v=1788766144",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_7__jpg.jpg?v=1788766144",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_6__jpg.jpg?v=1788766144",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_5__jpg.jpg?v=1788766144",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/02_2_2bd9560e-89e3-4515-a980-1356fd1445d1.jpg?v=1788765687",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/02_1_abedaaa9-bd58-40ec-8d8f-0dfa594a02e3.jpg?v=1788765686"
+      ],
+      "path": "products/lazerkari-anayanoor-vol-01-d02-lazer-kari-by-anaya-noor-emb-viscose-3pc/",
+      "firstSeenAt": "2026-09-02T13:31:05+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.025Z",
       "reason": "supplier-removed"
     },
     {
@@ -10370,6 +10532,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "RIWAAZ-W26-KHD-V1-3P-HA-65",
+      "id": "15581068394867-67031820206451",
+      "name": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC — 65",
+      "productName": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0926.jpg?v=1791206223",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0926.jpg?v=1791206223",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0927.jpg?v=1791206223"
+      ],
+      "path": "products/riwaaz-w26-khd-v1-3p-ha-65-riwaaz-by-anaya-noor-digital-printed-and-emb-khaddar-3pc/",
+      "firstSeenAt": "2026-10-03T13:27:14+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "RIWAAZ-W26-KHD-V1-3P-HA-66",
       "id": "15581068493171-67031820304755",
       "name": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC — 66",
@@ -10389,6 +10573,28 @@
       "firstSeenAt": "2026-10-03T13:27:16+05:00",
       "lastSeenAt": "2026-10-09T11:13:58+05:00",
       "removedAt": "2026-10-09T18:23:10.756Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "RIWAAZ-W26-KHD-V1-3P-HA-67",
+      "id": "15581068525939-67031820337523",
+      "name": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC — 67",
+      "productName": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0918.jpg?v=1791206404",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0918.jpg?v=1791206404",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0919.jpg?v=1791206403"
+      ],
+      "path": "products/riwaaz-w26-khd-v1-3p-ha-67-riwaaz-by-anaya-noor-digital-printed-and-emb-khaddar-3pc/",
+      "firstSeenAt": "2026-10-03T13:27:16+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -11082,6 +11288,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "SARMA-ANAYA-NOOR-3P-A08",
+      "id": "15538012750195-64621753008499",
+      "name": "Sarma By Anaya Noor Fully Emb Viscose 3PC — 8",
+      "productName": "Sarma By Anaya Noor Fully Emb Viscose 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6550,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_2__jpg_f927523c-7b54-41ce-846e-8bf1da71c043.jpg?v=1788942403",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_2__jpg_f927523c-7b54-41ce-846e-8bf1da71c043.jpg?v=1788942403",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_1__jpg_43fdd22b-bb1f-4792-b532-d8ca48b560c4.jpg?v=1788942403",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_3__jpg_5e19ee9b-db56-4994-85fd-8660b193c342.jpg?v=1788942403",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_4__jpg_2d4918b6-570e-46e6-98a5-61dd8a813c72.jpg?v=1788942403"
+      ],
+      "path": "products/sarma-anaya-noor-3p-a08-sarma-by-anaya-noor-fully-emb-viscose-3pc/",
+      "firstSeenAt": "2026-09-09T12:54:20+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "SERAYAN-ANAYANOOR-DE-02",
       "id": "15293922509171-62547879461235",
       "name": "Serayan By Anaya Noor Emb Bana Dora Lawn 3PC — 2",
@@ -11562,6 +11792,32 @@
       "firstSeenAt": "2026-09-17T10:58:44+05:00",
       "lastSeenAt": "2026-10-06T11:25:46+05:00",
       "removedAt": "2026-10-06T18:24:58.272Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "TAHNIYAT-ANAYANOOR-D03",
+      "id": "15536603070835-64613977063795",
+      "name": "Tahniyat By Anaya Noor Digital Printed & Emb Karandi 3PC — 3",
+      "productName": "Tahniyat By Anaya Noor Digital Printed & Emb Karandi 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5950,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9_2__jpg_b823e099-32f0-4768-9000-efc047ed0e00.jpg?v=1788878729",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9_2__jpg_b823e099-32f0-4768-9000-efc047ed0e00.jpg?v=1788878729",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9_1__jpg_0e308150-4bba-4179-8f3b-ab67b7fcdddf.jpg?v=1788878729",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9_3__jpg_231f536e-dd1b-4a5d-b724-d0a3c545eacf.jpg?v=1788878729",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9_4__jpg.jpg?v=1788878729",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_2_e9399ed2-f375-4a8e-8d47-72d364367cc9.jpg?v=1788935610",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_1_b7d02ed5-bbfc-4ed4-867b-160192c3723d.jpg?v=1788935609"
+      ],
+      "path": "products/tahniyat-anayanoor-d03-tahniyat-by-anaya-noor-digital-printed-and-emb-karandi-3pc/",
+      "firstSeenAt": "2026-09-07T13:22:39+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.025Z",
       "reason": "supplier-removed"
     },
     {
@@ -12226,6 +12482,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "SLUB-KHADDAR-EMBROIDERED-A15",
+      "id": "15251674988915-62381883195763",
+      "name": "Aneelas Printed Slub Khaddar With Emb Patches 3PC — 15",
+      "productName": "Aneelas Printed Slub Khaddar With Emb Patches 3PC",
+      "brand": "Aneelas",
+      "sourceBrand": "Aneelas",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5895,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5F71A27A-DB06-4A8F-A24E-1AEF9DFFA4DE.jpg?v=1767715925",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5F71A27A-DB06-4A8F-A24E-1AEF9DFFA4DE.jpg?v=1767715925",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/171F5183-9502-46D6-B273-E6264AE51BA0.jpg?v=1767715924"
+      ],
+      "path": "products/slub-khaddar-embroidered-a15-aneelas-printed-slub-khaddar-with-emb-patches-3pc/",
+      "firstSeenAt": "2025-12-18T14:00:34+05:00",
+      "lastSeenAt": "2026-10-10T10:57:03+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ASIFA-NABEEL-SILK-3PC-AN-04",
       "id": "15539183190387-64628291797363",
       "name": "Asifa Nabeel Shamoz Silk With Emb Patches 3PC — 4",
@@ -12761,28 +13039,6 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "BAREEZE-KHD-V2-3P-HM-05",
-      "id": "15584291488115-67043826663795",
-      "name": "Bareeze Digital Printed Khaddar 3PC — 5",
-      "productName": "Bareeze Digital Printed Khaddar 3PC",
-      "brand": "Bareeze",
-      "sourceBrand": "Bareeze",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 3350,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_v5lq30v5lq30v5lq.jpg?v=1791288412",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_v5lq30v5lq30v5lq.jpg?v=1791288412",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/14_2bd5e1c0-71fc-46a3-986f-587e8d49da54.jpg?v=1791287401"
-      ],
-      "path": "products/bareeze-khd-v2-3p-hm-05-bareeze-digital-printed-khaddar-3pc/",
-      "firstSeenAt": "2026-10-06T11:21:18+05:00",
-      "lastSeenAt": "2026-10-09T11:13:58+05:00",
-      "removedAt": "2026-10-09T18:23:10.756Z",
-      "reason": "supplier-removed"
-    },
-    {
       "code": "BAREEZE-KHD-V2-3P-HM-09",
       "id": "15584291815795-67043826991475",
       "name": "Bareeze Digital Printed Khaddar 3PC — 9",
@@ -12955,6 +13211,50 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "BRZE-BRSHA-KRNDI-V3-3P-AC-01",
+      "id": "15569281024371-66987410063731",
+      "name": "Bareeze Embroidered Karandi 3PC — 1",
+      "productName": "Bareeze Embroidered Karandi 3PC",
+      "brand": "Bareeze",
+      "sourceBrand": "Bareeze",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6600,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_1100.jpg?v=1790936925",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_1100.jpg?v=1790936925",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_1101.jpg?v=1790936924"
+      ],
+      "path": "products/brze-brsha-krndi-v3-3p-ac-01-bareeze-embroidered-karandi-3pc/",
+      "firstSeenAt": "2026-09-26T11:39:11+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "BRZE-BRSHA-KRNDI-V8-3P-AC-01",
+      "id": "15569282302323-66987411374451",
+      "name": "Bareeze Embroidered Karandi 3PC — 1",
+      "productName": "Bareeze Embroidered Karandi 3PC",
+      "brand": "Bareeze",
+      "sourceBrand": "Bareeze",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6600,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_2_2bcda867-e930-4cf9-bfc5-619fa5561e76.jpg?v=1790777593",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_2_2bcda867-e930-4cf9-bfc5-619fa5561e76.jpg?v=1790777593",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_1_a4fc11ef-4bd5-4f33-98d9-a6b66c933b32.jpg?v=1790777593"
+      ],
+      "path": "products/brze-brsha-krndi-v8-3p-ac-01-bareeze-embroidered-karandi-3pc/",
+      "firstSeenAt": "2026-09-26T11:39:40+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "BRZE-BRSHA-KRNDI-V10-3P-AC-02",
       "id": "15569284497779-66987415667059",
       "name": "Bareeze Embroidered Karandi 3PC — 2",
@@ -13062,6 +13362,28 @@
       "firstSeenAt": "2026-09-26T11:39:20+05:00",
       "lastSeenAt": "2026-10-05T10:46:17+05:00",
       "removedAt": "2026-10-05T20:34:52.992Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "BRZE-BRSHA-KRNDI-V8-3P-AC-03",
+      "id": "15569282367859-66987411439987",
+      "name": "Bareeze Embroidered Karandi 3PC — 3",
+      "productName": "Bareeze Embroidered Karandi 3PC",
+      "brand": "Bareeze",
+      "sourceBrand": "Bareeze",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6600,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_2_316679f7-81a4-49ad-bf46-c4f5dbeaabcf.jpg?v=1790777659",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_2_316679f7-81a4-49ad-bf46-c4f5dbeaabcf.jpg?v=1790777659",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_1_843007d9-911c-444d-b1ca-57692af51e68.jpg?v=1790777659"
+      ],
+      "path": "products/brze-brsha-krndi-v8-3p-ac-03-bareeze-embroidered-karandi-3pc/",
+      "firstSeenAt": "2026-09-26T11:39:41+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -13263,6 +13585,50 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "BAREEZE-WHTKRNDI-3P-AK-16",
+      "id": "15554388459891-64680966455667",
+      "name": "Bareeze Embroidered White Karandi 3PC — 16",
+      "productName": "Bareeze Embroidered White Karandi 3PC",
+      "brand": "Bareeze",
+      "sourceBrand": "Bareeze",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5100,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0651.jpg?v=1789832779",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0651.jpg?v=1789832779",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0652.jpg?v=1789832779"
+      ],
+      "path": "products/bareeze-whtkrndi-3p-ak-16-bareeze-embroidered-white-karandi-3pc/",
+      "firstSeenAt": "2026-09-19T16:24:58+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "BAREEZE-WHTKRNDI-3P-AK-17",
+      "id": "15554388394355-64680966390131",
+      "name": "Bareeze Embroidered White Karandi 3PC — 17",
+      "productName": "Bareeze Embroidered White Karandi 3PC",
+      "brand": "Bareeze",
+      "sourceBrand": "Bareeze",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5100,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0648.jpg?v=1789832725",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0648.jpg?v=1789832725",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0650.jpg?v=1789832725"
+      ],
+      "path": "products/bareeze-whtkrndi-3p-ak-17-bareeze-embroidered-white-karandi-3pc/",
+      "firstSeenAt": "2026-09-19T16:24:57+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "BAREEZE-WHTKRNDI-3P-AK-19",
       "id": "15554388558195-64680967111027",
       "name": "Bareeze Embroidered White Karandi 3PC — 19",
@@ -13351,6 +13717,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "BAREEZE-WHTKRNDI-3P-AK-08",
+      "id": "15554388099443-64680963899763",
+      "name": "Bareeze Embroidered White Karandi 3PC — 8",
+      "productName": "Bareeze Embroidered White Karandi 3PC",
+      "brand": "Bareeze",
+      "sourceBrand": "Bareeze",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5100,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0659.jpg?v=1789832371",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0659.jpg?v=1789832371",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0660.jpg?v=1789832372"
+      ],
+      "path": "products/bareeze-whtkrndi-3p-ak-08-bareeze-embroidered-white-karandi-3pc/",
+      "firstSeenAt": "2026-09-19T16:24:52+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "BAREEZE-WHTKRNDI-3P-AK-09",
       "id": "15554388164979-64680965865843",
       "name": "Bareeze Embroidered White Karandi 3PC — 9",
@@ -13414,6 +13802,28 @@
       "firstSeenAt": "2026-09-01T14:07:03+05:00",
       "lastSeenAt": "2026-10-03T21:20:16+05:00",
       "removedAt": "2026-10-04T05:58:28.452Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "BAREEZE-BPINK-RK-LWN-10",
+      "id": "15336334623091-62703290909043",
+      "name": "Bareeze Fully Emb Rice Karandi 2PC — 10",
+      "productName": "Bareeze Fully Emb Rice Karandi 2PC",
+      "brand": "Bareeze",
+      "sourceBrand": "Bareeze",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "embroidered",
+      "price": 4895,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1083.jpg?v=1776422870",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1083.jpg?v=1776422870",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1084.jpg?v=1776422870"
+      ],
+      "path": "products/bareeze-bpink-rk-lwn-10-bareeze-fully-emb-rice-karandi-2pc/",
+      "firstSeenAt": "2026-07-31T22:26:11+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.024Z",
       "reason": "supplier-removed"
     },
     {
@@ -15456,6 +15866,28 @@
       "firstSeenAt": "2026-09-30T16:17:46+05:00",
       "lastSeenAt": "2026-10-09T11:14:00+05:00",
       "removedAt": "2026-10-09T18:23:10.756Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "BT-CO-ORD-KHD-2P-DD-13",
+      "id": "15576195793267-67015689109875",
+      "name": "Beechtree Digital Printed Shirt & Dupatta Khaddar 2PC — 13",
+      "productName": "Beechtree Digital Printed Shirt & Dupatta Khaddar 2PC",
+      "brand": "Beechtree",
+      "sourceBrand": "Beechtree",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2650,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0656_705a6f26-18fb-4ba2-bda5-7eb725baf05d.jpg?v=1791268171",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0656_705a6f26-18fb-4ba2-bda5-7eb725baf05d.jpg?v=1791268171",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0657_e03b9888-06ca-45f8-b6a8-e89116e19612.jpg?v=1791268171"
+      ],
+      "path": "products/bt-co-ord-khd-2p-dd-13-beechtree-digital-printed-shirt-and-dupatta-khaddar-2pc/",
+      "firstSeenAt": "2026-09-30T16:17:49+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -19267,6 +19699,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "CROSSSTITCH-V3-S26-A-03",
+      "id": "15501200261491-63978211180915",
+      "name": "Cross Stitch Premium Jacquard Viscose 3PC — 3",
+      "productName": "Cross Stitch Premium Jacquard Viscose 3PC",
+      "brand": "Cross Stitch",
+      "sourceBrand": "Cross Stitch",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5750,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_3__jpg_bd8071d6-e384-48bb-81cd-14bd14ed9864.jpg?v=1787821588",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_3__jpg_bd8071d6-e384-48bb-81cd-14bd14ed9864.jpg?v=1787821588",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_1__jpg_65f6c013-e759-453f-8418-55be75340346.jpg?v=1787821588",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_2__jpg_40aa5957-fe6e-4404-933b-0f8be5e2063e.jpg?v=1787821588",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_4__jpg.jpg?v=1787821588"
+      ],
+      "path": "products/crossstitch-v3-s26-a-03-cross-stitch-premium-jacquard-viscose-3pc/",
+      "firstSeenAt": "2026-08-18T17:32:54+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "CROSSSTITCH-V3-S26-A-04",
       "id": "15501200327027-63978211246451",
       "name": "Cross Stitch Premium Jacquard Viscose 3PC — 4",
@@ -20137,6 +20593,31 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "JAHANARA-DL-SILK-PISTA-1891",
+      "id": "15427926327667-63054115471731",
+      "name": "Jahan Ara | Sheesha Silk | Dressline — 1891",
+      "productName": "Jahan Ara | Sheesha Silk | Dressline",
+      "brand": "Dressline",
+      "sourceBrand": "Dressline",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 11000,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-8516.jpg?v=1783157575",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-8516.jpg?v=1783157575",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-8515.jpg?v=1783157575",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-8514.jpg?v=1783157575",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-8517.jpg?v=1783157575",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-8518.jpg?v=1783157575"
+      ],
+      "path": "products/jahanara-dl-silk-pista-1891-jahan-ara-sheesha-silk-dressline/",
+      "firstSeenAt": "2026-07-31T22:27:37+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.024Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "JAHANARA-DL-SILK-MEHN-1891",
       "id": "15427926196595-63054115307891",
       "name": "Jahan Ara Sheesha Silk | Dressline — 1891",
@@ -20924,31 +21405,6 @@
       "firstSeenAt": "2026-07-31T22:27:37+05:00",
       "lastSeenAt": "2026-08-06T15:18:36+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "NAQSH-DL-ORG-ZS-0052",
-      "id": "15427943793011-63054136181107",
-      "name": "Sania By Naqsh | Dressline — ZS-0052",
-      "productName": "Sania By Naqsh | Dressline",
-      "brand": "Dressline",
-      "sourceBrand": "Dressline",
-      "category": "Luxury",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "price": 10400,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_81edb330-3069-434a-8c62-495660bd6e0d.jpg?v=1783158244",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/7_81edb330-3069-434a-8c62-495660bd6e0d.jpg?v=1783158244",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/8_7b83407f-cfde-40a1-8a50-37594505a446.jpg?v=1783158244",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9_08f555fa-44a1-4a2a-916e-371ca2b278e3.jpg?v=1783158244",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/10_1f8c534d-d48a-41da-b004-8397e9b5aa31.jpg?v=1783158245",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11_7fdf96f1-af99-4e32-b763-7ecbb80e5421.jpg?v=1783158244"
-      ],
-      "path": "products/naqsh-dl-org-zs-0052-sania-by-naqsh-dressline/",
-      "firstSeenAt": "2026-07-31T22:27:37+05:00",
-      "lastSeenAt": "2026-10-07T11:04:35+05:00",
-      "removedAt": "2026-10-07T18:57:55.130Z",
       "reason": "supplier-removed"
     },
     {
@@ -22234,6 +22690,29 @@
       "firstSeenAt": "2026-09-21T12:17:34+05:00",
       "lastSeenAt": "2026-10-09T23:23:06+05:00",
       "removedAt": "2026-10-10T05:57:06.680Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "FABIHA-FERO-BDLIN-V3-3P-04",
+      "id": "15557459673459-64694376563059",
+      "name": "Fabiha By Feroza Digital Printed Bana Dora Staple Linen 3PC — 4",
+      "productName": "Fabiha By Feroza Digital Printed Bana Dora Staple Linen 3PC",
+      "brand": "Feroza",
+      "sourceBrand": "Feroza",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3550,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_ddce29a0-fed8-4f55-b46f-27b3a0e70e1d.jpg?v=1790238021",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_ddce29a0-fed8-4f55-b46f-27b3a0e70e1d.jpg?v=1790238021",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_af5fb467-6e5f-4962-8a8e-84711c403029.jpg?v=1790238021",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/6_f68e39b3-72f2-484b-a528-7b066db90991.jpg?v=1790238021"
+      ],
+      "path": "products/fabiha-fero-bdlin-v3-3p-04-fabiha-by-feroza-digital-printed-bana-dora-staple-linen-3pc/",
+      "firstSeenAt": "2026-09-21T12:17:34+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -24262,6 +24741,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "FEROZA-LINEN-V1-2P-07",
+      "id": "15559822606707-64703090098547",
+      "name": "Feroza Digital Printed Linen 2PC — 7",
+      "productName": "Feroza Digital Printed Linen 2PC",
+      "brand": "Feroza",
+      "sourceBrand": "Feroza",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2500,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-09-22at9.01.21PM_1.jpg?v=1790145552",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-09-22at9.01.21PM_1.jpg?v=1790145552"
+      ],
+      "path": "products/feroza-linen-v1-2p-07-feroza-digital-printed-linen-2pc/",
+      "firstSeenAt": "2026-09-22T11:43:27+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "FEROZA-LINEN-V1-2P-08",
       "id": "15559822901619-64703090393459",
       "name": "Feroza Digital Printed Linen 2PC — 8",
@@ -25610,6 +26110,29 @@
       "firstSeenAt": "2026-10-02T19:19:57+05:00",
       "lastSeenAt": "2026-10-03T21:20:17+05:00",
       "removedAt": "2026-10-04T05:58:28.452Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "GUL-LWN-V1025-3P-LALA-52188",
+      "id": "15580258140531-67028478132595",
+      "name": "Gul Ahmed Digital Printed Lawn 3PC — 52188",
+      "productName": "Gul Ahmed Digital Printed Lawn 3PC",
+      "brand": "Gul Ahmed",
+      "sourceBrand": "Gul Ahmed",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2950,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_e951d6b3-3e18-46db-9944-b42618e40ccb.jpg?v=1790956587",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_e951d6b3-3e18-46db-9944-b42618e40ccb.jpg?v=1790956587",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0863_71127a28-fadc-422b-a8da-2fd872e1521a.jpg?v=1791189504",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0864_d72bd32a-b546-4a34-9e44-178407276b06.jpg?v=1791189504"
+      ],
+      "path": "products/gul-lwn-v1025-3p-lala-52188-gul-ahmed-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-10-02T19:19:52+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -27177,6 +27700,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "KAYSERIA-BDLINEN-3P-JLALCUT-03",
+      "id": "15519747965299-64272105505139",
+      "name": "Kayseria Digital Printed Bana Dora Linen 3PC — 3",
+      "productName": "Kayseria Digital Printed Bana Dora Linen 3PC",
+      "brand": "Kayseria",
+      "sourceBrand": "Kayseria",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3350,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_2_48a996b4-a250-41d5-8289-d70a5cccb021.jpg?v=1787811879",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_2_48a996b4-a250-41d5-8289-d70a5cccb021.jpg?v=1787811879",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_1_323104ea-7d4e-4fba-887d-f405c65b1bd8.jpg?v=1787811879"
+      ],
+      "path": "products/kayseria-bdlinen-3p-jlalcut-03-kayseria-digital-printed-bana-dora-linen-3pc/",
+      "firstSeenAt": "2026-08-24T14:45:11+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "KAYSERIA-BDLINEN-3P-JLALCUT-04",
       "id": "15519748030835-64272105570675",
       "name": "Kayseria Digital Printed Bana Dora Linen 3PC — 4",
@@ -28620,6 +29165,29 @@
       "firstSeenAt": "2026-09-24T15:21:43+05:00",
       "lastSeenAt": "2026-09-29T10:47:24+05:00",
       "removedAt": "2026-09-29T18:06:19.117Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "LAAM-DHNK-3P-EHT-2039",
+      "id": "15565126369651-64731385102707",
+      "name": "Laam Plain Emb Dhanak 3-Piece Suit — 2039",
+      "productName": "Laam Plain Emb Dhanak 3-Piece Suit",
+      "brand": "Laam",
+      "sourceBrand": "Laam",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 7200,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_760ef8cc-ddcb-4b18-b2d9-3030520807d6.webp?v=1790406520",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_760ef8cc-ddcb-4b18-b2d9-3030520807d6.webp?v=1790406520",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0848.jpg?v=1790406695",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0849.jpg?v=1790406695"
+      ],
+      "path": "products/laam-dhnk-3p-eht-2039-laam-plain-emb-dhanak-3-piece-suit/",
+      "firstSeenAt": "2026-09-24T15:21:54+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -32115,6 +32683,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "NOVA-PRSHY-KHD-NV-06",
+      "id": "15563410309491-64721166106995",
+      "name": "Nova By Mahnur | Khaddar'26 — NV-06",
+      "productName": "Nova By Mahnur | Khaddar'26",
+      "brand": "Mahnur",
+      "sourceBrand": "Mahnur",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 9790,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/53_368a92f7-f2c0-4527-8c46-af75f39c6fa8.jpg?v=1790171635",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/53_368a92f7-f2c0-4527-8c46-af75f39c6fa8.jpg?v=1790171635",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/54_28810d93-b532-4fa2-b929-13857ef6f689.jpg?v=1790171635",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/55_d8545082-e0ad-44d5-9506-d826df9e3964.jpg?v=1790171635"
+      ],
+      "path": "products/nova-prshy-khd-nv-06-nova-by-mahnur-khaddar-26/",
+      "firstSeenAt": "2026-09-23T17:23:35+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "NOVA-PRSHY-KHD-NV-10",
       "id": "15563410506099-64721166303603",
       "name": "Nova By Mahnur | Khaddar'26 — NV-10",
@@ -33814,69 +34405,28 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "MASHAIM-KRNDI-V1-3P-HM-06",
-      "id": "15584312426867-67043897344371",
-      "name": "Mashaim Digital Printed Karandi 3PC — 6",
-      "productName": "Mashaim Digital Printed Karandi 3PC",
+      "code": "MASHAIM-KHD-V1-3P-HM-01",
+      "id": "15526679216499-64456126660979",
+      "name": "Mashaim Digital Printed Khaddar 3PC — 1",
+      "productName": "Mashaim Digital Printed Khaddar 3PC",
       "brand": "Mashaim",
       "sourceBrand": "Mashaim",
       "category": "Formal",
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
-      "price": 3695,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11_52b3e077-dc34-47ed-983c-7a762b210e1f.jpg?v=1791370043",
+      "price": 3495,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_2_4df0a646-d2e2-4b7f-b794-fe525ebb538c.jpg?v=1788183698",
       "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11_52b3e077-dc34-47ed-983c-7a762b210e1f.jpg?v=1791370043",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/12_4b793b64-6d12-420c-a807-415890e70358.jpg?v=1791370043"
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_2_4df0a646-d2e2-4b7f-b794-fe525ebb538c.jpg?v=1788183698",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_1_ed8f5580-e272-40f6-a5cd-7d03e72c3eaa.jpg?v=1788183698",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_3_005db821-0858-4251-bd49-aa463b128273.jpg?v=1788183698",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_4_e9fb8c74-f38b-43fc-9c43-065f32752a47.jpg?v=1788261193",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_3_9d81c17e-9465-418d-9dec-3ae7d575f88b.jpg?v=1788261192"
       ],
-      "path": "products/mashaim-krndi-v1-3p-hm-06-mashaim-digital-printed-karandi-3pc/",
-      "firstSeenAt": "2026-10-06T11:32:01+05:00",
-      "lastSeenAt": "2026-10-08T11:10:16+05:00",
-      "removedAt": "2026-10-08T18:52:29.077Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "MASHAIM-KRNDI-V1-3P-HM-08",
-      "id": "15584312492403-67043897377139",
-      "name": "Mashaim Digital Printed Karandi 3PC — 8",
-      "productName": "Mashaim Digital Printed Karandi 3PC",
-      "brand": "Mashaim",
-      "sourceBrand": "Mashaim",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 3695,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15_e65dde12-5880-4438-80f3-9fdfabce894b.jpg?v=1791370099",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15_e65dde12-5880-4438-80f3-9fdfabce894b.jpg?v=1791370099",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_6a7575f5-6575-4a1a-9b8c-1d12162b4b86.jpg?v=1791370099"
-      ],
-      "path": "products/mashaim-krndi-v1-3p-hm-08-mashaim-digital-printed-karandi-3pc/",
-      "firstSeenAt": "2026-10-06T11:32:02+05:00",
-      "lastSeenAt": "2026-10-09T23:23:06+05:00",
-      "removedAt": "2026-10-10T05:57:06.681Z",
-      "reason": "supplier-removed"
-    },
-    {
-      "code": "MASHAIM-KRNDI-V1-3P-HM-09",
-      "id": "15584312557939-67043897475443",
-      "name": "Mashaim Digital Printed Karandi 3PC — 9",
-      "productName": "Mashaim Digital Printed Karandi 3PC",
-      "brand": "Mashaim",
-      "sourceBrand": "Mashaim",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "price": 3695,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_a3304c86-168d-48d2-84c4-3f172296f6d3.jpg?v=1791370123",
-      "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_a3304c86-168d-48d2-84c4-3f172296f6d3.jpg?v=1791370123",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/18_d904563d-52f7-4bdb-af85-c2b4cb278adc.jpg?v=1791370123"
-      ],
-      "path": "products/mashaim-krndi-v1-3p-hm-09-mashaim-digital-printed-karandi-3pc/",
-      "firstSeenAt": "2026-10-06T11:32:03+05:00",
-      "lastSeenAt": "2026-10-09T11:14:00+05:00",
-      "removedAt": "2026-10-09T18:23:10.756Z",
+      "path": "products/mashaim-khd-v1-3p-hm-01-mashaim-digital-printed-khaddar-3pc/",
+      "firstSeenAt": "2026-08-31T17:13:19+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -34276,6 +34826,29 @@
       "firstSeenAt": "2026-09-12T17:41:25+05:00",
       "lastSeenAt": "2026-10-06T11:25:48+05:00",
       "removedAt": "2026-10-06T18:24:58.272Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MASHAIM-LIN-V1-3P-HM-09",
+      "id": "15541385855347-64635622719859",
+      "name": "Mashaim Digital Printed Linen 3PC — 9",
+      "productName": "Mashaim Digital Printed Linen 3PC",
+      "brand": "Mashaim",
+      "sourceBrand": "Mashaim",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3350,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/23_f7db3fad-5072-495e-b9cc-f67c81cbbdd8.jpg?v=1789824362",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/23_f7db3fad-5072-495e-b9cc-f67c81cbbdd8.jpg?v=1789824362",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/21_6bc03dde-3e47-4bf5-af1e-630a52f21c3f.jpg?v=1789824362",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/22_d73400a4-8071-4f89-a87d-913227fa3171.jpg?v=1789824362"
+      ],
+      "path": "products/mashaim-lin-v1-3p-hm-09-mashaim-digital-printed-linen-3pc/",
+      "firstSeenAt": "2026-09-12T17:41:27+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -35454,6 +36027,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-213",
+      "id": "15551716753779-64669952049523",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 213",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0322_69912e58-fee2-4202-9cd7-b6165d2bb783.jpg?v=1789735216",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0322_69912e58-fee2-4202-9cd7-b6165d2bb783.jpg?v=1789735216"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-213-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-09-18T17:30:12+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-214",
       "id": "15551716721011-64669952016755",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 214",
@@ -35787,6 +36381,27 @@
       "firstSeenAt": "2026-09-18T18:53:05+05:00",
       "lastSeenAt": "2026-10-09T11:14:00+05:00",
       "removedAt": "2026-10-09T18:23:10.755Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-241",
+      "id": "15551872139635-64671491817843",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 241",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0328.jpg?v=1789745031",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0328.jpg?v=1789745031"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-241-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-09-18T18:53:08+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -36189,6 +36804,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-270",
+      "id": "15554614231411-64682405822835",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 270",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0586.jpg?v=1789975460",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0586.jpg?v=1789975460"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-270-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-09-19T18:44:25+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-272",
       "id": "15554614460787-64682406707571",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 272",
@@ -36270,6 +36906,27 @@
       "firstSeenAt": "2026-09-19T18:44:33+05:00",
       "lastSeenAt": "2026-10-03T10:22:21+05:00",
       "removedAt": "2026-10-03T16:20:21.951Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-283",
+      "id": "15554615017843-64682409394547",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 283",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0380.jpg?v=1790318474",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0380.jpg?v=1790318474"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-283-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-09-19T18:44:39+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -36417,6 +37074,27 @@
       "firstSeenAt": "2026-09-19T19:15:56+05:00",
       "lastSeenAt": "2026-10-09T11:14:00+05:00",
       "removedAt": "2026-10-09T18:23:10.755Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-295",
+      "id": "15554699133299-64683004330355",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 295",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0358.jpg?v=1790235380",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0358.jpg?v=1790235380"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-295-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-09-19T19:15:56+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -37617,6 +38295,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-391",
+      "id": "15554720170355-64683063345523",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 391",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0394.jpg?v=1790320281",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0394.jpg?v=1790320281"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-391-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-09-19T19:23:27+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-392",
       "id": "15554720137587-64683063312755",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 392",
@@ -38100,6 +38799,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-435",
+      "id": "15580157837683-67028200259955",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 435",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0760_770242e9-81c3-4e58-a4f1-ec776c90be58.jpg?v=1791178319",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0760_770242e9-81c3-4e58-a4f1-ec776c90be58.jpg?v=1791178319"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-435-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:18:31+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-437",
       "id": "15580157935987-67028200358259",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 437",
@@ -38139,6 +38859,27 @@
       "firstSeenAt": "2026-10-02T17:18:34+05:00",
       "lastSeenAt": "2026-10-09T23:23:06+05:00",
       "removedAt": "2026-10-10T05:57:06.681Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-439",
+      "id": "15580158034291-67028200456563",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 439",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0787.jpg?v=1791027489",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0787.jpg?v=1791027489"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-439-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:18:36+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -38373,6 +39114,111 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-453",
+      "id": "15580164882803-67028227916147",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 453",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0730.jpg?v=1791546818",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0730.jpg?v=1791546818"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-453-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:37:24+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-455",
+      "id": "15580162982259-67028224541043",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 455",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0732.jpg?v=1791025955",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0732.jpg?v=1791025955"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-455-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:11+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-457",
+      "id": "15580163047795-67028224606579",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 457",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0700_0e73e659-922e-4051-bf15-a20c8e5fb7e8.jpg?v=1790951972",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0700_0e73e659-922e-4051-bf15-a20c8e5fb7e8.jpg?v=1790951972"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-457-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:12+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-458",
+      "id": "15580163113331-67028224672115",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 458",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0724.jpg?v=1791025752",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0724.jpg?v=1791025752"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-458-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:14+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-463",
+      "id": "15580163309939-67028224901491",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 463",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0773.jpg?v=1790952972",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0773.jpg?v=1790952972"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-463-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:18+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-465",
       "id": "15580163342707-67028224934259",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 465",
@@ -38457,6 +39303,48 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-472",
+      "id": "15580165603699-67028230472051",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 472",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0797.jpg?v=1791179878",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0797.jpg?v=1791179878"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-472-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:40:15+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-473",
+      "id": "15580163604851-67028225229171",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 473",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0796.jpg?v=1791179794",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0796.jpg?v=1791179794"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-473-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:25+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-474",
       "id": "15580163637619-67028225261939",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 474",
@@ -38517,6 +39405,27 @@
       "firstSeenAt": "2026-10-02T17:36:28+05:00",
       "lastSeenAt": "2026-10-09T11:14:00+05:00",
       "removedAt": "2026-10-09T18:23:10.756Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-477",
+      "id": "15580163932531-67028225917299",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 477",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0734.jpg?v=1791179406",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0734.jpg?v=1791179406"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-477-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:33+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -38583,6 +39492,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-485",
+      "id": "15580164096371-67028226081139",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 485",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0755.jpg?v=1791547522",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0755.jpg?v=1791547522"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-485-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:36+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-489",
       "id": "15580164194675-67028226179443",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 489",
@@ -38625,6 +39555,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-490",
+      "id": "15580164424051-67028226507123",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 490",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0740.jpg?v=1791012700",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0740.jpg?v=1791012700"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-490-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:40+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-492",
       "id": "15580164522355-67028226605427",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 492",
@@ -38643,6 +39594,27 @@
       "firstSeenAt": "2026-10-02T17:36:42+05:00",
       "lastSeenAt": "2026-10-08T11:10:16+05:00",
       "removedAt": "2026-10-08T18:52:29.077Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-494",
+      "id": "15580164653427-67028226802035",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 494",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0764.jpg?v=1791547076",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0764.jpg?v=1791547076"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-494-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:36:44+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -38772,6 +39744,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-505",
+      "id": "15580165767539-67028230635891",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 505",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0701_6928d4a9-7217-4d9d-933e-06faabeab998.jpg?v=1790947993",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0701_6928d4a9-7217-4d9d-933e-06faabeab998.jpg?v=1790947993"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-505-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:40:17+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-506",
       "id": "15580165833075-67028230701427",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 506",
@@ -38856,6 +39849,48 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-510",
+      "id": "15580166095219-67028230996339",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 510",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0727.jpg?v=1791546098",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0727.jpg?v=1791546098"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-510-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:40:23+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-513",
+      "id": "15580166160755-67028231061875",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 513",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0720.jpg?v=1791184177",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0720.jpg?v=1791184177"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-513-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:40:25+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-514",
       "id": "15580166226291-67028231160179",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 514",
@@ -38919,6 +39954,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-521",
+      "id": "15580166488435-67028231455091",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 521",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0714_029f215a-eb48-4ebe-b2f5-7c4fe2f02f16.jpg?v=1791184008",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0714_029f215a-eb48-4ebe-b2f5-7c4fe2f02f16.jpg?v=1791184008"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-521-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:40:34+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-523",
       "id": "15580166553971-67028231520627",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 523",
@@ -38937,6 +39993,27 @@
       "firstSeenAt": "2026-10-02T17:40:37+05:00",
       "lastSeenAt": "2026-10-03T10:22:21+05:00",
       "removedAt": "2026-10-03T16:20:21.952Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-524",
+      "id": "15580166619507-67028231618931",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 524",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0738.jpg?v=1791183919",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0738.jpg?v=1791183919"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-524-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:40:39+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -39021,6 +40098,48 @@
       "firstSeenAt": "2026-10-02T17:40:45+05:00",
       "lastSeenAt": "2026-10-06T01:34:47+05:00",
       "removedAt": "2026-10-06T06:25:51.982Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-533",
+      "id": "15580166947187-67028231979379",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 533",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0715_44465da2-f2c0-40f2-8b97-0387791cce55.jpg?v=1791183660",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0715_44465da2-f2c0-40f2-8b97-0387791cce55.jpg?v=1791183660"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-533-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:40:47+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-534",
+      "id": "15580166979955-67028232012147",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 534",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0770.jpg?v=1791183518",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0770.jpg?v=1791183518"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-534-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-10-02T17:40:48+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -39423,6 +40542,48 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIXBRAND-PRNKHD-2P-BL-94",
+      "id": "15543528096115-64641822687603",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 94",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0238_3b891ef2-6a4f-4368-a103-63d7fdb5641d.jpg?v=1789478738",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0238_3b891ef2-6a4f-4368-a103-63d7fdb5641d.jpg?v=1789478738"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-94-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-09-14T12:51:34+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-97",
+      "id": "15543528259955-64641823801715",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 97",
+      "productName": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "brand": "Mix Brand",
+      "sourceBrand": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-09-14at2.10.34PM.jpg?v=1789395218",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-09-14at2.10.34PM.jpg?v=1789395218"
+      ],
+      "path": "products/mixbrand-prnkhd-2p-bl-97-mix-brand-digital-printed-allover-khaddar-2pc/",
+      "firstSeenAt": "2026-09-14T12:51:36+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MIXBRAND-PRNKHD-2P-BL-409",
       "id": "15580157018483-67028198818163",
       "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 409",
@@ -39719,6 +40880,265 @@
       "firstSeenAt": "2026-07-31T22:26:17+05:00",
       "lastSeenAt": "2026-08-06T15:17:18+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-01",
+      "id": "15590775751027-67066445005171",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 1",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1177.jpg?v=1791576399",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1177.jpg?v=1791576399",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1191.jpg?v=1791576398"
+      ],
+      "path": "products/monal-dhanak-st-2p-01-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:22+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-10",
+      "id": "15590776177011-67066447692147",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 10",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/e109ccd5-ff4c-4575-92e3-f7ecf3d0116b.png?v=1791580251",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/e109ccd5-ff4c-4575-92e3-f7ecf3d0116b.png?v=1791580251"
+      ],
+      "path": "products/monal-dhanak-st-2p-10-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:27+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-12",
+      "id": "15590776209779-67066447724915",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 12",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1187.jpg?v=1791577857",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1187.jpg?v=1791577857",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1201.jpg?v=1791577857"
+      ],
+      "path": "products/monal-dhanak-st-2p-12-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:27+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-16",
+      "id": "15590776406387-67066447921523",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 16",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1172.jpg?v=1791578078",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1172.jpg?v=1791578078",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1189.jpg?v=1791578077"
+      ],
+      "path": "products/monal-dhanak-st-2p-16-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:31+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-18",
+      "id": "15590776439155-67066447954291",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 18",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_1219.jpg?v=1791556070",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_1219.jpg?v=1791556070",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_1220.jpg?v=1791556070"
+      ],
+      "path": "products/monal-dhanak-st-2p-18-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:31+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-02",
+      "id": "15590775816563-67066445070707",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 2",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/129f766e-0bcc-449d-a51f-e749a993952d.png?v=1791580854",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/129f766e-0bcc-449d-a51f-e749a993952d.png?v=1791580854"
+      ],
+      "path": "products/monal-dhanak-st-2p-02-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:22+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-03",
+      "id": "15590775849331-67066445103475",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 3",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9614bfb8-f1c7-4f27-9a53-2ea8a9ab8073.png?v=1791580803",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9614bfb8-f1c7-4f27-9a53-2ea8a9ab8073.png?v=1791580803"
+      ],
+      "path": "products/monal-dhanak-st-2p-03-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:22+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-04",
+      "id": "15590777454963-67066454770035",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 4",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/68b9d755-0c4d-470e-a95b-0b074e11277e.png?v=1791579357",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/68b9d755-0c4d-470e-a95b-0b074e11277e.png?v=1791579357"
+      ],
+      "path": "products/monal-dhanak-st-2p-04-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:23:22+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-05",
+      "id": "15590775914867-67066445267315",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 5",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1179.jpg?v=1791577240",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1179.jpg?v=1791577240",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1193.jpg?v=1791577239"
+      ],
+      "path": "products/monal-dhanak-st-2p-05-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:23+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-06",
+      "id": "15590775882099-67066445234547",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 6",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/939E2A53-6A8E-4408-A11A-93BB366D9D81.jpg?v=1791580124",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/939E2A53-6A8E-4408-A11A-93BB366D9D81.jpg?v=1791580124",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/DF380600-527D-4BCF-B8FF-457547D48B3A.jpg?v=1791580123"
+      ],
+      "path": "products/monal-dhanak-st-2p-06-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:23+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-08",
+      "id": "15590775980403-67066445365619",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 8",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1175_76de18a5-e0cf-47d7-9db8-555f3142c356.jpg?v=1791577581",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1175_76de18a5-e0cf-47d7-9db8-555f3142c356.jpg?v=1791577581",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG-1188.jpg?v=1791577581"
+      ],
+      "path": "products/monal-dhanak-st-2p-08-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:25+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MONAL-DHANAK-ST-2P-09",
+      "id": "15590775947635-67066445332851",
+      "name": "Monal Digital Printed Dhanak Shirt Trouser 2PC — 9",
+      "productName": "Monal Digital Printed Dhanak Shirt Trouser 2PC",
+      "brand": "Monal",
+      "sourceBrand": "Monal",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/07738934-805f-4f2a-8a5c-bd8f6e5803d5.png?v=1791580406",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/07738934-805f-4f2a-8a5c-bd8f6e5803d5.png?v=1791580406"
+      ],
+      "path": "products/monal-dhanak-st-2p-09-monal-digital-printed-dhanak-shirt-trouser-2pc/",
+      "firstSeenAt": "2026-10-08T12:22:25+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -40337,6 +41757,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "RIJJA-PRN-KHD-V3-3P-02",
+      "id": "15563229528435-64720065134963",
+      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 2",
+      "productName": "Rijja By Murashe Digital Printed Khaddar 3PC",
+      "brand": "Murashe",
+      "sourceBrand": "Murashe",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3295,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0506.jpg?v=1790171719",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0506.jpg?v=1790171719",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0507.jpg?v=1790171719"
+      ],
+      "path": "products/rijja-prn-khd-v3-3p-02-rijja-by-murashe-digital-printed-khaddar-3pc/",
+      "firstSeenAt": "2026-09-23T12:11:36+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "RIJJA-PRN-KHD-V3-3P-03",
       "id": "15563229495667-64720065102195",
       "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 3",
@@ -40444,6 +41886,28 @@
       "firstSeenAt": "2026-09-23T12:11:30+05:00",
       "lastSeenAt": "2026-10-09T23:23:06+05:00",
       "removedAt": "2026-10-10T05:57:06.680Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "RIJJA-PRN-KHD-V2-3P-06",
+      "id": "15563229299059-64720064381299",
+      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 6",
+      "productName": "Rijja By Murashe Digital Printed Khaddar 3PC",
+      "brand": "Murashe",
+      "sourceBrand": "Murashe",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3295,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0502.jpg?v=1790170858",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0502.jpg?v=1790170858",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/IMG_0503.jpg?v=1790170858"
+      ],
+      "path": "products/rijja-prn-khd-v2-3p-06-rijja-by-murashe-digital-printed-khaddar-3pc/",
+      "firstSeenAt": "2026-09-23T12:11:32+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -41834,6 +43298,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "B&V-NAQSH-JAC-VISC-3P-HM-154",
+      "id": "15501297484147-63978495345011",
+      "name": "Bloom & Vogue By Naqsh Digital Printed Self Jacquard Viscose 3PC — 154",
+      "productName": "Bloom & Vogue By Naqsh Digital Printed Self Jacquard Viscose 3PC",
+      "brand": "Naqsh",
+      "sourceBrand": "Naqsh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 4400,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-19at4.14.34PM_5.jpg?v=1787140873",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-08-19at4.14.34PM_5.jpg?v=1787140873",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/154_1.jpg?v=1787843784",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/154_2.jpg?v=1787843784",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/154_3.jpg?v=1787843784"
+      ],
+      "path": "products/b-and-v-naqsh-jac-visc-3p-hm-154-bloom-and-vogue-by-naqsh-digital-printed-self-jacquard-viscose-3pc/",
+      "firstSeenAt": "2026-08-18T19:37:34+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "B&V-NAQSH-JAC-VISC-3P-HM-163",
       "id": "15501297942899-63978495803763",
       "name": "Bloom & Vogue By Naqsh Digital Printed Self Jacquard Viscose 3PC — 163",
@@ -41877,6 +43365,28 @@
       "firstSeenAt": "2026-08-18T20:00:14+05:00",
       "lastSeenAt": "2026-10-06T11:25:48+05:00",
       "removedAt": "2026-10-06T18:24:58.272Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZYRAH-NAQSH-VISC-3P-HM-188",
+      "id": "15501313016179-63978543022451",
+      "name": "Zyrah By Naqsh Digital Printed Filament Viscose 3PC — 188",
+      "productName": "Zyrah By Naqsh Digital Printed Filament Viscose 3PC",
+      "brand": "Naqsh",
+      "sourceBrand": "Naqsh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 5400,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/188_2.png?v=1787832416",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/188_2.png?v=1787832416",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/188_1.png?v=1787832414"
+      ],
+      "path": "products/zyrah-naqsh-visc-3p-hm-188-zyrah-by-naqsh-digital-printed-filament-viscose-3pc/",
+      "firstSeenAt": "2026-08-18T20:00:13+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -43084,6 +44594,30 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "OMRE-KRNADI-V102-3P-04",
+      "id": "15545710412147-64649820143987",
+      "name": "Omre Emb Karandi 3PC — 4",
+      "productName": "Omre Emb Karandi 3PC",
+      "brand": "Omre",
+      "sourceBrand": "Omre",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6700,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/18_a767a0b5-7b2f-446f-a5aa-687b1e44ac76.jpg?v=1789716705",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/18_a767a0b5-7b2f-446f-a5aa-687b1e44ac76.jpg?v=1789716705",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_86c842fa-c3d5-46fd-8505-448384cfff14.jpg?v=1789716706",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_a156d7ab-9959-4ef4-96d7-7c824b8b47b5.jpg?v=1789716705",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/19_24ddf4ce-1796-4c9f-bade-ba86e8d775ff.jpg?v=1789716705"
+      ],
+      "path": "products/omre-krnadi-v102-3p-04-omre-emb-karandi-3pc/",
+      "firstSeenAt": "2026-09-16T10:18:24+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "OMRE-KRNADI-V102-3P-08",
       "id": "15545710575987-64649820537203",
       "name": "Omre Emb Karandi 3PC — 8",
@@ -43105,6 +44639,30 @@
       "firstSeenAt": "2026-09-16T10:18:26+05:00",
       "lastSeenAt": "2026-10-06T01:34:48+05:00",
       "removedAt": "2026-10-06T06:25:51.982Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "OMRE-KRNADI-V102-3P-09",
+      "id": "15545710543219-64649820504435",
+      "name": "Omre Emb Karandi 3PC — 9",
+      "productName": "Omre Emb Karandi 3PC",
+      "brand": "Omre",
+      "sourceBrand": "Omre",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6700,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/39_9521acff-16ab-4871-8dde-11df24269971.jpg?v=1789716888",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/39_9521acff-16ab-4871-8dde-11df24269971.jpg?v=1789716888",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/36_539e5654-2de5-455d-9615-f897b863fdb0.jpg?v=1789716888",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/37_062dc53e-1125-419f-af20-96e96364480d.jpg?v=1789716888",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/38_c0b325c4-8eac-48cf-b3fc-409b19dfb9b2.jpg?v=1789716888"
+      ],
+      "path": "products/omre-krnadi-v102-3p-09-omre-emb-karandi-3pc/",
+      "firstSeenAt": "2026-09-16T10:18:26+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -47096,6 +48654,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "REEMSE-BDLWN-V4-3P-01",
+      "id": "15593007579507-67079071596915",
+      "name": "Reemse Digital Printed Banadora Lawn 3PC — 1",
+      "productName": "Reemse Digital Printed Banadora Lawn 3PC",
+      "brand": "Reemse",
+      "sourceBrand": "Reemse",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0001-Copy.jpg?v=1791564457",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0001-Copy.jpg?v=1791564457",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0001.jpg?v=1791564457"
+      ],
+      "path": "products/reemse-bdlwn-v4-3p-01-reemse-digital-printed-banadora-lawn-3pc/",
+      "firstSeenAt": "2026-10-09T18:06:08+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "REEMSE-BDLWN-V4-3P-10",
       "id": "15593008005491-67079072809331",
       "name": "Reemse Digital Printed Banadora Lawn 3PC — 10",
@@ -47142,6 +48722,72 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "REEMSE-BDLWN-V4-3P-02",
+      "id": "15593013903731-67079091749235",
+      "name": "Reemse Digital Printed Banadora Lawn 3PC — 2",
+      "productName": "Reemse Digital Printed Banadora Lawn 3PC",
+      "brand": "Reemse",
+      "sourceBrand": "Reemse",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0002-Copy.jpg?v=1791564478",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0002-Copy.jpg?v=1791564478",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0002.jpg?v=1791565714"
+      ],
+      "path": "products/reemse-bdlwn-v4-3p-02-reemse-digital-printed-banadora-lawn-3pc/",
+      "firstSeenAt": "2026-10-09T18:07:46+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "REEMSE-BDLWN-V4-3P-03",
+      "id": "15593007612275-67079071629683",
+      "name": "Reemse Digital Printed Banadora Lawn 3PC — 3",
+      "productName": "Reemse Digital Printed Banadora Lawn 3PC",
+      "brand": "Reemse",
+      "sourceBrand": "Reemse",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0003-Copy.jpg?v=1791564492",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0003-Copy.jpg?v=1791564492",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0003.jpg?v=1791565676"
+      ],
+      "path": "products/reemse-bdlwn-v4-3p-03-reemse-digital-printed-banadora-lawn-3pc/",
+      "firstSeenAt": "2026-10-09T18:06:08+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "REEMSE-BDLWN-V4-3P-06",
+      "id": "15593007710579-67079071760755",
+      "name": "Reemse Digital Printed Banadora Lawn 3PC — 6",
+      "productName": "Reemse Digital Printed Banadora Lawn 3PC",
+      "brand": "Reemse",
+      "sourceBrand": "Reemse",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0006-Copy.jpg?v=1791564524",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0006-Copy.jpg?v=1791564524",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0006.jpg?v=1791565370"
+      ],
+      "path": "products/reemse-bdlwn-v4-3p-06-reemse-digital-printed-banadora-lawn-3pc/",
+      "firstSeenAt": "2026-10-09T18:06:09+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "REEMSE-BDLWN-V2-3P-08",
       "id": "15386681704819-62911365611891",
       "name": "Reemse Digital Printed Banadora Lawn 3PC — 8",
@@ -47163,6 +48809,28 @@
       "firstSeenAt": "2026-07-31T22:26:16+05:00",
       "lastSeenAt": "2026-08-06T15:17:18+05:00",
       "removedAt": "2026-08-31T20:34:11.601Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "REEMSE-BDLWN-V4-3P-08",
+      "id": "15593007939955-67079072022899",
+      "name": "Reemse Digital Printed Banadora Lawn 3PC — 8",
+      "productName": "Reemse Digital Printed Banadora Lawn 3PC",
+      "brand": "Reemse",
+      "sourceBrand": "Reemse",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2990,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0008-Copy.jpg?v=1791564600",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0008-Copy.jpg?v=1791564600",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/volume4Reemse_page-0008.jpg?v=1791565291"
+      ],
+      "path": "products/reemse-bdlwn-v4-3p-08-reemse-digital-printed-banadora-lawn-3pc/",
+      "firstSeenAt": "2026-10-09T18:06:11+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -47470,6 +49138,27 @@
       "firstSeenAt": "2026-09-16T17:42:45+05:00",
       "lastSeenAt": "2026-10-06T11:25:48+05:00",
       "removedAt": "2026-10-06T18:24:58.272Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "REGALIA-KHD-V2-3P-HM-05",
+      "id": "15569247109491-66987361173875",
+      "name": "Regalia Digital Printed Khaddar 3PC — 5",
+      "productName": "Regalia Digital Printed Khaddar 3PC",
+      "brand": "Regalia",
+      "sourceBrand": "Regalia",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3395,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-09-28at10.10.50PM_1.jpg?v=1790679372",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/WhatsAppImage2026-09-28at10.10.50PM_1.jpg?v=1790679372"
+      ],
+      "path": "products/regalia-khd-v2-3p-hm-05-regalia-digital-printed-khaddar-3pc/",
+      "firstSeenAt": "2026-09-26T10:22:43+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -47932,6 +49621,50 @@
       "firstSeenAt": "2026-08-18T21:13:45+05:00",
       "lastSeenAt": "2026-10-08T23:52:26+05:00",
       "removedAt": "2026-10-09T06:14:04.385Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "SAFINA-VISC-V1-3P-HM-22",
+      "id": "15501429539187-63978789962099",
+      "name": "Safina Digital Printed Viscose 3PC — 22",
+      "productName": "Safina Digital Printed Viscose 3PC",
+      "brand": "Safina",
+      "sourceBrand": "Safina",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3495,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/22_2_ef48e07f-e745-457b-9cec-ff7bb6ff4697.jpg?v=1787231637",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/22_2_ef48e07f-e745-457b-9cec-ff7bb6ff4697.jpg?v=1787231637",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/22_1_fe3487f4-888a-4aff-8a1c-ca80944b8a0d.jpg?v=1787231637"
+      ],
+      "path": "products/safina-visc-v1-3p-hm-22-safina-digital-printed-viscose-3pc/",
+      "firstSeenAt": "2026-08-18T21:13:53+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "SAFINA-VISC-V1-3P-HM-23",
+      "id": "15501429506419-63978789929331",
+      "name": "Safina Digital Printed Viscose 3PC — 23",
+      "productName": "Safina Digital Printed Viscose 3PC",
+      "brand": "Safina",
+      "sourceBrand": "Safina",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3495,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/23_2_29f8462f-4fdd-4b50-b766-6ab6b843d794.jpg?v=1787231612",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/23_2_29f8462f-4fdd-4b50-b766-6ab6b843d794.jpg?v=1787231612",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/23_1_195ffbed-3f96-4a93-b4ce-6fd1e2305ebd.jpg?v=1787231611"
+      ],
+      "path": "products/safina-visc-v1-3p-hm-23-safina-digital-printed-viscose-3pc/",
+      "firstSeenAt": "2026-08-18T21:13:52+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -49326,9 +51059,9 @@
       "reason": "supplier-removed"
     },
     {
-      "code": "SAPHIRE-JAQKRND-V3-3P-AC-02",
-      "id": "15586306523507-67054740668787",
-      "name": "Sapphire Jacquard Karandi 3PC — 2",
+      "code": "SAPHIRE-JAQKRND-V3-3P-AC-04",
+      "id": "15586306621811-67054740767091",
+      "name": "Sapphire Jacquard Karandi 3PC — 4",
       "productName": "Sapphire Jacquard Karandi 3PC",
       "brand": "Sapphire",
       "sourceBrand": "Sapphire",
@@ -49336,15 +51069,15 @@
       "pieceType": "3 Piece",
       "pricingClass": "embroidered",
       "price": 5750,
-      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/02_2_4f95fa36-723c-4450-98eb-aa29d54c68b4.jpg?v=1791387526",
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_2_ad2cfa61-444c-472e-97f6-9db26049c8ed.jpg?v=1791387634",
       "images": [
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/02_2_4f95fa36-723c-4450-98eb-aa29d54c68b4.jpg?v=1791387526",
-        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/02_1_4d698c23-77d6-444b-8422-b067f74460fe.jpg?v=1791387526"
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_2_ad2cfa61-444c-472e-97f6-9db26049c8ed.jpg?v=1791387634",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/03_1_eb638b7b-4f69-45d2-a368-42b62492ae7a.jpg?v=1791387634"
       ],
-      "path": "products/saphire-jaqkrnd-v3-3p-ac-02-sapphire-jacquard-karandi-3pc/",
-      "firstSeenAt": "2026-10-07T16:00:18+05:00",
-      "lastSeenAt": "2026-10-09T11:14:00+05:00",
-      "removedAt": "2026-10-09T18:23:10.756Z",
+      "path": "products/saphire-jaqkrnd-v3-3p-ac-04-sapphire-jacquard-karandi-3pc/",
+      "firstSeenAt": "2026-10-07T16:00:22+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -49935,6 +51668,27 @@
       "firstSeenAt": "2026-09-29T11:13:19+05:00",
       "lastSeenAt": "2026-10-09T23:23:06+05:00",
       "removedAt": "2026-10-10T05:57:06.681Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "SAYA-W26-KHD-V1-3P-LDS-09",
+      "id": "15574360588659-67008158040435",
+      "name": "Saya Premium Printed Khaddar 3PC — 26278-P04A",
+      "productName": "Saya Premium Printed Khaddar 3PC",
+      "brand": "Saya",
+      "sourceBrand": "Saya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3495,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_7ae35602-ec4e-4240-a94c-328148977a18.jpg?v=1790862930",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/5_7ae35602-ec4e-4240-a94c-328148977a18.jpg?v=1790862930"
+      ],
+      "path": "products/saya-w26-khd-v1-3p-lds-09-saya-premium-printed-khaddar-3pc/",
+      "firstSeenAt": "2026-09-29T11:13:23+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -50987,6 +52741,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MAIRA-SHN-CAMBRIC-V292-3P-08",
+      "id": "15584426230131-67044569874803",
+      "name": "Maira By Shanaya Digital Printed Cambric Cotton 3PC — 8",
+      "productName": "Maira By Shanaya Digital Printed Cambric Cotton 3PC",
+      "brand": "Shanaya",
+      "sourceBrand": "Shanaya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3150,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/24_742d3a8f-7f08-49dd-a8d6-4628787f7990.jpg?v=1791463035",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/24_742d3a8f-7f08-49dd-a8d6-4628787f7990.jpg?v=1791463035",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/22_bfc663be-2cdf-4eee-ac6b-5dfd9c2c985e.jpg?v=1791463035",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/23_04edaa09-7117-4dbc-8edd-d0c626851de2.jpg?v=1791463035"
+      ],
+      "path": "products/maira-shn-cambric-v292-3p-08-maira-by-shanaya-digital-printed-cambric-cotton-3pc/",
+      "firstSeenAt": "2026-10-06T12:41:39+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MANAT-SHN-VISC-V291-3P-01",
       "id": "15564796690803-64730776535411",
       "name": "Mannat By Shanaya Digital Printed Stone Linen 3PC — 1",
@@ -51030,6 +52807,29 @@
       "firstSeenAt": "2026-09-24T11:41:55+05:00",
       "lastSeenAt": "2026-10-01T23:26:26+05:00",
       "removedAt": "2026-10-02T05:43:03.139Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MANAT-SHN-VISC-V291-3P-02",
+      "id": "15564796723571-64730776568179",
+      "name": "Mannat By Shanaya Digital Printed Stone Linen 3PC — 2",
+      "productName": "Mannat By Shanaya Digital Printed Stone Linen 3PC",
+      "brand": "Shanaya",
+      "sourceBrand": "Shanaya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/24_de8b8816-2db1-4158-b577-ec13866c0f5a.jpg?v=1790247616",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/24_de8b8816-2db1-4158-b577-ec13866c0f5a.jpg?v=1790247616",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/26_314e7784-28b8-42ac-97b2-dd77eccb9485.jpg?v=1790247616",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/25_987c2dca-ecd9-4aee-b0c4-ad165504c57a.jpg?v=1790247616"
+      ],
+      "path": "products/manat-shn-visc-v291-3p-02-mannat-by-shanaya-digital-printed-stone-linen-3pc/",
+      "firstSeenAt": "2026-09-24T11:41:49+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -51466,6 +53266,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MIRHA-SHN-MARINA-V286-3P-09",
+      "id": "15557460984179-64694377873779",
+      "name": "Mirha By Shanaya Digital Printed Marina Leather 3PC — 9",
+      "productName": "Mirha By Shanaya Digital Printed Marina Leather 3PC",
+      "brand": "Shanaya",
+      "sourceBrand": "Shanaya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3495,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/10_4e912941-fdf4-4644-b573-993e25722f05.jpg?v=1790164372",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/10_4e912941-fdf4-4644-b573-993e25722f05.jpg?v=1790164372",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11_d85aa438-7cbd-4325-b23e-e23a7ede944c.jpg?v=1790164372"
+      ],
+      "path": "products/mirha-shn-marina-v286-3p-09-mirha-by-shanaya-digital-printed-marina-leather-3pc/",
+      "firstSeenAt": "2026-09-21T12:18:17+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MUSHQ-SHN-LIN-V285-3P-01",
       "id": "15559826407795-64703094784371",
       "name": "Mushq By Shanaya Digital Printed Linen 3PC — 1",
@@ -51578,6 +53400,29 @@
       "firstSeenAt": "2026-09-22T11:44:33+05:00",
       "lastSeenAt": "2026-10-06T01:34:46+05:00",
       "removedAt": "2026-10-06T06:25:51.982Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MUSHQ-SHN-LIN-V285-3P-05",
+      "id": "15559826669939-64703094980979",
+      "name": "Mushq By Shanaya Digital Printed Linen 3PC — 5",
+      "productName": "Mushq By Shanaya Digital Printed Linen 3PC",
+      "brand": "Shanaya",
+      "sourceBrand": "Shanaya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img362.jpg?v=1790075128",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img362.jpg?v=1790075128",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img371.jpg?v=1790075129",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/img367.jpg?v=1790075128"
+      ],
+      "path": "products/mushq-shn-lin-v285-3p-05-mushq-by-shanaya-digital-printed-linen-3pc/",
+      "firstSeenAt": "2026-09-22T11:44:33+05:00",
+      "lastSeenAt": "2026-10-10T10:57:00+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -53429,6 +55274,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "SEROSIA-TWKL-VISC-3P-5778",
+      "id": "15560223031667-64705180270963",
+      "name": "Serosia By Tawakkal Viscose Grip 3PC — 5778",
+      "productName": "Serosia By Tawakkal Viscose Grip 3PC",
+      "brand": "Tawakkal",
+      "sourceBrand": "Tawakkal",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 8290,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_e6acd79d-79e8-4104-be49-8e83b6746fef.jpg?v=1790176623",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/4_e6acd79d-79e8-4104-be49-8e83b6746fef.jpg?v=1790176623",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/2_05b7ede5-ff6d-4c66-b19a-72d39d2272fb.jpg?v=1790176623",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/3_028abf28-f7ce-4492-a2fd-3c88616f230c.jpg?v=1790176623"
+      ],
+      "path": "products/serosia-twkl-visc-3p-5778-serosia-by-tawakkal-viscose-grip-3pc/",
+      "firstSeenAt": "2026-09-23T22:05:41+05:00",
+      "lastSeenAt": "2026-10-10T10:57:01+05:00",
+      "removedAt": "2026-10-10T17:21:44.025Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "SEROSIA-TWKL-VISC-3P-5779",
       "id": "15560223293811-64705181417843",
       "name": "Serosia By Tawakkal Viscose Grip 3PC — 5779",
@@ -53833,6 +55701,27 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "RAQS-VISC-V1-3P-UNEQ-14132",
+      "id": "15527664583027-64519030505843",
+      "name": "Raqs By Uneq Digital Printed Cotton Viscose 3PC — 14132",
+      "productName": "Raqs By Uneq Digital Printed Cotton Viscose 3PC",
+      "brand": "Uneq",
+      "sourceBrand": "Uneq",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3495,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_esoqodesoqodesoq.jpg?v=1788258178",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/Gemini_Generated_Image_esoqodesoqodesoq.jpg?v=1788258178"
+      ],
+      "path": "products/raqs-visc-v1-3p-uneq-14132-raqs-by-uneq-digital-printed-cotton-viscose-3pc/",
+      "firstSeenAt": "2026-09-01T11:36:01+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "RAQS-VISC-V1-3P-UNEQ-14341",
       "id": "15527664615795-64519030538611",
       "name": "Raqs By Uneq Digital Printed Cotton Viscose 3PC — 14341",
@@ -53897,6 +55786,28 @@
       "firstSeenAt": "2026-10-06T11:02:14+05:00",
       "lastSeenAt": "2026-10-09T23:23:06+05:00",
       "removedAt": "2026-10-10T05:57:06.681Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "RAQS-UNEQ-KHD-V2-3P-150197",
+      "id": "15584242368883-67043713679731",
+      "name": "Raqs By Uneq Digital Printed Slub Khaddar 3PC — 150197",
+      "productName": "Raqs By Uneq Digital Printed Slub Khaddar 3PC",
+      "brand": "Uneq",
+      "sourceBrand": "Uneq",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3295,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_fa77182d-10a9-4b07-8b75-ab8f01f4e94b.jpg?v=1791296090",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/16_fa77182d-10a9-4b07-8b75-ab8f01f4e94b.jpg?v=1791296090",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_3ab2cb3f-4544-47eb-965f-2186a65ae352.jpg?v=1791296090"
+      ],
+      "path": "products/raqs-uneq-khd-v2-3p-150197-raqs-by-uneq-digital-printed-slub-khaddar-3pc/",
+      "firstSeenAt": "2026-10-06T11:02:09+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -55222,6 +57133,32 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ZESH-PRN-KHD-V3-3P-HM-04",
+      "id": "15539295977843-64628807532915",
+      "name": "Zesh Digital Printed Khaddar 3PC — 4",
+      "productName": "Zesh Digital Printed Khaddar 3PC",
+      "brand": "Zesh",
+      "sourceBrand": "Zesh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3350,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/19_79ce4670-b430-44e3-a1af-5d210b063112.jpg?v=1789547648",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/19_79ce4670-b430-44e3-a1af-5d210b063112.jpg?v=1789547648",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/20_f48f0213-6aa7-48b4-8d01-53e6f77f59db.jpg?v=1789547648",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/21_a19789b8-e68c-4e40-ad65-37d06f898b6f.jpg?v=1789547648",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/22_e5c86d46-b329-43ed-8acd-7e9bf911855c.jpg?v=1789547648",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_2_246d2a0d-57d1-43fc-933c-43ac2a4bf589.jpg?v=1789125449",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/04_1_49556993-b196-46fb-9730-19f9ee7221d5.jpg?v=1789125449"
+      ],
+      "path": "products/zesh-prn-khd-v3-3p-hm-04-zesh-digital-printed-khaddar-3pc/",
+      "firstSeenAt": "2026-09-10T15:19:50+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ZESH-PRN-KHD-V3-3P-HM-09",
       "id": "15539296174451-64628807729523",
       "name": "Zesh Digital Printed Khaddar 3PC — 9",
@@ -55311,6 +57248,28 @@
       "firstSeenAt": "2026-09-16T18:46:00+05:00",
       "lastSeenAt": "2026-09-16T18:46:00+05:00",
       "removedAt": "2026-09-16T14:21:10.375Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZESH-PRNVISC-V1-3P-HM-01",
+      "id": "15540246348147-64631847321971",
+      "name": "Zesh Digital Printed Linen Viscose 3PC — 1",
+      "productName": "Zesh Digital Printed Linen Viscose 3PC",
+      "brand": "Zesh",
+      "sourceBrand": "Zesh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3350,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_2_b5610148-1d33-4396-a97c-15d8353f5b1e.jpg?v=1789130873",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_2_b5610148-1d33-4396-a97c-15d8353f5b1e.jpg?v=1789130873",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/01_1_c29bf746-b711-493d-8fcf-e85b5ac83a37.jpg?v=1789130873"
+      ],
+      "path": "products/zesh-prnvisc-v1-3p-hm-01-zesh-digital-printed-linen-viscose-3pc/",
+      "firstSeenAt": "2026-09-11T12:47:32+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     },
     {
@@ -55424,6 +57383,28 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "ZESH-PRNVISC-V1-3P-HM-17",
+      "id": "15540246905203-64631847879027",
+      "name": "Zesh Digital Printed Linen Viscose 3PC — 17",
+      "productName": "Zesh Digital Printed Linen Viscose 3PC",
+      "brand": "Zesh",
+      "sourceBrand": "Zesh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3350,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_2_de370f4d-2fbc-46a7-88c3-426298fbf29d.jpg?v=1789130592",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_2_de370f4d-2fbc-46a7-88c3-426298fbf29d.jpg?v=1789130592",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/17_1_295ee425-dc16-4dec-b060-3066e33e1efe.jpg?v=1789130592"
+      ],
+      "path": "products/zesh-prnvisc-v1-3p-hm-17-zesh-digital-printed-linen-viscose-3pc/",
+      "firstSeenAt": "2026-09-11T12:47:45+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "ZESH-PRNVISC-V1-3P-HM-04",
       "id": "15540246511987-64631847485811",
       "name": "Zesh Digital Printed Linen Viscose 3PC — 4",
@@ -55490,6 +57471,84 @@
       "firstSeenAt": "2026-09-25T17:42:23+05:00",
       "lastSeenAt": "2026-10-07T11:04:36+05:00",
       "removedAt": "2026-10-07T18:57:55.132Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZESH-VDS-VISC-V1-3P-HM-05",
+      "id": "15539189350771-64628310638963",
+      "name": "Zesh Printed Velvet Dora Viscose 3PC — 5",
+      "productName": "Zesh Printed Velvet Dora Viscose 3PC",
+      "brand": "Zesh",
+      "sourceBrand": "Zesh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/28_f1c8835d-cd36-4cf4-afac-8d7b994653b7.jpg?v=1789566354",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/28_f1c8835d-cd36-4cf4-afac-8d7b994653b7.jpg?v=1789566354",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/29_8d9933db-1480-49bb-92f5-759201f35d07.jpg?v=1789566354",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/30_746efc89-42fa-443f-9a92-ac2ac30940b4.jpg?v=1789566354",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/31_b6bcc3d8-3118-4578-9c50-2a0fb27a6637.jpg?v=1789566354",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/05_2_cb6ec05b-8a6b-4074-b48b-ee0f90b73edc.jpg?v=1789112684",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/05_1_998d3770-4d19-4989-9bf1-7c7d39f5d955.jpg?v=1789112684"
+      ],
+      "path": "products/zesh-vds-visc-v1-3p-hm-05-zesh-printed-velvet-dora-viscose-3pc/",
+      "firstSeenAt": "2026-09-10T12:36:04+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZESH-VDS-VISC-V1-3P-HM-06",
+      "id": "15539189481843-64628310770035",
+      "name": "Zesh Printed Velvet Dora Viscose 3PC — 6",
+      "productName": "Zesh Printed Velvet Dora Viscose 3PC",
+      "brand": "Zesh",
+      "sourceBrand": "Zesh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/12_acb40d9e-8b07-41ce-b54f-06a86c2e419f.jpg?v=1789566169",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/12_acb40d9e-8b07-41ce-b54f-06a86c2e419f.jpg?v=1789566169",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/9_d5608323-d069-4b3a-bf06-d64b5d04acfa.jpg?v=1789566169",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/10_96041367-b718-4813-863f-edca394940ec.jpg?v=1789566169",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/11_db784e9b-b40b-40c4-849e-bc944cbeb2f3.jpg?v=1789566169",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/06_2_18854966-bc4a-4c42-a870-f680233135f8.jpg?v=1789112582",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/06_1_f868eb40-3da7-4a28-b758-75b60e6480bf.jpg?v=1789112582"
+      ],
+      "path": "products/zesh-vds-visc-v1-3p-hm-06-zesh-printed-velvet-dora-viscose-3pc/",
+      "firstSeenAt": "2026-09-10T12:36:05+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "ZESH-VDS-VISC-V1-3P-HM-07",
+      "id": "15539189580147-64628310868339",
+      "name": "Zesh Printed Velvet Dora Viscose 3PC — 7",
+      "productName": "Zesh Printed Velvet Dora Viscose 3PC",
+      "brand": "Zesh",
+      "sourceBrand": "Zesh",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 3450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/43_1d366007-caf0-4f94-8c8a-c5c9615d8845.jpg?v=1789566726",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/43_1d366007-caf0-4f94-8c8a-c5c9615d8845.jpg?v=1789566726",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/41_c5a7508b-f7d2-4f1b-81bb-ac7f58b833ef.jpg?v=1789566726",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/44_79b71fc6-0eb6-4e51-892e-bb9bc2a5e7e6.jpg?v=1789566726",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/42_287650e0-d4d9-4679-a830-97070431a056.jpg?v=1789566726",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/07_2_fa40e93a-707f-4c2c-84c1-3d2025836a15.jpg?v=1789112510",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/07_1_ef17c9b2-b36e-4f1f-b861-f4789e115f85.jpg?v=1789112510"
+      ],
+      "path": "products/zesh-vds-visc-v1-3p-hm-07-zesh-printed-velvet-dora-viscose-3pc/",
+      "firstSeenAt": "2026-09-10T12:36:06+05:00",
+      "lastSeenAt": "2026-10-10T10:57:02+05:00",
+      "removedAt": "2026-10-10T17:21:44.026Z",
       "reason": "supplier-removed"
     }
   ]

@@ -1,31 +1,29 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-10T05:57:15.884Z",
+  "generatedAt": "2026-10-10T17:21:55.622Z",
   "summary": {
-    "products": 1213,
-    "removedProducts": 2455,
-    "brands": 77,
-    "collectionPages": 88,
-    "sitemapUrls": 1304,
-    "metaFeedRows": 1204,
-    "metadataPages": 1213,
-    "internalHtmlFiles": 3812,
+    "products": 1147,
+    "removedProducts": 2548,
+    "brands": 75,
+    "collectionPages": 84,
+    "sitemapUrls": 1234,
+    "metaFeedRows": 1138,
+    "metadataPages": 1147,
+    "internalHtmlFiles": 3839,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "69 products currently lack retained supplier description text."
+    "58 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
-      "FLEUR-ALMRH-LWN-CT-3P-09",
       "BT-CO-ORD-KHD-2P-DD-01",
       "BT-CO-ORD-KHD-2P-DD-11",
       "BT-CO-ORD-KHD-2P-DD-12",
-      "BT-CO-ORD-KHD-2P-DD-13",
       "BT-CO-ORD-KHD-2P-DD-14",
       "BT-CO-ORD-KHD-2P-DD-15",
       "BT-CO-ORD-KHD-2P-DD-19",
@@ -45,7 +43,9 @@
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
       "AIRA-ORG-PURP-1547",
-      "AIRA-ORG-SKY-1547"
+      "AIRA-ORG-SKY-1547",
+      "DASTAK-DL-LWN-3P-FB-323",
+      "DASTAK-DL-LWN-3P-FB-324"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
