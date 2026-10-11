@@ -1,0 +1,123 @@
+name: Temporary fast Mixkit official audio collector
+
+on:
+  push:
+    branches: [music-library-bootstrap]
+    paths: [".github/workflows/music-library-mixkit-fast.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Install browser
+        run: |
+          python3 -m pip install --quiet playwright mutagen
+          python3 -m playwright install --with-deps chromium >/dev/null
+
+      - name: Collect official Mixkit audio sources and metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mixkit-fast/audio
+          cat > /tmp/mixkit.py <<'PY'
+          import asyncio,csv,json,re,urllib.request,os
+          from pathlib import Path
+          from playwright.async_api import async_playwright
+          from mutagen.mp3 import MP3
+
+          OUT=Path('mixkit-fast'); AUD=OUT/'audio'; AUD.mkdir(parents=True,exist_ok=True)
+          categories=[
+            ('elegant','https://mixkit.co/free-stock-music/mood/elegant/'),
+            ('house-fashion','https://mixkit.co/free-stock-music/house/'),
+            ('funk-fashion','https://mixkit.co/free-stock-music/funk/'),
+            ('edm-fashion','https://mixkit.co/free-stock-music/edm/'),
+            ('pop-lifestyle','https://mixkit.co/free-stock-music/pop/'),
+            ('ambient','https://mixkit.co/free-stock-music/ambient/'),
+            ('jazz','https://mixkit.co/free-stock-music/jazz/'),
+            ('lounge','https://mixkit.co/free-stock-music/lounge/'),
+            ('calm','https://mixkit.co/free-stock-music/mood/calm/'),
+          ]
+          headers={'User-Agent':'Mozilla/5.0 (compatible; AlHumaMusicLibrary/1.0)'}
+          candidates=[]; seen={}
+
+          def parse_card(t):
+            lines=[x.strip() for x in t.splitlines() if x.strip() and x.strip()!='Download Free Music']
+            title=artist=''
+            for j,x in enumerate(lines):
+              if x.lower().startswith('by '):
+                artist=x[3:].strip(); title=lines[j-1] if j else ''
+                break
+            return title,artist,' | '.join(lines[:20])
+
+          async def main():
+            async with async_playwright() as p:
+              browser=await p.chromium.launch(headless=True)
+              ctx=await browser.new_context(user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/154 Safari/537.36')
+              for bucket,url in categories:
+                page=await ctx.new_page()
+                await page.goto(url,wait_until='domcontentloaded',timeout=60000)
+                await page.wait_for_timeout(1800)
+                audios=page.locator('audio[src^="https://assets.mixkit.co/music/"]')
+                c=await audios.count(); print(bucket,'audio elements',c)
+                for i in range(c):
+                  a=audios.nth(i); src=await a.get_attribute('src')
+                  if not src: continue
+                  mid=re.search(r'/music/(\d+)/(\d+)\.mp3',src)
+                  if not mid or mid.group(1)!=mid.group(2): continue
+                  track_id=mid.group(1)
+                  try:
+                    card=await a.evaluate('''el=>{let p=el;for(let i=0;i<12&&p;i++,p=p.parentElement){let t=(p.innerText||'').trim();if(t.includes('Download Free Music')&&t.toLowerCase().includes('by ')&&t.length<1800)return t;}return '';}''')
+                  except: card=''
+                  title,artist,card_summary=parse_card(card)
+                  if track_id not in seen:
+                    seen[track_id]={'source_track_id':track_id,'source':'Mixkit','title':title,'artist':artist,'style_buckets':[bucket],'source_pages':[url],'audio_url':src,'license':'Mixkit Free License','commercial_social_use':'PASS_SOURCE_POLICY','attribution_required':'No','source_card_text':card_summary}
+                  else:
+                    if bucket not in seen[track_id]['style_buckets']: seen[track_id]['style_buckets'].append(bucket)
+                    if url not in seen[track_id]['source_pages']: seen[track_id]['source_pages'].append(url)
+                  if len(seen)>=60: break
+                await page.close()
+              await browser.close()
+          asyncio.run(main())
+
+          # Score/select a broad pool before later acoustic distinctness screening.
+          pool=list(seen.values())
+          # Prefer entries with a parsed title; then maintain discovery order.
+          pool.sort(key=lambda x:(0 if x['title'] else 1,int(x['source_track_id'])))
+          # Download up to 48 unique official files.
+          for n,r in enumerate(pool[:48],1):
+            title=r['title'] or f"Mixkit Track {r['source_track_id']}"
+            safe=re.sub(r'[^A-Za-z0-9]+','_',title).strip('_')[:90]
+            artist_safe=re.sub(r'[^A-Za-z0-9]+','_',r['artist']).strip('_')[:60]
+            fn=f"MXC-{n:02d}_{safe}"+(f"_{artist_safe}" if artist_safe else '')+'.mp3'
+            path=AUD/fn
+            req=urllib.request.Request(r['audio_url'],headers=headers)
+            with urllib.request.urlopen(req,timeout=60) as inp,open(path,'wb') as out:
+              while True:
+                b=inp.read(1024*1024)
+                if not b:break
+                out.write(b)
+            m=MP3(path)
+            r.update({'candidate_id':f'MXC-{n:02d}','file':str(path),'bytes':path.stat().st_size,'duration_sec':round(m.info.length,3),'bitrate':m.info.bitrate,'integrity_qc':'PASS' if m.info.length>=20 and path.stat().st_size>50000 else 'FAIL','style_buckets':'|'.join(r['style_buckets']),'source_pages':'|'.join(r['source_pages'])})
+            candidates.append(r)
+            print('saved',r['candidate_id'],r['source_track_id'],title,r['artist'],r['duration_sec'])
+
+          fields=sorted({k for r in candidates for k in r})
+          with open(OUT/'mixkit_manifest.csv','w',newline='',encoding='utf-8') as f:
+            w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(candidates)
+          with open(OUT/'mixkit_manifest.json','w',encoding='utf-8') as f:json.dump(candidates,f,indent=2,ensure_ascii=False)
+          print('TOTAL UNIQUE DISCOVERED',len(seen),'DOWNLOADED',len(candidates))
+          PY
+          python3 /tmp/mixkit.py
+          find mixkit-fast -type f -printf '%p %s bytes\n' | sort
+
+      - name: Upload Mixkit pool
+        uses: actions/upload-artifact@v4
+        with:
+          name: alhuma-mixkit-fast-pool
+          path: mixkit-fast/
+          if-no-files-found: error
+          retention-days: 1
