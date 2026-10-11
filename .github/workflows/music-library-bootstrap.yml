@@ -1,0 +1,160 @@
+name: Temporary Al Huma music candidate downloader
+
+on:
+  push:
+    branches:
+      - music-library-bootstrap
+    paths:
+      - ".github/workflows/music-library-bootstrap.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Collect verified-source audio candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p music-candidates/mixkit music-candidates/fma-cc0
+          python3 - <<'PY'
+          import csv, html, json, os, re, subprocess, sys, time
+          from pathlib import Path
+          from urllib.parse import urljoin, urlparse
+          import urllib.request
+
+          root = Path('music-candidates')
+          rows = []
+          headers = {'User-Agent':'Mozilla/5.0 (compatible; AlHumaMusicLibrary/1.0)'}
+
+          def fetch_text(url):
+              req=urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return r.read().decode('utf-8','ignore')
+
+          def download(url, path):
+              req=urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req, timeout=60) as r, open(path,'wb') as f:
+                  while True:
+                      b=r.read(1024*1024)
+                      if not b: break
+                      f.write(b)
+              return path.stat().st_size
+
+          # Mixkit: collect directly exposed preview MP3s from several style pages.
+          # Mixkit's own category pages state these tracks are free under the Mixkit License.
+          mixkit_pages = [
+              ('fashion','https://mixkit.co/free-stock-music/tag/fashion/'),
+              ('elegant','https://mixkit.co/free-stock-music/mood/elegant/'),
+              ('lounge','https://mixkit.co/free-stock-music/tag/lounge/'),
+              ('ambient','https://mixkit.co/free-stock-music/tag/ambient/'),
+              ('jazz','https://mixkit.co/free-stock-music/tag/jazz/'),
+              ('glamorous','https://mixkit.co/free-stock-music/mood/glamorous/'),
+              ('calm','https://mixkit.co/free-stock-music/mood/calm/'),
+              ('electronic','https://mixkit.co/free-stock-music/tag/electronic/'),
+          ]
+          seen=set(); mix=[]
+          for bucket,page in mixkit_pages:
+              try:
+                  text=fetch_text(page)
+              except Exception as e:
+                  print('WARN mixkit page',page,e,file=sys.stderr); continue
+              urls=re.findall(r'https://assets\.mixkit\.co/music/preview/mixkit-[A-Za-z0-9._%+\-]+?\.mp3', text)
+              # alternate escaped JSON form
+              urls += [u.replace('\\/','/') for u in re.findall(r'https:\\/\\/assets\.mixkit\.co\\/music\\/preview\\/mixkit-[A-Za-z0-9._%+\-]+?\.mp3', text)]
+              for u in urls:
+                  if u in seen: continue
+                  seen.add(u)
+                  slug=u.rsplit('/',1)[-1].rsplit('.',1)[0]
+                  # strip prefix and numeric asset id for human-readable title hint
+                  hint=re.sub(r'^mixkit-','',slug)
+                  hint=re.sub(r'-\d+$','',hint).replace('-',' ').title()
+                  mix.append((bucket,page,u,hint))
+          print('Mixkit URLs found:',len(mix))
+
+          # Round-robin style diversity, max 42 Mixkit candidates.
+          by={}
+          for x in mix: by.setdefault(x[0],[]).append(x)
+          chosen=[]
+          while len(chosen)<42 and any(by.values()):
+              for bucket,_ in mixkit_pages:
+                  if by.get(bucket): chosen.append(by[bucket].pop(0))
+                  if len(chosen)>=42: break
+
+          for i,(bucket,page,u,hint) in enumerate(chosen,1):
+              fn=f'MX-{i:02d}_{re.sub(r"[^A-Za-z0-9]+","_",hint).strip("_")}.mp3'
+              p=root/'mixkit'/fn
+              try:
+                  size=download(u,p)
+                  if size < 50000: raise RuntimeError(f'too small {size}')
+                  rows.append({'candidate_id':f'MX-{i:02d}','source':'Mixkit','title_hint':hint,'style_bucket':bucket,'source_page':page,'download_url':u,'license':'Mixkit Free License','commercial_social_use':'candidate_pass_source_policy','attribution':'not_required_per_mixkit_license','file':str(p),'bytes':size})
+              except Exception as e:
+                  print('WARN download',u,e,file=sys.stderr)
+                  if p.exists(): p.unlink()
+
+          # FMA individual pages already verified as CC0 by primary FMA pages.
+          fma_pages = [
+            ('People are spinning','Loyalty Freak Music','https://freemusicarchive.org/music/Loyalty_Freak_Music/TO_CHILL_AND_STAY_AWAKE/Loyalty_Freak_Music_-_TO_CHILL_AND_STAY_AWAKE_-_06_People_are_spinning/','lounge-jazz'),
+            ('Somewhere Nice','John Bartmann','https://freemusicarchive.org/music/John_Bartmann/Public_Domain_Soundtrack_Music_Album_One/somewhere-nice','ambient-cinematic'),
+            ('Picnic On The Seine','John Bartmann','https://freemusicarchive.org/music/John_Bartmann/picnic-on-the-seine-euro-vacation-sounds/picnic-on-the-seine/','jazz-lifestyle'),
+            ('A Kwela Fella','John Bartmann','https://freemusicarchive.org/music/John_Bartmann/picnic-on-the-seine-euro-vacation-sounds/a-kwela-fella/','jazz-lifestyle'),
+            ('Gypsy Doo Wop','John Bartmann','https://freemusicarchive.org/music/John_Bartmann/picnic-on-the-seine-euro-vacation-sounds/gypsy-doo-wop/','jazz-lifestyle'),
+            ('Mellow Cafe Vibe','John Bartmann','https://freemusicarchive.org/index.php/music/John_Bartmann/picnic-on-the-seine-euro-vacation-sounds/mellow-cafe-vibe','lounge-jazz'),
+            ('Allez! Allez!','John Bartmann','https://freemusicarchive.org/music/John_Bartmann/picnic-on-the-seine-euro-vacation-sounds/allez-allez/','upbeat-lifestyle'),
+            ('Nova Serenade','John Bartmann','https://freemusicarchive.org/music/John_Bartmann/picnic-on-the-seine-euro-vacation-sounds/nova-serenade/','elegant-jazz'),
+            ('Level 3','Monplaisir','https://freemusicarchive.org/music/Monplaisir/Turbo_Rallye_Clicker_4000_Soundtrack/Monplaisir_-_Turbo_Rallye_Clicker_4000_Soundtrack_-_06_Level_3/','electronic'),
+          ]
+          for i,(title,artist,page,bucket) in enumerate(fma_pages,1):
+              try: text=fetch_text(page)
+              except Exception as e:
+                  print('WARN FMA page',page,e,file=sys.stderr); continue
+              # FMA embeds direct storage URLs in page JSON/HTML.
+              links=re.findall(r'https?://files\.freemusicarchive\.org/[^"\'<> ]+?\.mp3(?:\?[^"\'<> ]*)?', html.unescape(text))
+              links=[x.replace('\\/','/') for x in links]
+              if not links:
+                  # also detect escaped URLs
+                  links=[x.replace('\\/','/') for x in re.findall(r'https?:\\/\\/files\.freemusicarchive\.org\\/[^"\']+?\.mp3(?:\?[^"\']*)?', text)]
+              if not links:
+                  print('WARN no FMA mp3 link',title,page,file=sys.stderr); continue
+              u=links[0]
+              fn=f'CC0-{i:02d}_{re.sub(r"[^A-Za-z0-9]+","_",title).strip("_")}_{re.sub(r"[^A-Za-z0-9]+","_",artist).strip("_")}.mp3'
+              p=root/'fma-cc0'/fn
+              try:
+                  size=download(u,p)
+                  if size < 50000: raise RuntimeError(f'too small {size}')
+                  rows.append({'candidate_id':f'CC0-{i:02d}','source':'Free Music Archive','title_hint':title,'artist':artist,'style_bucket':bucket,'source_page':page,'download_url':u,'license':'CC0 1.0 Universal','commercial_social_use':'pass','attribution':'not_required','file':str(p),'bytes':size})
+              except Exception as e:
+                  print('WARN FMA download',title,e,file=sys.stderr)
+                  if p.exists(): p.unlink()
+
+          # Basic media integrity via ffprobe.
+          for r in rows:
+              try:
+                  out=subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration,bit_rate','-of','json',r['file']], text=True)
+                  d=json.loads(out).get('format',{})
+                  r['duration_sec']=round(float(d.get('duration') or 0),3)
+                  r['bit_rate']=d.get('bit_rate','')
+                  r['qc_integrity']='PASS' if r['duration_sec']>=20 else 'REVIEW'
+              except Exception as e:
+                  r['qc_integrity']='FAIL'; r['qc_error']=str(e)
+
+          fields=sorted({k for r in rows for k in r})
+          with open(root/'candidate_manifest.csv','w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(rows)
+          with open(root/'candidate_manifest.json','w',encoding='utf-8') as f: json.dump(rows,f,indent=2,ensure_ascii=False)
+          print('Downloaded candidates:',len(rows))
+          PY
+
+          echo "Candidate files:"
+          find music-candidates -type f -maxdepth 2 -printf '%p %s bytes\n' | sort
+
+      - name: Upload candidate bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: alhuma-music-candidates
+          path: music-candidates/
+          if-no-files-found: error
+          retention-days: 1
