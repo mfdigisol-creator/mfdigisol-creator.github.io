@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-10T17:21:43.814Z",
+  "generatedAt": "2026-10-11T05:52:00.057Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1324,
+      "actual": 1276,
       "required": 100
     },
     {
@@ -25,17 +25,17 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7682877542772464,
-      "required": 0.6197785016286645,
-      "fetchedMemberships": 5703,
-      "reportedMemberships": 7423,
-      "previous": 0.7747231270358306
+      "actual": 0.7610089186176142,
+      "required": 0.6146302034217972,
+      "fetchedMemberships": 5461,
+      "reportedMemberships": 7176,
+      "previous": 0.7682877542772464
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 4,
-      "requiredMaximum": 23
+      "requiredMaximum": 22
     },
     {
       "id": "ambiguous-scope-share",
@@ -47,42 +47,42 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1147,
+      "actual": 1096,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1147,
-      "required": 970,
-      "previous": 1213
+      "actual": 1096,
+      "required": 917,
+      "previous": 1147
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1147,
+      "actual": 1096,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1324,
+    "sourceProducts": 1276,
     "sourceCollections": 101,
-    "includedSourceProducts": 1125,
-    "excludedSourceProducts": 199,
+    "includedSourceProducts": 1074,
+    "excludedSourceProducts": 202,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1147,
-    "previousCatalogueProducts": 1213,
-    "candidateVsPreviousPercent": -5.441055234954658,
-    "collectionProductCoverage": 0.7682877542772464,
-    "previousCollectionProductCoverage": 0.7747231270358306,
+    "candidateProducts": 1096,
+    "previousCatalogueProducts": 1147,
+    "candidateVsPreviousPercent": -4.446381865736704,
+    "collectionProductCoverage": 0.7610089186176142,
+    "previousCollectionProductCoverage": 0.7682877542772464,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9"
   },
   "exclusionReasons": {
-    "menswear-signal": 72,
+    "menswear-signal": 71,
     "single-piece-not-approved-suit-scope": 3,
-    "garment-size-variants": 124,
-    "ready-to-wear-or-stitched-signal": 122
+    "garment-size-variants": 128,
+    "ready-to-wear-or-stitched-signal": 126
   },
   "duplicateSourceCodes": [
     {
@@ -212,8 +212,8 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 130,
-      "fetchedProducts": 47,
+      "reportedProducts": 128,
+      "fetchedProducts": 45,
       "anomaly": null
     },
     {
@@ -263,25 +263,6 @@
       ]
     },
     {
-      "id": "15586065547635",
-      "title": "Hurab By Anaya Noor Heavy Emb Viscose 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
       "id": "15586065449331",
       "title": "Hurab By Anaya Noor Heavy Emb Viscose 3PC",
       "vendor": "Anaya Noor",
@@ -301,45 +282,7 @@
       ]
     },
     {
-      "id": "15586065416563",
-      "title": "Hurab By Anaya Noor Heavy Emb Viscose 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
       "id": "15586065318259",
-      "title": "Hurab By Anaya Noor Heavy Emb Viscose 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15586065285491",
       "title": "Hurab By Anaya Noor Heavy Emb Viscose 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
@@ -378,25 +321,6 @@
     },
     {
       "id": "15586065187187",
-      "title": "Hurab By Anaya Noor Heavy Emb Viscose 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15586065154419",
       "title": "Hurab By Anaya Noor Heavy Emb Viscose 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
@@ -606,6 +530,82 @@
     },
     {
       "id": "15561026732403",
+      "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15561026797939",
+      "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15561026634099",
+      "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15561026371955",
+      "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15561026339187",
       "title": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
