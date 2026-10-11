@@ -1,0 +1,139 @@
+name: Temporary Mixkit candidate browser download
+
+on:
+  push:
+    branches:
+      - music-library-bootstrap
+    paths:
+      - ".github/workflows/music-library-mixkit-browser.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Install Playwright
+        run: |
+          python3 -m pip install --quiet playwright
+          python3 -m playwright install --with-deps chromium >/dev/null
+
+      - name: Download official Mixkit files from category download buttons
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mixkit-browser-candidates/audio
+          cat > /tmp/collect.py <<'PY'
+          import asyncio, csv, json, os, re
+          from pathlib import Path
+          from playwright.async_api import async_playwright
+
+          OUT=Path('mixkit-browser-candidates')
+          A=OUT/'audio'
+          pages=[
+            ('elegant','https://mixkit.co/free-stock-music/mood/elegant/',4),
+            ('house-fashion','https://mixkit.co/free-stock-music/house/',7),
+            ('funk-fashion','https://mixkit.co/free-stock-music/funk/',7),
+            ('edm-fashion','https://mixkit.co/free-stock-music/edm/',7),
+            ('pop-lifestyle','https://mixkit.co/free-stock-music/pop/',7),
+            ('ambient','https://mixkit.co/free-stock-music/ambient/',7),
+            ('jazz','https://mixkit.co/free-stock-music/jazz/',7),
+            ('lounge','https://mixkit.co/free-stock-music/lounge/',7),
+          ]
+          rows=[]; seen=set(); n=0
+
+          def safe(s):
+            s=re.sub(r'[^A-Za-z0-9._-]+','_',s).strip('_')
+            return s[:140] or 'track'
+
+          async def main():
+            nonlocal_dummy=None
+            async with async_playwright() as p:
+              browser=await p.chromium.launch(headless=True)
+              ctx=await browser.new_context(accept_downloads=True, user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/154 Safari/537.36')
+              global n
+              for bucket,url,limit in pages:
+                page=await ctx.new_page()
+                try:
+                  await page.goto(url, wait_until='domcontentloaded', timeout=60000)
+                  await page.wait_for_timeout(2500)
+                  # Cookie/consent overlays: best-effort close/accept.
+                  for label in ['Accept','Accept all','I agree','Got it']:
+                    try:
+                      loc=page.get_by_text(label, exact=True)
+                      if await loc.count(): await loc.first.click(timeout=1200)
+                    except: pass
+                  buttons=page.get_by_text('Download Free Music', exact=True)
+                  count=await buttons.count()
+                  print(bucket,'download buttons',count)
+                  taken=0
+                  for i in range(count):
+                    if taken>=limit: break
+                    b=buttons.nth(i)
+                    try:
+                      card_text=await b.evaluate('''el => {let p=el; for(let i=0;i<8 && p;i++,p=p.parentElement){const t=(p.innerText||'').trim(); if(t.includes('Download Free Music') && t.split('\\n').length>=4 && t.length<1400) return t;} return ''; }''')
+                      async with page.expect_download(timeout=15000) as di:
+                        await b.click(timeout=10000)
+                      dl=await di.value
+                      sugg=dl.suggested_filename
+                      key=sugg.lower()
+                      if key in seen:
+                        continue
+                      seen.add(key); n+=1; taken+=1
+                      dest=A/f'MX-{n:02d}_{safe(sugg)}'
+                      await dl.save_as(str(dest))
+                      lines=[x.strip() for x in card_text.splitlines() if x.strip() and x.strip()!='Download Free Music']
+                      title=''; artist=''
+                      for j,x in enumerate(lines):
+                        if x.lower().startswith('by '):
+                          artist=x[3:].strip()
+                          if j>0: title=lines[j-1]
+                          break
+                      if not title and lines: title=lines[0]
+                      rows.append({'candidate_id':f'MX-{n:02d}','source':'Mixkit','title':title,'artist':artist,'style_bucket':bucket,'source_page':url,'downloaded_filename':sugg,'file':str(dest),'license':'Mixkit Free License','commercial_social_use':'PASS_SOURCE_POLICY','attribution_required':'No','source_card_text':' | '.join(lines[:15])})
+                      print('saved',dest,title,artist)
+                    except Exception as e:
+                      print('WARN button',bucket,i,repr(e))
+                  await page.close()
+                except Exception as e:
+                  print('WARN page',url,repr(e))
+                  try: await page.close()
+                  except: pass
+              await browser.close()
+
+          asyncio.run(main())
+          fields=['candidate_id','source','title','artist','style_bucket','source_page','downloaded_filename','file','license','commercial_social_use','attribution_required','source_card_text']
+          with open(OUT/'mixkit_manifest.csv','w',newline='',encoding='utf-8') as f:
+            w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
+          with open(OUT/'mixkit_manifest.json','w',encoding='utf-8') as f:json.dump(rows,f,indent=2,ensure_ascii=False)
+          print('TOTAL UNIQUE MIXKIT DOWNLOADS',len(rows))
+          PY
+          python3 /tmp/collect.py
+
+          python3 - <<'PY'
+          import csv,json,subprocess,glob,os
+          p='mixkit-browser-candidates/mixkit_manifest.csv'
+          rows=list(csv.DictReader(open(p,encoding='utf-8')))
+          for r in rows:
+            try:
+              o=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration,bit_rate','-of','json',r['file']],text=True))['format']
+              r['duration_sec']=str(round(float(o.get('duration') or 0),3));r['bit_rate']=str(o.get('bit_rate',''))
+              r['integrity_qc']='PASS' if float(r['duration_sec'])>=20 and os.path.getsize(r['file'])>50000 else 'FAIL'
+            except Exception as e:r['integrity_qc']='FAIL';r['qc_error']=str(e)
+          fields=sorted({k for r in rows for k in r})
+          with open(p,'w',newline='',encoding='utf-8') as f:w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
+          open('mixkit-browser-candidates/mixkit_manifest.json','w',encoding='utf-8').write(json.dumps(rows,indent=2,ensure_ascii=False))
+          print('Integrity PASS',sum(r.get('integrity_qc')=='PASS' for r in rows),'of',len(rows))
+          PY
+
+          find mixkit-browser-candidates -type f -printf '%p %s bytes\n' | sort
+
+      - name: Upload Mixkit candidate bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: alhuma-mixkit-browser-candidates
+          path: mixkit-browser-candidates/
+          if-no-files-found: error
+          retention-days: 1
