@@ -1,0 +1,79 @@
+name: Temporary balanced Mixkit collector v2
+on:
+  push:
+    branches: [music-library-bootstrap]
+    paths: [".github/workflows/music-library-balanced-v2.yml"]
+permissions: {contents: read}
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Install browser/audio tools
+        run: |
+          python3 -m pip install --quiet playwright mutagen
+          python3 -m playwright install --with-deps chromium >/dev/null
+      - name: Collect balanced tracks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p balanced-v2/audio
+          cat > /tmp/b2.py <<'PY'
+          import asyncio,csv,json,re,urllib.request
+          from pathlib import Path
+          from playwright.async_api import async_playwright
+          from mutagen.mp3 import MP3
+          OUT=Path('balanced-v2'); A=OUT/'audio'; A.mkdir(parents=True,exist_ok=True)
+          cats=[('elegant','https://mixkit.co/free-stock-music/mood/elegant/',4),('house-fashion','https://mixkit.co/free-stock-music/house/',5),('funk-fashion','https://mixkit.co/free-stock-music/funk/',5),('edm-fashion','https://mixkit.co/free-stock-music/edm/',5),('pop-lifestyle','https://mixkit.co/free-stock-music/pop/',5),('ambient','https://mixkit.co/free-stock-music/ambient/',5),('jazz','https://mixkit.co/free-stock-music/jazz/',5),('lounge','https://mixkit.co/free-stock-music/lounge/',5),('calm','https://mixkit.co/free-stock-music/mood/calm/',5)]
+          seen={}; order=[]
+          def parse(t):
+            ls=[x.strip() for x in t.splitlines() if x.strip() and x.strip()!='Download Free Music']
+            for j,x in enumerate(ls):
+              if x.lower().startswith('by '):return (ls[j-1] if j else ''),x[3:].strip(),' | '.join(ls[:20])
+            return '', '', ' | '.join(ls[:20])
+          async def scan():
+            async with async_playwright() as p:
+              b=await p.chromium.launch(headless=True);ctx=await b.new_context()
+              for bucket,url,cap in cats:
+                page=await ctx.new_page();await page.goto(url,wait_until='domcontentloaded',timeout=60000);await page.wait_for_timeout(1500)
+                bs=page.get_by_text('Download Free Music',exact=True); c=await bs.count();got=0
+                for i in range(c):
+                  if got>=cap:break
+                  x=bs.nth(i);tid=await x.get_attribute('data-algolia-analytics-item-id')
+                  if not tid:continue
+                  text=await x.evaluate('''el=>{let p=el;for(let i=0;i<12&&p;i++,p=p.parentElement){let t=(p.innerText||'').trim();if(t.toLowerCase().includes('by ')&&t.length<2500)return t;}return '';}''')
+                  title,artist,summary=parse(text)
+                  if tid not in seen:
+                    seen[tid]={'source_track_id':tid,'title':title,'artist':artist,'style_buckets':[bucket],'source_pages':[url],'source_card_text':summary};order.append(tid);got+=1
+                  else:
+                    if bucket not in seen[tid]['style_buckets']:seen[tid]['style_buckets'].append(bucket)
+                    if url not in seen[tid]['source_pages']:seen[tid]['source_pages'].append(url)
+                print(bucket,'selected new',got,'from buttons',c)
+                await page.close()
+              await b.close()
+          asyncio.run(scan())
+          headers={'User-Agent':'Mozilla/5.0 (compatible; AlHumaMusicLibrary/1.0)'};rows=[]
+          def safe(s):return re.sub(r'[^A-Za-z0-9]+','_',s).strip('_')[:75]
+          for n,tid in enumerate(order,1):
+            r=seen[tid];url=f'https://assets.mixkit.co/music/{tid}/{tid}.mp3';r['audio_url']=url
+            title=r['title'] or f'Mixkit_Track_{tid}';artist=r['artist'];fn=f"MB2-{n:02d}_{safe(title)}"+(f"_{safe(artist)}" if artist else '')+'.mp3';path=A/fn
+            req=urllib.request.Request(url,headers=headers)
+            with urllib.request.urlopen(req,timeout=60) as inp,open(path,'wb') as out:
+              while True:
+                z=inp.read(1024*1024)
+                if not z:break
+                out.write(z)
+            m=MP3(path);r.update({'candidate_id':f'MB2-{n:02d}','source':'Mixkit','file':str(path),'bytes':path.stat().st_size,'duration_sec':round(m.info.length,3),'bitrate':m.info.bitrate,'integrity_qc':'PASS' if m.info.length>=20 and path.stat().st_size>50000 else 'FAIL','style_buckets':'|'.join(r['style_buckets']),'source_pages':'|'.join(r['source_pages']),'license':'Mixkit Free License','commercial_social_use':'PASS_SOURCE_POLICY','attribution_required':'No'});rows.append(r)
+            print(r['candidate_id'],tid,r['title'],'—',r['artist'],'—',r['style_buckets'])
+          fields=sorted({k for r in rows for k in r});
+          with open(OUT/'manifest.csv','w',newline='',encoding='utf-8') as f:w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
+          with open(OUT/'manifest.json','w',encoding='utf-8') as f:json.dump(rows,f,indent=2,ensure_ascii=False)
+          print('TOTAL',len(rows))
+          PY
+          python3 /tmp/b2.py
+      - name: Upload pool
+        uses: actions/upload-artifact@v4
+        with:
+          name: alhuma-balanced-mixkit-v2
+          path: balanced-v2/
+          retention-days: 1
