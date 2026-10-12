@@ -1,21 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-12T06:03:37.348Z",
+  "generatedAt": "2026-10-12T21:17:29.412Z",
   "summary": {
-    "products": 1049,
-    "removedProducts": 2654,
-    "brands": 74,
-    "collectionPages": 82,
-    "sitemapUrls": 1134,
-    "metaFeedRows": 1040,
-    "metadataPages": 1049,
-    "internalHtmlFiles": 3846,
+    "products": 1066,
+    "removedProducts": 2672,
+    "brands": 71,
+    "collectionPages": 80,
+    "sitemapUrls": 1149,
+    "metaFeedRows": 1057,
+    "metadataPages": 1066,
+    "internalHtmlFiles": 3882,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "53 products currently lack retained supplier description text."
+    "51 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -40,10 +40,10 @@
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
       "CS-EMB-LWN-3P-1856",
-      "AIRA-ORG-SKY-1547",
-      "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PURP-1547",
       "AIRA-ORG-PEACH-1547",
+      "AIRA-ORG-SKY-1547",
+      "AIRA-ORG-PISTA-1547",
       "DASTAK-DL-LWN-3P-FB-323",
       "DASTAK-DL-LWN-3P-FB-324"
     ],
