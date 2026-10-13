@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-12T21:17:21.254Z",
+  "generatedAt": "2026-10-13T06:49:42.960Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1242,
+      "actual": 1231,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7588734013507688,
-      "required": 0.6057292424022103,
-      "fetchedMemberships": 5281,
-      "reportedMemberships": 6959,
-      "previous": 0.7571615530027628
+      "actual": 0.7559282822440717,
+      "required": 0.607098721080615,
+      "fetchedMemberships": 5228,
+      "reportedMemberships": 6916,
+      "previous": 0.7588734013507688
     },
     {
       "id": "duplicate-supplier-skus",
@@ -47,34 +47,34 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1066,
+      "actual": 1055,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1066,
-      "required": 839,
-      "previous": 1049
+      "actual": 1055,
+      "required": 852,
+      "previous": 1066
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1066,
+      "actual": 1055,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1242,
+    "sourceProducts": 1231,
     "sourceCollections": 101,
-    "includedSourceProducts": 1044,
+    "includedSourceProducts": 1033,
     "excludedSourceProducts": 198,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1066,
-    "previousCatalogueProducts": 1049,
-    "candidateVsPreviousPercent": 1.6205910390848426,
-    "collectionProductCoverage": 0.7588734013507688,
-    "previousCollectionProductCoverage": 0.7571615530027628,
+    "candidateProducts": 1055,
+    "previousCatalogueProducts": 1066,
+    "candidateVsPreviousPercent": -1.0318949343339587,
+    "collectionProductCoverage": 0.7559282822440717,
+    "previousCollectionProductCoverage": 0.7588734013507688,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9"
   },
