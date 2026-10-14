@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T19:19:11.424Z",
+  "generatedAt": "2026-10-14T04:58:23.671Z",
   "source": "https://dawooddesigners.com",
-  "sourceProducts": 1377,
+  "sourceProducts": 1346,
   "sourceCollections": 104,
   "activeSourceCollections": 99,
-  "reportedCollectionMemberships": 7821,
-  "fetchedCollectionMemberships": 5934,
-  "collectionProductCoverage": 0.7587265055619486,
+  "reportedCollectionMemberships": 7663,
+  "fetchedCollectionMemberships": 5779,
+  "collectionProductCoverage": 0.7541432859193528,
   "collectionAnomalies": [],
   "duplicateSourceCodes": [
     {
@@ -83,13 +83,13 @@
       ]
     }
   ],
-  "includedSourceProducts": 1173,
-  "excludedSourceProducts": 204,
+  "includedSourceProducts": 1145,
+  "excludedSourceProducts": 201,
   "ambiguousSourceProducts": 0,
-  "candidateProducts": 1195,
+  "candidateProducts": 1167,
   "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
   "schemaHealth": {
-    "valid": 1377,
+    "valid": 1346,
     "invalid": 0,
     "validShare": 1
   },
@@ -129,11 +129,9 @@
     "Imported",
     "Imrozia",
     "Iznik",
-    "Jaffrani",
     "Jazmin",
     "Jugnu",
     "Kayseria",
-    "Laam",
     "Lala",
     "Limelight",
     "MIx Brand",
@@ -215,9 +213,9 @@
       "id": "646040453491",
       "title": "Anaya Noor",
       "handle": "anaya-noor",
-      "productsCount": 143,
-      "fetchedProducts": 85,
-      "updatedAt": "2026-10-13T23:31:16+05:00"
+      "productsCount": 140,
+      "fetchedProducts": 83,
+      "updatedAt": "2026-10-14T07:46:37+05:00"
     },
     {
       "id": "696427512179",
@@ -263,9 +261,9 @@
       "id": "694334980467",
       "title": "BAREEZE",
       "handle": "bareeze-digital-classic-printed-lawn-3pc",
-      "productsCount": 120,
-      "fetchedProducts": 118,
-      "updatedAt": "2026-10-14T00:02:56+05:00"
+      "productsCount": 117,
+      "fetchedProducts": 115,
+      "updatedAt": "2026-10-14T08:41:34+05:00"
     },
     {
       "id": "696045076851",
@@ -273,7 +271,7 @@
       "handle": "bareeze-fully-emb-rice-karandi-lawn-2pc",
       "productsCount": 46,
       "fetchedProducts": 40,
-      "updatedAt": "2026-10-13T19:56:12+05:00"
+      "updatedAt": "2026-10-14T01:11:13+05:00"
     },
     {
       "id": "703575720307",
@@ -319,9 +317,9 @@
       "id": "649571893619",
       "title": "Dawood Men’s Wear",
       "handle": "dawood-men-s-wear",
-      "productsCount": 19,
-      "fetchedProducts": 17,
-      "updatedAt": "2026-10-13T23:08:03+05:00"
+      "productsCount": 17,
+      "fetchedProducts": 15,
+      "updatedAt": "2026-10-14T07:29:51+05:00"
     },
     {
       "id": "701140107635",
@@ -359,17 +357,17 @@
       "id": "695755538803",
       "title": "Gul Ahmed Boski – Premium Men’s Unstitched Suit",
       "handle": "gul-ahmed-boski-premium-men-s-unstitched-suit",
-      "productsCount": 5,
-      "fetchedProducts": 4,
-      "updatedAt": "2026-10-13T17:06:19+05:00"
+      "productsCount": 3,
+      "fetchedProducts": 2,
+      "updatedAt": "2026-10-14T07:29:51+05:00"
     },
     {
       "id": "693189575027",
       "title": "Gul Ahmed Men’s Summer Cotton Suit",
       "handle": "gul-ahmed-men-s-summer-wash-wear-suit",
-      "productsCount": 5,
-      "fetchedProducts": 4,
-      "updatedAt": "2026-10-13T17:06:19+05:00"
+      "productsCount": 3,
+      "fetchedProducts": 2,
+      "updatedAt": "2026-10-14T07:29:51+05:00"
     },
     {
       "id": "701972971891",
@@ -447,9 +445,9 @@
       "id": "692808712563",
       "title": "Lawn 2026",
       "handle": "lawn-2026",
-      "productsCount": 254,
-      "fetchedProducts": 159,
-      "updatedAt": "2026-10-13T23:57:50+05:00"
+      "productsCount": 252,
+      "fetchedProducts": 157,
+      "updatedAt": "2026-10-14T08:54:56+05:00"
     },
     {
       "id": "705820492147",
@@ -471,9 +469,9 @@
       "id": "701123985779",
       "title": "Luxury Dressline",
       "handle": "dressline",
-      "productsCount": 83,
-      "fetchedProducts": 80,
-      "updatedAt": "2026-10-13T20:48:41+05:00"
+      "productsCount": 82,
+      "fetchedProducts": 79,
+      "updatedAt": "2026-10-14T09:30:54+05:00"
     },
     {
       "id": "707077898611",
@@ -487,9 +485,9 @@
       "id": "706682978675",
       "title": "Luxury Feroza",
       "handle": "luxury-feroza",
-      "productsCount": 10,
-      "fetchedProducts": 9,
-      "updatedAt": "2026-10-13T16:18:36+05:00"
+      "productsCount": 9,
+      "fetchedProducts": 8,
+      "updatedAt": "2026-10-14T00:31:54+05:00"
     },
     {
       "id": "692833288563",
@@ -583,9 +581,9 @@
       "id": "703431147891",
       "title": "Luxury Unstitch",
       "handle": "luxury-unstitch",
-      "productsCount": 303,
-      "fetchedProducts": 273,
-      "updatedAt": "2026-10-13T20:22:05+05:00"
+      "productsCount": 301,
+      "fetchedProducts": 271,
+      "updatedAt": "2026-10-14T09:30:55+05:00"
     },
     {
       "id": "705004306803",
@@ -599,9 +597,9 @@
       "id": "705073283443",
       "title": "LUXURY WINTER",
       "handle": "luxury-winter",
-      "productsCount": 108,
-      "fetchedProducts": 104,
-      "updatedAt": "2026-10-13T21:17:05+05:00"
+      "productsCount": 107,
+      "fetchedProducts": 103,
+      "updatedAt": "2026-10-14T09:30:55+05:00"
     },
     {
       "id": "707078586739",
@@ -647,9 +645,9 @@
       "id": "701103669619",
       "title": "Men's Wear Wash & Wear Unstitched Daily Wear",
       "handle": "mens-wear-wash-wear",
-      "productsCount": 18,
-      "fetchedProducts": 17,
-      "updatedAt": "2026-10-13T23:08:03+05:00"
+      "productsCount": 16,
+      "fetchedProducts": 15,
+      "updatedAt": "2026-10-14T07:29:51+05:00"
     },
     {
       "id": "702023860595",
@@ -671,9 +669,9 @@
       "id": "648611561843",
       "title": "New Arrival",
       "handle": "new-arrival",
-      "productsCount": 213,
-      "fetchedProducts": 182,
-      "updatedAt": "2026-10-13T20:03:09+05:00"
+      "productsCount": 212,
+      "fetchedProducts": 181,
+      "updatedAt": "2026-10-14T09:30:54+05:00"
     },
     {
       "id": "701973987699",
@@ -703,9 +701,9 @@
       "id": "643109880179",
       "title": "PRINTED",
       "handle": "printed",
-      "productsCount": 567,
-      "fetchedProducts": 429,
-      "updatedAt": "2026-10-14T00:17:57+05:00"
+      "productsCount": 548,
+      "fetchedProducts": 410,
+      "updatedAt": "2026-10-14T09:33:53+05:00"
     },
     {
       "id": "701975331187",
@@ -815,9 +813,9 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "productsCount": 133,
-      "fetchedProducts": 50,
-      "updatedAt": "2026-10-13T23:57:50+05:00"
+      "productsCount": 131,
+      "fetchedProducts": 48,
+      "updatedAt": "2026-10-14T08:54:56+05:00"
     },
     {
       "id": "693258322291",
@@ -839,9 +837,9 @@
       "id": "701074964851",
       "title": "Summer Unstitched Daily Wear Embroidered 3pc",
       "handle": "unstitched-daily-wear-embroidered-3pc",
-      "productsCount": 31,
-      "fetchedProducts": 8,
-      "updatedAt": "2026-10-13T20:12:54+05:00"
+      "productsCount": 30,
+      "fetchedProducts": 7,
+      "updatedAt": "2026-10-14T07:03:54+05:00"
     },
     {
       "id": "694135226739",
@@ -863,25 +861,25 @@
       "id": "701074997619",
       "title": "Summer Unstitched Daily Wear Printed 3pc",
       "handle": "unstitched-daily-wear-printed-3pc",
-      "productsCount": 49,
-      "fetchedProducts": 5,
-      "updatedAt": "2026-10-13T23:57:50+05:00"
+      "productsCount": 48,
+      "fetchedProducts": 4,
+      "updatedAt": "2026-10-14T08:54:56+05:00"
     },
     {
       "id": "643109814643",
       "title": "Three Piece Embroidered Summer Collection",
       "handle": "embroidered",
-      "productsCount": 429,
-      "fetchedProducts": 366,
-      "updatedAt": "2026-10-14T00:18:09+05:00"
+      "productsCount": 421,
+      "fetchedProducts": 358,
+      "updatedAt": "2026-10-14T09:28:03+05:00"
     },
     {
       "id": "642743009651",
       "title": "Three Piece Printed Summer Collection",
       "handle": "three-piece-winter-collection",
-      "productsCount": 423,
-      "fetchedProducts": 296,
-      "updatedAt": "2026-10-14T00:17:57+05:00"
+      "productsCount": 413,
+      "fetchedProducts": 286,
+      "updatedAt": "2026-10-14T09:33:53+05:00"
     },
     {
       "id": "701023584627",
@@ -889,47 +887,47 @@
       "handle": "two-piece-embroidered-summer-collection",
       "productsCount": 90,
       "fetchedProducts": 59,
-      "updatedAt": "2026-10-13T21:21:02+05:00"
+      "updatedAt": "2026-10-14T09:20:54+05:00"
     },
     {
       "id": "701023486323",
       "title": "Two Piece Printed Summer Collection",
       "handle": "two-piece-summer-collection",
-      "productsCount": 130,
-      "fetchedProducts": 120,
-      "updatedAt": "2026-10-14T00:02:43+05:00"
+      "productsCount": 121,
+      "fetchedProducts": 111,
+      "updatedAt": "2026-10-14T09:08:12+05:00"
     },
     {
       "id": "703940166003",
       "title": "Unstitched Daily Wear Winter Embroidered 3PC",
       "handle": "unstitched-daily-wear-winter-embroidered-3pc",
-      "productsCount": 201,
-      "fetchedProducts": 158,
-      "updatedAt": "2026-10-14T00:18:09+05:00"
+      "productsCount": 196,
+      "fetchedProducts": 153,
+      "updatedAt": "2026-10-14T08:41:34+05:00"
     },
     {
       "id": "703940297075",
       "title": "Unstitched Daily Wear Winter Printed 2PC",
       "handle": "unstitched-daily-wear-winter-printed-2pc",
-      "productsCount": 127,
-      "fetchedProducts": 117,
-      "updatedAt": "2026-10-14T00:02:43+05:00"
+      "productsCount": 118,
+      "fetchedProducts": 108,
+      "updatedAt": "2026-10-14T09:12:42+05:00"
     },
     {
       "id": "703930204531",
       "title": "Unstitched Daily Wear Winter Printed 3PC",
       "handle": "unstitched-daily-wear-winter-printed-3pc",
-      "productsCount": 321,
-      "fetchedProducts": 245,
-      "updatedAt": "2026-10-14T00:17:58+05:00"
+      "productsCount": 312,
+      "fetchedProducts": 236,
+      "updatedAt": "2026-10-14T09:33:53+05:00"
     },
     {
       "id": "642743533939",
       "title": "WINTER 2026",
       "handle": "winter-2026",
-      "productsCount": 813,
-      "fetchedProducts": 635,
-      "updatedAt": "2026-10-14T00:17:57+05:00"
+      "productsCount": 785,
+      "fetchedProducts": 608,
+      "updatedAt": "2026-10-14T09:33:53+05:00"
     },
     {
       "id": "706740289907",
@@ -959,9 +957,9 @@
       "id": "705764360563",
       "title": "Winter Single Shawl Pcs",
       "handle": "limelight-winter-2026-woolen-shawl",
-      "productsCount": 15,
-      "fetchedProducts": 2,
-      "updatedAt": "2026-10-13T21:20:18+05:00"
+      "productsCount": 14,
+      "fetchedProducts": 1,
+      "updatedAt": "2026-10-14T09:08:12+05:00"
     },
     {
       "id": "704567542131",
@@ -969,31 +967,31 @@
       "handle": "winter-unstitched-daily-wear-embroidered-2pc",
       "productsCount": 61,
       "fetchedProducts": 39,
-      "updatedAt": "2026-10-13T21:21:43+05:00"
+      "updatedAt": "2026-10-14T09:27:42+05:00"
     },
     {
       "id": "704571474291",
       "title": "Winter Unstitched Daily Wear Hitcodes 3 PC",
       "handle": "winter-unstitched-daily-wear-hitcodes-3-pc",
-      "productsCount": 26,
-      "fetchedProducts": 26,
-      "updatedAt": "2026-10-13T20:52:28+05:00"
+      "productsCount": 25,
+      "fetchedProducts": 25,
+      "updatedAt": "2026-10-14T09:28:03+05:00"
     },
     {
       "id": "693206647155",
       "title": "Winters Hit Codes",
       "handle": "winters-hot-codes",
-      "productsCount": 26,
-      "fetchedProducts": 26,
-      "updatedAt": "2026-10-13T20:52:28+05:00"
+      "productsCount": 25,
+      "fetchedProducts": 25,
+      "updatedAt": "2026-10-14T09:28:03+05:00"
     },
     {
       "id": "703271010675",
       "title": "Zarmeen & Emaan",
       "handle": "zarmeen-emaan",
-      "productsCount": 1799,
-      "fetchedProducts": 1200,
-      "updatedAt": "2026-10-14T00:17:58+05:00"
+      "productsCount": 1767,
+      "fetchedProducts": 1169,
+      "updatedAt": "2026-10-14T09:33:53+05:00"
     },
     {
       "id": "703275172211",
