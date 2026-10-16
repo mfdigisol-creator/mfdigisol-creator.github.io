@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T02:30:58.475Z",
+  "generatedAt": "2026-10-16T04:36:07.557Z",
   "source": "https://dawooddesigners.com",
-  "sourceProducts": 1382,
+  "sourceProducts": 1378,
   "sourceCollections": 104,
   "activeSourceCollections": 98,
-  "reportedCollectionMemberships": 7735,
-  "fetchedCollectionMemberships": 5893,
-  "collectionProductCoverage": 0.7618616677440206,
+  "reportedCollectionMemberships": 7718,
+  "fetchedCollectionMemberships": 5876,
+  "collectionProductCoverage": 0.7613371339725318,
   "collectionAnomalies": [],
   "duplicateSourceCodes": [
     {
@@ -101,13 +101,13 @@
       ]
     }
   ],
-  "includedSourceProducts": 1149,
-  "excludedSourceProducts": 233,
+  "includedSourceProducts": 1147,
+  "excludedSourceProducts": 231,
   "ambiguousSourceProducts": 0,
-  "candidateProducts": 1169,
+  "candidateProducts": 1167,
   "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
   "schemaHealth": {
-    "valid": 1382,
+    "valid": 1378,
     "invalid": 0,
     "validShare": 1
   },
@@ -196,7 +196,7 @@
   ],
   "relationMapping": {
     "relationMappedProducts": 145,
-    "relationUnmappedProducts": 1024,
+    "relationUnmappedProducts": 1022,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -544,9 +544,9 @@
       "id": "646040453491",
       "title": "Anaya Noor",
       "handle": "anaya-noor",
-      "productsCount": 133,
-      "fetchedProducts": 86,
-      "updatedAt": "2026-10-16T02:28:00+05:00"
+      "productsCount": 132,
+      "fetchedProducts": 85,
+      "updatedAt": "2026-10-16T08:48:56+05:00"
     },
     {
       "id": "696427512179",
@@ -632,17 +632,17 @@
       "id": "705089241459",
       "title": "Cross Stitch Premium Jacquard Viscose 3PC",
       "handle": "cross-stitch-premium-jacquard-viscose-3pc",
-      "productsCount": 7,
-      "fetchedProducts": 7,
-      "updatedAt": "2026-10-15T21:07:20+05:00"
+      "productsCount": 6,
+      "fetchedProducts": 6,
+      "updatedAt": "2026-10-16T08:37:47+05:00"
     },
     {
       "id": "704432832883",
       "title": "Cross Stitch Premium Printed Viscose 3PC",
       "handle": "cross-stitch-premium-printed-viscose-3pc",
-      "productsCount": 7,
-      "fetchedProducts": 7,
-      "updatedAt": "2026-10-15T21:07:20+05:00"
+      "productsCount": 6,
+      "fetchedProducts": 6,
+      "updatedAt": "2026-10-16T08:37:47+05:00"
     },
     {
       "id": "649571893619",
@@ -802,7 +802,7 @@
       "handle": "dressline",
       "productsCount": 83,
       "fetchedProducts": 80,
-      "updatedAt": "2026-10-16T03:15:46+05:00"
+      "updatedAt": "2026-10-16T09:18:46+05:00"
     },
     {
       "id": "707077898611",
@@ -914,7 +914,7 @@
       "handle": "luxury-unstitch",
       "productsCount": 303,
       "fetchedProducts": 273,
-      "updatedAt": "2026-10-15T22:17:16+05:00"
+      "updatedAt": "2026-10-16T09:32:10+05:00"
     },
     {
       "id": "705004306803",
@@ -1002,7 +1002,7 @@
       "handle": "new-arrival",
       "productsCount": 213,
       "fetchedProducts": 182,
-      "updatedAt": "2026-10-15T22:17:15+05:00"
+      "updatedAt": "2026-10-16T09:32:09+05:00"
     },
     {
       "id": "701973987699",
@@ -1032,9 +1032,9 @@
       "id": "643109880179",
       "title": "PRINTED",
       "handle": "printed",
-      "productsCount": 530,
-      "fetchedProducts": 405,
-      "updatedAt": "2026-10-16T07:14:10+05:00"
+      "productsCount": 529,
+      "fetchedProducts": 404,
+      "updatedAt": "2026-10-16T08:37:47+05:00"
     },
     {
       "id": "701975331187",
@@ -1200,17 +1200,17 @@
       "id": "643109814643",
       "title": "Three Piece Embroidered Summer Collection",
       "handle": "embroidered",
-      "productsCount": 417,
-      "fetchedProducts": 364,
-      "updatedAt": "2026-10-16T02:28:00+05:00"
+      "productsCount": 416,
+      "fetchedProducts": 363,
+      "updatedAt": "2026-10-16T08:48:56+05:00"
     },
     {
       "id": "642743009651",
       "title": "Three Piece Printed Summer Collection",
       "handle": "three-piece-winter-collection",
-      "productsCount": 408,
-      "fetchedProducts": 293,
-      "updatedAt": "2026-10-16T07:14:10+05:00"
+      "productsCount": 407,
+      "fetchedProducts": 292,
+      "updatedAt": "2026-10-16T08:37:46+05:00"
     },
     {
       "id": "701023584627",
@@ -1232,9 +1232,9 @@
       "id": "703940166003",
       "title": "Unstitched Daily Wear Winter Embroidered 3PC",
       "handle": "unstitched-daily-wear-winter-embroidered-3pc",
-      "productsCount": 188,
-      "fetchedProducts": 155,
-      "updatedAt": "2026-10-16T07:21:47+05:00"
+      "productsCount": 186,
+      "fetchedProducts": 153,
+      "updatedAt": "2026-10-16T08:48:56+05:00"
     },
     {
       "id": "703940297075",
@@ -1256,9 +1256,9 @@
       "id": "642743533939",
       "title": "WINTER 2026",
       "handle": "winter-2026",
-      "productsCount": 781,
-      "fetchedProducts": 639,
-      "updatedAt": "2026-10-16T07:14:10+05:00"
+      "productsCount": 778,
+      "fetchedProducts": 636,
+      "updatedAt": "2026-10-16T08:48:56+05:00"
     },
     {
       "id": "706740289907",
@@ -1288,9 +1288,9 @@
       "id": "705764360563",
       "title": "Winter Single Shawl Pcs",
       "handle": "limelight-winter-2026-woolen-shawl",
-      "productsCount": 11,
-      "fetchedProducts": 11,
-      "updatedAt": "2026-10-15T21:36:21+05:00"
+      "productsCount": 9,
+      "fetchedProducts": 9,
+      "updatedAt": "2026-10-16T08:05:11+05:00"
     },
     {
       "id": "704567542131",
@@ -1320,9 +1320,9 @@
       "id": "703271010675",
       "title": "Zarmeen & Emaan",
       "handle": "zarmeen-emaan",
-      "productsCount": 1875,
-      "fetchedProducts": 1204,
-      "updatedAt": "2026-10-16T07:14:10+05:00"
+      "productsCount": 1871,
+      "fetchedProducts": 1200,
+      "updatedAt": "2026-10-16T09:32:10+05:00"
     },
     {
       "id": "703275172211",
