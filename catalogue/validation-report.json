@@ -1,27 +1,26 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-15T17:04:50.739Z",
+  "generatedAt": "2026-10-16T02:31:09.644Z",
   "summary": {
-    "products": 1230,
-    "removedProducts": 2608,
-    "brands": 77,
-    "collectionPages": 87,
-    "sitemapUrls": 1320,
-    "metaFeedRows": 1221,
-    "metadataPages": 1230,
-    "internalHtmlFiles": 3984,
+    "products": 1169,
+    "removedProducts": 2675,
+    "brands": 74,
+    "collectionPages": 84,
+    "sitemapUrls": 1256,
+    "metaFeedRows": 1160,
+    "metadataPages": 1169,
+    "internalHtmlFiles": 3990,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "58 products currently lack retained supplier description text."
+    "52 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
-      "ABRISH-2PLWN-V2-ABR-01",
       "BT-CO-ORD-KHD-2P-DD-01",
       "BT-CO-ORD-KHD-2P-DD-10",
       "BT-CO-ORD-KHD-2P-DD-11",
@@ -43,9 +42,10 @@
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
       "CS-EMB-LWN-3P-1856",
+      "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-SKY-1547",
       "AIRA-ORG-PEACH-1547",
-      "AIRA-ORG-PISTA-1547"
+      "AIRA-ORG-PURP-1547"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
@@ -53,6 +53,11 @@
     "duplicateSchemaNames": [],
     "brokenInternalLinks": [],
     "removedProducts": [
+      {
+        "code": "ABRISH-2PLWN-V2-ABR-01",
+        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 1",
+        "path": "products/abrish-2plwn-v2-abr-01-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
+      },
       {
         "code": "ABRISH-2PLWN-V1-ABR-11",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 11",
@@ -172,11 +177,6 @@
         "code": "ABRISH-2PLWN-V2-ABR-06",
         "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 6",
         "path": "products/abrish-2plwn-v2-abr-06-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
-      },
-      {
-        "code": "ABRISH-2PLWN-V2-ABR-07",
-        "name": "Abrish Digital Printed All Over Two Piece Lawn 2PC — 7",
-        "path": "products/abrish-2plwn-v2-abr-07-abrish-digital-printed-all-over-two-piece-lawn-2pc/"
       }
     ]
   },
