@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { sanitizeSupplierDescription } from './product-description.mjs';
-import { classifyProduct, normalizeCollection, summarizeScope } from './dawood-taxonomy.mjs';
+import { classifyProduct, deriveCanonicalRelations, normalizeCollection, summarizeScope } from './dawood-taxonomy.mjs';
 
 const SOURCE = 'https://dawooddesigners.com';
 const OUTPUT = path.resolve('catalogue/dawood-products.json');
@@ -380,8 +380,16 @@ function buildDriftReport({ source, scope, products, previous, snapshot, priorSn
       collectionProductCoverage: collectionCoverage,
       previousCollectionProductCoverage: Number.isFinite(previousCollectionCoverage) ? previousCollectionCoverage : null,
       taxonomyFingerprint: snapshot.taxonomyFingerprint,
-      previousTaxonomyFingerprint: priorSnapshot.taxonomyFingerprint || null
+      previousTaxonomyFingerprint: priorSnapshot.taxonomyFingerprint || null,
+      relationMappedProducts: snapshot.relationMapping.relationMappedProducts,
+      relationUnmappedProducts: snapshot.relationMapping.relationUnmappedProducts,
+      relationGroups: snapshot.relationMapping.relationGroups,
+      relationGroupsWith3PlusProducts: snapshot.relationMapping.relationGroupsWith3PlusProducts,
+      ambiguousRelationProducts: snapshot.relationMapping.ambiguousRelationProducts,
+      genericCollectionsRejected: snapshot.relationMapping.genericCollectionsRejected,
+      multiBrandCollectionsRejected: snapshot.relationMapping.multiBrandCollectionsRejected
     },
+    relationMapping: snapshot.relationMapping,
     exclusionReasons: scope.exclusionReasons,
     duplicateSourceCodes: source.duplicateCodes.slice(0, 30),
     collectionAnomalies: source.collectionAnomalies.slice(0, 30),
@@ -467,7 +475,7 @@ async function main() {
 
   const validRecords = records.filter(item => item.image && item.sourcePrice > 0);
   const collapsed = collapseDuplicateSupplierCodes(validRecords);
-  const products = collapsed.products
+  const pricedProducts = collapsed.products
     .map(item => {
       const oldPrice = previousPrices.get(item.code);
       const changedTooFar = oldPrice > 0 && Math.abs(item.sourcePrice - oldPrice) / oldPrice > MAX_SOURCE_PRICE_CHANGE;
@@ -475,6 +483,8 @@ async function main() {
       return { ...item, price: null, markup: null, pricingStatus: 'enquire', pricingReason: 'source-price-change-review' };
     })
     .sort((a, b) => Number(b.available) - Number(a.available) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
+  const relationResolution = deriveCanonicalRelations(pricedProducts, { collectionAnomalies: membershipDiscovery.anomalies });
+  const products = relationResolution.products;
 
   const snapshot = {
     schemaVersion: 1,
@@ -496,6 +506,7 @@ async function main() {
     schemaHealth,
     seasons: [...new Set(classified.flatMap(item => item.classification.seasons))].sort(),
     brands: [...new Set(products.map(item => item.brand).filter(Boolean))].sort(),
+    relationMapping: relationResolution.diagnostics,
     collections: discovered.collections.map(collection => {
       const fetchStat = membershipDiscovery.collectionStats.find(item => item.handle === collection.handle);
       return {
@@ -536,6 +547,7 @@ async function main() {
     candidateProducts: products.length,
     seasons: snapshot.seasons,
     brands: snapshot.brands.length,
+    relationMapping: snapshot.relationMapping,
     collectionAnomalies: membershipDiscovery.anomalies,
     duplicateSourceCodes: collapsed.duplicateCodes,
     driftOk: drift.ok,
@@ -567,7 +579,14 @@ async function main() {
       includedSourceProducts: scope.included,
       excludedSourceProducts: scope.excluded,
       ambiguousSourceProducts: scope.ambiguous,
-      taxonomyFingerprint: snapshot.taxonomyFingerprint
+      taxonomyFingerprint: snapshot.taxonomyFingerprint,
+      relationMapping: {
+        relationMappedProducts: snapshot.relationMapping.relationMappedProducts,
+        relationUnmappedProducts: snapshot.relationMapping.relationUnmappedProducts,
+        relationGroups: snapshot.relationMapping.relationGroups,
+        relationGroupsWith3PlusProducts: snapshot.relationMapping.relationGroupsWith3PlusProducts,
+        ambiguousRelationProducts: snapshot.relationMapping.ambiguousRelationProducts
+      }
     },
     pricing: { nonEmbroideredMarkup: 1000, embroideredMarkup: 2500, currency: 'PKR' },
     counts: {
