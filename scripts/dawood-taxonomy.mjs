@@ -206,6 +206,7 @@ export function summarizeScope(classified = []) {
 }
 
 const RELATION_UNSAFE_PATTERN = /\b(?:new\s+arrivals?|restock|hot\s+picks?|limited\s+stock|sale|special\s+price|hit\s+codes?|mix(?:ed)?\s+brands?|ready\s*(?:to|-)?\s*wear|pret)\b/i;
+const RELATION_VOLUME_PATTERN = /\b(?:vol|volume)\s*(?:[-#]\s*)?\d+\b/i;
 const RELATION_GENERIC_TOKENS = new Set([
   'and','by','collection','collections','daily','dd','deal','digital','digitally','dress','edit','eid','emb','embroidered','embroidery',
   'fabric','fall','formal','formals','fully','heavy','hit','kari','lawn','linen','luxury','new','of','overs','patch','patches','piece','pieces',
@@ -237,9 +238,9 @@ function collectionIdentity(collection = {}) {
   return { id, title, handle };
 }
 
-function meaningfulCollectionWords(collection, brand) {
+function meaningfulCollectionTitleWords(collection, brand) {
   const brandWords = new Set(normalizeRelationWords(brand));
-  return normalizeRelationWords(`${collection.title} ${collection.handle}`)
+  return normalizeRelationWords(collection.title)
     .filter(word => !brandWords.has(word))
     .filter(word => !RELATION_GENERIC_TOKENS.has(word))
     .filter(word => !/^\d+$/.test(word))
@@ -307,7 +308,8 @@ export function deriveCanonicalRelations(products = [], { collectionAnomalies = 
     }
     const brand = brands[0];
     const taxonomyText = `${entry.title} ${entry.handle}`;
-    if (RELATION_UNSAFE_PATTERN.test(taxonomyText) || meaningfulCollectionWords(entry, brand).length === 0) {
+    const titleWords = meaningfulCollectionTitleWords(entry, brand);
+    if (!entry.title || !entry.handle || RELATION_UNSAFE_PATTERN.test(taxonomyText) || RELATION_VOLUME_PATTERN.test(entry.title) || titleWords.length === 0) {
       genericCollectionsRejected += 1;
       continue;
     }
