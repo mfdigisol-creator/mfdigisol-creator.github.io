@@ -204,3 +204,200 @@ export function summarizeScope(classified = []) {
   }
   return { ...counts, exclusionReasons };
 }
+
+const RELATION_UNSAFE_PATTERN = /\b(?:new\s+arrivals?|restock|hot\s+picks?|limited\s+stock|sale|special\s+price|hit\s+codes?|mix(?:ed)?\s+brands?|ready\s*(?:to|-)?\s*wear|pret)\b/i;
+const RELATION_GENERIC_TOKENS = new Set([
+  'and','by','collection','collections','daily','dd','deal','digital','digitally','dress','edit','eid','emb','embroidered','embroidery',
+  'fabric','fall','formal','formals','fully','heavy','hit','kari','lawn','linen','luxury','new','of','overs','patch','patches','piece','pieces',
+  'plain','premium','pret','print','printed','range','ready','restock','sale','series','shirt','solid','special','spring','stock','suit','suits',
+  'summer','the','to','trending','unstitched','unstitch','vol','volume','wash','washing','wear','winter','with',
+  'bana','cambric','chiffon','cotton','dhanak','dora','jacquard','karandi','khaddar','marina','net','organza','shamoz','silk','slub','velvet','viscose',
+  'chikan','chikankari','chickenkari','schiffli','shiffli','lazer','laser','cutwork','applique','sequence','sequin','sequins','lifestyle','left','over','leftover','leftovers'
+]);
+
+function normalizeRelationWords(value) {
+  return String(value ?? '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+function normalizedBrandKey(value) {
+  return normalizeRelationWords(value).join(' ');
+}
+
+function collectionIdentity(collection = {}) {
+  const id = collection.id == null ? '' : String(collection.id).trim();
+  const title = clean(collection.title);
+  const handle = clean(collection.handle);
+  return { id, title, handle };
+}
+
+function meaningfulCollectionWords(collection, brand) {
+  const brandWords = new Set(normalizeRelationWords(brand));
+  return normalizeRelationWords(`${collection.title} ${collection.handle}`)
+    .filter(word => !brandWords.has(word))
+    .filter(word => !RELATION_GENERIC_TOKENS.has(word))
+    .filter(word => !/^\d+$/.test(word))
+    .filter(word => !/^[123](?:pc|pcs)$/.test(word))
+    .filter(word => !/^20\d{2}$/.test(word));
+}
+
+function compareStableIds(a, b) {
+  const aNum = /^\d+$/.test(a) ? BigInt(a) : null;
+  const bNum = /^\d+$/.test(b) ? BigInt(b) : null;
+  if (aNum !== null && bNum !== null) return aNum < bNum ? -1 : aNum > bNum ? 1 : 0;
+  return a.localeCompare(b);
+}
+
+function isProperSubset(left, right) {
+  if (left.size >= right.size) return false;
+  for (const value of left) if (!right.has(value)) return false;
+  return true;
+}
+
+function sameMembers(left, right) {
+  if (left.size !== right.size) return false;
+  for (const value of left) if (!right.has(value)) return false;
+  return true;
+}
+
+export function deriveCanonicalRelations(products = [], { collectionAnomalies = [] } = {}) {
+  const normalizedProducts = Array.isArray(products) ? products.filter(item => item && typeof item === 'object') : [];
+  const anomaliesById = new Set(collectionAnomalies.map(item => String(item?.id ?? '').trim()).filter(Boolean));
+  const anomaliesByHandle = new Set(collectionAnomalies.map(item => clean(item?.handle)).filter(Boolean));
+  const collectionMap = new Map();
+
+  for (const product of normalizedProducts) {
+    const memberId = String(product.id ?? '').trim();
+    if (!memberId) continue;
+    for (const rawCollection of Array.isArray(product.sourceCollections) ? product.sourceCollections : []) {
+      const collection = collectionIdentity(rawCollection);
+      if (!collection.id) continue;
+      if (!collectionMap.has(collection.id)) {
+        collectionMap.set(collection.id, { ...collection, members: new Map() });
+      }
+      collectionMap.get(collection.id).members.set(memberId, product);
+    }
+  }
+
+  const safeCollections = new Map();
+  let genericCollectionsRejected = 0;
+  let multiBrandCollectionsRejected = 0;
+  let anomalyCollectionsRejected = 0;
+  let undersizedCollectionsRejected = 0;
+
+  for (const [id, entry] of collectionMap) {
+    if (anomaliesById.has(id) || anomaliesByHandle.has(entry.handle)) {
+      anomalyCollectionsRejected += 1;
+      continue;
+    }
+    if (entry.members.size < 3) {
+      undersizedCollectionsRejected += 1;
+      continue;
+    }
+    const brands = [...new Set([...entry.members.values()].map(item => normalizedBrandKey(item.brand)).filter(Boolean))];
+    if (brands.length !== 1) {
+      multiBrandCollectionsRejected += 1;
+      continue;
+    }
+    const brand = brands[0];
+    const taxonomyText = `${entry.title} ${entry.handle}`;
+    if (RELATION_UNSAFE_PATTERN.test(taxonomyText) || meaningfulCollectionWords(entry, brand).length === 0) {
+      genericCollectionsRejected += 1;
+      continue;
+    }
+    safeCollections.set(id, {
+      id,
+      title: entry.title,
+      handle: entry.handle,
+      brand,
+      members: new Set(entry.members.keys())
+    });
+  }
+
+  const assignments = new Map();
+  let ambiguousRelationProducts = 0;
+  for (const product of normalizedProducts) {
+    const memberId = String(product.id ?? '').trim();
+    if (!memberId) continue;
+    const productBrand = normalizedBrandKey(product.brand);
+    const candidates = (Array.isArray(product.sourceCollections) ? product.sourceCollections : [])
+      .map(collection => safeCollections.get(String(collection?.id ?? '').trim()))
+      .filter(candidate => candidate && candidate.brand === productBrand && candidate.members.has(memberId));
+    if (!candidates.length) continue;
+
+    const mostSpecific = candidates.filter(candidate => !candidates.some(other => other.id !== candidate.id && isProperSubset(other.members, candidate.members)));
+    let selected = null;
+    if (mostSpecific.length === 1) {
+      selected = mostSpecific[0];
+    } else if (mostSpecific.length > 1 && mostSpecific.every(candidate => sameMembers(candidate.members, mostSpecific[0].members))) {
+      selected = [...mostSpecific].sort((a, b) => compareStableIds(a.id, b.id))[0];
+    } else if (mostSpecific.length > 1) {
+      ambiguousRelationProducts += 1;
+    }
+    if (selected) assignments.set(memberId, selected);
+  }
+
+  const mappedProducts = normalizedProducts.map(product => {
+    const selected = assignments.get(String(product.id ?? '').trim());
+    if (!selected) {
+      return {
+        ...product,
+        relationKey: null,
+        relationCollectionId: null,
+        relationCollectionHandle: null,
+        relationCollectionTitle: null
+      };
+    }
+    return {
+      ...product,
+      relationKey: `dawood_collection:${selected.id}`,
+      relationCollectionId: selected.id,
+      relationCollectionHandle: selected.handle,
+      relationCollectionTitle: selected.title
+    };
+  });
+
+  const finalGroups = new Map();
+  for (const product of mappedProducts) {
+    if (!product.relationKey) continue;
+    if (!finalGroups.has(product.relationKey)) finalGroups.set(product.relationKey, []);
+    finalGroups.get(product.relationKey).push(product);
+  }
+  const groups = [...finalGroups.entries()]
+    .filter(([, members]) => members.length >= 3)
+    .map(([relationKey, members]) => ({
+      relationKey,
+      collectionId: members[0].relationCollectionId,
+      collectionTitle: members[0].relationCollectionTitle,
+      collectionHandle: members[0].relationCollectionHandle,
+      brand: members[0].brand,
+      products: members.length,
+      available: members.filter(item => item.available === true).length,
+      productCodes: members.map(item => item.code).filter(Boolean).sort()
+    }))
+    .sort((a, b) => compareStableIds(a.collectionId, b.collectionId));
+
+  const mappedCount = mappedProducts.filter(item => item.relationKey).length;
+  return {
+    products: mappedProducts,
+    diagnostics: {
+      relationMappedProducts: mappedCount,
+      relationUnmappedProducts: mappedProducts.length - mappedCount,
+      relationGroups: finalGroups.size,
+      relationGroupsWith3PlusProducts: groups.length,
+      ambiguousRelationProducts,
+      genericCollectionsRejected,
+      multiBrandCollectionsRejected,
+      anomalyCollectionsRejected,
+      undersizedCollectionsRejected,
+      safeCandidateCollections: safeCollections.size,
+      groups
+    }
+  };
+}
