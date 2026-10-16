@@ -169,4 +169,36 @@ const noInference = deriveCanonicalRelations([
 ]);
 assert.equal(noInference.products.every(item => item.relationKey === null), true);
 
+const brandTitleDescriptiveHandle = sourceCollection(900, 'BAREEZE', 'bareeze-digital-classic-printed-lawn-3pc');
+const brandTitleRejected = deriveCanonicalRelations([
+  relationProduct(80, 'Bareeze', [brandTitleDescriptiveHandle]),
+  relationProduct(81, 'Bareeze', [brandTitleDescriptiveHandle]),
+  relationProduct(82, 'Bareeze', [brandTitleDescriptiveHandle])
+]);
+assert.equal(brandTitleRejected.products.every(item => item.relationKey === null), true);
+
+const ddBrandTitle = sourceCollection(901, 'DD-SHANAYA', 'dd-shanya');
+const ddBrandRejected = deriveCanonicalRelations([
+  relationProduct(83, 'Shanaya', [ddBrandTitle]),
+  relationProduct(84, 'Shanaya', [ddBrandTitle]),
+  relationProduct(85, 'Shanaya', [ddBrandTitle])
+]);
+assert.equal(ddBrandRejected.products.every(item => item.relationKey === null), true);
+
+const broadLuxuryBrand = sourceCollection(902, 'LUXURY TAWAKKAL', 'luxury-tawakakl');
+const broadLuxuryRejected = deriveCanonicalRelations([
+  relationProduct(86, 'Tawakkal', [broadLuxuryBrand]),
+  relationProduct(87, 'Tawakkal', [broadLuxuryBrand]),
+  relationProduct(88, 'Tawakkal', [broadLuxuryBrand])
+]);
+assert.equal(broadLuxuryRejected.products.every(item => item.relationKey === null), true);
+
+const volumeBucket = sourceCollection(903, 'Anaya Vol -1', 'anaya-vol-1');
+const volumeRejected = deriveCanonicalRelations([
+  relationProduct(89, 'Mahnur', [volumeBucket]),
+  relationProduct(90, 'Mahnur', [volumeBucket]),
+  relationProduct(91, 'Mahnur', [volumeBucket])
+]);
+assert.equal(volumeRejected.products.every(item => item.relationKey === null), true);
+
 console.log('Dawood taxonomy tests passed: scope/pricing taxonomy + canonical relation-family scenarios.');
