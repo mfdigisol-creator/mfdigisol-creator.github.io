@@ -1,30 +1,25 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-17T04:32:23.046Z",
+  "generatedAt": "2026-10-17T15:38:52.961Z",
   "summary": {
-    "products": 1199,
-    "available": 1043,
-    "formal": 747,
-    "luxury": 452,
+    "products": 1278,
+    "available": 1121,
+    "formal": 804,
+    "luxury": 474,
     "priceOnEnquiry": 9,
-    "metaFeedProducts": 1190,
-    "canonicalBrands": 70,
-    "aliasCorrections": 24,
+    "metaFeedProducts": 1269,
+    "canonicalBrands": 83,
+    "aliasCorrections": 23,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 48,
+    "duplicateNames": 64,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 2787,
-    "newlyRemovedProducts": 64,
+    "removedProducts": 2755,
+    "newlyRemovedProducts": 46,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
-    {
-      "code": "MIXBRAND-PRNKHD-2P-BL-349",
-      "sourceBrand": "DawoodDesigner",
-      "canonicalBrand": "Other designs"
-    },
     {
       "code": "MIXBRAND-PRNKHD-2P-BL-350",
       "sourceBrand": "DawoodDesigner",
@@ -150,7 +145,7 @@
     },
     {
       "value": "bareeze embroidered karandi 3pc — 1",
-      "count": 8
+      "count": 6
     },
     {
       "value": "bareeze embroidered karandi 3pc — 2",
@@ -158,7 +153,7 @@
     },
     {
       "value": "bareeze embroidered karandi 3pc — 3",
-      "count": 5
+      "count": 4
     },
     {
       "value": "bareeze embroidered karandi 3pc — 4",
@@ -166,15 +161,15 @@
     },
     {
       "value": "bareeze embroidered karandi 3pc — 5",
-      "count": 7
+      "count": 6
     },
     {
       "value": "bareeze embroidered karandi 3pc — 6",
-      "count": 7
+      "count": 8
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 1",
-      "count": 9
+      "count": 8
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 10",
@@ -182,7 +177,7 @@
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 2",
-      "count": 6
+      "count": 7
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 3",
@@ -197,7 +192,7 @@
       "count": 4
     },
     {
-      "value": "cross stitch premium jacquard viscose 3pc — 5",
+      "value": "cross stitch premium jacquard viscose 3pc — 4",
       "count": 2
     },
     {
@@ -277,7 +272,7 @@
       "count": 2
     },
     {
-      "value": "mausummery digital printed linen 3pc — 1",
+      "value": "malhaar digital printed linen 3pc — 8",
       "count": 2
     },
     {
@@ -325,7 +320,71 @@
       "count": 2
     },
     {
+      "value": "sana safinaz luxury emb velvet 3pc — 1",
+      "count": 2
+    },
+    {
+      "value": "sana safinaz luxury emb velvet 3pc — 2",
+      "count": 2
+    },
+    {
+      "value": "sana safinaz luxury emb velvet 3pc — 3",
+      "count": 2
+    },
+    {
+      "value": "sana safinaz luxury emb velvet 3pc — 4",
+      "count": 2
+    },
+    {
+      "value": "sana safinaz luxury emb velvet 3pc — 5",
+      "count": 2
+    },
+    {
+      "value": "sana safinaz luxury emb velvet 3pc — 6",
+      "count": 2
+    },
+    {
+      "value": "sana safinaz luxury emb velvet 3pc — 7",
+      "count": 2
+    },
+    {
+      "value": "sana safinaz luxury emb velvet 3pc — 8",
+      "count": 2
+    },
+    {
+      "value": "sapphire jacquard karandi 3pc — 1",
+      "count": 2
+    },
+    {
+      "value": "sapphire jacquard karandi 3pc — 3",
+      "count": 2
+    },
+    {
+      "value": "sapphire jacquard karandi 3pc — 5",
+      "count": 2
+    },
+    {
+      "value": "sapphire jacquard karandi 3pc — 6",
+      "count": 2
+    },
+    {
       "value": "sapphire jacquard viscose 3pc — 1",
+      "count": 3
+    },
+    {
+      "value": "sapphire jacquard viscose 3pc — 2",
+      "count": 2
+    },
+    {
+      "value": "sapphire jacquard viscose 3pc — 3",
+      "count": 3
+    },
+    {
+      "value": "sapphire jacquard viscose 3pc — 4",
+      "count": 2
+    },
+    {
+      "value": "sapphire jacquard viscose 3pc — 6",
       "count": 2
     },
     {
@@ -340,324 +399,234 @@
   "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "BONANZA-2PLWN-V1-ABR-10",
-      "name": "Bonanza Satrangi Digital Printed All Over Two Piece Lawn 2PC — 10",
-      "path": "products/bonanza-2plwn-v1-abr-10-bonanza-satrangi-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "CRYSTAL-DL-ORG-1543",
+      "name": "Crystal | Organza | Dressline — 1543",
+      "path": "products/crystal-dl-org-1543-crystal-organza-dressline/"
     },
     {
-      "code": "NISHAT-2PLWN-V2-ABR-01",
-      "name": "Nishat Digital Printed All Over Two Piece Lawn 2PC — 1",
-      "path": "products/nishat-2plwn-v2-abr-01-nishat-digital-printed-all-over-two-piece-lawn-2pc/"
+      "code": "BAREEZE-RC-V3-2026-DD-01",
+      "name": "Bareeze Fully Emb Rice Karandi 2PC — 1",
+      "path": "products/bareeze-rc-v3-2026-dd-01-bareeze-fully-emb-rice-karandi-2pc/"
     },
     {
-      "code": "AFREEN-3PLWN-V2-HM-LS-0728",
-      "name": "Afreen By Lala Digital Printed Airjet Lawn 3PC — LS-0728",
-      "path": "products/afreen-3plwn-v2-hm-ls-0728-afreen-by-lala-digital-printed-airjet-lawn-3pc/"
+      "code": "BAROQUE-CHK25-LINEN-01",
+      "name": "Baroque Chickenkari Daman Linen 3PC — 1",
+      "path": "products/baroque-chk25-linen-01-baroque-chickenkari-daman-linen-3pc/"
     },
     {
-      "code": "ANAYANOOR-KHD-V3-3P-05",
-      "name": "Anaya Noor Printed & Emb Khaddar 3PC — 5",
-      "path": "products/anayanoor-khd-v3-3p-05-anaya-noor-printed-and-emb-khaddar-3pc/"
+      "code": "CROSSSTITCH-V1-S26-A-05",
+      "name": "Cross Stitch Premium Jacquard Viscose 3PC — 5",
+      "path": "products/crossstitch-v1-s26-a-05-cross-stitch-premium-jacquard-viscose-3pc/"
     },
     {
-      "code": "MARINO-ANAYANOOR-VOL-01-D06",
-      "name": "Marino By Anaya Noor Emb Marina With Plachi Dupatta 3PC — 6",
-      "path": "products/marino-anayanoor-vol-01-d06-marino-by-anaya-noor-emb-marina-with-plachi-dupatta-3pc/"
+      "code": "KAYSERIA-LINEN-V2-3P-JLALCUT-06",
+      "name": "Kayseria Digital Printed Bana Dora Linen 3PC — 6",
+      "path": "products/kayseria-linen-v2-3p-jlalcut-06-kayseria-digital-printed-bana-dora-linen-3pc/"
     },
     {
-      "code": "BAREEZE-KHD-V1-2P-JLAL-17",
-      "name": "Bareeze Digital Printed Allover Two Piece Khaddar 2PC — 17",
-      "path": "products/bareeze-khd-v1-2p-jlal-17-bareeze-digital-printed-allover-two-piece-khaddar-2pc/"
+      "code": "MAUSUM-3PLIN-V2-HM-ACONITE-1",
+      "name": "Mausummery Digital Printed Linen 3PC — 1",
+      "path": "products/mausum-3plin-v2-hm-aconite-1-mausummery-digital-printed-linen-3pc/"
     },
     {
-      "code": "JUGNU-DHNK-3P-EHT-1992",
-      "name": "Jugnu Emb Dhanak 3PC — 1992",
-      "path": "products/jugnu-dhnk-3p-eht-1992-jugnu-emb-dhanak-3pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-111",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 111",
+      "path": "products/mixbrand-prnkhd-2p-bl-111-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "MIXBRAND-PRNKHD-2P-BL-281",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 281",
-      "path": "products/mixbrand-prnkhd-2p-bl-281-mix-brand-digital-printed-allover-khaddar-2pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-205",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 205",
+      "path": "products/mixbrand-prnkhd-2p-bl-205-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "RAQS-VISC-V2-3P-UNEQ-13886",
-      "name": "Raqs By Uneq Digital Printed Cotton Viscose 3PC — 13886",
-      "path": "products/raqs-visc-v2-3p-uneq-13886-raqs-by-uneq-digital-printed-cotton-viscose-3pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-247",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 247",
+      "path": "products/mixbrand-prnkhd-2p-bl-247-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "MAUSUM-V1-ALSTROEMERIA-3PC-4",
-      "name": "Mausummery Digital Printed Linen 3PC — 4",
-      "path": "products/mausum-v1-alstroemeria-3pc-4-mausummery-digital-printed-linen-3pc/"
+      "code": "RIJJA-PRN-KHD-V3-3P-02",
+      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 2",
+      "path": "products/rijja-prn-khd-v3-3p-02-rijja-by-murashe-digital-printed-khaddar-3pc/"
     },
     {
-      "code": "REGALIA-KHD-V2-3P-HM-08",
-      "name": "Regalia Digital Printed Khaddar 3PC — 8",
-      "path": "products/regalia-khd-v2-3p-hm-08-regalia-digital-printed-khaddar-3pc/"
+      "code": "RIJJA-PRN-KHD-V2-3P-04",
+      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 4",
+      "path": "products/rijja-prn-khd-v2-3p-04-rijja-by-murashe-digital-printed-khaddar-3pc/"
     },
     {
-      "code": "ZARPOSH-DHNK-3P-EHT-2021",
-      "name": "Zarposh Plain Emb Dhanak 3-Piece Suit — 2021",
-      "path": "products/zarposh-dhnk-3p-eht-2021-zarposh-plain-emb-dhanak-3-piece-suit/"
+      "code": "RIJJA-PRN-KHD-V2-3P-06",
+      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 6",
+      "path": "products/rijja-prn-khd-v2-3p-06-rijja-by-murashe-digital-printed-khaddar-3pc/"
     },
     {
-      "code": "CHAMKI-LIGHT-WOOL-PECH-AC-05",
-      "name": "Chamki Fancy Light Emb Wool Peach 3PC — 5",
-      "path": "products/chamki-light-wool-pech-ac-05-chamki-fancy-light-emb-wool-peach-3pc/"
+      "code": "ROYALGALL-PRSHY-MARIN-RG-08",
+      "name": "Royal Galleria By Parishay Luxury Marina'26 — RG-08",
+      "path": "products/royalgall-prshy-marin-rg-08-royal-galleria-by-parishay-luxury-marina-26/"
     },
     {
-      "code": "ZESH-VDS-VISC-V1-3P-HM-09",
-      "name": "Zesh Printed Velvet Dora Viscose 3PC — 9",
-      "path": "products/zesh-vds-visc-v1-3p-hm-09-zesh-printed-velvet-dora-viscose-3pc/"
+      "code": "MUSHQ-SHN-LIN-V285-3P-05",
+      "name": "Mushq By Shanaya Digital Printed Linen 3PC — 5",
+      "path": "products/mushq-shn-lin-v285-3p-05-mushq-by-shanaya-digital-printed-linen-3pc/"
     },
     {
-      "code": "AREESHA-ANAYANOOR-3P-D03",
-      "name": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC — 3",
-      "path": "products/areesha-anayanoor-3p-d03-areesha-by-anaya-noor-heavy-emb-khaddar-3pc/"
+      "code": "ANAYA-COTRYKHD-V282-3P-SHN-07",
+      "name": "Anaya Noor Digital Printed Cotry Khaddar 3PC — 7",
+      "path": "products/anaya-cotrykhd-v282-3p-shn-07-anaya-noor-digital-printed-cotry-khaddar-3pc/"
     },
     {
-      "code": "AREESHA-ANAYANOOR-3P-D07",
-      "name": "Areesha By Anaya Noor Heavy Emb Khaddar 3PC — 7",
-      "path": "products/areesha-anayanoor-3p-d07-areesha-by-anaya-noor-heavy-emb-khaddar-3pc/"
+      "code": "ANAYA-COTRYKHD-V282-3P-SHN-09",
+      "name": "Anaya Noor Digital Printed Cotry Khaddar 3PC — 9",
+      "path": "products/anaya-cotrykhd-v282-3p-shn-09-anaya-noor-digital-printed-cotry-khaddar-3pc/"
     },
     {
-      "code": "BRZE-BRSHA-KRNDI-V6-3P-AC-06",
-      "name": "Bareeze Embroidered Karandi 3PC — 6",
-      "path": "products/brze-brsha-krndi-v6-3p-ac-06-bareeze-embroidered-karandi-3pc/"
+      "code": "B&V-NAQSH-JAC-VISC-3P-HM-163",
+      "name": "Bloom & Vogue By Naqsh Digital Printed Self Jacquard Viscose 3PC — 163",
+      "path": "products/b-and-v-naqsh-jac-visc-3p-hm-163-bloom-and-vogue-by-naqsh-digital-printed-self-jacquard-viscose-3pc/"
     },
     {
-      "code": "MIXBRAND-PRNKHD-2P-BL-518",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 518",
-      "path": "products/mixbrand-prnkhd-2p-bl-518-mix-brand-digital-printed-allover-khaddar-2pc/"
+      "code": "BRZE-BRSHA-KRNDI-V7-3P-AC-01",
+      "name": "Bareeze Embroidered Karandi 3PC — 1",
+      "path": "products/brze-brsha-krndi-v7-3p-ac-01-bareeze-embroidered-karandi-3pc/"
     },
     {
-      "code": "RIWAAZ-W26-KHD-V1-3P-HA-68",
-      "name": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC — 68",
-      "path": "products/riwaaz-w26-khd-v1-3p-ha-68-riwaaz-by-anaya-noor-digital-printed-and-emb-khaddar-3pc/"
+      "code": "BRZE-BRSHA-KRNDI-V10-3P-AC-01",
+      "name": "Bareeze Embroidered Karandi 3PC — 1",
+      "path": "products/brze-brsha-krndi-v10-3p-ac-01-bareeze-embroidered-karandi-3pc/"
     },
     {
-      "code": "CROSSSTITCH-V1-S26-A-03",
-      "name": "Cross Stitch Premium Jacquard Viscose 3PC — 3",
-      "path": "products/crossstitch-v1-s26-a-03-cross-stitch-premium-jacquard-viscose-3pc/"
+      "code": "ZAREEN-SHN-VISC-3P-UNS-9",
+      "name": "Zareen By Shanaya Digital Printed Linen Viscose 3PC — UNS-9",
+      "path": "products/zareen-shn-visc-3p-uns-9-zareen-by-shanaya-digital-printed-linen-viscose-3pc/"
     },
     {
-      "code": "BT-CO-ORD-KHD-2P-DD-10",
-      "name": "Beechtree Digital Printed Shirt & Dupatta Khaddar 2PC — 10",
-      "path": "products/bt-co-ord-khd-2p-dd-10-beechtree-digital-printed-shirt-and-dupatta-khaddar-2pc/"
+      "code": "ZESH-VDS-VISC-V1-3P-HM-01",
+      "name": "Zesh Printed Velvet Dora Viscose 3PC — 1",
+      "path": "products/zesh-vds-visc-v1-3p-hm-01-zesh-printed-velvet-dora-viscose-3pc/"
     },
     {
-      "code": "BT-CO-ORD-KHD-2P-DD-16",
-      "name": "Beechtree Digital Printed Shirt & Dupatta Khaddar 2PC — 16",
-      "path": "products/bt-co-ord-khd-2p-dd-16-beechtree-digital-printed-shirt-and-dupatta-khaddar-2pc/"
+      "code": "ZESH-COARD-SILK-V1-LDS-05",
+      "name": "Zesh Printed Silk 2PC — 5",
+      "path": "products/zesh-coard-silk-v1-lds-05-zesh-printed-silk-2pc/"
     },
     {
-      "code": "MIXBRAND-PRNKHD-2P-BL-436",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 436",
-      "path": "products/mixbrand-prnkhd-2p-bl-436-mix-brand-digital-printed-allover-khaddar-2pc/"
+      "code": "BRZE-BRSHA-KRNDI-V12-3P-AC-03",
+      "name": "Bareeze Embroidered Karandi 3PC — 3",
+      "path": "products/brze-brsha-krndi-v12-3p-ac-03-bareeze-embroidered-karandi-3pc/"
     },
     {
-      "code": "SAPHIRE-JAQKRND-V2-3P-AC-04",
-      "name": "Sapphire Jacquard Karandi 3PC — 4",
-      "path": "products/saphire-jaqkrnd-v2-3p-ac-04-sapphire-jacquard-karandi-3pc/"
+      "code": "RIJJA-PRN-KHD-V1-3P-09",
+      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 9",
+      "path": "products/rijja-prn-khd-v1-3p-09-rijja-by-murashe-digital-printed-khaddar-3pc/"
     },
     {
-      "code": "HALIMA-ANAYANOOR-W26-D01",
-      "name": "Halima By Anaya Noor Premium Emb Viscose 3PC — 1",
-      "path": "products/halima-anayanoor-w26-d01-halima-by-anaya-noor-premium-emb-viscose-3pc/"
+      "code": "BRZE-BRSHA-KRNDI-V3-3P-AC-05",
+      "name": "Bareeze Embroidered Karandi 3PC — 5",
+      "path": "products/brze-brsha-krndi-v3-3p-ac-05-bareeze-embroidered-karandi-3pc/"
     },
     {
-      "code": "HALIMA-ANAYANOOR-W26-D10",
-      "name": "Halima By Anaya Noor Premium Emb Viscose 3PC — 10",
-      "path": "products/halima-anayanoor-w26-d10-halima-by-anaya-noor-premium-emb-viscose-3pc/"
+      "code": "BT-CO-ORD-KHD-2P-DD-02",
+      "name": "Beechtree Digital Printed Shirt & Dupatta Khaddar 2PC — 2",
+      "path": "products/bt-co-ord-khd-2p-dd-02-beechtree-digital-printed-shirt-and-dupatta-khaddar-2pc/"
     },
     {
-      "code": "HALIMA-ANAYANOOR-W26-D02",
-      "name": "Halima By Anaya Noor Premium Emb Viscose 3PC — 2",
-      "path": "products/halima-anayanoor-w26-d02-halima-by-anaya-noor-premium-emb-viscose-3pc/"
+      "code": "WINTERMUSE-KHD-3P-RA-06",
+      "name": "Winter Muse By Zarineh Digital Printed & Emb Khaddar 3PC — 6",
+      "path": "products/wintermuse-khd-3p-ra-06-winter-muse-by-zarineh-digital-printed-and-emb-khaddar-3pc/"
     },
     {
-      "code": "HALIMA-ANAYANOOR-W26-D05",
-      "name": "Halima By Anaya Noor Premium Emb Viscose 3PC — 5",
-      "path": "products/halima-anayanoor-w26-d05-halima-by-anaya-noor-premium-emb-viscose-3pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-102",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 102",
+      "path": "products/mixbrand-cambcot-2p-bl-102-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-01",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 1",
-      "path": "products/mixbrand-cambcot-2p-bl-01-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-11",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 11",
+      "path": "products/mixbrand-cambcot-2p-bl-11-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-112",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 112",
-      "path": "products/mixbrand-cambcot-2p-bl-112-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-125",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 125",
+      "path": "products/mixbrand-cambcot-2p-bl-125-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-119",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 119",
-      "path": "products/mixbrand-cambcot-2p-bl-119-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-127",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 127",
+      "path": "products/mixbrand-cambcot-2p-bl-127-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-122",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 122",
-      "path": "products/mixbrand-cambcot-2p-bl-122-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-131",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 131",
+      "path": "products/mixbrand-cambcot-2p-bl-131-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-130",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 130",
-      "path": "products/mixbrand-cambcot-2p-bl-130-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-141",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 141",
+      "path": "products/mixbrand-cambcot-2p-bl-141-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-136",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 136",
-      "path": "products/mixbrand-cambcot-2p-bl-136-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-146",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 146",
+      "path": "products/mixbrand-cambcot-2p-bl-146-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-139",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 139",
-      "path": "products/mixbrand-cambcot-2p-bl-139-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-24",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 24",
+      "path": "products/mixbrand-cambcot-2p-bl-24-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-14",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 14",
-      "path": "products/mixbrand-cambcot-2p-bl-14-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-03",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 3",
+      "path": "products/mixbrand-cambcot-2p-bl-03-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-144",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 144",
-      "path": "products/mixbrand-cambcot-2p-bl-144-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-43",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 43",
+      "path": "products/mixbrand-cambcot-2p-bl-43-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-15",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 15",
-      "path": "products/mixbrand-cambcot-2p-bl-15-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-49",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 49",
+      "path": "products/mixbrand-cambcot-2p-bl-49-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-22",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 22",
-      "path": "products/mixbrand-cambcot-2p-bl-22-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-50",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 50",
+      "path": "products/mixbrand-cambcot-2p-bl-50-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-30",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 30",
-      "path": "products/mixbrand-cambcot-2p-bl-30-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-54",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 54",
+      "path": "products/mixbrand-cambcot-2p-bl-54-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-35",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 35",
-      "path": "products/mixbrand-cambcot-2p-bl-35-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-70",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 70",
+      "path": "products/mixbrand-cambcot-2p-bl-70-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-37",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 37",
-      "path": "products/mixbrand-cambcot-2p-bl-37-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-77",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 77",
+      "path": "products/mixbrand-cambcot-2p-bl-77-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-41",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 41",
-      "path": "products/mixbrand-cambcot-2p-bl-41-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-82",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 82",
+      "path": "products/mixbrand-cambcot-2p-bl-82-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-45",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 45",
-      "path": "products/mixbrand-cambcot-2p-bl-45-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-88",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 88",
+      "path": "products/mixbrand-cambcot-2p-bl-88-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-46",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 46",
-      "path": "products/mixbrand-cambcot-2p-bl-46-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-94",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 94",
+      "path": "products/mixbrand-cambcot-2p-bl-94-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-58",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 58",
-      "path": "products/mixbrand-cambcot-2p-bl-58-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-06",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 6",
-      "path": "products/mixbrand-cambcot-2p-bl-06-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-61",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 61",
-      "path": "products/mixbrand-cambcot-2p-bl-61-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-62",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 62",
-      "path": "products/mixbrand-cambcot-2p-bl-62-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-64",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 64",
-      "path": "products/mixbrand-cambcot-2p-bl-64-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-69",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 69",
-      "path": "products/mixbrand-cambcot-2p-bl-69-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-07",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 7",
-      "path": "products/mixbrand-cambcot-2p-bl-07-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-72",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 72",
-      "path": "products/mixbrand-cambcot-2p-bl-72-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-78",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 78",
-      "path": "products/mixbrand-cambcot-2p-bl-78-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-79",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 79",
-      "path": "products/mixbrand-cambcot-2p-bl-79-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-81",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 81",
-      "path": "products/mixbrand-cambcot-2p-bl-81-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-83",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 83",
-      "path": "products/mixbrand-cambcot-2p-bl-83-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-85",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 85",
-      "path": "products/mixbrand-cambcot-2p-bl-85-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-87",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 87",
-      "path": "products/mixbrand-cambcot-2p-bl-87-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-98",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 98",
-      "path": "products/mixbrand-cambcot-2p-bl-98-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-99",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 99",
-      "path": "products/mixbrand-cambcot-2p-bl-99-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "SAPHIRE-JAQVISC-V1-3P-AC-03",
-      "name": "Sapphire Jacquard Viscose 3PC — 3",
-      "path": "products/saphire-jaqvisc-v1-3p-ac-03-sapphire-jacquard-viscose-3pc/"
-    },
-    {
-      "code": "SAPHIRE-JAQVISC-V1-3P-AC-05",
-      "name": "Sapphire Jacquard Viscose 3PC — 5",
-      "path": "products/saphire-jaqvisc-v1-3p-ac-05-sapphire-jacquard-viscose-3pc/"
-    },
-    {
-      "code": "SAPHIRE-JAQVISC-V1-3P-AC-06",
-      "name": "Sapphire Jacquard Viscose 3PC — 6",
-      "path": "products/saphire-jaqvisc-v1-3p-ac-06-sapphire-jacquard-viscose-3pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-95",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 95",
+      "path": "products/mixbrand-cambcot-2p-bl-95-mix-brand-digital-printed-allover-lawn-2pc/"
     }
   ]
 }
