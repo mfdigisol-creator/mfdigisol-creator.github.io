@@ -3,6 +3,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { sanitizeSupplierDescription } from './product-description.mjs';
 import { classifyProduct, deriveCanonicalRelations, normalizeCollection, summarizeScope } from './dawood-taxonomy.mjs';
+import { resolveDuplicateSupplierPricing } from './duplicate-source-pricing.mjs';
 
 const SOURCE = 'https://dawooddesigners.com';
 const OUTPUT = path.resolve('catalogue/dawood-products.json');
@@ -299,8 +300,8 @@ function collapseDuplicateSupplierCodes(records) {
     }
 
     const canonical = canonicalDuplicateRecord(items);
-    const sourcePrices = [...new Set(items.map(item => item.sourcePrice).filter(Number.isFinite))].sort((a, b) => a - b);
     const pricingClasses = [...new Set(items.map(item => item.pricingClass).filter(Boolean))];
+    const pricing = resolveDuplicateSupplierPricing(items, pricingClasses);
     const merged = {
       ...canonical,
       category: items.some(item => item.category === 'Luxury') ? 'Luxury' : canonical.category,
@@ -309,16 +310,18 @@ function collapseDuplicateSupplierCodes(records) {
       scopeReasons: [...new Set(items.flatMap(item => item.scopeReasons || []))].sort(),
       sourceProductIds: [...new Set(items.map(item => item.sourceProductId).filter(Boolean))].sort(),
       duplicateSourceRecords: items.length,
-      duplicateSourcePrices: sourcePrices
+      duplicateSourcePrices: pricing.sourcePrices,
+      sourcePrice: pricing.sourcePrice,
+      priceSourceProductId: pricing.priceSourceProductId,
+      markup: pricing.markup,
+      price: pricing.price,
+      pricingStatus: pricing.pricingStatus,
+      pricingReason: pricing.pricingReason
     };
 
     if (pricingClasses.length > 1) {
       merged.pricingClass = 'unknown';
       merged.embroidered = null;
-      merged.markup = null;
-      merged.price = null;
-      merged.pricingStatus = 'enquire';
-      merged.pricingReason = 'duplicate-source-classification-conflict';
     }
 
     products.push(merged);
@@ -326,10 +329,12 @@ function collapseDuplicateSupplierCodes(records) {
       code,
       records: items.length,
       selectedSourceProductId: canonical.sourceProductId,
-      selectedSourcePrice: canonical.sourcePrice,
+      selectedSourcePrice: pricing.sourcePrice,
+      priceSourceProductId: pricing.priceSourceProductId,
+      canonicalSourcePrice: canonical.sourcePrice,
       selectedPublishedAt: canonical.publishedAt,
       sourceProductIds: merged.sourceProductIds,
-      sourcePrices,
+      sourcePrices: pricing.sourcePrices,
       pricingClasses
     });
   }
@@ -479,7 +484,10 @@ async function main() {
     .map(item => {
       const oldPrice = previousPrices.get(item.code);
       const changedTooFar = oldPrice > 0 && Math.abs(item.sourcePrice - oldPrice) / oldPrice > MAX_SOURCE_PRICE_CHANGE;
-      if (!changedTooFar || item.price === null) return item;
+      // The approved higher-of-duplicate-prices rule takes precedence over the
+      // historical price-change review threshold for an actual duplicate conflict.
+      const duplicatePriceConflict = (item.duplicateSourcePrices || []).length > 1;
+      if (duplicatePriceConflict || !changedTooFar || item.price === null) return item;
       return { ...item, price: null, markup: null, pricingStatus: 'enquire', pricingReason: 'source-price-change-review' };
     })
     .sort((a, b) => Number(b.available) - Number(a.available) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
