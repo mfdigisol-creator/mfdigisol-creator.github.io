@@ -90,6 +90,8 @@ async function main() {
   const used = new Set(); collectionSlugs = new Map();
   for(const brand of [...byBrand.keys()].sort((a,b)=>a.localeCompare(b))){const saved=clean(previous.brands?.[brand]);const base=saved||slugify(brand);let slug=base,suffix=2;while(used.has(slug))slug=`${base}-${suffix++}`;used.add(slug);collectionSlugs.set(brand,slug);}
   const redirects={...(previous.redirects||{})};
+  // Preserve the historical case-variant collection URL after brand normalization.
+  if (collectionSlugs.get('Mix Brand') === 'mix-brand') redirects['mix-brand-2'] = 'mix-brand';
   for(const [sourceBrand,oldSlug] of legacySlugs(products)){const canonical=products.find(item=>clean(item.sourceBrand || item.brand)===sourceBrand)?.brand || sourceBrand;const target=collectionSlugs.get(canonical);if(oldSlug&&target&&oldSlug!==target)redirects[oldSlug]=target;const plain=slugify(sourceBrand);if(plain&&target&&plain!==target)redirects[plain]=target;}
   for(const active of used) delete redirects[active];
   const retiredCollections=new Map();
