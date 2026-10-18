@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-18T19:51:39.635Z",
+  "generatedAt": "2026-10-18T20:12:51.845Z",
   "summary": {
-    "products": 1156,
-    "available": 1000,
-    "formal": 685,
-    "luxury": 471,
+    "products": 1153,
+    "available": 997,
+    "formal": 683,
+    "luxury": 470,
     "priceOnEnquiry": 9,
-    "metaFeedProducts": 1147,
+    "metaFeedProducts": 1144,
     "canonicalBrands": 71,
     "aliasCorrections": 24,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 62,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 2897,
-    "newlyRemovedProducts": 0,
+    "removedProducts": 2900,
+    "newlyRemovedProducts": 3,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -394,5 +394,21 @@
     }
   ],
   "classificationConflicts": [],
-  "newlyRemovedProducts": []
+  "newlyRemovedProducts": [
+    {
+      "code": "MIXBRAND-PRNKHD-2P-BL-292",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 292",
+      "path": "products/mixbrand-prnkhd-2p-bl-292-mix-brand-digital-printed-allover-khaddar-2pc/"
+    },
+    {
+      "code": "AMELIA-PRSHY-CORDURY-AM-07",
+      "name": "Amelia By Mahnur Luxury Embroidered Corduroy With Palachi Shawl 3PC — AM-07",
+      "path": "products/amelia-prshy-cordury-am-07-amelia-by-mahnur-luxury-embroidered-corduroy-with-palachi-shawl-3pc/"
+    },
+    {
+      "code": "MIXBRAND-CAMBCOT-2P-BL-89",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 89",
+      "path": "products/mixbrand-cambcot-2p-bl-89-mix-brand-digital-printed-allover-lawn-2pc/"
+    }
+  ]
 }

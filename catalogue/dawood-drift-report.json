@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-18T19:51:39.297Z",
+  "generatedAt": "2026-10-18T20:12:51.501Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1349,
+      "actual": 1346,
       "required": 100
     },
     {
@@ -25,10 +25,10 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.745364324889005,
+      "actual": 0.7449646874182579,
       "required": 0.596291459911204,
-      "fetchedMemberships": 5708,
-      "reportedMemberships": 7658,
+      "fetchedMemberships": 5696,
+      "reportedMemberships": 7646,
       "previous": 0.745364324889005
     },
     {
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1156,
+      "actual": 1153,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1156,
+      "actual": 1153,
       "required": 924,
       "previous": 1156
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1156,
+      "actual": 1153,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1349,
+    "sourceProducts": 1346,
     "sourceCollections": 104,
-    "includedSourceProducts": 1135,
+    "includedSourceProducts": 1132,
     "excludedSourceProducts": 214,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1156,
+    "candidateProducts": 1153,
     "previousCatalogueProducts": 1156,
-    "candidateVsPreviousPercent": 0,
-    "collectionProductCoverage": 0.745364324889005,
+    "candidateVsPreviousPercent": -0.25951557093425603,
+    "collectionProductCoverage": 0.7449646874182579,
     "previousCollectionProductCoverage": 0.745364324889005,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1012,
+    "relationUnmappedProducts": 1009,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -87,7 +87,7 @@
   },
   "relationMapping": {
     "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1012,
+    "relationUnmappedProducts": 1009,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
