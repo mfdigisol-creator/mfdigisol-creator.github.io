@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-18T18:03:51.877Z",
+  "generatedAt": "2026-10-18T19:02:29.270Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1352,
+      "actual": 1349,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7458621139059038,
-      "required": 0.5978750971754341,
-      "fetchedMemberships": 5723,
-      "reportedMemberships": 7673,
-      "previous": 0.7473438714692926
+      "actual": 0.745364324889005,
+      "required": 0.5966896911247231,
+      "fetchedMemberships": 5708,
+      "reportedMemberships": 7658,
+      "previous": 0.7458621139059038
     },
     {
       "id": "duplicate-supplier-skus",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1159,
+      "actual": 1156,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1159,
-      "required": 934,
-      "previous": 1168
+      "actual": 1156,
+      "required": 927,
+      "previous": 1159
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1159,
+      "actual": 1156,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1352,
+    "sourceProducts": 1349,
     "sourceCollections": 104,
-    "includedSourceProducts": 1138,
+    "includedSourceProducts": 1135,
     "excludedSourceProducts": 214,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1159,
-    "previousCatalogueProducts": 1168,
-    "candidateVsPreviousPercent": -0.7705479452054794,
-    "collectionProductCoverage": 0.7458621139059038,
-    "previousCollectionProductCoverage": 0.7473438714692926,
+    "candidateProducts": 1156,
+    "previousCatalogueProducts": 1159,
+    "candidateVsPreviousPercent": -0.2588438308886971,
+    "collectionProductCoverage": 0.745364324889005,
+    "previousCollectionProductCoverage": 0.7458621139059038,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1015,
+    "relationUnmappedProducts": 1012,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -87,7 +87,7 @@
   },
   "relationMapping": {
     "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1015,
+    "relationUnmappedProducts": 1012,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -408,7 +408,9 @@
       "code": "RANG-E-SERMA-SAR-14",
       "records": 2,
       "selectedSourceProductId": "15520859259251",
-      "selectedSourcePrice": 4120,
+      "selectedSourcePrice": 6060,
+      "priceSourceProductId": "15427972792691",
+      "canonicalSourcePrice": 4120,
       "selectedPublishedAt": "2026-08-28T16:13:59+05:00",
       "sourceProductIds": [
         "15427972792691",
@@ -426,7 +428,9 @@
       "code": "RANG-E-SERMA-SAR-13",
       "records": 2,
       "selectedSourceProductId": "15520859226483",
-      "selectedSourcePrice": 4120,
+      "selectedSourcePrice": 6060,
+      "priceSourceProductId": "15427972858227",
+      "canonicalSourcePrice": 4120,
       "selectedPublishedAt": "2026-08-28T16:13:59+05:00",
       "sourceProductIds": [
         "15427972858227",
@@ -444,7 +448,9 @@
       "code": "RANG-E-SERMA-SAR-11",
       "records": 2,
       "selectedSourceProductId": "15520859128179",
-      "selectedSourcePrice": 4120,
+      "selectedSourcePrice": 6060,
+      "priceSourceProductId": "15427972923763",
+      "canonicalSourcePrice": 4120,
       "selectedPublishedAt": "2026-08-28T16:14:01+05:00",
       "sourceProductIds": [
         "15427972923763",
@@ -462,7 +468,9 @@
       "code": "RANG-E-SERMA-SAR-12",
       "records": 2,
       "selectedSourceProductId": "15520859193715",
-      "selectedSourcePrice": 4120,
+      "selectedSourcePrice": 6060,
+      "priceSourceProductId": "15427972890995",
+      "canonicalSourcePrice": 4120,
       "selectedPublishedAt": "2026-08-28T16:13:59+05:00",
       "sourceProductIds": [
         "15427972890995",
@@ -480,7 +488,9 @@
       "code": "RANG-E-SERMA-SAR-10",
       "records": 2,
       "selectedSourceProductId": "15520859160947",
-      "selectedSourcePrice": 4120,
+      "selectedSourcePrice": 6060,
+      "priceSourceProductId": "15427972956531",
+      "canonicalSourcePrice": 4120,
       "selectedPublishedAt": "2026-08-28T16:13:59+05:00",
       "sourceProductIds": [
         "15427972956531",

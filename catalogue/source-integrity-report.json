@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-18T18:03:52.081Z",
+  "generatedAt": "2026-10-18T19:02:29.580Z",
   "summary": {
-    "products": 1159,
-    "available": 1003,
-    "formal": 688,
+    "products": 1156,
+    "available": 1000,
+    "formal": 685,
     "luxury": 471,
     "priceOnEnquiry": 9,
-    "metaFeedProducts": 1150,
+    "metaFeedProducts": 1147,
     "canonicalBrands": 71,
     "aliasCorrections": 24,
     "duplicateCodes": 0,
@@ -15,8 +15,8 @@
     "duplicateNames": 62,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 2894,
-    "newlyRemovedProducts": 9,
+    "removedProducts": 2897,
+    "newlyRemovedProducts": 3,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -170,7 +170,7 @@
     },
     {
       "value": "bareeze embroidered karandi 3pc — 6",
-      "count": 5
+      "count": 4
     },
     {
       "value": "bareeze fully emb rice karandi 2pc — 1",
@@ -396,49 +396,19 @@
   "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "RIWAJ-DL-CHF-3P-D-1185",
-      "name": "Rivaj | Chiffon | Dressline — D-1185",
-      "path": "products/riwaj-dl-chf-3p-d-1185-rivaj-chiffon-dressline/"
+      "code": "BRZE-BRSHA-KRNDI-V1-3P-AC-06",
+      "name": "Bareeze Embroidered Karandi 3PC — 6",
+      "path": "products/brze-brsha-krndi-v1-3p-ac-06-bareeze-embroidered-karandi-3pc/"
     },
     {
-      "code": "MIXBRAND-PRNKHD-2P-BL-351",
-      "name": "Mix Brand Winter 2026 Digital Printed Allover Khaddar Two Piece 2PC — 351",
-      "path": "products/mixbrand-prnkhd-2p-bl-351-mix-brand-winter-2026-digital-printed-allover-khaddar-two-piece-2pc/"
+      "code": "ZESH-VDS-VISC-V1-3P-HM-08",
+      "name": "Zesh Printed Velvet Dora Viscose 3PC — 8",
+      "path": "products/zesh-vds-visc-v1-3p-hm-08-zesh-printed-velvet-dora-viscose-3pc/"
     },
     {
-      "code": "MIXBRAND-PRNKHD-2P-BL-355",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 355",
-      "path": "products/mixbrand-prnkhd-2p-bl-355-mix-brand-digital-printed-allover-khaddar-2pc/"
-    },
-    {
-      "code": "SAFINA-VISC-V1-3P-HM-23",
-      "name": "Safina Digital Printed Viscose 3PC — 23",
-      "path": "products/safina-visc-v1-3p-hm-23-safina-digital-printed-viscose-3pc/"
-    },
-    {
-      "code": "BAREEZE-KHD-V2-3P-HM-10",
-      "name": "Bareeze Digital Printed Khaddar 3PC — 10",
-      "path": "products/bareeze-khd-v2-3p-hm-10-bareeze-digital-printed-khaddar-3pc/"
-    },
-    {
-      "code": "MAIRA-SHN-CAMBRIC-V292-3P-06",
-      "name": "Maira By Shanaya Digital Printed Cambric Cotton 3PC — 6",
-      "path": "products/maira-shn-cambric-v292-3p-06-maira-by-shanaya-digital-printed-cambric-cotton-3pc/"
-    },
-    {
-      "code": "ANAYA-SHN-LIN-V299-3P-02",
-      "name": "Anaya Noor Digital Printed Stone Linen 3PC — 2",
-      "path": "products/anaya-shn-lin-v299-3p-02-anaya-noor-digital-printed-stone-linen-3pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-100",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 100",
-      "path": "products/mixbrand-cambcot-2p-bl-100-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-143",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 143",
-      "path": "products/mixbrand-cambcot-2p-bl-143-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-10",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 10",
+      "path": "products/mixbrand-cambcot-2p-bl-10-mix-brand-digital-printed-allover-lawn-2pc/"
     }
   ]
 }
