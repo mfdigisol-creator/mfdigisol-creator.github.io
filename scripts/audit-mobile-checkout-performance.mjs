@@ -64,4 +64,4 @@ try{
   console.log(JSON.stringify({at:new Date().toISOString(),browser:binary,scope:'Production GET only; POST blocked',initially,catalog,catalogMs,widths,checkout:ui,timing,blockedWriteRequests:blocked.count,exceptions:issues.slice(0,10)},null,2));
   console.log('ALHUMA_BROWSER_AUDIT_END');
   if(!catalog.ok||widths.some(x=>x.overflow))process.exitCode=1;
-}finally{try{ws?.close()}catch{}child.kill('SIGKILL');await rm(profile,{recursive:true,force:true})}
+}catch(error){console.error('ALHUMA_BROWSER_AUDIT_ERROR',error?.stack||String(error));process.exitCode=1}finally{try{ws?.close()}catch{}child.kill('SIGKILL');await sleep(650);try{await rm(profile,{recursive:true,force:true,maxRetries:10,retryDelay:250})}catch(error){console.warn('Temporary Chrome profile cleanup warning:',error?.message)}}
