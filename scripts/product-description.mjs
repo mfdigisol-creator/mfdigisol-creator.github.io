@@ -102,13 +102,14 @@ function meaningfulSupplierDetails(text, productTitle, segments) {
 
 export function sanitizeSupplierDescription(value, { productTitle = '' } = {}) {
   const seen = new Set();
+  const titleKey = comparable(productTitle);
   const retained = [];
   for (const segment of htmlSegments(value)) {
     if (BANNED_SEGMENT_PATTERNS.some(pattern => pattern.test(segment))) continue;
     // Retain garment construction/material information, not generic supplier marketing prose.
     if (!PRODUCT_DETAIL_PATTERN.test(segment)) continue;
     const key = comparable(segment);
-    if (!key || seen.has(key)) continue;
+    if (!key || key === titleKey || seen.has(key)) continue;
     seen.add(key);
     retained.push(segment);
   }
