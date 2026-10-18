@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/audit-mobile-checkout-performance.mjs"
       - "scripts/test-repeated-title-identity.mjs"
       - "scripts/duplicate-source-pricing.mjs"
       - "scripts/test-duplicate-source-pricing.mjs"
@@ -52,6 +53,7 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/audit-mobile-checkout-performance.mjs"
       - "scripts/test-repeated-title-identity.mjs"
       - "scripts/duplicate-source-pricing.mjs"
       - "scripts/test-duplicate-source-pricing.mjs"
@@ -117,6 +119,10 @@ jobs:
 
       - name: Test highest duplicate supplier pricing rule
         run: node scripts/test-duplicate-source-pricing.mjs
+
+      - name: Audit phone layout, client checkout, and timing (write blocked)
+        if: github.event_name == 'pull_request'
+        run: node scripts/audit-mobile-checkout-performance.mjs
 
       - name: Read-only live Dawood taxonomy preflight
         if: github.event_name == 'pull_request'
