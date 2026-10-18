@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-18T15:54:16.207Z",
+  "generatedAt": "2026-10-18T18:03:51.877Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1361,
+      "actual": 1352,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7473438714692926,
-      "required": 0.6008425890463425,
-      "fetchedMemberships": 5768,
-      "reportedMemberships": 7718,
-      "previous": 0.751053236307928
+      "actual": 0.7458621139059038,
+      "required": 0.5978750971754341,
+      "fetchedMemberships": 5723,
+      "reportedMemberships": 7673,
+      "previous": 0.7473438714692926
     },
     {
       "id": "duplicate-supplier-skus",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1168,
+      "actual": 1159,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1168,
-      "required": 951,
-      "previous": 1189
+      "actual": 1159,
+      "required": 934,
+      "previous": 1168
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1168,
+      "actual": 1159,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1361,
+    "sourceProducts": 1352,
     "sourceCollections": 104,
-    "includedSourceProducts": 1147,
+    "includedSourceProducts": 1138,
     "excludedSourceProducts": 214,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1168,
-    "previousCatalogueProducts": 1189,
-    "candidateVsPreviousPercent": -1.7661900756938604,
-    "collectionProductCoverage": 0.7473438714692926,
-    "previousCollectionProductCoverage": 0.751053236307928,
+    "candidateProducts": 1159,
+    "previousCatalogueProducts": 1168,
+    "candidateVsPreviousPercent": -0.7705479452054794,
+    "collectionProductCoverage": 0.7458621139059038,
+    "previousCollectionProductCoverage": 0.7473438714692926,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1024,
+    "relationUnmappedProducts": 1015,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -87,7 +87,7 @@
   },
   "relationMapping": {
     "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1024,
+    "relationUnmappedProducts": 1015,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -525,8 +525,8 @@
       "id": "701140107635",
       "title": "DD-SHANAYA",
       "handle": "dd-shanya",
-      "reportedProducts": 38,
-      "fetchedProducts": 17,
+      "reportedProducts": 37,
+      "fetchedProducts": 16,
       "anomaly": null
     },
     {
@@ -601,26 +601,6 @@
     },
     {
       "id": "15595235737971",
-      "title": "Anaya Noor Digital Printed Stone Linen 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15595235311987",
       "title": "Anaya Noor Digital Printed Stone Linen 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
@@ -953,6 +933,25 @@
     },
     {
       "id": "15581068329331",
+      "title": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15581068362099",
       "title": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
