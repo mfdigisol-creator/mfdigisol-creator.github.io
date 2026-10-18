@@ -1,0 +1,22 @@
+name: Staging checkout and throttled mobile diagnostic
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/staging-mobile-audit.yml'
+      - 'scripts/audit-staging-checkout.mjs'
+      - 'scripts/audit-mobile-throttled.mjs'
+permissions:
+  contents: read
+jobs:
+  staging-and-performance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify staging origin and reject invalid orders
+        run: node scripts/audit-staging-checkout.mjs
+      - name: Measure throttled mobile experience without sending orders
+        run: node scripts/audit-mobile-throttled.mjs
