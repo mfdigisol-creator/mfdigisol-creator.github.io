@@ -334,7 +334,7 @@ function collapseDuplicateSupplierCodes(records) {
       canonicalSourcePrice: canonical.sourcePrice,
       selectedPublishedAt: canonical.publishedAt,
       sourceProductIds: merged.sourceProductIds,
-      sourcePrices,
+      sourcePrices: pricing.sourcePrices,
       pricingClasses
     });
   }
