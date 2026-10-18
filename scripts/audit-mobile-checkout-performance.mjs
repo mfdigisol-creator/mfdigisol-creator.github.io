@@ -22,11 +22,11 @@ try{
   const jobs=new Map(),issues=[],blocked={count:0};let nextId=1;
   const cmd=(method,params={},timeoutMs=65000)=>new Promise((ok,fail)=>{
     const id=nextId++,timer=setTimeout(()=>{jobs.delete(id);fail(new Error(method+' timed out'))},timeoutMs);
-    jobs.set(id,{ok,fail,timer});ws.send(JSON.stringify({id,method,params}));
+    jobs.set(id,{ok,fail,timer,method});ws.send(JSON.stringify({id,method,params}));
   });
   ws.addEventListener('message',event=>{
     const m=JSON.parse(event.data);
-    if(m.id){const j=jobs.get(m.id);if(!j)return;clearTimeout(j.timer);jobs.delete(m.id);if(m.error)j.fail(new Error(m.error.message));else j.ok(m.result||{});return}
+    if(m.id){const j=jobs.get(m.id);if(!j)return;clearTimeout(j.timer);jobs.delete(m.id);if(m.error)j.fail(new Error('CDP '+j.method+': '+(m.error.message||'unknown')+' '+(m.error.data||'')));else j.ok(m.result||{});return}
     if(m.method==='Fetch.requestPaused'){
       if(!['GET','HEAD'].includes(m.params.request.method)){blocked.count++;cmd('Fetch.failRequest',{requestId:m.params.requestId,errorReason:'BlockedByClient'}).catch(()=>{})}
       else cmd('Fetch.continueRequest',{requestId:m.params.requestId}).catch(()=>{});
