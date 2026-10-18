@@ -1,0 +1,19 @@
+name: Browser catalogue post-deploy mobile diagnostic
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/browser-catalogue-postdeploy.yml'
+      - 'scripts/audit-browser-catalogue-postdeploy.mjs'
+permissions:
+  contents: read
+jobs:
+  mobile-throttled:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check live optimized browser catalogue with simulated 4G and 3G
+        run: node scripts/audit-browser-catalogue-postdeploy.mjs
