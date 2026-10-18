@@ -312,6 +312,15 @@ function collapseDuplicateSupplierCodes(records) {
       duplicateSourcePrices: sourcePrices
     };
 
+    // Distinct supplier prices for the same SKU cannot be priced safely.
+    // Retain the product and source evidence but require staff confirmation.
+    if (sourcePrices.length > 1) {
+      merged.markup = null;
+      merged.price = null;
+      merged.pricingStatus = 'enquire';
+      merged.pricingReason = 'duplicate-source-price-conflict';
+    }
+
     if (pricingClasses.length > 1) {
       merged.pricingClass = 'unknown';
       merged.embroidered = null;
