@@ -17,7 +17,7 @@ async function main() {
   const catalogueRuntimeVersion = digest(catalogueRuntime);
   const assistantRuntimeVersion = digest(assistantRuntime);
   const original = await fs.readFile(indexFile, 'utf8');
-  const updated = original
+  let updated = original
     .replace(
       /dawood-catalogue\.js\?v=[^"']+/,
       `dawood-catalogue.js?v=${catalogueRuntimeVersion}`
@@ -26,6 +26,19 @@ async function main() {
       /assistant-runtime\.js\?v=[^"']+/,
       `assistant-runtime.js?v=${assistantRuntimeVersion}`
     );
+
+  // Checkout scripts must never be held under obsolete static cache keys.
+  // Hash the actual deployed bytes; a version changes only when that file changes.
+  const checkoutAssetFiles = ['dawood-commerce.js', 'dawood-commerce.css', 'orders-client.js', 'orders-config.js'];
+  const checkoutAssetVersions = {};
+  for (const asset of checkoutAssetFiles) {
+    const bytes = await fs.readFile(path.join(ROOT, asset));
+    const version = digest(bytes);
+    const pattern = new RegExp(asset.replace('.', '\\.') + '\\?v=[^"\\s]+');
+    if (!pattern.test(updated)) throw new Error(`Missing versioned checkout asset in homepage: ${asset}`);
+    updated = updated.replace(pattern, `${asset}?v=${version}`);
+    checkoutAssetVersions[asset] = version;
+  }
 
   if (!updated.includes(`dawood-catalogue.js?v=${catalogueRuntimeVersion}`)) {
     throw new Error('Versioned catalogue runtime reference was not produced.');
@@ -39,6 +52,7 @@ async function main() {
     ok:true,
     catalogueRuntimeVersion,
     assistantRuntimeVersion,
+    checkoutAssetVersions,
     homepageChanged:updated !== original
   }, null, 2));
 }
