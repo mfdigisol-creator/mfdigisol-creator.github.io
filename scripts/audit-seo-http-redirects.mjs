@@ -26,9 +26,9 @@ for(const test of tests){
       const location=response.headers.get('location')||null;
       const contentType=response.headers.get('content-type')||'';
       const html=contentType.includes('html') ? (await response.text()).slice(0,15000):'';
-      const canonical=html.match(/<link\\s+rel=["']canonical["']\\s+href=["']([^"']+)/i)?.[1]||null;
-      const robots=html.match(/<meta\\s+name=["']robots["']\\s+content=["']([^"']+)/i)?.[1]||null;
-      const refresh=html.match(/<meta\\s+http-equiv=["']refresh["']\\s+content=["']([^"']+)/i)?.[1]||null;
+      const canonical=html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)/i)?.[1]||null;
+      const robots=html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']+)/i)?.[1]||null;
+      const refresh=html.match(/<meta\s+http-equiv=["']refresh["']\s+content=["']([^"']+)/i)?.[1]||null;
       record={label:test.label,type:test.type,url:test.url,status:response.status,location,canonical,robots,refresh,
         expectedTarget:test.target||null, 
         permanentHttpRedirect:[301,308].includes(response.status),
