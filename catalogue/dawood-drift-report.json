@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-18T19:02:29.270Z",
+  "generatedAt": "2026-10-18T19:14:48.048Z",
   "dryRun": false,
   "checks": [
     {
@@ -26,10 +26,10 @@
       "id": "collection-product-coverage",
       "ok": true,
       "actual": 0.745364324889005,
-      "required": 0.5966896911247231,
+      "required": 0.596291459911204,
       "fetchedMemberships": 5708,
       "reportedMemberships": 7658,
-      "previous": 0.7458621139059038
+      "previous": 0.745364324889005
     },
     {
       "id": "duplicate-supplier-skus",
@@ -54,8 +54,8 @@
       "id": "catalogue-shrink-limit",
       "ok": true,
       "actual": 1156,
-      "required": 927,
-      "previous": 1159
+      "required": 924,
+      "previous": 1156
     },
     {
       "id": "downstream-size-limit",
@@ -71,10 +71,10 @@
     "excludedSourceProducts": 214,
     "ambiguousSourceProducts": 0,
     "candidateProducts": 1156,
-    "previousCatalogueProducts": 1159,
-    "candidateVsPreviousPercent": -0.2588438308886971,
+    "previousCatalogueProducts": 1156,
+    "candidateVsPreviousPercent": 0,
     "collectionProductCoverage": 0.745364324889005,
-    "previousCollectionProductCoverage": 0.7458621139059038,
+    "previousCollectionProductCoverage": 0.745364324889005,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 144,

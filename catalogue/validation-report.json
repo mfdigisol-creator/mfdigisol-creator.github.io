@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-18T19:02:39.973Z",
+  "generatedAt": "2026-10-18T19:15:00.925Z",
   "summary": {
     "products": 1156,
     "removedProducts": 2897,
@@ -15,24 +15,12 @@
   },
   "errors": [],
   "warnings": [
-    "55 products currently lack retained supplier description text."
+    "42 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
-      "BT-CO-ORD-KHD-2P-DD-01",
-      "BT-CO-ORD-KHD-2P-DD-11",
-      "BT-CO-ORD-KHD-2P-DD-12",
-      "BT-CO-ORD-KHD-2P-DD-14",
-      "BT-CO-ORD-KHD-2P-DD-15",
-      "BT-CO-ORD-KHD-2P-DD-03",
-      "BT-CO-ORD-KHD-2P-DD-04",
-      "BT-CO-ORD-KHD-2P-DD-05",
-      "BT-CO-ORD-KHD-2P-DD-06",
-      "BT-CO-ORD-KHD-2P-DD-07",
-      "BT-CO-ORD-KHD-2P-DD-08",
-      "BT-CO-ORD-KHD-2P-DD-09",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
@@ -45,7 +33,19 @@
       "DASTAK-DL-LWN-3P-FB-323",
       "DASTAK-DL-LWN-3P-FB-324",
       "DASTAK-DL-LWN-3P-FB-325",
-      "JAVERIA-ORG-OFWHT-3P-04"
+      "JAVERIA-ORG-OFWHT-3P-04",
+      "MUSE-SILK-3P-14371-A",
+      "MUSE-SILK-3P-14371-B",
+      "MUSE-SILK-3P-14371-D",
+      "MIXBRAND-PRNKHD-2P-BL-349",
+      "DASTAN-CKLWN-3P-NRJ-01",
+      "DASTAN-CKLWN-3P-NRJ-02",
+      "DASTAN-CKLWN-3P-NRJ-07",
+      "DASTAN-CKLWN-3P-NRJ-08",
+      "MIXBRAND-PRNKHD-2P-BL-350",
+      "MIXBRAND-PRNKHD-2P-BL-353",
+      "SALINA-LWN-CHP1-3P-10",
+      "LIFESTYLE-RR-MELLOW-3P-BL-3"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],

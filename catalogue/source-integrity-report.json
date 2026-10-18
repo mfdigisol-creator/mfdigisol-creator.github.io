@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-18T19:02:29.580Z",
+  "generatedAt": "2026-10-18T19:14:48.368Z",
   "summary": {
     "products": 1156,
     "available": 1000,
@@ -16,7 +16,7 @@
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
     "removedProducts": 2897,
-    "newlyRemovedProducts": 3,
+    "newlyRemovedProducts": 0,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -394,21 +394,5 @@
     }
   ],
   "classificationConflicts": [],
-  "newlyRemovedProducts": [
-    {
-      "code": "BRZE-BRSHA-KRNDI-V1-3P-AC-06",
-      "name": "Bareeze Embroidered Karandi 3PC — 6",
-      "path": "products/brze-brsha-krndi-v1-3p-ac-06-bareeze-embroidered-karandi-3pc/"
-    },
-    {
-      "code": "ZESH-VDS-VISC-V1-3P-HM-08",
-      "name": "Zesh Printed Velvet Dora Viscose 3PC — 8",
-      "path": "products/zesh-vds-visc-v1-3p-hm-08-zesh-printed-velvet-dora-viscose-3pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-10",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 10",
-      "path": "products/mixbrand-cambcot-2p-bl-10-mix-brand-digital-printed-allover-lawn-2pc/"
-    }
-  ]
+  "newlyRemovedProducts": []
 }
