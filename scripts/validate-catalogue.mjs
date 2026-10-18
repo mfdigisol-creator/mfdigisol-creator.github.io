@@ -167,6 +167,60 @@ async function main() {
     }
   }
 
+  // Indexable collection pages must use the exact preferred-origin canonical
+  // and Open Graph URL; aliases must never be included in either sitemap.
+  let collectionCanonicalsChecked = 0;
+  for (const brand of brands) {
+    const slug = registry.brands?.[brand];
+    if (!slug) continue;
+    const count = products.filter(item => item.brand === brand).length;
+    for (let page = 1; page <= Math.ceil(count / PAGE_SIZE); page += 1) {
+      const relative = page === 1 ? `collections/${slug}/` : `collections/${slug}/page/${page}/`;
+      if (!await exists(`${relative}index.html`)) continue;
+      const markup = await fs.readFile(path.join(ROOT, `${relative}index.html`), 'utf8');
+      const target = absolute(relative);
+      const canonical = extract(markup, /<link rel="canonical" href="([^"]+)"/i);
+      const og = extract(markup, /<meta property="og:url" content="([^"]+)"/i);
+      if (canonical !== target) errors.push(`Collection canonical mismatch: ${relative}`);
+      if (og !== target) errors.push(`Collection Open Graph URL mismatch: ${relative}`);
+      collectionCanonicalsChecked += 1;
+    }
+  }
+
+  const legacyRedirects = Object.entries(registry.redirects || {});
+  for (const [alias, target] of legacyRedirects) {
+    const oldPath = `collections/${alias}/`;
+    const canonicalTarget = absolute(`collections/${target}/`);
+    if (!await exists(`${oldPath}index.html`)) {
+      errors.push(`Missing legacy collection redirect page: ${oldPath}`);
+      continue;
+    }
+    const markup = await fs.readFile(path.join(ROOT, `${oldPath}index.html`), 'utf8');
+    if (extract(markup, /<link rel="canonical" href="([^"]+)"/i) !== canonicalTarget) {
+      errors.push(`Incorrect canonical target on legacy page: ${oldPath}`);
+    }
+    if (!/\bnoindex\b/i.test(extract(markup, /<meta name="robots" content="([^"]+)"/i))) {
+      errors.push(`Legacy page missing noindex: ${oldPath}`);
+    }
+    if (extract(markup, /<meta http-equiv="refresh" content="([^"]+)"/i) !== `0;url=${canonicalTarget}`) {
+      errors.push(`Legacy page missing immediate canonical meta-refresh: ${oldPath}`);
+    }
+    if (sitemapUrls.includes(absolute(oldPath))) {
+      errors.push(`Legacy alias wrongly included in sitemap: ${oldPath}`);
+    }
+    if (!await exists(`collections/${target}/index.html`)) {
+      errors.push(`Legacy alias redirect target is missing: ${canonicalTarget}`);
+    }
+  }
+
+  const homepage = await fs.readFile(path.join(ROOT, 'index.html'), 'utf8');
+  if (extract(homepage, /<link rel="canonical" href="([^"]+)"/i) !== `${BASE}/`) {
+    errors.push('Homepage canonical does not match the preferred HTTPS apex origin.');
+  }
+  if (extract(homepage, /<meta property="og:url" content="([^"]+)"/i) !== `${BASE}/`) {
+    errors.push('Homepage Open Graph URL does not match the preferred HTTPS apex origin.');
+  }
+
   const metadata = [];
   let missingProductFiles = 0;
   for (const product of products) {
@@ -258,6 +312,8 @@ async function main() {
       removedProducts: removedProducts.length,
       brands: brands.length,
       collectionPages: expectedCollectionPages,
+      collectionCanonicalsChecked,
+      legacyRedirectsChecked: legacyRedirects.length,
       sitemapUrls: sitemapUrls.length,
       metaFeedRows: feedRows.length,
       metadataPages: metadata.length,
