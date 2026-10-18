@@ -14,6 +14,7 @@ const BRAND_ALIASES = new Map([
   ['anaya noor', 'Anaya Noor'],
   ['lime light', 'Limelight'],
   ['limelight', 'Limelight'],
+  ['mix brand', 'Mix Brand'],
   ['lmported', 'Imported'],
   ['dawooddesigner', 'Other designs'],
   ['dawood designer', 'Other designs'],
