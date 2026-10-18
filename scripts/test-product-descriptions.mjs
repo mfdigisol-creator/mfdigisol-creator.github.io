@@ -57,6 +57,26 @@ async function main() {
 
   const weak = sanitizeSupplierDescription('<p>Sample Embroidered Lawn 3PC</p>', { productTitle:'Sample Embroidered Lawn 3PC' });
   assert(weak === '', 'Title-only supplier copy must be treated as insufficient.');
+  // Real Dawood-style component descriptions are useful even when every word
+  // also appears in the product title. Do not confuse that with title repetition.
+  const overlappingTitle = 'Beechtree Digital Printed Shirt & Dupatta Khaddar 2PC';
+  const structuredSource = sanitizeSupplierDescription(
+    '<p>Beechtree Digital Printed Shirt & Dupatta Khaddar 2PC</p><ul><li>Digital Printed Khaddar Shirt</li><li>Digital Printed Khaddar Dupatta</li></ul>',
+    { productTitle: overlappingTitle }
+  );
+  assert(structuredSource.includes('Digital Printed Khaddar Shirt'), 'Structured shirt detail was discarded.');
+  assert(structuredSource.includes('Digital Printed Khaddar Dupatta'), 'Structured dupatta detail was discarded.');
+  assert(!structuredSource.includes('Beechtree'), 'Supplier title repetition must not be needed to establish component breakdown.');
+  assert(descriptionForProduct({ productName: overlappingTitle, sourceDescription: structuredSource }).source === 'supplier',
+    'Retained component details should appear on the product page.');
+  const oneComponent = sanitizeSupplierDescription(
+    '<p>Digital Printed Khaddar Shirt</p><p>Khaddar Printed Shirt</p>',
+    { productTitle: overlappingTitle }
+  );
+  assert(oneComponent === '', 'Repetitive single-component text must not override factual fallback.');
+  const oneLineTitle = sanitizeSupplierDescription('<p>' + overlappingTitle + '</p>', { productTitle: overlappingTitle });
+  assert(oneLineTitle === '', 'Title-only copy must remain rejected.');
+
 
   const promotional = sanitizeSupplierDescription('<p>Stunning embroidered lawn shirt perfect for Eid</p><p>Beautiful must-have design for your wardrobe</p>', { productTitle:'Another Design' });
   assert(promotional === '', 'Generic supplier promotional prose must not be retained.');

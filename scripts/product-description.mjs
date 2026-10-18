@@ -69,20 +69,52 @@ function materiallyDifferentFromTitle(text, productTitle) {
   return new Set(additionalWords).size >= 3;
 }
 
+// Distinct garment-component lines carry meaningful supplier facts even when
+// the same vocabulary appears in the product title. Do not accept a repeated
+// title or unsupported marketing text as a replacement for component details.
+const GARMENT_COMPONENTS = [
+  ['shirt', /\b(?:shirt|kameez)\b/i],
+  ['dupatta', /\b(?:dupatta|shawl)\b/i],
+  ['trouser', /\b(?:trouser|shalwar|pants?)\b/i],
+  ['sleeves', /\b(?:sleeves?)\b/i],
+  ['front', /\b(?:front|neckline|daman)\b/i],
+  ['back', /\bback\b/i]
+];
+
+function structuredComponentBreakdown(segments, productTitle) {
+  const title = comparable(productTitle);
+  const details = segments.filter(segment => comparable(segment) !== title);
+  const words = details.join(' ').split(/\s+/).filter(Boolean);
+  if (details.length < 2 || words.length < 6) return false;
+  const identified = new Set();
+  for (const segment of details) {
+    for (const [component, pattern] of GARMENT_COMPONENTS) {
+      if (pattern.test(segment)) identified.add(component);
+    }
+  }
+  return identified.size >= 2;
+}
+
+function meaningfulSupplierDetails(text, productTitle, segments) {
+  return materiallyDifferentFromTitle(text, productTitle)
+    || structuredComponentBreakdown(segments, productTitle);
+}
+
 export function sanitizeSupplierDescription(value, { productTitle = '' } = {}) {
   const seen = new Set();
+  const titleKey = comparable(productTitle);
   const retained = [];
   for (const segment of htmlSegments(value)) {
     if (BANNED_SEGMENT_PATTERNS.some(pattern => pattern.test(segment))) continue;
     // Retain garment construction/material information, not generic supplier marketing prose.
     if (!PRODUCT_DETAIL_PATTERN.test(segment)) continue;
     const key = comparable(segment);
-    if (!key || seen.has(key)) continue;
+    if (!key || key === titleKey || seen.has(key)) continue;
     seen.add(key);
     retained.push(segment);
   }
   const description = truncate(retained.join('; '));
-  return materiallyDifferentFromTitle(description, productTitle) ? description : '';
+  return meaningfulSupplierDetails(description, productTitle, retained) ? description : '';
 }
 
 export function factualProductDescription(item) {
@@ -106,7 +138,7 @@ export function factualProductDescription(item) {
 
 export function descriptionForProduct(item) {
   const retained = clean(item?.sourceDescription);
-  if (retained && materiallyDifferentFromTitle(retained, item?.productName || item?.name || '')) {
+  if (retained && meaningfulSupplierDetails(retained, item?.productName || item?.name || '', retained.split(/\s*;\s*/))) {
     return { text: retained, source: 'supplier', heading: 'Product description' };
   }
   return { text: factualProductDescription(item), source: 'catalogue', heading: 'Product information' };
