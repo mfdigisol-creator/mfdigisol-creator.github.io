@@ -23,6 +23,7 @@ on:
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
+      - "scripts/test-versioned-checkout-assets.mjs"
       - "scripts/image-seo-postprocess.mjs"
       - "scripts/entity-consistency-postprocess.mjs"
       - "scripts/search-ecosystem-postprocess.mjs"
@@ -68,6 +69,7 @@ on:
       - "scripts/performance-p1-postprocess.mjs"
       - "scripts/performance-p2p3-postprocess.mjs"
       - "scripts/version-performance-assets.mjs"
+      - "scripts/test-versioned-checkout-assets.mjs"
       - "scripts/image-seo-postprocess.mjs"
       - "scripts/entity-consistency-postprocess.mjs"
       - "scripts/search-ecosystem-postprocess.mjs"
@@ -146,6 +148,7 @@ jobs:
           node scripts/performance-p1-postprocess.mjs
           node scripts/performance-p2p3-postprocess.mjs
           node scripts/version-performance-assets.mjs
+          node scripts/test-versioned-checkout-assets.mjs
           test -s assets/alhuma-collection-logo.webp
           node scripts/apply-official-brand.mjs
           node scripts/image-seo-postprocess.mjs
@@ -178,6 +181,7 @@ jobs:
           node scripts/performance-p1-postprocess.mjs
           node scripts/performance-p2p3-postprocess.mjs
           node scripts/version-performance-assets.mjs
+          node scripts/test-versioned-checkout-assets.mjs
           test -s assets/alhuma-collection-logo.webp
           node scripts/apply-official-brand.mjs
           node scripts/image-seo-postprocess.mjs
