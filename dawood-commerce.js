@@ -105,7 +105,9 @@
   }
 
   function save() {
-    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    // A privacy-restricted browser may reject localStorage. Keep the cart usable
+    // for the current page even when persistence is unavailable.
+    try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch {}
     render();
   }
 
@@ -147,8 +149,14 @@
     turnstilePromise = new Promise((resolve, reject) => {
       const existing = document.getElementById('alhuma-turnstile-api');
       const script = existing || document.createElement('script');
-      script.addEventListener('load', () => window.turnstile ? resolve(window.turnstile) : reject(new Error('Turnstile unavailable')), { once: true });
-      script.addEventListener('error', () => reject(new Error('Turnstile failed to load')), { once: true });
+      const fail = message => {
+        // Allow a fresh attempt if mobile connectivity blocks the first script.
+        turnstilePromise = null;
+        script.remove();
+        reject(new Error(message));
+      };
+      script.addEventListener('load', () => window.turnstile ? resolve(window.turnstile) : fail('Turnstile unavailable'), { once: true });
+      script.addEventListener('error', () => fail('Turnstile failed to load'), { once: true });
       if (!existing) {
         script.id = 'alhuma-turnstile-api';
         script.async = true;
@@ -193,7 +201,7 @@
         }
       });
     } catch {
-      setStatus('Security verification is temporarily unavailable. Please try again shortly.', 'error');
+      setStatus('Security verification could not load. Close checkout and reopen it to retry, or contact us on WhatsApp.', 'error');
       submitButton.disabled = true;
     }
   }
