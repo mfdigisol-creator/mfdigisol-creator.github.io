@@ -381,12 +381,29 @@
   });
 
   const catalogueVersion = document.documentElement.dataset.catalogueVersion || 'current';
+  // Prefer the smaller browser projection, but fail over to the unchanged
+  // authoritative catalogue if a cached/deployment edge cannot serve it.
+  async function fetchCatalogueData() {
+    let lastError;
+    for (const file of ['dawood-browser-products.json', 'dawood-products.json']) {
+      try {
+        const response = await fetch(`catalogue/${file}?v=${encodeURIComponent(catalogueVersion)}`, { cache:'default' });
+        if (!response.ok) throw new Error('Catalogue response ' + response.status);
+        const data = await response.json();
+        if (!Array.isArray(data.products) || !data.products.length
+            || data.counts?.products !== data.products.length || !data.synchronizedAt) {
+          throw new Error('Catalogue integrity check failed');
+        }
+        return data;
+      } catch (error) { lastError = error; }
+    }
+    throw lastError || new Error('Catalogue is unavailable');
+  }
   let cataloguePromise = null;
   function loadCatalogue() {
     if (cataloguePromise) return cataloguePromise;
     cataloguePromise = (() => {
-    return fetch(`catalogue/dawood-products.json?v=${encodeURIComponent(catalogueVersion)}`, { cache:'default' })
-    .then(response => { if (!response.ok) throw new Error('Catalogue is not ready'); return response.json(); })
+    return fetchCatalogueData()
     .then(data => {
       products = Array.isArray(data.products) ? data.products : [];
       const titleCounts = new Map();
