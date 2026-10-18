@@ -18,6 +18,8 @@ on:
       - "scripts/install-dawood-integration.mjs"
       - "scripts/apply-official-brand.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
+      - "scripts/generate-browser-catalogue.mjs"
+      - "scripts/test-browser-catalogue.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/generate-step9b-guide.mjs"
       - "scripts/performance-p1-postprocess.mjs"
@@ -64,6 +66,8 @@ on:
       - "scripts/test-product-descriptions.mjs"
       - "scripts/apply-official-brand.mjs"
       - "scripts/seo-batch1-postprocess.mjs"
+      - "scripts/generate-browser-catalogue.mjs"
+      - "scripts/test-browser-catalogue.mjs"
       - "scripts/generate-seo-pages-v2.mjs"
       - "scripts/generate-step9b-guide.mjs"
       - "scripts/performance-p1-postprocess.mjs"
@@ -143,6 +147,8 @@ jobs:
           node scripts/test-repeated-title-identity.mjs
           node scripts/test-duplicate-source-pricing.mjs --catalogue
           node scripts/seo-batch1-postprocess.mjs
+          node scripts/generate-browser-catalogue.mjs
+          node scripts/test-browser-catalogue.mjs
           node scripts/generate-seo-pages-v2.mjs
           node scripts/generate-step9b-guide.mjs
           node scripts/performance-p1-postprocess.mjs
@@ -176,6 +182,8 @@ jobs:
         if: always()
         run: |
           node scripts/seo-batch1-postprocess.mjs
+          node scripts/generate-browser-catalogue.mjs
+          node scripts/test-browser-catalogue.mjs
           node scripts/generate-seo-pages-v2.mjs
           node scripts/generate-step9b-guide.mjs
           node scripts/performance-p1-postprocess.mjs
