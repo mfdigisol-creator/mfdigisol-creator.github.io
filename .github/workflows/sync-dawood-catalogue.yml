@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/audit-dawood-collection-coverage.mjs"
       - "scripts/duplicate-source-pricing.mjs"
       - "scripts/test-duplicate-source-pricing.mjs"
       - "scripts/dawood-taxonomy.mjs"
@@ -51,6 +52,7 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/audit-dawood-collection-coverage.mjs"
       - "scripts/duplicate-source-pricing.mjs"
       - "scripts/test-duplicate-source-pricing.mjs"
       - "scripts/dawood-taxonomy.mjs"
@@ -115,6 +117,10 @@ jobs:
 
       - name: Test highest duplicate supplier pricing rule
         run: node scripts/test-duplicate-source-pricing.mjs
+
+      - name: Reconcile supplier collection pagination (read only)
+        if: github.event_name == 'pull_request'
+        run: node scripts/audit-dawood-collection-coverage.mjs
 
       - name: Read-only live Dawood taxonomy preflight
         if: github.event_name == 'pull_request'
