@@ -20,6 +20,9 @@
   const collectionShowcase = $('[data-live-collection-showcase]');
   const collectionSlider = $('[data-live-collection-slider]');
   let products = [];
+  let repeatedNameKeys = new Set();
+  const productTitleKey = value => String(value ?? '').trim().toLowerCase().replace(/\s+/g, ' ');
+  const hasRepeatedName = product => repeatedNameKeys.has(productTitleKey(product.name));
   const visibleByCollection = new Map();
   const initialCollectionLimit = () => matchMedia('(max-width: 700px)').matches ? 4 : 8;
   const collectionBatchSize = () => matchMedia('(max-width: 700px)').matches ? 6 : 8;
@@ -163,12 +166,14 @@
   }
 
   function card(product, eager = false) {
-    const priceLabel = product.price == null ? '<small>Pricing</small><strong>Price on enquiry</strong>' : `<small>${escapeHtml(product.code)}</small><strong>${money(product.price)}</strong>`;
+    const repeated = hasRepeatedName(product);
+    const designCode = repeated ? `<small class="live-product-unique-code">Design code: ${escapeHtml(product.code)}</small>` : '';
+    const priceLabel = product.price == null ? '<small>Pricing</small><strong>Price on enquiry</strong>' : `<small>${repeated ? 'Price' : escapeHtml(product.code)}</small><strong>${money(product.price)}</strong>`;
     return `<article class="live-product" data-product-code="${escapeHtml(product.code)}">
       <span class="live-product-surface-light" aria-hidden="true"></span>
-      <button class="live-product-open" type="button" data-open-product="${escapeHtml(product.code)}" aria-label="View ${escapeHtml(product.name)} details">
+      <button class="live-product-open" type="button" data-open-product="${escapeHtml(product.code)}" aria-label="View ${escapeHtml(product.name)} — ${escapeHtml(product.code)} details">
         <span class="live-product-media">${responsiveImage(product.image, product.name, { eager })}<span class="live-product-badge${product.available ? '' : ' sold'}">${product.available ? 'Available to order' : 'Currently unavailable'}</span></span>
-        <span class="live-product-copy"><span class="live-product-brand">${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</span><strong class="live-product-name">${escapeHtml(product.name)}</strong><span class="live-product-row"><span class="live-price">${priceLabel}</span><span class="live-view">View details ↗</span></span></span>
+        <span class="live-product-copy"><span class="live-product-brand">${escapeHtml(product.brand)} · ${escapeHtml(product.category)}</span><strong class="live-product-name">${escapeHtml(product.name)}</strong>${designCode}<span class="live-product-row"><span class="live-price">${priceLabel}</span><span class="live-view">View details ↗</span></span></span>
       </button>
       ${product.available && product.price != null ? `<button class="live-add-cart" type="button" data-add-cart="${escapeHtml(product.code)}">Add to cart</button>` : ''}
       <a class="live-enquire" href="${whatsapp(product, product.price == null)}" target="_blank" rel="noopener noreferrer" data-order-product="${escapeHtml(product.code)}">${product.price == null ? 'Enquire for price' : 'Order on WhatsApp'} ↗</a>
@@ -384,6 +389,12 @@
     .then(response => { if (!response.ok) throw new Error('Catalogue is not ready'); return response.json(); })
     .then(data => {
       products = Array.isArray(data.products) ? data.products : [];
+      const titleCounts = new Map();
+      for (const product of products) {
+        const key = productTitleKey(product.name);
+        titleCounts.set(key, (titleCounts.get(key) || 0) + 1);
+      }
+      repeatedNameKeys = new Set([...titleCounts].filter(([, count]) => count > 1).map(([key]) => key));
       if (!products.length) throw new Error('Catalogue is empty');
       const date = new Date(data.synchronizedAt);
       const stale = Date.now() - date.getTime() > 36 * 60 * 60 * 1000;

@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/test-repeated-title-identity.mjs"
       - "scripts/duplicate-source-pricing.mjs"
       - "scripts/test-duplicate-source-pricing.mjs"
       - "scripts/dawood-taxonomy.mjs"
@@ -51,6 +52,7 @@ on:
     paths:
       - ".github/workflows/sync-dawood-catalogue.yml"
       - "scripts/sync-dawood.mjs"
+      - "scripts/test-repeated-title-identity.mjs"
       - "scripts/duplicate-source-pricing.mjs"
       - "scripts/test-duplicate-source-pricing.mjs"
       - "scripts/dawood-taxonomy.mjs"
@@ -129,6 +131,7 @@ jobs:
           cp -a . "$candidate/"
           cd "$candidate"
           node scripts/sync-dawood.mjs
+          node scripts/test-repeated-title-identity.mjs
           node scripts/test-duplicate-source-pricing.mjs --catalogue
           node scripts/seo-batch1-postprocess.mjs
           node scripts/generate-seo-pages-v2.mjs
