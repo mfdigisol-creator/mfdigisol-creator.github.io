@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-18T21:14:05.875Z",
+  "generatedAt": "2026-10-19T04:46:11.322Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1346,
+      "actual": 1342,
       "required": 100
     },
     {
@@ -25,17 +25,17 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7449646874182579,
+      "actual": 0.7441951987406533,
       "required": 0.5959717499346063,
-      "fetchedMemberships": 5696,
-      "reportedMemberships": 7646,
+      "fetchedMemberships": 5673,
+      "reportedMemberships": 7623,
       "previous": 0.7449646874182579
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 5,
-      "requiredMaximum": 24
+      "requiredMaximum": 23
     },
     {
       "id": "ambiguous-scope-share",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1153,
+      "actual": 1150,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1153,
+      "actual": 1150,
       "required": 922,
       "previous": 1153
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1153,
+      "actual": 1150,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1346,
+    "sourceProducts": 1342,
     "sourceCollections": 104,
-    "includedSourceProducts": 1132,
-    "excludedSourceProducts": 214,
+    "includedSourceProducts": 1129,
+    "excludedSourceProducts": 213,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1153,
+    "candidateProducts": 1150,
     "previousCatalogueProducts": 1153,
-    "candidateVsPreviousPercent": 0,
-    "collectionProductCoverage": 0.7449646874182579,
+    "candidateVsPreviousPercent": -0.26019080659150046,
+    "collectionProductCoverage": 0.7441951987406533,
     "previousCollectionProductCoverage": 0.7449646874182579,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
-    "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1009,
+    "relationMappedProducts": 143,
+    "relationUnmappedProducts": 1007,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -86,8 +86,8 @@
     "multiBrandCollectionsRejected": 31
   },
   "relationMapping": {
-    "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1009,
+    "relationMappedProducts": 143,
+    "relationUnmappedProducts": 1007,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -385,11 +385,10 @@
         "collectionTitle": "Luxury Makhmal",
         "collectionHandle": "luxury-makhmal",
         "brand": "Zarineh",
-        "products": 5,
-        "available": 5,
+        "products": 4,
+        "available": 4,
         "productCodes": [
           "MAKHMAL-VLVT-3P-RA-4001",
-          "MAKHMAL-VLVT-3P-RA-4003",
           "MAKHMAL-VLVT-3P-RA-4004",
           "MAKHMAL-VLVT-3P-RA-4005",
           "MAKHMAL-VLVT-3P-RA-4010"
@@ -400,8 +399,8 @@
   "exclusionReasons": {
     "menswear-signal": 66,
     "single-piece-not-approved-suit-scope": 3,
-    "garment-size-variants": 145,
-    "ready-to-wear-or-stitched-signal": 143
+    "garment-size-variants": 144,
+    "ready-to-wear-or-stitched-signal": 142
   },
   "duplicateSourceCodes": [
     {
