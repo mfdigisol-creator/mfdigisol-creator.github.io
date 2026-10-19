@@ -1,37 +1,38 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-19T04:46:24.479Z",
+  "generatedAt": "2026-10-19T18:44:28.670Z",
   "summary": {
-    "products": 1150,
-    "removedProducts": 2903,
-    "brands": 70,
-    "collectionPages": 79,
-    "collectionCanonicalsChecked": 79,
+    "products": 1215,
+    "removedProducts": 2882,
+    "brands": 75,
+    "collectionPages": 83,
+    "collectionCanonicalsChecked": 83,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1232,
-    "metaFeedRows": 1141,
-    "metadataPages": 1150,
-    "internalHtmlFiles": 4202,
+    "sitemapUrls": 1301,
+    "metaFeedRows": 1206,
+    "metadataPages": 1215,
+    "internalHtmlFiles": 4247,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "42 products currently lack retained supplier description text."
+    "53 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
+      "FLEUR-ALMRH-LWN-CT-3P-09",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
       "CS-EMB-LWN-3P-1856",
+      "AIRA-ORG-SKY-1547",
       "AIRA-ORG-PEACH-1547",
       "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PURP-1547",
-      "AIRA-ORG-SKY-1547",
       "DASTAK-DL-LWN-3P-FB-323",
       "DASTAK-DL-LWN-3P-FB-324",
       "DASTAK-DL-LWN-3P-FB-325",
@@ -46,8 +47,7 @@
       "DASTAN-CKLWN-3P-NRJ-08",
       "MIXBRAND-PRNKHD-2P-BL-350",
       "MIXBRAND-PRNKHD-2P-BL-353",
-      "SALINA-LWN-CHP1-3P-10",
-      "LIFESTYLE-RR-MELLOW-3P-BL-3"
+      "SALINA-LWN-CHP1-3P-10"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
