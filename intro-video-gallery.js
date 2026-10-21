@@ -37,6 +37,13 @@
       image.loading = 'lazy';
       image.decoding = 'async';
       image.referrerPolicy = 'no-referrer';
+      image.addEventListener('error', () => {
+        image.remove();
+        const fallback = document.createElement('span');
+        fallback.className = 'intro-videos-placeholder';
+        fallback.textContent = index === 0 ? 'Al Huma Collection' : 'SB Stitching';
+        cover.prepend(fallback);
+      }, { once: true });
       cover.append(image);
     } else {
       const placeholder = document.createElement('span');
@@ -72,6 +79,16 @@
     const heading = document.createElement('h3');
     heading.textContent = video.title;
     card.append(heading);
+    if (hasId) {
+      const link = document.createElement('a');
+      link.className = 'intro-videos-watch-link';
+      link.href = 'https://www.youtube.com/shorts/' + video.youtubeId;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'Watch on YouTube ↗';
+      link.setAttribute('aria-label', 'Watch ' + video.title + ' directly on YouTube');
+      card.append(link);
+    }
     return card;
   }
 
