@@ -109,6 +109,15 @@
   line-height: 1.3;
   margin: 0;
 }
+
+.intro-videos-watch-link {
+  display: inline-block;
+  margin-top: .65rem;
+  font-size: .72rem;
+  color: var(--gold-light);
+  border-bottom: 1px solid rgba(184,148,83,.6);
+  padding-bottom: .18rem;
+}
 .intro-videos-footer {
   margin-top: 1.1rem;
   display: flex;
