@@ -23,7 +23,7 @@
     const card = document.createElement('article');
     card.className = 'intro-videos-card';
     const holder = document.createElement('div');
-    holder.style.position = 'relative';
+    holder.className = 'intro-videos-media';
     const cover = document.createElement('button');
     cover.type = 'button';
     cover.className = 'intro-videos-cover';
