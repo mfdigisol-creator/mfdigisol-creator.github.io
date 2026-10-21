@@ -37,3 +37,24 @@ Revert the small gallery commit / PR without changing any videos, YouTube settin
 
 ## Later phase, separate authorization
 Rotating slots 3–5, scheduled feed/API discovery, and any integration with ongoing Social Media Operation are **explicitly out of scope** until that project is finalized after November 1.
+
+## Additional QA — 21 October 2026 (staging attempt)
+
+The project owner approved the visual preview and requested the next-stage isolated HTTPS staging test.
+
+**Environment blocker:** The connected Cloudflare inspection and deployment operations returned an internal tool error. Independent Chromium navigation to `https://localhost`, mocked `https://*.test`, and `file://` URLs also returned `ERR_BLOCKED_BY_ADMINISTRATOR`. No public HTTPS staging deployment was created.
+
+**Completed local DOM preview tests** using browser `set_content` (NOT real HTTPS):
+- Desktop 1365px, tablet 768px, mobile 390px, narrow mobile 320px: 2 correctly ordered cards; no document overflow; 0 iframes before click.
+- At mobile 390px, activating card 1 created one iframe targeting `rutTiVJwemw`; activating card 2 replaced it with exactly one iframe targeting `oH6g9qsHfg4`; first Play button became available again.
+- JavaScript syntax and source invariants checked separately, and intended changed-file scope reviewed.
+
+**Still NOT verified:** YouTube thumbnail requests over public HTTPS, actual external iframe playback, production CMP behavior, real network-throttled Lighthouse results, and catalogue/checkout interaction on the integrated branch. A zero-iframe initial DOM test is not a quantitative LCP/CLS performance test.
+
+**Safety:** Draft PR #76 remains open, unmerged and undeployed. No Cloudflare resources were created or modified, and no automation, YouTube playlist manager, Meta, catalogue or checkout code was changed.
+
+### Recommended HTTPS staging path, once Cloudflare access works
+- Create an isolated **Cloudflare Pages Git preview project**, referencing this branch only; do not attach a custom domain or change DNS / the current GitHub Pages site.
+- Preview via its separate `*.pages.dev` URL and run the actual browser/player + Lighthouse test gates.
+- Review the branch deployment options to prevent automatic production deployments on `main`.
+- Obtain the user's explicit **new approval to merge** only after the outstanding gates pass.
