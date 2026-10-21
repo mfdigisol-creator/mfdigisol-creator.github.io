@@ -17,11 +17,11 @@
 - `scripts/test-intro-video-gallery.mjs`: offline structural tests.
 
 ## Required before merge
-The exact **public video URLs** must be obtained from the YouTube Studio **Share / Copy link** controls:
-1. Al Huma Collection Introduction (first video).
-2. SB Stitching Introduction (second video).
+The owner supplied the following **public Shorts links**, and their exact IDs are now stored in `intro-video-gallery.json`:
+1. Al Huma Collection Introduction: https://youtube.com/shorts/rutTiVJwemw (ID: `rutTiVJwemw`).
+2. SB Stitching Introduction: https://youtube.com/shorts/oH6g9qsHfg4 (ID: `oH6g9qsHfg4`).
 
-Convert the URLs to their exact 11-character video IDs and populate `intro-video-gallery.json`. At present these identifiers are deliberately blank. **Never guess video IDs.**
+Both IDs passed the 11-character format and unique-ID checks. **Live YouTube fetch/embedding has not been externally verified** from this execution environment, so on-device playback remains a deployment gate.
 
 ## QA / rollout gates
 1. `node --check intro-video-gallery.js`
