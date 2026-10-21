@@ -75,6 +75,8 @@
     return card;
   }
 
+  const scrollBehavior = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
   function updateButtons() {
     if (!track || !previous || !next) return;
     const max = Math.max(0, track.scrollWidth - track.clientWidth);
@@ -97,10 +99,10 @@
     track.addEventListener('scroll', updateButtons, { passive: true });
     window.addEventListener('resize', updateButtons, { passive: true });
     previous.addEventListener('click', () => {
-      track.scrollBy({ left: -(track.firstElementChild?.clientWidth || 250) - 22, behavior: 'smooth' });
+      track.scrollBy({ left: -(track.firstElementChild?.clientWidth || 250) - 22, behavior: scrollBehavior() });
     });
     next.addEventListener('click', () => {
-      track.scrollBy({ left: (track.firstElementChild?.clientWidth || 250) + 22, behavior: 'smooth' });
+      track.scrollBy({ left: (track.firstElementChild?.clientWidth || 250) + 22, behavior: scrollBehavior() });
     });
   }
 
