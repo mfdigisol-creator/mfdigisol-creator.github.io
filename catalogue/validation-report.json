@@ -1,23 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-24T04:41:44.187Z",
+  "generatedAt": "2026-10-24T15:59:48.924Z",
   "summary": {
-    "products": 1262,
-    "removedProducts": 3086,
-    "brands": 74,
-    "collectionPages": 83,
-    "collectionCanonicalsChecked": 83,
+    "products": 1386,
+    "removedProducts": 3031,
+    "brands": 76,
+    "collectionPages": 87,
+    "collectionCanonicalsChecked": 87,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1348,
-    "metaFeedRows": 1253,
-    "metadataPages": 1262,
-    "internalHtmlFiles": 4500,
+    "sitemapUrls": 1476,
+    "metaFeedRows": 1377,
+    "metadataPages": 1386,
+    "internalHtmlFiles": 4571,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "52 products currently lack retained supplier description text."
+    "56 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -28,9 +28,9 @@
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
       "CS-EMB-LWN-3P-1856",
-      "AIRA-ORG-PISTA-1547",
-      "AIRA-ORG-SKY-1547",
       "AIRA-ORG-PURP-1547",
+      "AIRA-ORG-SKY-1547",
+      "AIRA-ORG-PISTA-1547",
       "AIRA-ORG-PEACH-1547",
       "DASTAK-DL-LWN-3P-FB-323",
       "DASTAK-DL-LWN-3P-FB-324",
@@ -43,11 +43,11 @@
       "MTJ-W26-VISC-V1-3P-AA-6085",
       "MTJ-W26-VISC-V1-3P-AA-6086",
       "MTJ-W26-VISC-V1-3P-AA-6094",
+      "MTJ-W26-VISC-V1-3P-AA-6096",
       "MTJ-W26-VISC-V1-3P-AA-6097",
       "DASTAN-CKLWN-3P-NRJ-01",
       "DASTAN-CKLWN-3P-NRJ-02",
-      "DASTAN-CKLWN-3P-NRJ-07",
-      "DASTAN-CKLWN-3P-NRJ-08"
+      "DASTAN-CKLWN-3P-NRJ-07"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
