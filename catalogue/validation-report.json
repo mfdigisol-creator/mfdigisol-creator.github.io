@@ -1,23 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-24T15:59:48.924Z",
+  "generatedAt": "2026-10-25T04:47:07.475Z",
   "summary": {
-    "products": 1386,
-    "removedProducts": 3031,
-    "brands": 76,
-    "collectionPages": 87,
-    "collectionCanonicalsChecked": 87,
+    "products": 1325,
+    "removedProducts": 3104,
+    "brands": 79,
+    "collectionPages": 89,
+    "collectionCanonicalsChecked": 89,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1476,
-    "metaFeedRows": 1377,
-    "metadataPages": 1386,
-    "internalHtmlFiles": 4571,
+    "sitemapUrls": 1417,
+    "metaFeedRows": 1316,
+    "metadataPages": 1325,
+    "internalHtmlFiles": 4583,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "56 products currently lack retained supplier description text."
+    "50 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -41,13 +41,13 @@
       "MUSE-SILK-3P-14371-D",
       "MIXBRAND-PRNKHD-2P-BL-349",
       "MTJ-W26-VISC-V1-3P-AA-6085",
-      "MTJ-W26-VISC-V1-3P-AA-6086",
       "MTJ-W26-VISC-V1-3P-AA-6094",
-      "MTJ-W26-VISC-V1-3P-AA-6096",
-      "MTJ-W26-VISC-V1-3P-AA-6097",
       "DASTAN-CKLWN-3P-NRJ-01",
       "DASTAN-CKLWN-3P-NRJ-02",
-      "DASTAN-CKLWN-3P-NRJ-07"
+      "DASTAN-CKLWN-3P-NRJ-07",
+      "DASTAN-CKLWN-3P-NRJ-08",
+      "VICTORIA-OMRE-VLVT-V208-01",
+      "VICTORIA-OMRE-VLVT-V208-02"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
