@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-25T16:27:20.749Z",
+  "generatedAt": "2026-10-26T04:52:24.475Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1494,
+      "actual": 1463,
       "required": 100
     },
     {
@@ -25,17 +25,17 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7924901185770751,
-      "required": 0.638263358778626,
-      "fetchedMemberships": 6416,
-      "reportedMemberships": 8096,
-      "previous": 0.7978291984732825
+      "actual": 0.7881729920564872,
+      "required": 0.6339920948616601,
+      "fetchedMemberships": 6251,
+      "reportedMemberships": 7931,
+      "previous": 0.7924901185770751
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 4,
-      "requiredMaximum": 26
+      "requiredMaximum": 25
     },
     {
       "id": "ambiguous-scope-share",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1273,
+      "actual": 1248,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1273,
-      "required": 1060,
-      "previous": 1325
+      "actual": 1248,
+      "required": 1018,
+      "previous": 1273
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1273,
+      "actual": 1248,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1494,
+    "sourceProducts": 1463,
     "sourceCollections": 106,
-    "includedSourceProducts": 1249,
-    "excludedSourceProducts": 245,
+    "includedSourceProducts": 1224,
+    "excludedSourceProducts": 239,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1273,
-    "previousCatalogueProducts": 1325,
-    "candidateVsPreviousPercent": -3.9245283018867925,
-    "collectionProductCoverage": 0.7924901185770751,
-    "previousCollectionProductCoverage": 0.7978291984732825,
+    "candidateProducts": 1248,
+    "previousCatalogueProducts": 1273,
+    "candidateVsPreviousPercent": -1.9638648860958365,
+    "collectionProductCoverage": 0.7881729920564872,
+    "previousCollectionProductCoverage": 0.7924901185770751,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
-    "relationMappedProducts": 140,
-    "relationUnmappedProducts": 1133,
+    "relationMappedProducts": 139,
+    "relationUnmappedProducts": 1109,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -86,8 +86,8 @@
     "multiBrandCollectionsRejected": 34
   },
   "relationMapping": {
-    "relationMappedProducts": 140,
-    "relationUnmappedProducts": 1133,
+    "relationMappedProducts": 139,
+    "relationUnmappedProducts": 1109,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -141,8 +141,8 @@
         "collectionTitle": "Bareeze Fully Emb Rice Karandi Lawn 2PC",
         "collectionHandle": "bareeze-fully-emb-rice-karandi-lawn-2pc",
         "brand": "Bareeze",
-        "products": 35,
-        "available": 35,
+        "products": 34,
+        "available": 34,
         "productCodes": [
           "BAREEZE-CREAM-RK-LWN-07",
           "BAREEZE-GRAY-RK-LWN-02",
@@ -167,7 +167,6 @@
           "BAREEZE-RC-V15-2026-DD-05",
           "BAREEZE-RC-V2-2026-DD-01",
           "BAREEZE-RC-V2-2026-DD-02",
-          "BAREEZE-RC-V2-2026-DD-04",
           "BAREEZE-RC-V2-2026-DD-05",
           "BAREEZE-RC-V4-2026-DD-01",
           "BAREEZE-RC-V4-2026-DD-02",
@@ -395,9 +394,9 @@
   },
   "exclusionReasons": {
     "single-piece-not-approved-suit-scope": 3,
-    "menswear-signal": 70,
-    "garment-size-variants": 172,
-    "ready-to-wear-or-stitched-signal": 170
+    "menswear-signal": 67,
+    "garment-size-variants": 169,
+    "ready-to-wear-or-stitched-signal": 167
   },
   "duplicateSourceCodes": [
     {
@@ -543,8 +542,8 @@
       "id": "701103669619",
       "title": "Men's Wear Wash & Wear Unstitched Daily Wear",
       "handle": "mens-wear-wash-wear",
-      "reportedProducts": 27,
-      "fetchedProducts": 13,
+      "reportedProducts": 24,
+      "fetchedProducts": 10,
       "anomaly": null
     },
     {
@@ -559,8 +558,8 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 131,
-      "fetchedProducts": 60,
+      "reportedProducts": 130,
+      "fetchedProducts": 59,
       "anomaly": null
     },
     {
@@ -583,8 +582,8 @@
       "id": "701074997619",
       "title": "Summer Unstitched Daily Wear Printed 3pc",
       "handle": "unstitched-daily-wear-printed-3pc",
-      "reportedProducts": 56,
-      "fetchedProducts": 24,
+      "reportedProducts": 55,
+      "fetchedProducts": 23,
       "anomaly": null
     }
   ],
@@ -641,25 +640,6 @@
     },
     {
       "id": "15600047948147",
-      "title": "Marosh By Anaya Noor Embroidered Dhanak With Plachi Shawl 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15600047915379",
       "title": "Marosh By Anaya Noor Embroidered Dhanak With Plachi Shawl 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
@@ -952,6 +932,25 @@
     },
     {
       "id": "15581068689779",
+      "title": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15581068657011",
       "title": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
