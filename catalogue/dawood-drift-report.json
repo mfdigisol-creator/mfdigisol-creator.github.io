@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-28T05:47:01.259Z",
+  "generatedAt": "2026-10-28T18:21:48.549Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1466,
+      "actual": 1573,
       "required": 100
     },
     {
@@ -25,17 +25,17 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.765084075173096,
-      "required": 0.6139762574960226,
-      "fetchedMemberships": 6188,
-      "reportedMemberships": 8088,
-      "previous": 0.7674703218700282
+      "actual": 0.777932474765054,
+      "required": 0.6120672601384768,
+      "fetchedMemberships": 6705,
+      "reportedMemberships": 8619,
+      "previous": 0.765084075173096
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 5,
-      "requiredMaximum": 26
+      "requiredMaximum": 28
     },
     {
       "id": "ambiguous-scope-share",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1260,
+      "actual": 1357,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1260,
-      "required": 1020,
-      "previous": 1276
+      "actual": 1357,
+      "required": 1008,
+      "previous": 1260
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1260,
+      "actual": 1357,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1466,
+    "sourceProducts": 1573,
     "sourceCollections": 106,
-    "includedSourceProducts": 1237,
-    "excludedSourceProducts": 229,
+    "includedSourceProducts": 1334,
+    "excludedSourceProducts": 239,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1260,
-    "previousCatalogueProducts": 1276,
-    "candidateVsPreviousPercent": -1.2539184952978055,
-    "collectionProductCoverage": 0.765084075173096,
-    "previousCollectionProductCoverage": 0.7674703218700282,
+    "candidateProducts": 1357,
+    "previousCatalogueProducts": 1260,
+    "candidateVsPreviousPercent": 7.698412698412699,
+    "collectionProductCoverage": 0.777932474765054,
+    "previousCollectionProductCoverage": 0.765084075173096,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 138,
-    "relationUnmappedProducts": 1122,
+    "relationUnmappedProducts": 1219,
     "relationGroups": 13,
     "relationGroupsWith3PlusProducts": 13,
     "ambiguousRelationProducts": 0,
@@ -87,14 +87,14 @@
   },
   "relationMapping": {
     "relationMappedProducts": 138,
-    "relationUnmappedProducts": 1122,
+    "relationUnmappedProducts": 1219,
     "relationGroups": 13,
     "relationGroupsWith3PlusProducts": 13,
     "ambiguousRelationProducts": 0,
     "genericCollectionsRejected": 32,
     "multiBrandCollectionsRejected": 34,
     "anomalyCollectionsRejected": 0,
-    "undersizedCollectionsRejected": 5,
+    "undersizedCollectionsRejected": 6,
     "safeCandidateCollections": 13,
     "groups": [
       {
@@ -381,10 +381,10 @@
     ]
   },
   "exclusionReasons": {
-    "single-piece-not-approved-suit-scope": 2,
+    "single-piece-not-approved-suit-scope": 3,
     "menswear-signal": 65,
-    "garment-size-variants": 162,
-    "ready-to-wear-or-stitched-signal": 160
+    "garment-size-variants": 171,
+    "ready-to-wear-or-stitched-signal": 169
   },
   "duplicateSourceCodes": [
     {
@@ -523,14 +523,6 @@
       "anomaly": null
     },
     {
-      "id": "701140107635",
-      "title": "DD-SHANAYA",
-      "handle": "dd-shanya",
-      "reportedProducts": 39,
-      "fetchedProducts": 17,
-      "anomaly": null
-    },
-    {
       "id": "701972971891",
       "title": "Gulzar",
       "handle": "gulzar",
@@ -574,8 +566,8 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 126,
-      "fetchedProducts": 55,
+      "reportedProducts": 127,
+      "fetchedProducts": 56,
       "anomaly": null
     },
     {

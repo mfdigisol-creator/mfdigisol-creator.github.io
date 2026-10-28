@@ -1,23 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-28T05:47:13.643Z",
+  "generatedAt": "2026-10-28T18:22:01.918Z",
   "summary": {
-    "products": 1260,
-    "removedProducts": 3253,
-    "brands": 79,
-    "collectionPages": 88,
-    "collectionCanonicalsChecked": 88,
+    "products": 1357,
+    "removedProducts": 3183,
+    "brands": 80,
+    "collectionPages": 91,
+    "collectionCanonicalsChecked": 91,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1351,
-    "metaFeedRows": 1251,
-    "metadataPages": 1260,
-    "internalHtmlFiles": 4667,
+    "sitemapUrls": 1451,
+    "metaFeedRows": 1348,
+    "metadataPages": 1357,
+    "internalHtmlFiles": 4696,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "50 products currently lack retained supplier description text."
+    "55 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -28,10 +28,10 @@
       "CRIMSON-MUST-3PC-AK15",
       "CRIMSON-PINK-3PC-AK15",
       "CS-EMB-LWN-3P-1856",
-      "AIRA-ORG-PISTA-1547",
-      "AIRA-ORG-PURP-1547",
-      "AIRA-ORG-PEACH-1547",
       "AIRA-ORG-SKY-1547",
+      "AIRA-ORG-PEACH-1547",
+      "AIRA-ORG-PURP-1547",
+      "AIRA-ORG-PISTA-1547",
       "DASTAK-DL-LWN-3P-FB-323",
       "DASTAK-DL-LWN-3P-FB-324",
       "DASTAK-DL-LWN-3P-FB-325",
@@ -39,6 +39,7 @@
       "MUSE-SILK-3P-14371-A",
       "MUSE-SILK-3P-14371-B",
       "MIXBRAND-PRNKHD-2P-BL-349",
+      "MTJ-W26-VISC-V1-3P-AA-6087",
       "MTJ-W26-VISC-V1-3P-AA-6094",
       "DASTAN-CKLWN-3P-NRJ-01",
       "DASTAN-CKLWN-3P-NRJ-02",
@@ -46,8 +47,7 @@
       "DASTAN-CKLWN-3P-NRJ-08",
       "VICTORIA-OMRE-VLVT-V208-02",
       "VICTORIA-OMRE-VLVT-V208-03",
-      "VICTORIA-OMRE-VLVT-V208-04",
-      "VICTORIA-OMRE-VLVT-V208-05"
+      "VICTORIA-OMRE-VLVT-V208-04"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
