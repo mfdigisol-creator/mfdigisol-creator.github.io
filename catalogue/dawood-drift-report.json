@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-10-27T18:02:13.757Z",
+  "generatedAt": "2026-10-28T05:47:01.259Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1482,
+      "actual": 1466,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7674703218700282,
-      "required": 0.628048627647575,
-      "fetchedMemberships": 6271,
-      "reportedMemberships": 8171,
-      "previous": 0.7850607845594686
+      "actual": 0.765084075173096,
+      "required": 0.6139762574960226,
+      "fetchedMemberships": 6188,
+      "reportedMemberships": 8088,
+      "previous": 0.7674703218700282
     },
     {
       "id": "duplicate-supplier-skus",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1276,
+      "actual": 1260,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1276,
-      "required": 1015,
-      "previous": 1269
+      "actual": 1260,
+      "required": 1020,
+      "previous": 1276
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1276,
+      "actual": 1260,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1482,
+    "sourceProducts": 1466,
     "sourceCollections": 106,
-    "includedSourceProducts": 1253,
+    "includedSourceProducts": 1237,
     "excludedSourceProducts": 229,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1276,
-    "previousCatalogueProducts": 1269,
-    "candidateVsPreviousPercent": 0.5516154452324665,
-    "collectionProductCoverage": 0.7674703218700282,
-    "previousCollectionProductCoverage": 0.7850607845594686,
+    "candidateProducts": 1260,
+    "previousCatalogueProducts": 1276,
+    "candidateVsPreviousPercent": -1.2539184952978055,
+    "collectionProductCoverage": 0.765084075173096,
+    "previousCollectionProductCoverage": 0.7674703218700282,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 138,
-    "relationUnmappedProducts": 1138,
+    "relationUnmappedProducts": 1122,
     "relationGroups": 13,
     "relationGroupsWith3PlusProducts": 13,
     "ambiguousRelationProducts": 0,
@@ -87,7 +87,7 @@
   },
   "relationMapping": {
     "relationMappedProducts": 138,
-    "relationUnmappedProducts": 1138,
+    "relationUnmappedProducts": 1122,
     "relationGroups": 13,
     "relationGroupsWith3PlusProducts": 13,
     "ambiguousRelationProducts": 0,
@@ -574,8 +574,8 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 127,
-      "fetchedProducts": 56,
+      "reportedProducts": 126,
+      "fetchedProducts": 55,
       "anomaly": null
     },
     {
@@ -590,8 +590,8 @@
       "id": "701074964851",
       "title": "Summer Unstitched Daily Wear Embroidered 3pc",
       "handle": "unstitched-daily-wear-embroidered-3pc",
-      "reportedProducts": 29,
-      "fetchedProducts": 6,
+      "reportedProducts": 28,
+      "fetchedProducts": 5,
       "anomaly": null
     },
     {
