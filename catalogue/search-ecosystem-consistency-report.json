@@ -1,17 +1,17 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-29T05:52:50.537Z",
+  "generatedAt": "2026-10-29T18:29:58.720Z",
   "summary": {
-    "products": 1318,
-    "productPagesChecked": 1318,
-    "pricedProducts": 1309,
+    "products": 1293,
+    "productPagesChecked": 1293,
+    "pricedProducts": 1284,
     "enquiryProducts": 9,
-    "feedRows": 1309,
-    "sitemapUrls": 1410,
-    "pricedPagesChecked": 1309,
+    "feedRows": 1284,
+    "sitemapUrls": 1385,
+    "pricedPagesChecked": 1284,
     "enquiryPagesChecked": 9,
-    "unavailablePricedProducts": 185,
-    "primaryImageMatches": 1318,
+    "unavailablePricedProducts": 179,
+    "primaryImageMatches": 1293,
     "staleFeedRows": 0,
     "removedFeedRows": 0,
     "removedSitemapUrls": 0,
@@ -20,7 +20,7 @@
   },
   "errors": [],
   "upstreamCatalogueWarnings": [
-    "54 products currently lack retained supplier description text."
+    "49 products currently lack retained supplier description text."
   ],
   "safeguards": {
     "canonicalOrigin": "https://alhumacollection.com",
