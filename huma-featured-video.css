@@ -1,0 +1,23 @@
+/* Featured Huma widescreen presentation; does not style the Shorts gallery. */
+.huma-featured { max-width:1100px; margin:0 auto clamp(3rem,6vw,5rem); padding-bottom:clamp(2.5rem,4vw,4rem); border-bottom:1px solid rgba(184,148,83,.34); }
+.huma-featured-head { display:flex; align-items:end; justify-content:space-between; gap:2rem; margin-bottom:clamp(1.3rem,2.5vw,2rem); }
+.huma-featured-overline { margin:0 0 .8rem; color:var(--gold-light); font-size:.63rem; letter-spacing:.19em; text-transform:uppercase; }
+.huma-featured-head h3 { margin:0; font:400 clamp(2.2rem,4.6vw,4.6rem)/1.05 var(--serif); }
+.huma-featured-head h3 em { color:var(--gold-light); }
+.huma-featured-description { max-width:370px; margin:0 0 .2rem; color:rgba(243,238,228,.75); font-size:.88rem; line-height:1.8; }
+.huma-featured-frame { position:relative; aspect-ratio:16 / 9; width:100%; overflow:hidden; background:linear-gradient(135deg,#2c221c,#67513f 50%,#171310); border:1px solid rgba(184,148,83,.5); border-radius:4px; }
+.huma-featured-play { display:grid; place-items:center; position:absolute; inset:0; width:100%; height:100%; padding:0; border:0; color:#fff; background:transparent; cursor:pointer; }
+.huma-featured-play[hidden] { display:none; }
+.huma-featured-poster { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.huma-featured-play::after { content:''; position:absolute; inset:0; background:linear-gradient(0deg,rgba(0,0,0,.55),transparent 58%); pointer-events:none; }
+.huma-featured-play-icon { position:relative; z-index:1; display:grid; place-items:center; width:clamp(56px,7vw,80px); height:clamp(56px,7vw,80px); border:1px solid rgba(255,255,255,.8); border-radius:50%; background:rgba(17,16,14,.78); color:#fff; font-size:clamp(1.15rem,2.5vw,1.7rem); transition:background .2s,transform .2s; }
+.huma-featured-play:hover .huma-featured-play-icon { background:#9b7435; transform:scale(1.05); }
+.huma-featured-play:focus-visible,.huma-featured-link:focus-visible { outline:3px solid var(--gold-light); outline-offset:3px; }
+.huma-featured-poster-fallback { display:none; position:absolute; inset:0; align-items:center; justify-content:center; font:400 clamp(1.5rem,4vw,3.5rem) var(--serif); color:var(--gold-light); }
+.huma-featured-frame.poster-unavailable .huma-featured-poster { display:none; }
+.huma-featured-frame.poster-unavailable .huma-featured-poster-fallback { display:flex; }
+.huma-featured-iframe { position:absolute; inset:0; width:100%; height:100%; border:0; background:#000; }
+.huma-featured-footer { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.7rem 1.5rem; padding-top:1rem; color:rgba(243,238,228,.68); font-size:.77rem; }
+.huma-featured-link { color:var(--gold-light); text-decoration:underline; text-underline-offset:4px; }
+@media(max-width:700px) { .huma-featured-head { display:block; } .huma-featured-description { margin-top:1.15rem; } }
+@media(prefers-reduced-motion:reduce) { .huma-featured-play-icon { transition:none; } }
