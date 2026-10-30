@@ -17,7 +17,7 @@
 .huma-featured-frame.poster-unavailable .huma-featured-poster { display:none; }
 .huma-featured-frame.poster-unavailable .huma-featured-poster-fallback { display:flex; }
 .huma-featured-iframe { position:absolute; inset:0; width:100%; height:100%; border:0; background:#000; }
-.huma-featured-footer { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.7rem 1.5rem; padding-top:1rem; color:rgba(243,238,228,.68); font-size:.77rem; }
+.huma-featured-footer { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:.7rem 1.5rem; padding-top:1rem; color:rgba(243,238,228,.68); font-size:.77rem; }
 .huma-featured-link { color:var(--gold-light); text-decoration:underline; text-underline-offset:4px; }
 @media(max-width:700px) { .huma-featured-head { display:block; } .huma-featured-description { margin-top:1.15rem; } }
 @media(prefers-reduced-motion:reduce) { .huma-featured-play-icon { transition:none; } }
