@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-10-30T18:02:10.798Z",
+  "generatedAt": "2026-10-31T05:49:39.657Z",
   "summary": {
-    "products": 1229,
-    "available": 1067,
-    "formal": 696,
+    "products": 1221,
+    "available": 1057,
+    "formal": 688,
     "luxury": 533,
     "priceOnEnquiry": 9,
-    "metaFeedProducts": 1220,
+    "metaFeedProducts": 1212,
     "canonicalBrands": 74,
     "aliasCorrections": 21,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 58,
+    "duplicateNames": 55,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 3350,
-    "newlyRemovedProducts": 61,
+    "removedProducts": 3358,
+    "newlyRemovedProducts": 12,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -131,10 +131,6 @@
   "duplicateNames": [
     {
       "value": "anaya digital printed linen 3pc — 2",
-      "count": 2
-    },
-    {
-      "value": "bareeze embroidered karandi 3pc — 1",
       "count": 2
     },
     {
@@ -326,10 +322,6 @@
       "count": 2
     },
     {
-      "value": "sapphire jacquard viscose 3pc — 2",
-      "count": 2
-    },
-    {
       "value": "sapphire jacquard viscose 3pc — 3",
       "count": 3
     },
@@ -343,10 +335,6 @@
     },
     {
       "value": "tawakkal premium velvet 3pc — 4",
-      "count": 2
-    },
-    {
-      "value": "tawakkal premium velvet 3pc — 6",
       "count": 2
     },
     {
@@ -365,309 +353,64 @@
   "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "NARM-O-NAFEES-ANAYA-A04",
-      "name": "Narm o Nafees By Anaya Noor Embroidered Viscose 3PC — 4",
-      "path": "products/narm-o-nafees-anaya-a04-narm-o-nafees-by-anaya-noor-embroidered-viscose-3pc/"
+      "code": "FASANA-SHN-DHN-MERN-3P-06",
+      "name": "Fasana By Shanaya Plain Emb Dhanak 3PC — 6",
+      "path": "products/fasana-shn-dhn-mern-3p-06-fasana-by-shanaya-plain-emb-dhanak-3pc/"
     },
     {
-      "code": "COCO-ZS-3PLWN-V2-LALA-02",
-      "name": "Coco By Zara Shahjahan Digital Printed Lawn 3PC — 2",
-      "path": "products/coco-zs-3plwn-v2-lala-02-coco-by-zara-shahjahan-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "LIMELIGHT-2PLWN-V2-ABR-12",
-      "name": "Limelight Digital Printed All Over Two Piece Lawn 2PC — 12",
-      "path": "products/limelight-2plwn-v2-abr-12-limelight-digital-printed-all-over-two-piece-lawn-2pc/"
-    },
-    {
-      "code": "BAREEZE-RC-V15-2026-DD-01",
-      "name": "Bareeze Fully Emb Rice Karandi 2PC — 1",
-      "path": "products/bareeze-rc-v15-2026-dd-01-bareeze-fully-emb-rice-karandi-2pc/"
-    },
-    {
-      "code": "SAGE-PRSHY-VISC-3P-IM-02",
-      "name": "Sage By Mahnur | Winter'26 — IM-02",
-      "path": "products/sage-prshy-visc-3p-im-02-sage-by-mahnur-winter-26/"
-    },
-    {
-      "code": "MASHAIM-KHD-V1-3P-HM-07",
-      "name": "Mashaim Digital Printed Khaddar 3PC — 7",
-      "path": "products/mashaim-khd-v1-3p-hm-07-mashaim-digital-printed-khaddar-3pc/"
-    },
-    {
-      "code": "MASHAIM-LIN-V1-3P-HM-04",
-      "name": "Mashaim Digital Printed Linen 3PC — 4",
-      "path": "products/mashaim-lin-v1-3p-hm-04-mashaim-digital-printed-linen-3pc/"
-    },
-    {
-      "code": "OMRE-KRNADI-V102-3P-02",
-      "name": "Omre Emb Karandi 3PC — 2",
-      "path": "products/omre-krnadi-v102-3p-02-omre-emb-karandi-3pc/"
-    },
-    {
-      "code": "WADI-E-GUL-PLTR-LIN-V2-3P-04",
-      "name": "Wadi-e-Gull By Paltar Premium Printed Fancy Linen 3PC — 4",
-      "path": "products/wadi-e-gul-pltr-lin-v2-3p-04-wadi-e-gull-by-paltar-premium-printed-fancy-linen-3pc/"
-    },
-    {
-      "code": "FLORENCE-RR-V2-LALEH-3P-BL-1",
-      "name": "Florence By Rang Rasiya Vol-02 Luxury Emb Lawn 3PC — 1",
-      "path": "products/florence-rr-v2-laleh-3p-bl-1-florence-by-rang-rasiya-vol-02-luxury-emb-lawn-3pc/"
-    },
-    {
-      "code": "RAQS-VISC-V1-3P-UNEQ-13841",
-      "name": "Raqs By Uneq Digital Printed Cotton Viscose 3PC — 13841",
-      "path": "products/raqs-visc-v1-3p-uneq-13841-raqs-by-uneq-digital-printed-cotton-viscose-3pc/"
-    },
-    {
-      "code": "SAFINA-VISC-V1-3P-HM-26",
-      "name": "Safina Digital Printed Viscose 3PC — 26",
-      "path": "products/safina-visc-v1-3p-hm-26-safina-digital-printed-viscose-3pc/"
-    },
-    {
-      "code": "NIRVANA-SHN-LIN-V284-3P-06",
-      "name": "Nirvana By Shanaya Digital Printed Linen 3PC — 6",
-      "path": "products/nirvana-shn-lin-v284-3p-06-nirvana-by-shanaya-digital-printed-linen-3pc/"
-    },
-    {
-      "code": "ZESH-COARD-SILK-V1-LDS-10",
-      "name": "Zesh Printed Silk 2PC — 10",
-      "path": "products/zesh-coard-silk-v1-lds-10-zesh-printed-silk-2pc/"
-    },
-    {
-      "code": "BRZE-BRSHA-KRNDI-V12-3P-AC-01",
+      "code": "BRZE-BRSHA-KRNDI-V4-3P-AC-01",
       "name": "Bareeze Embroidered Karandi 3PC — 1",
-      "path": "products/brze-brsha-krndi-v12-3p-ac-01-bareeze-embroidered-karandi-3pc/"
+      "path": "products/brze-brsha-krndi-v4-3p-ac-01-bareeze-embroidered-karandi-3pc/"
     },
     {
-      "code": "MALHAR-LINEN-V2-3P-HM-09",
-      "name": "Malhaar Digital Printed Linen 3PC — 9",
-      "path": "products/malhar-linen-v2-3p-hm-09-malhaar-digital-printed-linen-3pc/"
+      "code": "REEMSE-BDLWN-V4-3P-08",
+      "name": "Reemse Digital Printed Banadora Lawn 3PC — 8",
+      "path": "products/reemse-bdlwn-v4-3p-08-reemse-digital-printed-banadora-lawn-3pc/"
     },
     {
-      "code": "RAQS-UNEQ-KHD-V2-3P-14452",
-      "name": "Raqs By Uneq Digital Printed Slub Khaddar 3PC — 14452",
-      "path": "products/raqs-uneq-khd-v2-3p-14452-raqs-by-uneq-digital-printed-slub-khaddar-3pc/"
+      "code": "MAHROSH-PLTR-LIN-V3-3P-08",
+      "name": "Mahrosh By Paltar Luxury Model Linen 3PC — 8",
+      "path": "products/mahrosh-pltr-lin-v3-3p-08-mahrosh-by-paltar-luxury-model-linen-3pc/"
     },
     {
-      "code": "BAREZE-DHNK-3P-EHT-2007",
-      "name": "Bareeze Embroidered Dhanak 3PC — 2007",
-      "path": "products/bareze-dhnk-3p-eht-2007-bareeze-embroidered-dhanak-3pc/"
+      "code": "ZESH-PLTINM-VISC-3P-HM-02",
+      "name": "Zesh Platinum Digital Printed Viscose 3PC — 2",
+      "path": "products/zesh-pltinm-visc-3p-hm-02-zesh-platinum-digital-printed-viscose-3pc/"
     },
     {
-      "code": "BAREZE-DHNK-3P-EHT-2040",
-      "name": "Bareeze Embroidered Dhanak 3PC — 2040",
-      "path": "products/bareze-dhnk-3p-eht-2040-bareeze-embroidered-dhanak-3pc/"
-    },
-    {
-      "code": "BAREZE-DHNK-3P-EHT-2042",
-      "name": "Bareeze Embroidered Dhanak 3PC — 2042",
-      "path": "products/bareze-dhnk-3p-eht-2042-bareeze-embroidered-dhanak-3pc/"
-    },
-    {
-      "code": "MAHROSH-PLTR-LIN-V3-3P-07",
-      "name": "Mahrosh By Paltar Luxury Model Linen 3PC — 7",
-      "path": "products/mahrosh-pltr-lin-v3-3p-07-mahrosh-by-paltar-luxury-model-linen-3pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-137",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 137",
-      "path": "products/mixbrand-cambcot-2p-bl-137-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-49",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 49",
-      "path": "products/mixbrand-cambcot-2p-bl-49-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-75",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 75",
-      "path": "products/mixbrand-cambcot-2p-bl-75-mix-brand-digital-printed-allover-lawn-2pc/"
-    },
-    {
-      "code": "SAPHIRE-JAQVISC-V1-3P-AC-05",
-      "name": "Sapphire Jacquard Viscose 3PC — 5",
-      "path": "products/saphire-jaqvisc-v1-3p-ac-05-sapphire-jacquard-viscose-3pc/"
-    },
-    {
-      "code": "SANA-VLVT-3P-V2-MERN-DD-04",
-      "name": "Sana Safinaz Luxury Emb Velvet 3PC — 4",
-      "path": "products/sana-vlvt-3p-v2-mern-dd-04-sana-safinaz-luxury-emb-velvet-3pc/"
-    },
-    {
-      "code": "SANA-VLVT-3P-V2-MEGN-DD-05",
-      "name": "Sana Safinaz Luxury Emb Velvet 3PC — 5",
-      "path": "products/sana-vlvt-3p-v2-megn-dd-05-sana-safinaz-luxury-emb-velvet-3pc/"
-    },
-    {
-      "code": "SAPHIRE-JAQKRND-V1-3P-AC-02",
-      "name": "Sapphire Jacquard Karandi 3PC — 2",
-      "path": "products/saphire-jaqkrnd-v1-3p-ac-02-sapphire-jacquard-karandi-3pc/"
-    },
-    {
-      "code": "SAPHIRE-JAQVISC-V3-3P-AC-01",
-      "name": "Sapphire Jacquard Viscose 3PC — 1",
-      "path": "products/saphire-jaqvisc-v3-3p-ac-01-sapphire-jacquard-viscose-3pc/"
-    },
-    {
-      "code": "ETHNIC-LIN-3P-V655-BLCK-AHMD-8093",
-      "name": "Ethnic Premium Printed Linen 3PC — 8093",
-      "path": "products/ethnic-lin-3p-v655-blck-ahmd-8093-ethnic-premium-printed-linen-3pc/"
-    },
-    {
-      "code": "COCON-W26-KHD-V1-2P-HM-04",
-      "name": "Cocoon By Regalia Digital Printed Khaddar 2PC — 4",
-      "path": "products/cocon-w26-khd-v1-2p-hm-04-cocoon-by-regalia-digital-printed-khaddar-2pc/"
-    },
-    {
-      "code": "ZESH-PRNVISC-V2-3P-HM-06",
-      "name": "Zesh Digital Printed Viscose 3PC — 6",
-      "path": "products/zesh-prnvisc-v2-3p-hm-06-zesh-digital-printed-viscose-3pc/"
-    },
-    {
-      "code": "FIONA-PRSHY-MARINA-FI-10",
-      "name": "Fiona By Mahnur Winter'26 — FI-10",
-      "path": "products/fiona-prshy-marina-fi-10-fiona-by-mahnur-winter-26/"
-    },
-    {
-      "code": "AENNA-SHN-KHD-V313-3P-06",
-      "name": "Aenna By Shanaya Digital Printed Corduroy Khaddar 3PC — 6",
-      "path": "products/aenna-shn-khd-v313-3p-06-aenna-by-shanaya-digital-printed-corduroy-khaddar-3pc/"
-    },
-    {
-      "code": "SARIA-DHNK-3P-EHT-2046",
-      "name": "Saira Rizwan Embroidered Dhanak 3PC — 2046",
-      "path": "products/saria-dhnk-3p-eht-2046-saira-rizwan-embroidered-dhanak-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V1-BLUE-3P-ABR-01",
-      "name": "Tawakkal Premium Velvet 3PC — 1",
-      "path": "products/twkl-vlvt-v1-blue-3p-abr-01-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V1-PURP-3P-ABR-02",
-      "name": "Tawakkal Premium Velvet 3PC — 2",
-      "path": "products/twkl-vlvt-v1-purp-3p-abr-02-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V1-MONG-3P-ABR-03",
-      "name": "Tawakkal Premium Velvet 3PC — 3",
-      "path": "products/twkl-vlvt-v1-mong-3p-abr-03-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V1-MERN-3P-ABR-04",
-      "name": "Tawakkal Premium Velvet 3PC — 4",
-      "path": "products/twkl-vlvt-v1-mern-3p-abr-04-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V1-BLCK-3P-ABR-05",
-      "name": "Tawakkal Premium Velvet 3PC — 5",
-      "path": "products/twkl-vlvt-v1-blck-3p-abr-05-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V1-JAMIN-3P-ABR-08",
-      "name": "Tawakkal Premium Velvet 3PC — 8",
-      "path": "products/twkl-vlvt-v1-jamin-3p-abr-08-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V2-BLUE-3P-ABR-01",
-      "name": "Tawakkal Premium Velvet 3PC — 1",
-      "path": "products/twkl-vlvt-v2-blue-3p-abr-01-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V2-PURP-3P-ABR-02",
-      "name": "Tawakkal Premium Velvet 3PC — 2",
-      "path": "products/twkl-vlvt-v2-purp-3p-abr-02-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V2-MONG-3P-ABR-03",
-      "name": "Tawakkal Premium Velvet 3PC — 3",
-      "path": "products/twkl-vlvt-v2-mong-3p-abr-03-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V2-MERN-3P-ABR-04",
-      "name": "Tawakkal Premium Velvet 3PC — 4",
-      "path": "products/twkl-vlvt-v2-mern-3p-abr-04-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V2-BLCK-3P-ABR-05",
-      "name": "Tawakkal Premium Velvet 3PC — 5",
-      "path": "products/twkl-vlvt-v2-blck-3p-abr-05-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V2-ZINC-3P-ABR-06",
+      "code": "TWKL-VLVT-V1-ZINC-3P-ABR-06",
       "name": "Tawakkal Premium Velvet 3PC — 6",
-      "path": "products/twkl-vlvt-v2-zinc-3p-abr-06-tawakkal-premium-velvet-3pc/"
+      "path": "products/twkl-vlvt-v1-zinc-3p-abr-06-tawakkal-premium-velvet-3pc/"
     },
     {
-      "code": "TWKL-VLVT-V2-RED-3P-ABR-07",
-      "name": "Tawakkal Premium Velvet 3PC — 7",
-      "path": "products/twkl-vlvt-v2-red-3p-abr-07-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V2-JAMIN-3P-ABR-08",
-      "name": "Tawakkal Premium Velvet 3PC — 8",
-      "path": "products/twkl-vlvt-v2-jamin-3p-abr-08-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "ALKARAM-KHD-V667-AHMD-09",
-      "name": "Alkaram Digital Printed Khaddar 3PC — 9",
-      "path": "products/alkaram-khd-v667-ahmd-09-alkaram-digital-printed-khaddar-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V5-BLUE-3P-ABR-01",
-      "name": "Tawakkal Premium Velvet 3PC — 1",
-      "path": "products/twkl-vlvt-v5-blue-3p-abr-01-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V8-PURP-3P-ABR-02",
-      "name": "Tawakkal Premium Velvet 3PC — 2",
-      "path": "products/twkl-vlvt-v8-purp-3p-abr-02-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V5-PURP-3P-ABR-02",
-      "name": "Tawakkal Premium Velvet 3PC — 2",
-      "path": "products/twkl-vlvt-v5-purp-3p-abr-02-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V8-MONG-3P-ABR-03",
-      "name": "Tawakkal Premium Velvet 3PC — 3",
-      "path": "products/twkl-vlvt-v8-mong-3p-abr-03-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V5-BLCK-3P-ABR-05",
-      "name": "Tawakkal Premium Velvet 3PC — 5",
-      "path": "products/twkl-vlvt-v5-blck-3p-abr-05-tawakkal-premium-velvet-3pc/"
-    },
-    {
-      "code": "TWKL-VLVT-V5-ZINC-3P-ABR-06",
+      "code": "TWKL-VLVT-V8-ZINC-3P-ABR-06",
       "name": "Tawakkal Premium Velvet 3PC — 6",
-      "path": "products/twkl-vlvt-v5-zinc-3p-abr-06-tawakkal-premium-velvet-3pc/"
+      "path": "products/twkl-vlvt-v8-zinc-3p-abr-06-tawakkal-premium-velvet-3pc/"
     },
     {
-      "code": "TWKL-VLVT-V5-JAMIN-3P-ABR-08",
-      "name": "Tawakkal Premium Velvet 3PC — 8",
-      "path": "products/twkl-vlvt-v5-jamin-3p-abr-08-tawakkal-premium-velvet-3pc/"
+      "code": "SAPHIRE-JAQVISC-V1-3P-AC-02",
+      "name": "Sapphire Jacquard Viscose 3PC — 2",
+      "path": "products/saphire-jaqvisc-v1-3p-ac-02-sapphire-jacquard-viscose-3pc/"
     },
     {
-      "code": "LIMELI8-DHNK-3P-EHT-2074",
-      "name": "Limelight B Emb Dhanak 3PC — 2074",
-      "path": "products/limeli8-dhnk-3p-eht-2074-limelight-b-emb-dhanak-3pc/"
+      "code": "ZEENAT-AN-DHNK-EMB-3PC-05",
+      "name": "Zeenat By Anaya Noor Emb Dhanak With Palchi Shawl 3PC — 5",
+      "path": "products/zeenat-an-dhnk-emb-3pc-05-zeenat-by-anaya-noor-emb-dhanak-with-palchi-shawl-3pc/"
     },
     {
-      "code": "KAYA-PRSHY-PECH-3P-KA-06",
-      "name": "Kaya By Mahnur Luxury Winter'26 — KA-06",
-      "path": "products/kaya-prshy-pech-3p-ka-06-kaya-by-mahnur-luxury-winter-26/"
+      "code": "KAYSERIA-DHNK-V1-3P-JLALCUT-03",
+      "name": "Kayseria Digital Printed Dhanak 3PC — 3",
+      "path": "products/kayseria-dhnk-v1-3p-jlalcut-03-kayseria-digital-printed-dhanak-3pc/"
     },
     {
-      "code": "KAYA-PRSHY-PECH-3P-KA-07",
-      "name": "Kaya By Mahnur Luxury Winter'26 — KA-07",
-      "path": "products/kaya-prshy-pech-3p-ka-07-kaya-by-mahnur-luxury-winter-26/"
+      "code": "KAYSERIA-DHNK-V1-3P-JLALCUT-07",
+      "name": "Kayseria Digital Printed Dhanak 3PC — 7",
+      "path": "products/kayseria-dhnk-v1-3p-jlalcut-07-kayseria-digital-printed-dhanak-3pc/"
     },
     {
-      "code": "SALINA-W26-KHD-V1-3P-HM-09",
-      "name": "Salina By Regalia Digital Printed Khaddar 3PC — 9",
-      "path": "products/salina-w26-khd-v1-3p-hm-09-salina-by-regalia-digital-printed-khaddar-3pc/"
+      "code": "KAYSERIA-DHNK-V1-3P-JLALCUT-09",
+      "name": "Kayseria Digital Printed Dhanak 3PC — 9",
+      "path": "products/kayseria-dhnk-v1-3p-jlalcut-09-kayseria-digital-printed-dhanak-3pc/"
     }
   ]
 }
