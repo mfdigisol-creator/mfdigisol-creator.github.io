@@ -1,0 +1,60 @@
+name: Assemble approved November social video
+
+on:
+  push:
+    branches: [social-media-assets]
+    paths:
+      - 'social-media/2026-11/video01/chunks/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: alhuma-media-assembly
+  cancel-in-progress: false
+
+jobs:
+  assemble-approved-video:
+    if: github.repository == 'mfdigisol-creator/mfdigisol-creator.github.io' && github.ref == 'refs/heads/social-media-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout isolated media branch
+        uses: actions/checkout@v4
+        with:
+          ref: social-media-assets
+          persist-credentials: true
+      - name: Assemble and verify the exact approved 25-second MP4
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, hashlib
+          root=Path('social-media/2026-11/video01')
+          parts=sorted((root/'chunks').glob('*.part'))
+          if len(parts)!=7:
+              raise SystemExit(f'Expected 7 chunks; found {len(parts)}')
+          data=base64.b64decode(''.join(p.read_text(encoding='ascii') for p in parts), validate=True)
+          expected='4a0fcabf0b60b8e8c87db9ecb0a68ff2df676e5de4313a11f3da738d37678309'
+          actual=hashlib.sha256(data).hexdigest()
+          if actual!=expected:
+              raise SystemExit('SHA-256 mismatch, refusing to publish media')
+          if not data[4:8]==b'ftyp':
+              raise SystemExit('MP4 header missing')
+          target=root/'Al_Huma_Video01_Final_Creative_Cut.mp4'
+          target.write_bytes(data)
+          print(f'Verified {len(data)} bytes, SHA-256 {actual}')
+          PY
+      - name: Commit approved video only to social-media-assets branch
+        shell: bash
+        run: |
+          git config user.name 'Al Huma Media Automation'
+          git config user.email 'alhuma-media-automation@users.noreply.github.com'
+          git add social-media/2026-11/video01/Al_Huma_Video01_Final_Creative_Cut.mp4
+          if git diff --cached --quiet; then
+            echo 'Approved media already present, nothing to update'
+          else
+            git commit -m 'Assemble checksum-verified approved Video 01'
+            git push origin HEAD:social-media-assets
+          fi
