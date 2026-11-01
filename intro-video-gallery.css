@@ -143,6 +143,33 @@
   .intro-videos-card { flex-basis: min(74vw, 270px); }
   .intro-videos-footer { margin-top: .7rem; }
 }
+
+/* Desktop five-up layout: all curated Shorts are visible without sliding. */
+@media (min-width: 1024px) {
+  .intro-videos-track {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: clamp(.7rem, 1.3vw, 1.25rem);
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding-bottom: .3rem;
+  }
+  .intro-videos-card {
+    flex: none;
+    width: auto;
+    min-width: 0;
+  }
+  .intro-videos-card h3 {
+    font-size: clamp(1.1rem, 1.35vw, 1.4rem);
+    overflow-wrap: break-word;
+  }
+  .intro-videos-tag {
+    letter-spacing: .12em;
+    overflow-wrap: anywhere;
+  }
+  .intro-videos-arrows { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .intro-videos-track { scroll-behavior: auto; }
   .intro-videos-cover .intro-videos-mark { transition: none; }
