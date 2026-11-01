@@ -1,0 +1,84 @@
+name: Al Huma Catalogue Image Validation (manual only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: alhuma-catalogue-image-validation
+  cancel-in-progress: false
+
+jobs:
+  validate-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Validate five catalogue product images
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, html, json, os, re, urllib.request, urllib.parse, urllib.error
+          from pathlib import Path
+
+          slugs = [
+            "aifa-black-lwnemb-904-aifa-printed-and-embroidered-lawn-3pc",
+            "aifa-cyan-lwnemb-905-aifa-printed-and-embroidered-lawn-3pc",
+            "aifa-purple-lwnemb-906-aifa-printed-and-embroidered-lawn-3pc",
+            "aifa-ferozi-lwnemb-907-aifa-printed-and-embroidered-lawn-3pc",
+            "aifa-dgreen-lwnemb-908-aifa-printed-and-embroidered-lawn-3pc",
+          ]
+          root = Path("validation-output")
+          images = root / "images"
+          images.mkdir(parents=True, exist_ok=True)
+          report = []
+          for slug in slugs:
+            item = {"slug": slug, "status": "failed"}
+            try:
+              url = f"https://www.alhumacollection.com/products/{slug}/"
+              with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent":"AlHumaCatalogueValidation/1.0"}), timeout=25) as response:
+                page = response.read(500_000).decode("utf-8", errors="replace")
+              if not re.search(r"available to order", page, re.I) or re.search(r"currently unavailable|out of stock", page, re.I):
+                raise ValueError("Availability not confirmed")
+              matches = re.findall(r'https://cdn\.shopify\.com/[^"\'\s<>]+?\.(?:png|jpg|jpeg|webp)(?:\?[^"\'\s<>]*)?', html.unescape(page), re.I)
+              if not matches:
+                raise ValueError("No Shopify image found")
+              image_url = matches[0].split("&width=")[0]
+              parsed = urllib.parse.urlparse(image_url)
+              if parsed.hostname != "cdn.shopify.com" or parsed.scheme != "https":
+                raise ValueError("Image URL host rejected")
+              with urllib.request.urlopen(urllib.request.Request(image_url, headers={"User-Agent":"AlHumaCatalogueValidation/1.0"}), timeout=40) as response:
+                data = response.read(12_000_001)
+                mime = response.headers.get("Content-Type","").split(";")[0].lower()
+              if len(data) > 12_000_000 or len(data) < 2048:
+                raise ValueError("Image size outside accepted bounds")
+              signatures = (
+                data.startswith(b"\x89PNG\r\n\x1a\n") or
+                data.startswith(b"\xff\xd8\xff") or
+                (data[:4] == b"RIFF" and data[8:12] == b"WEBP")
+              )
+              if not signatures or mime not in ("image/jpeg", "image/png", "image/webp", "application/octet-stream"):
+                raise ValueError("Image format validation failed")
+              ext = ".png" if data.startswith(b"\x89PNG") else ".webp" if data[:4] == b"RIFF" else ".jpg"
+              target = images / (slug + ext)
+              target.write_bytes(data)
+              item.update(status="passed", image_url=image_url, file=str(target), bytes=len(data), sha256=hashlib.sha256(data).hexdigest())
+            except Exception as exc:
+              item["error"] = str(exc)[:300]
+            report.append(item)
+            print(f"{slug}: {item['status']}")
+          (root / "report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+          good = sum(item["status"] == "passed" for item in report)
+          print(f"Validated: {good}/{len(report)}")
+          if good != len(report):
+            raise SystemExit(1)
+          PY
+      - name: Upload validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alhuma-image-validation
+          path: validation-output/
+          if-no-files-found: warn
+          retention-days: 7
