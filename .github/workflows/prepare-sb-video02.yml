@@ -1,0 +1,56 @@
+name: Prepare SB Stitching video for Instagram audio limits
+
+on:
+  push:
+    branches: [social-media-assets]
+    paths:
+      - 'social-media/2026-11/video02/run-transcode.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: alhuma-video02-transcode
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    if: github.repository == 'mfdigisol-creator/mfdigisol-creator.github.io' && github.ref == 'refs/heads/social-media-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: social-media-assets
+          persist-credentials: true
+      - name: Re-encode audio only and validate output
+        shell: bash
+        run: |
+          set -euo pipefail
+          input="social-media/2026-11/video02/SB_Stitching_Video02_Final.mp4"
+          output="social-media/2026-11/video02/SB_Stitching_Video02_Social_Delivery.mp4"
+          echo '14c0157c5e7a23b6887372afcc7e8221d9df8a0c6fb10690fea800db1c569731  '"$input" | sha256sum -c -
+          ffmpeg -hide_banner -nostdin -y -i "$input" -c:v copy -c:a aac -b:a 96k -movflags +faststart "$output" -loglevel error
+          python3 - <<'PY'
+          import json,subprocess
+          p='social-media/2026-11/video02/SB_Stitching_Video02_Social_Delivery.mp4'
+          d=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,bit_rate,width,height:format=duration','-of','json',p]))
+          a=next(s for s in d['streams'] if s['codec_type']=='audio')
+          v=next(s for s in d['streams'] if s['codec_type']=='video')
+          assert int(a['bit_rate'])<=128000, a
+          assert (v['width'],v['height'])==(720,1280),v
+          assert 27.9<float(d['format']['duration'])<28.2, d
+          print('Verified publish-ready video',d['format']['duration'],a['bit_rate'])
+          PY
+      - name: Commit only to social media branch
+        run: |
+          git config user.name 'Al Huma Media Automation'
+          git config user.email 'alhuma-media-automation@users.noreply.github.com'
+          git add social-media/2026-11/video02/SB_Stitching_Video02_Social_Delivery.mp4
+          if git diff --cached --quiet; then
+            echo 'Already compatible'
+          else
+            git commit -m 'Add Instagram-compatible SB Stitching audio delivery version'
+            git push origin HEAD:social-media-assets
+          fi
