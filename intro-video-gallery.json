@@ -1,5 +1,5 @@
 {
-  "phase": "phase1-fixed-introductions",
+  "phase": "phase2-five-curated-introductions",
   "channel": "UCiHxxF23psEw_q9hOYUY_qQ",
   "videos": [
     {
@@ -13,6 +13,26 @@
       "youtubeId": "oH6g9qsHfg4",
       "title": "SB Stitching — Ladies' Stitching",
       "category": "02 / Stitching introduction"
+    },
+    {
+      "key": "al-huma-fashion-designer",
+      "youtubeId": "f8koXC-71w8",
+      "title": "Al Huma Collection — Fashion Designer Introduction",
+      "category": "03 / Fashion designer"
+    },
+    {
+      "key": "al-huma-fashion-stylist",
+      "youtubeId": "aEO8gbDQyX4",
+      "title": "Al Huma Collection — Fashion Stylist Introduction",
+      "category": "04 / Fashion stylist"
+    },
+    {
+      "key": "sb-stitching-master-tailor",
+      "youtubeId": "VBchayLmExg",
+      "title": "SB Stitching — Master Tailor Introduction",
+      "category": "05 / Master tailor"
     }
-  ]
+  ],
+  "updateMode": "manual",
+  "maximumVideos": 5
 }
