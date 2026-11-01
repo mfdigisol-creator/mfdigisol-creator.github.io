@@ -1,4 +1,4 @@
-/* Al Huma introduction gallery — Phase 1 only.
+/* Al Huma curated video gallery — up to five manually selected Shorts.
    No scheduled fetching, YouTube APIs, analytics, or social workflow dependencies. */
 (() => {
   'use strict';
@@ -41,14 +41,14 @@
         image.remove();
         const fallback = document.createElement('span');
         fallback.className = 'intro-videos-placeholder';
-        fallback.textContent = index === 0 ? 'Al Huma Collection' : 'SB Stitching';
+        fallback.textContent = video.title;
         cover.prepend(fallback);
       }, { once: true });
       cover.append(image);
     } else {
       const placeholder = document.createElement('span');
       placeholder.className = 'intro-videos-placeholder';
-      placeholder.textContent = index === 0 ? 'Al Huma Collection' : 'SB Stitching';
+      placeholder.textContent = video.title;
       cover.append(placeholder);
     }
     const mark = document.createElement('span');
@@ -105,9 +105,9 @@
   }
 
   function initialize(config) {
-    const videos = Array.isArray(config?.videos) ? config.videos.slice(0, 2) : [];
-    if (videos.length !== 2) {
-      status.textContent = 'Watch our introductions on the official YouTube channel.';
+    const videos = Array.isArray(config?.videos) ? config.videos.slice(0, 5) : [];
+    if (videos.length < 2) {
+      status.textContent = 'Explore our video introductions on the official YouTube channel.';
       return;
     }
     videos.forEach((video, index) => track.append(buildCard(video, index)));
@@ -126,5 +126,5 @@
   fetch('/intro-video-gallery.json', { credentials: 'same-origin' })
     .then(response => { if (!response.ok) throw new Error('Video config not available'); return response.json(); })
     .then(initialize)
-    .catch(() => { status.textContent = 'Watch our introductions on the official YouTube channel.'; });
+    .catch(() => { status.textContent = 'Explore our video introductions on the official YouTube channel.'; });
 })();
