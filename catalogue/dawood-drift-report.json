@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-11-01T06:12:43.695Z",
+  "generatedAt": "2026-11-01T17:56:32.901Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1515,
+      "actual": 1478,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7635063869682409,
-      "required": 0.6180342651036971,
-      "fetchedMemberships": 6515,
-      "reportedMemberships": 8533,
-      "previous": 0.7725428313796213
+      "actual": 0.7583723442563918,
+      "required": 0.6108051095745928,
+      "fetchedMemberships": 6318,
+      "reportedMemberships": 8331,
+      "previous": 0.7635063869682409
     },
     {
       "id": "duplicate-supplier-skus",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1290,
+      "actual": 1253,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1290,
-      "required": 1084,
-      "previous": 1355
+      "actual": 1253,
+      "required": 1032,
+      "previous": 1290
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1290,
+      "actual": 1253,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1515,
+    "sourceProducts": 1478,
     "sourceCollections": 106,
-    "includedSourceProducts": 1267,
+    "includedSourceProducts": 1230,
     "excludedSourceProducts": 248,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1290,
-    "previousCatalogueProducts": 1355,
-    "candidateVsPreviousPercent": -4.797047970479705,
-    "collectionProductCoverage": 0.7635063869682409,
-    "previousCollectionProductCoverage": 0.7725428313796213,
+    "candidateProducts": 1253,
+    "previousCatalogueProducts": 1290,
+    "candidateVsPreviousPercent": -2.8682170542635657,
+    "collectionProductCoverage": 0.7583723442563918,
+    "previousCollectionProductCoverage": 0.7635063869682409,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 137,
-    "relationUnmappedProducts": 1153,
+    "relationUnmappedProducts": 1116,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -87,7 +87,7 @@
   },
   "relationMapping": {
     "relationMappedProducts": 137,
-    "relationUnmappedProducts": 1153,
+    "relationUnmappedProducts": 1116,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -584,8 +584,8 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 124,
-      "fetchedProducts": 53,
+      "reportedProducts": 122,
+      "fetchedProducts": 51,
       "anomaly": null
     },
     {
@@ -616,8 +616,8 @@
       "id": "701074997619",
       "title": "Summer Unstitched Daily Wear Printed 3pc",
       "handle": "unstitched-daily-wear-printed-3pc",
-      "reportedProducts": 52,
-      "fetchedProducts": 20,
+      "reportedProducts": 50,
+      "fetchedProducts": 18,
       "anomaly": null
     }
   ],
@@ -732,25 +732,6 @@
       "seasons": [],
       "collections": [
         "Amelia"
-      ]
-    },
-    {
-      "id": "15630568817011",
-      "title": "Laraib By Anaya Noor Emb Dhanak With Boring Daman 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
       ]
     },
     {
@@ -970,7 +951,7 @@
       ]
     },
     {
-      "id": "15586038579571",
+      "id": "15586038514035",
       "title": "Dream Stone By Anaya Noor Full Heavy Emb Viscose 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
@@ -989,8 +970,27 @@
       ]
     },
     {
-      "id": "15586038514035",
-      "title": "Dream Stone By Anaya Noor Full Heavy Emb Viscose 3PC",
+      "id": "15581068624243",
+      "title": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15581068657011",
+      "title": "Riwaaz By Anaya Noor Digital Printed & Emb Khaddar 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
       "pieceType": "3 Piece",
