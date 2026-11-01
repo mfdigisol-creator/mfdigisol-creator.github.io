@@ -123,7 +123,7 @@
     });
   }
 
-  fetch('/intro-video-gallery.json', { credentials: 'same-origin' })
+  fetch('/intro-video-gallery.json?v=20261102-five-videos', { credentials: 'same-origin' })
     .then(response => { if (!response.ok) throw new Error('Video config not available'); return response.json(); })
     .then(initialize)
     .catch(() => { status.textContent = 'Explore our video introductions on the official YouTube channel.'; });
