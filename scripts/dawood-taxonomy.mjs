@@ -3,6 +3,7 @@ const lower = value => clean(value).toLowerCase();
 
 const MEN_PATTERN = /\b(?:men|mens|men['’]?s|menswear|male|boys?)\b/i;
 const READY_TO_WEAR_PATTERN = /\bready\s*(?:to|-)?\s*wear\b|\bpret\b|\bstitched\b/i;
+const SEMI_STITCHED_PATTERN = /\bsemi[\s-]*stitch(?:ed)?\b/i;
 const UNSTITCHED_PATTERN = /\bunstitch(?:ed)?\b/i;
 const FABRIC_SUIT_PATTERN = /\b(?:lawn|khaddar|linen|viscose|karandi|marina|dhanak|organza|chiffon|silk|cambric|jacquard|cotton|net|velvet|shirt|trouser|dupatta|shawl|suit)\b/i;
 const LUXURY_PATTERN = /\bluxury\b/i;
@@ -147,9 +148,12 @@ export function classifyScope(product, rawCollections = []) {
     ...tagValues,
     ...collections.flatMap(collection => [collection.title, collection.handle])
   ].join(' ');
+  // A semi-stitched shirt is outside the approved fully unstitched catalogue, even when the trouser is unstitched.
+  const semiStitchedDescription = SEMI_STITCHED_PATTERN.test(weakProductText(product));
   if (sizeVariants) reasons.push('garment-size-variants');
   if (READY_TO_WEAR_PATTERN.test(rtwStructured)) reasons.push('ready-to-wear-or-stitched-signal');
-  if (sizeVariants || READY_TO_WEAR_PATTERN.test(rtwStructured)) {
+  if (semiStitchedDescription) reasons.push('semi-stitched-supplier-description');
+  if (sizeVariants || READY_TO_WEAR_PATTERN.test(rtwStructured) || semiStitchedDescription) {
     return { status: 'excluded', reasons };
   }
 
