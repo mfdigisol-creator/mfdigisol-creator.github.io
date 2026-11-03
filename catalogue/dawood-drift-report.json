@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-11-03T15:15:33.485Z",
+  "generatedAt": "2026-11-03T19:30:43.282Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1762,
+      "actual": 1666,
       "required": 100
     },
     {
@@ -25,17 +25,17 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.757081878152891,
-      "required": 0.6059666795815576,
-      "fetchedMemberships": 7804,
-      "reportedMemberships": 10308,
-      "previous": 0.7574583494769469
+      "actual": 0.7568635607321131,
+      "required": 0.6056655025223128,
+      "fetchedMemberships": 7278,
+      "reportedMemberships": 9616,
+      "previous": 0.757081878152891
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 4,
-      "requiredMaximum": 30
+      "requiredMaximum": 28
     },
     {
       "id": "ambiguous-scope-share",
@@ -47,55 +47,55 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1474,
+      "actual": 1381,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1474,
-      "required": 1181,
-      "previous": 1477
+      "actual": 1381,
+      "required": 1179,
+      "previous": 1474
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1474,
+      "actual": 1381,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1762,
+    "sourceProducts": 1666,
     "sourceCollections": 106,
-    "includedSourceProducts": 1450,
-    "excludedSourceProducts": 312,
+    "includedSourceProducts": 1357,
+    "excludedSourceProducts": 309,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1474,
-    "previousCatalogueProducts": 1477,
-    "candidateVsPreviousPercent": -0.2031144211238998,
-    "collectionProductCoverage": 0.757081878152891,
-    "previousCollectionProductCoverage": 0.7574583494769469,
+    "candidateProducts": 1381,
+    "previousCatalogueProducts": 1474,
+    "candidateVsPreviousPercent": -6.309362279511534,
+    "collectionProductCoverage": 0.7568635607321131,
+    "previousCollectionProductCoverage": 0.757081878152891,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
-    "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1330,
-    "relationGroups": 14,
-    "relationGroupsWith3PlusProducts": 14,
+    "relationMappedProducts": 138,
+    "relationUnmappedProducts": 1243,
+    "relationGroups": 13,
+    "relationGroupsWith3PlusProducts": 13,
     "ambiguousRelationProducts": 0,
     "genericCollectionsRejected": 31,
     "multiBrandCollectionsRejected": 35
   },
   "relationMapping": {
-    "relationMappedProducts": 144,
-    "relationUnmappedProducts": 1330,
-    "relationGroups": 14,
-    "relationGroupsWith3PlusProducts": 14,
+    "relationMappedProducts": 138,
+    "relationUnmappedProducts": 1243,
+    "relationGroups": 13,
+    "relationGroupsWith3PlusProducts": 13,
     "ambiguousRelationProducts": 0,
     "genericCollectionsRejected": 31,
     "multiBrandCollectionsRejected": 35,
     "anomalyCollectionsRejected": 0,
-    "undersizedCollectionsRejected": 4,
-    "safeCandidateCollections": 14,
+    "undersizedCollectionsRejected": 5,
+    "safeCandidateCollections": 13,
     "groups": [
       {
         "relationKey": "dawood_collection:693591441779",
@@ -141,8 +141,8 @@
         "collectionTitle": "Bareeze Fully Emb Rice Karandi Lawn 2PC",
         "collectionHandle": "bareeze-fully-emb-rice-karandi-lawn-2pc",
         "brand": "Bareeze",
-        "products": 39,
-        "available": 39,
+        "products": 36,
+        "available": 36,
         "productCodes": [
           "BAREEZE-CREAM-RK-LWN-07",
           "BAREEZE-FEROZ-RK-LWN-10",
@@ -166,10 +166,8 @@
           "BAREEZE-RC-V13-2026-DD-04",
           "BAREEZE-RC-V15-2026-DD-04",
           "BAREEZE-RC-V15-2026-DD-05",
-          "BAREEZE-RC-V2-2026-DD-01",
           "BAREEZE-RC-V2-2026-DD-02",
           "BAREEZE-RC-V2-2026-DD-05",
-          "BAREEZE-RC-V3-2026-DD-04",
           "BAREEZE-RC-V4-2026-DD-01",
           "BAREEZE-RC-V4-2026-DD-02",
           "BAREEZE-RC-V4-2026-DD-03",
@@ -180,7 +178,6 @@
           "BAREEZE-RC-V5-2026-DD-04",
           "BAREEZE-RC-V5-2026-DD-05",
           "BAREEZE-RC-V6-2026-DD-01",
-          "BAREEZE-RC-V6-2026-DD-02",
           "BAREEZE-RC-V6-2026-DD-04",
           "BAREEZE-SKIN-RK-LWN-10"
         ]
@@ -380,26 +377,12 @@
           "ZAYLEE-TWKL-LWN-D-2835",
           "ZAYLEE-TWKL-LWN-D-2836"
         ]
-      },
-      {
-        "relationKey": "dawood_collection:706884501875",
-        "collectionId": "706884501875",
-        "collectionTitle": "Luxury Makhmal",
-        "collectionHandle": "luxury-makhmal",
-        "brand": "Zarineh",
-        "products": 3,
-        "available": 3,
-        "productCodes": [
-          "MAKHMAL-VLVT-3P-RA-4001",
-          "MAKHMAL-VLVT-3P-RA-4003",
-          "MAKHMAL-VLVT-3P-RA-4005"
-        ]
       }
     ]
   },
   "exclusionReasons": {
     "single-piece-not-approved-suit-scope": 4,
-    "menswear-signal": 77,
+    "menswear-signal": 74,
     "garment-size-variants": 190,
     "ready-to-wear-or-stitched-signal": 188,
     "semi-stitched-supplier-description": 41
@@ -500,8 +483,8 @@
       "id": "695098573171",
       "title": "Alkaram Digital Printed Lawn 3PC",
       "handle": "alkaram-digital-printed-lawn-3pc",
-      "reportedProducts": 19,
-      "fetchedProducts": 7,
+      "reportedProducts": 18,
+      "fetchedProducts": 6,
       "anomaly": null
     },
     {
@@ -548,16 +531,16 @@
       "id": "695755538803",
       "title": "Gul Ahmed Boski – Premium Men’s Unstitched Suit",
       "handle": "gul-ahmed-boski-premium-men-s-unstitched-suit",
-      "reportedProducts": 13,
-      "fetchedProducts": 6,
+      "reportedProducts": 11,
+      "fetchedProducts": 4,
       "anomaly": null
     },
     {
       "id": "693189575027",
       "title": "Gul Ahmed Men’s Summer Cotton Suit",
       "handle": "gul-ahmed-men-s-summer-wash-wear-suit",
-      "reportedProducts": 13,
-      "fetchedProducts": 6,
+      "reportedProducts": 11,
+      "fetchedProducts": 4,
       "anomaly": null
     },
     {
@@ -612,26 +595,6 @@
   "includedSamples": [
     {
       "id": "15613326590323",
-      "title": "Alkaram Digital Printed Khaddar 3PC",
-      "vendor": "Alkaram",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Alkaram Digital Printed Lawn 3PC",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15613326393715",
       "title": "Alkaram Digital Printed Khaddar 3PC",
       "vendor": "Alkaram",
       "category": "Formal",
@@ -720,25 +683,6 @@
       "seasons": [],
       "collections": [
         "Amelia"
-      ]
-    },
-    {
-      "id": "15630568849779",
-      "title": "Laraib By Anaya Noor Emb Dhanak With Boring Daman 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
       ]
     },
     {
@@ -971,6 +915,44 @@
     },
     {
       "id": "15610466402675",
+      "title": "Anaya Noor Pashmina With Kacha tanka Shawl 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15610466435443",
+      "title": "Anaya Noor Pashmina With Kacha tanka Shawl 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15602619253107",
       "title": "Anaya Noor Pashmina With Kacha tanka Shawl 3PC",
       "vendor": "Anaya Noor",
       "category": "Formal",
