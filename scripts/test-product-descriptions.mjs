@@ -120,6 +120,8 @@ async function main() {
   const seen = new Set();
   for (const [label, predicate] of selectors) {
     const item = products.find(predicate);
+    // Price-on-enquiry is conditional on supplier pricing; zero such products is valid.
+    if (!item && label === 'price-on-enquiry') continue;
     assert(item, `No representative ${label} product exists in the current catalogue.`);
     const description = descriptionForProduct(item);
     assert(description.text.length >= 40, `${label} product description is too short: ${item.code}.`);
