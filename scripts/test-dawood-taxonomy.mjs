@@ -44,6 +44,16 @@ const stitchedSleeves = product({
 });
 assert.equal(classifyScope(stitchedSleeves, [collection('Unstitched Winter Embroidered 3PC')]).status, 'included');
 
+const semiStitchedSuit = product({
+  title: 'Luxury Embroidered Organza 3PC',
+  body_html: '<p>Semi-Stitched organza shirt; unstitched raw silk trouser.</p>',
+  tags: ['3-PC', 'embroidered']
+});
+const semiStitchedScope = classifyScope(semiStitchedSuit, [collection('Luxury Unstitched 3PC')]);
+assert.equal(semiStitchedScope.status, 'excluded');
+assert.ok(semiStitchedScope.reasons.includes('semi-stitched-supplier-description'));
+assert.equal(classifyScope(product({ body_html: '<p>3PC semi stitch luxury embroidered organza</p>' })).status, 'excluded');
+
 const shawlOnly = product({ title:'Limelight Winter Woolen Shawl', product_type:'1-PC', tags:['1-PC','winter2027'] });
 assert.equal(classifyScope(shawlOnly, [collection('Winter Woolen Shawl')]).status, 'excluded');
 
