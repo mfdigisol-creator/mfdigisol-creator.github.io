@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T15:03:38.415Z",
+  "generatedAt": "2026-11-03T15:15:33.836Z",
   "products": [
     {
       "code": "ABRISH-2PLWN-V2-ABR-01",
@@ -9709,6 +9709,31 @@
       "firstSeenAt": "2026-09-02T13:27:41+05:00",
       "lastSeenAt": "2026-10-17T20:38:47+05:00",
       "removedAt": "2026-10-18T04:38:35.063Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "MAROSH-ANAYANOOR-3PC-W26-03",
+      "id": "15600047948147-67122207097203",
+      "name": "Marosh By Anaya Noor Embroidered Dhanak With Plachi Shawl 3PC — 3",
+      "productName": "Marosh By Anaya Noor Embroidered Dhanak With Plachi Shawl 3PC",
+      "brand": "Anaya Noor",
+      "sourceBrand": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 6900,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_5__jpg_d543c00f-ceb6-4f7e-bc9b-070e421efb79.jpg?v=1792834432",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_5__jpg_d543c00f-ceb6-4f7e-bc9b-070e421efb79.jpg?v=1792834432",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_2__jpg_be78b32d-ee1b-4821-8c68-821fe1caab8f.jpg?v=1792834432",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_3__jpg_073bfcc5-8c8c-446a-832d-3ea6b05dd9f0.jpg?v=1792834432",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_4__jpg_e59d5c9b-9720-481e-a687-b5b4069dacde.jpg?v=1792834431",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/1_1__jpg_87c1e786-b355-4b69-97cf-c08df98e547e.jpg?v=1792834432"
+      ],
+      "path": "products/marosh-anayanoor-3pc-w26-03-marosh-by-anaya-noor-embroidered-dhanak-with-plachi-shawl-3pc/",
+      "firstSeenAt": "2026-10-15T17:23:04+05:00",
+      "lastSeenAt": "2026-11-03T20:03:23+05:00",
+      "removedAt": "2026-11-03T15:15:33.764Z",
       "reason": "supplier-removed"
     },
     {
@@ -39028,6 +39053,29 @@
       "reason": "supplier-removed"
     },
     {
+      "code": "MARIAB-LWN-PECH-HA-328",
+      "id": "15375962341747-62836494205299",
+      "name": "Maria B Embroiderd & Digital Printed Lawn 3PC — 328",
+      "productName": "Maria B Embroiderd & Digital Printed Lawn 3PC",
+      "brand": "Maria B",
+      "sourceBrand": "Maria B",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "price": 5095,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/78d5f099-f285-43b4-973e-4c0dc7c28f3a.jpg?v=1784647219",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/78d5f099-f285-43b4-973e-4c0dc7c28f3a.jpg?v=1784647219",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/30CEC991-20C8-469E-87E0-1A9BC2AE42D6.jpg?v=1779107766",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/326D28CF-7AD1-4751-AFF8-A8A8E4CD0C43.jpg?v=1779107766"
+      ],
+      "path": "products/mariab-lwn-pech-ha-328-maria-b-embroiderd-and-digital-printed-lawn-3pc/",
+      "firstSeenAt": "2026-09-12T09:39:22+05:00",
+      "lastSeenAt": "2026-11-03T20:03:24+05:00",
+      "removedAt": "2026-11-03T15:15:33.763Z",
+      "reason": "supplier-removed"
+    },
+    {
       "code": "MARIAB-LWN-PISTA-HA-328",
       "id": "15375962308979-62836494172531",
       "name": "Maria B Embroiderd & Digital Printed Lawn 3PC — 328",
@@ -66200,6 +66248,30 @@
       "firstSeenAt": "2026-09-14T10:00:31+05:00",
       "lastSeenAt": "2026-09-14T19:18:58+05:00",
       "removedAt": "2026-09-14T14:31:02.385Z",
+      "reason": "supplier-removed"
+    },
+    {
+      "code": "NAINA-SHN-LWN-V212-2P-09",
+      "id": "15460231479667-63596251677043",
+      "name": "Naina By Shanaya Digital Printed Two Piece Lawn 2PC — 9",
+      "productName": "Naina By Shanaya Digital Printed Two Piece Lawn 2PC",
+      "brand": "Shanaya",
+      "sourceBrand": "Shanaya",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "price": 2450,
+      "image": "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15897_2_c10ad532-668a-46bb-982a-28d1f1a52042.jpg?v=1785494095",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15897_2_c10ad532-668a-46bb-982a-28d1f1a52042.jpg?v=1785494095",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15897_1_45fdf118-3243-4eb2-8aa4-378929eb76ba.jpg?v=1785494094",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15897_2.jpg?v=1785421806",
+        "https://cdn.shopify.com/s/files/1/0906/1783/9987/files/15897_1.jpg?v=1785421806"
+      ],
+      "path": "products/naina-shn-lwn-v212-2p-09-naina-by-shanaya-digital-printed-two-piece-lawn-2pc/",
+      "firstSeenAt": "2026-09-01T01:34:09+05:00",
+      "lastSeenAt": "2026-11-03T20:03:23+05:00",
+      "removedAt": "2026-11-03T15:15:33.762Z",
       "reason": "supplier-removed"
     },
     {
