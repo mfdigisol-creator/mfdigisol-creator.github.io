@@ -1,29 +1,28 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-05T06:53:24.659Z",
+  "generatedAt": "2026-11-05T19:59:45.163Z",
   "summary": {
-    "products": 1338,
-    "removedProducts": 3482,
-    "brands": 83,
-    "collectionPages": 94,
-    "collectionCanonicalsChecked": 94,
+    "products": 1374,
+    "removedProducts": 3528,
+    "brands": 84,
+    "collectionPages": 95,
+    "collectionCanonicalsChecked": 95,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1435,
-    "metaFeedRows": 1338,
-    "metadataPages": 1338,
-    "internalHtmlFiles": 4980,
+    "sitemapUrls": 1472,
+    "metaFeedRows": 1374,
+    "metadataPages": 1374,
+    "internalHtmlFiles": 5064,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "43 products currently lack retained supplier description text."
+    "58 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
-      "P&P-ALMRH-LWN-CT-3P-17",
       "P&P-ALMRH-LWN-CT-3P-02",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
@@ -41,13 +40,14 @@
       "DASTAN-CKLWN-3P-NRJ-02",
       "DASTAN-CKLWN-3P-NRJ-07",
       "DASTAN-CKLWN-3P-NRJ-08",
-      "VICTORIA-OMRE-VLVT-V208-01",
-      "VICTORIA-OMRE-VLVT-V208-02",
-      "VICTORIA-OMRE-VLVT-V208-03",
-      "VICTORIA-OMRE-VLVT-V208-04",
-      "VICTORIA-OMRE-VLVT-V208-05",
-      "VICTORIA-OMRE-VLVT-V208-06",
-      "MIXBRAND-PRNKHD-2P-BL-350"
+      "OMRE-EMBVISC-V203-3P-01",
+      "OMRE-EMBVISC-V203-3P-10",
+      "OMRE-EMBVISC-V203-3P-02",
+      "OMRE-EMBVISC-V203-3P-03",
+      "OMRE-EMBVISC-V203-3P-04",
+      "OMRE-EMBVISC-V203-3P-05",
+      "OMRE-EMBVISC-V203-3P-06",
+      "OMRE-EMBVISC-V203-3P-07"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
