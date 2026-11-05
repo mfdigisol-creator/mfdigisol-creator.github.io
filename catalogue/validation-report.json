@@ -1,30 +1,28 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-04T19:48:56.859Z",
+  "generatedAt": "2026-11-05T06:53:24.659Z",
   "summary": {
-    "products": 1368,
-    "removedProducts": 3432,
+    "products": 1338,
+    "removedProducts": 3482,
     "brands": 83,
-    "collectionPages": 93,
-    "collectionCanonicalsChecked": 93,
+    "collectionPages": 94,
+    "collectionCanonicalsChecked": 94,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1464,
-    "metaFeedRows": 1368,
-    "metadataPages": 1368,
-    "internalHtmlFiles": 4959,
+    "sitemapUrls": 1435,
+    "metaFeedRows": 1338,
+    "metadataPages": 1338,
+    "internalHtmlFiles": 4980,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "46 products currently lack retained supplier description text."
+    "43 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
-      "FLOWS-ALMRH-LWN-CT-3P-14",
-      "FLOWS-ALMRH-LWN-CT-3P-22",
       "P&P-ALMRH-LWN-CT-3P-17",
       "P&P-ALMRH-LWN-CT-3P-02",
       "CRIMSON-BLK-3PC-AK15",
@@ -47,7 +45,9 @@
       "VICTORIA-OMRE-VLVT-V208-02",
       "VICTORIA-OMRE-VLVT-V208-03",
       "VICTORIA-OMRE-VLVT-V208-04",
-      "VICTORIA-OMRE-VLVT-V208-05"
+      "VICTORIA-OMRE-VLVT-V208-05",
+      "VICTORIA-OMRE-VLVT-V208-06",
+      "MIXBRAND-PRNKHD-2P-BL-350"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
