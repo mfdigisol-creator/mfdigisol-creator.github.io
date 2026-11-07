@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-11-06T19:27:27.462Z",
+  "generatedAt": "2026-11-07T06:03:31.373Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1645,
+      "actual": 1606,
       "required": 100
     },
     {
@@ -25,17 +25,17 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7429906542056075,
-      "required": 0.5964993187296929,
-      "fetchedMemberships": 7155,
-      "reportedMemberships": 9630,
-      "previous": 0.7456241484121161
+      "actual": 0.7350174400169115,
+      "required": 0.594392523364486,
+      "fetchedMemberships": 6954,
+      "reportedMemberships": 9461,
+      "previous": 0.7429906542056075
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 4,
-      "requiredMaximum": 28
+      "requiredMaximum": 27
     },
     {
       "id": "ambiguous-scope-share",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1357,
+      "actual": 1318,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1357,
-      "required": 1077,
-      "previous": 1347
+      "actual": 1318,
+      "required": 1085,
+      "previous": 1357
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1357,
+      "actual": 1318,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1645,
+    "sourceProducts": 1606,
     "sourceCollections": 108,
-    "includedSourceProducts": 1333,
+    "includedSourceProducts": 1294,
     "excludedSourceProducts": 312,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1357,
-    "previousCatalogueProducts": 1347,
-    "candidateVsPreviousPercent": 0.7423904974016332,
-    "collectionProductCoverage": 0.7429906542056075,
-    "previousCollectionProductCoverage": 0.7456241484121161,
+    "candidateProducts": 1318,
+    "previousCatalogueProducts": 1357,
+    "candidateVsPreviousPercent": -2.8739867354458366,
+    "collectionProductCoverage": 0.7350174400169115,
+    "previousCollectionProductCoverage": 0.7429906542056075,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 137,
-    "relationUnmappedProducts": 1220,
+    "relationUnmappedProducts": 1181,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -87,7 +87,7 @@
   },
   "relationMapping": {
     "relationMappedProducts": 137,
-    "relationUnmappedProducts": 1220,
+    "relationUnmappedProducts": 1181,
     "relationGroups": 14,
     "relationGroupsWith3PlusProducts": 14,
     "ambiguousRelationProducts": 0,
@@ -635,26 +635,6 @@
   ],
   "includedSamples": [
     {
-      "id": "15635622297971",
-      "title": "Bin Saeed Digital Printed Khaddar 3PC",
-      "vendor": "Bin Saeed",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
       "id": "15635026248051",
       "title": "Bin Saeed Digital Printed Khaddar 3PC",
       "vendor": "Bin Saeed",
@@ -795,25 +775,6 @@
         "Summer 2026 Untitched Daily Wear",
         "Summer Unstitched Daily Wear Printed 3pc",
         "Three Piece Printed Summer Collection",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15637007565171",
-      "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
-      "vendor": "Mix Brand",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "PRINTED",
-        "Two Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 2PC",
         "Zarmeen & Emaan"
       ]
     },
@@ -1000,9 +961,9 @@
       ]
     },
     {
-      "id": "15611341570419",
-      "title": "Zainab Chottani Digital Printed Khaddar 3PC",
-      "vendor": "Zainab Chottani",
+      "id": "15635622363507",
+      "title": "Bin Saeed Digital Printed Khaddar 3PC",
+      "vendor": "Bin Saeed",
       "category": "Formal",
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
@@ -1020,21 +981,61 @@
       ]
     },
     {
-      "id": "15635622363507",
-      "title": "Bin Saeed Digital Printed Khaddar 3PC",
-      "vendor": "Bin Saeed",
+      "id": "15622078628211",
+      "title": "Heer By Anaya Noor Premium Embroidered Slub Viscose 3PC",
+      "vendor": "Anaya Noor",
       "category": "Formal",
       "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
+      "pricingClass": "embroidered",
       "seasons": [
         "Winter",
         "Summer"
       ],
       "collections": [
         "11.11 Biggest Sale of the Year",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15622078267763",
+      "title": "Heer By Anaya Noor Premium Embroidered Slub Viscose 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15635687637363",
+      "title": "Sanwali By Anaya Noor Premium Emb Dhanak With Doriya Velvet Dupatta 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "Anaya Noor",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
         "WINTER 2026",
         "Zarmeen & Emaan"
       ]
