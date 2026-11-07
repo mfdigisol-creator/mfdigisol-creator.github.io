@@ -1,29 +1,28 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-07T06:03:43.101Z",
+  "generatedAt": "2026-11-07T17:45:37.153Z",
   "summary": {
-    "products": 1318,
-    "removedProducts": 3598,
-    "brands": 86,
-    "collectionPages": 96,
-    "collectionCanonicalsChecked": 96,
+    "products": 1337,
+    "removedProducts": 3620,
+    "brands": 84,
+    "collectionPages": 94,
+    "collectionCanonicalsChecked": 94,
     "legacyRedirectsChecked": 5,
-    "sitemapUrls": 1417,
-    "metaFeedRows": 1318,
-    "metadataPages": 1318,
-    "internalHtmlFiles": 5077,
+    "sitemapUrls": 1434,
+    "metaFeedRows": 1337,
+    "metadataPages": 1337,
+    "internalHtmlFiles": 5118,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "58 products currently lack retained supplier description text."
+    "67 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
     "categoryConflicts": [],
     "missingDescriptions": [
-      "P&P-ALMRH-LWN-CT-3P-02",
       "CRIMSON-BLK-3PC-AK15",
       "CRIMSON-BLUE-3PC-AK15",
       "CRIMSON-MUST-3PC-AK15",
@@ -47,7 +46,8 @@
       "OMRE-EMBVISC-V203-3P-04",
       "OMRE-EMBVISC-V203-3P-05",
       "OMRE-EMBVISC-V203-3P-06",
-      "OMRE-EMBVISC-V203-3P-07"
+      "OMRE-EMBVISC-V203-3P-07",
+      "OMRE-EMBVISC-V203-3P-08"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
