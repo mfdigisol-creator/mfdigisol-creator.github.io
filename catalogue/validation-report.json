@@ -1,23 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-09T06:41:31.722Z",
+  "generatedAt": "2026-11-09T22:25:42.899Z",
   "summary": {
-    "products": 1247,
-    "removedProducts": 3710,
-    "brands": 81,
-    "collectionPages": 90,
-    "collectionCanonicalsChecked": 90,
+    "products": 1168,
+    "removedProducts": 3789,
+    "brands": 75,
+    "collectionPages": 83,
+    "collectionCanonicalsChecked": 83,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1340,
-    "metaFeedRows": 1247,
-    "metadataPages": 1247,
-    "internalHtmlFiles": 5117,
+    "sitemapUrls": 1254,
+    "metaFeedRows": 1165,
+    "metadataPages": 1168,
+    "internalHtmlFiles": 5116,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "64 products currently lack retained supplier description text."
+    "62 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -34,7 +34,6 @@
       "JAVERIA-ORG-OFWHT-3P-04",
       "MUSE-SILK-3P-14371-A",
       "MUSE-SILK-3P-14371-B",
-      "MIXBRAND-PRNKHD-2P-BL-349",
       "DASTAN-CKLWN-3P-NRJ-01",
       "DASTAN-CKLWN-3P-NRJ-02",
       "DASTAN-CKLWN-3P-NRJ-07",
@@ -47,7 +46,8 @@
       "OMRE-EMBVISC-V203-3P-05",
       "OMRE-EMBVISC-V203-3P-06",
       "OMRE-EMBVISC-V203-3P-07",
-      "OMRE-EMBVISC-V203-3P-08"
+      "OMRE-EMBVISC-V203-3P-08",
+      "OMRE-EMBVISC-V203-3P-09"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
