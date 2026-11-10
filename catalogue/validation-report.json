@@ -1,23 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-09T22:25:42.899Z",
+  "generatedAt": "2026-11-10T07:24:10.117Z",
   "summary": {
-    "products": 1168,
-    "removedProducts": 3789,
-    "brands": 75,
-    "collectionPages": 83,
-    "collectionCanonicalsChecked": 83,
+    "products": 1165,
+    "removedProducts": 3792,
+    "brands": 76,
+    "collectionPages": 84,
+    "collectionCanonicalsChecked": 84,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1254,
-    "metaFeedRows": 1165,
-    "metadataPages": 1168,
+    "sitemapUrls": 1252,
+    "metaFeedRows": 1162,
+    "metadataPages": 1165,
     "internalHtmlFiles": 5116,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "62 products currently lack retained supplier description text."
+    "60 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-11-09T22:25:35.245Z",
+  "generatedAt": "2026-11-10T07:23:59.088Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1452,
+      "actual": 1448,
       "required": 100
     },
     {
@@ -25,11 +25,11 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.7274242572801255,
-      "required": 0.5831256203816036,
-      "fetchedMemberships": 7419,
-      "reportedMemberships": 10199,
-      "previous": 0.7289070254770045
+      "actual": 0.7264596029093768,
+      "required": 0.5819394058241004,
+      "fetchedMemberships": 7391,
+      "reportedMemberships": 10174,
+      "previous": 0.7274242572801255
     },
     {
       "id": "duplicate-supplier-skus",
@@ -47,38 +47,38 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1168,
+      "actual": 1165,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1168,
-      "required": 997,
-      "previous": 1247
+      "actual": 1165,
+      "required": 934,
+      "previous": 1168
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1168,
+      "actual": 1165,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1452,
+    "sourceProducts": 1448,
     "sourceCollections": 109,
-    "includedSourceProducts": 1144,
-    "excludedSourceProducts": 308,
+    "includedSourceProducts": 1141,
+    "excludedSourceProducts": 307,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1168,
-    "previousCatalogueProducts": 1247,
-    "candidateVsPreviousPercent": -6.335204490777866,
-    "collectionProductCoverage": 0.7274242572801255,
-    "previousCollectionProductCoverage": 0.7289070254770045,
+    "candidateProducts": 1165,
+    "previousCatalogueProducts": 1168,
+    "candidateVsPreviousPercent": -0.2568493150684931,
+    "collectionProductCoverage": 0.7264596029093768,
+    "previousCollectionProductCoverage": 0.7274242572801255,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMappedProducts": 132,
-    "relationUnmappedProducts": 1036,
+    "relationUnmappedProducts": 1033,
     "relationGroups": 13,
     "relationGroupsWith3PlusProducts": 13,
     "ambiguousRelationProducts": 0,
@@ -87,7 +87,7 @@
   },
   "relationMapping": {
     "relationMappedProducts": 132,
-    "relationUnmappedProducts": 1036,
+    "relationUnmappedProducts": 1033,
     "relationGroups": 13,
     "relationGroupsWith3PlusProducts": 13,
     "ambiguousRelationProducts": 0,
@@ -377,8 +377,8 @@
   "exclusionReasons": {
     "single-piece-not-approved-suit-scope": 6,
     "menswear-signal": 80,
-    "garment-size-variants": 181,
-    "ready-to-wear-or-stitched-signal": 179,
+    "garment-size-variants": 180,
+    "ready-to-wear-or-stitched-signal": 178,
     "semi-stitched-supplier-description": 41
   },
   "duplicateSourceCodes": [
@@ -557,8 +557,8 @@
       "id": "704735740275",
       "title": "Summer 2026 Untitched Daily Wear",
       "handle": "summer-2026-untitched-daily-wear",
-      "reportedProducts": 120,
-      "fetchedProducts": 47,
+      "reportedProducts": 119,
+      "fetchedProducts": 46,
       "anomaly": null
     },
     {
@@ -589,24 +589,64 @@
       "id": "701074997619",
       "title": "Summer Unstitched Daily Wear Printed 3pc",
       "handle": "unstitched-daily-wear-printed-3pc",
-      "reportedProducts": 50,
-      "fetchedProducts": 17,
+      "reportedProducts": 49,
+      "fetchedProducts": 16,
       "anomaly": null
     },
     {
       "id": "703271010675",
       "title": "Zarmeen & Emaan",
       "handle": "zarmeen-emaan",
-      "reportedProducts": 2561,
-      "fetchedProducts": 1266,
+      "reportedProducts": 2565,
+      "fetchedProducts": 1262,
       "anomaly": null
     }
   ],
   "includedSamples": [
     {
-      "id": "15637437776243",
-      "title": "Mahrukh By Tawakkal Premium Printed Khaddar 3PC",
-      "vendor": "Tawakkal",
+      "id": "15636011843955",
+      "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
+      "vendor": "Mix Brand",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "non-embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "PRINTED",
+        "Two Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 2PC",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15595235049843",
+      "title": "Anaya Noor Digital Printed Stone Linen 3PC",
+      "vendor": "Anaya Noor",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "PRINTED",
+        "Three Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 3PC",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15611342881139",
+      "title": "Zainab Chottani Digital Printed Khaddar 3PC",
+      "vendor": "Zainab Chottani",
       "category": "Formal",
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
@@ -625,7 +665,7 @@
       ]
     },
     {
-      "id": "15386681803123",
+      "id": "15386681704819",
       "title": "Reemse Digital Printed Banadora Lawn 3PC",
       "vendor": "Reemse",
       "category": "Formal",
@@ -647,7 +687,28 @@
       ]
     },
     {
-      "id": "15637005271411",
+      "id": "15611341799795",
+      "title": "Zainab Chottani Digital Printed Khaddar 3PC",
+      "vendor": "Zainab Chottani",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "PRINTED",
+        "Three Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15637011923315",
       "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
       "vendor": "Mix Brand",
       "category": "Formal",
@@ -667,7 +728,28 @@
       ]
     },
     {
-      "id": "15636011057523",
+      "id": "15637441708403",
+      "title": "Rijja By Murashe Digital Printed Khaddar 3PC",
+      "vendor": "Murashe",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "PRINTED",
+        "Three Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15636011450739",
       "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
       "vendor": "Mix Brand",
       "category": "Formal",
@@ -687,7 +769,49 @@
       ]
     },
     {
-      "id": "15636013252979",
+      "id": "15635026575731",
+      "title": "Bin Saeed Digital Printed Khaddar 3PC",
+      "vendor": "Bin Saeed",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "PRINTED",
+        "Three Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15635026215283",
+      "title": "Bin Saeed Digital Printed Khaddar 3PC",
+      "vendor": "Bin Saeed",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "PRINTED",
+        "Three Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15636013384051",
       "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
       "vendor": "Mix Brand",
       "category": "Formal",
@@ -707,27 +831,7 @@
       ]
     },
     {
-      "id": "15637006483827",
-      "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
-      "vendor": "Mix Brand",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "PRINTED",
-        "Two Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 2PC",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15636011614579",
+      "id": "15636012990835",
       "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
       "vendor": "Mix Brand",
       "category": "Formal",
@@ -768,7 +872,7 @@
       ]
     },
     {
-      "id": "15638498181491",
+      "id": "15638498148723",
       "title": "Rijja By Murashe Digital Printed Khaddar 3PC",
       "vendor": "Murashe",
       "category": "Formal",
@@ -785,88 +889,6 @@
         "Three Piece Printed Summer Collection",
         "Unstitched Daily Wear Winter Printed 3PC",
         "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15386681508211",
-      "title": "Reemse Digital Printed Banadora Lawn 3PC",
-      "vendor": "Reemse",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "Lawn 2026",
-        "PRINTED",
-        "Summer 2026 Untitched Daily Wear",
-        "Summer Unstitched Daily Wear Printed 3pc",
-        "Three Piece Printed Summer Collection",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15637007073651",
-      "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
-      "vendor": "Mix Brand",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "PRINTED",
-        "Two Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 2PC",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15595235180915",
-      "title": "Anaya Noor Digital Printed Stone Linen 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15636012990835",
-      "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
-      "vendor": "Mix Brand",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "PRINTED",
-        "Two Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 2PC",
         "Zarmeen & Emaan"
       ]
     },
@@ -892,9 +914,9 @@
       ]
     },
     {
-      "id": "15595234853235",
-      "title": "Anaya Noor Digital Printed Stone Linen 3PC",
-      "vendor": "Anaya Noor",
+      "id": "15638498181491",
+      "title": "Rijja By Murashe Digital Printed Khaddar 3PC",
+      "vendor": "Murashe",
       "category": "Formal",
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
@@ -908,56 +930,38 @@
         "PRINTED",
         "Three Piece Printed Summer Collection",
         "Unstitched Daily Wear Winter Printed 3PC",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15636013384051",
-      "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
-      "vendor": "Mix Brand",
-      "category": "Formal",
-      "pieceType": "2 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "PRINTED",
-        "Two Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 2PC",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15622078038387",
-      "title": "Heer By Anaya Noor Premium Embroidered Slub Viscose 3PC",
-      "vendor": "Anaya Noor",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "Anaya Noor",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
         "WINTER 2026",
         "Zarmeen & Emaan"
       ]
     },
     {
-      "id": "15636010991987",
-      "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
-      "vendor": "Mix Brand",
+      "id": "15602655887731",
+      "title": "Anaya By Shanaya Digital Printed Stone Linen 3PC",
+      "vendor": "Shanaya",
       "category": "Formal",
-      "pieceType": "2 Piece",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "DD-SHANAYA",
+        "PRINTED",
+        "Three Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15611341734259",
+      "title": "Zainab Chottani Digital Printed Khaddar 3PC",
+      "vendor": "Zainab Chottani",
+      "category": "Formal",
+      "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
       "seasons": [
         "Winter",
@@ -967,15 +971,16 @@
         "11.11 Biggest Sale of the Year",
         "All Products",
         "PRINTED",
-        "Two Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 2PC",
+        "Three Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 3PC",
+        "WINTER 2026",
         "Zarmeen & Emaan"
       ]
     },
     {
-      "id": "15638498148723",
-      "title": "Rijja By Murashe Digital Printed Khaddar 3PC",
-      "vendor": "Murashe",
+      "id": "15635026116979",
+      "title": "Bin Saeed Digital Printed Khaddar 3PC",
+      "vendor": "Bin Saeed",
       "category": "Formal",
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
@@ -1018,23 +1023,7 @@
   "ambiguousSamples": [],
   "excludedSamples": [
     {
-      "id": "15621285216627",
-      "title": "Charizma Velvet Jacaquard Shawls 1PC",
-      "vendor": "Charizma",
-      "reasons": [
-        "single-piece-not-approved-suit-scope"
-      ]
-    },
-    {
-      "id": "15621285446003",
-      "title": "Charizma Velvet Jacaquard Shawls 1PC",
-      "vendor": "Charizma",
-      "reasons": [
-        "single-piece-not-approved-suit-scope"
-      ]
-    },
-    {
-      "id": "15621285118323",
+      "id": "15621285151091",
       "title": "Charizma Velvet Jacaquard Shawls 1PC",
       "vendor": "Charizma",
       "reasons": [
@@ -1050,7 +1039,23 @@
       ]
     },
     {
-      "id": "15621285151091",
+      "id": "15621285118323",
+      "title": "Charizma Velvet Jacaquard Shawls 1PC",
+      "vendor": "Charizma",
+      "reasons": [
+        "single-piece-not-approved-suit-scope"
+      ]
+    },
+    {
+      "id": "15621285446003",
+      "title": "Charizma Velvet Jacaquard Shawls 1PC",
+      "vendor": "Charizma",
+      "reasons": [
+        "single-piece-not-approved-suit-scope"
+      ]
+    },
+    {
+      "id": "15621285216627",
       "title": "Charizma Velvet Jacaquard Shawls 1PC",
       "vendor": "Charizma",
       "reasons": [
