@@ -1,27 +1,27 @@
 {
   "ok": true,
-  "startedAt": "2026-11-23T07:44:47.412Z",
-  "completedAt": "2026-11-23T07:45:11.592Z",
+  "startedAt": "2026-11-23T23:56:55.022Z",
+  "completedAt": "2026-11-23T23:57:15.035Z",
   "discovery": {
     "mode": "dynamic-shopify-storefront",
-    "sourceProducts": 1605,
-    "sourceCollections": 112,
-    "includedSourceProducts": 1275,
-    "excludedSourceProducts": 330,
+    "sourceProducts": 1618,
+    "sourceCollections": 115,
+    "includedSourceProducts": 1286,
+    "excludedSourceProducts": 332,
     "ambiguousSourceProducts": 0,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "relationMapping": {
-      "relationMappedProducts": 129,
-      "relationUnmappedProducts": 1169,
-      "relationGroups": 14,
-      "relationGroupsWith3PlusProducts": 14,
+      "relationMappedProducts": 139,
+      "relationUnmappedProducts": 1170,
+      "relationGroups": 15,
+      "relationGroupsWith3PlusProducts": 15,
       "ambiguousRelationProducts": 0
     }
   },
-  "products": 1298,
-  "available": 1127,
-  "formal": 871,
-  "luxury": 427,
+  "products": 1309,
+  "available": 1137,
+  "formal": 876,
+  "luxury": 433,
   "priceOnEnquiry": 8,
-  "metaFeedProducts": 1290
+  "metaFeedProducts": 1301
 }

@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "generatedAt": "2026-11-23T07:45:11.586Z",
+  "generatedAt": "2026-11-23T23:57:15.034Z",
   "dryRun": false,
   "checks": [
     {
       "id": "source-product-floor",
       "ok": true,
-      "actual": 1605,
+      "actual": 1618,
       "required": 100
     },
     {
       "id": "source-collection-floor",
       "ok": true,
-      "actual": 112,
+      "actual": 115,
       "required": 20
     },
     {
@@ -25,17 +25,17 @@
     {
       "id": "collection-product-coverage",
       "ok": true,
-      "actual": 0.8597441331135703,
-      "required": 0.6901899961225282,
-      "fetchedMemberships": 10954,
-      "reportedMemberships": 12741,
-      "previous": 0.8627374951531601
+      "actual": 0.8641164045998592,
+      "required": 0.6877953064908563,
+      "fetchedMemberships": 11046,
+      "reportedMemberships": 12783,
+      "previous": 0.8597441331135703
     },
     {
       "id": "duplicate-supplier-skus",
       "ok": true,
       "actual": 4,
-      "requiredMaximum": 26
+      "requiredMaximum": 27
     },
     {
       "id": "ambiguous-scope-share",
@@ -47,55 +47,55 @@
     {
       "id": "catalogue-emergency-floor",
       "ok": true,
-      "actual": 1298,
+      "actual": 1309,
       "required": 50
     },
     {
       "id": "catalogue-shrink-limit",
       "ok": true,
-      "actual": 1298,
-      "required": 1055,
-      "previous": 1319
+      "actual": 1309,
+      "required": 1038,
+      "previous": 1298
     },
     {
       "id": "downstream-size-limit",
       "ok": true,
-      "actual": 1298,
+      "actual": 1309,
       "requiredMaximum": 10000
     }
   ],
   "summary": {
-    "sourceProducts": 1605,
-    "sourceCollections": 112,
-    "includedSourceProducts": 1275,
-    "excludedSourceProducts": 330,
+    "sourceProducts": 1618,
+    "sourceCollections": 115,
+    "includedSourceProducts": 1286,
+    "excludedSourceProducts": 332,
     "ambiguousSourceProducts": 0,
-    "candidateProducts": 1298,
-    "previousCatalogueProducts": 1319,
-    "candidateVsPreviousPercent": -1.592115238817286,
-    "collectionProductCoverage": 0.8597441331135703,
-    "previousCollectionProductCoverage": 0.8627374951531601,
+    "candidateProducts": 1309,
+    "previousCatalogueProducts": 1298,
+    "candidateVsPreviousPercent": 0.847457627118644,
+    "collectionProductCoverage": 0.8641164045998592,
+    "previousCollectionProductCoverage": 0.8597441331135703,
     "taxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
     "previousTaxonomyFingerprint": "d439e6a2fcd5f38b4a65e4f075c01d2c64b7f56016179a52b4ce3b2f415fe7e9",
-    "relationMappedProducts": 129,
-    "relationUnmappedProducts": 1169,
-    "relationGroups": 14,
-    "relationGroupsWith3PlusProducts": 14,
+    "relationMappedProducts": 139,
+    "relationUnmappedProducts": 1170,
+    "relationGroups": 15,
+    "relationGroupsWith3PlusProducts": 15,
     "ambiguousRelationProducts": 0,
-    "genericCollectionsRejected": 25,
+    "genericCollectionsRejected": 27,
     "multiBrandCollectionsRejected": 37
   },
   "relationMapping": {
-    "relationMappedProducts": 129,
-    "relationUnmappedProducts": 1169,
-    "relationGroups": 14,
-    "relationGroupsWith3PlusProducts": 14,
+    "relationMappedProducts": 139,
+    "relationUnmappedProducts": 1170,
+    "relationGroups": 15,
+    "relationGroupsWith3PlusProducts": 15,
     "ambiguousRelationProducts": 0,
-    "genericCollectionsRejected": 25,
+    "genericCollectionsRejected": 27,
     "multiBrandCollectionsRejected": 37,
     "anomalyCollectionsRejected": 0,
     "undersizedCollectionsRejected": 11,
-    "safeCandidateCollections": 14,
+    "safeCandidateCollections": 15,
     "groups": [
       {
         "relationKey": "dawood_collection:693591441779",
@@ -153,7 +153,6 @@
           "BAREEZE-RC-V1-2026-DD-03",
           "BAREEZE-RC-V1-2026-DD-05",
           "BAREEZE-RC-V10-2026-DD-01",
-          "BAREEZE-RC-V12-2026-DD-04",
           "BAREEZE-RC-V13-2026-DD-01",
           "BAREEZE-RC-V13-2026-DD-02",
           "BAREEZE-RC-V13-2026-DD-03",
@@ -165,6 +164,7 @@
           "BAREEZE-RC-V4-2026-DD-03",
           "BAREEZE-RC-V4-2026-DD-04",
           "BAREEZE-RC-V5-2026-DD-02",
+          "BAREEZE-RC-V5-2026-DD-03",
           "BAREEZE-RC-V5-2026-DD-05",
           "BAREEZE-SKIN-RK-LWN-10"
         ]
@@ -379,37 +379,38 @@
           "TAWAKKAL-ANAYANOOR-W26-AN-04",
           "TAWAKKAL-ANAYANOOR-W26-AN-06"
         ]
+      },
+      {
+        "relationKey": "dawood_collection:710077153651",
+        "collectionId": "710077153651",
+        "collectionTitle": "Raqs By Uneq Digital Printed Slub Khaddar 3PC",
+        "collectionHandle": "raqs-by-uneq-digital-printed-slub-khaddar-3pc",
+        "brand": "Uneq",
+        "products": 10,
+        "available": 10,
+        "productCodes": [
+          "RAQS-UNEQ-KHD-V4-3P-14307",
+          "RAQS-UNEQ-KHD-V4-3P-14346",
+          "RAQS-UNEQ-KHD-V4-3P-15420",
+          "RAQS-UNEQ-KHD-V4-3P-15421",
+          "RAQS-UNEQ-KHD-V4-3P-15422",
+          "RAQS-UNEQ-KHD-V4-3P-DS-02",
+          "RAQS-UNEQ-KHD-V4-3P-DS-03",
+          "RAQS-UNEQ-KHD-V4-3P-DS-04",
+          "RAQS-UNEQ-KHD-V4-3P-DS-04-B",
+          "RAQS-UNEQ-KHD-V4-3P-DS-05"
+        ]
       }
     ]
   },
   "exclusionReasons": {
-    "semi-stitched-supplier-description": 27,
-    "garment-size-variants": 207,
-    "ready-to-wear-or-stitched-signal": 205,
+    "semi-stitched-supplier-description": 28,
+    "garment-size-variants": 208,
+    "ready-to-wear-or-stitched-signal": 206,
     "menswear-signal": 78,
     "single-piece-not-approved-suit-scope": 18
   },
   "duplicateSourceCodes": [
-    {
-      "code": "RANG-E-SERMA-SAR-10",
-      "records": 2,
-      "selectedSourceProductId": "15520859160947",
-      "selectedSourcePrice": 6060,
-      "priceSourceProductId": "15427972956531",
-      "canonicalSourcePrice": 4120,
-      "selectedPublishedAt": "2026-08-28T16:13:59+05:00",
-      "sourceProductIds": [
-        "15427972956531",
-        "15520859160947"
-      ],
-      "sourcePrices": [
-        4120,
-        6060
-      ],
-      "pricingClasses": [
-        "embroidered"
-      ]
-    },
     {
       "code": "RANG-E-SERMA-SAR-14",
       "records": 2,
@@ -469,6 +470,26 @@
       "pricingClasses": [
         "embroidered"
       ]
+    },
+    {
+      "code": "RANG-E-SERMA-SAR-10",
+      "records": 2,
+      "selectedSourceProductId": "15520859160947",
+      "selectedSourcePrice": 6060,
+      "priceSourceProductId": "15427972956531",
+      "canonicalSourcePrice": 4120,
+      "selectedPublishedAt": "2026-08-28T16:13:59+05:00",
+      "sourceProductIds": [
+        "15427972956531",
+        "15520859160947"
+      ],
+      "sourcePrices": [
+        4120,
+        6060
+      ],
+      "pricingClasses": [
+        "embroidered"
+      ]
     }
   ],
   "collectionAnomalies": [
@@ -517,8 +538,8 @@
       "id": "705821639027",
       "title": "Bonanza Satrangi Digital Printed Khaddar 3PC",
       "handle": "bonanza-satrangi-digital-printed-khaddar-3pc",
-      "reportedProducts": 16,
-      "fetchedProducts": 5,
+      "reportedProducts": 15,
+      "fetchedProducts": 4,
       "anomaly": null
     },
     {
@@ -596,9 +617,51 @@
   ],
   "includedSamples": [
     {
-      "id": "15671953555827",
-      "title": "D-05 | Khaddar Unstitched 3PC '26 | Ansa By Shanaya",
-      "vendor": "Shanaya",
+      "id": "15527776551283",
+      "title": "Bareeze Fully Emb Rice Karandi 2PC",
+      "vendor": "Bareeze",
+      "category": "Formal",
+      "pieceType": "2 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "BAREEZE",
+        "Bareeze Fully Emb Rice Karandi Lawn 2PC",
+        "New Arrival",
+        "Two Piece Embroidered Summer Collection",
+        "WINTER 2026",
+        "Winter Unstitched Daily Wear Embroidered 2pc"
+      ]
+    },
+    {
+      "id": "15563410702707",
+      "title": "Nova By Mahnur | Khaddar'26",
+      "vendor": "Mahnur",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "LUXURY MAHNUR WINTER",
+        "New Arrival",
+        "Three Piece Embroidered Summer Collection",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15501297811827",
+      "title": "Bloom & Vogue By Naqsh Digital Printed Self Jacquard Viscose 3PC",
+      "vendor": "Naqsh",
       "category": "Formal",
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
@@ -618,9 +681,47 @@
       ]
     },
     {
-      "id": "15578408386931",
-      "title": "Malhaar Digital Printed Linen 3PC",
-      "vendor": "Malhaar",
+      "id": "15427970138483",
+      "title": "Sharjeena | Organza | Dressline",
+      "vendor": "Dressline",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "Luxury Dressline",
+        "Luxury Unstitch",
+        "LUXURY WINTER",
+        "New Arrival",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15380231618931",
+      "title": "Fatima Bano By Dastak Luxury Emb Lawn Volume 3PC",
+      "vendor": "Dressline",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "LUXURY LAWN 2026",
+        "Luxury Unstitch",
+        "Luxury Unstitched Lawn26",
+        "New Arrival",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15501429866867",
+      "title": "Safina Digital Printed Viscose 3PC",
+      "vendor": "Safina",
       "category": "Formal",
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
@@ -633,14 +734,14 @@
         "All Products",
         "New Arrival",
         "PRINTED",
+        "Safina Winter 2026 Digital Printed Viscose 3PC",
         "Three Piece Printed Summer Collection",
         "Unstitched Daily Wear Winter Printed 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
+        "WINTER 2026"
       ]
     },
     {
-      "id": "15599874703731",
+      "id": "15607087956339",
       "title": "Bareeze Embroidered Karandi 3PC",
       "vendor": "Bareeze",
       "category": "Formal",
@@ -662,12 +763,12 @@
       ]
     },
     {
-      "id": "15665334976883",
-      "title": "D-07 | Unstitched Printed Khaddar 3PC '26 | Mausummery",
-      "vendor": "Mausummery",
+      "id": "15501200130419",
+      "title": "Cross Stitch Premium Jacquard Viscose 3PC",
+      "vendor": "Cross Stitch",
       "category": "Formal",
       "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
+      "pricingClass": "non-embroidered",
       "seasons": [
         "Winter",
         "Summer"
@@ -675,18 +776,18 @@
       "collections": [
         "11.11 Biggest Sale of the Year",
         "All Products",
-        "Mausummery Embroidered & Printed Lawn 3PC",
+        "Cross Stitch Premium Printed Viscose 3PC",
+        "Jacquard Winter Collection",
         "New Arrival",
         "PRINTED",
         "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
         "WINTER 2026"
       ]
     },
     {
-      "id": "15427951919475",
-      "title": "Florent Embroidered | Lawn'26",
-      "vendor": "Florent",
+      "id": "15329232191859",
+      "title": "Mausummery Embroidered & Printed Lawn 3PC",
+      "vendor": "Mausummery",
       "category": "Luxury",
       "pieceType": "3 Piece",
       "pricingClass": "embroidered",
@@ -696,49 +797,12 @@
       "collections": [
         "11.11 Biggest Sale of the Year",
         "All Products",
+        "Lawn 2026",
         "Luxury Unstitch",
+        "Mausummery Embroidered & Printed Lawn 3PC",
         "New Arrival",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15427928588659",
-      "title": "Sania | Organza | Dressline",
-      "vendor": "Dressline",
-      "category": "Luxury",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "Luxury Dressline",
-        "Luxury Unstitch",
-        "LUXURY WINTER",
-        "New Arrival",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15630573535603",
-      "title": "Syra By Tawakkal Luxury Fancy Boti Embroidered Velvet 3PC",
-      "vendor": "Tawakkal",
-      "category": "Luxury",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "Luxury Unstitch",
-        "New Arrival",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Velvet Collection 3PC",
-        "Zarmeen & Emaan"
+        "Restock Embroidered Edit",
+        "Three Piece Embroidered Summer Collection"
       ]
     },
     {
@@ -764,12 +828,33 @@
       ]
     },
     {
-      "id": "15637441839475",
-      "title": "Rijja By Murashe Digital Printed Khaddar 3PC",
-      "vendor": "Murashe",
+      "id": "15274931618163",
+      "title": "Bella",
+      "vendor": "Hijab Omer",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "LUXURY LAWN 2026",
+        "Luxury Unstitch",
+        "Luxury Unstitched Lawn26",
+        "Mix Brands",
+        "New Arrival",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15583620301171",
+      "title": "Jugnu Embroidered Dhanak 3PC",
+      "vendor": "Jugnu",
       "category": "Formal",
       "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
+      "pricingClass": "embroidered",
       "seasons": [
         "Winter",
         "Summer"
@@ -778,37 +863,15 @@
         "11.11 Biggest Sale of the Year",
         "All Products",
         "New Arrival",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
+        "Three Piece Embroidered Summer Collection",
+        "Unstitched Daily Wear Winter Embroidered 3PC",
         "WINTER 2026",
-        "Zarmeen & Emaan"
+        "Winter Unstitched Daily Wear Hitcodes 3 PC",
+        "Winters Hit Codes"
       ]
     },
     {
-      "id": "15611341504883",
-      "title": "Zainab Chottani Digital Printed Khaddar 3PC",
-      "vendor": "Zainab Chottani",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "New Arrival",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15657105523059",
+      "id": "15637007401331",
       "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
       "vendor": "Mix Brand",
       "category": "Formal",
@@ -825,123 +888,16 @@
         "PRINTED",
         "Two Piece Printed Summer Collection",
         "Unstitched Daily Wear Winter Printed 2PC",
-        "WINTER 2026",
         "Zarmeen & Emaan"
       ]
     },
     {
-      "id": "15611141783923",
-      "title": "Omre Vol-203 Printed & Emb Slub Viscose With Chiffon",
-      "vendor": "Omre",
-      "category": "Luxury",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "LUXURY OMRE",
-        "New Arrival",
-        "Three Piece Embroidered Summer Collection",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15594175234419",
-      "title": "Istanbul By Rang Rasiya Luxury Slub Linen'26",
-      "vendor": "Rang Rasiya",
-      "category": "Luxury",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "LUXURY RANG RASIYA",
-        "Luxury Unstitched Lawn26",
-        "New Arrival",
-        "Rang Rasiya",
-        "Three Piece Embroidered Summer Collection",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15639255679347",
-      "title": "Coco By Zara Shahjahan Digital Printed Linen 3PC",
-      "vendor": "Zara Shahjahan",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "New Arrival",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15577399066995",
-      "title": "Bareeze Embroidered Dhanak 3PC",
-      "vendor": "Bareeze",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "BAREEZE",
-        "New Arrival",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15578407010675",
-      "title": "Zesh Digital Printed Viscose 3PC",
-      "vendor": "Zesh",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "non-embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "New Arrival",
-        "PRINTED",
-        "Three Piece Printed Summer Collection",
-        "Unstitched Daily Wear Winter Printed 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15544388747635",
-      "title": "Chamki Fancy Dark Emb Wool Peach 3PC",
+      "id": "15661289210227",
+      "title": "AN-06 | Marina Dhanak Unstitched 3PC '26 | Tawakkal By Anaya Noor",
       "vendor": "Anaya Noor",
       "category": "Formal",
       "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
+      "pricingClass": "non-embroidered",
       "seasons": [
         "Winter",
         "Summer"
@@ -950,39 +906,17 @@
         "11.11 Biggest Sale of the Year",
         "All Products",
         "Anaya Noor",
+        "Limelight – The Cozy Edit Woolen Staller",
+        "Marina Dhanak Unstitched 3PC '26 | Tawakkal By Anaya Noor",
         "New Arrival",
-        "Three Piece Embroidered Summer Collection",
-        "Unstitched Daily Wear Winter Embroidered 3PC",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
+        "PRINTED",
+        "Three Piece Printed Summer Collection"
       ]
     },
     {
-      "id": "15607087923571",
-      "title": "Bareeze Embroidered Karandi 3PC",
-      "vendor": "Bareeze",
-      "category": "Formal",
-      "pieceType": "3 Piece",
-      "pricingClass": "embroidered",
-      "seasons": [
-        "Winter",
-        "Summer"
-      ],
-      "collections": [
-        "11.11 Biggest Sale of the Year",
-        "All Products",
-        "BAREEZE",
-        "Bareeze Embroidered Karandi 3PC",
-        "New Arrival",
-        "Three Piece Embroidered Summer Collection",
-        "WINTER 2026",
-        "Zarmeen & Emaan"
-      ]
-    },
-    {
-      "id": "15559757332851",
-      "title": "Kayseria Digital Printed Bana Dora Linen 3PC",
-      "vendor": "Kayseria",
+      "id": "15584425738611",
+      "title": "Maira By Shanaya Digital Printed Cambric Cotton 3PC",
+      "vendor": "Shanaya",
       "category": "Formal",
       "pieceType": "3 Piece",
       "pricingClass": "non-embroidered",
@@ -993,7 +927,7 @@
       "collections": [
         "11.11 Biggest Sale of the Year",
         "All Products",
-        "Kayseria Vol-02 Digital Printed Bana Dora Linen 3PC",
+        "DD-SHANAYA",
         "New Arrival",
         "PRINTED",
         "Three Piece Printed Summer Collection",
@@ -1002,7 +936,28 @@
       ]
     },
     {
-      "id": "15687511441779",
+      "id": "15605196849523",
+      "title": "Ember By Tawakkal Luxury Chiffon'26",
+      "vendor": "Tawakkal",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "Luxury Tawakkal",
+        "LUXURY TAWAKKAL",
+        "Luxury Unstitch",
+        "New Arrival",
+        "Three Piece Embroidered Summer Collection",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15687470711155",
       "title": "Mix Brand Digital Printed Allover Khaddar 2PC",
       "vendor": "Mix Brand",
       "category": "Formal",
@@ -1022,30 +977,90 @@
         "WINTER 2026",
         "Zarmeen & Emaan"
       ]
+    },
+    {
+      "id": "15601148100979",
+      "title": "Saya Premium Printed Linen 3PC",
+      "vendor": "Saya",
+      "category": "Formal",
+      "pieceType": "3 Piece",
+      "pricingClass": "non-embroidered",
+      "seasons": [
+        "Winter",
+        "Summer"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "New Arrival",
+        "PRINTED",
+        "Three Piece Printed Summer Collection",
+        "Unstitched Daily Wear Winter Printed 3PC",
+        "WINTER 2026",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15611249426803",
+      "title": "Mastani By Mahnur Karandi Winter'26",
+      "vendor": "Mahnur",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [
+        "Winter"
+      ],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "Luxury Mahnur Lawn",
+        "LUXURY MAHNUR WINTER",
+        "Luxury Unstitch",
+        "Luxury Unstitched Lawn26",
+        "New Arrival",
+        "Zarmeen & Emaan"
+      ]
+    },
+    {
+      "id": "15427929768307",
+      "title": "Mushkk By Dr.Haris Luxury Organza",
+      "vendor": "Dr.Haris",
+      "category": "Luxury",
+      "pieceType": "3 Piece",
+      "pricingClass": "embroidered",
+      "seasons": [],
+      "collections": [
+        "11.11 Biggest Sale of the Year",
+        "All Products",
+        "Luxury Unstitch",
+        "Mix Brands",
+        "New Arrival",
+        "Zarmeen & Emaan"
+      ]
     }
   ],
   "ambiguousSamples": [],
   "excludedSamples": [
     {
-      "id": "15427943268723",
-      "title": "Chamkili | Organza | Dressline",
+      "id": "15427967713651",
+      "title": "Burberry | Organza | Dressline",
       "vendor": "Dressline",
       "reasons": [
         "semi-stitched-supplier-description"
       ]
     },
     {
-      "id": "15604988379507",
-      "title": "Afsanah By Pak Fabrics Luxury Embroidered Organza Stitched 3PC",
-      "vendor": "Pak Fabrics",
+      "id": "15599917498739",
+      "title": "Regalia Premium Printed Stitched Khaddar With Printed Trouser 3PC",
+      "vendor": "Regalia",
       "reasons": [
         "garment-size-variants",
         "ready-to-wear-or-stitched-signal"
       ]
     },
     {
-      "id": "15521911669107",
-      "title": "Maria B Premium Plain Emb Linen 3PC",
+      "id": "15481987629427",
+      "title": "Jazmin Premium Plain Emb Stitched Viscose 3PC",
       "vendor": "Mirari",
       "reasons": [
         "garment-size-variants",
@@ -1053,7 +1068,16 @@
       ]
     },
     {
-      "id": "15488207978867",
+      "id": "15583431819635",
+      "title": "Imrozia Risen Premium Stitched Bana Dora Viscose Volume 3PC",
+      "vendor": "Mirari",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15488207749491",
       "title": "Khaadi Plain Embroidered Stitched Lawn 2PC",
       "vendor": "Khaadi",
       "reasons": [
@@ -1062,56 +1086,37 @@
       ]
     },
     {
-      "id": "15643316126067",
-      "title": "Regalia Printed Stitched Khaddar Vol-02 Winter'26",
-      "vendor": "Regalia",
+      "id": "15581407969651",
+      "title": "Bin Saeed Digital Printed Khaddar Stitched 3PC",
+      "vendor": "Bin Saeed",
       "reasons": [
         "garment-size-variants",
         "ready-to-wear-or-stitched-signal"
       ]
     },
     {
-      "id": "15596727140723",
-      "title": "Mirari Luxury Embroidered Viscose Stitch 3PC",
-      "vendor": "Mirari",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15607524655475",
-      "title": "Narmin By Narkins Digital Printed Khaddar 3PC",
-      "vendor": "Narmin",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15596727337331",
-      "title": "Mirari Luxury Embroidered Viscose Stitch 3PC",
-      "vendor": "Mirari",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15607524557171",
-      "title": "Narmin By Narkins Digital Printed Khaddar 3PC",
-      "vendor": "Narmin",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15629895991667",
+      "id": "15629895926131",
       "title": "Imperial By Gul Ahmed Premium Wash & Wear Menswear Suit",
       "vendor": "Gul Ahmed",
       "reasons": [
         "menswear-signal"
+      ]
+    },
+    {
+      "id": "15631787524467",
+      "title": "Narmin By Narkins Digital Printed Khaddar 3PC",
+      "vendor": "Narmin",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15651603513715",
+      "title": "Limelight – The Cozy Edit Woolen Staller",
+      "vendor": "Limelight",
+      "reasons": [
+        "single-piece-not-approved-suit-scope"
       ]
     },
     {
@@ -1124,7 +1129,59 @@
       ]
     },
     {
-      "id": "15428016898419",
+      "id": "15629895795059",
+      "title": "Imperial By Gul Ahmed Premium Wash & Wear Menswear Suit",
+      "vendor": "Gul Ahmed",
+      "reasons": [
+        "menswear-signal"
+      ]
+    },
+    {
+      "id": "15488208994675",
+      "title": "Khaadi Plain Embroidered Stitched Lawn 3PC",
+      "vendor": "Khaadi",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15651602792819",
+      "title": "Limelight – The Cozy Edit Woolen Staller",
+      "vendor": "Limelight",
+      "reasons": [
+        "single-piece-not-approved-suit-scope"
+      ]
+    },
+    {
+      "id": "15599916712307",
+      "title": "Regalia Premium Printed Stitched Khaddar With Plain Trouser 3PC",
+      "vendor": "Regalia",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15428012474739",
+      "title": "Mirari Luxury Embroidered Lawn 3PC",
+      "vendor": "Mirari",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15630576910707",
+      "title": "Qalamkar Floral Navy Slub Viscose 2PC Suit - QLMKAR-2PC",
+      "vendor": "Qalamkar",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15428016931187",
       "title": "Bin Saeed Laserkari Emb Lawn 3PC",
       "vendor": "Mirari",
       "reasons": [
@@ -1133,40 +1190,33 @@
       ]
     },
     {
-      "id": "15610355319155",
-      "title": "Gul Ahmed Winter Cotton Menswear Suit",
-      "vendor": "Gul Ahmed",
+      "id": "15428020076915",
+      "title": "Cross Stitch Fancy Jacquard Cotton Emb 3PC",
+      "vendor": "Cross stitch",
       "reasons": [
-        "menswear-signal"
+        "garment-size-variants"
       ]
     },
     {
-      "id": "15625820406131",
-      "title": "Bin Saeed Digital Printed Airline Long Khaddar Stitched 3PC",
-      "vendor": "Bin Saeed",
+      "id": "15599916941683",
+      "title": "Regalia Premium Printed Stitched Khaddar With Plain Trouser 3PC",
+      "vendor": "Regalia",
       "reasons": [
         "garment-size-variants",
         "ready-to-wear-or-stitched-signal"
       ]
     },
     {
-      "id": "15427928326515",
-      "title": "EVA By | Organza | Dressline",
-      "vendor": "Dressline",
+      "id": "15599918416243",
+      "title": "Regalia Premium Printed Stitched Khaddar With Printed Trouser 3PC",
+      "vendor": "Regalia",
       "reasons": [
-        "semi-stitched-supplier-description"
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
       ]
     },
     {
-      "id": "15427972530547",
-      "title": "Haleema | organza | Dressline",
-      "vendor": "Dressline",
-      "reasons": [
-        "semi-stitched-supplier-description"
-      ]
-    },
-    {
-      "id": "15428014571891",
+      "id": "15428012867955",
       "title": "Bin Saeed Digital Printed Lawn 3PC",
       "vendor": "Bin Saeed",
       "reasons": [
@@ -1175,104 +1225,8 @@
       ]
     },
     {
-      "id": "15628910461299",
-      "title": "Toyobo Gold By Sapphire Premium Wash & Wear Menswear Suit",
-      "vendor": "Sapphire",
-      "reasons": [
-        "menswear-signal"
-      ]
-    },
-    {
-      "id": "15643311702387",
-      "title": "Murashe Printed Khaddar Vol-01 Winter'26",
-      "vendor": "Murashe",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15488207782259",
-      "title": "Khaadi Plain Embroidered Stitched Lawn 2PC",
-      "vendor": "Khaadi",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15422938841459",
-      "title": "Rici Melion Soft Cotton Mens Clothing Suit",
-      "vendor": "Rici Melion",
-      "reasons": [
-        "menswear-signal"
-      ]
-    },
-    {
-      "id": "15643316093299",
-      "title": "Regalia Printed Stitched Khaddar Vol-02 Winter'26",
-      "vendor": "Regalia",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15643312423283",
-      "title": "Murashe Printed Khaddar Vol-01 Winter'26",
-      "vendor": "Murashe",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15651603022195",
-      "title": "Limelight – The Cozy Edit Woolen Staller",
-      "vendor": "Limelight",
-      "reasons": [
-        "single-piece-not-approved-suit-scope"
-      ]
-    },
-    {
-      "id": "15428014604659",
-      "title": "Bin Saeed Digital Printed Lawn 3PC",
-      "vendor": "Bin Saeed",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15488207421811",
-      "title": "Khaadi Plain Embroidered Stitched Lawn 2PC",
-      "vendor": "Khaadi",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15607524295027",
-      "title": "Bin Saeed Digital Printed Khaddar Stitched 3PC",
-      "vendor": "Bin Saeed",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15643316027763",
-      "title": "Regalia Printed Stitched Khaddar Vol-02 Winter'26",
-      "vendor": "Regalia",
-      "reasons": [
-        "garment-size-variants",
-        "ready-to-wear-or-stitched-signal"
-      ]
-    },
-    {
-      "id": "15474383651187",
-      "title": "Maria B Premium Plain Emb Linen 3PC",
+      "id": "15583431590259",
+      "title": "Jahan Ara By Nishat Premium Stitched Bana Dora Viscose 3PC",
       "vendor": "Mirari",
       "reasons": [
         "garment-size-variants",
@@ -1280,9 +1234,71 @@
       ]
     },
     {
-      "id": "15488208732531",
+      "id": "15428020044147",
+      "title": "Sapphire Fancy Jacquard Cotton Emb 3PC",
+      "vendor": "Sapphire",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15488208929139",
       "title": "Khaadi Plain Embroidered Stitched Lawn 3PC",
       "vendor": "Khaadi",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15428011524467",
+      "title": "Bin Saeed Digital Printed Lawn With Airline Long Shirt 3PC",
+      "vendor": "Bin Saeed",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15488207520115",
+      "title": "Khaadi Plain Embroidered Stitched Lawn 2PC",
+      "vendor": "Khaadi",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15631787426163",
+      "title": "Narmin By Narkins Digital Printed Khaddar 3PC",
+      "vendor": "Narmin",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15428012638579",
+      "title": "Sapphire Luxury Embroidered Lawn 3PC",
+      "vendor": "Sapphire",
+      "reasons": [
+        "garment-size-variants",
+        "ready-to-wear-or-stitched-signal"
+      ]
+    },
+    {
+      "id": "15629896024435",
+      "title": "Imperial By Gul Ahmed Premium Wash & Wear Menswear Suit",
+      "vendor": "Gul Ahmed",
+      "reasons": [
+        "menswear-signal"
+      ]
+    },
+    {
+      "id": "15625820471667",
+      "title": "Bin Saeed Digital Printed Airline Long Khaddar Stitched 3PC",
+      "vendor": "Bin Saeed",
       "reasons": [
         "garment-size-variants",
         "ready-to-wear-or-stitched-signal"
