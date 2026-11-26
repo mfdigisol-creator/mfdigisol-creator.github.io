@@ -1,23 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-25T21:45:21.706Z",
+  "generatedAt": "2026-11-26T08:26:54.906Z",
   "summary": {
-    "products": 1303,
-    "removedProducts": 4426,
+    "products": 1278,
+    "removedProducts": 4451,
     "brands": 71,
-    "collectionPages": 84,
-    "collectionCanonicalsChecked": 84,
+    "collectionPages": 83,
+    "collectionCanonicalsChecked": 83,
     "legacyRedirectsChecked": 6,
-    "sitemapUrls": 1390,
-    "metaFeedRows": 1290,
-    "metadataPages": 1303,
-    "internalHtmlFiles": 5898,
+    "sitemapUrls": 1364,
+    "metaFeedRows": 1266,
+    "metadataPages": 1278,
+    "internalHtmlFiles": 5897,
     "errors": 0,
     "warnings": 1
   },
   "errors": [],
   "warnings": [
-    "64 products currently lack retained supplier description text."
+    "63 products currently lack retained supplier description text."
   ],
   "samples": {
     "duplicateCodes": [],
@@ -46,8 +46,8 @@
       "OMRE-EMBVISC-V203-3P-07",
       "OMRE-EMBVISC-V203-3P-08",
       "OMRE-EMBVISC-V203-3P-09",
-      "VICTORIA-OMRE-VLVT-V208-01",
-      "VICTORIA-OMRE-VLVT-V208-02"
+      "VICTORIA-OMRE-VLVT-V208-02",
+      "VICTORIA-OMRE-VLVT-V208-03"
     ],
     "duplicateTitles": [],
     "duplicateDescriptions": [],
