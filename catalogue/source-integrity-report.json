@@ -1,22 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-27T21:22:16.890Z",
+  "generatedAt": "2026-11-28T07:55:20.027Z",
   "summary": {
-    "products": 1173,
-    "available": 1002,
-    "formal": 750,
-    "luxury": 423,
-    "priceOnEnquiry": 13,
-    "metaFeedProducts": 1160,
+    "products": 1154,
+    "available": 982,
+    "formal": 732,
+    "luxury": 422,
+    "priceOnEnquiry": 12,
+    "metaFeedProducts": 1142,
     "canonicalBrands": 70,
     "aliasCorrections": 17,
     "duplicateCodes": 0,
     "duplicatePaths": 0,
-    "duplicateNames": 34,
+    "duplicateNames": 32,
     "classificationConflicts": 0,
     "unspecifiedPieces": 0,
-    "removedProducts": 4595,
-    "newlyRemovedProducts": 51,
+    "removedProducts": 4616,
+    "newlyRemovedProducts": 21,
     "supplierRefreshUsed": true
   },
   "aliasCorrections": [
@@ -26,17 +26,12 @@
       "canonicalBrand": "Other designs"
     },
     {
+      "code": "IMP-EMBCK-FEROZ-2P-ABR-19",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
       "code": "IMP-EMBCK-PURP-2P-ABR-19",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-TPINK-2P-ABR-19",
-      "sourceBrand": "lmported",
-      "canonicalBrand": "Imported"
-    },
-    {
-      "code": "IMP-EMBCK-PISTA-2P-ABR-19",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -46,12 +41,12 @@
       "canonicalBrand": "Imported"
     },
     {
-      "code": "IMP-EMBCK-FEROZ-2P-ABR-19",
+      "code": "IMP-EMBCK-PISTA-2P-ABR-19",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
     {
-      "code": "IMP-EMBCK-LJAMN-2P-ABR-05",
+      "code": "IMP-EMBCK-TPINK-2P-ABR-19",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -61,12 +56,17 @@
       "canonicalBrand": "Imported"
     },
     {
-      "code": "IMP-EMBCK-PISTA-2P-ABR-05",
+      "code": "IMP-EMBCK-LPISTA-2P-ABR-05",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
     {
-      "code": "IMP-EMBCK-LPISTA-2P-ABR-05",
+      "code": "IMP-EMBCK-LJAMN-2P-ABR-05",
+      "sourceBrand": "lmported",
+      "canonicalBrand": "Imported"
+    },
+    {
+      "code": "IMP-EMBCK-PISTA-2P-ABR-05",
       "sourceBrand": "lmported",
       "canonicalBrand": "Imported"
     },
@@ -127,10 +127,6 @@
     },
     {
       "value": "d-03 | anaya noor | unstitched peach velvet jacquard 3pc '26 — 3",
-      "count": 2
-    },
-    {
-      "value": "d-04 | anaya noor | unstitched peach velvet jacquard 3pc '26 — 4",
       "count": 2
     },
     {
@@ -206,10 +202,6 @@
       "count": 4
     },
     {
-      "value": "kayseria digital printed bana dora linen 3pc — 11",
-      "count": 2
-    },
-    {
       "value": "rijja by murashe premium printed linen viscose 3pc — 8",
       "count": 2
     },
@@ -249,259 +241,109 @@
   "classificationConflicts": [],
   "newlyRemovedProducts": [
     {
-      "code": "ELAF-3PLWN-V2-UK-EPV-3B",
-      "name": "Elaf Premium Digital Printed Lawn 3PC — EPV-3B",
-      "path": "products/elaf-3plwn-v2-uk-epv-3b-elaf-premium-digital-printed-lawn-3pc/"
-    },
-    {
-      "code": "MAHIRA-LKLWN-V1-3P-FAR-01",
-      "name": "Mahira Essential Printed & Emb Laserkari Lawn 3PC — 1",
-      "path": "products/mahira-lklwn-v1-3p-far-01-mahira-essential-printed-and-emb-laserkari-lawn-3pc/"
-    },
-    {
-      "code": "ANAYA-SHN-LINEN-V258-3P-02",
+      "code": "ANAYA-SHN-LINEN-V259-3P-02",
       "name": "Anaya Digital Printed Linen 3PC — 2",
-      "path": "products/anaya-shn-linen-v258-3p-02-anaya-digital-printed-linen-3pc/"
+      "path": "products/anaya-shn-linen-v259-3p-02-anaya-digital-printed-linen-3pc/"
     },
     {
-      "code": "ANAYA-SHN-LINEN-V258-3P-08",
-      "name": "Anaya Digital Printed Linen 3PC — 8",
-      "path": "products/anaya-shn-linen-v258-3p-08-anaya-digital-printed-linen-3pc/"
+      "code": "KAYSERIA-LINEN-V2-3P-JLALCUT-11",
+      "name": "Kayseria Digital Printed Bana Dora Linen 3PC — 11",
+      "path": "products/kayseria-linen-v2-3p-jlalcut-11-kayseria-digital-printed-bana-dora-linen-3pc/"
     },
     {
-      "code": "KAYSERIA-LINEN-V2-3P-JLALCUT-04",
-      "name": "Kayseria Digital Printed Bana Dora Linen 3PC — 4",
-      "path": "products/kayseria-linen-v2-3p-jlalcut-04-kayseria-digital-printed-bana-dora-linen-3pc/"
+      "code": "MIXBRAND-CAMBCOT-2P-BL-118",
+      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 118",
+      "path": "products/mixbrand-cambcot-2p-bl-118-mix-brand-digital-printed-allover-lawn-2pc/"
     },
     {
-      "code": "ROYALGALL-PRSHY-MARIN-RG-14",
-      "name": "Royal Galleria By Parishay Luxury Marina'26 — RG-14",
-      "path": "products/royalgall-prshy-marin-rg-14-royal-galleria-by-parishay-luxury-marina-26/"
+      "code": "VICTORIA-OMRE-VLVT-V208-01",
+      "name": "Victoria By Omre Luxury Embroidered Velvet'26 — 1",
+      "path": "products/victoria-omre-vlvt-v208-01-victoria-by-omre-luxury-embroidered-velvet-26/"
     },
     {
-      "code": "SAFINA-VISC-V1-3P-HM-07",
-      "name": "Safina Digital Printed Viscose 3PC — 7",
-      "path": "products/safina-visc-v1-3p-hm-07-safina-digital-printed-viscose-3pc/"
+      "code": "LARAIB-AN-DHNK-EMB-3PC-01",
+      "name": "Laraib By Anaya Noor Emb Dhanak With Boring Daman 3PC — 1",
+      "path": "products/laraib-an-dhnk-emb-3pc-01-laraib-by-anaya-noor-emb-dhanak-with-boring-daman-3pc/"
     },
     {
-      "code": "RAQS-VISC-V2-3P-UNEQ-13553",
-      "name": "Raqs By Uneq Digital Printed Cotton Viscose 3PC — 13553",
-      "path": "products/raqs-visc-v2-3p-uneq-13553-raqs-by-uneq-digital-printed-cotton-viscose-3pc/"
+      "code": "BAREEZE-LWN-PRNT-3P-2227",
+      "name": "Bareeze Summer 26 Digital Printed Lawn 3PC — 2227",
+      "path": "products/bareeze-lwn-prnt-3p-2227-bareeze-summer-26-digital-printed-lawn-3pc/"
     },
     {
-      "code": "SAFINA-VISC-V1-3P-HM-32",
-      "name": "Safina Digital Printed Viscose 3PC — 32",
-      "path": "products/safina-visc-v1-3p-hm-32-safina-digital-printed-viscose-3pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-585",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 585",
+      "path": "products/mixbrand-prnkhd-2p-bl-585-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "BAREEZE-RC-V2-2026-DD-02",
-      "name": "Bareeze Fully Emb Rice Karandi 2PC — 2",
-      "path": "products/bareeze-rc-v2-2026-dd-02-bareeze-fully-emb-rice-karandi-2pc/"
+      "code": "RIJJA-PRN-KHD-V6-3P-11",
+      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 11",
+      "path": "products/rijja-prn-khd-v6-3p-11-rijja-by-murashe-digital-printed-khaddar-3pc/"
     },
     {
-      "code": "AMELIA-PRSHY-CORDURY-AM-08",
-      "name": "Amelia By Mahnur Luxury Embroidered Corduroy With Palachi Shawl 3PC — AM-08",
-      "path": "products/amelia-prshy-cordury-am-08-amelia-by-mahnur-luxury-embroidered-corduroy-with-palachi-shawl-3pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-696",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 696",
+      "path": "products/mixbrand-prnkhd-2p-bl-696-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "MIXBRAND-CAMBCOT-2P-BL-44",
-      "name": "Mix Brand Digital Printed Allover Lawn 2PC — 44",
-      "path": "products/mixbrand-cambcot-2p-bl-44-mix-brand-digital-printed-allover-lawn-2pc/"
+      "code": "MIXBRAND-PECHDHNK-3P-HM-02",
+      "name": "Anaya Noor Printed Wool Peach 3PC — 2",
+      "path": "products/mixbrand-pechdhnk-3p-hm-02-anaya-noor-printed-wool-peach-3pc/"
     },
     {
-      "code": "SANA-VLVT-3P-V2-BLCK-DD-08",
-      "name": "Sana Safinaz Luxury Emb Velvet 3PC — 8",
-      "path": "products/sana-vlvt-3p-v2-blck-dd-08-sana-safinaz-luxury-emb-velvet-3pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-747",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 747",
+      "path": "products/mixbrand-prnkhd-2p-bl-747-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "ETHNIC-LIN-3P-V655-AHMD-8092",
-      "name": "Ethnic Premium Printed Linen 3PC — 8092",
-      "path": "products/ethnic-lin-3p-v655-ahmd-8092-ethnic-premium-printed-linen-3pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-814",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 814",
+      "path": "products/mixbrand-prnkhd-2p-bl-814-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "SAYA-LIN-3P-V650-AHMD-26015",
-      "name": "Saya Premium Printed Linen 3PC — 26015",
-      "path": "products/saya-lin-3p-v650-ahmd-26015-saya-premium-printed-linen-3pc/"
+      "code": "MIXBRAND-PRNKHD-2P-BL-821",
+      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 821",
+      "path": "products/mixbrand-prnkhd-2p-bl-821-mix-brand-digital-printed-allover-khaddar-2pc/"
     },
     {
-      "code": "RAQS-UNEQ-KHD-V1-3P-14312",
-      "name": "D-14312 | Raqs By Uneq | Unstitched Printed Khaddar 3PC '26 — 14312",
-      "path": "products/raqs-uneq-khd-v1-3p-14312-d-14312-raqs-by-uneq-unstitched-printed-khaddar-3pc-26/"
+      "code": "HUSNEJANA-PLTR-MRINA-V4-3P-06",
+      "name": "V4-D-06 | Marina Unstitched 3PC '26 | Husn-e-Janan By Paltar — 6",
+      "path": "products/husnejana-pltr-mrina-v4-3p-06-v4-d-06-marina-unstitched-3pc-26-husn-e-janan-by-paltar/"
     },
     {
-      "code": "PANACHE-PRSHY-3P-CHE-15",
-      "name": "Panache By Parishay Winter'26 — CHE-15",
-      "path": "products/panache-prshy-3p-che-15-panache-by-parishay-winter-26/"
+      "code": "AN-JAQVLVT-PECH-3P-AA-04",
+      "name": "D-04 | Anaya Noor | Unstitched Peach Velvet Jacquard 3PC '26 — 4",
+      "path": "products/an-jaqvlvt-pech-3p-aa-04-d-04-anaya-noor-unstitched-peach-velvet-jacquard-3pc-26/"
     },
     {
-      "code": "RIJJA-LINEN-W26-V1-3P-06",
-      "name": "Rijja By Murashe Digital Printed Slub Linen 3PC — 6",
-      "path": "products/rijja-linen-w26-v1-3p-06-rijja-by-murashe-digital-printed-slub-linen-3pc/"
+      "code": "BINSAEED-KHD-V4-3P-HM-06",
+      "name": "D-06 | Bin Saeed | Unstitched Printed Khaddar 3PC '26 — 6",
+      "path": "products/binsaeed-khd-v4-3p-hm-06-d-06-bin-saeed-unstitched-printed-khaddar-3pc-26/"
     },
     {
-      "code": "KAYA-PRSHY-PECH-3P-KA-04",
-      "name": "Kaya By Mahnur Luxury Winter'26 — KA-04",
-      "path": "products/kaya-prshy-pech-3p-ka-04-kaya-by-mahnur-luxury-winter-26/"
+      "code": "REET-ANAYANOOR-W26-AN-01",
+      "name": "D-01 | Reet By Anaya Noor | Unstitched Emb Staple 3PC '26 — 1",
+      "path": "products/reet-anayanoor-w26-an-01-d-01-reet-by-anaya-noor-unstitched-emb-staple-3pc-26/"
     },
     {
-      "code": "ANAYA-SHN-LIN-V315-3P-10",
-      "name": "Anaya By Shanaya Digital Printed Stone Linen 3PC — 10",
-      "path": "products/anaya-shn-lin-v315-3p-10-anaya-by-shanaya-digital-printed-stone-linen-3pc/"
+      "code": "AN-W26-V4-PSHMINA-3P-AA-23",
+      "name": "D-23 | Anaya Noor | Unstitched Printed Pashmina 3PC '26 — 23",
+      "path": "products/an-w26-v4-pshmina-3p-aa-23-d-23-anaya-noor-unstitched-printed-pashmina-3pc-26/"
     },
     {
-      "code": "ANAYA-SHN-LIN-V315-3P-09",
-      "name": "Anaya By Shanaya Digital Printed Stone Linen 3PC — 9",
-      "path": "products/anaya-shn-lin-v315-3p-09-anaya-by-shanaya-digital-printed-stone-linen-3pc/"
+      "code": "AN-W26-V4-PSHMINA-3P-AA-28",
+      "name": "D-28 | Anaya Noor | Unstitched Printed Pashmina 3PC '26 — 28",
+      "path": "products/an-w26-v4-pshmina-3p-aa-28-d-28-anaya-noor-unstitched-printed-pashmina-3pc-26/"
     },
     {
-      "code": "BINSAEED-KHD-V1-3P-HM-06",
-      "name": "Bin Saeed Digital Printed Khaddar 3PC — 6",
-      "path": "products/binsaeed-khd-v1-3p-hm-06-bin-saeed-digital-printed-khaddar-3pc/"
+      "code": "ZELBURY-W26-KHD-3P-CT-29",
+      "name": "Zellbury Digital Printed Khaddar 3PC — 29",
+      "path": "products/zelbury-w26-khd-3p-ct-29-zellbury-digital-printed-khaddar-3pc/"
     },
     {
-      "code": "JANIYAN-W26-KHD-3P-HM-07",
-      "name": "Zainab Chottani Digital Printed Khaddar 3PC — 7",
-      "path": "products/janiyan-w26-khd-3p-hm-07-zainab-chottani-digital-printed-khaddar-3pc/"
-    },
-    {
-      "code": "RANGJAA-DHNK-3P-DD-02",
-      "name": "Rang Jaa Plain Dhanak With Plachi Shawl 3PC — 2",
-      "path": "products/rangjaa-dhnk-3p-dd-02-rang-jaa-plain-dhanak-with-plachi-shawl-3pc/"
-    },
-    {
-      "code": "GULKARI-SHN-KHD-V297-3P-03",
-      "name": "Gulkari By Shanaya Printed & Emb Slub Khaddar 3PC — 3",
-      "path": "products/gulkari-shn-khd-v297-3p-03-gulkari-by-shanaya-printed-and-emb-slub-khaddar-3pc/"
-    },
-    {
-      "code": "NASHWA-ANAYANOOR-W26-AN-04",
-      "name": "Nashwa By Anaya Noor Premium Embroidered Khaddar 3PC — 4",
-      "path": "products/nashwa-anayanoor-w26-an-04-nashwa-by-anaya-noor-premium-embroidered-khaddar-3pc/"
-    },
-    {
-      "code": "RIJJA-PRN-KHD-V6-3P-02",
-      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 2",
-      "path": "products/rijja-prn-khd-v6-3p-02-rijja-by-murashe-digital-printed-khaddar-3pc/"
-    },
-    {
-      "code": "RIJJA-PRN-KHD-V7-3P-05",
-      "name": "Rijja By Murashe Digital Printed Khaddar 3PC — 5",
-      "path": "products/rijja-prn-khd-v7-3p-05-rijja-by-murashe-digital-printed-khaddar-3pc/"
-    },
-    {
-      "code": "JADE-FIRDOUS-PRINT-W-26-D07",
-      "name": "Jade By Firdous Digital Printed Khaddar 3PC — 7",
-      "path": "products/jade-firdous-print-w-26-d07-jade-by-firdous-digital-printed-khaddar-3pc/"
-    },
-    {
-      "code": "SAFINA-KHD-V1-3P-HM-40",
-      "name": "D-40 | Safina | Unstitched Printed Khaddar 3PC '26 — 40",
-      "path": "products/safina-khd-v1-3p-hm-40-d-40-safina-unstitched-printed-khaddar-3pc-26/"
-    },
-    {
-      "code": "SAFINA-KHD-V1-3P-HM-24",
-      "name": "D-24 | Safina | Unstitched Printed Khaddar 3PC '26 — 24",
-      "path": "products/safina-khd-v1-3p-hm-24-d-24-safina-unstitched-printed-khaddar-3pc-26/"
-    },
-    {
-      "code": "SYRA-TWKL-VLVT-3P-6751",
-      "name": "Syra By Tawakkal Luxury Fancy Boti Embroidered Velvet 3PC — 6751",
-      "path": "products/syra-twkl-vlvt-3p-6751-syra-by-tawakkal-luxury-fancy-boti-embroidered-velvet-3pc/"
-    },
-    {
-      "code": "SYRA-TWKL-VLVT-3P-6752",
-      "name": "Syra By Tawakkal Luxury Fancy Boti Embroidered Velvet 3PC — 6752",
-      "path": "products/syra-twkl-vlvt-3p-6752-syra-by-tawakkal-luxury-fancy-boti-embroidered-velvet-3pc/"
-    },
-    {
-      "code": "COCO-W26LIN-V1-HM-NERINE-1B",
-      "name": "Coco By Zara Shahjahan Digital Printed Linen 3PC — 1B",
-      "path": "products/coco-w26lin-v1-hm-nerine-1b-coco-by-zara-shahjahan-digital-printed-linen-3pc/"
-    },
-    {
-      "code": "SYRA-TWKL-VLVT-3P-6753",
-      "name": "Syra By Tawakkal Luxury Fancy Boti Embroidered Velvet 3PC — 6753",
-      "path": "products/syra-twkl-vlvt-3p-6753-syra-by-tawakkal-luxury-fancy-boti-embroidered-velvet-3pc/"
-    },
-    {
-      "code": "MIXBRAND-PRNKHD-2P-BL-651",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 651",
-      "path": "products/mixbrand-prnkhd-2p-bl-651-mix-brand-digital-printed-allover-khaddar-2pc/"
-    },
-    {
-      "code": "MIXBRAND-PRNKHD-2P-BL-752",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 752",
-      "path": "products/mixbrand-prnkhd-2p-bl-752-mix-brand-digital-printed-allover-khaddar-2pc/"
-    },
-    {
-      "code": "MIXBRAND-PRNKHD-2P-BL-815",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 815",
-      "path": "products/mixbrand-prnkhd-2p-bl-815-mix-brand-digital-printed-allover-khaddar-2pc/"
-    },
-    {
-      "code": "CHAMKI-DARK-WOOL-PECH-AC-06",
-      "name": "Chamki Fancy Dark Emb Wool Peach 3PC — 6",
-      "path": "products/chamki-dark-wool-pech-ac-06-chamki-fancy-dark-emb-wool-peach-3pc/"
-    },
-    {
-      "code": "KASHAF-ANAYANOOR-W26-AN-02",
-      "name": "Kashaf By Anaya Noor Fully Emb Doriya Dhanak Volume 3PC — 2",
-      "path": "products/kashaf-anayanoor-w26-an-02-kashaf-by-anaya-noor-fully-emb-doriya-dhanak-volume-3pc/"
-    },
-    {
-      "code": "KASHAF-ANAYANOOR-W26-AN-04",
-      "name": "Kashaf By Anaya Noor Fully Emb Doriya Dhanak Volume 3PC — 4",
-      "path": "products/kashaf-anayanoor-w26-an-04-kashaf-by-anaya-noor-fully-emb-doriya-dhanak-volume-3pc/"
-    },
-    {
-      "code": "MASHAIM-KRNDI-V2-3P-HM-03",
-      "name": "Mashaim Digital Printed Karandi 3PC — 3",
-      "path": "products/mashaim-krndi-v2-3p-hm-03-mashaim-digital-printed-karandi-3pc/"
-    },
-    {
-      "code": "MIXBRAND-PRNKHD-2P-BL-852",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 852",
-      "path": "products/mixbrand-prnkhd-2p-bl-852-mix-brand-digital-printed-allover-khaddar-2pc/"
-    },
-    {
-      "code": "MIXBRAND-PRNKHD-2P-BL-923",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 923",
-      "path": "products/mixbrand-prnkhd-2p-bl-923-mix-brand-digital-printed-allover-khaddar-2pc/"
-    },
-    {
-      "code": "MIXBRAND-PRNKHD-2P-BL-934",
-      "name": "Mix Brand Digital Printed Allover Khaddar 2PC — 934",
-      "path": "products/mixbrand-prnkhd-2p-bl-934-mix-brand-digital-printed-allover-khaddar-2pc/"
-    },
-    {
-      "code": "BRZE-EMB-KRNDI-V25-3P-DLWR-01",
-      "name": "Bareeze Embroidered Karandi 3PC — 1",
-      "path": "products/brze-emb-krndi-v25-3p-dlwr-01-bareeze-embroidered-karandi-3pc/"
-    },
-    {
-      "code": "SAFINA-KHD-V1-3P-HM-08",
-      "name": "D-08 | Safina | Unstitched Printed Khaddar 3PC '26 — 8",
-      "path": "products/safina-khd-v1-3p-hm-08-d-08-safina-unstitched-printed-khaddar-3pc-26/"
-    },
-    {
-      "code": "RAQS-UNEQ-KHD-V4-3P-DS-04-B",
-      "name": "DS-04-B | Raqs By Uneq | Unstitched Printed Khaddar 3PC '26 — DS-04-B",
-      "path": "products/raqs-uneq-khd-v4-3p-ds-04-b-ds-04-b-raqs-by-uneq-unstitched-printed-khaddar-3pc-26/"
-    },
-    {
-      "code": "ROHA-ANAYANOOR-W26-3P-05",
-      "name": "D-05 | Roha By Anaya Noor |Unstitched Emb Dhanak with Plachi Shawl 3PC '26 — 5",
-      "path": "products/roha-anayanoor-w26-3p-05-d-05-roha-by-anaya-noor-unstitched-emb-dhanak-with-plachi-shawl-3pc-26/"
-    },
-    {
-      "code": "SAPPH-DTD-KHD-V2-3P-HM-04",
-      "name": "D-04 | Sapphire | Unstitched Printed Khaddar 3PC '26 — 4",
-      "path": "products/sapph-dtd-khd-v2-3p-hm-04-d-04-sapphire-unstitched-printed-khaddar-3pc-26/"
-    },
-    {
-      "code": "SAPPH-DTD-KHD-V2-3P-HM-09",
-      "name": "D-09 | Sapphire | Unstitched Printed Khaddar 3PC '26 — 9",
-      "path": "products/sapph-dtd-khd-v2-3p-hm-09-d-09-sapphire-unstitched-printed-khaddar-3pc-26/"
+      "code": "ZELBURY-W26-KHD-3P-CT-38",
+      "name": "Zellbury Digital Printed Khaddar 3PC — 38",
+      "path": "products/zelbury-w26-khd-3p-ct-38-zellbury-digital-printed-khaddar-3pc/"
     }
   ]
 }
